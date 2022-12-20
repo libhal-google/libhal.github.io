@@ -34,7 +34,7 @@ theme:
 extra_css:
   - 'assets/extra.css'
 
-docs_dir: docs/
+docs_dir: docs/mkdocs
 
 markdown_extensions:
   - admonition
