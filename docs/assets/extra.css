@@ -1,0 +1,31 @@
+/* Change Color of Header */
+h1 {
+    color: orange;
+    font-size: 2em;
+}
+
+.md-typeset h2 {
+    font-size: 1.5em;
+}
+
+.md-ellipsis {
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.md-logo img {
+    height: 75px !important;
+}
+
+/* Giving each inline sexy zesty formatting */
+a code {
+    color: #2980B9;
+}
+
+a:hover code {
+    color: #3091d1;
+}
+
+a:visited code {
+    color: #9B59B6;
+}
