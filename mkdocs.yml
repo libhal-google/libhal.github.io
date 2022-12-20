@@ -1,0 +1,87 @@
+# Project Information
+site_name: libhal
+repo_url: https://github.com/libhal/libhal/
+repo_name: libhal
+# Configuration
+theme:
+  name: 'material'
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  highlightjs: true
+  hljs_style:
+    - monokai
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+extra_css:
+  - 'assets/extra.css'
+
+docs_dir: docs/
+
+markdown_extensions:
+  - admonition
+  - pymdownx.mark # highlighting
+  - pymdownx.superfences # nest code
+  - codehilite # code syntax coding
+  - toc:
+      permalink:
+
+# Navigation
+nav:
+  - Home: 'index.md'
+  - Tutorials:
+    - 'tutorials/installation.md'
+    - 'tutorials/glossary.md'
+    - 'tutorials/configuration.md'
+    - 'tutorials/finding_drivers.md'
+    - 'tutorials/multi_target_apps.md'
+    - 'tutorials/using_libhal-util.md'
+    - 'tutorials/testing.md'
+    - 'tutorials/references.md'
+  - Design Documents:
+    - 🏗️ Architecture: 'design/architecture.md'
+    - 🎛️ Configuration: 'design/config.md'
+    - Building Blocks:
+      - timeout: 'design/timeout.md'
+      - units: 'design/units.md'
+    - Interfaces:
+      - adc: 'design/adc.md'
+      - can: 'design/can.md'
+      - dac: 'design/dac.md'
+      - error: 'design/error.md'
+      - i2c: 'design/i2c.md'
+      - input pin: 'design/input_pin.md'
+      - interrupt pin: 'design/interrupt_pin.md'
+      - motor: 'design/motor.md'
+      - output pin: 'design/output_pin.md'
+      - pwm: 'design/pwm.md'
+      - serial: 'design/serial.md'
+      - servo: 'design/servo.md'
+      - socket: 'design/socket.md'
+      - spi: 'design/spi.md'
+      - steady clock: 'design/steady_clock.md'
+      - timer: 'design/timer.md'
+  - How To Contribute:
+    - 'contributing/philosophy.md'
+    - 'contributing/continuous_integration.md'
+    - 'contributing/style.md'
+  - 'about.md'
+  - 'copyrights.md'
