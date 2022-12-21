@@ -1,1 +1,0 @@
-# `adc` interface design 
