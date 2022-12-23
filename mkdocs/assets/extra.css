@@ -8,15 +8,6 @@ h1 {
     font-size: 1.5em;
 }
 
-.md-ellipsis {
-    font-size: 3em;
-    font-weight: 100;
-}
-
-.md-logo img {
-    height: 75px !important;
-}
-
 /* Giving each inline sexy zesty formatting */
 a code {
     color: #2980B9;

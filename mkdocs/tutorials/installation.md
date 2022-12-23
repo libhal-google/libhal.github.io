@@ -5,7 +5,7 @@ is not the only way to use libhal.
 
 ## Prerequisites
 
-- `make`: latest available version installed via "build essentials" package
+- `make`: latest available version
 - `cmake`: 3.15 or above
 - `python`: 3.10 or above
 - `conan`: 1.51.3 or above (conan 2.0.0+ not currently supported)

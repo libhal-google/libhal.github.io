@@ -7,6 +7,8 @@ theme:
   name: 'material'
   logo: assets/logo.png
   favicon: assets/favicon.png
+  features:
+    - content.tabs.link
   highlightjs: true
   hljs_style:
     - monokai
@@ -41,22 +43,32 @@ markdown_extensions:
   - pymdownx.mark # highlighting
   - pymdownx.superfences # nest code
   - codehilite # code syntax coding
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
   - toc:
       permalink:
 
+
 # Navigation
 nav:
-  - Home: 'index.md'
-  - Tutorials:
+  - 🏡 Home: 'index.md'
+  - 🏫 Tutorials:
     - 'tutorials/installation.md'
     - 'tutorials/glossary.md'
+    - 'tutorials/project.md'
     - 'tutorials/configuration.md'
     - 'tutorials/finding_drivers.md'
     - 'tutorials/multi_target_apps.md'
-    - 'tutorials/using_libhal-util.md'
     - 'tutorials/testing.md'
-    - 'tutorials/references.md'
-  - Design Documents:
+    - 'tutorials/using_target_projects.md'
+  - 📖 Design Documents:
     - 🏗️ Architecture: 'design/architecture.md'
     - 🎛️ Configuration: 'design/config.md'
     - Building Blocks:
@@ -79,7 +91,7 @@ nav:
       - spi: 'design/spi.md'
       - steady clock: 'design/steady_clock.md'
       - timer: 'design/timer.md'
-  - How To Contribute:
+  - 👥 How To Contribute:
     - 'contributing/philosophy.md'
     - 'contributing/continuous_integration.md'
     - 'contributing/style.md'
