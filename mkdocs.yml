@@ -67,7 +67,6 @@ nav:
     - 'tutorials/finding_drivers.md'
     - 'tutorials/multi_target_apps.md'
     - 'tutorials/testing.md'
-    - 'tutorials/using_target_projects.md'
   - 📖 Design Documents:
     - 🏗️ Architecture: 'design/architecture.md'
     - 🎛️ Configuration: 'design/config.md'
@@ -96,4 +95,3 @@ nav:
     - 'contributing/continuous_integration.md'
     - 'contributing/style.md'
   - 'about.md'
-  - 'copyrights.md'
