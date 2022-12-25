@@ -12,7 +12,43 @@ This decision exists to escape the issues of vendor and toolchain lock in thats
 prevalant in the C++ and embedded industry. With sufficient testing, upgrading
 compilers shouldn't result in bugs in applications.
 
-## A.x No utility methods in interfaces (UFCS)
+## A.x Interface Design Choices
+
+Interfaces MUST follow this layout:
+
+- Use `#pragma once` at the start of the file: Simpler than an include guard
+- All `virtual` functions must be private & each `virtual` functions is
+  accompanied by a public API that is used to call the virtual API
+- The return type of each API MUST be a `result<T>` where `T` is a structure.
+
+Pragma once is needed to ensure files are included once. Its also less error
+prone then hand writing include guards.
+
+The reasons for a private virtual with public API can be found in this
+[article]().
+
+Returning a structure for each API means that, in the future, if the return
+type needs to be extended, it can be done without breaking down stream
+libraries. For example:
+
+```C++
+class adc {
+  struct read_t { // V1
+    float percentage;
+  };
+  struct read_t { // V2
+    float percentage;
+    // Optional field that is default initialized to std::nullopt indicating
+    // that it defaults to not exist
+    std::optional<uint8_t> bit_resolution = std::nullopt;
+  };
+};
+```
+
+Given that the field `bit_resolution` is an optional, code looking for it can
+determine if it is available or not, and code that never used it can ignore it.
+
+### A.x.x No utility methods in interfaces (UFCS)
 
 Utility functions shall not exist in interface definitions. For example,
 `hal::i2c` could have a `hal::i2c::write()` and `hal::i2c::read()` function
@@ -30,6 +66,90 @@ The final reason is in preparation for UFCS (Unified Function Call Syntax).
 UFCS is a proposal for C++23 and C++26. It did not get into C++23 but is slated
 for review in 26. For more details see this page
 [What is unified function call syntax anyway?](https://brevzin.github.io/c++/2019/04/13/ufcs-history/).
+
+## A.x Using tweak files over macros
+
+Tweak files were used as an alternative to MACROS. MACROs can be quite
+problematic in many situations and are advised against in the core C++
+guidelines. The benefits of tweak files can be found
+[here](https://vector-of-bool.github.io/2020/10/04/lib-configuration.html).
+
+## A.x Header Only Implementations
+
+libhal libraries and drivers are, in general, header-only. libhal uses
+header only implementations in order to enable the broadest set of package
+managers, build system and projects to use it.
+
+The strongest reason for a header-only approach is due to the fact that libhal
+libraries never intend to be distributed in prebuilt binaries. Conan is designed
+to ship with prebuilt binaries or build against the host machine. These settings
+can be altered, but you still end up with a single global prebuilt binary for a
+driver does not make sense when that driver could be used in a variety of
+environments such as the host device for host side tests, a specific target
+device, and a target device that is in the family of that specific target
+device.
+
+For example, lets consider liblpc40xx. If you are building to target the
+lpc4078 chip then that prebuilt ought to be built with usage of FPU registers
+enabled. But if you use that same prebuilt with the lpc4074, you'll find that
+the program crashes because the 74 variant does not have an FPU. You can attempt
+make a prebuilt binary for ever possible build variation that an embedded
+engineer may want, but you'll always come up short. The better approach is to
+simply build the library each time, thus ensuring that the build flags are
+considered each time.
+
+If compile-times are a concern, there are reasonably easy methods for managing
+this. See [Handling Long Compile Times](#).
+
+## A.x Encapsulated Memory Mapped Classes
+
+Target drivers that use Memory-Mapped-IO usually come with a vendor generated
+header file that describes each peripheral as a structure type, along with
+bit mask MACROs, and MACROs that result in pointers to each peripheral in
+memory. The main problem using these headers files causes is naming conflicts.
+Many of these vendor generated headers work with both C and C++. Meaning that
+namespaces are not utilized. And many do not expect that they will be used in
+an environment where another vendor generated header file will exists. So no
+care is taken to ensure that the names of the types are unique. This WILL cause
+linker errors as the linker sees both GPIO_TypeDef from an STM library
+and GPIO_TypeDef from an LPC library that aren't the same.
+
+Because of this we have style [S.x Encapsulated Memory Mapped classes]()
+guideline.
+
+## A.x Using hal::function_ref over std::function
+
+`std::function` has all of the flexibility and functionality needed, but it has
+the potential to allocate and requires potentially expensive copy operations
+when passed by value.
+
+`hal::function_ref` is a non-owning version of the `std::function`, with a
+size of just two pointers. `hal::function_ref` fits most use cases in that
+class functions that take them only need them for the duration of the function
+and do not need to own them for later.
+
+!!! info
+    `hal::function_ref` is an alias for `tl:function_ref` which comes from the
+    project
+    [TartanLlama/function_ref](https://github.com/TartanLlama/function_ref).
+
+## A.x Using runtime polymorphism `virtual`
+
+Polymorphism is critical for libhal to reach the goals of flexible and easy of
+use. Static based polymorphism, by its nature, is inflexible at runtime and
+can be quite complicated to work with.
+
+Runtime polymorphism, or the usage of `virtual` enables a broader scope of
+flexibility and isolation between drivers and application logic. The only
+downside to using `virtual` polymorphism is the cost of a virtual function call.
+But the actual cost of making a virtual function call is usually tiny in
+comparison to the work performed in the actual API call. In most cases the call
+latency and lack of inlining of a virtual call isn't an important factor in most
+applications.
+
+And over all, along with the broad amount of flexibility comes the ease of use.
+Virtual polymorphism for interfaces is very easy to perform and has a ton of
+language support.
 
 ## A.x Strongly Leverage Package Managers
 
