@@ -111,8 +111,8 @@ Many of these vendor generated headers work with both C and C++. Meaning that
 namespaces are not utilized. And many do not expect that they will be used in
 an environment where another vendor generated header file will exists. So no
 care is taken to ensure that the names of the types are unique. This WILL cause
-linker errors as the linker sees both GPIO_TypeDef from an STM library
-and GPIO_TypeDef from an LPC library that aren't the same.
+linker errors as the linker sees both `GPIO_TypeDef` from an STM library
+and `GPIO_TypeDef` from an LPC library that aren't the same.
 
 Because of this we have style [S.x Encapsulated Memory Mapped classes]()
 guideline.
@@ -133,7 +133,7 @@ and do not need to own them for later.
     project
     [TartanLlama/function_ref](https://github.com/TartanLlama/function_ref).
 
-## A.x Using runtime polymorphism `virtual`
+## A.x Using `virtual` (runtime) polymorphism
 
 Polymorphism is critical for libhal to reach the goals of flexible and easy of
 use. Static based polymorphism, by its nature, is inflexible at runtime and
@@ -260,3 +260,78 @@ types and allows the user to pick out which one they would like to opt to catch
 if any of them. This can be used to capture an error code as well as s snapshot
 of the register map of a peripheral, the object's current state or even a debug
 message.
+
+## Using Statement Expressions with `HAL_CHECK()`
+
+`HAL_CHECK()` is the only MACRO in `libhal`. It exists because there is nothing
+like Rust's `?` operator which either unwraps a value or returns an error from
+the current function. The "Statement Expression" only works with GCC & Clang
+which is one of the reasons why `libhal` only supports those compilers. Compare
+the following two expressions:
+
+```C++
+// 1. Using statement expressions
+auto percentage = HAL_CHECK(adc.read()).percentage;
+
+// 2. Without using statement expressions
+HAL_CHECK(adc_read_temporary, adc.read());
+auto percentage = adc_read_temporary.percentage;
+```
+
+The second option looks very unnatural and require explanation. On the other
+hand users who have never seen `HAL_CHECK()` in action have an immediate idea of
+how it works in the first section of the code. Portability to other compilers
+was sacrificed in order to make the code easier to read, understand, and write.
+
+## Why `libhal` does NOT use fixed point
+
+Because fixed point will NOT result in better performance or space savings
+compared to SOFTWARE floating point. Team did venture to use fixed point
+throughout the entire code base and when we felt that the fixed point code
+reached a point where it was usable everywhere, we benchmarked it and got these:
+
+```
+double_time            = 8921794
+[i64 +Round]fixed_time = 4558238 (best fixed point option)
+[soft]float_time       = 1424913
+[i64 -Round]fixed_time = 1410720 (precision issues)
+[i32 +Round]fixed_time = 815107  (will easily overflow)
+[hard]float_time       = 110089  (not always available)
+[i32 -Round]fixed_time = 95085   (will not actually work)
+```
+
+Here is an old gist of the example:
+[kammce/fixed_v_float.cpp](https://gist.github.com/kammce/920166314b8b49924f906bd8d26f2450)
+
+The above metrics were for a program that run a map function to map an input
+number from one range to another range. The numbers on the right hand side are
+the number of cycles of a Arm Cortex M4F DWT counter. Fixed point 32-bit
+integers is enough for a representation but to handle arithmetic like
+multiplication, 64-bit integers were needed. Those 64-bit operations resulted in
+computation time approaching double floating point. If a system used 32-bit
+floats, the 32-bit fixed point would be ~4x slower. If a system used double
+floating point in software mode, it will only be ~2x slower than 32-bit fixed
+point. Fixed point, over all, is more expensive in terms of space and time.
+
+If you don't believe the metrics measured here, you can also check
+[fpm performance metrics](https://github.com/MikeLankamp/fpm/blob/master/docs/performance.md).
+Notice how fpm fairs far worse for anything that isn't addition/subtraction.
+
+See these articles for more details:
+
+- [You're Going To Have To Think!](https://accu.org/journals/overload/18/99/harris_1702/)
+- [WHY FIXED POINT WON'T CURE YOUR FLOATING POINT BLUES](https://accu.org/journals/overload/18/100/harris_1717/)
+- [WHY RATIONALS WON’T CURE YOUR FLOATING POINT BLUES](https://accu.org/journals/overload/19/101/harris_1986/)
+- [Why Computer Algebra Won’t Cure Your Floating Point Blues](https://accu.org/journals/overload/19/102/harris_1979/)
+- [Why Interval Arithmetic Won’t Cure Your Floating Point Blues](https://accu.org/journals/overload/19/103/harris_1974/)
+
+## Why `libhal` does NOT use a units library
+
+Unit libraries have the potential to really help prevent an entire category of
+unit based errors, it is also extremely difficult and annoying to use.
+
+Th article [Unit of measurement libraries, their popularity and suitability](https://onlinelibrary.wiley.com/doi/10.1002/spe.2926)
+goes into detail about the usability issues faced by unit libraries. Because, at
+the time of writing `libhal` there is not a unit library that is easy to use
+and concise, `libhal` decided to simply stick with 32-bit floats and helper
+UDLs.
