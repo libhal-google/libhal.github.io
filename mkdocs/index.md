@@ -13,15 +13,15 @@ libhal exists to make hardware drivers **🚚 portable**, **🦾 flexible**,
 for embedded drivers, allowing those drivers to be used across different
 processors, microcontrollers, systems, and devices.
 
-!!! Info
-    - Header only
-    - C++20
-    - Only depends on [Boost.LEAF](https://boostorg.github.io/leaf/) for error
-      handling
-    - 🙅🏾 no exceptions
-    - 🙅🏾 no heap usage
-    - ✅ Customizable
-    - 📜 Follows C++ Core Guidelines
+The design philosophy of libhal is to be:
+
+- Multi Targeted
+- Light Weight
+- General
+- Simple
+- Safe
+- Tested & Testable
+- Compiled Quickly
 
 ## The Basics
 
