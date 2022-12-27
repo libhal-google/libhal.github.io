@@ -17,7 +17,7 @@ The following are examples:
     - STM32F10x series family of MCUs
     - RP2040
 
-=== "SOCs"
+=== "AP"
 
     - Broadcom BCM2836 SoC (Raspberry Pi)
     - Samsung Exynos5422 (Odroid)

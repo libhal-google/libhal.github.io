@@ -1,3 +1,0 @@
-# 🧪 Testing
-
-Using [`libhal-mock`]().

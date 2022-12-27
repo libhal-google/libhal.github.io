@@ -15,13 +15,13 @@ processors, microcontrollers, systems, and devices.
 
 The design philosophy of libhal is to be:
 
-- Multi Targeted
-- Light Weight
-- General
-- Simple
-- Safe
-- Tested & Testable
-- Compiled Quickly
+1. [Multi Targeted](design/philosophy.md#d1-multi-targeted)
+1. [Light Weight](design/philosophy.md#d2-light-weight)
+1. [General](design/philosophy.md#d3-general)
+1. [Simple](design/philosophy.md#d4-simple)
+1. [Safe](design/philosophy.md#d5-safe)
+1. [Tested & Testable](design/philosophy.md#d6-tested-testable)
+1. [Compiled Quickly](design/philosophy.md#d7-compiled-quickly)
 
 ## The Basics
 
