@@ -1,9 +1,10 @@
 # 🔍 Finding Drivers
 
-To find drivers you can look in two locations
+To find drivers you can look in three locations
 
 - [libhal](https://github.com/libhal/libhal) organization
 - [conan center](https://conan.io/center/) index
+- [libhal driver index]() (NOT AVAILABLE YET)
 
 Search for the name of the device or target you are interested with with the
 prefix `lib` in front of it. Try not to be too specific though. For example,

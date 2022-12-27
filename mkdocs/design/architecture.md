@@ -261,7 +261,7 @@ if any of them. This can be used to capture an error code as well as s snapshot
 of the register map of a peripheral, the object's current state or even a debug
 message.
 
-## Using Statement Expressions with `HAL_CHECK()`
+## A.x Using Statement Expressions with `HAL_CHECK()`
 
 `HAL_CHECK()` is the only MACRO in `libhal`. It exists because there is nothing
 like Rust's `?` operator which either unwraps a value or returns an error from
@@ -283,7 +283,7 @@ hand users who have never seen `HAL_CHECK()` in action have an immediate idea of
 how it works in the first section of the code. Portability to other compilers
 was sacrificed in order to make the code easier to read, understand, and write.
 
-## Why `libhal` does NOT use fixed point
+## A.x Why `libhal` does NOT use fixed point
 
 Because fixed point will NOT result in better performance or space savings
 compared to SOFTWARE floating point. Team did venture to use fixed point
@@ -325,7 +325,7 @@ See these articles for more details:
 - [Why Computer Algebra Won’t Cure Your Floating Point Blues](https://accu.org/journals/overload/19/102/harris_1979/)
 - [Why Interval Arithmetic Won’t Cure Your Floating Point Blues](https://accu.org/journals/overload/19/103/harris_1974/)
 
-## Why `libhal` does NOT use a units library
+## A.x Why `libhal` does NOT use a units library
 
 Unit libraries have the potential to really help prevent an entire category of
 unit based errors, it is also extremely difficult and annoying to use.

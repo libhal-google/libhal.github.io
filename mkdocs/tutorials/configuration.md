@@ -2,8 +2,9 @@
 
 libhal is very lightweight and thus has very few knobs that can be configured.
 The few that it does have are critical to get right. libhal uses `tweak.hpp`
-header files for customization and configuration. See
-[A New Approach to Build-Time Library Configuration](https://vector-of-bool.github.io/2020/10/04/lib-configuration.html)
+header files for customization and configuration. See [A New Approach to
+Build-Time Library
+Configuration](https://vector-of-bool.github.io/2020/10/04/lib-configuration.html)
 for more details.
 
 Below is an example `libhal.tweaks.hpp` file with all 3 fields set to their
@@ -60,13 +61,15 @@ will allocate their registers in ram rather than attempting to access them via
 their peripheral address, which wouldn't make sense on a host machine as their
 memory maps are different.
 
-# `on_error_callback`
+## `on_error_callback_enable`
+
+`on_error_callback_enabled` enables the usage of the `on_error_callback`.
+
+## `on_error_callback`
 
 `on_error_callback` specifies a callback that should be called when any errors
 occur. The main purpose of this is to capture a stack trace when errors occur
 but this can also be used for anything else.
-
-`on_error_callback_enabled` enables the usage of the `on_error_callback`.
 
 !!! note
     Prefer to use an `extern` function defined above the `libhal::config`
