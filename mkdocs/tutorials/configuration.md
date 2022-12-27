@@ -69,7 +69,10 @@ memory maps are different.
 
 `on_error_callback` specifies a callback that should be called when any errors
 occur. The main purpose of this is to capture a stack trace when errors occur
-but this can also be used for anything else.
+but can be used for anything.
+
+!!! note
+    The callback is called before the error has been constructed and transported
 
 !!! note
     Prefer to use an `extern` function defined above the `libhal::config`
