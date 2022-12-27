@@ -61,14 +61,14 @@ markdown_extensions:
 nav:
   - 🏡 Home: 'index.md'
   - 🏫 Tutorials:
-    - 'tutorials/installation.md'
+    - 'tutorials/setup.md'
     - 'tutorials/glossary.md'
     - 'tutorials/getting_started.md'
     - 'tutorials/configuration.md'
     - 'tutorials/finding_drivers.md'
   - 📖 Design Documents:
     - ✨ Introduction: 'design/intro.md'
-    - 📜 Philosophy: 'design/philosophy.md'
+    - 📜 Design Philosophy: 'design/philosophy.md'
     - 🏗️ Architecture Choices: 'design/architecture.md'
     - 🎨 Style: 'design/style.md'
     - 'design/blocks.md'
