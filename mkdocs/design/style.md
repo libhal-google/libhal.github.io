@@ -1,5 +1,7 @@
 # 🎨 Style Guide
 
+## S.0 Code Guidelines
+
 All guides follow the [C++ Core
 Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines).
 
