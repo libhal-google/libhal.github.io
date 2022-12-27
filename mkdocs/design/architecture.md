@@ -1,6 +1,6 @@
 # 🏗️ Architectural Design Decisions
 
-## A.x Always use modern C++
+## A.1 Always use modern C++
 
 libhal uses the modern C++. Meaning that libhal is will follow the most modern
 and available compilers available. When a sufficient number of features have
@@ -12,7 +12,7 @@ This decision exists to escape the issues of vendor and toolchain lock in thats
 prevalant in the C++ and embedded industry. With sufficient testing, upgrading
 compilers shouldn't result in bugs in applications.
 
-## A.x Interface Design Choices
+## A.2 Interface Design Choices
 
 Interfaces MUST follow this layout:
 
@@ -48,7 +48,7 @@ class adc {
 Given that the field `bit_resolution` is an optional, code looking for it can
 determine if it is available or not, and code that never used it can ignore it.
 
-### A.x.x No utility methods in interfaces (UFCS)
+### A.2.1 No utility methods in interfaces (UFCS)
 
 Utility functions shall not exist in interface definitions. For example,
 `hal::i2c` could have a `hal::i2c::write()` and `hal::i2c::read()` function
@@ -67,14 +67,14 @@ UFCS is a proposal for C++23 and C++26. It did not get into C++23 but is slated
 for review in 26. For more details see this page
 [What is unified function call syntax anyway?](https://brevzin.github.io/c++/2019/04/13/ufcs-history/).
 
-## A.x Using tweak files over macros
+## A.3 Using tweak files over macros
 
 Tweak files were used as an alternative to MACROS. MACROs can be quite
 problematic in many situations and are advised against in the core C++
 guidelines. The benefits of tweak files can be found
 [here](https://vector-of-bool.github.io/2020/10/04/lib-configuration.html).
 
-## A.x Header Only Implementations
+## A.4 Header Only Implementations
 
 libhal libraries and drivers are, in general, header-only. libhal uses
 header only implementations in order to enable the broadest set of package
@@ -101,7 +101,7 @@ considered each time.
 If compile-times are a concern, there are reasonably easy methods for managing
 this. See [Handling Long Compile Times](#).
 
-## A.x Encapsulated Memory Mapped Classes
+## A.5 Encapsulated Memory Mapped Classes
 
 Target drivers that use Memory-Mapped-IO usually come with a vendor generated
 header file that describes each peripheral as a structure type, along with
@@ -117,7 +117,7 @@ and `GPIO_TypeDef` from an LPC library that aren't the same.
 Because of this we have style [S.x Encapsulated Memory Mapped classes]()
 guideline.
 
-## A.x Using hal::function_ref over std::function
+## A.6 Using hal::function_ref over std::function
 
 `std::function` has all of the flexibility and functionality needed, but it has
 the potential to allocate and requires potentially expensive copy operations
@@ -133,7 +133,7 @@ and do not need to own them for later.
     project
     [TartanLlama/function_ref](https://github.com/TartanLlama/function_ref).
 
-## A.x Using `virtual` (runtime) polymorphism
+## A.7 Using `virtual` (runtime) polymorphism
 
 Polymorphism is critical for libhal to reach the goals of flexible and easy of
 use. Static based polymorphism, by its nature, is inflexible at runtime and
@@ -151,7 +151,7 @@ And over all, along with the broad amount of flexibility comes the ease of use.
 Virtual polymorphism for interfaces is very easy to perform and has a ton of
 language support.
 
-## A.x Strongly Leverage Package Managers
+## A.8 Strongly Leverage Package Managers
 
 Finding and integration libraries into C++ programs is a pain. Doing the same
 thing for embedded is doubly so, especially if there is vendor IDE lock in.
@@ -164,7 +164,7 @@ these package managers. The purpose of this design is to achieve:
 - Can be easily found the indexes
 - Ease of integration
 
-## A.x Foundation & Interface Stability
+## A.9 Foundation & Interface Stability
 
 `libhal-util`, `libhal-mock` and `libhal-soft` were all apart of `libhal`
 originally, but due to the constant changes and API breaks in those categories
@@ -175,7 +175,7 @@ was split into those 4 libraries.
 The goal is to keep the version number for `libhal` constant for long periods of
 time to prevent breaking down stream libraries, drivers, and applications.
 
-## A.x libhal driver directory
+## A.10 libhal driver directory
 
 One of the libhal repos will contain a directory of libhal libraries that extend
 it along with which interfaces it implements and what type of library it is.
@@ -187,7 +187,7 @@ making a PR to the repo containing the directory.
 The purpose of this is to make finding and exploring the available set of
 drivers easier for the end developer by having them all in one place.
 
-## A.x Github Actions & Remote Workflows
+## A.11 Github Actions & Remote Workflows
 
 libhal uses github and github action "workflow_dispatch" to allow other repos to
 reuse libhal's continuous integration steps. The actions are configurable via
@@ -201,12 +201,12 @@ libhal/libhal workflow.
 This helps to ensure that all projects are held to the same standard and
 quality. The workflow files can be found in `libhal/libhal/.github/workflows`.
 
-## A.x Boost.UT as our unit testing framework
+## A.12 Boost.UT as our unit testing framework
 
 Boost.UT was chosen for its lack of macros, stunning compile time performance,
 and its ease of use.
 
-## A.x Boost.LEAF for error handling
+## A.13 Boost.LEAF for error handling
 
 One major issue with any project is handling errors. Because the `libhal`
 interfaces can be used in such broad environments, it is hard to determine what
@@ -261,7 +261,7 @@ if any of them. This can be used to capture an error code as well as s snapshot
 of the register map of a peripheral, the object's current state or even a debug
 message.
 
-## A.x Using Statement Expressions with `HAL_CHECK()`
+## A.14 Using Statement Expressions with `HAL_CHECK()`
 
 `HAL_CHECK()` is the only MACRO in `libhal`. It exists because there is nothing
 like Rust's `?` operator which either unwraps a value or returns an error from
@@ -283,7 +283,7 @@ hand users who have never seen `HAL_CHECK()` in action have an immediate idea of
 how it works in the first section of the code. Portability to other compilers
 was sacrificed in order to make the code easier to read, understand, and write.
 
-## A.x Why `libhal` does NOT use fixed point
+## A.15 Why `libhal` does NOT use fixed point
 
 Because fixed point will NOT result in better performance or space savings
 compared to SOFTWARE floating point. Team did venture to use fixed point
@@ -325,7 +325,7 @@ See these articles for more details:
 - [Why Computer Algebra Won’t Cure Your Floating Point Blues](https://accu.org/journals/overload/19/102/harris_1979/)
 - [Why Interval Arithmetic Won’t Cure Your Floating Point Blues](https://accu.org/journals/overload/19/103/harris_1974/)
 
-## A.x Why `libhal` does NOT use a units library
+## A.16 Why `libhal` does NOT use a units library
 
 Unit libraries have the potential to really help prevent an entire category of
 unit based errors, it is also extremely difficult and annoying to use.

@@ -22,6 +22,7 @@ The design philosophy of libhal is to be:
 1. [Safe](design/philosophy.md#d5-safe)
 1. [Tested & Testable](design/philosophy.md#d6-tested-testable)
 1. [Compiled Quickly](design/philosophy.md#d7-compiled-quickly)
+1. [OS Agnostic](design/philosophy.md#d8-os-agnostic)
 
 ## The Basics
 

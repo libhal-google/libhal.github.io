@@ -44,3 +44,8 @@ safety issues.
 
 `libhal` code should build fast and eliminate/replace any unnecessary
 dependencies that cause compile times to be long.
+
+## D.8 OS Agnostic
+
+`libhal` code should not require or depend on any OS or target specific code or
+behaviors. `libhal` is designed to work anywhere and should not rely on OS.
