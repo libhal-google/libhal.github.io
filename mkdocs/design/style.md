@@ -160,8 +160,8 @@ The solution to this is to use a factory function like so:
 
 ## S.8 Drivers should not pollute the global namespace
 
-All drivers must be within the `hal` namespace (RECOMMENDED) or within their
-own bespoke namespace.
+All drivers must be within the `hal` namespace or within their own bespoke
+namespace.
 
 Inclusion of a C header file full of register map structures is not allowed as
 it pollutes the global namespace and tends to result in name collisions.
