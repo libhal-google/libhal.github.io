@@ -26,15 +26,16 @@ particular target.
 
 ## D.4 Simple
 
-`libhal` aims to be as simple as possible and no simpler. Using its interfaces,
-utility functions, and libraries should be straight forward for most programmers
+`libhal` aims to be as simple as possible and no simpler. Interfaces, utility
+functions, and libraries should be straight forward for most programmers
 to understand with added complexity only when it is necessary and no other
 options exist.
 
 ## D.5 Safe
 
 `libhal` and its style guide aim to use patterns and techniques that help reduce
-safety issues.
+safety issues. Safety does NOT extend to runtime checks that determine if there
+exists architectural defects.
 
 ## D.6 Tested & Testable
 
@@ -45,7 +46,7 @@ safety issues.
 `libhal` code should build fast and eliminate/replace any unnecessary
 dependencies that cause compile times to be long.
 
-## D.8 OS Agnostic
+## D.8 Portable
 
 `libhal` code should not require or depend on any OS or target specific code or
 behaviors. `libhal` is designed to work anywhere and should not rely on OS.

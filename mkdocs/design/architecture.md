@@ -27,9 +27,9 @@ prone then hand writing include guards.
 The reasons for a private virtual with public API can be found in this
 [article]().
 
-Returning a structure for each API means that, in the future, if the return
-type needs to be extended, it can be done without breaking down stream
-libraries. For example:
+Returning a structure for each API means that, in the future, if the return type
+needs to be extended, it can be done without breaking down stream libraries. For
+example:
 
 ```C++
 class adc {
@@ -62,10 +62,10 @@ The major purpose of this is to keep compile times down as much possible for
 each interface. This also ensures that the "pay-for-what-you-use" model is
 followed. No need to pay for a utility you never planned to use.
 
-The final reason is in preparation for UFCS (Unified Function Call Syntax).
-UFCS is a proposal for C++23 and C++26. It did not get into C++23 but is slated
-for review in 26. For more details see this page
-[What is unified function call syntax anyway?](https://brevzin.github.io/c++/2019/04/13/ufcs-history/).
+The final reason is in preparation for UFCS (Unified Function Call Syntax). UFCS
+is a proposal for C++23 and C++26. It did not get into C++23 but is slated for
+review in 26. For more details see this page [What is unified function call
+syntax anyway?](https://brevzin.github.io/c++/2019/04/13/ufcs-history/).
 
 ## A.3 Using tweak files over macros
 
@@ -76,9 +76,9 @@ guidelines. The benefits of tweak files can be found
 
 ## A.4 Header Only Implementations
 
-libhal libraries and drivers are, in general, header-only. libhal uses
-header only implementations in order to enable the broadest set of package
-managers, build system and projects to use it.
+libhal libraries and drivers are, in general, header-only. libhal uses header
+only implementations in order to enable the broadest set of package managers,
+build system and projects to use it.
 
 The strongest reason for a header-only approach is due to the fact that libhal
 libraries never intend to be distributed in prebuilt binaries. Conan is designed
@@ -89,14 +89,14 @@ environments such as the host device for host side tests, a specific target
 device, and a target device that is in the family of that specific target
 device.
 
-For example, lets consider liblpc40xx. If you are building to target the
-lpc4078 chip then that prebuilt ought to be built with usage of FPU registers
-enabled. But if you use that same prebuilt with the lpc4074, you'll find that
-the program crashes because the 74 variant does not have an FPU. You can attempt
-make a prebuilt binary for ever possible build variation that an embedded
-engineer may want, but you'll always come up short. The better approach is to
-simply build the library each time, thus ensuring that the build flags are
-considered each time.
+For example, lets consider liblpc40xx. If you are building to target the lpc4078
+chip then that prebuilt ought to be built with usage of FPU registers enabled.
+But if you use that same prebuilt with the lpc4074, you'll find that the program
+crashes because the 74 variant does not have an FPU. You can attempt make a
+prebuilt binary for ever possible build variation that an embedded engineer may
+want, but you'll always come up short. The better approach is to simply build
+the library each time, thus ensuring that the build flags are considered each
+time.
 
 If compile-times are a concern, there are reasonably easy methods for managing
 this. See [Handling Long Compile Times](#).
@@ -104,15 +104,15 @@ this. See [Handling Long Compile Times](#).
 ## A.5 Encapsulated Memory Mapped Classes
 
 Target drivers that use Memory-Mapped-IO usually come with a vendor generated
-header file that describes each peripheral as a structure type, along with
-bit mask MACROs, and MACROs that result in pointers to each peripheral in
-memory. The main problem using these headers files causes is naming conflicts.
-Many of these vendor generated headers work with both C and C++. Meaning that
-namespaces are not utilized. And many do not expect that they will be used in
-an environment where another vendor generated header file will exists. So no
-care is taken to ensure that the names of the types are unique. This WILL cause
-linker errors as the linker sees both `GPIO_TypeDef` from an STM library
-and `GPIO_TypeDef` from an LPC library that aren't the same.
+header file that describes each peripheral as a structure type, along with bit
+mask MACROs, and MACROs that result in pointers to each peripheral in memory.
+The main problem using these headers files causes is naming conflicts. Many of
+these vendor generated headers work with both C and C++. Meaning that namespaces
+are not utilized. And many do not expect that they will be used in an
+environment where another vendor generated header file will exists. So no care
+is taken to ensure that the names of the types are unique. This WILL cause
+linker errors as the linker sees both `GPIO_TypeDef` from an STM library and
+`GPIO_TypeDef` from an LPC library that aren't the same.
 
 Because of this we have style [S.x Encapsulated Memory Mapped classes]()
 guideline.
@@ -123,21 +123,20 @@ guideline.
 the potential to allocate and requires potentially expensive copy operations
 when passed by value.
 
-`hal::function_ref` is a non-owning version of the `std::function`, with a
-size of just two pointers. `hal::function_ref` fits most use cases in that
-class functions that take them only need them for the duration of the function
-and do not need to own them for later.
+`hal::function_ref` is a non-owning version of the `std::function`, with a size
+of just two pointers. `hal::function_ref` fits most use cases in that class
+functions that take them only need them for the duration of the function and do
+not need to own them for later.
 
-!!! info
-    `hal::function_ref` is an alias for `tl:function_ref` which comes from the
-    project
+!!! info `hal::function_ref` is an alias for `tl:function_ref` which comes from
+    the project
     [TartanLlama/function_ref](https://github.com/TartanLlama/function_ref).
 
 ## A.7 Using `virtual` (runtime) polymorphism
 
 Polymorphism is critical for libhal to reach the goals of flexible and easy of
-use. Static based polymorphism, by its nature, is inflexible at runtime and
-can be quite complicated to work with.
+use. Static based polymorphism, by its nature, is inflexible at runtime and can
+be quite complicated to work with.
 
 Runtime polymorphism, or the usage of `virtual` enables a broader scope of
 flexibility and isolation between drivers and application logic. The only
@@ -181,8 +180,8 @@ One of the libhal repos will contain a directory of libhal libraries that extend
 it along with which interfaces it implements and what type of library it is.
 
 Official libhal libraries must go into the directory. Developers outside of the
-libhal organization can also contribute to and opt into this directory by
-making a PR to the repo containing the directory.
+libhal organization can also contribute to and opt into this directory by making
+a PR to the repo containing the directory.
 
 The purpose of this is to make finding and exploring the available set of
 drivers easier for the end developer by having them all in one place.
@@ -214,18 +213,18 @@ the BEST error type in advance could work for all users. Some use error codes,
 some use `std::expected<T, E>`, and some use exceptions.
 
 Error codes are problematic as they tend to lack details and context around an
-error. Sometimes the documentation along with the error code provides all of
-the necessary context, but many times more context is needed.
+error. Sometimes the documentation along with the error code provides all of the
+necessary context, but many times more context is needed.
 
 `std::expected<T, E>` seems like a better alternative to error codes, but... is
 it really? What should `E` be? An error code? What if we have it be an error
 code and a const string. What if we want a file name and function name? What
 about a line number? What about 16 bytes for holding context information about
-the error? That should be enough, right? What about- what about- what about?
-... wait, how big is this error type? 32 bytes? Wasn't this supposed to be light
+the error? That should be enough, right? What about- what about- what about? ...
+wait, how big is this error type? 32 bytes? Wasn't this supposed to be light
 weight? Unfortunately, `std::expected` is not a good choice for interfaces with
-extremely broad and unknowable of error states. This forces the error type to
-be massive to accommodate everything and everyone.
+extremely broad and unknowable of error states. This forces the error type to be
+massive to accommodate everything and everyone.
 
 Exceptions somewhat fix this issue but are still lacking. The benefit of
 exceptions is that you can throw just about anything, meaning the developer can
@@ -283,7 +282,7 @@ hand users who have never seen `HAL_CHECK()` in action have an immediate idea of
 how it works in the first section of the code. Portability to other compilers
 was sacrificed in order to make the code easier to read, understand, and write.
 
-## A.15 Why `libhal` does NOT use fixed point
+## A.15 `libhal` WILL NOT use fixed point
 
 Because fixed point will NOT result in better performance or space savings
 compared to SOFTWARE floating point. Team did venture to use fixed point
@@ -313,25 +312,40 @@ floats, the 32-bit fixed point would be ~4x slower. If a system used double
 floating point in software mode, it will only be ~2x slower than 32-bit fixed
 point. Fixed point, over all, is more expensive in terms of space and time.
 
-If you don't believe the metrics measured here, you can also check
-[fpm performance metrics](https://github.com/MikeLankamp/fpm/blob/master/docs/performance.md).
+If you don't believe the metrics measured here, you can also check [fpm
+performance
+metrics](https://github.com/MikeLankamp/fpm/blob/master/docs/performance.md).
 Notice how fpm fairs far worse for anything that isn't addition/subtraction.
 
 See these articles for more details:
 
-- [You're Going To Have To Think!](https://accu.org/journals/overload/18/99/harris_1702/)
-- [WHY FIXED POINT WON'T CURE YOUR FLOATING POINT BLUES](https://accu.org/journals/overload/18/100/harris_1717/)
-- [WHY RATIONALS WON’T CURE YOUR FLOATING POINT BLUES](https://accu.org/journals/overload/19/101/harris_1986/)
-- [Why Computer Algebra Won’t Cure Your Floating Point Blues](https://accu.org/journals/overload/19/102/harris_1979/)
-- [Why Interval Arithmetic Won’t Cure Your Floating Point Blues](https://accu.org/journals/overload/19/103/harris_1974/)
+- [You're Going To Have To
+  Think!](https://accu.org/journals/overload/18/99/harris_1702/)
+- [WHY FIXED POINT WON'T CURE YOUR FLOATING POINT
+  BLUES](https://accu.org/journals/overload/18/100/harris_1717/)
+- [WHY RATIONALS WON’T CURE YOUR FLOATING POINT
+  BLUES](https://accu.org/journals/overload/19/101/harris_1986/)
+- [Why Computer Algebra Won’t Cure Your Floating Point
+  Blues](https://accu.org/journals/overload/19/102/harris_1979/)
+- [Why Interval Arithmetic Won’t Cure Your Floating Point
+  Blues](https://accu.org/journals/overload/19/103/harris_1974/)
 
-## A.16 Why `libhal` does NOT use a units library
+## A.16 `libhal` does NOT use a units library
 
 Unit libraries have the potential to really help prevent an entire category of
 unit based errors, it is also extremely difficult and annoying to use.
 
-Th article [Unit of measurement libraries, their popularity and suitability](https://onlinelibrary.wiley.com/doi/10.1002/spe.2926)
-goes into detail about the usability issues faced by unit libraries. Because, at
-the time of writing `libhal` there is not a unit library that is easy to use
-and concise, `libhal` decided to simply stick with 32-bit floats and helper
-UDLs.
+Th article [Unit of measurement libraries, their popularity and
+suitability](https://onlinelibrary.wiley.com/doi/10.1002/spe.2926) goes into
+detail about the usability issues faced by unit libraries. Because, at the time
+of writing `libhal` there is not a unit library that is easy to use and concise,
+`libhal` decided to simply stick with 32-bit floats and helper UDLs.
+
+## A.17 Always return `hal::result<T>` from every API
+
+Every interface in libhal returns a `hal::result<T>` type.
+
+The return types should be a `result<T>` because the implementation could be
+an abstraction for anything. As an example, it could come from an I2C to PWM
+generator and if something goes wrong with the i2c communication, the
+information must be emitted from the function.

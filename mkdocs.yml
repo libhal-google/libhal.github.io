@@ -1,8 +1,7 @@
-# Project Information
 site_name: libhal
 repo_url: https://github.com/libhal/libhal/
 repo_name: libhal
-# Configuration
+
 theme:
   name: 'material'
   logo: assets/logo.png
@@ -14,20 +13,17 @@ theme:
   hljs_style:
     - monokai
   palette:
-    # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
 
-    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
 
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
@@ -56,8 +52,6 @@ markdown_extensions:
   - toc:
       permalink:
 
-
-# Navigation
 nav:
   - 🏡 Home: 'index.md'
   - 🏫 Tutorials:
@@ -73,19 +67,24 @@ nav:
     - 🎨 Style: 'design/style.md'
     - 'design/blocks.md'
     - 🔌 Interfaces:
-      - adc: 'design/adc.md'
-      - can: 'design/can.md'
-      - dac: 'design/dac.md'
-      - i2c: 'design/i2c.md'
-      - input_pin: 'design/input_pin.md'
-      - interrupt_pin: 'design/interrupt_pin.md'
-      - motor: 'design/motor.md'
-      - output_pin: 'design/output_pin.md'
-      - pwm: 'design/pwm.md'
-      - serial: 'design/serial.md'
-      - servo: 'design/servo.md'
-      - socket: 'design/socket.md'
-      - spi: 'design/spi.md'
-      - steady_clock: 'design/steady_clock.md'
-      - timer: 'design/timer.md'
+      - ✅ adc: 'design/adc.md'
+      - ✅ dac: 'design/dac.md'
+      - ❌ pwm: 'design/pwm.md'
+
+      - ❌ can: 'design/can.md'
+      - ✅ spi: 'design/spi.md'
+      - ✅ i2c: 'design/i2c.md'
+      - ❌ serial: 'design/serial.md'
+
+      - ❌ input_pin: 'design/input_pin.md'
+      - ❌ output_pin: 'design/output_pin.md'
+      - ❌ interrupt_pin: 'design/interrupt_pin.md'
+
+      - ❌ timer: 'design/timer.md'
+      - ❌ steady_clock: 'design/steady_clock.md'
+
+      - ❌ motor: 'design/motor.md'
+      - ❌ servo: 'design/servo.md'
+
+      - ❌ socket: 'design/socket.md'
   - 🧐 About: 'about.md'
