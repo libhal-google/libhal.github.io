@@ -197,3 +197,28 @@ class target {
 
 See [private virtual method](http://www.gotw.ca/publications/mill18.htm)
 for more details. Rationale can be found within that link as well.
+
+## S.10 Avoid using `bool`
+
+### S.10.1 As an object member
+
+`bool` has very poor information density and takes up 8-bits per entry. If only
+one `bool` is needed, then a bool is a fine object member. If multiple `bool`s
+are needed, then use a `std::bitset` along with static `constexpr` index
+positions in order to keep the density down to the lowest amount possible.
+
+### S.10.2 As a parameter
+
+See the article ["Clean code: The curse of a boolean
+parameter"](https://medium.com/@amlcurran/clean-code-the-curse-of-a-boolean-parameter-c237a830b7a3)
+for details as to why `bool` parameters are awful.
+
+`bool` is fine if it is the only parameter and it acts as a lexical switch, for
+example:
+
+```c++
+// This is fine because it reads as set "LED" voltage "level" to "FALSE"
+led.level(false);
+// This is fine because it reads as set "LED" voltage "level" to "TRUE"
+led.level(true);
+```
