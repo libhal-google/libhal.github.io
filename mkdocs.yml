@@ -63,6 +63,7 @@ nav:
   - 📖 Design Documents:
     - ✨ Introduction: 'design/intro.md'
     - 📜 Design Philosophy: 'design/philosophy.md'
+    - 'design/organization.md'
     - 🏗️ Architecture Choices: 'design/architecture.md'
     - 🎨 Style: 'design/style.md'
     - 'design/blocks.md'
