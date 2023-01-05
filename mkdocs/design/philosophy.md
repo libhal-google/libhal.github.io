@@ -1,4 +1,4 @@
-# Design Philosophy
+# 📜 Design Philosophy
 
 These are the core design tenets that `libhal` and libraries extending it must
 seek to achieve with every design choice, line written, and architecture change

@@ -1,7 +1,7 @@
 # 📃 Glossary
 
-Here is a list of terms used in libhal. It is HIGHLY RECOMMENDED that
-new users of libhal read this section.
+Here is a list of terms used in libhal. It is HIGHLY RECOMMENDED that new users
+of libhal read this section.
 
 ## Target(s)
 
@@ -36,8 +36,8 @@ The following are examples:
 
 ## Interface(s)
 
-Interfaces are the basic building blocks of libhal and enable the
-flexibility needed to be portable and flexible.
+Interfaces are the basic building blocks of libhal and enable the flexibility
+needed to be portable and flexible.
 
 An interface is a contract of functions that an implementing class must adhere
 to. Documentation for each interface API explain the expected behavior that each
@@ -86,13 +86,13 @@ such as:
     have a way to generate, construct or create implementations of hardware
     interfaces.
 
-    #### Emulation Example
+    **Emulation Example**
 
     - Emulate spi by using 2 output pins and 1 input pin.
     - Emulate uart transmission with a 16-bit spi driver and some clever bit
       positioning.
 
-    #### Context Example
+    **Context Example**
 
     - Implement a rotary encoder by using an adc, a potentiometer and some
       specification of the potentiometer like min and max angle, along with min and
@@ -100,7 +100,7 @@ such as:
     - Implement a dac using multiple output pins and a set of resistors and an op
       amp.
 
-    #### Alteration example
+    **Alteration example**
 
     - Implement an input pin that inverts the readings of an actual input pin
     - Implement an i2c driver that is thread safe by taking an i2c and locking
@@ -109,12 +109,17 @@ such as:
     In general, software drivers tend to incur some overhead so nesting them
     deeply will effect performance.
 
+## Processes
+
+A process is code that performs some work. Like an application on a desktop
+machine.
+
 ## Off Interface Function
 
 Off Interface functions are public class functions that a driver can have that
 is beyond what is available for the interface it is implementing. These
-functions usually configure a peripheral or device in a way that is outside
-the scope of the implementing interface. For peripherals these are platform
+functions usually configure a peripheral or device in a way that is outside the
+scope of the implementing interface. For peripherals these are platform
 specific. For drivers these are device specific features. Examples of such
 specific functions are as follows:
 
@@ -124,3 +129,30 @@ specific functions are as follows:
 - Enabling/disabling continuous sampling from an accelerometer where sampling
   continuously would make reading samples faster but would consume more power
   and disabling continuous sampling would do the opposite.
+
+## Types of Libraries
+
+=== "target"
+
+    Target libraries contain the driver implementations for specific targets.
+    Every application that uses libhal will need one of these libraries in order
+    to work on any hardware. Without such libraries, the device could run an
+    application, but couldn't interact with the world.
+
+=== "utility"
+
+    Utility libraries are purely software libraries that help to either make
+    performing some work on a device easier for the developer or help to organize
+    and bring structure to an application.
+
+=== "device"
+
+    Device libraries are libraries containing drivers for specific hardware
+    devices or module, such as a sensor, display or a motor controller. They
+    are, generally, target agnostic and should be usable on any system that can
+    support its interface, memory, and performance requirements.
+
+=== "process"
+
+    A process library is a full application that can be used as part of another
+    application. Think processes on a desktop machine.
