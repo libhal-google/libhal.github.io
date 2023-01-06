@@ -28,6 +28,6 @@ point value for that.
 No, the only reason why a developer or driver would need the bit resolution to
 discriminate against an ADC, emitting an error that indicates that the
 resolution of an ADC is not high enough for the driver or application to work.
-But this would violate the [D.4 Safe](philosophy.md#d5-safe) design
+But this would violate the [D.4 Safe](../philosophy.md#d5-safe) design
 philosophy that drivers should NOT hold code that attempts to check for problems
 of architecture.
