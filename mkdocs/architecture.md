@@ -349,3 +349,74 @@ The return types should be a `result<T>` because the implementation could be
 an abstraction for anything. As an example, it could come from an I2C to PWM
 generator and if something goes wrong with the i2c communication, the
 information must be emitted from the function.
+
+## A.18 Using `inplace_function`/`hal::callback` for interrupt callbacks
+
+There are interfaces such as `hal::can`, `hal::interrupt_pin`, and
+`hal::timer` that all have APIs for setting a callback.
+
+Because those callbacks could be lambdas, function objects, pure functions, or
+other callable types, we need a polymorphic type erased function type that can
+take any callable type as input and call it when its `operator()` is called.
+
+The options for these callbacks are:
+
+- `std::function`
+    - PROS
+        - Part of the standard library
+        - Can take any callable type without restrictions
+    - CONS
+        - Allocating (compiler implementations will use SBO but the size of
+          those buffers are not specified in the standard and should not be
+          relied upon)
+        - Can be quite large in size (40 bytes on 32-bit arm)
+- `function_ref`
+    - PROS
+        - Very lightweight (very fast construction)
+        - Very small size (2 pointers in size)
+    - CONS
+        - For this to work as a callback, the callable passed to the
+          `function_ref` must have a lifetime that is greater than the object
+          implementing the interface.
+- `inplace_function`
+    - PROS
+        - Works and behaves just like `std::function`
+    - CONS
+        - Fixed callable size limit
+
+`std::function` is automatically out because it is allocating. Using
+`std::function` for any interface API would ensure that applications that
+disallow dynamic allocations after boot or in general could never use them.
+
+`function_ref` has two great PROS but the largets CON is lifetime issues that
+are really easy to fall into. Specifically something like this:
+
+```C++
+obj.on_event([&single_capture]() {
+  // does a thing  ...
+});
+```
+
+The lambda is actually a temporary! So after this call it is out of scope and
+no longer exists. If the reference to temporary is stored and called later,
+the code WILL suffer from a "stack use after scope" violation which is
+undefined behavior.
+
+`inplace_function` has all of the features of `std::function` but with limited
+size. Due to this, constructing an `inplace_function` is deterministic and
+relatively light weight.
+
+## A.18 `hal::callback` sizing
+
+`hal::callback` is an alias to `inplace_function` with a buffer size of 2
+pointers (`sizeof(std::intptr_t) * 2`). This size was chosen in order to be
+small and easily storable. Two pointers worth of size should be enough to hold
+a pointer to `this` in classes as well a pointer to some sort of state object.
+
+The size of the callback object was not choosen in order to improve the
+performance of calling callback setting class functions. Even with the small
+size of `hal::callback`, its too large to take advantage of register based
+parameter passing. Thus the size of 2 pointers was mostly to help in keeping
+the memory footprint of the `callback` small. In most cases, setting an
+callback is something that is either done once or done very infrequently, and
+thus does not get much of a benefit from higher performance function calls.
