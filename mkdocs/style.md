@@ -222,3 +222,38 @@ led.level(false);
 // This is fine because it reads as set "LED" voltage "level" to "TRUE"
 led.level(true);
 ```
+
+## S.11 Integrating third party libraries by source
+
+In general, third party libraries should NOT be integrated into a library by
+source. It should be depended upon using a package manager. But in some cases
+third party libraries must be included by source. In these cases, the third
+party libraries should be committed into a project, without modifications,
+into the `include/<library_name>/third_party` directory. After that commit, the
+third party libraries can be used by and integrated into the library code base,
+in a following commit.
+
+If a third party library is modified, that library must have a section at the
+top of the file with the following description:
+
+```C++
+/**
+ * [libhal] modifications to this file are as follows:
+ *
+ *    1. mod 1
+ *    2. mod 2
+ *    3. mod 3
+ *    4. mod 4
+ */
+
+/**
+ * <LICENSE GOES HERE!>
+ */
+```
+
+Care must be taken to ensure that third party libraries do not conflict with
+the licenses of libhal libraries and permit direct integration as well as
+modification.
+
+**Rationale:** Makes keeping track of changes and the history of files easier to
+manage.
