@@ -1,8 +1,7 @@
-# 🧰 Setup
+# 🧰 Install Prerequisites
 
-This is the recommended way to setup your system for libhal and conan but this is not the only way to use libhal.
-
-## Install Prerequisites
+This is the recommended way to setup your system for libhal and conan but this
+is not the only way to use libhal.
 
 - `make`: latest available version
 - `cmake`: 3.15 or above
@@ -98,8 +97,9 @@ This is the recommended way to setup your system for libhal and conan but this i
 
 ## Setting up Conan
 
-Before you can use conan with libhal, you'll need to change the default conan profile settings to make your life a bit
-easier. The profile settings control which compiler is used for compiling and testing conan packages.
+Before you can use conan with libhal, you'll need to change the default conan
+profile settings to make your life a bit easier. The profile settings control
+which compiler is used for compiling and testing conan packages.
 
 If you've never run conan before run this to generate the default profile:
 
@@ -107,7 +107,7 @@ If you've never run conan before run this to generate the default profile:
 conan profile new default --detect
 ```
 
-### Setting your compiler to GCC 11
+## Setting your compiler to GCC 11
 
 Recommended for Linux & Windows users
 
@@ -118,7 +118,7 @@ conan profile update settings.compiler=gcc default
 conan profile update settings.compiler.version=11 default
 ```
 
-### Setting your compiler to Clang 14
+## Setting your compiler to Clang 14
 
 Recommended for MacOSX users
 
@@ -129,12 +129,14 @@ conan profile update settings.compiler=clang default
 conan profile update settings.compiler.version=14 default
 ```
 
-### Add libhal-trunk repository to conan remotes
+## Add libhal-trunk repository to conan remotes
 
-When conan is installed it only knows to look for packages in the conan center package index. The process and
-requirements for making an official release to the conan center takes time. Meaning that there are very few releases on
-the conan center for official libhal drivers. To get the latest updates to the libhal official libraries, add the
-`libhal-trunk` repository to your list of conan repos.
+When conan is installed it only knows to look for packages in the conan center
+package index. The process and requirements for making an official release to
+the conan center takes time. Meaning that there are very few releases on the
+conan center for official libhal drivers. To get the latest updates to the
+libhal official libraries, add the `libhal-trunk` repository to your list of
+conan repos.
 
 ```bash
 conan remote add libhal-trunk https://libhal.jfrog.io/artifactory/api/conan/trunk-conan --insert
