@@ -54,7 +54,7 @@ markdown_extensions:
 
 nav:
   - 🏡 Home: 'index.md'
-  - 'setup.md'
+  - 'prerequisites.md'
   - 'glossary.md'
   - 'getting_started.md'
   - 'tutorial.md'
