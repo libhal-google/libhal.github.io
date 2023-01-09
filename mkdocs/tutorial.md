@@ -1,7 +1,4 @@
-# 🏫 Guided Tutorial ❌
-
-Make sure to complete [Getting Started](getting_started.md). This guide will
-show you all of the steps to building, flashing
+# 🏫 Guided Tutorial
 
 ## Necessary Parts
 
@@ -15,42 +12,33 @@ In order to complete this tutorial you'll need these parts:
 !!! note
     libhal development kit coming soon!
 
-## ⬇️ Installing Compilers & Tools
-
-TBD
 
 ## 🛠️ Building Demos
 
+Make sure to complete [🧰 Install Prerequisites](prerequisites.md)
+
+### ⬇️ Installing Cross Compilers
+
+Follow the [`libarmcortex` cross compiler installation
+guide](https://github.com/libhal/libarmcortex#installing-arm-cortex-m-cross-compiler).
+
 ### Cloning the target libraries
 
-Demos can be found in the `demos/` folder within a target library's github
-repositories. So the first step is to clone the repo:
+Clone the library repos to get their demos within their `demos/` directory.
 
-Open a terminal/command line
+=== "LPC4078"
 
-If you are using the STM32F103 MicroMod, use this command to clone the
-libstm32f10x repo.
+    ```bash
+    git clone https://github.com/libhal/liblpc40xx
+    cd liblpc40xx/demo
+    ```
 
-```bash
-git clone https://github.com/libhal/libstm32f10x
-cd libstm32f10x
-```
+=== "STM32F10X"
 
-If you are using the LPC4078 MicroMod, use this command to clone the liblpc4078
-repo.
-
-```bash
-git clone https://github.com/libhal/liblpc40xx
-cd liblpc40xx
-```
-
-Clone both if you have both devices.
-
-Move into the `demos/` directory
-
-```bash
-cd demos/
-```
+    ```bash
+    git clone https://github.com/libhal/libstm32f10x
+    cd libstm32f10x/demo
+    ```
 
 ### Building using Conan & CMake
 
@@ -116,29 +104,71 @@ files.
 cmake .. -D CMAKE_BUILD_TYPE=Debug
 ```
 
-If the `arm-none-eabi-gcc` compiler is not available directly on your command
-line then you'll need to specify where the compiler is using the
-`TOOLCHAIN_PATH` argument like so:
+!!! note
 
-```bash
-cmake .. -DCMAKE_BUILD_TYPE=Debug -DTOOLCHAIN_PATH="path/to/arm-none-eabi-gcc/bin/"
-```
+    If the `arm-none-eabi-gcc` compiler is included in your PATH variable (meaning
+    running the command `arm-none-eabi-gcc` results in a "Command not found" error),
+    then you'll need to specify where the compiler is using the `TOOLCHAIN_PATH`
+    argument like so:
 
-If this works as intended, then the last step is to use `make` to build the
-final executable:
+    ```bash
+    cmake .. -DCMAKE_BUILD_TYPE=Debug -DTOOLCHAIN_PATH="path/to/arm-none-eabi-gcc/bin/"
+    ```
+
+Finally, to build the final binary, run `make`
 
 ```bash
 make -j
 ```
 
-The `-j` argument tells make to multithread the build process.
+!!! note
 
-When this completes you should have a load of applications in the directory
-with names such as `lpc4078_uart` or `stm32f103_blinker`.
+    The `-j` argument tells make to multithread the build process.
+
+When this completes you should have some applications in the directory with
+names such as `lpc4078_uart` or `stm32f103_blinker`.
 
 ## ⚡️ Flashing Demos
 
-TBD
+There are python programs built for uploading binary files to devices.
+
+First step is connecting your MicroMod carrier board to your computer using the
+USB-C connector.
+
+=== "LPC4078"
+
+    Install the [`nxpprog`](https://pypi.org/project/nxpprog/) flashing software
+    for LPC devices:
+
+    ```bash
+    pip install nxpprog
+    ```
+
+    ```bash
+    nxpprog --control --binary="lpc4078_uart.bin" --device="/dev/tty.usbserial-140"
+    ```
+
+    Replace `/dev/tty.usbserial-140` with the correct port.
+    Use `"lpc4078_uart.bin"` or replace it with any other application to be
+    flashed.
+
+=== "STM32F10X"
+
+    Install the [`stm32loader`](https://pypi.org/project/stm32loader/) flashing
+    software for STM32 devices:
+
+    ```bash
+    pip install stm32loader
+    ```
+
+    ```bash
+    stm32loader.py -p /dev/tty.usbserial-140 -e -w -v "stm32f103_uart.bin"
+    ```
+
+    Replace `/dev/tty.usbserial-140` with the correct port.
+    Use `"stm32f103_uart.bin"` or replace it with any other application to be
+    flashed.
+
 
 ## 🐞 Debugging Applications
 
