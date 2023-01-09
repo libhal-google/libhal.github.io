@@ -141,7 +141,7 @@ USB-C connector.
     for LPC devices:
 
     ```bash
-    pip install nxpprog
+    pip3 install nxpprog
     ```
 
     ```bash
@@ -158,7 +158,7 @@ USB-C connector.
     software for STM32 devices:
 
     ```bash
-    pip install stm32loader
+    pip3 install stm32loader
     ```
 
     ```bash
