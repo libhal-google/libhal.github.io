@@ -15,7 +15,23 @@ See [Boost.LEAF](https://boostorg.github.io/leaf/) for more details about it and
 how it works.
 
 The main reasons why Boost.LEAF was used can be found in [Architecture:
-Boost.LEAF for error handling](architecture/#a13-boostleaf-for-error-handling).
+Boost.LEAF for error
+handling](../../architecture/#a13-boostleaf-for-error-handling).
+
+## `HAL_CHECK()`
+
+`HAL_CHECK()` is a macro that takes an expression that evaluates to a
+`hal::result<T>` or `hal::status`. `HAL_CHECK()` either returns from the calling
+function if an error was emitted as a result of evaluating the expression or in
+the case of `hal::result<T>`, `HAL_CHECK()` returns the value `T`.
+
+For example:
+
+```C++
+// HAL_CHECK unwraps the hal::result<T> type and returns it if it was successful
+// or returns from the calling function with an error result.
+hal::adc::read_t adc_reading = HAL_CHECK(adc.read());
+```
 
 ## `libhal/units.hpp`
 
