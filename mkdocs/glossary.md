@@ -152,7 +152,7 @@ specific functions are as follows:
     are, generally, target agnostic and should be usable on any system that can
     support its interface, memory, and performance requirements.
 
-=== "process"
+=== "application"
 
-    A process library is a full application that can be used as part of another
-    application. Think processes on a desktop machine.
+    An application library is a full application that can be used as part of
+    another application library or project.

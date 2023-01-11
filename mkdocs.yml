@@ -56,34 +56,41 @@ nav:
   - 🏡 Home: 'index.md'
   - 'prerequisites.md'
   - 'glossary.md'
-  - 'tutorial.md'
-  - 'new_application.md'
-  - 'configuration.md'
-  - 'finding_drivers.md'
+  - 'trying_out.md'
+  - 📚 Tutorials:
+    - 'tutorials/organization.md'
+    - 'tutorials/building_blocks.md'
+    - 'tutorials/configuration.md'
+    - 🔌 Interfaces:
+      - ❌ adc: 'interfaces/adc.md'
+      - ✅ dac: 'interfaces/dac.md'
+      - ❌ pwm: 'interfaces/pwm.md'
+
+      - ❌ can: 'interfaces/can.md'
+      - ❌ spi: 'interfaces/spi.md'
+      - ❌ i2c: 'interfaces/i2c.md'
+      - ❌ serial: 'interfaces/serial.md'
+
+      - ❌ input_pin: 'interfaces/input_pin.md'
+      - ❌ output_pin: 'interfaces/output_pin.md'
+      - ❌ interrupt_pin: 'interfaces/interrupt_pin.md'
+
+      - ❌ timer: 'interfaces/timer.md'
+      - ❌ steady_clock: 'interfaces/steady_clock.md'
+
+      - ❌ motor: 'interfaces/motor.md'
+      - ❌ servo: 'interfaces/servo.md'
+
+      - ❌ socket: 'interfaces/socket.md'
+    - 'tutorials/error_handling.md'
+
+  - 💡 How-To Guides:
+    - 'how-to/project.md'
+    - 'how-to/device.md'
+    - 'how-to/target.md'
+    - 'how-to/application.md'
+    - 'how-to/utility.md'
   - 'philosophy.md'
-  - 'organization.md'
   - 'architecture.md'
   - 'style.md'
-  - 'blocks.md'
-  - 🔌 Interfaces:
-    - ❌ adc: 'interfaces/adc.md'
-    - ✅ dac: 'interfaces/dac.md'
-    - ❌ pwm: 'interfaces/pwm.md'
-
-    - ❌ can: 'interfaces/can.md'
-    - ❌ spi: 'interfaces/spi.md'
-    - ❌ i2c: 'interfaces/i2c.md'
-    - ❌ serial: 'interfaces/serial.md'
-
-    - ❌ input_pin: 'interfaces/input_pin.md'
-    - ❌ output_pin: 'interfaces/output_pin.md'
-    - ❌ interrupt_pin: 'interfaces/interrupt_pin.md'
-
-    - ❌ timer: 'interfaces/timer.md'
-    - ❌ steady_clock: 'interfaces/steady_clock.md'
-
-    - ❌ motor: 'interfaces/motor.md'
-    - ❌ servo: 'interfaces/servo.md'
-
-    - ❌ socket: 'interfaces/socket.md'
   - 🧐 About: 'about.md'

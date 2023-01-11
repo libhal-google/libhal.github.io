@@ -1,18 +1,17 @@
-# 🏫 Guided Tutorial
+# 🚀 Trying out libhal
 
 ## Necessary Parts
 
 In order to complete this tutorial you'll need these parts:
 
-1. STM32F103 MicroMod or LPC4078 MicroMod or BOTH
-1. Sparkfun ATP board or SJ3 Board
+1. STM32F103 MicroMod or LPC4078 MicroMod or SJ2 Board
+1. Sparkfun ATP board or SJ3 Board or SJ2 Board
 1. STLink V2
 1. STLink V2 to JTAG connector
 
 !!! note
 
     libhal development kit coming soon!
-
 
 ## 🛠️ Building Demos
 

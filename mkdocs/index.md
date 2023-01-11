@@ -171,6 +171,7 @@ Below is a set of source code to make an application that can work with both the
     }
     ```
 
+
 ## Support
 
 - [libhal discord](https://discord.gg/p5A6vzv8tm) server (preferred)
