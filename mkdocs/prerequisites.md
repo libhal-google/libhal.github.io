@@ -59,37 +59,31 @@ is not the only way to use libhal.
 
 === "Windows"
 
-    Install python: [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/).
+    We recommend using the `choco` package manager for windows as it allows
+    easy installation of tools via the command line.
 
-    Follow the instructions to install MSYS2: [https://www.msys2.org/](https://www.msys2.org/)
+    To install `choco`, open PowerShell as an administrator and run the
+    following command:
 
-    To install GCC open the MSYS2 terminal run the following command to install
-    GCC and build essentials.
-
-    ```
-    pacman -S base-devel mingw-w64-x86_64-gcc
-    ```
-
-    Updating the Environment Paths:
-
-    Open `Windows Powershell` as `Administrator` (right click on it to see the
-    option) and execute the following command. This will add gcc and the build
-    essentials to your systems environment paths.
-
-    ```PowerShell
-    [Environment]::SetEnvironmentVariable(
-        "Path",
-        [Environment]::GetEnvironmentVariable("Path", [EnvironmentVariableTarget]::Machine) +
-        ";C:\msys64\mingw64\bin;C:\msys64\mingw32\bin;C:\msys64\usr\bin",
-        [EnvironmentVariableTarget]::Machine)
+    ```powershell
+    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
     ```
 
-    After this, close powershell and reopen it to check if it worked. Run
-    `g++ --version` and you should get a message with version information in it.
+    Now install `python`:
+
+    ```powershell
+    coco install python
+    ```
+
+    Install `gcc` via the `mingw`:
+
+    ```powershell
+    coco install mingw
+    ```
 
     Installing conan & cmake:
 
-    ```
+    ```powershell
     pip3 install conan cmake
     ```
 
