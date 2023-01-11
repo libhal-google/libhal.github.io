@@ -93,18 +93,44 @@ CMakeDeps
 VirtualRunEnv
 ```
 
-## Process Libraries
+## Application Libraries
 
-Process libraries are effectively applications with no specific dependency on a
-particular target. The point of a process library is to deploy a fully fledged
-application, but with customizable drivers. For example, the pong game mentioned
-earlier doesn't require a wii controller or a LED matrix specifically. You could
-take a `hal::display` interface (not currently available) and some
-`pong::gamepad` interface defined by the process library that the developer can
-implement themselves. Then the pong process can take your display, gamepad and
-additional information like, "paddle size" and "font size" and use it to
-generate a game of pong. The developer gets the opportunity to choose which
-parts they want for each. Maybe they want a very large TFT display or they
+Application libraries are effectively applications with no specific dependency
+on a particular target. The point of a Application library is to deploy a fully
+fledged application, but with customizable drivers. For example, the pong game
+mentioned earlier doesn't require a wii controller or a LED matrix specifically.
+You could take a `hal::display` interface (not currently available) and some
+`pong::gamepad` interface defined by the Application library that the developer
+can implement themselves. Then the pong Application can take your display,
+gamepad and additional information like, "paddle size" and "font size" and use
+it to generate a game of pong. The developer gets the opportunity to choose
+which parts they want for each. Maybe they want a very large TFT display or they
 want to use a LED matrix. Maybe they want to use a Stadia controller or maybe
 they want to make a controller out of capacitive sensors and bananas. The
 choices are endless.
+
+## 🔍 Finding Drivers
+
+To find drivers you can look in three locations
+
+- [libhal](https://github.com/libhal/libhal) organization
+- [conan center](https://conan.io/center/) index
+- [libhal driver index]() ❌
+
+!!! note
+    libhal driver index is not available currently and is key to finding
+    drivers around the ecosystem.
+
+Search for the name of the device or target you are interested with with the
+prefix `lib` in front of it. Try not to be too specific though. For example,
+the `stm32f103c8t6` microcontroller target library drivers will be in the
+package `libstm32f10x`. The `mpu6050` accelerometer will be in `libmpu`.
+
+## 📑 Reference Material
+
+Reference material can be found in the `datasheets/` and `schematic/` folders.
+The layout of these directories match that `demos/`, where the first layer of
+folders are named after the microcontroller or board they describe.
+
+These folders are updated with relevant documents for easy access for our
+developers and contributors.
