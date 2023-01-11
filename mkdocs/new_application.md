@@ -1,4 +1,4 @@
-# 🚀 Getting Started
+# 🚀 Creating an Application
 
 ## How to make an Application
 
