@@ -34,6 +34,7 @@ only be one `libhal.tweaks.hpp` per application build.
 ## `platform`
 
 !!! note
+
     Currently this flag is mislabelled as `platform` and should be labeled as
     `target`.
 
@@ -71,10 +72,12 @@ memory maps are different.
 occur. The main purpose of this is to capture a stack trace when errors occur
 but can be used for anything.
 
-!!! note
+!!! info
+
     The callback is called before the error has been constructed and transported
 
-!!! note
+!!! tip
+
     Prefer to use an `extern` function defined above the `libhal::config`
     namespace and define the function elsewhere. This prevents issues with
     inclusion order issues with `libhal.tweaks.hpp` which occur because ALL

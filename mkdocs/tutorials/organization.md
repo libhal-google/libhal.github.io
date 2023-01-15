@@ -117,7 +117,8 @@ To find drivers you can look in three locations
 - [conan center](https://conan.io/center/) index
 - [libhal driver index]() ❌
 
-!!! note
+!!! example
+
     libhal driver index is not available currently and is key to finding
     drivers around the ecosystem.
 
