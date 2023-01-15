@@ -26,7 +26,7 @@ is not the only way to use libhal.
     Installing conan & cmake:
 
     ```
-    pip3 install conan cmake
+    python3 -m pip install -U conan cmake
     ```
 
 === "MacOS X"
@@ -46,7 +46,7 @@ is not the only way to use libhal.
     Install conan & cmake:
 
     ```
-    pip install conan cmake
+    python3 -m pip install -U conan cmake
     ```
 
     Install Rosetta (only required for M1 macs):
@@ -84,7 +84,7 @@ is not the only way to use libhal.
     Installing conan & cmake:
 
     ```powershell
-    pip3 install conan cmake
+    python3 -m pip install -U conan cmake
     ```
 
 ---
@@ -100,6 +100,28 @@ If you've never run conan before run this to generate the default profile:
 ```bash
 conan profile new default --detect
 ```
+
+It is very likely you will get the error when you run the default detection for
+conan:
+
+```
+************************* WARNING: GCC OLD ABI COMPATIBILITY ***********************
+
+Conan detected a GCC version > 5 but has adjusted the 'compiler.libcxx' setting to
+'libstdc++' for backwards compatibility.
+Your compiler is likely using the new CXX11 ABI by default (libstdc++11).
+
+If you want Conan to use the new ABI for the default profile, run:
+
+    $ conan profile update settings.compiler.libcxx=libstdc++11 default
+
+Or edit '/home/runner/.conan/profiles/default' and set compiler.libcxx=libstdc++11
+
+************************************************************************************
+```
+
+This is fine and to be expected with the default. The following rectify this is
+by setting the correct configurations.
 
 ## Setting your compiler to GCC 11
 
