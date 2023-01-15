@@ -83,6 +83,7 @@ nav:
 
       - ❌ socket: 'interfaces/socket.md'
     - 'tutorials/error_handling.md'
+    - 'tutorials/debugging.md'
 
   - 💡 How-To Guides:
     - 'how-to/project.md'
