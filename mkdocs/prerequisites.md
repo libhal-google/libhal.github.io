@@ -72,13 +72,13 @@ is not the only way to use libhal.
     Now install `python`:
 
     ```powershell
-    coco install python
+    choco install python
     ```
 
     Install `gcc` via the `mingw`:
 
     ```powershell
-    coco install mingw
+    choco install mingw
     ```
 
     Installing conan & cmake:
