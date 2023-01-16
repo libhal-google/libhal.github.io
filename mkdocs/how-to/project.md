@@ -2,14 +2,14 @@
 
 In this example we create a project using the CMake build system.
 
-In order to make a project you need 4 files with 1 optional file:
+In order to make a project you need 5 files:
 
 1. `conanfile.txt`: list of project dependencies.
 2. `CMakeLists.txt`: instructions describing the project's source files,
    executables and how to build them.
 3. `main.cpp`: application software
 4. `libhal.tweaks.hpp`: configuration file for libhal
-5. `newlib.cpp` _(Optional)_: definitions of low level C functions
+5. `newlib.cpp` : definitions of low level C functions
 
 ## Quick Start
 
@@ -142,9 +142,19 @@ throw_exception([[maybe_unused]] std::exception const& p_error)
 } // namespace boost
 ```
 
-## Optional: Add `newlib.cpp`
+## The `newlib.cpp` file
 
-Simple see [libhal-starter/newlib.cpp](https://github.com/libhal/libhal-starter/blob/main/newlib.cpp)
+The `newlib.cpp` contains low level APIs used by the standard C library. With an
+OS these are implemented with OS APIs. For example, the function that provides
+memory to `malloc()` is the newlib API `sbrk()`.
+
+To learn more about how to write `newlib.cpp` see [From Zero to main():
+Bootstrapping libc with
+Newlib](https://interrupt.memfault.com/blog/boostrapping-libc-with-newlib).
+
+See
+[libhal-starter/newlib.cpp](https://github.com/libhal/libhal-starter/blob/main/newlib.cpp)
+for the default empty implementations.
 
 ## Compiling the project
 
