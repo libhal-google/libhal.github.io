@@ -29,7 +29,7 @@ libhal-lpc40xx/0.3.4
 
 [tool_requires]
 gnu-arm-embedded-toolchain/11.3.0
-cmake-arm-embedded/0.1.0
+cmake-arm-embedded/0.1.1
 
 [generators]
 CMakeToolchain
@@ -42,7 +42,7 @@ CMakeDeps
 - `[tool_requires]` lists the tools that are needed to build the project.
     - `gnu-arm-embedded-toolchain/11.3.0` brings in the ARM GCC cross compiler
       which is used to compile to the code for ARM Cortex microcontroller.
-    - `cmake-arm-embedded/0.1.0` brings in cmake helper scripts and toolchain
+    - `cmake-arm-embedded/0.1.1` brings in cmake helper scripts and toolchain
       files for configuring cmake for the cross compiler.
 - `[generators]` list the generators which generate files for the project build
    systems.
