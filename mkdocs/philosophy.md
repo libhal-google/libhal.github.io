@@ -24,7 +24,7 @@ long/length copies, unless a copy was the desired operation,
 configuration settings that are uncommon in most targets or specific to a
 particular target.
 
-## D.4 Simple
+## D.4 Minimalist
 
 `libhal` aims to be as simple as possible and no simpler. Interfaces, utility
 functions, and libraries should be straight forward for most programmers

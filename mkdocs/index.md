@@ -18,7 +18,7 @@ The design philosophy of libhal is to be:
 1. [Multi Targeted](philosophy.md#d1-multi-targeted)
 1. [Light Weight](philosophy.md#d2-light-weight)
 1. [General](philosophy.md#d3-general)
-1. [Simple](philosophy.md#d4-simple)
+1. [Minimalist](philosophy.md#d4-minimalist)
 1. [Safe](philosophy.md#d5-safe)
 1. [Tested & Testable](philosophy.md#d6-tested-testable)
 1. [Compiled Quickly](philosophy.md#d7-compiled-quickly)
