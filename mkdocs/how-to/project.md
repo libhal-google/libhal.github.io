@@ -65,9 +65,8 @@ find_package(libhal-lpc40xx REQUIRED CONFIG)
 add_executable(${PROJECT_NAME} main.cpp newlib.cpp)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 target_include_directories(${PROJECT_NAME} PUBLIC .)
-target_compile_options(${PROJECT_NAME} PRIVATE ${CORTEX_M4F_FLAGS})
-target_link_options(${PROJECT_NAME} PRIVATE -T libhal-lpc40xx/lpc4078.ld)
-target_link_libraries(${PROJECT_NAME} PRIVATE libhal::lpc40xx)
+target_link_libraries(${PROJECT_NAME} PRIVATE libhal::lpc4078)
+
 arm_cortex_post_build(${PROJECT_NAME})
 ```
 
@@ -76,15 +75,14 @@ If you are unfamiliar with cmake, please take a look at the guide
 
 There are a few elements of the CMakeList.txt file which do not standard CMake:
 
-1. `${CORTEX_M4F_FLAGS}`: These flags were made available from the toolchain
-   file in the `cmake-arm-embedded` tool package.
-2. `-T libhal-lpc40xx/lpc4078.ld`: The path to the lpc40xx linker scripts are
-   made available from the `libhal-lpc40xx` package, which makes using this
-   standard linker script accessible via this linker argument.
-3. `arm_cortex_post_build(${PROJECT_NAME})`: Provided by the toolchain
-   file in the `cmake-arm-embedded` tool package and it builds the
-   `.hex` (intel hex), `.bin` (binary), `.S` (disassembly) and
-   `.lst` (disassembly with source interweaved)
+1. `libhal::lpc4078`: Defines the specific package component for the the
+   `lpc4078` micro-controller. Using this component will automatically use the
+   minimum required compiler and link flags for the microcontroller as well as
+   use the standard linker script for the device.
+2. `arm_cortex_post_build(${PROJECT_NAME})`: Provided by the toolchain
+   file in the `cmake-arm-embedded` tool package. Generates the `.hex`
+   (intel hex), `.bin` (binary), `.S` (disassembly) and `.lst` (disassembly with
+   source interweaved).
 
 ## Writing `main.cpp`
 
