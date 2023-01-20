@@ -19,9 +19,16 @@ a:visited code {
     color: #9B59B6;
 }
 
-
-
 .md-header__topic {
     font-size: 1.6em;
     font-weight: 100 !important;
+}
+
+.md-logo {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.md-logo img {
+    height: 2.2rem !important;
 }
