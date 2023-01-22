@@ -406,7 +406,7 @@ undefined behavior.
 size. Due to this, constructing an `inplace_function` is deterministic and
 relatively light weight.
 
-## A.18 `hal::callback` sizing
+## A.19 `hal::callback` sizing
 
 `hal::callback` is an alias to `inplace_function` with a buffer size of 2
 pointers (`sizeof(std::intptr_t) * 2`). This size was chosen in order to be

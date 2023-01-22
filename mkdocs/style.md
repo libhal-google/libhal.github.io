@@ -257,3 +257,25 @@ modification.
 
 **Rationale:** Makes keeping track of changes and the history of files easier to
 manage.
+
+## S.12 Avoid `std::atomic`
+
+Avoid using `std::atomic` because of portability issues across devices in
+architectures. Especially when `std::atomic` is not fully supported by the
+compiler.
+
+!!! info
+
+    `target` and `processor` libraries are allowed to use `std::atomic` if it is
+    available with their cross compiler and toolchain. In this case, the we can
+    know which target devices the software is running on, either the target
+    itself, which we already know can support it, or on a host machine for unit
+    testing, which is very likely to have a compiler that supports atomics.
+
+## S.13 Avoid `<thread>`
+
+Embedded system compilers tend to not provide an implementation of `<thread>`
+because the choice of which threading model or multi-threading operating system
+is left to the developer.
+
+In general, `#include <thread>` will almost never work when cross compiling.
