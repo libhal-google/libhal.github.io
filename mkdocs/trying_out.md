@@ -24,14 +24,14 @@ Clone the library repos to get their demos within their `demos/` directory.
 === "LPC4078"
 
     ```bash
-    git clone https://github.com/libhal/liblpc40xx
+    git clone https://github.com/libhal/libhal-lpc40xx
     cd liblpc40xx/demo
     ```
 
-=== "STM32F10X"
+=== "STM32F10X ❌"
 
     ```bash
-    git clone https://github.com/libhal/libstm32f10x
+    git clone https://github.com/libhal/libhal-stm32f10x
     cd libstm32f10x/demo
     ```
 
@@ -104,7 +104,7 @@ USB-C connector.
     ```
 
     ```bash
-    nxpprog --control --binary="lpc4078_uart.elf.bin" --device="/dev/tty.usbserial-140"
+    nxpprog --control --binary "lpc4078_uart.elf.bin" --device "/dev/tty.usbserial-140"
     ```
 
     - Replace `/dev/tty.usbserial-140` with the correct port.

@@ -69,6 +69,11 @@ is not the only way to use libhal.
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
     ```
 
+    !!! warning
+
+        Sometimes the  `choco` command doesn't work after running this script.
+        Try closing and opening again PowerShell
+
     Now install `python`:
 
     ```powershell
