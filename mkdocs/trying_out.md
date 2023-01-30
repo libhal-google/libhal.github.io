@@ -103,6 +103,15 @@ USB-C connector.
     python3 -m pip install nxpprog
     ```
 
+    !!! tip
+
+        On Ubuntu 22.04 you will need to use the command `python3.9` because
+        the default python is usually 3.8.
+
+        ```bash
+        python3.9 -m pip install nxpprog
+        ```
+
     ```bash
     nxpprog --control --binary "lpc4078_uart.elf.bin" --device "/dev/tty.usbserial-140"
     ```
