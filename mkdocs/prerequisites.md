@@ -29,6 +29,28 @@ is not the only way to use libhal.
     python3 -m pip install -U conan cmake
     ```
 
+=== "Ubuntu 20.04"
+
+    Install python3.9:
+
+    ```
+    sudo apt-get install python3.9
+    ```
+
+    Install GCC and build essentials:
+
+    ```
+    sudo apt update && sudo apt upgrade
+    sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+    sudo apt install -y build-essential g++-11
+    ```
+
+    Installing conan & cmake:
+
+    ```
+    python3.9 -m pip install -U conan cmake
+    ```
+
 === "MacOS X"
 
     Install Homebrew:
@@ -86,10 +108,22 @@ is not the only way to use libhal.
     choco install mingw
     ```
 
+    Install `make` for cmake:
+
+    ```powershell
+    choco install make
+    ```
+
     Installing conan & cmake:
 
     ```powershell
     python3 -m pip install -U conan cmake
+    ```
+
+    Set `make` as your default generator:
+
+    ```powershell
+    [System.Environment]::SetEnvironmentVariable('CMAKE_GENERATOR','Unix Makefiles')
     ```
 
 ---
