@@ -55,8 +55,8 @@ markdown_extensions:
 nav:
   - 🏡 Home: 'index.md'
   - 'prerequisites.md'
-  - 'glossary.md'
   - 'trying_out.md'
+  - 'glossary.md'
   - 📚 Tutorials:
     - 'tutorials/organization.md'
     - 'tutorials/building_blocks.md'

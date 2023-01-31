@@ -1,7 +1,7 @@
-# 📃 Glossary
+# 📃 Learning the Terms
 
-Here is a list of terms used in libhal. It is HIGHLY RECOMMENDED that new users
-of libhal read this section.
+Here is a list of terms used in libhal. It is **HIGHLY RECOMMENDED** that new
+users of libhal read this section.
 
 ## Target(s)
 
