@@ -91,10 +91,10 @@ is not the only way to use libhal.
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
     ```
 
-    !!! warning
+    !!! tip
 
-        Sometimes the  `choco` command doesn't work after running this script.
-        Try closing and opening again PowerShell
+        If the `choco` command doesn't work after running this script try
+        closing and opening again PowerShell.
 
     Now install `python`:
 
@@ -130,41 +130,54 @@ is not the only way to use libhal.
 
 ## Setting up Conan
 
-Before you can use conan with libhal, you'll need to change the default conan
-profile settings to make your life a bit easier. The profile settings control
-which compiler is used for compiling and testing conan packages.
+In order to use Conan a conan profile must be created. To learn more about
+profiles see
+[Conan Profiles](https://docs.conan.io/en/latest/reference/profiles.html).
 
-If you've never run conan before run this to generate the default profile:
+First lets create a default profile:
 
 ```bash
 conan profile new default --detect
 ```
 
-It is very likely you will get the error when you run the default detection for
-conan:
 
+!!! note
+
+    You may likely you will get the error when you run the default detection for
+    conan:
+
+    ```
+    ************************* WARNING: GCC OLD ABI COMPATIBILITY ***********************
+
+    Conan detected a GCC version > 5 but has adjusted the 'compiler.libcxx' setting to
+    'libstdc++' for backwards compatibility.
+    Your compiler is likely using the new CXX11 ABI by default (libstdc++11).
+
+    If you want Conan to use the new ABI for the default profile, run:
+
+        $ conan profile update settings.compiler.libcxx=libstdc++11 default
+
+    Or edit '/home/runner/.conan/profiles/default' and set compiler.libcxx=libstdc++11
+
+    ************************************************************************************
+    ```
+
+    This is fine and to be expected with the default. The following rectify this
+    is by setting the correct configurations.
+
+## Add `libhal-trunk` repository to conan remotes
+
+This allows conan to search for packages in the `libhal-trunk` repository, which
+is updated with every change to the libhal organizations code base.
+
+```bash
+conan remote add libhal-trunk https://libhal.jfrog.io/artifactory/api/conan/trunk-conan --insert
+conan config set general.revisions_enabled=True
 ```
-************************* WARNING: GCC OLD ABI COMPATIBILITY ***********************
 
-Conan detected a GCC version > 5 but has adjusted the 'compiler.libcxx' setting to
-'libstdc++' for backwards compatibility.
-Your compiler is likely using the new CXX11 ABI by default (libstdc++11).
+## Profile setting for GCC 11 users
 
-If you want Conan to use the new ABI for the default profile, run:
-
-    $ conan profile update settings.compiler.libcxx=libstdc++11 default
-
-Or edit '/home/runner/.conan/profiles/default' and set compiler.libcxx=libstdc++11
-
-************************************************************************************
-```
-
-This is fine and to be expected with the default. The following rectify this is
-by setting the correct configurations.
-
-## Setting your compiler to GCC 11
-
-Recommended for Linux & Windows users
+**Recommended for Linux & Windows:**
 
 ```bash
 conan profile update settings.build_type=Debug default
@@ -173,27 +186,13 @@ conan profile update settings.compiler=gcc default
 conan profile update settings.compiler.version=11 default
 ```
 
-## Setting your compiler to Clang 14
+## Profile setting for Clang 14 users
 
-Recommended for MacOSX users
+**Recommended for MacOSX users:**
 
 ```bash
 conan profile update settings.build_type=Debug default
 conan profile update settings.compiler.libcxx=libc++ default
 conan profile update settings.compiler=clang default
 conan profile update settings.compiler.version=14 default
-```
-
-## Add libhal-trunk repository to conan remotes
-
-When conan is installed it only knows to look for packages in the conan center
-package index. The process and requirements for making an official release to
-the conan center takes time. Meaning that there are very few releases on the
-conan center for official libhal drivers. To get the latest updates to the
-libhal official libraries, add the `libhal-trunk` repository to your list of
-conan repos.
-
-```bash
-conan remote add libhal-trunk https://libhal.jfrog.io/artifactory/api/conan/trunk-conan --insert
-conan config set general.revisions_enabled=True
 ```
