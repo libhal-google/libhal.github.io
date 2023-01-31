@@ -9,6 +9,8 @@ theme:
   features:
     - content.tabs.link
     - toc.integrate
+    - navigation.tracking
+    - navigation.footer
   highlightjs: true
   hljs_style:
     - monokai
