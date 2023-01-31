@@ -25,14 +25,14 @@ Clone the library repos to get their demos within their `demos/` directory.
 
     ```bash
     git clone https://github.com/libhal/libhal-lpc40xx
-    cd liblpc40xx/demo
+    cd libhal-lpc40xx/demo
     ```
 
 === "STM32F10X ❌"
 
     ```bash
     git clone https://github.com/libhal/libhal-stm32f10x
-    cd libstm32f10x/demo
+    cd libhal-stm32f10x/demo
     ```
 
 ### Building using Conan & CMake
