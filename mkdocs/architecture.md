@@ -420,3 +420,22 @@ parameter passing. Thus the size of 2 pointers was mostly to help in keeping
 the memory footprint of the `callback` small. In most cases, setting an
 callback is something that is either done once or done very infrequently, and
 thus does not get much of a benefit from higher performance function calls.
+
+## A.20 Why functions that setup events do not return `hal::status`
+
+Functions like `hal::can::on_receive()` and `hal::interrupt_pin::on_trigger()`
+return void and not `hal::status` like other APIs. Thus these functions cannot
+return an error and are considered "infallible". There infallibility
+guarantee makes constructing drivers using these interfaces easier. It also
+eliminates the need for drivers to concern themselves with handling errors from
+these APIs.
+
+This guarantee is easily made, because having any one of these APIs fail IS A
+bug and not something that a developer should or could be responsible with
+handling. These APIs MUST be implemented as target library peripheral drivers
+because setting interrupts is something that only target and processor libraries
+can do. Setting up and configuring interrupts is only possible if the processor
+supports it. Being apart of a target library means that they know exactly
+the set of possible configurations that are allowed. This also means that
+constructing a target peripheral with interrupt customization can be include
+compile time checks as well.
