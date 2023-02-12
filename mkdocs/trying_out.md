@@ -19,7 +19,8 @@ Make sure to complete [🧰 Install Prerequisites](prerequisites.md)
 
 ### Cloning the target libraries
 
-Clone the library repos to get their demos within their `demos/` directory.
+Clone the target library you would like to run the demos for. You can download
+just one or both if you have both devices.
 
 === "LPC4078"
 
@@ -54,15 +55,45 @@ cd build
 From the `build/` directory we can execute conan:
 
 ```bash
-conan install .. -s build_type=Debug --build=missing
+conan install ..
 ```
 
 After generating the conan files, we can now run CMake to generate our build
 files.
 
 ```bash
-cmake .. -D CMAKE_BUILD_TYPE=Debug -D CMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
+cmake ..
 ```
+
+!!! note
+
+    If you used the prerequisite steps, these steps will default to building
+    debug packages. If you want to create release packages (optimizations turned
+    on), then you will need to use this conan command:
+
+    ```bash
+    conan install .. -s build_type=Release
+    ```
+
+    and this cmake command:
+
+    ```bash
+    cmake .. -D CMAKE_BUILD_TYPE=Release
+    ```
+
+    If you ran `cmake` before, you may need to delete the `CMakeCache.txt` when
+    switching between release and debug builds.
+
+!!! warning
+
+    On Windows you may need to run cmake with the `-G "Unix Makefiles"`
+    argument if you have not set the `CMAKE_GENERATOR` environment variable.
+
+    Like so:
+
+    ```bash
+    cmake .. -G "Unix Makefiles"
+    ```
 
 #### Breaking down the Conan install command
 
