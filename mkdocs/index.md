@@ -4,7 +4,7 @@
 </div>
 
 !!! Warning
-    libhal is still in **ALPHA** stages!
+    libhal is still in **BETA**!
 
 ## Abstract
 
@@ -33,8 +33,8 @@ enables applications to run on any target device that has the necessary
 components available.
 
 A quick example is a blinker program. The required interfaces for such a program
-is a `hal::output_pin` for controlling the LED and a `hal::counter` for keeping
-time. Now your application takes both of these drivers without having to
+is a `hal::output_pin` for controlling the LED and a `hal::steady_clock` for
+keeping time. Now your application takes both of these drivers without having to
 consider their implementation details and blink and LED at a specified interval.
 
 Below is a set of source code to make an application that can work with both the
@@ -123,11 +123,11 @@ Below is a set of source code to make an application that can work with both the
 === "lpc40.cpp"
 
     ``` C++
-    #include <libarmcortex/dwt_counter.hpp>
-    #include <libarmcortex/startup.hpp>
-    #include <libarmcortex/system_control.hpp>
+    #include <libhal-armcortex/dwt_counter.hpp>
+    #include <libhal-armcortex/startup.hpp>
+    #include <libhal-armcortex/system_control.hpp>
 
-    #include <liblpc40xx/output_pin.hpp>
+    #include <libhal-lpc40xx/output_pin.hpp>
 
     #include "hardware_map.hpp"
 
@@ -149,11 +149,11 @@ Below is a set of source code to make an application that can work with both the
 === "stm32f10.cpp"
 
     ``` C++
-    #include <libarmcortex/dwt_counter.hpp>
-    #include <libarmcortex/startup.hpp>
-    #include <libarmcortex/system_control.hpp>
+    #include <libhal-armcortex/dwt_counter.hpp>
+    #include <libhal-armcortex/startup.hpp>
+    #include <libhal-armcortex/system_control.hpp>
 
-    #include <libstm32f10x/output_pin.hpp>
+    #include <libhal-stm32f10x/output_pin.hpp>
 
     #include "hardware_map.hpp"
 
@@ -170,7 +170,6 @@ Below is a set of source code to make an application that can work with both the
       };
     }
     ```
-
 
 ## Support
 
