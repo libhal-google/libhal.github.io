@@ -6,7 +6,7 @@ is not the only way to use libhal.
 - `make`: latest available version
 - `cmake`: 3.15 or above
 - `python`: 3.10 or above
-- `conan`: 1.51.3 or above (conan 2.0.0+ not currently supported)
+- `conan`: 1.57.0
 - Suitable Compiler for running host tests (can be either of these):
     - `gcc`: 11.3.0 or above
     - `clang`: 14 and above
@@ -26,7 +26,7 @@ is not the only way to use libhal.
     Installing conan & cmake:
 
     ```
-    python3 -m pip install -U conan cmake
+    python3 -m pip install conan==1.57.0 cmake
     ```
 
 === "Ubuntu 20.04"
@@ -48,7 +48,7 @@ is not the only way to use libhal.
     Installing conan & cmake:
 
     ```
-    python3.9 -m pip install -U conan cmake
+    python3.9 -m pip install conan==1.57.0 cmake
     ```
 
 === "MacOS X"
@@ -68,7 +68,7 @@ is not the only way to use libhal.
     Install conan & cmake:
 
     ```
-    python3 -m pip install -U conan cmake
+    python3 -m pip install conan==1.57.0 cmake
     ```
 
     Install Rosetta (only required for M1 macs):
@@ -117,7 +117,7 @@ is not the only way to use libhal.
     Installing conan & cmake:
 
     ```powershell
-    python3 -m pip install -U conan cmake
+    python3 -m pip install -U conan==1.57.0 cmake
     ```
 
     Set `make` as your default generator:
