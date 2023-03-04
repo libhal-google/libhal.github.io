@@ -38,31 +38,10 @@ just one or both if you have both devices.
 
 ### Building using Conan & CMake
 
-To build using conan and cmake, you will first need a build directory to contain
-all of the generated files. First create a `build` directory within the `demos`
-directory.
+To build using conan and cmake, you just need to run the following:
 
 ```bash
-mkdir build
-```
-
-Next, move into the `build/` directory
-
-```bash
-cd build
-```
-
-From the `build/` directory we can execute conan:
-
-```bash
-conan install ..
-```
-
-After generating the conan files, we can now run CMake to generate our build
-files.
-
-```bash
-cmake ..
+conan build .
 ```
 
 !!! note
@@ -72,42 +51,10 @@ cmake ..
     on), then you will need to use this conan command:
 
     ```bash
-    conan install .. -s build_type=Release
+    conan build . -s build_type=Release
     ```
 
-    and this cmake command:
-
-    ```bash
-    cmake .. -D CMAKE_BUILD_TYPE=Release
-    ```
-
-    If you ran `cmake` before, you may need to delete the `CMakeCache.txt` when
-    switching between release and debug builds.
-
-!!! warning
-
-    On Windows you may need to run cmake with the `-G "Unix Makefiles"`
-    argument if you have not set the `CMAKE_GENERATOR` environment variable.
-
-    Like so:
-
-    ```bash
-    cmake .. -G "Unix Makefiles"
-    ```
-
-#### Breaking down the Conan install command
-
-Finally, to build the final binary, run `make`
-
-```bash
-make -j
-```
-
-!!! info
-
-    The `-j` argument tells make to multithread the build process.
-
-When this completes you should have some applications in the directory with
+When this completes you should have some applications in the `build/Debug` with
 names such as `lpc4078_uart.elf` or `stm32f103_blinker.elf`.
 
 ## 💾 Uploading Demos to Device
@@ -144,14 +91,14 @@ USB-C connector.
         ```
 
     ```bash
-    nxpprog --control --binary "lpc4078_uart.elf.bin" --device "/dev/tty.usbserial-140"
+    nxpprog --control --binary "build/Debug/lpc4078_uart.elf.bin" --device "/dev/tty.usbserial-140"
     ```
 
     - Replace `/dev/tty.usbserial-140` with the correct port.
-    - Use `"lpc4078_uart.elf.bin"` or replace it with any other application to
+    - Use `"build/Debug/lpc4078_uart.elf.bin"` or replace it with any other application to
       be uploaded.
 
-=== "STM32F10X"
+=== "STM32F10X ❌"
 
     Install the [`stm32loader`](https://pypi.org/project/stm32loader/) flashing
     software for STM32 devices:
@@ -161,9 +108,9 @@ USB-C connector.
     ```
 
     ```bash
-    stm32loader.py -p /dev/tty.usbserial-140 -e -w -v "stm32f103_uart.elf.bin"
+    stm32loader.py -p /dev/tty.usbserial-140 -e -w -v "build/Debug/stm32f103_uart.elf.bin"
     ```
 
     - Replace `/dev/tty.usbserial-140` with the correct port.
-    - Use `"stm32f103_uart.elf.bin"` or replace it with any other application to
+    - Use `"build/Debug/stm32f103_uart.elf.bin"` or replace it with any other application to
       be uploaded.

@@ -26,7 +26,7 @@ is not the only way to use libhal.
     Installing conan & cmake:
 
     ```
-    python3 -m pip install conan==1.57.0 cmake
+    python3 -m pip install conan cmake
     ```
 
 === "Ubuntu 20.04"
@@ -48,7 +48,7 @@ is not the only way to use libhal.
     Installing conan & cmake:
 
     ```
-    python3.9 -m pip install conan==1.57.0 cmake
+    python3.9 -m pip install conan cmake
     ```
 
 === "MacOS X"
@@ -68,7 +68,7 @@ is not the only way to use libhal.
     Install conan & cmake:
 
     ```
-    python3 -m pip install conan==1.57.0 cmake
+    python3 -m pip install conan cmake
     ```
 
     Install Rosetta (only required for M1 macs):
@@ -117,7 +117,7 @@ is not the only way to use libhal.
     Installing conan & cmake:
 
     ```powershell
-    python3 -m pip install -U conan==1.57.0 cmake
+    python3 -m pip install -U conan cmake
     ```
 
     Set `make` as your default generator:
@@ -140,42 +140,27 @@ First lets create a default profile:
 conan profile new default --detect
 ```
 
-
-!!! note
-
-    You may likely you will get the error when you run the default detection for
-    conan:
-
-    ```
-    ************************* WARNING: GCC OLD ABI COMPATIBILITY ***********************
-
-    Conan detected a GCC version > 5 but has adjusted the 'compiler.libcxx' setting to
-    'libstdc++' for backwards compatibility.
-    Your compiler is likely using the new CXX11 ABI by default (libstdc++11).
-
-    If you want Conan to use the new ABI for the default profile, run:
-
-        $ conan profile update settings.compiler.libcxx=libstdc++11 default
-
-    Or edit '/home/runner/.conan/profiles/default' and set compiler.libcxx=libstdc++11
-
-    ************************************************************************************
-    ```
-
-    This is fine and to be expected with the default. The following rectify this
-    is by setting the correct configurations.
-
 ## Add `libhal-trunk` repository to conan remotes
 
 This allows conan to search for packages in the `libhal-trunk` repository, which
 is updated with every change to the libhal organizations code base.
 
 ```bash
-conan remote add libhal-trunk https://libhal.jfrog.io/artifactory/api/conan/trunk-conan --insert
-conan config set general.revisions_enabled=True
+conan remote add libhal-trunk https://libhal.jfrog.io/artifactory/api/conan/trunk-conan
 ```
 
 ## Profile setting for GCC 11 users
+
+!!! critical
+
+    This section has been broken by Conan 2. In order to make these changes,
+    please update your `.conan2/profiles/default` file directly using a text
+    editor.
+
+    See https://docs.conan.io/2/tutorial/consuming_packages/build_simple_cmake_project.html
+    for the steps to update your profile. Use the profile contents below.
+
+    A better and simpler solution is being worked on, please be patient.
 
 **Recommended for Linux & Windows:**
 
