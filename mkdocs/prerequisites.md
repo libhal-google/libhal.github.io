@@ -184,7 +184,7 @@ conan remote add libhal-trunk https://libhal.jfrog.io/artifactory/api/conan/trun
     default configuration.
 
     ```bash
-    conan config install -sf profiles/x86_mac/windows/ -tf profiles https://github.com/libhal/conan-config.git
+    conan config install -sf profiles/x86_64/windows/ -tf profiles https://github.com/libhal/conan-config.git
     ```
 
 === "ARM64 Windows"
