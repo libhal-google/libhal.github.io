@@ -1,7 +1,6 @@
 # 🧰 Install Prerequisites
 
-This is the recommended way to setup your system for libhal and conan but this
-is not the only way to use libhal.
+What you will need in order to get started with libhal.
 
 - `make`: latest available version
 - `cmake`: 3.15 or above
@@ -120,24 +119,14 @@ is not the only way to use libhal.
     python3 -m pip install -U conan cmake
     ```
 
-    Set `make` as your default generator:
-
-    ```powershell
-    [System.Environment]::SetEnvironmentVariable('CMAKE_GENERATOR','Unix Makefiles')
-    ```
-
 ---
 
 ## Setting up Conan
 
-In order to use Conan a conan profile must be created. To learn more about
-profiles see
-[Conan Profiles](https://docs.conan.io/en/latest/reference/profiles.html).
-
 First lets create a default profile:
 
 ```bash
-conan profile new default --detect
+conan profile detect --force
 ```
 
 ## Add `libhal-trunk` repository to conan remotes
@@ -151,33 +140,60 @@ conan remote add libhal-trunk https://libhal.jfrog.io/artifactory/api/conan/trun
 
 ## Profile setting for GCC 11 users
 
-!!! critical
+=== "Intel Linux"
 
-    This section has been broken by Conan 2. In order to make these changes,
-    please update your `.conan2/profiles/default` file directly using a text
-    editor.
+    If your host machine is using an intel core processor as its CPU then you'll
+    want to use this default configuration.
 
-    See https://docs.conan.io/2/tutorial/consuming_packages/build_simple_cmake_project.html
-    for the steps to update your profile. Use the profile contents below.
+    ```bash
+    conan config install -sf profiles/x86_64/linux/ -tf profiles https://github.com/libhal/conan-config.git
+    ```
 
-    A better and simpler solution is being worked on, please be patient.
+=== "ARM64 Linux"
 
-**Recommended for Linux & Windows:**
+    It is less likely your host desktop is an ARM64. This section is mostly for
+    building applications and tests on a Raspberry PI or other SBC. But if you
+    do have a laptop powered by an ARM64 core, then this is the correct
+    configuration for you.
 
-```bash
-conan profile update settings.build_type=Debug default
-conan profile update settings.compiler.libcxx=libstdc++ default
-conan profile update settings.compiler=gcc default
-conan profile update settings.compiler.version=11 default
-```
+    ```bash
+    conan config install -sf profiles/armv8/linux/ -tf profiles https://github.com/libhal/conan-config.git
+    ```
 
-## Profile setting for Clang 14 users
+=== "M1 Mac"
 
-**Recommended for MacOSX users:**
+    If your macbook uses an M1 processor then you'll want to use this default
+    configuration.
 
-```bash
-conan profile update settings.build_type=Debug default
-conan profile update settings.compiler.libcxx=libc++ default
-conan profile update settings.compiler=clang default
-conan profile update settings.compiler.version=14 default
-```
+    ```bash
+    conan config install -sf profiles/armv8/mac/ -tf profiles https://github.com/libhal/conan-config.git
+    ```
+
+=== "Intel Mac"
+
+    If your macbook uses an Intel processor then you'll want to use this default
+    configuration.
+
+    ```bash
+    conan config install -sf profiles/x86_64/mac/ -tf profiles https://github.com/libhal/conan-config.git
+    ```
+
+=== "Intel Windows"
+
+    If your windows machine uses an Intel processor then you'll want to use this
+    default configuration.
+
+    ```bash
+    conan config install -sf profiles/x86_mac/windows/ -tf profiles https://github.com/libhal/conan-config.git
+    ```
+
+=== "ARM64 Windows"
+
+    If you have a modern surface laptop with ARM64, then this may be the right
+    choice for you.
+
+    ```bash
+    conan config install -sf profiles/armv8/windows/ -tf profiles https://github.com/libhal/conan-config.git
+    ```
+
+---

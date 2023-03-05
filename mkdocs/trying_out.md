@@ -41,20 +41,27 @@ just one or both if you have both devices.
 To build using conan and cmake, you just need to run the following:
 
 ```bash
-conan build .
+conan build . -b missing
 ```
 
 !!! note
 
-    If you used the prerequisite steps, these steps will default to building
-    debug packages. If you want to create release packages (optimizations turned
-    on), then you will need to use this conan command:
+    You only have to include `-b missing` if you get an error stating that the
+    prebuilt binaries are missing. `-b missing` will build them locally for
+    your machine. After which those libraries will be cached on your machine
+    and you'll no longer need to include those arguments.
+
+!!! tip
+
+    If you want to create release packages which enables optimizations,
+    you will need to add the `-s build_type=Release` to your conan build
+    command:
 
     ```bash
-    conan build . -s build_type=Release
+    conan build . -b missing -s build_type=Release
     ```
 
-When this completes you should have some applications in the `build/Debug` with
+When this completes you should have some applications in the `build/Debug/` with
 names such as `lpc4078_uart.elf` or `stm32f103_blinker.elf`.
 
 ## 💾 Uploading Demos to Device
