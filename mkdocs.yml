@@ -90,7 +90,6 @@ nav:
   - 💡 How-To Guides:
     - 'how-to/project.md'
     - 'how-to/device.md'
-    - 'how-to/target.md'
     - 'how-to/arm_cortex_bringup.md'
     - 'how-to/application.md'
     - 'how-to/utility.md'

@@ -47,8 +47,8 @@ exports_sources = "include/*", "linker_scripts/*", "tests/*", "LICENSE"
 
 Lets consider the `lpc4074` microcontroller. What you'll need to figure out is:
 
-1. Flash memory memory address & size
-2. Ram memory memory address & size
+1. Flash memory address & size
+2. Ram memory address & size
 
 These sections are part of whats called the "memory map". Most modern day
 systems use a system called "Memory-mapped I/O" which means that the system uses
@@ -262,7 +262,7 @@ def package_info(self):
 
   # This is where we add the path to our linker scripts to the set of linker
   # flags.
-  self.cpp_info.components["lpc"].exelinkflags.append("-L " + linker_path)
+  self.cpp_info.components["lpc"].exelinkflags.append("-L" + linker_path)
 
   # Add the list of requirements to the generic component
   self.cpp_info.components["lpc"].requires = requirements_list
@@ -270,7 +270,7 @@ def package_info(self):
   # Helper function for creating components
   def create_component(self, component, flags):
 
-      link_script = "-T libhal-lpc/" + component + ".ld"
+      link_script = "-Tlibhal-lpc/" + component + ".ld"
       component_name = "libhal::" + component
       self.cpp_info.components[component].set_property(
           "cmake_target_name", component_name)
