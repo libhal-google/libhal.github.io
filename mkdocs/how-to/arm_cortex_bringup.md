@@ -294,9 +294,9 @@ def package_info(self):
   create_component(self, "lpc4088", m4f_architecture_flags)
 ```
 
-## Step 4. Verifying
+## Verifying
 
-### Step 4.1 Creating the package
+### Creating the package
 
 Run `conan create .` in the folder with the `conanfile.py` recipe in it.
 The test package and build stages should show something like this during the
@@ -311,7 +311,7 @@ cmake phase:
 -- Conan: Component target declared 'libhal::lpc4088'
 ```
 
-### Step 4.2 Testing out a demo
+### Testing out a demo
 
 Create a demo and have it require the library. In this case the demo
 `conafile.py` may include:
