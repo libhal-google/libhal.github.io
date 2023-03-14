@@ -5,31 +5,35 @@ arm processor microcontroller. Unlike libhal applications that can be executed
 on a machine running an OS like linux, example Raspberry Pi and Beagle Boards,
 you cannot just execute the binary.
 
+This guide assumes that `libhal-library` was used as a template and has already
+updated and changed all of the names from `libhal-library` to the appropriate
+library name.
+
 In order to build an application that can be loaded and executed onto a
-microcontroller you only need to provide the
-**linker script for the microcontroller(s) you want to support.**
+microcontroller you only need:
+
+1. Add `libhal-armcortex` as a dependency
+2. Provide a linker script for each microcontroller
+3. Determine minimum compiler flags for each microcontroller
+4. Provide a library component for that microcontroller
 
 The rest can be handled by the `arm-gnu-embedded-toolchain`'s `crt0`
 implementation, the `arm-gnu-embedded-toolchain` conan package and the
 `libhal-armcortex` conan package.
 
-## Step 1. Setup linker script directory
+## Adding the `libhal-armcortex` dependency
 
-Add `libhal-armcortex` as a dependency of the library package in the
-`requirements` method of the package `ConanFile` package class. Something like
-so can work:
+Simply add `libhal-armcortex` to your `requirements()` method:
 
 ```python
 def requirements(self):
-    self.requires("libhal/[^1.0.1]")
-    self.requires("libhal-util/[^1.0.0]")
+    # ...
     self.requires("libhal-armcortex/[^1.0.1]")
 ```
 
-Choose the appropriate versions of `libhal` and `libhal-util` and `libhal-armcortex`
-for your project. The latest versions are always the preferred choice.
+## Writing the linker scripts
 
-## Step 2. Setup linker script directory
+### Setup linker script directory
 
 Create a `linker_scripts` directory at the root of the library package.
 Add `linker_scripts/*` directory to the export sources in the package
@@ -39,36 +43,22 @@ Add `linker_scripts/*` directory to the export sources in the package
 exports_sources = "include/*", "linker_scripts/*", "tests/*", "LICENSE"
 ```
 
-## Step 3. Add linker scripts
+### Finding linker scripts info
 
 Lets consider the `lpc4074` microcontroller. What you'll need to figure out is:
 
-1. Flash memory starting address
-2. Flash memory size
-3. Ram memory starting address
-4. Ram memory size
-5. Minimum stack size (optional will be defaulted to 0x800 size)
+1. Flash memory memory address & size
+2. Ram memory memory address & size
 
-```linkerscript
-__flash      = /* TBD */;
-__flash_size = /* TBD */;
-__ram        = /* TBD */;
-__ram_size   = /* TBD */;
-__stack_size = 1K;
+These sections are part of whats called the "memory map". Most modern day
+systems use a system called "Memory-mapped I/O" which means that the system uses
+the same address space to address both memory and I/O devices. In this case we
+simply want to find the addresses of the flash memory and ram memory. This
+information can be found in the data sheet or user manual of the chip.
 
-INCLUDE "libhal-armcortex/standard.ld"
-```
-
-<p style="text-align: center; font-style: italic;">
-Figure 1. Example linker script using the libhal-armcortex/standard.ld
-</p>
-
-These sections are part of the system called the "memory map". The memory map
-specifies what the address of each register and device is on the system.
-
-This information can be found in the data sheet or user manual of the chip. In
-this case page 52 of the `LPC408X_7X.pdf` data sheet or page 14 of `UM10562.pdf`
-have information regarding
+The LPC40 series of microcontrollers will be used for this example:
+The memory map can be found on page 52 of the `LPC408X_7X.pdf` data sheet or
+page 14 of the `UM10562.pdf` user manual.
 
 ![lpc40xx memory map](arm_cortex_bringup/lpc40xx-memory-map.png)
 
@@ -76,15 +66,13 @@ have information regarding
 Figure 1. LPC40xx Memory Map
 </p>
 
-Here you can see that flash starts at address `0x00000000`. The LPC40xx family
-has chips with multiple flash sizes from 512kB to 64kB. We also see that the
-SRAM locations all start at `0x10000000`. But the amount of SRAM varies
-depending on the device as well. To further figure this out, we need to find
-which chip is associated with the specific flash sizes and RAM sizes.
+Here you can see that flash starts at address `0x00000000` for all sizes of
+flash memory. The SRAM locations all start at `0x10000000` for all sizes of
+SRAM. This chart does not provide which chips have which ram and flash sizes.
 
-Looking through the data sheet and searching for part numbers, ordering options,
-or even the number 512, because we know that number has to come up else where
-to explain each chip, we eventually find this section on page.
+Looking through the data sheet and searching for terms like "part numbers",
+"ordering options", or even just the number 512 (the maximum flash size),
+eventually this section will appear:
 
 ![lpc40xx ordering info part 1](arm_cortex_bringup/lpc40xx-ordering-1.png)
 
@@ -98,49 +86,141 @@ Figure 2. LPC40xx Part Ordering Info part 1
 Figure 3. LPC40xx Part Ordering Info part 2
 </p>
 
-Now we have all of the information we need to write the linker script.
+Now all of the information to write the linker scripts is available:
 
-The following is an example script for the lpc4074 microcontroller's linker
-script.
+=== "lpc4072.ld"
 
-```linkerscript
-__flash      = 0x00000000;
-__flash_size = 128K;
-__ram        = 0x10000000;
-__ram_size   = 32K;
-__stack_size = 1K;
+    ```ld
+    __flash = 0x00000000;
+    __flash_size = 64K;
+    __ram = 0x10000000;
+    __ram_size = 16K;
 
-INCLUDE "libhal-armcortex/standard.ld"
-```
+    INCLUDE "libhal-armcortex/standard.ld"
+    ```
 
-Make a linker script for each microcontroller in the lpc40xx series. Note that
-many of the microcontrollers come in different packages and may have some
-differences in the number of peripherals they support, pins they have and more.
-The linker script does not need to worry about such differences. We just want
-the common flash sizes and ram sizes for each.
+=== "lpc4074.ld"
 
-Given what is in the parts ordering pages we only need to support the following
-microcontrollers: lpc4072, lpc4074, lpc4076, lpc4078, and lpc4088.
+    ```ld
+    __flash = 0x00000000;
+    __flash_size = 128K;
+    __ram = 0x10000000;
+    __ram_size = 32K;
 
-## Step 3. Creating components for the library
+    INCLUDE "libhal-armcortex/standard.ld"
+    ```
 
-The standard way to ensure that a particular linker script is used for an
-application, is to use components. For example, in the above example, we had 5
-target microcontrollers we could support and thus their component names would
-be the following: `libhal::lpc4072`, `libhal::lpc4074`, `libhal::lpc4076`,
-`libhal::lpc4078`, and `libhal::lpc4088`. Along with these components, we
-will add an additional one with the generic name `libhal::lpc` which
-represents a target but without an associated linker script. This special target
-is used for applications that want to use their own linker script, or for
-software running on a host machine like simulations or unit tests.
+=== "lpc4076.ld"
+
+    ```ld
+    __flash = 0x00000000;
+    __flash_size = 256K;
+    __ram = 0x10000000;
+    __ram_size = 64K;
+
+    INCLUDE "libhal-armcortex/standard.ld"
+    ```
+
+=== "lpc4078.ld"
+
+
+    ```ld
+    __flash = 0x00000000;
+    __flash_size = 512K;
+    __ram = 0x10000000;
+    __ram_size = 64K;
+
+    INCLUDE "libhal-armcortex/standard.ld"
+    ```
+
+=== "lpc4088.ld"
+
+    ```ld
+    __flash = 0x00000000;
+    __flash_size = 512K;
+    __ram = 0x10000000;
+    __ram_size = 64K;
+
+    INCLUDE "libhal-armcortex/standard.ld"
+    ```
+
+---
+
+!!! question
+
+    You may be wondering why the RAM size is 64kB and not 96kB for some of the
+    linker scripts and thats due to the fact that the LPC40xx series has a dual
+    SRAM architecture. To keep this simple, only the largest RAM block is
+    supported.
+
+The linker script only needs 4 lines as `libhal-armcortex` provides a standard
+linker script for ARM microcontrollers supporting 1 flash memory and 1 ram
+device. Defining the `__flash`, `__flash_size`, `__ram`, and `__ram_size`
+linker script variables is all that is needed to make a usable linker script.
+
+There are plans to support dual flash, dual ram and other varieties of flash
+and ram combinations in the future in `libhal-armcortex`.
+
+!!! warning
+
+    Many of the microcontrollers come in different packages and may have some
+    differences in the number of peripherals they support, pins they have and
+    performance. The linker script does not need to worry about such
+    differences and thus, a linker script should **NOT** be made for every
+    possible chip variety in the series but for the common flash sizes and ram
+    sizes for each.
+
+## Compiler flags
+
+### Processor flags
+
+The data sheet will include information about the processor. The compiler flag
+will match the following based on the CPU:
+
+- `-mcpu=cortex-m0`
+- `-mcpu=cortex-m0plus` (cortex-M0+)
+- `-mcpu=cortex-m1`
+- `-mcpu=cortex-m3`
+- `-mcpu=cortex-m4`
+- `-mcpu=cortex-m7`
+- `-mcpu=cortex-m23`
+- `-mcpu=cortex-m33`
+- `-mcpu=cortex-m35p`
+- `-mcpu=cortex-m55`
+- `-mcpu=cortex-m85`
+- `-mcpu=cortex-m1.small-multiply`
+- `-mcpu=cortex-m0.small-multiply`
+- `-mcpu=cortex-m0plus.small-multiply`
+
+### Floating Point Support
+
+After one of the following to the architecture flags:
+
+- `-mfloat-abi=soft`: if the processor is an cortex-m3 or below
+- `-mfloat-abi=softfp`: if the processor is a cortex-m4 and above AND also has
+  a floating point unit. This can be determined by searching the data sheet.
+
+## Creating components for the library
+
+libhal target library's split up the library into components, one for each
+microcontroller variant. For LPC40 that split would look like:
+`libhal::lpc4072`, `libhal::lpc4074`, `libhal::lpc4076`, `libhal::lpc4078`, and
+`libhal::lpc4088`. When a build system, for example, uses the `libhal::lpc4078`
+component, it includes the necessary compiler flags and linker script selection.
+
+Along with these components, will be a special generic component named
+`libhal::lpc` which does not provide any compiler flags or linker script. This
+special target is used for applications that want to use their own linker
+script, or for software running on a host machine like simulations or unit
+tests.
 
 To add components it must be added in the `package_info` method of the
 `ConanFile` package class. Here is what it looks like for the `libhal-lpc`
-library:
+library. Copy this section and tailor it to your needs.
 
 ```python
 def package_info(self):
-  # Specify all requirements of the package
+  # Specify, for the component, all requirements of the package
   requirements_list = ["libhal::libhal",
                        "libhal-util::libhal-util",
                        "libhal-armcortex::libhal-armcortex",
@@ -154,9 +234,7 @@ def package_info(self):
   # implementation.
   m4f_architecture_flags = [
       "-mcpu=cortex-m4",
-      "-mthumb",
       "-mfloat-abi=softfp",
-      "-mfpu=fpv4-sp-d16"
   ]
 
   # List of REQUIRED compiler flags for the gnu-arm-embedded-toolchain for
@@ -166,7 +244,6 @@ def package_info(self):
   # implementation.
   m4_architecture_flags = [
       "-mcpu=cortex-m4",
-      "-mthumb",
       "-mfloat-abi=soft"
   ]
 
@@ -197,11 +274,15 @@ def package_info(self):
       component_name = "libhal::" + component
       self.cpp_info.components[component].set_property(
           "cmake_target_name", component_name)
+      # Make the special component the only requirement for the component,
+      # inheriting all of the transitive dependencies.
       self.cpp_info.components[component].requires = ["lpc"]
       # Add the link script and flags to the component's linker flags and
       # compiler flags
       self.cpp_info.components[component].exelinkflags.append(link_script)
       self.cpp_info.components[component].exelinkflags.extend(flags)
+      # Add flags to the cflags & cxxflags to ensure that each compilation unit
+      # Knows the instruction set and float ABI
       self.cpp_info.components[component].cflags = flags
       self.cpp_info.components[component].cxxflags = flags
 
@@ -232,4 +313,40 @@ cmake phase:
 
 ### Step 4.2 Testing out a demo
 
-TBD
+Create a demo and have it require the library. In this case the demo
+`conafile.py` may include:
+
+```python
+from conan import ConanFile
+from conan.tools.cmake import CMake, cmake_layout
+
+
+class Lpc40xxDemos(ConanFile):
+    settings = "compiler", "build_type"
+    generators = "CMakeToolchain", "CMakeDeps", "VirtualBuildEnv"
+
+    def requirements(self):
+        self.requires("libhal-lpc/1.1.4") # <-- change this
+        self.requires("libhal-util/[^1.0.0]") # <-- update this if necessary
+        self.tool_requires("gnu-arm-embedded-toolchain/11.3.0")
+        self.tool_requires("cmake-arm-embedded/0.1.1")
+
+    def layout(self):
+        cmake_layout(self)
+
+    def build(self):
+        cmake = CMake(self)
+        cmake.configure()
+        cmake.build()
+```
+
+Change the library name to the library you are creating.
+
+```python
+self.tool_requires("gnu-arm-embedded-toolchain/11.3.0")
+self.tool_requires("cmake-arm-embedded/0.1.1")
+```
+
+The above two requirements are required to download and install the
+toolchain/compiler and the cmake toolchain/helper files. The project should
+compile if everything was done correctly.
