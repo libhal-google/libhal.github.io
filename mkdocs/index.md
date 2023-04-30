@@ -127,7 +127,7 @@ Below is a set of source code to make an application that can work with both the
     #include <libhal-armcortex/startup.hpp>
     #include <libhal-armcortex/system_control.hpp>
 
-    #include <libhal-lpc40xx/output_pin.hpp>
+    #include <libhal-lpc40/output_pin.hpp>
 
     #include "hardware_map.hpp"
 
