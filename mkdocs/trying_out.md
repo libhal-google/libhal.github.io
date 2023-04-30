@@ -25,15 +25,15 @@ just one or both if you have both devices.
 === "LPC4078"
 
     ```bash
-    git clone https://github.com/libhal/libhal-lpc40xx
-    cd libhal-lpc40xx/demo
+    git clone https://github.com/libhal/libhal-lpc40
+    cd libhal-lpc40/demo
     ```
 
-=== "STM32F10X ❌"
+=== "STM32F103 ❌"
 
     ```bash
-    git clone https://github.com/libhal/libhal-stm32f10x
-    cd libhal-stm32f10x/demo
+    git clone https://github.com/libhal/libhal-stm32f1
+    cd libhal-stm32f1/demo
     ```
 
 ### Building using Conan & CMake

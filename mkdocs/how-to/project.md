@@ -25,7 +25,7 @@ A standard libhal `conanfile.txt` will look like this:
 
 ```txt
 [requires]
-libhal-lpc40xx/0.3.4
+libhal-lpc40/1.1.6
 
 [tool_requires]
 gnu-arm-embedded-toolchain/11.3.0
@@ -38,7 +38,7 @@ CMakeDeps
 
 - `[requires]` lists the project dependencies.
     - Each libhal project needs a target library and this example uses
-      `libhal-lpc40xx` which is used for the SJ2 board or the LPC4078 micromod.
+      `libhal-lpc40` which is used for the SJ2 board or the LPC4078 micromod.
 - `[tool_requires]` lists the tools that are needed to build the project.
     - `gnu-arm-embedded-toolchain/11.3.0` brings in the ARM GCC cross compiler
       which is used to compile to the code for ARM Cortex microcontroller.
@@ -60,7 +60,7 @@ cmake_minimum_required(VERSION 3.20)
 
 project(project_name.elf VERSION 0.0.1 LANGUAGES CXX)
 
-find_package(libhal-lpc40xx REQUIRED CONFIG)
+find_package(libhal-lpc40 REQUIRED CONFIG)
 
 add_executable(${PROJECT_NAME} main.cpp newlib.cpp)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
@@ -92,8 +92,8 @@ Read through the source code below to get an idea of whats needed:
 #include <libhal-armcortex/dwt_counter.hpp>
 #include <libhal-armcortex/startup.hpp>
 #include <libhal-armcortex/system_control.hpp>
-#include <libhal-lpc40xx/output_pin.hpp>
-#include <libhal-lpc40xx/system_controller.hpp>
+#include <libhal-lpc40/output_pin.hpp>
+#include <libhal-lpc40/system_controller.hpp>
 #include <libhal-util/steady_clock.hpp>
 
 int
@@ -156,19 +156,8 @@ for the default empty implementations.
 
 ## Compiling the project
 
-The commands for compiling the project:
-
-Create `build/` directory:
+The command for building the project:
 
 ```
-mkdir build
-cd build
-```
-
-Commands for building:
-
-```
-conan install .. -s build_type=Debug --build=missing
-cmake .. -D CMAKE_BUILD_TYPE=Debug -D CMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
-make
+conan build .
 ```
