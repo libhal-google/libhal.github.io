@@ -11,6 +11,9 @@
     <th>
       <p>Coverage</p>
     </th>
+    <th>
+      <p>Latest Version</p>
+    </th>
   </tr>
   <tr>
     <td>
@@ -21,6 +24,9 @@
     </td>
     <td>
       <img src="https://libhal.github.io/libhal-__platform__/coverage/coverage.svg">
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-__platform__/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-__platform__/latest_version.svg" /></a>
     </td>
   </tr>
   <tr>
@@ -33,6 +39,9 @@
     <td>
       <img src="https://libhal.github.io/libhal-stm32f1/coverage/coverage.svg">
     </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-stm32f1/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-stm32f1/latest_version.svg" /></a>
+    </td>
   </tr>
   <tr>
     <td>
@@ -43,6 +52,9 @@
     </td>
     <td>
       <img src="https://libhal.github.io/libhal-esp8266/coverage/coverage.svg">
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-esp8266/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-esp8266/latest_version.svg" /></a>
     </td>
   </tr>
   <tr>
@@ -55,6 +67,9 @@
     <td>
       <img src="https://libhal.github.io/libhal-__device__/coverage/coverage.svg">
     </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-__device__/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-__device__/latest_version.svg" /></a>
+    </td>
   </tr>
   <tr>
     <td>
@@ -65,6 +80,9 @@
     </td>
     <td>
       <img src="https://libhal.github.io/libhal-mpu/coverage/coverage.svg">
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-mpu/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-mpu/latest_version.svg" /></a>
     </td>
   </tr>
   <tr>
@@ -77,6 +95,9 @@
     <td>
       <img src="https://libhal.github.io/libhal-pca/coverage/coverage.svg">
     </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-pca/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-pca/latest_version.svg" /></a>
+    </td>
   </tr>
   <tr>
     <td>
@@ -87,6 +108,9 @@
     </td>
     <td>
       <img src="https://libhal.github.io/libhal-rmd/coverage/coverage.svg">
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-rmd/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-rmd/latest_version.svg" /></a>
     </td>
   </tr>
   <tr>
@@ -99,6 +123,9 @@
     <td>
       <img src="https://libhal.github.io/libhal-tmp/coverage/coverage.svg">
     </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-tmp/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-tmp/latest_version.svg" /></a>
+    </td>
   </tr>
   <tr>
     <td>
@@ -109,6 +136,9 @@
     </td>
     <td>
       <img src="https://libhal.github.io/libhal-mock/coverage/coverage.svg">
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-mock/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-mock/latest_version.svg" /></a>
     </td>
   </tr>
   <tr>
@@ -121,6 +151,9 @@
     <td>
       <img src="https://libhal.github.io/libhal-soft/coverage/coverage.svg">
     </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-soft/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-soft/latest_version.svg" /></a>
+    </td>
   </tr>
   <tr>
     <td>
@@ -131,6 +164,9 @@
     </td>
     <td>
       <img src="https://libhal.github.io/libhal-lpc40/coverage/coverage.svg">
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-lpc40/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-lpc40/latest_version.svg" /></a>
     </td>
   </tr>
   <tr>
@@ -143,6 +179,9 @@
     <td>
       <img src="https://libhal.github.io/libhal-util/coverage/coverage.svg">
     </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-util/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-util/latest_version.svg" /></a>
+    </td>
   </tr>
   <tr>
     <td>
@@ -154,6 +193,9 @@
     <td>
       <img src="https://libhal.github.io/libhal/coverage/coverage.svg">
     </td>
+    <td>
+      <a href="https://github.com/libhal/libhal/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal/latest_version.svg" /></a>
+    </td>
   </tr>
   <tr>
     <td>
@@ -164,6 +206,9 @@
     </td>
     <td>
       <img src="https://libhal.github.io/libhal-armcortex/coverage/coverage.svg">
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-armcortex/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-armcortex/latest_version.svg" /></a>
     </td>
   </tr>
 
