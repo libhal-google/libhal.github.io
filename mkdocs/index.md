@@ -68,7 +68,7 @@ Below is a set of source code to make an application that can work with both the
     ``` C++
     #pragma once
 
-    #include <functional>
+    #include <libhal/functional.hpp>
     #include <libhal/output_pin.hpp>
     #include <libhal/steady_clock.hpp>
 
@@ -77,7 +77,7 @@ Below is a set of source code to make an application that can work with both the
     {
       hal::output_pin* led;
       hal::steady_clock* steady_clock;
-      std::function<void()> reset;
+      hal::callback<void()> reset;
     };
     }  // namespace starter
 

@@ -1,18 +1,5 @@
 # 🚀 Trying out libhal
 
-## Necessary Parts
-
-In order to complete this tutorial you'll need these parts:
-
-1. STM32F103 MicroMod or LPC4078 MicroMod or SJ2 Board
-1. Sparkfun ATP board or SJ3 Board or SJ2 Board
-1. STLink V2
-1. STLink V2 to JTAG connector
-
-!!! info
-
-    libhal development kit is in development
-
 ## 🛠️ Building Demos
 
 Make sure to complete [🧰 Install Prerequisites](prerequisites.md)
@@ -29,42 +16,55 @@ just one or both if you have both devices.
     cd libhal-lpc40/demo
     ```
 
-=== "STM32F103 ❌"
-
-    ```bash
-    git clone https://github.com/libhal/libhal-stm32f1
-    cd libhal-stm32f1/demo
-    ```
 
 ### Building using Conan & CMake
 
 To build using conan and cmake, you just need to run the following:
 
 ```bash
-conan build . -b missing
+conan build . -pr lpc4088 -s build_type=MinSizeRel
 ```
 
 !!! note
 
-    You only have to include `-b missing` if you get an error stating that the
-    prebuilt binaries are missing. `-b missing` will build them locally for
-    your machine. After which those libraries will be cached on your machine
-    and you'll no longer need to include those arguments.
+    You may need to add the argument `-b missing` at the end of the above
+    command if you get an error stating that the prebuilt binaries are missing.
+    `-b missing` will build them locally for your machine. After which those
+    libraries will be cached on your machine and you'll no longer need to
+    include those arguments.
 
 !!! tip
 
-    If you want to create release packages which enables optimizations,
-    you will need to add the `-s build_type=Release` to your conan build
-    command:
+    The following build types, `build_type` argument are available:
 
-    ```bash
-    conan build . -b missing -s build_type=Release
-    ```
+    - ❌ **Debug**: No optimization, do not recommend, normally used for unit
+      testing.
+    - 🧪 **RelWithDebInfo**: Turn on some optimizations to reduce binary size and
+      improve performance while still maintaining the structure to make
+      debugging easier. Recommended for testing and prototyping.
+    - ⚡️ **Release**: Turn on optimizations and favor higher performance
+      optimizations over space saving optimizations.
+    - 🗜️ **MinSizeRel**: Turn on optimizations and favor higher space saving
+      optimizations over higher performance.
 
-When this completes you should have some applications in the `build/Debug/` with
-names such as `lpc4078_uart.elf` or `stm32f103_blinker.elf`.
+    Note that `Release` and `MinSizeRel` build types both usually produce
+    binaries faster and smaller than `RelWithDebInfo` and thus should definitely
+    be used in production.
+
+When this completes you should have some applications in the `build/lpc4078/MinSizeRel/` with
+names such as `uart.elf` or `blinker.elf`.
 
 ## 💾 Uploading Demos to Device
+
+### Necessary Parts
+
+In order to complete this tutorial you'll need either a
+
+- LPC4078 MicroMod with Sparkfun ATP board
+or
+- or SJ2 Board
+
+### Uploading Applications
 
 There are python programs built for uploading binary files to devices.
 
@@ -98,26 +98,9 @@ USB-C connector.
         ```
 
     ```bash
-    nxpprog --control --binary "build/Debug/lpc4078_uart.elf.bin" --device "/dev/tty.usbserial-140"
+    nxpprog --control --binary "build/lpc4078/MinSizeRel/uart.elf.bin" --device "/dev/tty.usbserial-140"
     ```
 
     - Replace `/dev/tty.usbserial-140` with the correct port.
-    - Use `"build/Debug/lpc4078_uart.elf.bin"` or replace it with any other application to
-      be uploaded.
-
-=== "STM32F10X ❌"
-
-    Install the [`stm32loader`](https://pypi.org/project/stm32loader/) flashing
-    software for STM32 devices:
-
-    ```bash
-    python3 -m pip install stm32loader
-    ```
-
-    ```bash
-    stm32loader.py -p /dev/tty.usbserial-140 -e -w -v "build/Debug/stm32f103_uart.elf.bin"
-    ```
-
-    - Replace `/dev/tty.usbserial-140` with the correct port.
-    - Use `"build/Debug/stm32f103_uart.elf.bin"` or replace it with any other application to
-      be uploaded.
+    - Replace `uart.elf.bin` with any other application found in the
+      `demos/applications/` directory.
