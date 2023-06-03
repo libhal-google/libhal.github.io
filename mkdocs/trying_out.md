@@ -22,7 +22,7 @@ just one or both if you have both devices.
 To build using conan and cmake, you just need to run the following:
 
 ```bash
-conan build . -pr lpc4088 -s build_type=MinSizeRel
+conan build . -pr lpc4078 -s build_type=MinSizeRel
 ```
 
 !!! note
@@ -53,6 +53,37 @@ conan build . -pr lpc4088 -s build_type=MinSizeRel
 
 When this completes you should have some applications in the `build/lpc4078/MinSizeRel/` with
 names such as `uart.elf` or `blinker.elf`.
+
+!!! error
+
+    You can get this error if the arm gnu toolchain wasn't installed correctly
+    and the cmake toolchain was already generated.
+
+    ```
+    -- Using Conan toolchain: /Users/kammce/git/libhal/libhal-lpc40/demos/build/lpc4088/MinSizeRel/generators/conan_toolchain.cmake
+    -- Conan toolchain: C++ Standard 20 with extensions ON
+    CMake Error at CMakeLists.txt:18 (project):
+      The CMAKE_CXX_COMPILER:
+
+        /Users/kammce/.conan2/p/b/arm-ged7418b49387e/p/bin/bin/arm-none-eabi-g++
+
+      is not a full path to an existing compiler tool.
+
+      Tell CMake where to find the compiler by setting either the environment
+      variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
+      to the compiler, or to the compiler name if it is in the PATH.
+
+
+    -- Configuring incomplete, errors occurred!
+    See also "/Users/kammce/git/libhal/libhal-lpc40/demos/build/lpc4088/MinSizeRel/CMakeFiles/CMakeOutput.log".
+    See also "/Users/kammce/git/libhal/libhal-lpc40/demos/build/lpc4088/MinSizeRel/CMakeFiles/CMakeError.log".
+    ```
+
+    Fix this by deleting the `build/` in the `demo` directory like so:
+
+    ```
+    rm -r demos/build
+    ```
 
 ## 💾 Uploading Demos to Device
 
@@ -90,11 +121,11 @@ USB-C connector.
 
     !!! tip
 
-        On Ubuntu 22.04 you will need to use the command `python3.9` because
+        On Ubuntu 22.04 you will need to use the command `python3.10` because
         the default python is usually 3.8.
 
         ```bash
-        python3.9 -m pip install nxpprog
+        python3.10 -m pip install nxpprog
         ```
 
     ```bash
