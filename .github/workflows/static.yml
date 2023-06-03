@@ -32,6 +32,8 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material mike
+      - run: git config user.name ci-bot
+      - run: git config user.email ci-bot@example.com
       - run: mike delete -b gh-pages $CURRENT_VERSION
       - run: mike set-default -b gh-pages $CURRENT_VERSION
       - run: mike deploy -b gh-pages --push $CURRENT_VERSION
