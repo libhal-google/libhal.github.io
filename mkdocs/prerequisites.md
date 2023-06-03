@@ -25,7 +25,7 @@ What you will need in order to get started with libhal.
     Installing conan & cmake:
 
     ```
-    python3 -m pip install conan cmake
+    python3 -m pip install "conan>=2.0.6" cmake
     ```
 
 === "Ubuntu 20.04"
@@ -47,7 +47,7 @@ What you will need in order to get started with libhal.
     Installing conan & cmake:
 
     ```
-    python3.9 -m pip install conan cmake
+    python3.9 -m pip install "conan>=2.0.6" cmake
     ```
 
 === "MacOS X"
@@ -67,7 +67,7 @@ What you will need in order to get started with libhal.
     Install conan & cmake:
 
     ```
-    python3 -m pip install conan cmake
+    python3 -m pip install "conan>=2.0.6" cmake
     ```
 
     Install Rosetta (only required for M1 macs):
@@ -116,7 +116,7 @@ What you will need in order to get started with libhal.
     Installing conan & cmake:
 
     ```powershell
-    python3 -m pip install -U conan cmake
+    python3 -m pip install -U "conan>=2.0.6" cmake
     ```
 
 ---
@@ -197,3 +197,13 @@ conan remote add libhal-trunk https://libhal.jfrog.io/artifactory/api/conan/trun
     ```
 
 ---
+
+## Install setting_user.yml
+
+This installs the libhal `settings_user.yml` which extends the architectures of
+conan's `settings.yml` file to include baremetal architectures. These additional
+architecture definitions are required for MOST libhal applications.
+
+```bash
+conan config install -sf profiles/baremetal https://github.com/libhal/conan-config.git
+```

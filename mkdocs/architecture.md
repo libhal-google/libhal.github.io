@@ -74,7 +74,7 @@ problematic in many situations and are advised against in the core C++
 guidelines. The benefits of tweak files can be found
 [here](https://vector-of-bool.github.io/2020/10/04/lib-configuration.html).
 
-## A.4 Header Only Implementations
+## ~~A.4 Header Only Implementations~~ (See amendment A.21)
 
 libhal libraries and drivers are, in general, header-only. libhal uses header
 only implementations in order to enable the broadest set of package managers,
@@ -439,3 +439,11 @@ supports it. Being apart of a target library means that they know exactly
 the set of possible configurations that are allowed. This also means that
 constructing a target peripheral with interrupt customization can be include
 compile time checks as well.
+
+## A.21 Critical importance of providing prebuilt binaries
+
+This amends architectural component A.4 and pivots away from header only
+libraries over to prebuilt binaries. This amendment explains the new direction
+as well as why A.4 was originally part of the architecture.
+
+Coming soon ...
