@@ -19,13 +19,19 @@ on:
       - main
 permissions:
   contents: write
+env:
+  CURRENT_VERSION: 0.1
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: git fetch origin gh-pages --depth=1
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
+      - run: pip install mkdocs-material mike
+      - run: mike delete -b gh-pages $CURRENT_VERSION
+      - run: mike set-default -b gh-pages $CURRENT_VERSION
+      - run: mike deploy -b gh-pages --push $CURRENT_VERSION
