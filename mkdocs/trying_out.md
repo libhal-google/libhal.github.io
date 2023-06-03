@@ -16,6 +16,22 @@ just one or both if you have both devices.
     cd libhal-lpc40/demo
     ```
 
+# Installing microcontroller profiles
+
+This command will install the profiles for the LPC40 series microcontrollers.
+These microcontrollers are:
+
+- lpc4072
+- lpc4074
+- lpc4076
+- lpc4078
+- lpc4088
+
+=== "LPC4078"
+
+    ```
+    conan config install -sf conan/profiles/ -tf profiles https://github.com/libhal/libhal-lpc40.git
+    ```
 
 ### Building using Conan & CMake
 
@@ -33,26 +49,61 @@ conan build . -pr lpc4078 -s build_type=MinSizeRel
     libraries will be cached on your machine and you'll no longer need to
     include those arguments.
 
-!!! tip
+To build a binary for a particular microcontroller, you need to specify the
+microcontroller you plan to target such as the `lpc4078` and the build type.
 
-    The following build types, `build_type` argument are available:
+Each microcontroller has different properties such as more or less ram and
+the presence or lack of a floating point unit.
 
-    - ❌ **Debug**: No optimization, do not recommend, normally used for unit
-      testing.
-    - 🧪 **RelWithDebInfo**: Turn on some optimizations to reduce binary size and
-      improve performance while still maintaining the structure to make
-      debugging easier. Recommended for testing and prototyping.
-    - ⚡️ **Release**: Turn on optimizations and favor higher performance
-      optimizations over space saving optimizations.
-    - 🗜️ **MinSizeRel**: Turn on optimizations and favor higher space saving
-      optimizations over higher performance.
+The following build types, `build_type` argument are available:
 
-    Note that `Release` and `MinSizeRel` build types both usually produce
-    binaries faster and smaller than `RelWithDebInfo` and thus should definitely
-    be used in production.
+- ❌ **Debug**: No optimization, do not recommend, normally used for unit
+  testing.
+- 🧪 **RelWithDebInfo**: Turn on some optimizations to reduce binary size and
+  improve performance while still maintaining the structure to make
+  debugging easier. Recommended for testing and prototyping.
+- ⚡️ **Release**: Turn on optimizations and favor higher performance
+  optimizations over space saving optimizations.
+- 🗜️ **MinSizeRel**: Turn on optimizations and favor higher space saving
+  optimizations over higher performance.
 
-When this completes you should have some applications in the `build/lpc4078/MinSizeRel/` with
-names such as `uart.elf` or `blinker.elf`.
+Note that `Release` and `MinSizeRel` build types both usually produce
+binaries faster and smaller than `RelWithDebInfo` and thus should definitely
+be used in production.
+
+When this completes you should have some applications in the
+`build/lpc4078/MinSizeRel/` with names such as `uart.elf` or `blinker.elf`.
+
+!!! error
+
+    You can get this error if the arm gnu toolchain wasn't installed correctly
+    and the cmake toolchain was already generated.
+
+    ```
+    -- Using Conan toolchain: /Users/kammce/git/libhal/libhal-lpc40/demos/build/lpc4088/MinSizeRel/generators/conan_toolchain.cmake
+    -- Conan toolchain: C++ Standard 20 with extensions ON
+    CMake Error at CMakeLists.txt:18 (project):
+      The CMAKE_CXX_COMPILER:
+
+        /Users/kammce/.conan2/p/b/arm-ged7418b49387e/p/bin/bin/arm-none-eabi-g++
+
+      is not a full path to an existing compiler tool.
+
+      Tell CMake where to find the compiler by setting either the environment
+      variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
+      to the compiler, or to the compiler name if it is in the PATH.
+
+
+    -- Configuring incomplete, errors occurred!
+    See also "/Users/kammce/git/libhal/libhal-lpc40/demos/build/lpc4088/MinSizeRel/CMakeFiles/CMakeOutput.log".
+    See also "/Users/kammce/git/libhal/libhal-lpc40/demos/build/lpc4088/MinSizeRel/CMakeFiles/CMakeError.log".
+    ```
+
+    Fix this by deleting the `build/` in the `demo` directory like so:
+
+    ```
+    rm -r demos/build
+    ```
 
 !!! error
 
@@ -91,8 +142,10 @@ names such as `uart.elf` or `blinker.elf`.
 
 In order to complete this tutorial you'll need either a
 
-- LPC4078 MicroMod with Sparkfun ATP board
+- LPC4078 MicroMod with SparkFun ATP board
+
 or
+
 - or SJ2 Board
 
 ### Uploading Applications
