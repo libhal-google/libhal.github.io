@@ -17,7 +17,7 @@ repo_url: https://github.com/libhal/libhal/
 repo_name: libhal
 
 theme:
-  name: 'material'
+  name: material
   logo: assets/logo.png
   favicon: assets/favicon.png
   features:
@@ -25,6 +25,7 @@ theme:
     - toc.integrate
     - navigation.tracking
     - navigation.footer
+  custom_dir: overrides
   highlightjs: true
   hljs_style:
     - monokai
@@ -46,8 +47,12 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 
+extra:
+  version:
+    provider: mike
+
 extra_css:
-  - 'assets/extra.css'
+  - assets/extra.css
 
 docs_dir: mkdocs
 
@@ -69,47 +74,47 @@ markdown_extensions:
       permalink:
 
 nav:
-  - 🏡 Home: 'index.md'
-  - 'prerequisites.md'
-  - 'trying_out.md'
-  - 'glossary.md'
+  - 🏡 Home: "index.md"
+  - "prerequisites.md"
+  - "trying_out.md"
+  - "glossary.md"
   - 📚 Tutorials:
-    - 'tutorials/organization.md'
-    - 'tutorials/building_blocks.md'
-    - 'tutorials/configuration.md'
-    - 🔌 Interfaces:
-      - ❌ adc: 'interfaces/adc.md'
-      - ✅ dac: 'interfaces/dac.md'
-      - ❌ pwm: 'interfaces/pwm.md'
+      - "tutorials/organization.md"
+      - "tutorials/building_blocks.md"
+      - "tutorials/configuration.md"
+      - 🔌 Interfaces:
+          - ❌ adc: "interfaces/adc.md"
+          - ✅ dac: "interfaces/dac.md"
+          - ❌ pwm: "interfaces/pwm.md"
 
-      - ❌ can: 'interfaces/can.md'
-      - ❌ spi: 'interfaces/spi.md'
-      - ❌ i2c: 'interfaces/i2c.md'
-      - ❌ serial: 'interfaces/serial.md'
+          - ❌ can: "interfaces/can.md"
+          - ❌ spi: "interfaces/spi.md"
+          - ❌ i2c: "interfaces/i2c.md"
+          - ❌ serial: "interfaces/serial.md"
 
-      - ❌ input_pin: 'interfaces/input_pin.md'
-      - ❌ output_pin: 'interfaces/output_pin.md'
-      - ❌ interrupt_pin: 'interfaces/interrupt_pin.md'
+          - ❌ input_pin: "interfaces/input_pin.md"
+          - ❌ output_pin: "interfaces/output_pin.md"
+          - ❌ interrupt_pin: "interfaces/interrupt_pin.md"
 
-      - ❌ timer: 'interfaces/timer.md'
-      - ❌ steady_clock: 'interfaces/steady_clock.md'
+          - ❌ timer: "interfaces/timer.md"
+          - ❌ steady_clock: "interfaces/steady_clock.md"
 
-      - ❌ motor: 'interfaces/motor.md'
-      - ❌ servo: 'interfaces/servo.md'
+          - ❌ motor: "interfaces/motor.md"
+          - ❌ servo: "interfaces/servo.md"
 
-      - ❌ socket: 'interfaces/socket.md'
-    - 'tutorials/error_handling.md'
-    - 'tutorials/debugging.md'
+          - ❌ socket: "interfaces/socket.md"
+      - "tutorials/error_handling.md"
+      - "tutorials/debugging.md"
 
   - 💡 How-To Guides:
-    - 'how-to/project.md'
-    - 'how-to/device.md'
-    - 'how-to/arm_cortex_bringup.md'
-    - 'how-to/application.md'
-    - 'how-to/utility.md'
-  - 'philosophy.md'
-  - 'architecture.md'
-  - 'style.md'
+      - "how-to/project.md"
+      - "how-to/device.md"
+      - "how-to/arm_cortex_bringup.md"
+      - "how-to/application.md"
+      - "how-to/utility.md"
+  - "philosophy.md"
+  - "architecture.md"
+  - "style.md"
   - 🗂️ Directory:
-    - 'directory/status.md'
-  - 🧐 About: 'about.md'
+      - "directory/status.md"
+  - 🧐 About: "about.md"

@@ -19,13 +19,23 @@ on:
       - main
 permissions:
   contents: write
+env:
+  CURRENT_VERSION: "1.0"
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: git fetch origin gh-pages --depth=1
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
+      - run: pip install mkdocs-material mike
+      - run: git config user.name ci-bot
+      - run: git config user.email ci-bot@example.com
+      - run: mike delete -b gh-pages $CURRENT_VERSION
+        continue-on-error: true
+      - run: mike deploy -b gh-pages $CURRENT_VERSION
+      - run: mike set-default -b gh-pages $CURRENT_VERSION
+      - run: mike deploy -b gh-pages --push --update-aliases $CURRENT_VERSION latest
