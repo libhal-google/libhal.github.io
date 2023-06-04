@@ -74,7 +74,7 @@ problematic in many situations and are advised against in the core C++
 guidelines. The benefits of tweak files can be found
 [here](https://vector-of-bool.github.io/2020/10/04/lib-configuration.html).
 
-## ~~A.4 Header Only Implementations~~ (See amendment A.21)
+## A.4 ❌ Header Only Implementations ➡️ (See amendment A.21)
 
 libhal libraries and drivers are, in general, header-only. libhal uses header
 only implementations in order to enable the broadest set of package managers,
@@ -443,7 +443,48 @@ compile time checks as well.
 ## A.21 Critical importance of providing prebuilt binaries
 
 This amends architectural component A.4 and pivots away from header only
-libraries over to prebuilt binaries. This amendment explains the new direction
-as well as why A.4 was originally part of the architecture.
+libraries over to prebuilt binaries.
 
-Coming soon ...
+The following are the reasons why supporting, producing and distibuting prebuilt
+binaries is critical to libhal.
+
+- ⏱️ **Faster compilation times**: When a project grows in size, compiling
+  a C++ codebase can become time-consuming. By using precompiled binaries,
+  the compiler has less work to do because portions of the code have already
+  been compiled. It doesn't need to parse and compile the same headers over and
+  over again. Developers will refuse to use libhal if it results in extremely
+  long compilation times. They will tire of the project and seek faster to
+  compile alternatives.
+- ✅ **Consistency**: With precompiled binaries, you can be sure that the same
+  code will be compiled in the same way, which can reduce inconsistencies
+  between different environments or build configurations. libhal will not be
+  taken seriously if libhal didn't use prebuilt binaries and also support
+  producing them. Distributing consistent code in a consistent form will be a
+  requirement for many organizations seeking to use libhal.
+- 📦 **Code distribution and updates**: When distributing C++ code, rather than
+  give out the full source code or require users to compile it themselves,
+  providing a precompiled binary is more user-friendly. Updates to the program
+  can also be handled by replacing the old binaries with the new ones, without
+  requiring the end-user to handle the compilation process. The philosophy of
+  conan regarding library packages is that, at their core, C++ libraries are
+  header files and prebuilt binaries.
+- 🔒 **Protection of Intellectual Property**: Precompiled binaries are much
+  harder to reverse-engineer than raw source code. If a developer wants to
+  write an application and distribute the binary, but the C++ code contains
+  proprietary algorithms or trade secrets that you don't want to expose to the
+  public, distributing it as a precompiled binary can provide an additional
+  layer of protection.
+
+In order to provide the best experience for our developers as well as necessary
+features of the platform, libhal emphasizes prebuilt libraries over header only.
+
+!!! note
+
+    Why the sudden change from A.4 to this? Supporting header-only made bringing
+    up libhal much easier. The process of implementing prebuilt binaries
+    required adding additional architecture settings, required the use of
+    conan profiles to make the arm-gnu-toolchain available globally for all
+    packages, figuring out how to insert architectural compiler flags and ensure
+    they propogate to all packages took time and was a complex process. And
+    header-only libraries allowed the initial version of libhal to bypass all
+    of this.
