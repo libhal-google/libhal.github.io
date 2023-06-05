@@ -18,8 +18,8 @@ just one or both if you have both devices.
 
 # Installing microcontroller profiles
 
-This command will install the profiles for the LPC40 series microcontrollers.
-These microcontrollers are:
+This command will install the profiles for the ARM cortex processor and LPC40
+series microcontrollers. The LPC40 microcontrollers are:
 
 - lpc4072
 - lpc4074
@@ -27,9 +27,14 @@ These microcontrollers are:
 - lpc4078
 - lpc4088
 
+The LPC40 profiles import `cortex-m4` and `cortex-m4f` profiles from the ARM
+cortex processor library `libhal-armcortex` and thus need to be installed as
+well.
+
 === "LPC4078"
 
     ```
+    conan config install -sf conan/profiles/ -tf profiles https://github.com/libhal/libhal-armcortex.git
     conan config install -sf conan/profiles/ -tf profiles https://github.com/libhal/libhal-lpc40.git
     ```
 
