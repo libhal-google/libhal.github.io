@@ -13,7 +13,7 @@ just one or both if you have both devices.
 
     ```bash
     git clone https://github.com/libhal/libhal-lpc40
-    cd libhal-lpc40/demo
+    cd libhal-lpc40/demos
     ```
 
 # Installing microcontroller profiles
