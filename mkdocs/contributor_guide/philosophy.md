@@ -31,11 +31,10 @@ functions, and libraries should be straight forward for most programmers
 to understand with added complexity only when it is necessary and no other
 options exist.
 
-## D.5 Safe
+## D.5 Safe & Reliable
 
-`libhal` and its style guide aim to use patterns and techniques that help reduce
-safety issues. Safety does NOT extend to runtime checks that determine if there
-exists architectural defects.
+`libhal` and its style guide aim to use patterns, techniques, and documentation
+to help reduce safety issues and improve reliability.
 
 ## D.6 Tested & Testable
 

@@ -3,9 +3,6 @@
 <h1>Welcome to libhal</h1>
 </div>
 
-!!! Warning
-    libhal is still in **BETA**!
-
 ## Abstract
 
 libhal exists to make hardware drivers **🚚 portable**, **🦾 flexible**,
@@ -15,14 +12,14 @@ processors, microcontrollers, systems, and devices.
 
 The design philosophy of libhal is to be:
 
-1. [Multi Targeted](philosophy.md#d1-multi-targeted)
-2. [Light Weight](philosophy.md#d2-light-weight)
-3. [General](philosophy.md#d3-general)
-4. [Minimalist](philosophy.md#d4-minimalist)
-5. [Safe](philosophy.md#d5-safe)
-6. [Tested & Testable](philosophy.md#d6-tested-testable)
-7. [Compiled Quickly](philosophy.md#d7-compiled-quickly)
-8. [OS Agnostic](philosophy.md#d8-os-agnostic)
+1. Multi Targeted
+2. Light Weight
+3. General
+4. Minimalist
+5. Safe & Reliable
+6. Tested & Testable
+7. Compiled Quickly
+8. OS Agnostic
 
 ## The Basics
 
@@ -38,7 +35,7 @@ keeping time. Now your application takes both of these drivers without having to
 consider their implementation details and blink and LED at a specified interval.
 
 Below is a set of source code to make an application that can work with both the
-`lpc40xx` and `stm32f10x` microcontroller.
+`lpc40xx` and `stm32f1` microcontroller.
 
 === "blinker.cpp"
 
@@ -54,9 +51,9 @@ Below is a set of source code to make an application that can work with both the
 
       while (true) {
         HAL_CHECK(p_map.led->level(true));
-        HAL_CHECK(hal::delay(*p_map.steady_clock, 500ms));
+        hal::delay(*p_map.steady_clock, 500ms);
         HAL_CHECK(p_map.led->level(false));
-        HAL_CHECK(hal::delay(*p_map.steady_clock, 500ms));
+        hal::delay(*p_map.steady_clock, 500ms);
       }
 
       return hal::success();
@@ -120,7 +117,7 @@ Below is a set of source code to make an application that can work with both the
     }  // namespace boost
     ```
 
-=== "lpc40.cpp"
+=== "lpc4078.cpp"
 
     ``` C++
     #include <libhal-armcortex/dwt_counter.hpp>
@@ -136,7 +133,7 @@ Below is a set of source code to make an application that can work with both the
       hal::cortex_m::initialize_data_section();
       hal::cortex_m::system_control::initialize_floating_point_unit();
 
-      auto& led = HAL_CHECK((hal::lpc40xx::output_pin::get<1, 18>()));
+      auto& led = HAL_CHECK(hal::lpc40xx::output_pin::get(1, 18));
 
       return starter::hardware_map{
         .led = &led,
@@ -146,14 +143,14 @@ Below is a set of source code to make an application that can work with both the
     }
     ```
 
-=== "stm32f10.cpp"
+=== "stm32f103.cpp"
 
     ``` C++
     #include <libhal-armcortex/dwt_counter.hpp>
     #include <libhal-armcortex/startup.hpp>
     #include <libhal-armcortex/system_control.hpp>
 
-    #include <libhal-stm32f10x/output_pin.hpp>
+    #include <libhal-stm32f1/output_pin.hpp>
 
     #include "hardware_map.hpp"
 
@@ -161,7 +158,7 @@ Below is a set of source code to make an application that can work with both the
     {
       hal::cortex_m::initialize_data_section();
 
-      auto& led = HAL_CHECK((hal::stm32f10x::output_pin::get<'C', 13>()));
+      auto& led = HAL_CHECK(hal::stm32f1::output_pin::get('C', 13));
 
       return starter::hardware_map{
         .led = &led,
@@ -181,6 +178,6 @@ Below is a set of source code to make an application that can work with both the
 
 - [Conan](https://conan.io/center/libhal) package manager
 - Source code is hosted on [GitHub](https://github.com/libhal/libahl)
-- vcpkg (coming soon) package manager
+- `vcpkg` package manager (planned for the future)
 
 There are plans to support to more C++ package managers

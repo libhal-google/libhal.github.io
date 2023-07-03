@@ -75,46 +75,20 @@ markdown_extensions:
 
 nav:
   - 🏡 Home: "index.md"
-  - "prerequisites.md"
-  - "trying_out.md"
-  - "glossary.md"
-  - 📚 Tutorials:
-      - "tutorials/organization.md"
-      - "tutorials/building_blocks.md"
-      - "tutorials/configuration.md"
-      - 🔌 Interfaces:
-          - ❌ adc: "interfaces/adc.md"
-          - ✅ dac: "interfaces/dac.md"
-          - ❌ pwm: "interfaces/pwm.md"
-
-          - ❌ can: "interfaces/can.md"
-          - ❌ spi: "interfaces/spi.md"
-          - ❌ i2c: "interfaces/i2c.md"
-          - ❌ serial: "interfaces/serial.md"
-
-          - ❌ input_pin: "interfaces/input_pin.md"
-          - ❌ output_pin: "interfaces/output_pin.md"
-          - ❌ interrupt_pin: "interfaces/interrupt_pin.md"
-
-          - ❌ timer: "interfaces/timer.md"
-          - ❌ steady_clock: "interfaces/steady_clock.md"
-
-          - ❌ motor: "interfaces/motor.md"
-          - ❌ servo: "interfaces/servo.md"
-
-          - ❌ socket: "interfaces/socket.md"
-      - "tutorials/error_handling.md"
-      - "tutorials/debugging.md"
-
-  - 💡 How-To Guides:
-      - "how-to/project.md"
-      - "how-to/device.md"
-      - "how-to/arm_cortex_bringup.md"
-      - "how-to/application.md"
-      - "how-to/utility.md"
-  - "philosophy.md"
-  - "architecture.md"
-  - "style.md"
-  - 🗂️ Directory:
-      - "directory/status.md"
-  - 🧐 About: "about.md"
+  - 🚀 Getting Started: "getting_started.md"
+  - 📖 User Guide:
+      - "user_guide/terms.md"
+      - "user_guide/interfaces.md"
+      - "user_guide/configuration.md"
+      - "user_guide/debugging.md"
+      - "user_guide/building_blocks.md"
+      - "user_guide/error_handling.md"
+  - 📝 Contributor Guides:
+      - "contributor_guide/philosophy.md"
+      - "contributor_guide/organization.md"
+      - "contributor_guide/style.md"
+      - "contributor_guide/library_guides.md"
+      - "contributor_guide/architecture.md"
+  - ℹ️ Project Information:
+      - "project_information/status.md"
+      - "project_information/about.md"

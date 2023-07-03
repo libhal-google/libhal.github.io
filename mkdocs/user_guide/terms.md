@@ -1,11 +1,45 @@
 # 📃 Learning the Terms
 
-Here is a list of terms used in libhal. It is **HIGHLY RECOMMENDED** that new
-users of libhal read this section.
+Here is a list of terms used in libhal. It is highly recommended that new users
+of libhal read this section.
 
-## Target(s)
+## Types of Libraries
 
-Targets are defined as MCUs (micro-controllers), SOCs (system-on-chip),
+=== "platform"
+
+    platform libraries contain the driver implementations for specific platforms.
+    Every application that uses libhal will need one of these libraries in order
+    to work on any hardware. Without such libraries, the device could run an
+    application, but couldn't interact with the world.
+
+=== "utility"
+
+    Utility libraries are purely software libraries that help to either make
+    performing some work on a device easier for the developer or help to organize
+    and bring structure to an application.
+
+=== "device"
+
+    Device libraries are libraries containing drivers for specific hardware
+    devices or module, such as a sensor, display or a motor controller. They
+    are, generally, target agnostic and should be usable on any system that can
+    support its interface, memory, and performance requirements.
+
+=== "process"
+
+    A process library is code that performs some work. This work usually
+    requires one or more drivers in order to work. This is similar to an
+    application on a device like a desktop computer or smart phone, but on an
+    embedded system.
+
+=== "application / operating system"
+
+    These libraries are full application that typically handle the whole system.
+
+
+## Platform(s)
+
+Platforms are defined as MCUs (micro-controllers), SOCs (system-on-chip),
 operating systems, or operating systems running on a particular SBC
 (single-board-computer).
 
@@ -55,7 +89,7 @@ such as:
 - `hal::pwm`: Pulse width modulation (pwm)
 - `hal::spi`: Serial peripheral interface (spi)
 - `hal::serial`: Universal asynchronous receiver transmitter (serial/uart)
-- `hal::accelerometer`: Accelerometer
+- `hal::accelerometer`: Interface for measuring acceleration
 
 ## Driver Types
 
@@ -109,11 +143,6 @@ such as:
     In general, software drivers tend to incur some overhead so nesting them
     deeply will effect performance.
 
-## Processes
-
-A process is code that performs some work. Like an application on a desktop
-machine.
-
 ## Off Interface Function
 
 Off Interface functions are public class functions that a driver can have that
@@ -129,30 +158,3 @@ specific functions are as follows:
 - Enabling/disabling continuous sampling from an accelerometer where sampling
   continuously would make reading samples faster but would consume more power
   and disabling continuous sampling would do the opposite.
-
-## Types of Libraries
-
-=== "target"
-
-    Target libraries contain the driver implementations for specific targets.
-    Every application that uses libhal will need one of these libraries in order
-    to work on any hardware. Without such libraries, the device could run an
-    application, but couldn't interact with the world.
-
-=== "utility"
-
-    Utility libraries are purely software libraries that help to either make
-    performing some work on a device easier for the developer or help to organize
-    and bring structure to an application.
-
-=== "device"
-
-    Device libraries are libraries containing drivers for specific hardware
-    devices or module, such as a sensor, display or a motor controller. They
-    are, generally, target agnostic and should be usable on any system that can
-    support its interface, memory, and performance requirements.
-
-=== "application"
-
-    An application library is a full application that can be used as part of
-    another application library or project.
