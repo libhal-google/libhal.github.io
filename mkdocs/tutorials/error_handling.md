@@ -1,1 +1,0 @@
-# 🪤 Error Handling 🟡

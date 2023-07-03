@@ -1,5 +1,8 @@
 # 🔸 Bare-Metal ARM Cortex Target Bring-Up
 
+!!! info
+    TO BE MOVED TO `libhal-armcortex` REPO
+
 This guide will step you through making a libhal + conan target library for a
 arm processor microcontroller. Unlike libhal applications that can be executed
 on a machine running an OS like linux, example Raspberry Pi and Beagle Boards,
@@ -60,7 +63,7 @@ The LPC40 series of microcontrollers will be used for this example:
 The memory map can be found on page 52 of the `LPC408X_7X.pdf` data sheet or
 page 14 of the `UM10562.pdf` user manual.
 
-![lpc40xx memory map](arm_cortex_bringup/lpc40xx-memory-map.png)
+![lpc40xx memory map](arm_cortex_bring_up/lpc40xx-memory-map.png)
 
 <p style="text-align: center; font-style: italic;">
 Figure 1. LPC40xx Memory Map
@@ -74,13 +77,13 @@ Looking through the data sheet and searching for terms like "part numbers",
 "ordering options", or even just the number 512 (the maximum flash size),
 eventually this section will appear:
 
-![lpc40xx ordering info part 1](arm_cortex_bringup/lpc40xx-ordering-1.png)
+![lpc40xx ordering info part 1](arm_cortex_bring_up/lpc40xx-ordering-1.png)
 
 <p style="text-align: center; font-style: italic;">
 Figure 2. LPC40xx Part Ordering Info part 1
 </p>
 
-![lpc40xx ordering info part 2](arm_cortex_bringup/lpc40xx-ordering-2.png)
+![lpc40xx ordering info part 2](arm_cortex_bring_up/lpc40xx-ordering-2.png)
 
 <p style="text-align: center; font-style: italic;">
 Figure 3. LPC40xx Part Ordering Info part 2

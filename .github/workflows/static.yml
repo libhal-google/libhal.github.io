@@ -20,7 +20,7 @@ on:
 permissions:
   contents: write
 env:
-  CURRENT_VERSION: "2.0"
+  CURRENT_VERSION: "2.1"
 
 jobs:
   deploy:
