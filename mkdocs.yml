@@ -79,9 +79,9 @@ nav:
   - 📖 User Guide:
       - "user_guide/terms.md"
       - "user_guide/interfaces.md"
-      - "user_guide/configuration.md"
       - "user_guide/debugging.md"
       - "user_guide/building_blocks.md"
+      - "user_guide/configuration.md"
       - "user_guide/error_handling.md"
   - 📝 Contributor Guides:
       - "contributor_guide/philosophy.md"
