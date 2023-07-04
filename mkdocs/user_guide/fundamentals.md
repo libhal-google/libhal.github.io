@@ -1,4 +1,4 @@
-# 🧱 Fundamentals of Libhal
+# 🧱 Fundamentals of libhal
 
 At its core, libhal is a set of interfaces that correspond to hardware devices
 and peripherals. These interfaces use runtime polymorphism to decouple
@@ -53,12 +53,11 @@ otherwise the compiler will generate a compiler error.
 
 Not all libraries will implement an interface. Some drivers are
 
-## Driver Sources
-
-Drivers can be sources from a number of places.
+## Driver Types
 
 - **Peripheral Drivers**: Drivers for a platform that is embedded within the
-  device and therefore cannot be removed from the chip and is fixed in number.
+  platform or development board and therefore cannot be removed from the chip
+  and is fixed in number.
 - **Device Drivers**: Drivers for devices external to a platform. In order to
   communicate with such a device the platform must have the necessary peripherals
   and peripheral drivers to operate correctly.
@@ -95,6 +94,10 @@ not contain virtual functions and cannot be passed in a generic form. Despite
 this, they play a crucial role in the library due to their specific
 functionality and support for certain hardware components.
 
+Note that this isn't a distinct type outside of the list of Driver types
+mentioned above. Concrete drivers can be a peripheral, device and soft driver.
+They simply do not implement an interface.
+
 ### Multi-Interface Support
 
 Many Concrete Drivers can actually support multiple interfaces at once. For
@@ -122,7 +125,7 @@ various interfaces from a single concrete driver. It ensures that the concrete
 driver can be utilized to its full potential, providing access to all its
 capabilities through the appropriate interfaces.
 
-## `hal::result<T>`, `hal::status` and `HAL_CHECK()` Return Types
+## Return Types `hal::result<T>` and `hal::status`
 
 `hal::result<T>` is an alias for the `boost::leaf::result<T>` type. This type
 can either be the value T or an error. `hal::status` is simply a concise alias
