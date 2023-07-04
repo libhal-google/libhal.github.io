@@ -12,7 +12,7 @@ processors, microcontrollers, systems, and devices.
 
 The design philosophy of libhal is to be:
 
-1. Multi Targeted
+1. Portable & Cross Platform
 2. Light Weight
 3. General
 4. Minimalist
