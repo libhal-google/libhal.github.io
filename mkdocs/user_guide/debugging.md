@@ -1,4 +1,4 @@
-# 🎯 Getting Started with PyOCD
+# 🎯 Debugging Code with PyOCD
 
 ## Introduction
 
@@ -56,13 +56,13 @@ target platform.
 
 === "lpc40"
 
-    ```
+    ```bash
     pyocd gdbserver --target=lpc4088 --persist
     ```
 
 === "stm32f1"
 
-    ```
+    ```bash
     pyocd gdbserver --target=stm32f103rc --persist
     ```
 
