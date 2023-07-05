@@ -25,6 +25,7 @@ theme:
     - toc.integrate
     - navigation.tracking
     - navigation.footer
+    - navigation.expand
   custom_dir: overrides
   highlightjs: true
   hljs_style:
