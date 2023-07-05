@@ -2,15 +2,19 @@
 
 ## `hal::on_error_callback`
 
-Libhal provides a simple mechanism for handling calling a function when
-an error occurs. The error handler is defined as follows:
+Libhal provides a simple mechanism for handling calling a function when an error
+occurs. The error handler is defined as follows:
 
 ```cpp
 using error_handler = void(void);
 inline error_handler* on_error_callback = nullptr;
 ```
 
-The `on_error_callback` is a pointer to a function that takes no arguments and returns no value. If this variable is set to something other than `nullptr`, then the function it points to is called before the error object is returned. `hal::new_error()` must be used to get this behavior. Calling `boost::leaf::new_error` will bypass this behavior.
+The `on_error_callback` is a pointer to a function that takes no arguments and
+returns no value. If this variable is set to something other than `nullptr`,
+then the function it points to is called before the error object is returned.
+`hal::new_error()` must be used to get this behavior. Calling
+`boost::leaf::new_error` will bypass this behavior.
 
 This error handler is useful for logging when errors occur. It allows developers
 to capture information about the state of your program at the time of the error,
