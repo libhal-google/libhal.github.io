@@ -9,8 +9,8 @@ What you will need in order to get started with libhal.
 - `python`: 3.10 or above
 - `conan`: 2.0.6 or above
 - Suitable Compiler for running host tests (can be either of these):
-    - `gcc`: 11.3.0 or above
-    - `clang`: 14 and above
+  - `gcc`: 11.3.0 or above
+  - `clang`: 14 and above
 
 === "Ubuntu 22.04"
 
@@ -372,12 +372,12 @@ In order to complete this tutorial you'll one of these devices:
     then
 
     ```bash
-    stm32loader.py -p /dev/tty.usbserial-140 -e -w -v "build/stm32f103/Debug/blinker.elf.bin"
+    stm32loader -p /dev/tty.usbserial-10 -e -w -v demos/build/stm32f103c8/Debug/blinker.elf.bin
     ```
 
-    Replace `/dev/tty.usbserial-140` with the correct port.
+    Replace `/dev/tty.usbserial-10` with the correct port.
 
-    Use "build/stm32f103/Debug/blinker.elf.bin" or replace it with any other
+    Use `demos/build/stm32f103c8/Debug/blinker.elf.bin` or replace it with any other
     application to be uploaded.
 
 ## 🎉 Creating a new Project
