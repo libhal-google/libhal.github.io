@@ -46,4 +46,21 @@ consider their implementation details and blink and LED at a specified interval.
 - Source code is hosted on [GitHub](https://github.com/libhal/libahl)
 - `vcpkg` package manager (planned for the future)
 
-There are plans to support to more C++ package managers
+# Sponsorships
+
+---
+
+![JFrog
+Logo](https://speedmedia.jfrog.com/08612fe1-9391-4cf3-ac1a-6dd49c36b276/https://media.jfrog.com/wp-content/uploads/2021/10/27101222/jfrog-logo_cmm.svg){ align=left }
+
+We are proud to be sponsored by [JFrog](https://jfrog.com/). JFrog generously
+provides us with free artifact management, security, and CI/CD tools, allowing
+us to focus on the success of our project.
+
+We are grateful for their support and contribution to the open source community.
+Thank you, JFrog!
+
+For more information about JFrog's community initiatives, visit their [Giving
+Back](https://jfrog.com/community/giving-back/) page.
+
+---
