@@ -88,6 +88,7 @@ nav:
       - "contributor_guide/organization.md"
       - "contributor_guide/style.md"
       - "contributor_guide/library_guides.md"
+      - "contributor_guide/vscode_setup.md"
       - "contributor_guide/architecture.md"
   - ℹ️ Project Information:
       - "project_information/status.md"
