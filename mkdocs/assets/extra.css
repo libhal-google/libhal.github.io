@@ -32,3 +32,7 @@ a:visited code {
 .md-logo img {
     height: 2.2rem !important;
 }
+
+.md-tabs__link {
+    font-size: .8rem !important;
+}

@@ -1,4 +1,4 @@
-# Library Status
+# 🟢 Library Status 🔴
 
 <table>
   <tr>

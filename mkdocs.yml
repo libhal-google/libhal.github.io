@@ -21,11 +21,12 @@ theme:
   logo: assets/logo.png
   favicon: assets/favicon.png
   features:
+    - navigation.tabs
     - content.tabs.link
     - toc.integrate
     - navigation.tracking
     - navigation.footer
-    - navigation.expand
+    # - navigation.expand
   custom_dir: overrides
   highlightjs: true
   hljs_style:
@@ -57,6 +58,23 @@ extra_css:
 
 docs_dir: mkdocs
 
+plugins:
+  - search
+  - mkdoxy:
+      projects:
+        api:
+          src-dirs: libraries/include/
+          full-doc: True
+          doxy-cfg:
+            FILE_PATTERNS: "*.h*"
+            RECURSIVE: True
+            EXTRACT_STATIC: True
+            EXCLUDE_PATTERNS: "*/third_party/*"
+            HAVE_DOT: True
+  - literate-nav:
+      nav_file: summary.md
+      tab_length: 2
+
 markdown_extensions:
   - admonition
   - pymdownx.mark # highlighting
@@ -73,23 +91,3 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink:
-
-nav:
-  - 🏡 Home: "index.md"
-  - 🚀 Getting Started: "getting_started.md"
-  - 📖 User Guide:
-      - "user_guide/fundamentals.md"
-      - "user_guide/interfaces.md"
-      - "user_guide/debugging.md"
-      - "user_guide/configuration.md"
-      - "user_guide/error_handling.md"
-  - 📝 Contributor Guides:
-      - "contributor_guide/philosophy.md"
-      - "contributor_guide/organization.md"
-      - "contributor_guide/style.md"
-      - "contributor_guide/library_guides.md"
-      - "contributor_guide/vscode_setup.md"
-      - "contributor_guide/architecture.md"
-  - ℹ️ Project Information:
-      - "project_information/status.md"
-      - "project_information/about.md"
