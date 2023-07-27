@@ -1,0 +1,25 @@
+- [🏡 Home](index.md)
+- [🚀 Getting Started](getting_started.md)
+- 📖 User Guide
+  - [🧱 Fundamentals of libhal](user_guide/fundamentals.md)
+  - [🔗 Interfaces in Software Development and libhal](user_guide/interfaces.md)
+  - [🎯 Debugging Code with PyOCD](user_guide/debugging.md)
+  - [🎚️ Configuration](user_guide/configuration.md)
+  - [🪤 Error Handling in libhal using Boost.LEAF](user_guide/error_handling.md)
+- 📚 Contributor Guides
+  - [📜 Design Philosophy](contributor_guide/philosophy.md)
+  - [🗃️ Organization](contributor_guide/organization.md)
+  - [🎨 Style Guide](contributor_guide/style.md)
+  - [🔹 Library Development Guide](contributor_guide/library_guides.md)
+  - [💻 VSCode Setup](contributor_guide/vscode_setup.md)
+  - [🏗️ Architectural Design Decisions](contributor_guide/architecture.md)
+- 📊 Project Information
+  - [🟢 Library Status 🔴](project_information/status.md)
+  - [About](project_information/about.md)
+- 🧩 APIs
+  - [📦 Libraries](api/namespaces.md)
+    - api/namespacehal*.md
+  - [🗂️ Files](api/files.md)
+  - [⛓️ Hierarchy](api/hierarchy.md)
+  - ⚪️ Misc
+    - api/*.md
