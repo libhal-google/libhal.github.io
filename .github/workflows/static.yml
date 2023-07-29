@@ -32,6 +32,7 @@ jobs:
         with:
           python-version: 3.x
       - run: ./library_merger.sh
+      - run: sudo apt install doxygen
       - run: pip install mkdocs-material mike mkdoxy mkdocs-literate-nav
       - run: git config user.name ci-bot
       - run: git config user.email ci-bot@example.com
