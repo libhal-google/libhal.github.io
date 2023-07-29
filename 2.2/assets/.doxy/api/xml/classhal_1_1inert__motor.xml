@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1inert__motor" kind="class" language="C++" prot="public">
+    <compoundname>hal::inert_motor</compoundname>
+    <basecompoundref refid="classhal_1_1motor" prot="public" virt="non-virtual">hal::motor</basecompoundref>
+    <includes refid="inert__motor_8hpp" local="no">inert_motor.hpp</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1inert__motor_1ab3ba10b9e8e8702bc1fab59f669b4f82" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1inert__motor" kindref="compound">inert_motor</ref> &gt;</type>
+        <definition>static result&lt;inert_motor&gt; hal::inert_motor::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Factory function to create <ref refid="classhal_1_1inert__motor" kindref="compound">inert_motor</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>result&lt;inert_motor&gt; - Constructed <ref refid="classhal_1_1inert__motor" kindref="compound">inert_motor</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_motor.hpp" line="32" column="17" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_motor.hpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1inert__motor_1ac7afbf35ac619afe82eb4c53cdb4c33a" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::inert_motor::inert_motor</definition>
+        <argsstring>()</argsstring>
+        <name>inert_motor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_motor.hpp" line="38" column="13" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_motor.hpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__motor_1a5a1594679ee6997521135c3c8530f3a2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1motor_1_1power__t" kindref="compound">power_t</ref> &gt;</type>
+        <definition>result&lt;power_t&gt; hal::inert_motor::driver_power</definition>
+        <argsstring>([[maybe_unused]] float p_power)</argsstring>
+        <name>driver_power</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] float</type>
+          <declname>p_power</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_motor.hpp" line="42" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_motor.hpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inert implementation of open loop motorized actuator hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::motor</label>
+        <link refid="classhal_1_1motor"/>
+      </node>
+      <node id="1">
+        <label>hal::inert_motor</label>
+        <link refid="classhal_1_1inert__motor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::motor</label>
+        <link refid="classhal_1_1motor"/>
+      </node>
+      <node id="1">
+        <label>hal::inert_motor</label>
+        <link refid="classhal_1_1inert__motor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/inert_drivers/inert_motor.hpp" line="24" column="1" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_motor.hpp" bodystart="25" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classhal_1_1inert__motor_1ab3ba10b9e8e8702bc1fab59f669b4f82" prot="public" virt="non-virtual"><scope>hal::inert_motor</scope><name>create</name></member>
+      <member refid="classhal_1_1inert__motor_1a5a1594679ee6997521135c3c8530f3a2" prot="private" virt="non-virtual"><scope>hal::inert_motor</scope><name>driver_power</name></member>
+      <member refid="classhal_1_1inert__motor_1ac7afbf35ac619afe82eb4c53cdb4c33a" prot="private" virt="non-virtual"><scope>hal::inert_motor</scope><name>inert_motor</name></member>
+      <member refid="classhal_1_1motor_1adfad7d59b539461eaeff537445361fbf" prot="public" virt="non-virtual"><scope>hal::inert_motor</scope><name>power</name></member>
+      <member refid="classhal_1_1motor_1a24ade44337702b296037579bb40ead3a" prot="public" virt="virtual"><scope>hal::inert_motor</scope><name>~motor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

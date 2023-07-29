@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1output__pin" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>hal::output_pin</compoundname>
+    <derivedcompoundref refid="classhal_1_1inert__output__pin" prot="public" virt="non-virtual">hal::inert_output_pin</derivedcompoundref>
+    <derivedcompoundref refid="classhal_1_1lpc40_1_1output__pin" prot="public" virt="non-virtual">hal::lpc40::output_pin</derivedcompoundref>
+    <derivedcompoundref refid="structhal_1_1mock_1_1output__pin" prot="public" virt="non-virtual">hal::mock::output_pin</derivedcompoundref>
+    <derivedcompoundref refid="classhal_1_1stm32f1_1_1output__pin" prot="public" virt="non-virtual">hal::stm32f1::output_pin</derivedcompoundref>
+    <includes refid="libhal_2output__pin_8hpp" local="no">output_pin.hpp</includes>
+    <innerclass refid="structhal_1_1output__pin_1_1level__t" prot="public">hal::output_pin::level_t</innerclass>
+    <innerclass refid="structhal_1_1output__pin_1_1set__level__t" prot="public">hal::output_pin::set_level_t</innerclass>
+    <innerclass refid="structhal_1_1output__pin_1_1settings" prot="public">hal::output_pin::settings</innerclass>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1output__pin_1a0eee7c0911622a62c215f867dd117d0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::output_pin::configure</definition>
+        <argsstring>(const settings &amp;p_settings)</argsstring>
+        <name>configure</name>
+        <param>
+          <type>const <ref refid="structhal_1_1output__pin_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+<para>Configure the output pin to match the settings supplied. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- settings to apply to output pin </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status - success or failure </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::errc::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the settings could not be achieved. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/output_pin.hpp" line="69" column="11" bodyfile="libraries/include/libhal/output_pin.hpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1output__pin_1ab18862459d8f3ecadea439862932ba41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1output__pin_1_1set__level__t" kindref="compound">set_level_t</ref> &gt;</type>
+        <definition>result&lt;set_level_t&gt; hal::output_pin::level</definition>
+        <argsstring>(bool p_high)</argsstring>
+        <name>level</name>
+        <param>
+          <type>bool</type>
+          <declname>p_high</declname>
+        </param>
+        <briefdescription>
+<para>Set the state of the pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_high</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- if true then the pin state is set to HIGH voltage. If false, the pin state is set to LOW voltage. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;set_level_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/output_pin.hpp" line="81" column="11" bodyfile="libraries/include/libhal/output_pin.hpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1output__pin_1ab14df7eb1dd1ad0393a541e002506242" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1output__pin_1_1level__t" kindref="compound">level_t</ref> &gt;</type>
+        <definition>result&lt;level_t&gt; hal::output_pin::level</definition>
+        <argsstring>()</argsstring>
+        <name>level</name>
+        <briefdescription>
+<para>Read the current state of the output pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementations must read the pin state from hardware and will not simply cache the results from the execution of <computeroutput><ref refid="classhal_1_1output__pin_1ab18862459d8f3ecadea439862932ba41" kindref="member">level(bool)</ref></computeroutput>.</para>
+<para>This pin may not equal the state set by <computeroutput><ref refid="classhal_1_1output__pin_1ab18862459d8f3ecadea439862932ba41" kindref="member">level(bool)</ref></computeroutput> when the pin is configured as open-drain.</para>
+<para><simplesect kind="return"><para>result&lt;level_t&gt; - return the current level state of the output pin </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/output_pin.hpp" line="97" column="11" bodyfile="libraries/include/libhal/output_pin.hpp" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1output__pin_1ab45ad02491e1cef38093d5605a4a37c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual hal::output_pin::~output_pin</definition>
+        <argsstring>()=default</argsstring>
+        <name>~output_pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/output_pin.hpp" line="102" column="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1output__pin_1a37fb83fb5fdacf61c6b45bddcd9dd390" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>status</type>
+        <definition>virtual status hal::output_pin::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings)=0</argsstring>
+        <name>driver_configure</name>
+        <reimplementedby refid="classhal_1_1inert__output__pin_1a945468222efd5898b5e48218588e6b65">driver_configure</reimplementedby>
+        <reimplementedby refid="classhal_1_1lpc40_1_1output__pin_1a631ac29119bb18b4310416d60977a72a">driver_configure</reimplementedby>
+        <reimplementedby refid="structhal_1_1mock_1_1output__pin_1a000a39ce837183752221e9a2d80b5e20">driver_configure</reimplementedby>
+        <reimplementedby refid="classhal_1_1stm32f1_1_1output__pin_1a40863551d406e034995c66befa4bf322">driver_configure</reimplementedby>
+        <param>
+          <type>const <ref refid="structhal_1_1output__pin_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/output_pin.hpp" line="105" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1output__pin_1ac0fadebc6928349d19b38a7eaccd33f3" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>result&lt; <ref refid="structhal_1_1output__pin_1_1set__level__t" kindref="compound">set_level_t</ref> &gt;</type>
+        <definition>virtual result&lt;set_level_t&gt; hal::output_pin::driver_level</definition>
+        <argsstring>(bool p_high)=0</argsstring>
+        <name>driver_level</name>
+        <reimplementedby refid="classhal_1_1inert__output__pin_1a0264af1f4d85fe77ad601c6cca48f09e">driver_level</reimplementedby>
+        <reimplementedby refid="classhal_1_1lpc40_1_1output__pin_1aa977e0a14b7fc6d5086b9f2d33c56b68">driver_level</reimplementedby>
+        <reimplementedby refid="structhal_1_1mock_1_1output__pin_1a2ef32ba190f87aa143f169df6bb8bab0">driver_level</reimplementedby>
+        <reimplementedby refid="classhal_1_1stm32f1_1_1output__pin_1aa176c9b22b6dfefc2a8ce3ec938d9c97">driver_level</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>p_high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/output_pin.hpp" line="106" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1output__pin_1ab741d4f8ef6d9d72ce3bdfa6f3d03f69" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>result&lt; <ref refid="structhal_1_1output__pin_1_1level__t" kindref="compound">level_t</ref> &gt;</type>
+        <definition>virtual result&lt;level_t&gt; hal::output_pin::driver_level</definition>
+        <argsstring>()=0</argsstring>
+        <name>driver_level</name>
+        <reimplementedby refid="classhal_1_1inert__output__pin_1a7cf6094d419e435f663761996b1c9906">driver_level</reimplementedby>
+        <reimplementedby refid="classhal_1_1lpc40_1_1output__pin_1a3c2f0dde56fa897c7cc6742894ebda38">driver_level</reimplementedby>
+        <reimplementedby refid="structhal_1_1mock_1_1output__pin_1a22beb9f513ee4467c4690a0a8e5b0e7d">driver_level</reimplementedby>
+        <reimplementedby refid="classhal_1_1stm32f1_1_1output__pin_1a8254618fa6b6783377b3fd78ce13b1a7">driver_level</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/output_pin.hpp" line="107" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Digital output pin hardware abstraction. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Use this to drive a pin HIGH or LOW in order to send a control signal or turn off or on an LED.</para>
+<para>Implementations of this interface can be backed by external devices such as I/O expanders or other micro-controllers. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>hal::stm32f1::output_pin</label>
+        <link refid="classhal_1_1stm32f1_1_1output__pin"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hal::mock::output_pin</label>
+        <link refid="structhal_1_1mock_1_1output__pin"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::inert_output_pin</label>
+        <link refid="classhal_1_1inert__output__pin"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hal::lpc40::output_pin</label>
+        <link refid="classhal_1_1lpc40_1_1output__pin"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hal::output_pin</label>
+        <link refid="classhal_1_1output__pin"/>
+      </node>
+    </inheritancegraph>
+    <location file="libraries/include/libhal/output_pin.hpp" line="31" column="1" bodyfile="libraries/include/libhal/output_pin.hpp" bodystart="32" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classhal_1_1output__pin_1a0eee7c0911622a62c215f867dd117d0f" prot="public" virt="non-virtual"><scope>hal::output_pin</scope><name>configure</name></member>
+      <member refid="classhal_1_1output__pin_1a37fb83fb5fdacf61c6b45bddcd9dd390" prot="private" virt="pure-virtual"><scope>hal::output_pin</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1output__pin_1ac0fadebc6928349d19b38a7eaccd33f3" prot="private" virt="pure-virtual"><scope>hal::output_pin</scope><name>driver_level</name></member>
+      <member refid="classhal_1_1output__pin_1ab741d4f8ef6d9d72ce3bdfa6f3d03f69" prot="private" virt="pure-virtual"><scope>hal::output_pin</scope><name>driver_level</name></member>
+      <member refid="classhal_1_1output__pin_1ab18862459d8f3ecadea439862932ba41" prot="public" virt="non-virtual"><scope>hal::output_pin</scope><name>level</name></member>
+      <member refid="classhal_1_1output__pin_1ab14df7eb1dd1ad0393a541e002506242" prot="public" virt="non-virtual"><scope>hal::output_pin</scope><name>level</name></member>
+      <member refid="classhal_1_1output__pin_1ab45ad02491e1cef38093d5605a4a37c8" prot="public" virt="virtual"><scope>hal::output_pin</scope><name>~output_pin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

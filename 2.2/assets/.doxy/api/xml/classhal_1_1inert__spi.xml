@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1inert__spi" kind="class" language="C++" prot="public">
+    <compoundname>hal::inert_spi</compoundname>
+    <basecompoundref refid="classhal_1_1spi" prot="public" virt="non-virtual">hal::spi</basecompoundref>
+    <includes refid="inert__spi_8hpp" local="no">inert_spi.hpp</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1inert__spi_1a05157d5effe909fbd837bf8e34b5271f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1inert__spi" kindref="compound">inert_spi</ref> &gt;</type>
+        <definition>static result&lt;inert_spi&gt; hal::inert_spi::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Factory function to create <ref refid="classhal_1_1inert__spi" kindref="compound">inert_spi</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>result&lt;inert_spi&gt; - Constructed <ref refid="classhal_1_1inert__spi" kindref="compound">inert_spi</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_spi.hpp" line="33" column="17" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_spi.hpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1inert__spi_1a53257b032048f2fb31fe1163a442bf36" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::inert_spi::inert_spi</definition>
+        <argsstring>()</argsstring>
+        <name>inert_spi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_spi.hpp" line="39" column="13" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_spi.hpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__spi_1a89b5f3f242d9d1488644d4f7086270a4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::inert_spi::driver_configure</definition>
+        <argsstring>([[maybe_unused]] const settings &amp;p_settings)</argsstring>
+        <name>driver_configure</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] const <ref refid="structhal_1_1spi_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_spi.hpp" line="43" column="10" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_spi.hpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__spi_1a251e1dc0342c7a676690e2496e91a6a8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1spi_1_1transfer__t" kindref="compound">transfer_t</ref> &gt;</type>
+        <definition>result&lt;transfer_t&gt; hal::inert_spi::driver_transfer</definition>
+        <argsstring>([[maybe_unused]] std::span&lt; const hal::byte &gt; p_data_out, [[maybe_unused]] std::span&lt; hal::byte &gt; p_data_in, [[maybe_unused]] hal::byte p_filler)</argsstring>
+        <name>driver_transfer</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_filler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_spi.hpp" line="48" column="10" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_spi.hpp" bodystart="48" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inert implementation of Serial peripheral interface (SPI) communication protocol hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::inert_spi</label>
+        <link refid="classhal_1_1inert__spi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::spi</label>
+        <link refid="classhal_1_1spi"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::inert_spi</label>
+        <link refid="classhal_1_1inert__spi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::spi</label>
+        <link refid="classhal_1_1spi"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/incomplete_drivers/inert_spi.hpp" line="25" column="1" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_spi.hpp" bodystart="26" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classhal_1_1spi_1aabc27516a87f51489e665bfc91e34a95" prot="public" virt="non-virtual"><scope>hal::inert_spi</scope><name>configure</name></member>
+      <member refid="classhal_1_1inert__spi_1a05157d5effe909fbd837bf8e34b5271f" prot="public" virt="non-virtual"><scope>hal::inert_spi</scope><name>create</name></member>
+      <member refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" prot="public" virt="non-virtual"><scope>hal::inert_spi</scope><name>default_filler</name></member>
+      <member refid="classhal_1_1inert__spi_1a89b5f3f242d9d1488644d4f7086270a4" prot="private" virt="non-virtual"><scope>hal::inert_spi</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1inert__spi_1a251e1dc0342c7a676690e2496e91a6a8" prot="private" virt="non-virtual"><scope>hal::inert_spi</scope><name>driver_transfer</name></member>
+      <member refid="classhal_1_1inert__spi_1a53257b032048f2fb31fe1163a442bf36" prot="private" virt="non-virtual"><scope>hal::inert_spi</scope><name>inert_spi</name></member>
+      <member refid="classhal_1_1spi_1a5e2b7807bafc0c93666977021c5c280b" prot="public" virt="non-virtual"><scope>hal::inert_spi</scope><name>transfer</name></member>
+      <member refid="classhal_1_1spi_1ac14f846d303d9c5b80f60890e9db794d" prot="public" virt="virtual"><scope>hal::inert_spi</scope><name>~spi</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

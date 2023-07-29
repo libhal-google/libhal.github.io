@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1minimum__speed__i2c" kind="class" language="C++" prot="public">
+    <compoundname>hal::minimum_speed_i2c</compoundname>
+    <basecompoundref refid="classhal_1_1i2c" prot="public" virt="non-virtual">hal::i2c</basecompoundref>
+    <includes refid="i2c__minimum__speed_8hpp" local="no">i2c_minimum_speed.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classhal_1_1minimum__speed__i2c_1a24fab3cf824f73ce46e230103b7fa8a5" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr static auto</type>
+        <definition>constexpr static auto hal::minimum_speed_i2c::default_max_speed</definition>
+        <argsstring></argsstring>
+        <name>default_max_speed</name>
+        <initializer>= 2&apos;000&apos;000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/i2c_minimum_speed.hpp" line="27" column="25" bodyfile="libraries/include/libhal-soft/i2c_minimum_speed.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1minimum__speed__i2c_1a9bfae99a4c3931901a6b9d619eb0f3d0" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1i2c" kindref="compound">hal::i2c</ref> *</type>
+        <definition>hal::i2c* hal::minimum_speed_i2c::m_i2c</definition>
+        <argsstring></argsstring>
+        <name>m_i2c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/i2c_minimum_speed.hpp" line="51" column="12" bodyfile="libraries/include/libhal-soft/i2c_minimum_speed.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1minimum__speed__i2c_1aa77398428f59d47376ba34446aa032ec" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref></type>
+        <definition>hertz hal::minimum_speed_i2c::m_lowest_seen_frequency</definition>
+        <argsstring></argsstring>
+        <name>m_lowest_seen_frequency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/i2c_minimum_speed.hpp" line="52" column="9" bodyfile="libraries/include/libhal-soft/i2c_minimum_speed.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1minimum__speed__i2c_1af6c8a1337ad26fbca54fb0b581972d81" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1minimum__speed__i2c" kindref="compound">minimum_speed_i2c</ref> &gt;</type>
+        <definition>static result&lt;minimum_speed_i2c&gt; hal::minimum_speed_i2c::create</definition>
+        <argsstring>(hal::i2c &amp;p_i2c, hertz p_frequency=default_max_speed)</argsstring>
+        <name>create</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">hal::i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref></type>
+          <declname>p_frequency</declname>
+          <defval>default_max_speed</defval>
+        </param>
+        <briefdescription>
+<para>Factory function to create <ref refid="classhal_1_1minimum__speed__i2c" kindref="compound">minimum_speed_i2c</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> object that the device will use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the maximum starting frequency the device can use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classhal_1_1minimum__speed__i2c" kindref="compound">minimum_speed_i2c</ref> - the configured <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> object using the lowest seen frequency </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/i2c_minimum_speed.hpp" line="36" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1minimum__speed__i2c_1a8bc4253e5b9ad430119af83f05e8b7e6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::minimum_speed_i2c::minimum_speed_i2c</definition>
+        <argsstring>(hal::i2c &amp;p_i2c, hertz p_frequency)</argsstring>
+        <name>minimum_speed_i2c</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">hal::i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref></type>
+          <declname>p_frequency</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/i2c_minimum_speed.hpp" line="41" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1minimum__speed__i2c_1ada64ea883ea018ce58927a842e2ead74" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>status</type>
+        <definition>status hal::minimum_speed_i2c::driver_configure</definition>
+        <argsstring>(const settings &amp;p_new_setting) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1i2c_1ac4c4b2e9b0248c1a6fc38bffc791191c">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1i2c_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_new_setting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/i2c_minimum_speed.hpp" line="43" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1minimum__speed__i2c_1af9d10702a57cfee57ef0920be989e2a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1i2c_1_1transaction__t" kindref="compound">transaction_t</ref> &gt;</type>
+        <definition>result&lt;transaction_t&gt; hal::minimum_speed_i2c::driver_transaction</definition>
+        <argsstring>(hal::byte p_address, std::span&lt; const hal::byte &gt; p_data_out, std::span&lt; hal::byte &gt; p_data_in, hal::function_ref&lt; hal::timeout_function &gt; p_timeout) override</argsstring>
+        <name>driver_transaction</name>
+        <reimplements refid="classhal_1_1i2c_1a24b72c251213f8eb763cab0ecca40c6a">driver_transaction</reimplements>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1a5078c7097c3049684fa72d7a35538e52" kindref="member">hal::function_ref</ref>&lt; <ref refid="namespacehal_1a8ca200d14bc94cb64c41994e2abb2401" kindref="member">hal::timeout_function</ref> &gt;</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/i2c_minimum_speed.hpp" line="45" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> wrapper to ensure that the lowest <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> device frequency is used. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::minimum_speed_i2c</label>
+        <link refid="classhal_1_1minimum__speed__i2c"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::i2c</label>
+        <link refid="classhal_1_1i2c"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::minimum_speed_i2c</label>
+        <link refid="classhal_1_1minimum__speed__i2c"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::i2c</label>
+        <link refid="classhal_1_1i2c"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/i2c_minimum_speed.hpp" line="24" column="1" bodyfile="libraries/include/libhal-soft/i2c_minimum_speed.hpp" bodystart="25" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classhal_1_1i2c_1a28750634803a64517521a496222d0265" prot="public" virt="non-virtual"><scope>hal::minimum_speed_i2c</scope><name>configure</name></member>
+      <member refid="classhal_1_1minimum__speed__i2c_1af6c8a1337ad26fbca54fb0b581972d81" prot="public" virt="non-virtual"><scope>hal::minimum_speed_i2c</scope><name>create</name></member>
+      <member refid="classhal_1_1minimum__speed__i2c_1a24fab3cf824f73ce46e230103b7fa8a5" prot="public" virt="non-virtual"><scope>hal::minimum_speed_i2c</scope><name>default_max_speed</name></member>
+      <member refid="classhal_1_1minimum__speed__i2c_1ada64ea883ea018ce58927a842e2ead74" prot="private" virt="virtual"><scope>hal::minimum_speed_i2c</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1minimum__speed__i2c_1af9d10702a57cfee57ef0920be989e2a3" prot="private" virt="virtual"><scope>hal::minimum_speed_i2c</scope><name>driver_transaction</name></member>
+      <member refid="classhal_1_1minimum__speed__i2c_1a9bfae99a4c3931901a6b9d619eb0f3d0" prot="private" virt="non-virtual"><scope>hal::minimum_speed_i2c</scope><name>m_i2c</name></member>
+      <member refid="classhal_1_1minimum__speed__i2c_1aa77398428f59d47376ba34446aa032ec" prot="private" virt="non-virtual"><scope>hal::minimum_speed_i2c</scope><name>m_lowest_seen_frequency</name></member>
+      <member refid="classhal_1_1minimum__speed__i2c_1a8bc4253e5b9ad430119af83f05e8b7e6" prot="private" virt="non-virtual"><scope>hal::minimum_speed_i2c</scope><name>minimum_speed_i2c</name></member>
+      <member refid="classhal_1_1i2c_1ab77e3c9347655368b887f3b14d4734a2" prot="public" virt="non-virtual"><scope>hal::minimum_speed_i2c</scope><name>transaction</name></member>
+      <member refid="classhal_1_1i2c_1a7d4c54ed02f916538e7d5815232103e7" prot="public" virt="virtual"><scope>hal::minimum_speed_i2c</scope><name>~i2c</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

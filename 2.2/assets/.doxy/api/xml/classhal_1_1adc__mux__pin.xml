@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1adc__mux__pin" kind="class" language="C++" prot="public">
+    <compoundname>hal::adc_mux_pin</compoundname>
+    <basecompoundref refid="classhal_1_1adc" prot="public" virt="non-virtual">hal::adc</basecompoundref>
+    <includes refid="adc__mux_8hpp" local="no">adc_mux.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1adc__mux__pin_1ad65a5d90b419e128c8cfe51dfc0f67fe" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1adc__multiplexer" kindref="compound">adc_multiplexer</ref> *</type>
+        <definition>adc_multiplexer* hal::adc_mux_pin::m_mux</definition>
+        <argsstring></argsstring>
+        <name>m_mux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/adc_mux.hpp" line="91" column="19" bodyfile="libraries/include/libhal-soft/adc_mux.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1adc__mux__pin_1aa094340e6156ff254d781220207081b7" prot="private" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::adc_mux_pin::m_mux_port</definition>
+        <argsstring></argsstring>
+        <name>m_mux_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/adc_mux.hpp" line="92" column="16" bodyfile="libraries/include/libhal-soft/adc_mux.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhal_1_1adc__mux__pin_1a1812f6fd23250ab07735d688d90e6d7a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1adc__mux__pin" kindref="compound">adc_mux_pin</ref> &gt;</type>
+        <definition>result&lt;adc_mux_pin&gt; make_adc</definition>
+        <argsstring>(adc_multiplexer &amp;p_multiplexer, std::uint8_t p_channel)</argsstring>
+        <name>make_adc</name>
+        <param>
+          <type><ref refid="classhal_1_1adc__multiplexer" kindref="compound">adc_multiplexer</ref> &amp;</type>
+          <declname>p_multiplexer</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_channel</declname>
+        </param>
+        <briefdescription>
+<para>Returns a multiplexer ADC pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_multiplexer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplexer object to manage each mux pin. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel number of the pin. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A newly constructed ADC multiplexer pin. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/adc_mux.hpp" line="84" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1adc__mux__pin_1a9456c03072f4d628ca72bd03effcab85" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::adc_mux_pin::adc_mux_pin</definition>
+        <argsstring>(adc_multiplexer &amp;p_mux, std::uint8_t p_mux_port)</argsstring>
+        <name>adc_mux_pin</name>
+        <param>
+          <type><ref refid="classhal_1_1adc__multiplexer" kindref="compound">adc_multiplexer</ref> &amp;</type>
+          <declname>p_mux</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_mux_port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/adc_mux.hpp" line="88" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1adc__mux__pin_1a565f72204468df9e77438283e0e42bf2" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1adc_1_1read__t" kindref="compound">read_t</ref> &gt;</type>
+        <definition>hal::result&lt;read_t&gt; hal::adc_mux_pin::driver_read</definition>
+        <argsstring>() override</argsstring>
+        <name>driver_read</name>
+        <reimplements refid="classhal_1_1adc_1aaf84b89a21851b22fd7001a230cbd87e">driver_read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/adc_mux.hpp" line="89" column="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class that represents a multiplexer pin for ADC. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::adc_mux_pin</label>
+        <link refid="classhal_1_1adc__mux__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::adc</label>
+        <link refid="classhal_1_1adc"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::adc_mux_pin</label>
+        <link refid="classhal_1_1adc__mux__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::adc</label>
+        <link refid="classhal_1_1adc"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/adc_mux.hpp" line="82" column="1" bodyfile="libraries/include/libhal-soft/adc_mux.hpp" bodystart="83" bodyend="93"/>
+    <listofallmembers>
+      <member refid="classhal_1_1adc__mux__pin_1a9456c03072f4d628ca72bd03effcab85" prot="private" virt="non-virtual"><scope>hal::adc_mux_pin</scope><name>adc_mux_pin</name></member>
+      <member refid="classhal_1_1adc__mux__pin_1a565f72204468df9e77438283e0e42bf2" prot="private" virt="virtual"><scope>hal::adc_mux_pin</scope><name>driver_read</name></member>
+      <member refid="classhal_1_1adc__mux__pin_1ad65a5d90b419e128c8cfe51dfc0f67fe" prot="private" virt="non-virtual"><scope>hal::adc_mux_pin</scope><name>m_mux</name></member>
+      <member refid="classhal_1_1adc__mux__pin_1aa094340e6156ff254d781220207081b7" prot="private" virt="non-virtual"><scope>hal::adc_mux_pin</scope><name>m_mux_port</name></member>
+      <member refid="classhal_1_1adc__mux__pin_1a1812f6fd23250ab07735d688d90e6d7a" prot="private" virt="non-virtual"><scope>hal::adc_mux_pin</scope><name>make_adc</name></member>
+      <member refid="classhal_1_1adc_1aa47439748c64c60887bdbd75f9cc3c6c" prot="public" virt="non-virtual"><scope>hal::adc_mux_pin</scope><name>read</name></member>
+      <member refid="classhal_1_1adc_1a10697dfc3b5b010e40cba12213f938f8" prot="public" virt="virtual"><scope>hal::adc_mux_pin</scope><name>~adc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

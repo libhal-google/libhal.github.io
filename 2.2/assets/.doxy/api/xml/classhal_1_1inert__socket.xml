@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1inert__socket" kind="class" language="C++" prot="public">
+    <compoundname>hal::inert_socket</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">hal::socket</basecompoundref>
+    <includes refid="inert__socket_8hpp" local="no">inert_socket.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1inert__socket_1aa24519cfca00ac10ffe4d74ac438d666" prot="private" static="no" mutable="no">
+        <type>write_t</type>
+        <definition>write_t hal::inert_socket::m_write_data</definition>
+        <argsstring></argsstring>
+        <name>m_write_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" line="58" column="11" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1inert__socket_1a662b603fce768c85799b04d5ae661f73" prot="private" static="no" mutable="no">
+        <type>read_t</type>
+        <definition>read_t hal::inert_socket::m_read_data</definition>
+        <argsstring></argsstring>
+        <name>m_read_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" line="59" column="10" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1inert__socket_1a1b0fe820605b34cd289bb704ff15cc36" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1inert__socket" kindref="compound">inert_socket</ref> &gt;</type>
+        <definition>static result&lt;inert_socket&gt; hal::inert_socket::create</definition>
+        <argsstring>(write_t p_write_data, read_t p_read_data)</argsstring>
+        <name>create</name>
+        <param>
+          <type>write_t</type>
+          <declname>p_write_data</declname>
+        </param>
+        <param>
+          <type>read_t</type>
+          <declname>p_read_data</declname>
+        </param>
+        <briefdescription>
+<para>Factory function to create <ref refid="classhal_1_1inert__socket" kindref="compound">inert_socket</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_write_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- write_t object to return when <ref refid="namespacehal_1a589504d8349443cb5a9ed2caa02dcbe1" kindref="member">write()</ref> is called </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_read_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- read_t object to return when <ref refid="namespacehal_1a5164defc44fc09c44d77d1ff823998eb" kindref="member">read()</ref> is called </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;inert_socket&gt; - Constructed <ref refid="classhal_1_1inert__socket" kindref="compound">inert_socket</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" line="34" column="17" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1inert__socket_1aa7d2bd97e483bdc531de46f8981900db" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::inert_socket::inert_socket</definition>
+        <argsstring>(write_t p_write_data, read_t p_read_data)</argsstring>
+        <name>inert_socket</name>
+        <param>
+          <type>write_t</type>
+          <declname>p_write_data</declname>
+        </param>
+        <param>
+          <type>read_t</type>
+          <declname>p_read_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" line="40" column="13" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__socket_1a77c35eb75b1a48ba878e568a7504bf42" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>hal::result&lt; write_t &gt;</type>
+        <definition>hal::result&lt;write_t&gt; hal::inert_socket::driver_write</definition>
+        <argsstring>([[maybe_unused]] std::span&lt; const hal::byte &gt; p_data, [[maybe_unused]] hal::function_ref&lt; hal::timeout_function &gt; p_timeout)</argsstring>
+        <name>driver_write</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data</declname>
+        </param>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] <ref refid="namespacehal_1a5078c7097c3049684fa72d7a35538e52" kindref="member">hal::function_ref</ref>&lt; <ref refid="namespacehal_1a8ca200d14bc94cb64c41994e2abb2401" kindref="member">hal::timeout_function</ref> &gt;</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" line="46" column="15" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__socket_1a720e197e52e61ed2243502137615a7f5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>hal::result&lt; read_t &gt;</type>
+        <definition>hal::result&lt;read_t&gt; hal::inert_socket::driver_read</definition>
+        <argsstring>([[maybe_unused]] std::span&lt; hal::byte &gt; p_data)</argsstring>
+        <name>driver_read</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" line="53" column="15" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inert implementation of generic network sockets. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::socket</label>
+      </node>
+      <node id="1">
+        <label>hal::inert_socket</label>
+        <link refid="classhal_1_1inert__socket"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::socket</label>
+      </node>
+      <node id="1">
+        <label>hal::inert_socket</label>
+        <link refid="classhal_1_1inert__socket"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" line="24" column="1" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_socket.hpp" bodystart="25" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classhal_1_1inert__socket_1a1b0fe820605b34cd289bb704ff15cc36" prot="public" virt="non-virtual"><scope>hal::inert_socket</scope><name>create</name></member>
+      <member refid="classhal_1_1inert__socket_1a720e197e52e61ed2243502137615a7f5" prot="private" virt="non-virtual"><scope>hal::inert_socket</scope><name>driver_read</name></member>
+      <member refid="classhal_1_1inert__socket_1a77c35eb75b1a48ba878e568a7504bf42" prot="private" virt="non-virtual"><scope>hal::inert_socket</scope><name>driver_write</name></member>
+      <member refid="classhal_1_1inert__socket_1aa7d2bd97e483bdc531de46f8981900db" prot="private" virt="non-virtual"><scope>hal::inert_socket</scope><name>inert_socket</name></member>
+      <member refid="classhal_1_1inert__socket_1a662b603fce768c85799b04d5ae661f73" prot="private" virt="non-virtual"><scope>hal::inert_socket</scope><name>m_read_data</name></member>
+      <member refid="classhal_1_1inert__socket_1aa24519cfca00ac10ffe4d74ac438d666" prot="private" virt="non-virtual"><scope>hal::inert_socket</scope><name>m_write_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

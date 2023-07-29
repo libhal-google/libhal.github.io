@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1inert__input__pin" kind="class" language="C++" prot="public">
+    <compoundname>hal::inert_input_pin</compoundname>
+    <basecompoundref refid="classhal_1_1input__pin" prot="public" virt="non-virtual">hal::input_pin</basecompoundref>
+    <includes refid="inert__input__pin_8hpp" local="no">inert_input_pin.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1inert__input__pin_1aa1e0ed3905a1f9fe0abab7e757a69e25" prot="private" static="no" mutable="no">
+        <type><ref refid="structhal_1_1input__pin_1_1level__t" kindref="compound">level_t</ref></type>
+        <definition>level_t hal::inert_input_pin::m_level</definition>
+        <argsstring></argsstring>
+        <name>m_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" line="54" column="11" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1inert__input__pin_1ab923fa5dc0948728e26433d4e3c2ebe5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1inert__input__pin" kindref="compound">inert_input_pin</ref> &gt;</type>
+        <definition>static result&lt;inert_input_pin&gt; hal::inert_input_pin::create</definition>
+        <argsstring>(level_t p_level)</argsstring>
+        <name>create</name>
+        <param>
+          <type><ref refid="structhal_1_1input__pin_1_1level__t" kindref="compound">level_t</ref></type>
+          <declname>p_level</declname>
+        </param>
+        <briefdescription>
+<para>Factory function to create <ref refid="classhal_1_1inert__input__pin" kindref="compound">inert_input_pin</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- level_t object to retrun when <ref refid="classhal_1_1input__pin_1a757d49cf83e37348236fcac52d2a39d9" kindref="member">level()</ref> is called </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;inert_input_pin&gt; - Constructed <ref refid="classhal_1_1inert__input__pin" kindref="compound">inert_input_pin</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" line="33" column="17" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1inert__input__pin_1a3c77cf0fa661fb0d718181e74a5a522f" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::inert_input_pin::inert_input_pin</definition>
+        <argsstring>(level_t p_level)</argsstring>
+        <name>inert_input_pin</name>
+        <param>
+          <type><ref refid="structhal_1_1input__pin_1_1level__t" kindref="compound">level_t</ref></type>
+          <declname>p_level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" line="39" column="13" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__input__pin_1abeb261ec0150b31c65dde5d1a725ec21" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::inert_input_pin::driver_configure</definition>
+        <argsstring>([[maybe_unused]] const settings &amp;p_settings)</argsstring>
+        <name>driver_configure</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] const <ref refid="structhal_1_1input__pin_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" line="44" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__input__pin_1aadd014441f89be6f21bcbb165a47b375" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1input__pin_1_1level__t" kindref="compound">level_t</ref> &gt;</type>
+        <definition>result&lt;level_t&gt; hal::inert_input_pin::driver_level</definition>
+        <argsstring>()</argsstring>
+        <name>driver_level</name>
+        <reimplements refid="classhal_1_1input__pin_1a8a50240d3fc6510aa541e2b4ce1148a9">driver_level</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" line="49" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" bodystart="49" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inert implementation of digital input pin hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::inert_input_pin</label>
+        <link refid="classhal_1_1inert__input__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::input_pin</label>
+        <link refid="classhal_1_1input__pin"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::inert_input_pin</label>
+        <link refid="classhal_1_1inert__input__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::input_pin</label>
+        <link refid="classhal_1_1input__pin"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" line="24" column="1" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_input_pin.hpp" bodystart="25" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classhal_1_1input__pin_1ac61d7c871be05f7459ecad05c1729188" prot="public" virt="non-virtual"><scope>hal::inert_input_pin</scope><name>configure</name></member>
+      <member refid="classhal_1_1inert__input__pin_1ab923fa5dc0948728e26433d4e3c2ebe5" prot="public" virt="non-virtual"><scope>hal::inert_input_pin</scope><name>create</name></member>
+      <member refid="classhal_1_1inert__input__pin_1abeb261ec0150b31c65dde5d1a725ec21" prot="private" virt="non-virtual"><scope>hal::inert_input_pin</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1inert__input__pin_1aadd014441f89be6f21bcbb165a47b375" prot="private" virt="virtual"><scope>hal::inert_input_pin</scope><name>driver_level</name></member>
+      <member refid="classhal_1_1inert__input__pin_1a3c77cf0fa661fb0d718181e74a5a522f" prot="private" virt="non-virtual"><scope>hal::inert_input_pin</scope><name>inert_input_pin</name></member>
+      <member refid="classhal_1_1input__pin_1a757d49cf83e37348236fcac52d2a39d9" prot="public" virt="non-virtual"><scope>hal::inert_input_pin</scope><name>level</name></member>
+      <member refid="classhal_1_1inert__input__pin_1aa1e0ed3905a1f9fe0abab7e757a69e25" prot="private" virt="non-virtual"><scope>hal::inert_input_pin</scope><name>m_level</name></member>
+      <member refid="classhal_1_1input__pin_1a3880caa73ba24653823e2d8930173103" prot="public" virt="virtual"><scope>hal::inert_input_pin</scope><name>~input_pin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

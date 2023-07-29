@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1inert__can" kind="class" language="C++" prot="public">
+    <compoundname>hal::inert_can</compoundname>
+    <basecompoundref refid="classhal_1_1can" prot="public" virt="non-virtual">hal::can</basecompoundref>
+    <includes refid="inert__can_8hpp" local="no">inert_can.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1inert__can_1a8350453bcadd27ff4a07f9676a025846" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::inert_can::m_bus_on</definition>
+        <argsstring></argsstring>
+        <name>m_bus_on</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" line="69" column="8" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1inert__can_1afadf490731e2c4c8b5f4303d6c7c7d30" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1inert__can" kindref="compound">inert_can</ref> &gt;</type>
+        <definition>static result&lt;inert_can&gt; hal::inert_can::create</definition>
+        <argsstring>(bool p_bus_on)</argsstring>
+        <name>create</name>
+        <param>
+          <type>bool</type>
+          <declname>p_bus_on</declname>
+        </param>
+        <briefdescription>
+<para>Factory function to create <ref refid="classhal_1_1inert__can" kindref="compound">inert_can</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_bus_on</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- State of inert can bus. Setting this value to true will return success when <ref refid="classhal_1_1can_1afcf2dd59770197b320a22660e0f79fab" kindref="member">bus_on()</ref> is called, and setting this value to false will return an error when <ref refid="classhal_1_1can_1afcf2dd59770197b320a22660e0f79fab" kindref="member">bus_on()</ref> is caled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;inert_can&gt; - Constructed <ref refid="classhal_1_1inert__can" kindref="compound">inert_can</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" line="37" column="17" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1inert__can_1a9cc6a92b0ee440765dfff2b003863fd1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hal::inert_can::inert_can</definition>
+        <argsstring>(bool p_bus_on)</argsstring>
+        <name>inert_can</name>
+        <param>
+          <type>bool</type>
+          <declname>p_bus_on</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" line="43" column="3" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__can_1ae7da710cff16eb9f6dfd382d4e4581e4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::inert_can::driver_configure</definition>
+        <argsstring>([[maybe_unused]] const settings &amp;p_settings)</argsstring>
+        <name>driver_configure</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] const <ref refid="structhal_1_1can_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" line="48" column="10" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" bodystart="48" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__can_1a420f24627f9e4cb633e8eaf0583f1060" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>status</type>
+        <definition>status hal::inert_can::driver_bus_on</definition>
+        <argsstring>()</argsstring>
+        <name>driver_bus_on</name>
+        <reimplements refid="classhal_1_1can_1af3aacb89fa1d81eb2db4baa09936c5e1">driver_bus_on</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" line="54" column="10" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" bodystart="54" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__can_1a449b44c453736dd616c7babba9bacf0b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1can_1_1send__t" kindref="compound">send_t</ref> &gt;</type>
+        <definition>result&lt;send_t&gt; hal::inert_can::driver_send</definition>
+        <argsstring>([[maybe_unused]] const message_t &amp;p_message)</argsstring>
+        <name>driver_send</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] const <ref refid="structhal_1_1can_1_1message__t" kindref="compound">message_t</ref> &amp;</type>
+          <declname>p_message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" line="62" column="10" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__can_1acfc6934c4ec0536cb763eafad47cf7f6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::inert_can::driver_on_receive</definition>
+        <argsstring>([[maybe_unused]] hal::callback&lt; handler &gt; p_handler)</argsstring>
+        <name>driver_on_receive</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] <ref refid="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" kindref="member">hal::callback</ref>&lt; <ref refid="classhal_1_1can_1aad5d17f59a3a8f3bddded97760737163" kindref="member">handler</ref> &gt;</type>
+          <declname>p_handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" line="67" column="8" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inert implementation of Controller Area Network (CAN bus) hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::inert_can</label>
+        <link refid="classhal_1_1inert__can"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::can</label>
+        <link refid="classhal_1_1can"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::inert_can</label>
+        <link refid="classhal_1_1inert__can"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::can</label>
+        <link refid="classhal_1_1can"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" line="26" column="1" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_can.hpp" bodystart="27" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classhal_1_1can_1afcf2dd59770197b320a22660e0f79fab" prot="public" virt="non-virtual"><scope>hal::inert_can</scope><name>bus_on</name></member>
+      <member refid="classhal_1_1can_1a3689f792846d977e93c69dd6c42b9ff9" prot="public" virt="non-virtual"><scope>hal::inert_can</scope><name>configure</name></member>
+      <member refid="classhal_1_1inert__can_1afadf490731e2c4c8b5f4303d6c7c7d30" prot="public" virt="non-virtual"><scope>hal::inert_can</scope><name>create</name></member>
+      <member refid="classhal_1_1inert__can_1a420f24627f9e4cb633e8eaf0583f1060" prot="private" virt="virtual"><scope>hal::inert_can</scope><name>driver_bus_on</name></member>
+      <member refid="classhal_1_1inert__can_1ae7da710cff16eb9f6dfd382d4e4581e4" prot="private" virt="non-virtual"><scope>hal::inert_can</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1inert__can_1acfc6934c4ec0536cb763eafad47cf7f6" prot="private" virt="non-virtual"><scope>hal::inert_can</scope><name>driver_on_receive</name></member>
+      <member refid="classhal_1_1inert__can_1a449b44c453736dd616c7babba9bacf0b" prot="private" virt="non-virtual"><scope>hal::inert_can</scope><name>driver_send</name></member>
+      <member refid="classhal_1_1can_1aad5d17f59a3a8f3bddded97760737163" prot="public" virt="non-virtual"><scope>hal::inert_can</scope><name>handler</name></member>
+      <member refid="classhal_1_1can_1ae85571b4f7aac93fca8503aafcb32a47" prot="public" virt="non-virtual"><scope>hal::inert_can</scope><name>id_t</name></member>
+      <member refid="classhal_1_1inert__can_1a9cc6a92b0ee440765dfff2b003863fd1" prot="private" virt="non-virtual"><scope>hal::inert_can</scope><name>inert_can</name></member>
+      <member refid="classhal_1_1inert__can_1a8350453bcadd27ff4a07f9676a025846" prot="private" virt="non-virtual"><scope>hal::inert_can</scope><name>m_bus_on</name></member>
+      <member refid="classhal_1_1can_1a8d428d2300fa5994e1acf3c3a467490c" prot="public" virt="non-virtual"><scope>hal::inert_can</scope><name>on_receive</name></member>
+      <member refid="classhal_1_1can_1aef573e4697999cd24dcc9074a6f85bec" prot="public" virt="non-virtual"><scope>hal::inert_can</scope><name>send</name></member>
+      <member refid="classhal_1_1can_1a88c989bfc09af537f1177089eb8adbd8" prot="public" virt="virtual"><scope>hal::inert_can</scope><name>~can</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

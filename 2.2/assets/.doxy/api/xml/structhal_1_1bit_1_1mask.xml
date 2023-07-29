@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1bit_1_1mask" kind="struct" language="C++" prot="public">
+    <compoundname>hal::bit::mask</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1bit_1_1mask_1a800b664f1547a432f555b6d8186cf21e" prot="public" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t hal::bit::mask::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+<para>Where the bit mask starts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="26" column="17" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1bit_1_1mask_1a6bc5f4d8b287bcc542ad5efce135fa9d" prot="public" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t hal::bit::mask::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+<para>The number of bits after position contained in the mask. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="28" column="17" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structhal_1_1bit_1_1mask_1a3551cb3842963745691e8e3ae08f3c2a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::uint32_t</type>
+            <declname>position1</declname>
+            <defname>position1</defname>
+          </param>
+          <param>
+            <type>std::uint32_t</type>
+            <declname>position2</declname>
+            <defname>position2</defname>
+          </param>
+        </templateparamlist>
+        <type>consteval <ref refid="structhal_1_1bit_1_1mask" kindref="compound">mask</ref></type>
+        <definition>static consteval mask hal::bit::mask::from</definition>
+        <argsstring>()</argsstring>
+        <name>from</name>
+        <briefdescription>
+<para>Generate, at compile time, a mask that spans the from position1 to position2. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If position1 is the same position2 then the mask will have length of 1 and the bit position will be the value of position1.</para>
+<para>position1 and position2 can be in any order so long as they span the distance from the start and end of the masked range.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>position1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- bit position 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- bit position 2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>consteval mask - bit mask represented by the two bit positions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="45" column="25" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="45" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1bit_1_1mask_1a9ca965fe85aa7e9fccb49e33a8a3699f" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::uint32_t</type>
+            <declname>position</declname>
+            <defname>position</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr <ref refid="structhal_1_1bit_1_1mask" kindref="compound">mask</ref></type>
+        <definition>static constexpr mask hal::bit::mask::from</definition>
+        <argsstring>()</argsstring>
+        <name>from</name>
+        <briefdescription>
+<para>Generate, at compile time, a single bit width mask at position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the bit to make the mask for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr mask - bit mask with the position bit set to position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="64" column="25" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1bit_1_1mask_1a42134103505bb6ecd5a690b2a4ca0aa0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>consteval <ref refid="structhal_1_1bit_1_1mask" kindref="compound">mask</ref></type>
+        <definition>static consteval mask hal::bit::mask::from</definition>
+        <argsstring>(std::uint32_t position1, std::uint32_t position2)</argsstring>
+        <name>from</name>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>position1</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>position2</declname>
+        </param>
+        <briefdescription>
+<para>Generate, at compile time, a mask that spans the from position1 to position2. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If position1 is the same position2 then the mask will have length of 1 and the bit position will be the value of position1.</para>
+<para>position1 and position2 can be in any order so long as they span the distance from the start and end of the masked range.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- bit position 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- bit position 2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>consteval mask - bit mask represented by the two bit positions </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="83" column="25" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="83" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1bit_1_1mask_1a82aaca371b1300edb25a5b255da912f1" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr <ref refid="structhal_1_1bit_1_1mask" kindref="compound">mask</ref></type>
+        <definition>static constexpr mask hal::bit::mask::from</definition>
+        <argsstring>(std::uint32_t position)</argsstring>
+        <name>from</name>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Generate, at runtime, a single bit width mask at position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the bit to make the mask for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr mask - bit mask with the position bit set to position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="101" column="25" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhal_1_1bit_1_1mask_1abcd7eee206362be933c5ad5c14c0241c" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::unsigned_integral</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::bit::mask::origin</definition>
+        <argsstring>() const</argsstring>
+        <name>origin</name>
+        <briefdescription>
+<para>Convert mask to a integral representation but with bit position at 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The integral presentation will have 1 bits starting from the position bit up to bit position + width. All other bits will be 0s.</para>
+<para>For example: <verbatim> value&lt;std::uint16_t&gt;(mask{
+     .position = 1,
+     .width = 4,
+ }); // returns = 0b0000&apos;0000&apos;0000&apos;1111;
+</verbatim> <parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- unsigned integral type to hold the mask </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr auto - mask value as an unsigned integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="123" column="18" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="123" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1bit_1_1mask_1acaa59808ff006d7b16aef1209ca5ba5a" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::unsigned_integral</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::bit::mask::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <briefdescription>
+<para>Convert mask to a integral representation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The integral presentation will have 1 bits starting from the position bit up to bit position + width. All other bits will be 0s.</para>
+<para>For example: <verbatim> value&lt;std::uint16_t&gt;(mask{
+     .position = 1,
+     .width = 4,
+ }); // returns = 0b0000&apos;0000&apos;0001&apos;1110;
+</verbatim> <parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- unsigned integral type to hold the mask </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr auto - mask value as an unsigned integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="156" column="18" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1bit_1_1mask_1a3bd20c0d7a3ee0ba5936c2f5739de15d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool hal::bit::mask::operator==</definition>
+        <argsstring>(const mask &amp;other)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structhal_1_1bit_1_1mask" kindref="compound">mask</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Comparison operator between this mask and another. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the other mask to compare against </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true - the masks are the same </para>
+</simplesect>
+<simplesect kind="return"><para>false - the masks are not the same </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="168" column="18" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-util/bit.hpp" line="23" column="1" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="24" bodyend="172"/>
+    <listofallmembers>
+      <member refid="structhal_1_1bit_1_1mask_1a3551cb3842963745691e8e3ae08f3c2a" prot="public" virt="non-virtual"><scope>hal::bit::mask</scope><name>from</name></member>
+      <member refid="structhal_1_1bit_1_1mask_1a9ca965fe85aa7e9fccb49e33a8a3699f" prot="public" virt="non-virtual"><scope>hal::bit::mask</scope><name>from</name></member>
+      <member refid="structhal_1_1bit_1_1mask_1a42134103505bb6ecd5a690b2a4ca0aa0" prot="public" virt="non-virtual"><scope>hal::bit::mask</scope><name>from</name></member>
+      <member refid="structhal_1_1bit_1_1mask_1a82aaca371b1300edb25a5b255da912f1" prot="public" virt="non-virtual"><scope>hal::bit::mask</scope><name>from</name></member>
+      <member refid="structhal_1_1bit_1_1mask_1a3bd20c0d7a3ee0ba5936c2f5739de15d" prot="public" virt="non-virtual"><scope>hal::bit::mask</scope><name>operator==</name></member>
+      <member refid="structhal_1_1bit_1_1mask_1abcd7eee206362be933c5ad5c14c0241c" prot="public" virt="non-virtual"><scope>hal::bit::mask</scope><name>origin</name></member>
+      <member refid="structhal_1_1bit_1_1mask_1a800b664f1547a432f555b6d8186cf21e" prot="public" virt="non-virtual"><scope>hal::bit::mask</scope><name>position</name></member>
+      <member refid="structhal_1_1bit_1_1mask_1acaa59808ff006d7b16aef1209ca5ba5a" prot="public" virt="non-virtual"><scope>hal::bit::mask</scope><name>value</name></member>
+      <member refid="structhal_1_1bit_1_1mask_1a6bc5f4d8b287bcc542ad5efce135fa9d" prot="public" virt="non-virtual"><scope>hal::bit::mask</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

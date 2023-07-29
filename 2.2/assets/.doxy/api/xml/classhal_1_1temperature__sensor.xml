@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1temperature__sensor" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>hal::temperature_sensor</compoundname>
+    <derivedcompoundref refid="classhal_1_1inert__temperature__sensor" prot="public" virt="non-virtual">hal::inert_temperature_sensor</derivedcompoundref>
+    <derivedcompoundref refid="classhal_1_1rmd_1_1drc__temperature__sensor" prot="public" virt="non-virtual">hal::rmd::drc_temperature_sensor</derivedcompoundref>
+    <derivedcompoundref refid="classhal_1_1rmd_1_1mc__x__temperature" prot="public" virt="non-virtual">hal::rmd::mc_x_temperature</derivedcompoundref>
+    <includes refid="temperature__sensor_8hpp" local="no">temperature_sensor.hpp</includes>
+    <innerclass refid="structhal_1_1temperature__sensor_1_1read__t" prot="public">hal::temperature_sensor::read_t</innerclass>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1temperature__sensor_1ae9d6c5cf43e7ab2adb8fe59fcf75d550" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1temperature__sensor_1_1read__t" kindref="compound">read_t</ref> &gt;</type>
+        <definition>result&lt;read_t&gt; hal::temperature_sensor::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <briefdescription>
+<para>Read the current temperature measured by the device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>result&lt;read_t&gt; - temperature data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/temperature_sensor.hpp" line="47" column="11" bodyfile="libraries/include/libhal/temperature_sensor.hpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1temperature__sensor_1a7f15a1bb1b8e4d7a8ca6a0406cd7e4e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual hal::temperature_sensor::~temperature_sensor</definition>
+        <argsstring>()=default</argsstring>
+        <name>~temperature_sensor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/temperature_sensor.hpp" line="52" column="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1temperature__sensor_1ade928c1bf83dddfe4ff9e1b7911f9fe1" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>result&lt; <ref refid="structhal_1_1temperature__sensor_1_1read__t" kindref="compound">read_t</ref> &gt;</type>
+        <definition>virtual result&lt;read_t&gt; hal::temperature_sensor::driver_read</definition>
+        <argsstring>()=0</argsstring>
+        <name>driver_read</name>
+        <reimplementedby refid="classhal_1_1inert__temperature__sensor_1a043eb2314c1af1c3b94231ae57434fbd">driver_read</reimplementedby>
+        <reimplementedby refid="classhal_1_1rmd_1_1drc__temperature__sensor_1a656e826aa00c80aa4f5ed01974f51b13">driver_read</reimplementedby>
+        <reimplementedby refid="classhal_1_1rmd_1_1mc__x__temperature_1a01b7c67803058c372dd4579e520ea34b">driver_read</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/temperature_sensor.hpp" line="55" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Temperature sensing hardware abstraction interface. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::temperature_sensor</label>
+        <link refid="classhal_1_1temperature__sensor"/>
+      </node>
+      <node id="4">
+        <label>hal::rmd::mc_x_temperature</label>
+        <link refid="classhal_1_1rmd_1_1mc__x__temperature"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::inert_temperature_sensor</label>
+        <link refid="classhal_1_1inert__temperature__sensor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hal::rmd::drc_temperature_sensor</label>
+        <link refid="classhal_1_1rmd_1_1drc__temperature__sensor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="libraries/include/libhal/temperature_sensor.hpp" line="26" column="1" bodyfile="libraries/include/libhal/temperature_sensor.hpp" bodystart="27" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classhal_1_1temperature__sensor_1ade928c1bf83dddfe4ff9e1b7911f9fe1" prot="private" virt="pure-virtual"><scope>hal::temperature_sensor</scope><name>driver_read</name></member>
+      <member refid="classhal_1_1temperature__sensor_1ae9d6c5cf43e7ab2adb8fe59fcf75d550" prot="public" virt="non-virtual"><scope>hal::temperature_sensor</scope><name>read</name></member>
+      <member refid="classhal_1_1temperature__sensor_1a7f15a1bb1b8e4d7a8ca6a0406cd7e4e6" prot="public" virt="virtual"><scope>hal::temperature_sensor</scope><name>~temperature_sensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
