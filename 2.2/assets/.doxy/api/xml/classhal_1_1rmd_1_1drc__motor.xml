@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1rmd_1_1drc__motor" kind="class" language="C++" prot="public">
+    <compoundname>hal::rmd::drc_motor</compoundname>
+    <basecompoundref refid="classhal_1_1motor" prot="public" virt="non-virtual">hal::motor</basecompoundref>
+    <includes refid="drc__motor_8hpp" local="no">drc_motor.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1rmd_1_1drc__motor_1a3a5c7c1cb74334164119c980c836ddfe" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref> *</type>
+        <definition>drc* hal::rmd::drc_motor::m_drc</definition>
+        <argsstring></argsstring>
+        <name>m_drc</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc_motor.hpp" line="49" column="7" bodyfile="libraries/include/libhal-rmd/drc_motor.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1rmd_1_1drc__motor_1aed097ff9e8d6aa7c4c1682d3c425c209" prot="private" static="no" mutable="no">
+        <type>hal::rpm</type>
+        <definition>hal::rpm hal::rmd::drc_motor::m_max_speed</definition>
+        <argsstring></argsstring>
+        <name>m_max_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc_motor.hpp" line="50" column="12" bodyfile="libraries/include/libhal-rmd/drc_motor.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1rmd_1_1drc__motor_1a588e62ee7e8619d1803a53f95c12d302" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::rmd::drc_motor::drc_motor</definition>
+        <argsstring>(drc &amp;p_drc, hal::rpm p_max_speed)</argsstring>
+        <name>drc_motor</name>
+        <param>
+          <type><ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref> &amp;</type>
+          <declname>p_drc</declname>
+        </param>
+        <param>
+          <type>hal::rpm</type>
+          <declname>p_max_speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc_motor.hpp" line="45" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1rmd_1_1drc__motor_1a7dc294b383fdd2b17aeb3e8286440afe" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1motor_1_1power__t" kindref="compound">power_t</ref> &gt;</type>
+        <definition>result&lt;power_t&gt; hal::rmd::drc_motor::driver_power</definition>
+        <argsstring>(float p_power) override</argsstring>
+        <name>driver_power</name>
+        <reimplements refid="classhal_1_1motor_1aa919346f04c77f16897310fb90cbb2d1">driver_power</reimplements>
+        <param>
+          <type>float</type>
+          <declname>p_power</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc_motor.hpp" line="46" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhal_1_1rmd_1_1drc__motor_1ac7e63a05b7baf470420a6540b7e954e1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1rmd_1_1drc__motor" kindref="compound">drc_motor</ref> &gt;</type>
+        <definition>result&lt;drc_motor&gt; hal::make_motor</definition>
+        <argsstring>(rmd::drc &amp;p_drc, hal::rpm p_max_speed)</argsstring>
+        <name>hal::make_motor</name>
+        <param>
+          <type><ref refid="classhal_1_1rmd_1_1drc" kindref="compound">rmd::drc</ref> &amp;</type>
+          <declname>p_drc</declname>
+        </param>
+        <param>
+          <type>hal::rpm</type>
+          <declname>p_max_speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc_motor.hpp" line="47" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Motor interface adaptor for DRC. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::motor</label>
+        <link refid="classhal_1_1motor"/>
+      </node>
+      <node id="1">
+        <label>hal::rmd::drc_motor</label>
+        <link refid="classhal_1_1rmd_1_1drc__motor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::motor</label>
+        <link refid="classhal_1_1motor"/>
+      </node>
+      <node id="1">
+        <label>hal::rmd::drc_motor</label>
+        <link refid="classhal_1_1rmd_1_1drc__motor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-rmd/drc_motor.hpp" line="42" column="1" bodyfile="libraries/include/libhal-rmd/drc_motor.hpp" bodystart="43" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classhal_1_1rmd_1_1drc__motor_1a588e62ee7e8619d1803a53f95c12d302" prot="private" virt="non-virtual"><scope>hal::rmd::drc_motor</scope><name>drc_motor</name></member>
+      <member refid="classhal_1_1rmd_1_1drc__motor_1a7dc294b383fdd2b17aeb3e8286440afe" prot="private" virt="virtual"><scope>hal::rmd::drc_motor</scope><name>driver_power</name></member>
+      <member refid="classhal_1_1rmd_1_1drc__motor_1ac7e63a05b7baf470420a6540b7e954e1" prot="private" virt="non-virtual"><scope>hal::rmd::drc_motor</scope><name>hal::make_motor</name></member>
+      <member refid="classhal_1_1rmd_1_1drc__motor_1a3a5c7c1cb74334164119c980c836ddfe" prot="private" virt="non-virtual"><scope>hal::rmd::drc_motor</scope><name>m_drc</name></member>
+      <member refid="classhal_1_1rmd_1_1drc__motor_1aed097ff9e8d6aa7c4c1682d3c425c209" prot="private" virt="non-virtual"><scope>hal::rmd::drc_motor</scope><name>m_max_speed</name></member>
+      <member refid="classhal_1_1motor_1adfad7d59b539461eaeff537445361fbf" prot="public" virt="non-virtual"><scope>hal::rmd::drc_motor</scope><name>power</name></member>
+      <member refid="classhal_1_1motor_1a24ade44337702b296037579bb40ead3a" prot="public" virt="virtual"><scope>hal::rmd::drc_motor</scope><name>~motor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

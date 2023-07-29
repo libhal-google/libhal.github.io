@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="libhal-lpc40_2pin_8hpp" kind="file" language="C++">
+    <compoundname>pin.hpp</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes refid="libhal_2units_8hpp" local="no">libhal/units.hpp</includes>
+    <includedby refid="libhal-lpc40_2adc_8hpp" local="yes">libraries/include/libhal-lpc40/adc.hpp</includedby>
+    <includedby refid="libhal-lpc40_2can_8hpp" local="yes">libraries/include/libhal-lpc40/can.hpp</includedby>
+    <includedby refid="libhal-lpc40_2i2c_8hpp" local="yes">libraries/include/libhal-lpc40/i2c.hpp</includedby>
+    <includedby refid="libhal-lpc40_2pwm_8hpp" local="yes">libraries/include/libhal-lpc40/pwm.hpp</includedby>
+    <includedby refid="uart_8hpp" local="yes">libraries/include/libhal-lpc40/uart.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>system_error</label>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>libhal/units.hpp</label>
+        <link refid="libhal_2units_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>boost/leaf.hpp</label>
+      </node>
+      <node id="5">
+        <label>error.hpp</label>
+        <link refid="error_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal-lpc40/pin.hpp</label>
+        <link refid="libhal-lpc40_2pin_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>chrono</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>libraries/include/libhal-lpc40/uart.hpp</label>
+        <link refid="uart_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>libraries/include/libhal-lpc40/pwm.hpp</label>
+        <link refid="libhal-lpc40_2pwm_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>libraries/include/libhal-lpc40/i2c.hpp</label>
+        <link refid="libhal-lpc40_2i2c_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>libraries/include/libhal-lpc40/adc.hpp</label>
+        <link refid="libhal-lpc40_2adc_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal-lpc40/pin.hpp</label>
+        <link refid="libhal-lpc40_2pin_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libraries/include/libhal-lpc40/can.hpp</label>
+        <link refid="libhal-lpc40_2can_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhal_1_1lpc40_1_1pin" prot="public">hal::lpc40::pin</innerclass>
+    <innernamespace refid="namespacehal">hal</innernamespace>
+    <innernamespace refid="namespacehal_1_1lpc40">hal::lpc40</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2023<sp/>Google<sp/>LLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/units.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hal::lpc40<sp/>{</highlight></codeline>
+<codeline lineno="27" refid="classhal_1_1lpc40_1_1pin" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="classhal_1_1lpc40_1_1pin_1adc747a55755fc906ac9659ca1b1518dc" refkind="member"><highlight class="normal"><sp/><sp/>constexpr<sp/><ref refid="classhal_1_1lpc40_1_1pin_1adc747a55755fc906ac9659ca1b1518dc" kindref="member">pin</ref>(std::uint8_t<sp/>p_port,<sp/>std::uint8_t<sp/>p_pin)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>m_port(p_port)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_pin(p_pin)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classhal_1_1lpc40_1_1pin_1a6bac25d30284cae1466bdc944f7f604e" refkind="member"><highlight class="normal"><sp/><sp/>constexpr<sp/><ref refid="classhal_1_1lpc40_1_1pin_1a6bac25d30284cae1466bdc944f7f604e" kindref="member">pin</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classhal_1_1lpc40_1_1pin_1ab24b520761f508b2ca53f4a7c56bcda3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref>&amp;<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">(uint8_t<sp/>p_function_code)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classhal_1_1lpc40_1_1pin_1a04bdbfe608fd25da7a5c4bf34be4d759" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1pin_1a04bdbfe608fd25da7a5c4bf34be4d759" kindref="member">resistor</ref>(hal::pin_resistor<sp/>p_resistor)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classhal_1_1lpc40_1_1pin_1a340b02502db7cb942d954fb1b7945607" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1pin_1a340b02502db7cb942d954fb1b7945607" kindref="member">hysteresis</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>p_enable)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classhal_1_1lpc40_1_1pin_1abdec760d32bca17cb0a4e3ecbba1ab29" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1pin_1abdec760d32bca17cb0a4e3ecbba1ab29" kindref="member">input_invert</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>p_enable)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classhal_1_1lpc40_1_1pin_1ae7a9a6cde91c6dbdea0643cb67ebc3f0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1pin_1ae7a9a6cde91c6dbdea0643cb67ebc3f0" kindref="member">analog</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>p_enable)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classhal_1_1lpc40_1_1pin_1a65a3bc2e6d623628a5c2ea8503445c96" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1pin_1a65a3bc2e6d623628a5c2ea8503445c96" kindref="member">digital_filter</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>p_enable)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classhal_1_1lpc40_1_1pin_1ac3d678bf852e8e51a7fd02365f8f37b2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1pin_1ac3d678bf852e8e51a7fd02365f8f37b2" kindref="member">highspeed_i2c</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>p_enable<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classhal_1_1lpc40_1_1pin_1a2505bd324e24f3b3be4f45ead02bab62" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1pin_1a2505bd324e24f3b3be4f45ead02bab62" kindref="member">high_slew_rate</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>p_enable<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classhal_1_1lpc40_1_1pin_1a72a0a03016b1caee2880b3e39ccb35e3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1pin_1a72a0a03016b1caee2880b3e39ccb35e3" kindref="member">i2c_high_current</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>p_enable<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="classhal_1_1lpc40_1_1pin_1aa323bc8162b6137340dbb4903b42bc08" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1pin_1aa323bc8162b6137340dbb4903b42bc08" kindref="member">open_drain</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>p_enable<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="classhal_1_1lpc40_1_1pin_1a3facd97b51a17546a7762066ffa63982" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1pin_1a3facd97b51a17546a7762066ffa63982" kindref="member">dac</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>p_enable<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>std::uint8_t<sp/>m_port{};</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>std::uint8_t<sp/>m_pin{};</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hal::lpc40</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/include/libhal-lpc40/pin.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1lpc40_1_1i2c" kind="class" language="C++" prot="public">
+    <compoundname>hal::lpc40::i2c</compoundname>
+    <basecompoundref refid="classhal_1_1i2c" prot="public" virt="non-virtual">hal::i2c</basecompoundref>
+    <innerclass refid="structhal_1_1lpc40_1_1i2c_1_1bus__info" prot="public">hal::lpc40::i2c::bus_info</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classhal_1_1lpc40_1_1i2c_1a7287413066bcdfd4aabd732a2fea9def" prot="public" static="no">
+        <type>std::span&lt; const hal::byte &gt;::iterator</type>
+        <definition>using hal::lpc40::i2c::write_iterator =  std::span&lt;const hal::byte&gt;::iterator</definition>
+        <argsstring></argsstring>
+        <name>write_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="30" column="3" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhal_1_1lpc40_1_1i2c_1ae7ae44e29051f9326853f1fd35d3bbb9" prot="public" static="no">
+        <type>std::span&lt; hal::byte &gt;::iterator</type>
+        <definition>using hal::lpc40::i2c::read_iterator =  std::span&lt;hal::byte&gt;::iterator</definition>
+        <argsstring></argsstring>
+        <name>read_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="31" column="3" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1i2c_1abff16e63c93120309322d93568e00e62" prot="private" static="no" mutable="no">
+        <type><ref refid="structhal_1_1lpc40_1_1i2c_1_1bus__info" kindref="compound">bus_info</ref></type>
+        <definition>bus_info hal::lpc40::i2c::m_bus</definition>
+        <argsstring></argsstring>
+        <name>m_bus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="75" column="12" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1i2c_1a33ec2bfc5d4daef85ce49f9f0cfbe129" prot="private" static="no" mutable="no">
+        <type>write_iterator</type>
+        <definition>write_iterator hal::lpc40::i2c::m_write_iterator</definition>
+        <argsstring></argsstring>
+        <name>m_write_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="76" column="18" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1i2c_1ac40c6e38e990957022fbbe288a482cd8" prot="private" static="no" mutable="no">
+        <type>write_iterator</type>
+        <definition>write_iterator hal::lpc40::i2c::m_write_end</definition>
+        <argsstring></argsstring>
+        <name>m_write_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="77" column="18" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1i2c_1ae844b2cc3e4659eeaa9b9cd77aaddbda" prot="private" static="no" mutable="no">
+        <type>read_iterator</type>
+        <definition>read_iterator hal::lpc40::i2c::m_read_iterator</definition>
+        <argsstring></argsstring>
+        <name>m_read_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="78" column="17" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1i2c_1ae3447c22b130e83d17e5a7a79d5e66de" prot="private" static="no" mutable="no">
+        <type>read_iterator</type>
+        <definition>read_iterator hal::lpc40::i2c::m_read_end</definition>
+        <argsstring></argsstring>
+        <name>m_read_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="79" column="17" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1i2c_1a29382aa08ca36cc74e88f03dbc63ed2a" prot="private" static="no" mutable="no">
+        <type>std::errc</type>
+        <definition>std::errc hal::lpc40::i2c::m_status</definition>
+        <argsstring></argsstring>
+        <name>m_status</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="80" column="13" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1i2c_1a52da92f4392128f362fcc300b7c0f704" prot="private" static="no" mutable="no">
+        <type>hal::byte</type>
+        <definition>hal::byte hal::lpc40::i2c::m_address</definition>
+        <argsstring></argsstring>
+        <name>m_address</name>
+        <initializer>= hal::byte{ 0x00 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="81" column="13" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1i2c_1aa7866dc59049212fedd76da7cf1dca4c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::lpc40::i2c::m_busy</definition>
+        <argsstring></argsstring>
+        <name>m_busy</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="82" column="8" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1i2c_1a2c2bfcc2d8039d523118dd47bbe59d85" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::lpc40::i2c::m_moved</definition>
+        <argsstring></argsstring>
+        <name>m_moved</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="83" column="8" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1i2c_1a55e9eb74669364898083186e8abf0c7d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1lpc40_1_1i2c" kindref="compound">i2c</ref> &gt;</type>
+        <definition>static result&lt;i2c&gt; hal::lpc40::i2c::get</definition>
+        <argsstring>(std::uint8_t p_bus, const i2c::settings &amp;p_settings={})</argsstring>
+        <name>get</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_bus</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structhal_1_1i2c_1_1settings" kindref="compound">i2c::settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="53" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1i2c_1a50716239983229ffad20988e98924978" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::i2c::i2c</definition>
+        <argsstring>(i2c &amp;p_other)=delete</argsstring>
+        <name>i2c</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="56" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1i2c_1a6574ce615e33029f1fccaa6998775892" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1lpc40_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+        <definition>i2c&amp; hal::lpc40::i2c::operator=</definition>
+        <argsstring>(i2c &amp;p_other)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="57" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1i2c_1af3c36ade12c294aa64d78901048ca61a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::i2c::i2c</definition>
+        <argsstring>(i2c &amp;&amp;p_other)</argsstring>
+        <name>i2c</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1i2c" kindref="compound">i2c</ref> &amp;&amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="58" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1i2c_1a29718315d766682416d4b24d83516a2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1lpc40_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+        <definition>i2c&amp; hal::lpc40::i2c::operator=</definition>
+        <argsstring>(i2c &amp;&amp;p_other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1i2c" kindref="compound">i2c</ref> &amp;&amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="59" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1i2c_1acf2224e6ad8e66648299512ce13c6192" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>hal::lpc40::i2c::~i2c</definition>
+        <argsstring>()</argsstring>
+        <name>~i2c</name>
+        <reimplements refid="classhal_1_1i2c_1a7d4c54ed02f916538e7d5815232103e7">~i2c</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="60" column="3"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1i2c_1adfe2cf192d6932562e7c2461dbfb2515" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::i2c::i2c</definition>
+        <argsstring>(bus_info p_bus)</argsstring>
+        <name>i2c</name>
+        <param>
+          <type><ref refid="structhal_1_1lpc40_1_1i2c_1_1bus__info" kindref="compound">bus_info</ref></type>
+          <declname>p_bus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="63" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1i2c_1a9e6556b38acae42abfed8472b2f343d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>status</type>
+        <definition>status hal::lpc40::i2c::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1i2c_1ac4c4b2e9b0248c1a6fc38bffc791191c">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1i2c_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="65" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1i2c_1a3d35b82ab0aeaf16f31c55905bd76b12" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1i2c_1_1transaction__t" kindref="compound">transaction_t</ref> &gt;</type>
+        <definition>result&lt;transaction_t&gt; hal::lpc40::i2c::driver_transaction</definition>
+        <argsstring>(hal::byte p_address, std::span&lt; const hal::byte &gt; p_data_out, std::span&lt; hal::byte &gt; p_data_in, hal::function_ref&lt; hal::timeout_function &gt; p_timeout) override</argsstring>
+        <name>driver_transaction</name>
+        <reimplements refid="classhal_1_1i2c_1a24b72c251213f8eb763cab0ecca40c6a">driver_transaction</reimplements>
+        <param>
+          <type>hal::byte</type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const hal::byte &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>std::span&lt; hal::byte &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <type>hal::function_ref&lt; <ref refid="libhal_2timeout_8hpp_1a8ca200d14bc94cb64c41994e2abb2401" kindref="member">hal::timeout_function</ref> &gt;</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="66" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1i2c_1a5a0b5a64c32f2efd9637f45911fc45e6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::lpc40::i2c::setup_interrupt</definition>
+        <argsstring>()</argsstring>
+        <name>setup_interrupt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="72" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1i2c_1aa096932634f73807404cb4c51a456266" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::lpc40::i2c::interrupt</definition>
+        <argsstring>()</argsstring>
+        <name>interrupt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/i2c.hpp" line="73" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::lpc40::i2c</label>
+        <link refid="classhal_1_1lpc40_1_1i2c"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::i2c</label>
+        <link refid="classhal_1_1i2c"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::lpc40::i2c</label>
+        <link refid="classhal_1_1lpc40_1_1i2c"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::i2c</label>
+        <link refid="classhal_1_1i2c"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-lpc40/i2c.hpp" line="27" column="1" bodyfile="libraries/include/libhal-lpc40/i2c.hpp" bodystart="28" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classhal_1_1i2c_1a28750634803a64517521a496222d0265" prot="public" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>configure</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a9e6556b38acae42abfed8472b2f343d1" prot="private" virt="virtual"><scope>hal::lpc40::i2c</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a3d35b82ab0aeaf16f31c55905bd76b12" prot="private" virt="virtual"><scope>hal::lpc40::i2c</scope><name>driver_transaction</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a55e9eb74669364898083186e8abf0c7d" prot="public" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>get</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a50716239983229ffad20988e98924978" prot="public" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>i2c</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1af3c36ade12c294aa64d78901048ca61a" prot="public" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>i2c</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1adfe2cf192d6932562e7c2461dbfb2515" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>i2c</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1aa096932634f73807404cb4c51a456266" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>interrupt</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a52da92f4392128f362fcc300b7c0f704" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>m_address</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1abff16e63c93120309322d93568e00e62" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>m_bus</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1aa7866dc59049212fedd76da7cf1dca4c" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>m_busy</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a2c2bfcc2d8039d523118dd47bbe59d85" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>m_moved</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1ae3447c22b130e83d17e5a7a79d5e66de" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>m_read_end</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1ae844b2cc3e4659eeaa9b9cd77aaddbda" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>m_read_iterator</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a29382aa08ca36cc74e88f03dbc63ed2a" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>m_status</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1ac40c6e38e990957022fbbe288a482cd8" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>m_write_end</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a33ec2bfc5d4daef85ce49f9f0cfbe129" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>m_write_iterator</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a6574ce615e33029f1fccaa6998775892" prot="public" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>operator=</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a29718315d766682416d4b24d83516a2b" prot="public" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>operator=</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1ae7ae44e29051f9326853f1fd35d3bbb9" prot="public" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>read_iterator</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a5a0b5a64c32f2efd9637f45911fc45e6" prot="private" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>setup_interrupt</name></member>
+      <member refid="classhal_1_1i2c_1ab77e3c9347655368b887f3b14d4734a2" prot="public" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>transaction</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1a7287413066bcdfd4aabd732a2fea9def" prot="public" virt="non-virtual"><scope>hal::lpc40::i2c</scope><name>write_iterator</name></member>
+      <member refid="classhal_1_1lpc40_1_1i2c_1acf2224e6ad8e66648299512ce13c6192" prot="public" virt="virtual"><scope>hal::lpc40::i2c</scope><name>~i2c</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1mock_1_1can" kind="struct" language="C++" prot="public">
+    <compoundname>hal::mock::can</compoundname>
+    <basecompoundref refid="classhal_1_1can" prot="public" virt="non-virtual">hal::can</basecompoundref>
+    <includes refid="libhal-mock_2can_8hpp" local="no">can.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1mock_1_1can_1abef117a5a5ff0bfc7ee313814b015eb1" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; <ref refid="structhal_1_1can_1_1settings" kindref="compound">settings</ref> &gt;</type>
+        <definition>spy_handler&lt;settings&gt; hal::mock::can::spy_configure</definition>
+        <argsstring></argsstring>
+        <name>spy_configure</name>
+        <briefdescription>
+<para>Spy handler for <ref refid="classhal_1_1can_1a3689f792846d977e93c69dd6c42b9ff9" kindref="member">hal::can::configure()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/can.hpp" line="41" column="15" bodyfile="libraries/include/libhal-mock/can.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1mock_1_1can_1a4c2d5472b8ed609ee459e062c43945e1" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; <ref refid="structhal_1_1can_1_1message__t" kindref="compound">message_t</ref> &gt;</type>
+        <definition>spy_handler&lt;message_t&gt; hal::mock::can::spy_send</definition>
+        <argsstring></argsstring>
+        <name>spy_send</name>
+        <briefdescription>
+<para>Spy handler for <ref refid="classhal_1_1can_1aef573e4697999cd24dcc9074a6f85bec" kindref="member">hal::can::send()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/can.hpp" line="43" column="15" bodyfile="libraries/include/libhal-mock/can.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1mock_1_1can_1a63ada3cc887527bae190fd3210f5b7be" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; bool &gt;</type>
+        <definition>spy_handler&lt;bool&gt; hal::mock::can::spy_bus_on</definition>
+        <argsstring></argsstring>
+        <name>spy_bus_on</name>
+        <briefdescription>
+<para>Spy handler for <ref refid="classhal_1_1can_1afcf2dd59770197b320a22660e0f79fab" kindref="member">hal::can::bus_on()</ref> will always have content of &quot;true&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/can.hpp" line="45" column="15" bodyfile="libraries/include/libhal-mock/can.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1mock_1_1can_1a12e65e48951bd4a2b7f8b5020d1fe6fe" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; hal::callback&lt; <ref refid="classhal_1_1can_1aad5d17f59a3a8f3bddded97760737163" kindref="member">handler</ref> &gt; &gt;</type>
+        <definition>spy_handler&lt;hal::callback&lt;handler&gt; &gt; hal::mock::can::spy_on_receive</definition>
+        <argsstring></argsstring>
+        <name>spy_on_receive</name>
+        <briefdescription>
+<para>Spy handler for <ref refid="classhal_1_1can_1a8d428d2300fa5994e1acf3c3a467490c" kindref="member">hal::can::on_receive()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/can.hpp" line="47" column="15" bodyfile="libraries/include/libhal-mock/can.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1can_1a234578234b8deacd0e3f3d1b563bbedf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::mock::can::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset spy information for functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/can.hpp" line="32" column="8" bodyfile="libraries/include/libhal-mock/can.hpp" bodystart="32" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1can_1aa12791161fa697f57fe4e678af563dd3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>status</type>
+        <definition>status hal::mock::can::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1can_1a74f1bb2345d78a9d9e32dbb08ea9f728">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1can_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/can.hpp" line="50" column="10" bodyfile="libraries/include/libhal-mock/can.hpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1mock_1_1can_1ab80b6f227f18902448e82c5a9896f7ce" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>status</type>
+        <definition>status hal::mock::can::driver_bus_on</definition>
+        <argsstring>() override</argsstring>
+        <name>driver_bus_on</name>
+        <reimplements refid="classhal_1_1can_1af3aacb89fa1d81eb2db4baa09936c5e1">driver_bus_on</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/can.hpp" line="55" column="10" bodyfile="libraries/include/libhal-mock/can.hpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1mock_1_1can_1a90237b1ecd453f33665d9e719375548c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1can_1_1send__t" kindref="compound">send_t</ref> &gt;</type>
+        <definition>result&lt;send_t&gt; hal::mock::can::driver_send</definition>
+        <argsstring>(const message_t &amp;p_message) override</argsstring>
+        <name>driver_send</name>
+        <reimplements refid="classhal_1_1can_1ab006bbc7a0afd7487586a22cd2edce66">driver_send</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1can_1_1message__t" kindref="compound">message_t</ref> &amp;</type>
+          <declname>p_message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/can.hpp" line="60" column="10" bodyfile="libraries/include/libhal-mock/can.hpp" bodystart="60" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1mock_1_1can_1a738e33edcc02552d7dcbb40b6946bb2c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void hal::mock::can::driver_on_receive</definition>
+        <argsstring>(hal::callback&lt; handler &gt; p_handler) override</argsstring>
+        <name>driver_on_receive</name>
+        <reimplements refid="classhal_1_1can_1a4237e63cabfeccfbc069e54e0d829d56">driver_on_receive</reimplements>
+        <param>
+          <type>hal::callback&lt; <ref refid="classhal_1_1can_1aad5d17f59a3a8f3bddded97760737163" kindref="member">handler</ref> &gt;</type>
+          <declname>p_handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/can.hpp" line="66" column="8" bodyfile="libraries/include/libhal-mock/can.hpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Mock can implementation for use in unit tests and simulations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::mock::can</label>
+        <link refid="structhal_1_1mock_1_1can"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::can</label>
+        <link refid="classhal_1_1can"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::mock::can</label>
+        <link refid="structhal_1_1mock_1_1can"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>spy_configure</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>spy_on_receive</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>spy_bus_on</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>spy_send</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hal::spy_handler&lt; hal::callback&lt; handler &gt; &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+      <node id="3">
+        <label>hal::spy_handler&lt; settings &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+      <node id="5">
+        <label>hal::spy_handler&lt; bool &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+      <node id="2">
+        <label>hal::can</label>
+        <link refid="classhal_1_1can"/>
+      </node>
+      <node id="6">
+        <label>hal::spy_handler&lt; message_t &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-mock/can.hpp" line="26" column="1" bodyfile="libraries/include/libhal-mock/can.hpp" bodystart="27" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classhal_1_1can_1afcf2dd59770197b320a22660e0f79fab" prot="public" virt="non-virtual"><scope>hal::mock::can</scope><name>bus_on</name></member>
+      <member refid="classhal_1_1can_1a3689f792846d977e93c69dd6c42b9ff9" prot="public" virt="non-virtual"><scope>hal::mock::can</scope><name>configure</name></member>
+      <member refid="structhal_1_1mock_1_1can_1ab80b6f227f18902448e82c5a9896f7ce" prot="private" virt="virtual"><scope>hal::mock::can</scope><name>driver_bus_on</name></member>
+      <member refid="structhal_1_1mock_1_1can_1aa12791161fa697f57fe4e678af563dd3" prot="private" virt="virtual"><scope>hal::mock::can</scope><name>driver_configure</name></member>
+      <member refid="structhal_1_1mock_1_1can_1a738e33edcc02552d7dcbb40b6946bb2c" prot="private" virt="virtual"><scope>hal::mock::can</scope><name>driver_on_receive</name></member>
+      <member refid="structhal_1_1mock_1_1can_1a90237b1ecd453f33665d9e719375548c" prot="private" virt="virtual"><scope>hal::mock::can</scope><name>driver_send</name></member>
+      <member refid="classhal_1_1can_1aad5d17f59a3a8f3bddded97760737163" prot="public" virt="non-virtual"><scope>hal::mock::can</scope><name>handler</name></member>
+      <member refid="classhal_1_1can_1ae85571b4f7aac93fca8503aafcb32a47" prot="public" virt="non-virtual"><scope>hal::mock::can</scope><name>id_t</name></member>
+      <member refid="classhal_1_1can_1a8d428d2300fa5994e1acf3c3a467490c" prot="public" virt="non-virtual"><scope>hal::mock::can</scope><name>on_receive</name></member>
+      <member refid="structhal_1_1mock_1_1can_1a234578234b8deacd0e3f3d1b563bbedf" prot="public" virt="non-virtual"><scope>hal::mock::can</scope><name>reset</name></member>
+      <member refid="classhal_1_1can_1aef573e4697999cd24dcc9074a6f85bec" prot="public" virt="non-virtual"><scope>hal::mock::can</scope><name>send</name></member>
+      <member refid="structhal_1_1mock_1_1can_1a63ada3cc887527bae190fd3210f5b7be" prot="public" virt="non-virtual"><scope>hal::mock::can</scope><name>spy_bus_on</name></member>
+      <member refid="structhal_1_1mock_1_1can_1abef117a5a5ff0bfc7ee313814b015eb1" prot="public" virt="non-virtual"><scope>hal::mock::can</scope><name>spy_configure</name></member>
+      <member refid="structhal_1_1mock_1_1can_1a12e65e48951bd4a2b7f8b5020d1fe6fe" prot="public" virt="non-virtual"><scope>hal::mock::can</scope><name>spy_on_receive</name></member>
+      <member refid="structhal_1_1mock_1_1can_1a4c2d5472b8ed609ee459e062c43945e1" prot="public" virt="non-virtual"><scope>hal::mock::can</scope><name>spy_send</name></member>
+      <member refid="classhal_1_1can_1a88c989bfc09af537f1177089eb8adbd8" prot="public" virt="virtual"><scope>hal::mock::can</scope><name>~can</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

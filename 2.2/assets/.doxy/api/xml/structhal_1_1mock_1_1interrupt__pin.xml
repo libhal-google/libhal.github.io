@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1mock_1_1interrupt__pin" kind="struct" language="C++" prot="public">
+    <compoundname>hal::mock::interrupt_pin</compoundname>
+    <basecompoundref refid="classhal_1_1interrupt__pin" prot="public" virt="non-virtual">hal::interrupt_pin</basecompoundref>
+    <includes refid="libhal-mock_2interrupt__pin_8hpp" local="no">interrupt_pin.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1mock_1_1interrupt__pin_1a4bfdbb3300e908430777ab9f5c07c8b4" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; <ref refid="structhal_1_1interrupt__pin_1_1settings" kindref="compound">settings</ref> &gt;</type>
+        <definition>spy_handler&lt;settings&gt; hal::mock::interrupt_pin::spy_configure</definition>
+        <argsstring></argsstring>
+        <name>spy_configure</name>
+        <briefdescription>
+<para>Spy handler for <ref refid="classhal_1_1interrupt__pin_1ad4ecbb5149184f2d6a9002f6a51e2754" kindref="member">hal::interrupt_pin::configure()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/interrupt_pin.hpp" line="40" column="15" bodyfile="libraries/include/libhal-mock/interrupt_pin.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1mock_1_1interrupt__pin_1ab5f5ac9b834695a6cca3d44ccb3c1889" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; std::function&lt; <ref refid="classhal_1_1interrupt__pin_1ad49df850168e2a62551d6d3d1e81d86c" kindref="member">handler</ref> &gt; &gt;</type>
+        <definition>spy_handler&lt;std::function&lt;handler&gt; &gt; hal::mock::interrupt_pin::spy_on_trigger</definition>
+        <argsstring></argsstring>
+        <name>spy_on_trigger</name>
+        <briefdescription>
+<para>Spy handler for <ref refid="classhal_1_1interrupt__pin_1aa110a57bf1d41c89a5df6b13740a6977" kindref="member">hal::interrupt_pin::on_trigger()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/interrupt_pin.hpp" line="42" column="15" bodyfile="libraries/include/libhal-mock/interrupt_pin.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1interrupt__pin_1a2803396fafebececf62276e236a2fd25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::mock::interrupt_pin::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset spy information for <ref refid="classhal_1_1interrupt__pin_1ad4ecbb5149184f2d6a9002f6a51e2754" kindref="member">configure()</ref>, <ref refid="classhal_1_1interrupt__pin_1aa110a57bf1d41c89a5df6b13740a6977" kindref="member">on_trigger()</ref>, and disable() </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/interrupt_pin.hpp" line="33" column="8" bodyfile="libraries/include/libhal-mock/interrupt_pin.hpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1interrupt__pin_1a9cacdf204bf0014f23fb0e4192f8940c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>status</type>
+        <definition>status hal::mock::interrupt_pin::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1interrupt__pin_1af6304cc7832f6354cf8326e6c4ef1269">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1interrupt__pin_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/interrupt_pin.hpp" line="45" column="10" bodyfile="libraries/include/libhal-mock/interrupt_pin.hpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1mock_1_1interrupt__pin_1ab186f669831aa4a0e8fa39e4ba3ea612" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void hal::mock::interrupt_pin::driver_on_trigger</definition>
+        <argsstring>(hal::callback&lt; handler &gt; p_callback) override</argsstring>
+        <name>driver_on_trigger</name>
+        <reimplements refid="classhal_1_1interrupt__pin_1a2d36c254b38e2f9794b0253b32009b71">driver_on_trigger</reimplements>
+        <param>
+          <type>hal::callback&lt; <ref refid="classhal_1_1interrupt__pin_1ad49df850168e2a62551d6d3d1e81d86c" kindref="member">handler</ref> &gt;</type>
+          <declname>p_callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/interrupt_pin.hpp" line="49" column="8" bodyfile="libraries/include/libhal-mock/interrupt_pin.hpp" bodystart="49" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>mock <ref refid="structhal_1_1mock_1_1interrupt__pin" kindref="compound">interrupt_pin</ref> implementation for use in unit tests and simulations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::mock::interrupt_pin</label>
+        <link refid="structhal_1_1mock_1_1interrupt__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::interrupt_pin</label>
+        <link refid="classhal_1_1interrupt__pin"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>hal::spy_handler&lt; settings &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+      <node id="1">
+        <label>hal::mock::interrupt_pin</label>
+        <link refid="structhal_1_1mock_1_1interrupt__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>spy_configure</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>spy_on_trigger</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::interrupt_pin</label>
+        <link refid="classhal_1_1interrupt__pin"/>
+      </node>
+      <node id="4">
+        <label>hal::spy_handler&lt; std::function&lt; handler &gt; &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-mock/interrupt_pin.hpp" line="26" column="1" bodyfile="libraries/include/libhal-mock/interrupt_pin.hpp" bodystart="27" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classhal_1_1interrupt__pin_1ad4ecbb5149184f2d6a9002f6a51e2754" prot="public" virt="non-virtual"><scope>hal::mock::interrupt_pin</scope><name>configure</name></member>
+      <member refid="structhal_1_1mock_1_1interrupt__pin_1a9cacdf204bf0014f23fb0e4192f8940c" prot="private" virt="virtual"><scope>hal::mock::interrupt_pin</scope><name>driver_configure</name></member>
+      <member refid="structhal_1_1mock_1_1interrupt__pin_1ab186f669831aa4a0e8fa39e4ba3ea612" prot="private" virt="virtual"><scope>hal::mock::interrupt_pin</scope><name>driver_on_trigger</name></member>
+      <member refid="classhal_1_1interrupt__pin_1ad49df850168e2a62551d6d3d1e81d86c" prot="public" virt="non-virtual"><scope>hal::mock::interrupt_pin</scope><name>handler</name></member>
+      <member refid="classhal_1_1interrupt__pin_1aa110a57bf1d41c89a5df6b13740a6977" prot="public" virt="non-virtual"><scope>hal::mock::interrupt_pin</scope><name>on_trigger</name></member>
+      <member refid="structhal_1_1mock_1_1interrupt__pin_1a2803396fafebececf62276e236a2fd25" prot="public" virt="non-virtual"><scope>hal::mock::interrupt_pin</scope><name>reset</name></member>
+      <member refid="structhal_1_1mock_1_1interrupt__pin_1a4bfdbb3300e908430777ab9f5c07c8b4" prot="public" virt="non-virtual"><scope>hal::mock::interrupt_pin</scope><name>spy_configure</name></member>
+      <member refid="structhal_1_1mock_1_1interrupt__pin_1ab5f5ac9b834695a6cca3d44ccb3c1889" prot="public" virt="non-virtual"><scope>hal::mock::interrupt_pin</scope><name>spy_on_trigger</name></member>
+      <member refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81" prot="public" virt="non-virtual"><scope>hal::mock::interrupt_pin</scope><name>trigger_edge</name></member>
+      <member refid="classhal_1_1interrupt__pin_1ade8066862d68154d56b28c8fcc88073d" prot="public" virt="virtual"><scope>hal::mock::interrupt_pin</scope><name>~interrupt_pin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

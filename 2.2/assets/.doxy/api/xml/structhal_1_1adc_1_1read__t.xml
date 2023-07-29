@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1adc_1_1read__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::adc::read_t</compoundname>
+    <includes refid="libhal_2adc_8hpp" local="no">adc.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1adc_1_1read__t_1a22d3c6a87c1463f4422036ce329b5c68" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float hal::adc::read_t::sample</definition>
+        <argsstring></argsstring>
+        <name>sample</name>
+        <briefdescription>
+<para>Sample value of the adc. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Is guaranteed by the implementing driver to be between 0.0f and +1.0f. The value representing the voltage measured by the ADC from Vss (negative reference) to Vcc (positive reference). For example, if Vss is 0V (gnd) and Vcc is 5V and this value is 0.5f, then the voltage measured is 2.5V. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/adc.hpp" line="47" column="11" bodyfile="libraries/include/libhal/adc.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Result from reading the adc. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/adc.hpp" line="37" column="3" bodyfile="libraries/include/libhal/adc.hpp" bodystart="38" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structhal_1_1adc_1_1read__t_1a22d3c6a87c1463f4422036ce329b5c68" prot="public" virt="non-virtual"><scope>hal::adc::read_t</scope><name>sample</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

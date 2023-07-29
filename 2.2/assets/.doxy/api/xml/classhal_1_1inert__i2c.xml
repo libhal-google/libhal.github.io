@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1inert__i2c" kind="class" language="C++" prot="public">
+    <compoundname>hal::inert_i2c</compoundname>
+    <basecompoundref refid="classhal_1_1i2c" prot="public" virt="non-virtual">hal::i2c</basecompoundref>
+    <includes refid="inert__i2c_8hpp" local="no">inert_i2c.hpp</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1inert__i2c_1a0363a3228f15b64a3683631a5d4072d5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1inert__i2c" kindref="compound">inert_i2c</ref> &gt;</type>
+        <definition>static result&lt;inert_i2c&gt; hal::inert_i2c::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Factory function to create <ref refid="classhal_1_1inert__i2c" kindref="compound">inert_i2c</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>result&lt;inert_i2c&gt; - Constructed <ref refid="classhal_1_1inert__i2c" kindref="compound">inert_i2c</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_i2c.hpp" line="32" column="17" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_i2c.hpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1inert__i2c_1a850d4d3af82194d6a9c12c2d55f30548" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::inert_i2c::inert_i2c</definition>
+        <argsstring>()</argsstring>
+        <name>inert_i2c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_i2c.hpp" line="38" column="13" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_i2c.hpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__i2c_1a8acfbaee19c42dc4505e214335d0847c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::inert_i2c::driver_configure</definition>
+        <argsstring>([[maybe_unused]] const settings &amp;p_settings)</argsstring>
+        <name>driver_configure</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] const <ref refid="structhal_1_1i2c_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_i2c.hpp" line="42" column="10" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_i2c.hpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__i2c_1ac300046f199824db048c5c3810ac91e1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1i2c_1_1transaction__t" kindref="compound">transaction_t</ref> &gt;</type>
+        <definition>result&lt;transaction_t&gt; hal::inert_i2c::driver_transaction</definition>
+        <argsstring>([[maybe_unused]] hal::byte p_address, [[maybe_unused]] std::span&lt; const hal::byte &gt; p_data_out, [[maybe_unused]] std::span&lt; hal::byte &gt; p_data_in, [[maybe_unused]] hal::function_ref&lt; hal::timeout_function &gt; p_timeout)</argsstring>
+        <name>driver_transaction</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] hal::byte</type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] std::span&lt; const hal::byte &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] std::span&lt; hal::byte &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] hal::function_ref&lt; <ref refid="libhal_2timeout_8hpp_1a8ca200d14bc94cb64c41994e2abb2401" kindref="member">hal::timeout_function</ref> &gt;</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/incomplete_drivers/inert_i2c.hpp" line="47" column="10" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_i2c.hpp" bodystart="47" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inert implementation of Inter-integrated Circuit (I2C) hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::inert_i2c</label>
+        <link refid="classhal_1_1inert__i2c"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::i2c</label>
+        <link refid="classhal_1_1i2c"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::inert_i2c</label>
+        <link refid="classhal_1_1inert__i2c"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::i2c</label>
+        <link refid="classhal_1_1i2c"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/incomplete_drivers/inert_i2c.hpp" line="24" column="1" bodyfile="libraries/include/libhal-soft/incomplete_drivers/inert_i2c.hpp" bodystart="25" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classhal_1_1i2c_1a28750634803a64517521a496222d0265" prot="public" virt="non-virtual"><scope>hal::inert_i2c</scope><name>configure</name></member>
+      <member refid="classhal_1_1inert__i2c_1a0363a3228f15b64a3683631a5d4072d5" prot="public" virt="non-virtual"><scope>hal::inert_i2c</scope><name>create</name></member>
+      <member refid="classhal_1_1inert__i2c_1a8acfbaee19c42dc4505e214335d0847c" prot="private" virt="non-virtual"><scope>hal::inert_i2c</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1inert__i2c_1ac300046f199824db048c5c3810ac91e1" prot="private" virt="non-virtual"><scope>hal::inert_i2c</scope><name>driver_transaction</name></member>
+      <member refid="classhal_1_1inert__i2c_1a850d4d3af82194d6a9c12c2d55f30548" prot="private" virt="non-virtual"><scope>hal::inert_i2c</scope><name>inert_i2c</name></member>
+      <member refid="classhal_1_1i2c_1ab77e3c9347655368b887f3b14d4734a2" prot="public" virt="non-virtual"><scope>hal::inert_i2c</scope><name>transaction</name></member>
+      <member refid="classhal_1_1i2c_1a7d4c54ed02f916538e7d5815232103e7" prot="public" virt="virtual"><scope>hal::inert_i2c</scope><name>~i2c</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

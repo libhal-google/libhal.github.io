@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1spi" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>hal::spi</compoundname>
+    <derivedcompoundref refid="classhal_1_1inert__spi" prot="public" virt="non-virtual">hal::inert_spi</derivedcompoundref>
+    <derivedcompoundref refid="structhal_1_1mock_1_1write__only__spi" prot="public" virt="non-virtual">hal::mock::write_only_spi</derivedcompoundref>
+    <includes refid="libhal_2spi_8hpp" local="no">spi.hpp</includes>
+    <innerclass refid="structhal_1_1spi_1_1settings" prot="public">hal::spi::settings</innerclass>
+    <innerclass refid="structhal_1_1spi_1_1transfer__t" prot="public">hal::spi::transfer_t</innerclass>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr hal::byte</type>
+        <definition>constexpr hal::byte hal::spi::default_filler</definition>
+        <argsstring></argsstring>
+        <name>default_filler</name>
+        <initializer>= hal::byte{ 0xFF }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default filler data placed on the bus in place of actual write data when the write buffer has been exhausted. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/spi.hpp" line="67" column="30" bodyfile="libraries/include/libhal/spi.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1spi_1aabc27516a87f51489e665bfc91e34a95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::spi::configure</definition>
+        <argsstring>(const settings &amp;p_settings)</argsstring>
+        <name>configure</name>
+        <param>
+          <type>const <ref refid="structhal_1_1spi_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+<para>Configure spi to match the settings supplied. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- settings to apply to spi </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status - success or failure </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::errc::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the settings could not be achieved. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/spi.hpp" line="76" column="11" bodyfile="libraries/include/libhal/spi.hpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1spi_1a5e2b7807bafc0c93666977021c5c280b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1spi_1_1transfer__t" kindref="compound">transfer_t</ref> &gt;</type>
+        <definition>result&lt;transfer_t&gt; hal::spi::transfer</definition>
+        <argsstring>(std::span&lt; const hal::byte &gt; p_data_out, std::span&lt; hal::byte &gt; p_data_in, hal::byte p_filler=default_filler)</argsstring>
+        <name>transfer</name>
+        <param>
+          <type>std::span&lt; const hal::byte &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>std::span&lt; hal::byte &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <type>hal::byte</type>
+          <declname>p_filler</declname>
+          <defval><ref refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" kindref="member">default_filler</ref></defval>
+        </param>
+        <briefdescription>
+<para>Send and receive data between a selected device on the spi bus. This function will block until the entire transfer is finished. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to write data to the bus. If this is set to null/empty then writing is ignored and the p_filler will be written to the bus. If the length is less than p_data_in, then p_filler will be written to the bus after this buffer has been sent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to read the data off of the bus. If this is null/empty, then the transfer will be write only and the incoming data will be ignored. If the length of this buffer is less than p_data_out, once this buffer has been filled, the rest of the received bytes on the bus will be dropped. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_filler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- filler data placed on the bus in place of actual write data when p_data_out has been exhausted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;transfer_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/spi.hpp" line="97" column="11" bodyfile="libraries/include/libhal/spi.hpp" bodystart="97" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1spi_1ac14f846d303d9c5b80f60890e9db794d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual hal::spi::~spi</definition>
+        <argsstring>()=default</argsstring>
+        <name>~spi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/spi.hpp" line="105" column="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1spi_1aadbf42ec96c43bab28ec515b6a4bcd99" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>status</type>
+        <definition>virtual status hal::spi::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings)=0</argsstring>
+        <name>driver_configure</name>
+        <reimplementedby refid="structhal_1_1mock_1_1write__only__spi_1a21191c0c3b098b708f5ac69adb220777">driver_configure</reimplementedby>
+        <param>
+          <type>const <ref refid="structhal_1_1spi_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/spi.hpp" line="108" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1spi_1af081713d9bc26601982d49d15cbe7a9c" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>result&lt; <ref refid="structhal_1_1spi_1_1transfer__t" kindref="compound">transfer_t</ref> &gt;</type>
+        <definition>virtual result&lt;transfer_t&gt; hal::spi::driver_transfer</definition>
+        <argsstring>(std::span&lt; const hal::byte &gt; p_data_out, std::span&lt; hal::byte &gt; p_data_in, hal::byte p_filler)=0</argsstring>
+        <name>driver_transfer</name>
+        <param>
+          <type>std::span&lt; const hal::byte &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>std::span&lt; hal::byte &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <type>hal::byte</type>
+          <declname>p_filler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/spi.hpp" line="109" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Serial peripheral interface (SPI) communication protocol hardware abstract interface. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::inert_spi</label>
+        <link refid="classhal_1_1inert__spi"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hal::spi</label>
+        <link refid="classhal_1_1spi"/>
+      </node>
+      <node id="3">
+        <label>hal::mock::write_only_spi</label>
+        <link refid="structhal_1_1mock_1_1write__only__spi"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="libraries/include/libhal/spi.hpp" line="30" column="1" bodyfile="libraries/include/libhal/spi.hpp" bodystart="31" bodyend="113"/>
+    <listofallmembers>
+      <member refid="classhal_1_1spi_1aabc27516a87f51489e665bfc91e34a95" prot="public" virt="non-virtual"><scope>hal::spi</scope><name>configure</name></member>
+      <member refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" prot="public" virt="non-virtual"><scope>hal::spi</scope><name>default_filler</name></member>
+      <member refid="classhal_1_1spi_1aadbf42ec96c43bab28ec515b6a4bcd99" prot="private" virt="pure-virtual"><scope>hal::spi</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1spi_1af081713d9bc26601982d49d15cbe7a9c" prot="private" virt="pure-virtual"><scope>hal::spi</scope><name>driver_transfer</name></member>
+      <member refid="classhal_1_1spi_1a5e2b7807bafc0c93666977021c5c280b" prot="public" virt="non-virtual"><scope>hal::spi</scope><name>transfer</name></member>
+      <member refid="classhal_1_1spi_1ac14f846d303d9c5b80f60890e9db794d" prot="public" virt="virtual"><scope>hal::spi</scope><name>~spi</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1spi_1_1settings" kind="struct" language="C++" prot="public">
+    <compoundname>hal::spi::settings</compoundname>
+    <includes refid="libhal_2spi_8hpp" local="no">spi.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1spi_1_1settings_1ad1c82aa22885f93e7862597669a0707c" prot="public" static="no" mutable="no">
+        <type>hertz</type>
+        <definition>hertz hal::spi::settings::clock_rate</definition>
+        <argsstring></argsstring>
+        <name>clock_rate</name>
+        <initializer>= 100.0_kHz</initializer>
+        <briefdescription>
+<para>Serial clock frequency in hertz. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/spi.hpp" line="43" column="11" bodyfile="libraries/include/libhal/spi.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1spi_1_1settings_1aa659b50bafd1b39eee163d1c6de58e70" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::spi::settings::clock_idles_high</definition>
+        <argsstring></argsstring>
+        <name>clock_idles_high</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>The polarity of the pins when the signal is idle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/spi.hpp" line="48" column="10" bodyfile="libraries/include/libhal/spi.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1spi_1_1settings_1a6e3608114ad53b46d2ab1da82a6caf42" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::spi::settings::data_valid_on_trailing_edge</definition>
+        <argsstring></argsstring>
+        <name>data_valid_on_trailing_edge</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>The phase of the clock signal when communicating. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/spi.hpp" line="53" column="10" bodyfile="libraries/include/libhal/spi.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generic settings for a standard SPI device. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/spi.hpp" line="37" column="3" bodyfile="libraries/include/libhal/spi.hpp" bodystart="38" bodyend="54"/>
+    <listofallmembers>
+      <member refid="structhal_1_1spi_1_1settings_1aa659b50bafd1b39eee163d1c6de58e70" prot="public" virt="non-virtual"><scope>hal::spi::settings</scope><name>clock_idles_high</name></member>
+      <member refid="structhal_1_1spi_1_1settings_1ad1c82aa22885f93e7862597669a0707c" prot="public" virt="non-virtual"><scope>hal::spi::settings</scope><name>clock_rate</name></member>
+      <member refid="structhal_1_1spi_1_1settings_1a6e3608114ad53b46d2ab1da82a6caf42" prot="public" virt="non-virtual"><scope>hal::spi::settings</scope><name>data_valid_on_trailing_edge</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

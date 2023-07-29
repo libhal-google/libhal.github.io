@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1gyroscope_1_1read__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::gyroscope::read_t</compoundname>
+    <includes refid="gyroscope_8hpp" local="no">gyroscope.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1gyroscope_1_1read__t_1ac1eaa0f9f0920438abd8d2d46a77d5af" prot="public" static="no" mutable="no">
+        <type>rpm</type>
+        <definition>rpm hal::gyroscope::read_t::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>Angular velocity in the X axis, relative to the device&apos;s reference frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/gyroscope.hpp" line="37" column="9" bodyfile="libraries/include/libhal/gyroscope.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1gyroscope_1_1read__t_1aac25d551fa780eacf02fdda27937d4a5" prot="public" static="no" mutable="no">
+        <type>rpm</type>
+        <definition>rpm hal::gyroscope::read_t::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Angular velocity in the Y axis, relative to the device&apos;s reference frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/gyroscope.hpp" line="43" column="9" bodyfile="libraries/include/libhal/gyroscope.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1gyroscope_1_1read__t_1acf66fd1e03117aa6eed39153bd2cffdf" prot="public" static="no" mutable="no">
+        <type>rpm</type>
+        <definition>rpm hal::gyroscope::read_t::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>Angular velocity in the Z axis, relative to the device&apos;s reference frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/gyroscope.hpp" line="49" column="9" bodyfile="libraries/include/libhal/gyroscope.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Result from reading the gyroscope. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/gyroscope.hpp" line="31" column="3" bodyfile="libraries/include/libhal/gyroscope.hpp" bodystart="32" bodyend="50"/>
+    <listofallmembers>
+      <member refid="structhal_1_1gyroscope_1_1read__t_1ac1eaa0f9f0920438abd8d2d46a77d5af" prot="public" virt="non-virtual"><scope>hal::gyroscope::read_t</scope><name>x</name></member>
+      <member refid="structhal_1_1gyroscope_1_1read__t_1aac25d551fa780eacf02fdda27937d4a5" prot="public" virt="non-virtual"><scope>hal::gyroscope::read_t</scope><name>y</name></member>
+      <member refid="structhal_1_1gyroscope_1_1read__t_1acf66fd1e03117aa6eed39153bd2cffdf" prot="public" virt="non-virtual"><scope>hal::gyroscope::read_t</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

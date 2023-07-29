@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1stm32f1_1_1clock__tree" kind="struct" language="C++" prot="public">
+    <compoundname>hal::stm32f1::clock_tree</compoundname>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t" prot="public">hal::stm32f1::clock_tree::ahb_t</innerclass>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t" prot="public">hal::stm32f1::clock_tree::pll_t</innerclass>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree_1_1rtc__t" prot="public">hal::stm32f1::clock_tree::rtc_t</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1af2fce4681828e68e3d0a7ccd4257cd17" prot="public" static="no" mutable="no">
+        <type>hal::hertz</type>
+        <definition>hal::hertz hal::stm32f1::clock_tree::high_speed_external</definition>
+        <argsstring></argsstring>
+        <name>high_speed_external</name>
+        <initializer>= 0.0_MHz</initializer>
+        <briefdescription>
+<para>Defines the frequency of the high speed external clock signal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="127" column="14" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1a047207f4b987e9e0659fb8ee7bc670ee" prot="public" static="no" mutable="no">
+        <type>hal::hertz</type>
+        <definition>hal::hertz hal::stm32f1::clock_tree::low_speed_external</definition>
+        <argsstring></argsstring>
+        <name>low_speed_external</name>
+        <initializer>= 0.0_MHz</initializer>
+        <briefdescription>
+<para>Defines the frequency of the low speed external clock signal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="130" column="14" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1ae0876f13b3d3115c6015f7bc27252eb7" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t" kindref="compound">hal::stm32f1::clock_tree::pll_t</ref></type>
+        <definition>struct hal::stm32f1::clock_tree::pll_t hal::stm32f1::clock_tree::pll</definition>
+        <argsstring></argsstring>
+        <name>pll</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="142" column="8"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1a11b94bc677cb685983e213458f1646b5" prot="public" static="no" mutable="no">
+        <type>system_clock_select</type>
+        <definition>system_clock_select hal::stm32f1::clock_tree::system_clock</definition>
+        <argsstring></argsstring>
+        <name>system_clock</name>
+        <initializer>= system_clock_select::high_speed_internal</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines which clock source will be use for the system. <simplesect kind="warning"><para>System will lock up in the following situations:<itemizedlist>
+<listitem><para>Select PLL, but PLL is not enabled</para>
+</listitem><listitem><para>Select PLL, but PLL frequency is too high</para>
+</listitem><listitem><para>Select High Speed External, but the frequency is kept at 0_Mhz. </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="150" column="23" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1a1b1e46e1f8259c07af4e70d55c24e6c8" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structhal_1_1stm32f1_1_1clock__tree_1_1rtc__t" kindref="compound">hal::stm32f1::clock_tree::rtc_t</ref></type>
+        <definition>struct hal::stm32f1::clock_tree::rtc_t hal::stm32f1::clock_tree::rtc</definition>
+        <argsstring></argsstring>
+        <name>rtc</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="157" column="8"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1a1720ca6a8b3f404101c1a8a900ce4d99" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t" kindref="compound">hal::stm32f1::clock_tree::ahb_t</ref></type>
+        <definition>struct hal::stm32f1::clock_tree::ahb_t hal::stm32f1::clock_tree::ahb</definition>
+        <argsstring></argsstring>
+        <name>ahb</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="178" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>hal::stm32f1::clock_tree::ahb_t</label>
+        <link refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>apb1</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>apb2</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::stm32f1::clock_tree::pll_t</label>
+        <link refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>usb</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hal::stm32f1::clock_tree::pll_t::usb_divider_t</label>
+        <link refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1_1usb__divider__t"/>
+      </node>
+      <node id="1">
+        <label>hal::stm32f1::clock_tree</label>
+        <link refid="structhal_1_1stm32f1_1_1clock__tree"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>pll</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>ahb</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>rtc</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>hal::stm32f1::clock_tree::ahb_t::apb2_t::adc_t</label>
+        <link refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb2__t_1_1adc__t"/>
+      </node>
+      <node id="6">
+        <label>hal::stm32f1::clock_tree::ahb_t::apb2_t</label>
+        <link refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb2__t"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>adc</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>hal::stm32f1::clock_tree::rtc_t</label>
+        <link refid="structhal_1_1stm32f1_1_1clock__tree_1_1rtc__t"/>
+      </node>
+      <node id="5">
+        <label>hal::stm32f1::clock_tree::ahb_t::apb1_t</label>
+        <link refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb1__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-stm32f1/clock.hpp" line="124" column="1" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="125" bodyend="179"/>
+    <listofallmembers>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1a1720ca6a8b3f404101c1a8a900ce4d99" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree</scope><name>ahb</name></member>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1af2fce4681828e68e3d0a7ccd4257cd17" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree</scope><name>high_speed_external</name></member>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1a047207f4b987e9e0659fb8ee7bc670ee" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree</scope><name>low_speed_external</name></member>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1ae0876f13b3d3115c6015f7bc27252eb7" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree</scope><name>pll</name></member>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1a1b1e46e1f8259c07af4e70d55c24e6c8" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree</scope><name>rtc</name></member>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1a11b94bc677cb685983e213458f1646b5" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree</scope><name>system_clock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

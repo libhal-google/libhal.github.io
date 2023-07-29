@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1servo_1_1range__error" kind="struct" language="C++" prot="public">
+    <compoundname>hal::servo::range_error</compoundname>
+    <includes refid="servo_8hpp" local="no">servo.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1servo_1_1range__error_1abd4e6b8bba3f7992594d5f514d130b75" prot="public" static="no" mutable="no">
+        <type>hal::degrees</type>
+        <definition>hal::degrees hal::servo::range_error::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <briefdescription>
+<para>Minimum range of the servo shaft in degrees. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/servo.hpp" line="48" column="18" bodyfile="libraries/include/libhal/servo.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1servo_1_1range__error_1ac74b38d64238ad6ddac22811f572a4d4" prot="public" static="no" mutable="no">
+        <type>hal::degrees</type>
+        <definition>hal::degrees hal::servo::range_error::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <briefdescription>
+<para>Maximum range of the servo shaft in degrees. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/servo.hpp" line="53" column="18" bodyfile="libraries/include/libhal/servo.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Error information indicating the range of the servo. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/servo.hpp" line="42" column="3" bodyfile="libraries/include/libhal/servo.hpp" bodystart="43" bodyend="54"/>
+    <listofallmembers>
+      <member refid="structhal_1_1servo_1_1range__error_1ac74b38d64238ad6ddac22811f572a4d4" prot="public" virt="non-virtual"><scope>hal::servo::range_error</scope><name>max</name></member>
+      <member refid="structhal_1_1servo_1_1range__error_1abd4e6b8bba3f7992594d5f514d130b75" prot="public" virt="non-virtual"><scope>hal::servo::range_error</scope><name>min</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

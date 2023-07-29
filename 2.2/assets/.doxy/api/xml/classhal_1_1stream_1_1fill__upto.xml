@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1stream_1_1fill__upto" kind="class" language="C++" prot="public">
+    <compoundname>hal::stream::fill_upto</compoundname>
+    <includes refid="streams_8hpp" local="no">streams.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1stream_1_1fill__upto_1a1ecb9a686cf967d93e2309994ec6d263" prot="private" static="no" mutable="no">
+        <type>std::span&lt; const hal::byte &gt;</type>
+        <definition>std::span&lt;const hal::byte&gt; hal::stream::fill_upto::m_sequence</definition>
+        <argsstring></argsstring>
+        <name>m_sequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="115" column="13" bodyfile="libraries/include/libhal-util/streams.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1stream_1_1fill__upto_1a421773c7d518bc89b46f00cee1840791" prot="private" static="no" mutable="no">
+        <type>std::span&lt; hal::byte &gt;</type>
+        <definition>std::span&lt;hal::byte&gt; hal::stream::fill_upto::m_buffer</definition>
+        <argsstring></argsstring>
+        <name>m_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="116" column="13" bodyfile="libraries/include/libhal-util/streams.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1stream_1_1fill__upto_1a68a6f5f141a26da15c063425c1cd0da2" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hal::stream::fill_upto::m_fill_amount</definition>
+        <argsstring></argsstring>
+        <name>m_fill_amount</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="117" column="10" bodyfile="libraries/include/libhal-util/streams.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1stream_1_1fill__upto_1af85bd6bb6535201b50607b17dfc80218" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hal::stream::fill_upto::m_search_index</definition>
+        <argsstring></argsstring>
+        <name>m_search_index</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="118" column="10" bodyfile="libraries/include/libhal-util/streams.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1stream_1_1fill__upto_1a42c3876828849074e5a849e925332f46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::stream::fill_upto::fill_upto</definition>
+        <argsstring>(std::span&lt; const hal::byte &gt; p_sequence, std::span&lt; hal::byte &gt; p_buffer)</argsstring>
+        <name>fill_upto</name>
+        <param>
+          <type>std::span&lt; const hal::byte &gt;</type>
+          <declname>p_sequence</declname>
+        </param>
+        <param>
+          <type>std::span&lt; hal::byte &gt;</type>
+          <declname>p_buffer</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new fill upto object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_sequence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- sequence to search for. The lifetime of this data pointed to by this span must outlive this object, or not be used when the lifetime of that data is no longer available. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to fill data into </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="102" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1stream_1_1fill__upto_1a286929e240fb2e0890e19edb2d643bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libhal_2timeout_8hpp_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref></type>
+        <definition>work_state hal::stream::fill_upto::state</definition>
+        <argsstring>()</argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="109" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1stream_1_1fill__upto_1a525fdd74f740c7006fb8e1caefaa5062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::span&lt; hal::byte &gt;</type>
+        <definition>std::span&lt;hal::byte&gt; hal::stream::fill_upto::span</definition>
+        <argsstring>()</argsstring>
+        <name>span</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="111" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1stream_1_1fill__upto_1a3460438bb5fb3cdf5bd597dfd8318fe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::span&lt; hal::byte &gt;</type>
+        <definition>std::span&lt;hal::byte&gt; hal::stream::fill_upto::unfilled</definition>
+        <argsstring>()</argsstring>
+        <name>unfilled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="112" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhal_1_1stream_1_1fill__upto_1aa21b078c39daaf9c82118b30f46d95ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::span&lt; const hal::byte &gt;</type>
+        <definition>std::span&lt;const hal::byte&gt; operator|</definition>
+        <argsstring>(const std::span&lt; const hal::byte &gt; &amp;p_input_data, fill_upto &amp;p_self)</argsstring>
+        <name>operator|</name>
+        <param>
+          <type>const std::span&lt; const hal::byte &gt; &amp;</type>
+          <declname>p_input_data</declname>
+        </param>
+        <param>
+          <type><ref refid="classhal_1_1stream_1_1fill__upto" kindref="compound">fill_upto</ref> &amp;</type>
+          <declname>p_self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="105" column="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Discard received bytes until the sequence is found. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-util/streams.hpp" line="91" column="1" bodyfile="libraries/include/libhal-util/streams.hpp" bodystart="92" bodyend="119"/>
+    <listofallmembers>
+      <member refid="classhal_1_1stream_1_1fill__upto_1a42c3876828849074e5a849e925332f46" prot="public" virt="non-virtual"><scope>hal::stream::fill_upto</scope><name>fill_upto</name></member>
+      <member refid="classhal_1_1stream_1_1fill__upto_1a421773c7d518bc89b46f00cee1840791" prot="private" virt="non-virtual"><scope>hal::stream::fill_upto</scope><name>m_buffer</name></member>
+      <member refid="classhal_1_1stream_1_1fill__upto_1a68a6f5f141a26da15c063425c1cd0da2" prot="private" virt="non-virtual"><scope>hal::stream::fill_upto</scope><name>m_fill_amount</name></member>
+      <member refid="classhal_1_1stream_1_1fill__upto_1af85bd6bb6535201b50607b17dfc80218" prot="private" virt="non-virtual"><scope>hal::stream::fill_upto</scope><name>m_search_index</name></member>
+      <member refid="classhal_1_1stream_1_1fill__upto_1a1ecb9a686cf967d93e2309994ec6d263" prot="private" virt="non-virtual"><scope>hal::stream::fill_upto</scope><name>m_sequence</name></member>
+      <member refid="classhal_1_1stream_1_1fill__upto_1aa21b078c39daaf9c82118b30f46d95ac" prot="public" virt="non-virtual"><scope>hal::stream::fill_upto</scope><name>operator|</name></member>
+      <member refid="classhal_1_1stream_1_1fill__upto_1a525fdd74f740c7006fb8e1caefaa5062" prot="public" virt="non-virtual"><scope>hal::stream::fill_upto</scope><name>span</name></member>
+      <member refid="classhal_1_1stream_1_1fill__upto_1a286929e240fb2e0890e19edb2d643bb7" prot="public" virt="non-virtual"><scope>hal::stream::fill_upto</scope><name>state</name></member>
+      <member refid="classhal_1_1stream_1_1fill__upto_1a3460438bb5fb3cdf5bd597dfd8318fe1" prot="public" virt="non-virtual"><scope>hal::stream::fill_upto</scope><name>unfilled</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

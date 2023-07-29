@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1inert__adc" kind="class" language="C++" prot="public">
+    <compoundname>hal::inert_adc</compoundname>
+    <basecompoundref refid="classhal_1_1adc" prot="public" virt="non-virtual">hal::adc</basecompoundref>
+    <includes refid="inert__adc_8hpp" local="no">inert_adc.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1inert__adc_1acd582a2a0ada79de0996682e04917982" prot="private" static="no" mutable="no">
+        <type><ref refid="structhal_1_1adc_1_1read__t" kindref="compound">read_t</ref></type>
+        <definition>read_t hal::inert_adc::m_result</definition>
+        <argsstring></argsstring>
+        <name>m_result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_adc.hpp" line="49" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_adc.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1inert__adc_1aff43ec02f940b7663efb47eb0588724c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1inert__adc" kindref="compound">inert_adc</ref> &gt;</type>
+        <definition>static result&lt;inert_adc&gt; hal::inert_adc::create</definition>
+        <argsstring>(read_t p_result)</argsstring>
+        <name>create</name>
+        <param>
+          <type><ref refid="structhal_1_1adc_1_1read__t" kindref="compound">read_t</ref></type>
+          <declname>p_result</declname>
+        </param>
+        <briefdescription>
+<para>Factory function to create <ref refid="classhal_1_1inert__adc" kindref="compound">inert_adc</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- read_t object to return when reading the <ref refid="classhal_1_1inert__adc" kindref="compound">inert_adc</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;inert_adc&gt; - Constructed <ref refid="classhal_1_1inert__adc" kindref="compound">inert_adc</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_adc.hpp" line="33" column="17" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_adc.hpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1inert__adc_1a951bc3a6c772fc70b344872b6e17b41a" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::inert_adc::inert_adc</definition>
+        <argsstring>(read_t p_result)</argsstring>
+        <name>inert_adc</name>
+        <param>
+          <type><ref refid="structhal_1_1adc_1_1read__t" kindref="compound">read_t</ref></type>
+          <declname>p_result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_adc.hpp" line="39" column="13" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_adc.hpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__adc_1a208a893693187dc6ae994a6fb230711b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1adc_1_1read__t" kindref="compound">read_t</ref> &gt;</type>
+        <definition>result&lt;read_t&gt; hal::inert_adc::driver_read</definition>
+        <argsstring>()</argsstring>
+        <name>driver_read</name>
+        <reimplements refid="classhal_1_1adc_1aaf84b89a21851b22fd7001a230cbd87e">driver_read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_adc.hpp" line="44" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_adc.hpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inert implementation of Analog to Digital Converter (ADC) hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::inert_adc</label>
+        <link refid="classhal_1_1inert__adc"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::adc</label>
+        <link refid="classhal_1_1adc"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::inert_adc</label>
+        <link refid="classhal_1_1inert__adc"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::adc</label>
+        <link refid="classhal_1_1adc"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/inert_drivers/inert_adc.hpp" line="24" column="1" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_adc.hpp" bodystart="25" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classhal_1_1inert__adc_1aff43ec02f940b7663efb47eb0588724c" prot="public" virt="non-virtual"><scope>hal::inert_adc</scope><name>create</name></member>
+      <member refid="classhal_1_1inert__adc_1a208a893693187dc6ae994a6fb230711b" prot="private" virt="virtual"><scope>hal::inert_adc</scope><name>driver_read</name></member>
+      <member refid="classhal_1_1inert__adc_1a951bc3a6c772fc70b344872b6e17b41a" prot="private" virt="non-virtual"><scope>hal::inert_adc</scope><name>inert_adc</name></member>
+      <member refid="classhal_1_1inert__adc_1acd582a2a0ada79de0996682e04917982" prot="private" virt="non-virtual"><scope>hal::inert_adc</scope><name>m_result</name></member>
+      <member refid="classhal_1_1adc_1aa47439748c64c60887bdbd75f9cc3c6c" prot="public" virt="non-virtual"><scope>hal::inert_adc</scope><name>read</name></member>
+      <member refid="classhal_1_1adc_1a10697dfc3b5b010e40cba12213f938f8" prot="public" virt="virtual"><scope>hal::inert_adc</scope><name>~adc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacehal_1_1stream" kind="namespace" language="C++">
+    <compoundname>hal::stream</compoundname>
+    <innerclass refid="classhal_1_1stream_1_1find" prot="public">hal::stream::find</innerclass>
+    <innerclass refid="classhal_1_1stream_1_1fill" prot="public">hal::stream::fill</innerclass>
+    <innerclass refid="classhal_1_1stream_1_1fill__upto" prot="public">hal::stream::fill_upto</innerclass>
+    <innerclass refid="classhal_1_1stream_1_1parse" prot="public">hal::stream::parse</innerclass>
+    <innerclass refid="classhal_1_1stream_1_1skip" prot="public">hal::stream::skip</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-util/streams.hpp" line="25" column="1"/>
+  </compounddef>
+</doxygen>

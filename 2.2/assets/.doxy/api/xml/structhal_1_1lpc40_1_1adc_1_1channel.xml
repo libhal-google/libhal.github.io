@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1lpc40_1_1adc_1_1channel" kind="struct" language="C++" prot="public">
+    <compoundname>hal::lpc40::adc::channel</compoundname>
+    <includes refid="libhal-lpc40_2adc_8hpp" local="no">adc.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1adc_1_1channel_1a6a10f201436159eb38a4504ab92e006a" prot="public" static="no" mutable="no">
+        <type>hertz</type>
+        <definition>hertz hal::lpc40::adc::channel::clock_rate</definition>
+        <argsstring></argsstring>
+        <name>clock_rate</name>
+        <initializer>= 1&apos;000&apos;000.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default and highest sampling rate is 1 MHz. Careful as changing this for one channel changes this for all channels on the lpc40xx mcu. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/adc.hpp" line="38" column="11" bodyfile="libraries/include/libhal-lpc40/adc.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1adc_1_1channel_1a84b38f3756ab6f9d42ce732ab910281f" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref></type>
+        <definition>pin hal::lpc40::adc::channel::adc_pin</definition>
+        <argsstring></argsstring>
+        <name>adc_pin</name>
+        <briefdescription>
+<para>ADC pin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/adc.hpp" line="40" column="9" bodyfile="libraries/include/libhal-lpc40/adc.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1adc_1_1channel_1adbbc2cea15280c746e5e7ae07aaf17a1" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hal::lpc40::adc::channel::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+<para>Channel data index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/adc.hpp" line="42" column="13" bodyfile="libraries/include/libhal-lpc40/adc.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1adc_1_1channel_1a93191fb3e41f418b76623c91bcc89180" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hal::lpc40::adc::channel::pin_function</definition>
+        <argsstring></argsstring>
+        <name>pin_function</name>
+        <briefdescription>
+<para>Pin mux function code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/adc.hpp" line="44" column="13" bodyfile="libraries/include/libhal-lpc40/adc.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Channel specific information. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::lpc40::adc::channel</label>
+        <link refid="structhal_1_1lpc40_1_1adc_1_1channel"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>adc_pin</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::lpc40::pin</label>
+        <link refid="classhal_1_1lpc40_1_1pin"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-lpc40/adc.hpp" line="34" column="3" bodyfile="libraries/include/libhal-lpc40/adc.hpp" bodystart="35" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structhal_1_1lpc40_1_1adc_1_1channel_1a84b38f3756ab6f9d42ce732ab910281f" prot="public" virt="non-virtual"><scope>hal::lpc40::adc::channel</scope><name>adc_pin</name></member>
+      <member refid="structhal_1_1lpc40_1_1adc_1_1channel_1a6a10f201436159eb38a4504ab92e006a" prot="public" virt="non-virtual"><scope>hal::lpc40::adc::channel</scope><name>clock_rate</name></member>
+      <member refid="structhal_1_1lpc40_1_1adc_1_1channel_1adbbc2cea15280c746e5e7ae07aaf17a1" prot="public" virt="non-virtual"><scope>hal::lpc40::adc::channel</scope><name>index</name></member>
+      <member refid="structhal_1_1lpc40_1_1adc_1_1channel_1a93191fb3e41f418b76623c91bcc89180" prot="public" virt="non-virtual"><scope>hal::lpc40::adc::channel</scope><name>pin_function</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

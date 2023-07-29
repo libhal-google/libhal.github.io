@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="libhal-stm32f1_2clock_8hpp" kind="file" language="C++">
+    <compoundname>clock.hpp</compoundname>
+    <includes refid="libhal-stm32f1_2constants_8hpp" local="yes">constants.hpp</includes>
+    <includes refid="error_8hpp" local="no">libhal/error.hpp</includes>
+    <includes refid="libhal_2units_8hpp" local="no">libhal/units.hpp</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>system_error</label>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal-stm32f1/clock.hpp</label>
+        <link refid="libhal-stm32f1_2clock_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>libhal/units.hpp</label>
+        <link refid="libhal_2units_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>boost/leaf.hpp</label>
+      </node>
+      <node id="4">
+        <label>libhal/error.hpp</label>
+        <link refid="error_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>constants.hpp</label>
+        <link refid="libhal-stm32f1_2constants_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>chrono</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree" prot="public">hal::stm32f1::clock_tree</innerclass>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t" prot="public">hal::stm32f1::clock_tree::pll_t</innerclass>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1_1usb__divider__t" prot="public">hal::stm32f1::clock_tree::pll_t::usb_divider_t</innerclass>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree_1_1rtc__t" prot="public">hal::stm32f1::clock_tree::rtc_t</innerclass>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t" prot="public">hal::stm32f1::clock_tree::ahb_t</innerclass>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb1__t" prot="public">hal::stm32f1::clock_tree::ahb_t::apb1_t</innerclass>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb2__t" prot="public">hal::stm32f1::clock_tree::ahb_t::apb2_t</innerclass>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb2__t_1_1adc__t" prot="public">hal::stm32f1::clock_tree::ahb_t::apb2_t::adc_t</innerclass>
+    <innernamespace refid="namespacehal">hal</innernamespace>
+    <innernamespace refid="namespacehal_1_1stm32f1">hal::stm32f1</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2023<sp/>Google<sp/>LLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constants.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/error.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/units.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hal::stm32f1<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">hal::literals;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">constexpr<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>internal_low_speed_oscillator<sp/>=<sp/>20.0_kHz;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">constexpr<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>internal_high_speed_oscillator<sp/>=<sp/>8.0_MHz;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">constexpr<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>flash_clock<sp/>=<sp/>internal_high_speed_oscillator;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">constexpr<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>watchdog_clock_rate<sp/>=<sp/>internal_low_speed_oscillator;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>apb_divider<sp/>:<sp/>std::uint8_t</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>divide_by_1<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>divide_by_2<sp/>=<sp/>0b100,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>divide_by_4<sp/>=<sp/>0b101,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>divide_by_8<sp/>=<sp/>0b110,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>divide_by_16<sp/>=<sp/>0b111,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>ahb_divider<sp/>:<sp/>std::uint8_t</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>divide_by_1<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>divide_by_2<sp/>=<sp/>0b1000,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>divide_by_4<sp/>=<sp/>0b1001,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>divide_by_8<sp/>=<sp/>0b1010,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>divide_by_16<sp/>=<sp/>0b1011,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>divide_by_64<sp/>=<sp/>0b1100,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>divide_by_128<sp/>=<sp/>0b1101,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>divide_by_256<sp/>=<sp/>0b1110,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>divide_by_512<sp/>=<sp/>0b1111,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>adc_divider<sp/>:<sp/>std::uint8_t</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>divide_by_2<sp/>=<sp/>0b00,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>divide_by_4<sp/>=<sp/>0b01,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>divide_by_6<sp/>=<sp/>0b10,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>divide_by_8<sp/>=<sp/>0b11,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>system_clock_select<sp/>:<sp/>std::uint8_t</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>high_speed_internal<sp/>=<sp/>0b00,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>high_speed_external<sp/>=<sp/>0b01,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>pll<sp/>=<sp/>0b10,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>pll_multiply<sp/>:<sp/>std::uint8_t</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>multiply_by_2<sp/>=<sp/>0b0000,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>multiply_by_3<sp/>=<sp/>0b0001,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>multiply_by_4<sp/>=<sp/>0b0010,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>multiply_by_5<sp/>=<sp/>0b0011,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>multiply_by_6<sp/>=<sp/>0b0100,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>multiply_by_7<sp/>=<sp/>0b0101,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>multiply_by_8<sp/>=<sp/>0b0110,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>multiply_by_9<sp/>=<sp/>0b0111,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>multiply_by_10<sp/>=<sp/>0b1000,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>multiply_by_11<sp/>=<sp/>0b1001,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>multiply_by_12<sp/>=<sp/>0b1010,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>multiply_by_13<sp/>=<sp/>0b1011,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>multiply_by_14<sp/>=<sp/>0b1100,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>multiply_by_15<sp/>=<sp/>0b1101,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>multiply_by_16<sp/>=<sp/>0b1110,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>rtc_source<sp/>:<sp/>std::uint8_t</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>no_clock<sp/>=<sp/>0b00,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>low_speed_internal<sp/>=<sp/>0b01,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>low_speed_external<sp/>=<sp/>0b10,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>high_speed_external_divided_by_128<sp/>=<sp/>0b11,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>pll_source<sp/>:<sp/>std::uint8_t</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>high_speed_internal<sp/>=<sp/>0b0,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>high_speed_external<sp/>=<sp/>0b1,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>high_speed_external_divided_by_2<sp/>=<sp/>0b11,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>usb_divider<sp/>:<sp/>std::uint8_t</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>divide_by_1<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>divide_by_1_point_5<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="structhal_1_1stm32f1_1_1clock__tree" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1stm32f1_1_1clock__tree" kindref="compound">clock_tree</ref></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127" refid="structhal_1_1stm32f1_1_1clock__tree_1af2fce4681828e68e3d0a7ccd4257cd17" refkind="member"><highlight class="normal"><sp/><sp/>hal::hertz<sp/>high_speed_external<sp/>=<sp/>0.0_MHz;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="structhal_1_1stm32f1_1_1clock__tree_1a047207f4b987e9e0659fb8ee7bc670ee" refkind="member"><highlight class="normal"><sp/><sp/>hal::hertz<sp/>low_speed_external<sp/>=<sp/>0.0_MHz;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t" kindref="compound">pll_t</ref></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>pll_source<sp/>source<sp/>=<sp/>pll_source::high_speed_internal;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>pll_multiply<sp/><ref refid="math_8hpp_1a2d49a3b63f73d12c16d42c6c752eeb62" kindref="member">multiply</ref><sp/>=<sp/>pll_multiply::multiply_by_2;</highlight></codeline>
+<codeline lineno="138" refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1_1usb__divider__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1_1usb__divider__t" kindref="compound">usb_divider_t</ref></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>usb_divider<sp/>divider<sp/>=<sp/>usb_divider::divide_by_1_point_5;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>usb<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>}<sp/>pll<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="structhal_1_1stm32f1_1_1clock__tree_1a11b94bc677cb685983e213458f1646b5" refkind="member"><highlight class="normal"><sp/><sp/>system_clock_select<sp/>system_clock<sp/>=<sp/>system_clock_select::high_speed_internal;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="structhal_1_1stm32f1_1_1clock__tree_1_1rtc__t" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1stm32f1_1_1clock__tree_1_1rtc__t" kindref="compound">rtc_t</ref></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>rtc_source<sp/>source<sp/>=<sp/>rtc_source::low_speed_internal;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>}<sp/>rtc<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t" kindref="compound">ahb_t</ref></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>ahb_divider<sp/>divider<sp/>=<sp/>ahb_divider::divide_by_1;</highlight></codeline>
+<codeline lineno="164" refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb1__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb1__t" kindref="compound">apb1_t</ref></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>apb_divider<sp/>divider<sp/>=<sp/>apb_divider::divide_by_1;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>apb1<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb2__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb2__t" kindref="compound">apb2_t</ref></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>apb_divider<sp/>divider<sp/>=<sp/>apb_divider::divide_by_1;</highlight></codeline>
+<codeline lineno="172" refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb2__t_1_1adc__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb2__t_1_1adc__t" kindref="compound">adc_t</ref></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175" refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb2__t_1_1adc__t_1acd39b8c580ba0bf663fc333025084e3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adc_divider<sp/>divider<sp/>=<sp/>adc_divider::divide_by_2;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="classhal_1_1adc" kindref="compound">adc</ref><sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>apb2<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>}<sp/>ahb<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>configure_clocks(clock_tree<sp/>p_clock_tree);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal">hal::hertz<sp/>frequency(peripheral<sp/>p_id);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hal::stm32f1</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/include/libhal-stm32f1/clock.hpp"/>
+  </compounddef>
+</doxygen>

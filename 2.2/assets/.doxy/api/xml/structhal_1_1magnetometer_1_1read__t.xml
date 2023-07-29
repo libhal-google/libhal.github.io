@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1magnetometer_1_1read__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::magnetometer::read_t</compoundname>
+    <includes refid="magnetometer_8hpp" local="no">magnetometer.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1magnetometer_1_1read__t_1a77cd834298dfbe6b37996e85dfac819a" prot="public" static="no" mutable="no">
+        <type>gauss</type>
+        <definition>gauss hal::magnetometer::read_t::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>Magnetic field strength in the X axis, relative to the device&apos;s reference frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/magnetometer.hpp" line="44" column="11" bodyfile="libraries/include/libhal/magnetometer.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1magnetometer_1_1read__t_1aa319a33be95c6a3627fbfe7fbddc57f2" prot="public" static="no" mutable="no">
+        <type>gauss</type>
+        <definition>gauss hal::magnetometer::read_t::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Magnetic field strength in the Y axis, relative to the device&apos;s reference frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/magnetometer.hpp" line="51" column="11" bodyfile="libraries/include/libhal/magnetometer.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1magnetometer_1_1read__t_1af6c4eaa489f5a9724fa3156b4a72436b" prot="public" static="no" mutable="no">
+        <type>gauss</type>
+        <definition>gauss hal::magnetometer::read_t::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>Magnetic field strength in the Z axis, relative to the device&apos;s reference frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/magnetometer.hpp" line="58" column="11" bodyfile="libraries/include/libhal/magnetometer.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Result from reading the accelerometer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/magnetometer.hpp" line="37" column="3" bodyfile="libraries/include/libhal/magnetometer.hpp" bodystart="38" bodyend="59"/>
+    <listofallmembers>
+      <member refid="structhal_1_1magnetometer_1_1read__t_1a77cd834298dfbe6b37996e85dfac819a" prot="public" virt="non-virtual"><scope>hal::magnetometer::read_t</scope><name>x</name></member>
+      <member refid="structhal_1_1magnetometer_1_1read__t_1aa319a33be95c6a3627fbfe7fbddc57f2" prot="public" virt="non-virtual"><scope>hal::magnetometer::read_t</scope><name>y</name></member>
+      <member refid="structhal_1_1magnetometer_1_1read__t_1af6c4eaa489f5a9724fa3156b4a72436b" prot="public" virt="non-virtual"><scope>hal::magnetometer::read_t</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1move__interceptor" kind="class" language="C++" prot="public">
+    <compoundname>hal::move_interceptor</compoundname>
+    <includes refid="move__interceptor_8hpp" local="no">move_interceptor.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhal_1_1move__interceptor_1a5cee6333ac1cb53a12600f56aa97c235" prot="public" static="no" mutable="no">
+        <type>friend</type>
+        <definition>friend hal::move_interceptor&lt; T &gt;::T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/move_interceptor.hpp" line="43" column="10" bodyfile="libraries/include/libhal-util/move_interceptor.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1move__interceptor_1ae74146780873440e6a7751afc60f9d98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::move_interceptor&lt; T &gt;::intercept</definition>
+        <argsstring>(T *p_previous)</argsstring>
+        <name>intercept</name>
+        <param>
+          <type>T *</type>
+          <declname>p_previous</declname>
+        </param>
+        <briefdescription>
+<para>Function called prior to type T&apos;s move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>T must have a function named <computeroutput>T::intercept(T* p_previous)</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_previous</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pointer to the previous object that will be moved to the new object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/move_interceptor.hpp" line="54" column="8" bodyfile="libraries/include/libhal-util/move_interceptor.hpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1move__interceptor_1a8cd56e212cb36d383f12b5411aaf6615" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::move_interceptor&lt; T &gt;::move_interceptor</definition>
+        <argsstring>()=default</argsstring>
+        <name>move_interceptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/move_interceptor.hpp" line="59" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1move__interceptor_1aa42b3788b4adb45edbd59a13194f9472" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::move_interceptor&lt; T &gt;::move_interceptor</definition>
+        <argsstring>(move_interceptor &amp;p_previous)=delete</argsstring>
+        <name>move_interceptor</name>
+        <param>
+          <type><ref refid="classhal_1_1move__interceptor" kindref="compound">move_interceptor</ref> &amp;</type>
+          <declname>p_previous</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/move_interceptor.hpp" line="60" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1move__interceptor_1a7f37593e0914778d92f864f3ee54a1e6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1move__interceptor" kindref="compound">move_interceptor</ref> &amp;</type>
+        <definition>move_interceptor&amp; hal::move_interceptor&lt; T &gt;::operator=</definition>
+        <argsstring>(move_interceptor &amp;p_previous)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1move__interceptor" kindref="compound">move_interceptor</ref> &amp;</type>
+          <declname>p_previous</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/move_interceptor.hpp" line="61" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1move__interceptor_1af3812d2be642fce3e9749c8e2fc7dded" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hal::move_interceptor&lt; T &gt;::move_interceptor</definition>
+        <argsstring>(move_interceptor &amp;&amp;p_previous)</argsstring>
+        <name>move_interceptor</name>
+        <param>
+          <type><ref refid="classhal_1_1move__interceptor" kindref="compound">move_interceptor</ref> &amp;&amp;</type>
+          <declname>p_previous</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/move_interceptor.hpp" line="62" column="3" bodyfile="libraries/include/libhal-util/move_interceptor.hpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1move__interceptor_1a37a64d5351399c3c3e987cbc042d2c34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhal_1_1move__interceptor" kindref="compound">move_interceptor</ref> &amp;</type>
+        <definition>move_interceptor&amp; hal::move_interceptor&lt; T &gt;::operator=</definition>
+        <argsstring>(move_interceptor &amp;&amp;p_previous)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1move__interceptor" kindref="compound">move_interceptor</ref> &amp;&amp;</type>
+          <declname>p_previous</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/move_interceptor.hpp" line="66" column="20" bodyfile="libraries/include/libhal-util/move_interceptor.hpp" bodystart="66" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Use this to perform changes on an object its move constructor is executed. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This can be used to allow type T to use a default move constructor but allow specific operations to occur beforehand. This is used for moveable objects with callbacks that refer back to their object&apos;s address such as the following: <verbatim>this-&gt;obj-&gt;set_callback([this]() { foo(); });
+</verbatim> The default move constructor does everything correctly for type T. But the address of &quot;this&quot; in the lambda expression refers to the previous object&apos;s address which is no longer valid. Rather than a make a whole move constructor just to update this one callback, the <ref refid="classhal_1_1move__interceptor" kindref="compound">move_interceptor</ref> can be used to change the previous object&apos;s callback to the new object&apos;s address before the move occurs. Then the object&apos;s default move constructor is executed.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- object to intercept the move constructor of </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="libraries/include/libhal-util/move_interceptor.hpp" line="40" column="1" bodyfile="libraries/include/libhal-util/move_interceptor.hpp" bodystart="41" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classhal_1_1move__interceptor_1ae74146780873440e6a7751afc60f9d98" prot="private" virt="non-virtual"><scope>hal::move_interceptor</scope><name>intercept</name></member>
+      <member refid="classhal_1_1move__interceptor_1a8cd56e212cb36d383f12b5411aaf6615" prot="private" virt="non-virtual"><scope>hal::move_interceptor</scope><name>move_interceptor</name></member>
+      <member refid="classhal_1_1move__interceptor_1aa42b3788b4adb45edbd59a13194f9472" prot="private" virt="non-virtual"><scope>hal::move_interceptor</scope><name>move_interceptor</name></member>
+      <member refid="classhal_1_1move__interceptor_1af3812d2be642fce3e9749c8e2fc7dded" prot="private" virt="non-virtual"><scope>hal::move_interceptor</scope><name>move_interceptor</name></member>
+      <member refid="classhal_1_1move__interceptor_1a7f37593e0914778d92f864f3ee54a1e6" prot="private" virt="non-virtual"><scope>hal::move_interceptor</scope><name>operator=</name></member>
+      <member refid="classhal_1_1move__interceptor_1a37a64d5351399c3c3e987cbc042d2c34" prot="private" virt="non-virtual"><scope>hal::move_interceptor</scope><name>operator=</name></member>
+      <member refid="classhal_1_1move__interceptor_1a5cee6333ac1cb53a12600f56aa97c235" prot="public" virt="non-virtual"><scope>hal::move_interceptor</scope><name>T</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

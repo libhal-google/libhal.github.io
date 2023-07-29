@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1temperature__sensor_1_1read__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::temperature_sensor::read_t</compoundname>
+    <includes refid="temperature__sensor_8hpp" local="no">temperature_sensor.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1temperature__sensor_1_1read__t_1aa2e2f1cf2676b2a08714a63aab891705" prot="public" static="no" mutable="no">
+        <type>celsius</type>
+        <definition>celsius hal::temperature_sensor::read_t::temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <briefdescription>
+<para>Measured temperature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/temperature_sensor.hpp" line="39" column="13" bodyfile="libraries/include/libhal/temperature_sensor.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Result from reading the temperature sensor. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/temperature_sensor.hpp" line="33" column="3" bodyfile="libraries/include/libhal/temperature_sensor.hpp" bodystart="34" bodyend="40"/>
+    <listofallmembers>
+      <member refid="structhal_1_1temperature__sensor_1_1read__t_1aa2e2f1cf2676b2a08714a63aab891705" prot="public" virt="non-virtual"><scope>hal::temperature_sensor::read_t</scope><name>temperature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

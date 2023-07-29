@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_3a391231662e3c35ce1f8bf907d80c4f" kind="dir">
+    <compoundname>libraries/include/libhal-rmd</compoundname>
+    <innerfile refid="drc_8hpp">drc.hpp</innerfile>
+    <innerfile refid="drc__motor_8hpp">drc_motor.hpp</innerfile>
+    <innerfile refid="drc__rotation__sensor_8hpp">drc_rotation_sensor.hpp</innerfile>
+    <innerfile refid="drc__servo_8hpp">drc_servo.hpp</innerfile>
+    <innerfile refid="drc__temperature__sensor_8hpp">drc_temperature_sensor.hpp</innerfile>
+    <innerfile refid="mc__x_8hpp">mc_x.hpp</innerfile>
+    <innerfile refid="mc__x__motor_8hpp">mc_x_motor.hpp</innerfile>
+    <innerfile refid="mc__x__rotation__sensor_8hpp">mc_x_rotation_sensor.hpp</innerfile>
+    <innerfile refid="mc__x__servo_8hpp">mc_x_servo.hpp</innerfile>
+    <innerfile refid="mc__x__temperature__sensor_8hpp">mc_x_temperature_sensor.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-rmd/"/>
+  </compounddef>
+</doxygen>

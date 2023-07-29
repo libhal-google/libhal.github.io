@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1esp8266_1_1at_1_1read__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::esp8266::at::read_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1esp8266_1_1at_1_1read__t_1a3e9f583c30876d7adba7d5c5ebb9b167" prot="public" static="no" mutable="no">
+        <type>std::span&lt; hal::byte &gt;</type>
+        <definition>std::span&lt;hal::byte&gt; hal::esp8266::at::read_t::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="54" column="15" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-esp8266/at.hpp" line="51" column="3" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="52" bodyend="55"/>
+    <listofallmembers>
+      <member refid="structhal_1_1esp8266_1_1at_1_1read__t_1a3e9f583c30876d7adba7d5c5ebb9b167" prot="public" virt="non-virtual"><scope>hal::esp8266::at::read_t</scope><name>data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

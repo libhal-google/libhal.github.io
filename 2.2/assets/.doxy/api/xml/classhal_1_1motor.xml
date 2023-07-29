@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1motor" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>hal::motor</compoundname>
+    <derivedcompoundref refid="classhal_1_1inert__motor" prot="public" virt="non-virtual">hal::inert_motor</derivedcompoundref>
+    <derivedcompoundref refid="structhal_1_1mock_1_1motor" prot="public" virt="non-virtual">hal::mock::motor</derivedcompoundref>
+    <derivedcompoundref refid="classhal_1_1rmd_1_1drc__motor" prot="public" virt="non-virtual">hal::rmd::drc_motor</derivedcompoundref>
+    <derivedcompoundref refid="classhal_1_1rmd_1_1mc__x__motor" prot="public" virt="non-virtual">hal::rmd::mc_x_motor</derivedcompoundref>
+    <includes refid="libhal_2motor_8hpp" local="no">motor.hpp</includes>
+    <innerclass refid="structhal_1_1motor_1_1power__t" prot="public">hal::motor::power_t</innerclass>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1motor_1adfad7d59b539461eaeff537445361fbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1motor_1_1power__t" kindref="compound">power_t</ref> &gt;</type>
+        <definition>result&lt;power_t&gt; hal::motor::power</definition>
+        <argsstring>(float p_power)</argsstring>
+        <name>power</name>
+        <param>
+          <type>float</type>
+          <declname>p_power</declname>
+        </param>
+        <briefdescription>
+<para>Apply power to the motor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Power is a percentage and thus cannot be used as a way to gauge how fast the motor is moving. In general applying more power means to increase speed and/or torque to the motor.</para>
+<para><itemizedlist>
+<listitem><para>0% power would mean that no power is being applied to the motor. In this situation an unloaded motor will not move. 0% power does not guarantee that the motor will hold its position. These specifics depend greatly on the type of motor used and careful selection of motor and motor driver are important for applications using this interface.</para>
+</listitem><listitem><para>100% power means that the maximum available of power is being applied to the motor. As an example, if the max voltage of a DC brushed motor&apos;s power supply is 12V, then 12V would be supplied to this motor.</para>
+</listitem><listitem><para>50% power would mean that half of the available power is being applied to the motor. Using the same example, in this case 6V would be applied to the motor either as a DC constant voltage or via PWM at 50% duty cycle.</para>
+</listitem><listitem><para>Negative values will cause the motor to move in the opposite direction as positive values. In the event that motor driver can * only go in one direction, this function should clamp the power applied to 0%.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_power</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Percentage of power to apply to the motor from -1.0f to +1.0f, -100% to 100%, respectively. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;power_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/motor.hpp" line="73" column="11" bodyfile="libraries/include/libhal/motor.hpp" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1motor_1a24ade44337702b296037579bb40ead3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual hal::motor::~motor</definition>
+        <argsstring>()=default</argsstring>
+        <name>~motor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/motor.hpp" line="79" column="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1motor_1aa919346f04c77f16897310fb90cbb2d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>result&lt; <ref refid="structhal_1_1motor_1_1power__t" kindref="compound">power_t</ref> &gt;</type>
+        <definition>virtual result&lt;power_t&gt; hal::motor::driver_power</definition>
+        <argsstring>(float p_power)=0</argsstring>
+        <name>driver_power</name>
+        <reimplementedby refid="structhal_1_1mock_1_1motor_1a5d1a6eac0ebcbdf5c2f26c6409a5087f">driver_power</reimplementedby>
+        <reimplementedby refid="classhal_1_1rmd_1_1drc__motor_1a7dc294b383fdd2b17aeb3e8286440afe">driver_power</reimplementedby>
+        <reimplementedby refid="classhal_1_1rmd_1_1mc__x__motor_1a78d0b57c97f637419b7e7fa4ef87dbdf">driver_power</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>p_power</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/motor.hpp" line="82" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Hardware abstraction for an open loop rotational actuator. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The motor interface can represent a variety of things such as:</para>
+<para><itemizedlist>
+<listitem><para>A driver for motor controller IC like the DRV8801</para>
+</listitem><listitem><para>A driver for a motor with integrated controller &amp; serial interface</para>
+</listitem><listitem><para>A unidirectional motor controlled by a single transistor</para>
+</listitem><listitem><para>A servo with open loop motor control </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::motor</label>
+        <link refid="classhal_1_1motor"/>
+      </node>
+      <node id="5">
+        <label>hal::rmd::mc_x_motor</label>
+        <link refid="classhal_1_1rmd_1_1mc__x__motor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hal::rmd::drc_motor</label>
+        <link refid="classhal_1_1rmd_1_1drc__motor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hal::mock::motor</label>
+        <link refid="structhal_1_1mock_1_1motor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::inert_motor</label>
+        <link refid="classhal_1_1inert__motor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="libraries/include/libhal/motor.hpp" line="31" column="1" bodyfile="libraries/include/libhal/motor.hpp" bodystart="32" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classhal_1_1motor_1aa919346f04c77f16897310fb90cbb2d1" prot="private" virt="pure-virtual"><scope>hal::motor</scope><name>driver_power</name></member>
+      <member refid="classhal_1_1motor_1adfad7d59b539461eaeff537445361fbf" prot="public" virt="non-virtual"><scope>hal::motor</scope><name>power</name></member>
+      <member refid="classhal_1_1motor_1a24ade44337702b296037579bb40ead3a" prot="public" virt="virtual"><scope>hal::motor</scope><name>~motor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

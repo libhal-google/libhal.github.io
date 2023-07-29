@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1rmd_1_1mc__x__servo" kind="class" language="C++" prot="public">
+    <compoundname>hal::rmd::mc_x_servo</compoundname>
+    <basecompoundref refid="classhal_1_1servo" prot="public" virt="non-virtual">hal::servo</basecompoundref>
+    <includes refid="mc__x__servo_8hpp" local="no">mc_x_servo.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1rmd_1_1mc__x__servo_1a2c123272099105dc62cc74d19426370f" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1rmd_1_1mc__x" kindref="compound">mc_x</ref> *</type>
+        <definition>mc_x* hal::rmd::mc_x_servo::m_mc_x</definition>
+        <argsstring></argsstring>
+        <name>m_mc_x</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x_servo.hpp" line="51" column="8" bodyfile="libraries/include/libhal-rmd/mc_x_servo.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1rmd_1_1mc__x__servo_1a0138689486b82d600d3f25374817dae6" prot="private" static="no" mutable="no">
+        <type>hal::rpm</type>
+        <definition>hal::rpm hal::rmd::mc_x_servo::m_max_speed</definition>
+        <argsstring></argsstring>
+        <name>m_max_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x_servo.hpp" line="52" column="12" bodyfile="libraries/include/libhal-rmd/mc_x_servo.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1rmd_1_1mc__x__servo_1a12ede20695b41efe9d01f4678ad8c2bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::rmd::mc_x_servo::mc_x_servo</definition>
+        <argsstring>(mc_x &amp;p_mc_x, hal::rpm p_max_speed)</argsstring>
+        <name>mc_x_servo</name>
+        <param>
+          <type><ref refid="classhal_1_1rmd_1_1mc__x" kindref="compound">mc_x</ref> &amp;</type>
+          <declname>p_mc_x</declname>
+        </param>
+        <param>
+          <type>hal::rpm</type>
+          <declname>p_max_speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x_servo.hpp" line="46" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1rmd_1_1mc__x__servo_1ac4616f8ec6584f3d71df498bfb3c677c" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1servo_1_1position__t" kindref="compound">hal::servo::position_t</ref> &gt;</type>
+        <definition>result&lt;hal::servo::position_t&gt; hal::rmd::mc_x_servo::driver_position</definition>
+        <argsstring>(hal::degrees p_position) override</argsstring>
+        <name>driver_position</name>
+        <reimplements refid="classhal_1_1servo_1a9d581ffd1963fd9e4c7a1e7ab0391e8d">driver_position</reimplements>
+        <param>
+          <type>hal::degrees</type>
+          <declname>p_position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x_servo.hpp" line="47" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhal_1_1rmd_1_1mc__x__servo_1a24e0bf135308a9313acc9ca4969cf309" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1rmd_1_1mc__x__servo" kindref="compound">mc_x_servo</ref> &gt;</type>
+        <definition>result&lt;mc_x_servo&gt; hal::make_servo</definition>
+        <argsstring>(rmd::mc_x &amp;p_mc_x, hal::rpm p_max_speed)</argsstring>
+        <name>hal::make_servo</name>
+        <param>
+          <type><ref refid="classhal_1_1rmd_1_1mc__x" kindref="compound">rmd::mc_x</ref> &amp;</type>
+          <declname>p_mc_x</declname>
+        </param>
+        <param>
+          <type>hal::rpm</type>
+          <declname>p_max_speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x_servo.hpp" line="49" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Control a <ref refid="classhal_1_1rmd_1_1mc__x" kindref="compound">mc_x</ref> motor driver like a <ref refid="classhal_1_1servo" kindref="compound">hal::servo</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::servo</label>
+        <link refid="classhal_1_1servo"/>
+      </node>
+      <node id="1">
+        <label>hal::rmd::mc_x_servo</label>
+        <link refid="classhal_1_1rmd_1_1mc__x__servo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::servo</label>
+        <link refid="classhal_1_1servo"/>
+      </node>
+      <node id="1">
+        <label>hal::rmd::mc_x_servo</label>
+        <link refid="classhal_1_1rmd_1_1mc__x__servo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-rmd/mc_x_servo.hpp" line="43" column="1" bodyfile="libraries/include/libhal-rmd/mc_x_servo.hpp" bodystart="44" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classhal_1_1rmd_1_1mc__x__servo_1ac4616f8ec6584f3d71df498bfb3c677c" prot="private" virt="virtual"><scope>hal::rmd::mc_x_servo</scope><name>driver_position</name></member>
+      <member refid="classhal_1_1rmd_1_1mc__x__servo_1a24e0bf135308a9313acc9ca4969cf309" prot="private" virt="non-virtual"><scope>hal::rmd::mc_x_servo</scope><name>hal::make_servo</name></member>
+      <member refid="classhal_1_1rmd_1_1mc__x__servo_1a0138689486b82d600d3f25374817dae6" prot="private" virt="non-virtual"><scope>hal::rmd::mc_x_servo</scope><name>m_max_speed</name></member>
+      <member refid="classhal_1_1rmd_1_1mc__x__servo_1a2c123272099105dc62cc74d19426370f" prot="private" virt="non-virtual"><scope>hal::rmd::mc_x_servo</scope><name>m_mc_x</name></member>
+      <member refid="classhal_1_1rmd_1_1mc__x__servo_1a12ede20695b41efe9d01f4678ad8c2bd" prot="private" virt="non-virtual"><scope>hal::rmd::mc_x_servo</scope><name>mc_x_servo</name></member>
+      <member refid="classhal_1_1servo_1a3d66f0fb413e530eaa08853766874090" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x_servo</scope><name>position</name></member>
+      <member refid="classhal_1_1servo_1a51214959311c016496ee0edf58bff487" prot="public" virt="virtual"><scope>hal::rmd::mc_x_servo</scope><name>~servo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

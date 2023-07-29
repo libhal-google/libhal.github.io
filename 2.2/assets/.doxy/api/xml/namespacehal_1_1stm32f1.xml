@@ -1,0 +1,1900 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacehal_1_1stm32f1" kind="namespace" language="C++">
+    <compoundname>hal::stm32f1</compoundname>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree" prot="public">hal::stm32f1::clock_tree</innerclass>
+    <innerclass refid="classhal_1_1stm32f1_1_1output__pin" prot="public">hal::stm32f1::output_pin</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="libhal-stm32f1_2clock_8hpp_1a496ab704a6f4e7c52b44c2f7eab9a7c9" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>apb_divider</name>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a496ab704a6f4e7c52b44c2f7eab9a7c9aab08360b1a0fce39139b0577794fec8d" prot="public">
+          <name>divide_by_1</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a496ab704a6f4e7c52b44c2f7eab9a7c9a87516f71d9dfac7ebcec15432c39376a" prot="public">
+          <name>divide_by_2</name>
+          <initializer>= 0b100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a496ab704a6f4e7c52b44c2f7eab9a7c9a9885b5be950a2568eef77c40fe0fea2c" prot="public">
+          <name>divide_by_4</name>
+          <initializer>= 0b101</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a496ab704a6f4e7c52b44c2f7eab9a7c9acc24759391f467b1104f9f399e192e3f" prot="public">
+          <name>divide_by_8</name>
+          <initializer>= 0b110</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a496ab704a6f4e7c52b44c2f7eab9a7c9a7a8752a1365d0bdf26642da278267f6c" prot="public">
+          <name>divide_by_16</name>
+          <initializer>= 0b111</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Available dividers for the APB bus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="39" column="1" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="libhal-stm32f1_2clock_8hpp_1a088400fb113eac64ccc31f458fac7815" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>ahb_divider</name>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a088400fb113eac64ccc31f458fac7815aab08360b1a0fce39139b0577794fec8d" prot="public">
+          <name>divide_by_1</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a088400fb113eac64ccc31f458fac7815a87516f71d9dfac7ebcec15432c39376a" prot="public">
+          <name>divide_by_2</name>
+          <initializer>= 0b1000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a088400fb113eac64ccc31f458fac7815a9885b5be950a2568eef77c40fe0fea2c" prot="public">
+          <name>divide_by_4</name>
+          <initializer>= 0b1001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a088400fb113eac64ccc31f458fac7815acc24759391f467b1104f9f399e192e3f" prot="public">
+          <name>divide_by_8</name>
+          <initializer>= 0b1010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a088400fb113eac64ccc31f458fac7815a7a8752a1365d0bdf26642da278267f6c" prot="public">
+          <name>divide_by_16</name>
+          <initializer>= 0b1011</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a088400fb113eac64ccc31f458fac7815a426b055827b42b808cfce39bccfe4032" prot="public">
+          <name>divide_by_64</name>
+          <initializer>= 0b1100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a088400fb113eac64ccc31f458fac7815a6861b391bb64a2d9ea4c79235b961171" prot="public">
+          <name>divide_by_128</name>
+          <initializer>= 0b1101</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a088400fb113eac64ccc31f458fac7815a75956c48f70f1721c708b892dc3b1777" prot="public">
+          <name>divide_by_256</name>
+          <initializer>= 0b1110</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a088400fb113eac64ccc31f458fac7815a3e99224c6f41878909fef6e1d882428e" prot="public">
+          <name>divide_by_512</name>
+          <initializer>= 0b1111</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Available dividers for the AHB bus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="49" column="1" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="50" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="enum" id="libhal-stm32f1_2clock_8hpp_1a59de4221651490f9f671ae6e4f54c13a" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>adc_divider</name>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a59de4221651490f9f671ae6e4f54c13aa87516f71d9dfac7ebcec15432c39376a" prot="public">
+          <name>divide_by_2</name>
+          <initializer>= 0b00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a59de4221651490f9f671ae6e4f54c13aa9885b5be950a2568eef77c40fe0fea2c" prot="public">
+          <name>divide_by_4</name>
+          <initializer>= 0b01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a59de4221651490f9f671ae6e4f54c13aaa02a40943e49173d7566f39c255b9693" prot="public">
+          <name>divide_by_6</name>
+          <initializer>= 0b10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a59de4221651490f9f671ae6e4f54c13aacc24759391f467b1104f9f399e192e3f" prot="public">
+          <name>divide_by_8</name>
+          <initializer>= 0b11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Available dividers for the ADC bus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="63" column="1" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="64" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="enum" id="libhal-stm32f1_2clock_8hpp_1a98703e0a6b53e9d04468e025cb10aeea" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>system_clock_select</name>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a98703e0a6b53e9d04468e025cb10aeeaa8cb8219457a7be7440aabb7d8207fe09" prot="public">
+          <name>high_speed_internal</name>
+          <initializer>= 0b00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a98703e0a6b53e9d04468e025cb10aeeaaf809df1abb6f9d9e509b8d79f838f2fd" prot="public">
+          <name>high_speed_external</name>
+          <initializer>= 0b01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a98703e0a6b53e9d04468e025cb10aeeaab23e9e4405d0c242f0d6b1c946683384" prot="public">
+          <name>pll</name>
+          <initializer>= 0b10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Available clock sources available for the system clock. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="72" column="1" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="enum" id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>pll_multiply</name>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5ae05eef0bbe5394bd34ef2d957ff1ce01" prot="public">
+          <name>multiply_by_2</name>
+          <initializer>= 0b0000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5aa8e456c78a2018772274b81af095de59" prot="public">
+          <name>multiply_by_3</name>
+          <initializer>= 0b0001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5a832b9065e406144b0000ce69406beb6f" prot="public">
+          <name>multiply_by_4</name>
+          <initializer>= 0b0010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5ab5d0cad4acb30fd29a3a51de554db4db" prot="public">
+          <name>multiply_by_5</name>
+          <initializer>= 0b0011</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5a71a56651e8444cb739847cebdc9dc1d0" prot="public">
+          <name>multiply_by_6</name>
+          <initializer>= 0b0100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5a28bca99a3c88f7c6adbb734c075deae7" prot="public">
+          <name>multiply_by_7</name>
+          <initializer>= 0b0101</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5a4c083cb5f2b853695c3db325f76cb23e" prot="public">
+          <name>multiply_by_8</name>
+          <initializer>= 0b0110</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5a937607ba98294051701f08837722c395" prot="public">
+          <name>multiply_by_9</name>
+          <initializer>= 0b0111</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5ad584ec611ff4fa70c1e4da6eb945a5ca" prot="public">
+          <name>multiply_by_10</name>
+          <initializer>= 0b1000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5a29c33eae83cd671d8d27a319f70029b7" prot="public">
+          <name>multiply_by_11</name>
+          <initializer>= 0b1001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5a4a575ea7af7ede51f590cedf439c715f" prot="public">
+          <name>multiply_by_12</name>
+          <initializer>= 0b1010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5ab186083c29bcfbfccb8fc867cd213e3d" prot="public">
+          <name>multiply_by_13</name>
+          <initializer>= 0b1011</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5a12522278d59b377d2363e3a4ec243ac7" prot="public">
+          <name>multiply_by_14</name>
+          <initializer>= 0b1100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5a9a3d9e73e41da0d78c6766bbb4fa167f" prot="public">
+          <name>multiply_by_15</name>
+          <initializer>= 0b1101</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a81a1e921d22ab8de16c72cf57b151cd5a114662e65f7f128615141424bd39f7fd" prot="public">
+          <name>multiply_by_16</name>
+          <initializer>= 0b1110</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>PLL frequency multiplication options. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="80" column="1" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="81" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="enum" id="libhal-stm32f1_2clock_8hpp_1aec468afd740abf77908cafad7a55abd3" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>rtc_source</name>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1aec468afd740abf77908cafad7a55abd3a4e2f95e88d298b8db6032e6cf8f40346" prot="public">
+          <name>no_clock</name>
+          <initializer>= 0b00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1aec468afd740abf77908cafad7a55abd3ab52d98bc574593aad8cbbdd745923816" prot="public">
+          <name>low_speed_internal</name>
+          <initializer>= 0b01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1aec468afd740abf77908cafad7a55abd3a59a6193d01b157bcf76daf80901f1280" prot="public">
+          <name>low_speed_external</name>
+          <initializer>= 0b10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1aec468afd740abf77908cafad7a55abd3a970bb555d7605127f3b90a882620f3f2" prot="public">
+          <name>high_speed_external_divided_by_128</name>
+          <initializer>= 0b11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Available clock sources for the RTC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="100" column="1" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="101" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="enum" id="libhal-stm32f1_2clock_8hpp_1a847c1388af10f453ae7d2a3fb41f1514" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>pll_source</name>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a847c1388af10f453ae7d2a3fb41f1514a8cb8219457a7be7440aabb7d8207fe09" prot="public">
+          <name>high_speed_internal</name>
+          <initializer>= 0b0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a847c1388af10f453ae7d2a3fb41f1514af809df1abb6f9d9e509b8d79f838f2fd" prot="public">
+          <name>high_speed_external</name>
+          <initializer>= 0b1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1a847c1388af10f453ae7d2a3fb41f1514a86b8cb8f79e9d6b5c366575f271ac4ce" prot="public">
+          <name>high_speed_external_divided_by_2</name>
+          <initializer>= 0b11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Available clock sources for the PLL. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="109" column="1" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="110" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="enum" id="libhal-stm32f1_2clock_8hpp_1ab6aea0f80b23bc9c96e820a04ec9f5c9" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>usb_divider</name>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1ab6aea0f80b23bc9c96e820a04ec9f5c9aab08360b1a0fce39139b0577794fec8d" prot="public">
+          <name>divide_by_1</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2clock_8hpp_1ab6aea0f80b23bc9c96e820a04ec9f5c9a4cb9b1fd615e6b670a9bfde542729307" prot="public">
+          <name>divide_by_1_point_5</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Divide by 1.5. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Available dividers for the USB peripheral. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="117" column="1" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="118" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="enum" id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>peripheral</name>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a4373713bcb21bd6dd730e0a630751477" prot="public">
+          <name>dma1</name>
+          <initializer>= ahb_bus + 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ad032c4364c8fe0d43986a4a00608b2c2" prot="public">
+          <name>dma2</name>
+          <initializer>= ahb_bus + 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ae6c8357d54ac5771ae33538d64e0fe18" prot="public">
+          <name>sram</name>
+          <initializer>= ahb_bus + 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ac1f8404165afcbd88e07d5d2160b0f60" prot="public">
+          <name>flitf</name>
+          <initializer>= ahb_bus + 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7af5ad59c5401fea3f2df0703d958fdc97" prot="public">
+          <name>crc</name>
+          <initializer>= ahb_bus + 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a0f1214f1465eb3213f3284d46e70c3b0" prot="public">
+          <name>fsmc</name>
+          <initializer>= ahb_bus + 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a4f9f658d6f6ae57f32ff155bd24812c9" prot="public">
+          <name>sdio</name>
+          <initializer>= ahb_bus + 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a80ed5caa9918116f306340840f303067" prot="public">
+          <name>timer2</name>
+          <initializer>= apb1_bus + 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a65b5a8a526f38c63a0530f3036e120d4" prot="public">
+          <name>timer3</name>
+          <initializer>= apb1_bus + 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a7e6b6d4035693847b8b64f2c77c27ad7" prot="public">
+          <name>timer4</name>
+          <initializer>= apb1_bus + 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7afa55eae41d9c5965d32a485c64db805f" prot="public">
+          <name>timer5</name>
+          <initializer>= apb1_bus + 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ac9307f9cae9c06c312149bb4e2d3355d" prot="public">
+          <name>timer6</name>
+          <initializer>= apb1_bus + 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a8d3172a058fb7ab0fb641a5f740bee8b" prot="public">
+          <name>timer7</name>
+          <initializer>= apb1_bus + 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a9cc1b817e30270ddf3402e84b976e738" prot="public">
+          <name>timer12</name>
+          <initializer>= apb1_bus + 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7aa4a9fa74787bfc45b0b8a61eb5bef1a8" prot="public">
+          <name>timer13</name>
+          <initializer>= apb1_bus + 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a0dcf9c9e3d40086fb5c28485f0849bb6" prot="public">
+          <name>timer14</name>
+          <initializer>= apb1_bus + 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ae5faf60f1f12222cbe780b0bbef87e3f" prot="public">
+          <name>window_watchdog</name>
+          <initializer>= apb1_bus + 11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7aa1becc428f64ec19e1e55736c285e0e8" prot="public">
+          <name>spi2</name>
+          <initializer>= apb1_bus + 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a1af7d4608cbe250211385afb021b4387" prot="public">
+          <name>spi3</name>
+          <initializer>= apb1_bus + 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a70199feefebd183167f7520893219691" prot="public">
+          <name>usart2</name>
+          <initializer>= apb1_bus + 17</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ad117e7ab865566ed50de23386a940fe0" prot="public">
+          <name>usart3</name>
+          <initializer>= apb1_bus + 18</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a2c603183f7abc1a771416970aa1aa238" prot="public">
+          <name>uart4</name>
+          <initializer>= apb1_bus + 19</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a08ce1ce97d108744af475785ba03d644" prot="public">
+          <name>uart5</name>
+          <initializer>= apb1_bus + 20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7aa0db315dd9ce9094089731320119af28" prot="public">
+          <name>i2c1</name>
+          <initializer>= apb1_bus + 21</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ac4ee482167c93f673fc5af4619a8b448" prot="public">
+          <name>i2c2</name>
+          <initializer>= apb1_bus + 22</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a62ed973d963913bb55111a7b8116ace1" prot="public">
+          <name>usb</name>
+          <initializer>= apb1_bus + 23</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ab887e140e7f9a6fef83271ac952bc7b0" prot="public">
+          <name>can1</name>
+          <initializer>= apb1_bus + 25</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a5da8c7b1c7bc9facf92faa8cf2a76a64" prot="public">
+          <name>backup_clock</name>
+          <initializer>= apb1_bus + 27</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a62cd275989e78ee56a81f0265a87562e" prot="public">
+          <name>power</name>
+          <initializer>= apb1_bus + 28</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ab75427b031d9ece858e5f9404469c6c9" prot="public">
+          <name>dac</name>
+          <initializer>= apb1_bus + 29</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a5ab49cdec9b7cfda08353e2a5da8f83e" prot="public">
+          <name>afio</name>
+          <initializer>= apb2_bus + 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a9a5e5d2897b8bd7edacbce12b1610e56" prot="public">
+          <name>gpio_a</name>
+          <initializer>= apb2_bus + 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7aa833ca9d1f8f845b7b1f5d3d04119101" prot="public">
+          <name>gpio_b</name>
+          <initializer>= apb2_bus + 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7acb7b7b3a09a146999692fbdfa7848fb4" prot="public">
+          <name>gpio_c</name>
+          <initializer>= apb2_bus + 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7afacc9bec319d0465284ed6b63687c652" prot="public">
+          <name>gpio_d</name>
+          <initializer>= apb2_bus + 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7abc67f2dfbe6076872f0bb1350bf37f05" prot="public">
+          <name>gpio_e</name>
+          <initializer>= apb2_bus + 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ad02ed6ce8201cc5726f31ef42a447a39" prot="public">
+          <name>gpio_f</name>
+          <initializer>= apb2_bus + 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7af4b04acdc42c712971c8a5cf4c6ff65d" prot="public">
+          <name>gpio_g</name>
+          <initializer>= apb2_bus + 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ad990c34f4ccdcceed97a37acf6ffd5ca" prot="public">
+          <name>adc1</name>
+          <initializer>= apb2_bus + 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7aca02340ba7a48b18eb6fe5534dc1402f" prot="public">
+          <name>adc2</name>
+          <initializer>= apb2_bus + 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a32d6a9eda46be7b70c9d51382740f633" prot="public">
+          <name>timer1</name>
+          <initializer>= apb2_bus + 11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a544689ba3469f273ec314262604619a4" prot="public">
+          <name>spi1</name>
+          <initializer>= apb2_bus + 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a25ec38bd5939b2bf9d641ac8b71087b3" prot="public">
+          <name>timer8</name>
+          <initializer>= apb2_bus + 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a662c4fd1e4636f3c622b9008b3bdee24" prot="public">
+          <name>usart1</name>
+          <initializer>= apb2_bus + 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a3a2ad4f190f176625f43e42ed69893a9" prot="public">
+          <name>adc3</name>
+          <initializer>= apb2_bus + 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ab0f8625b92c5a2bdaf6683ed1f310cd7" prot="public">
+          <name>timer9</name>
+          <initializer>= apb2_bus + 19</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a879c0613395605781a16ebf7fce4b44d" prot="public">
+          <name>timer10</name>
+          <initializer>= apb2_bus + 20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a91f054223c1608938c7fd5fd2960390f" prot="public">
+          <name>timer11</name>
+          <initializer>= apb2_bus + 21</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7ad9747e2da342bdb995f6389533ad1a3d" prot="public">
+          <name>cpu</name>
+          <initializer>= beyond_bus + 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7af2755df69e880d843b7e1af40d511835" prot="public">
+          <name>system_timer</name>
+          <initializer>= beyond_bus + 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a03e1c90dc4e5cd86edae5a1395544cf7a7f68529abb01e6b228ceec06ec220ec1" prot="public">
+          <name>i2s</name>
+          <initializer>= beyond_bus + 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>List of each peripheral and their power on id number for this platform. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/constants.hpp" line="33" column="1" bodyfile="libraries/include/libhal-stm32f1/constants.hpp" bodystart="34" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="enum" id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65d" prot="public" static="no" strong="yes">
+        <type>std::uint16_t</type>
+        <name>irq</name>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dae5faf60f1f12222cbe780b0bbef87e3f" prot="public">
+          <name>window_watchdog</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Window WatchDog. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da78a84f93d185dcf4c59771263b3f1af3" prot="public">
+          <name>pvd</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>PVD through EXTI Line detection. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da3fcd05a1469bda87af800c506b9ebc8b" prot="public">
+          <name>tamper</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Tamper. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da68154466f81bfb532cd70f8c71426356" prot="public">
+          <name>rtc</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>RTC. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65daa39401275d1b300aa789fb22aea4148a" prot="public">
+          <name>flash</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>FLASH. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65daa018881f8fefba70a163172087b7f45c" prot="public">
+          <name>rcc</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>RCC. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dad36711d3c5641046c85cf8fd7c6ece81" prot="public">
+          <name>exti0</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>EXTI Line0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da246fb80416f803c147e08c7db5997471" prot="public">
+          <name>exti1</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para>EXTI Line1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da01589cfc65335e3643fc38febc2ce1d4" prot="public">
+          <name>exti2</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>EXTI Line2. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da7ad35ac6a2f537ce2a6f8f0fe6ea4609" prot="public">
+          <name>exti3</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para>EXTI Line3. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da528d63c45ee6008ff98ac1da097bfc8b" prot="public">
+          <name>exti4</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para>EXTI Line4. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da604c215796d0e2e64bee70ccefb78cb2" prot="public">
+          <name>dma1_channel1</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para>DMA1 Channel 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da9013e0ca247c2daf546741b9d5e639ce" prot="public">
+          <name>dma1_channel2</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para>DMA1 Channel 2. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dae290afdc712abfd5e70c47e8db42b8f5" prot="public">
+          <name>dma1_channel3</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para>DMA1 Channel 3. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da71ed4346f000aca017ef451246395ae0" prot="public">
+          <name>dma1_channel4</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para>DMA1 Channel 4. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da7b216ab3fd76fe02286efb5e76e7b2ce" prot="public">
+          <name>dma1_channel5</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para>DMA1 Channel 5. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da5c086fcd435e90496a36dbdd3bac0d1f" prot="public">
+          <name>dma1_channel6</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para>DMA1 Channel 6. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da9acf2b25783f19d1b2c168a21f442774" prot="public">
+          <name>dma1_channel7</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+<para>DMA1 Channel 7. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dad990c34f4ccdcceed97a37acf6ffd5ca" prot="public">
+          <name>adc1</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para>ADC1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da8d1926660eb28226656878747fec32b9" prot="public">
+          <name>adc1_2</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para>ADC1 and ADC2. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da0fb12ad281f226325044d8a1ee5d73b5" prot="public">
+          <name>usb_hp_can1_tx</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+<para>USB Device High Priority or CAN1 TX. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da41e64f178cdcadedbe077d43e3bdd4d4" prot="public">
+          <name>can1_tx</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+<para>USB Device High Priority or CAN1 TX. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da6a4ad57f189d998034da2f44076c945c" prot="public">
+          <name>usb_lp_can1_rx0</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+<para>USB Device Low Priority or CAN1 RX0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dae1fb6be44aeec43b4a73a7d48f39e234" prot="public">
+          <name>can1_rx0</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+<para>USB Device Low Priority or CAN1 RX0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65daea9e56e4da04290c858b045255a5f505" prot="public">
+          <name>can1_rx1</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+<para>CAN1 RX1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da1b176538665415e662523b873a3a90e2" prot="public">
+          <name>can1_sce</name>
+          <initializer>= 22</initializer>
+          <briefdescription>
+<para>CAN1 SCE. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da0180f75e7541a00ac34018861740007b" prot="public">
+          <name>exti9_5</name>
+          <initializer>= 23</initializer>
+          <briefdescription>
+<para>External Line[9:5]. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da58bf83133d95f79f7c1280f2704b16ee" prot="public">
+          <name>tim1_brk</name>
+          <initializer>= 24</initializer>
+          <briefdescription>
+<para>TIM1 Break. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65daabc8ed93d9dc2d519c18b82cb364c610" prot="public">
+          <name>tim1_brk_tim15</name>
+          <initializer>= 24</initializer>
+          <briefdescription>
+<para>TIM1 Break and TIM15. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da1a764300bd07d7c3712681a65c13d9a8" prot="public">
+          <name>tim1_brk_tim9</name>
+          <initializer>= 24</initializer>
+          <briefdescription>
+<para>TIM1 Break and TIM9. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dae42654758c858c7fd0e183ddc4c7ef6b" prot="public">
+          <name>tim1_up</name>
+          <initializer>= 25</initializer>
+          <briefdescription>
+<para>TIM1 Update. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da2f4e13d1c47d4f298f7cfc482ec44e90" prot="public">
+          <name>tim1_up_tim16</name>
+          <initializer>= 25</initializer>
+          <briefdescription>
+<para>TIM1 Update and TIM16. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da7e1998a5871ede0577c0d35d212a70d2" prot="public">
+          <name>tim1_up_tim10</name>
+          <initializer>= 25</initializer>
+          <briefdescription>
+<para>TIM1 Update and TIM10. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da0273a5b4e95b4aa12a388673cd5c5d5b" prot="public">
+          <name>tim1_trg_com</name>
+          <initializer>= 26</initializer>
+          <briefdescription>
+<para>TIM1 Trigger and Commutation. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65daf66b1cc0f13ada3758b774e69253753c" prot="public">
+          <name>tim1_trg_com_tim11</name>
+          <initializer>= 26</initializer>
+          <briefdescription>
+<para>TIM1 Trigger and Commutation. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da68e476277756f533de88564a6ebddf91" prot="public">
+          <name>tim1_cc</name>
+          <initializer>= 27</initializer>
+          <briefdescription>
+<para>TIM1 Capture Compare. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da77b6fc6736661135bfe5f07d508ac397" prot="public">
+          <name>tim2</name>
+          <initializer>= 28</initializer>
+          <briefdescription>
+<para>TIM2. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da49bd0c5907255e0ccbf7f8e57b5c5e60" prot="public">
+          <name>tim3</name>
+          <initializer>= 29</initializer>
+          <briefdescription>
+<para>TIM3. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da732691416165459d1272888fb48366c2" prot="public">
+          <name>tim4</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+<para>TIM4. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dada5d23425dc0968528fdd3553b22723d" prot="public">
+          <name>i2c1_ev</name>
+          <initializer>= 31</initializer>
+          <briefdescription>
+<para>I2C1 Event. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da2f776843f782c7e0ee46460286a13eda" prot="public">
+          <name>i2c1_er</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+<para>I2C1 Error. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dad5949dabe6737c161f9913613a5b7fad" prot="public">
+          <name>i2c2_ev</name>
+          <initializer>= 33</initializer>
+          <briefdescription>
+<para>I2C2 Event. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dafbe053bc1780032248050d5948551eb8" prot="public">
+          <name>i2c2_er</name>
+          <initializer>= 34</initializer>
+          <briefdescription>
+<para>I2C2 Error. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da544689ba3469f273ec314262604619a4" prot="public">
+          <name>spi1</name>
+          <initializer>= 35</initializer>
+          <briefdescription>
+<para>SPI1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65daa1becc428f64ec19e1e55736c285e0e8" prot="public">
+          <name>spi2</name>
+          <initializer>= 36</initializer>
+          <briefdescription>
+<para>SPI2. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da662c4fd1e4636f3c622b9008b3bdee24" prot="public">
+          <name>usart1</name>
+          <initializer>= 37</initializer>
+          <briefdescription>
+<para>USART1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da70199feefebd183167f7520893219691" prot="public">
+          <name>usart2</name>
+          <initializer>= 38</initializer>
+          <briefdescription>
+<para>USART2. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dad117e7ab865566ed50de23386a940fe0" prot="public">
+          <name>usart3</name>
+          <initializer>= 39</initializer>
+          <briefdescription>
+<para>USART3. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dab2bd754a30ea2db939d20808d0df3eaa" prot="public">
+          <name>exti15_10</name>
+          <initializer>= 40</initializer>
+          <briefdescription>
+<para>External Line[15:10]. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da2997ac0897a4c92d220a2339c461dc58" prot="public">
+          <name>rtcalarm</name>
+          <initializer>= 41</initializer>
+          <briefdescription>
+<para>RTC Alarm through EXTI Line. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da089fe2680b9816d4c68c163fde1c2c3b" prot="public">
+          <name>usbwakeup</name>
+          <initializer>= 42</initializer>
+          <briefdescription>
+<para>USB Device WakeUp. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da3eb29d792013f8445b89d1c0cb051d4e" prot="public">
+          <name>cec</name>
+          <initializer>= 42</initializer>
+          <briefdescription>
+<para>HDMI-CEC. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da9cc3f351848c9e4c0030efaaf16433ee" prot="public">
+          <name>otg_fs_wkup</name>
+          <initializer>= 42</initializer>
+          <briefdescription>
+<para>USB OTG FS WakeUp. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dab493df5d34c5a19e5296e4d06d203815" prot="public">
+          <name>tim8_brk</name>
+          <initializer>= 43</initializer>
+          <briefdescription>
+<para>TIM8 Break. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da433d5ed919995f577bab85bee00178fb" prot="public">
+          <name>tim12</name>
+          <initializer>= 43</initializer>
+          <briefdescription>
+<para>TIM12. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da24d864a13f7a3583998aba7876a0962b" prot="public">
+          <name>tim8_brk_tim12</name>
+          <initializer>= 43</initializer>
+          <briefdescription>
+<para>TIM8 Break and TIM12. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65daf3a378e254f415445456cc341c5b6088" prot="public">
+          <name>tim8_up</name>
+          <initializer>= 44</initializer>
+          <briefdescription>
+<para>TIM8 Update. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da8e0d89000600e11b63a334247842f74a" prot="public">
+          <name>tim13</name>
+          <initializer>= 44</initializer>
+          <briefdescription>
+<para>TIM13. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65daa346d191021e61ae859604188cc879e4" prot="public">
+          <name>tim8_up_tim13</name>
+          <initializer>= 44</initializer>
+          <briefdescription>
+<para>TIM8 Update and TIM13. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da4e5ce728e692d2a16695e9eaa7f428b8" prot="public">
+          <name>tim8_trg_com</name>
+          <initializer>= 45</initializer>
+          <briefdescription>
+<para>TIM8 Trigger and Commutation. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da2c3b56ef748938ae11156d67b2d65992" prot="public">
+          <name>tim14</name>
+          <initializer>= 45</initializer>
+          <briefdescription>
+<para>TIM14. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da3d22acba0c553023fa6aed789d25f9a3" prot="public">
+          <name>tim8_trg_com_tim14</name>
+          <initializer>= 45</initializer>
+          <briefdescription>
+<para>TIM8 Trigger and Commutation. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65daab7c089bdcd8c31f4e5b1671e86426c5" prot="public">
+          <name>tim8_cc</name>
+          <initializer>= 46</initializer>
+          <briefdescription>
+<para>TIM8 Capture Compare. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da3a2ad4f190f176625f43e42ed69893a9" prot="public">
+          <name>adc3</name>
+          <initializer>= 47</initializer>
+          <briefdescription>
+<para>ADC3. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da0f1214f1465eb3213f3284d46e70c3b0" prot="public">
+          <name>fsmc</name>
+          <initializer>= 48</initializer>
+          <briefdescription>
+<para>FSMC. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da4f9f658d6f6ae57f32ff155bd24812c9" prot="public">
+          <name>sdio</name>
+          <initializer>= 49</initializer>
+          <briefdescription>
+<para>SDIO. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da2ad2410eda516f8b6f98dd5998f630d5" prot="public">
+          <name>tim5</name>
+          <initializer>= 50</initializer>
+          <briefdescription>
+<para>TIM5. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da1af7d4608cbe250211385afb021b4387" prot="public">
+          <name>spi3</name>
+          <initializer>= 51</initializer>
+          <briefdescription>
+<para>SPI3. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da2c603183f7abc1a771416970aa1aa238" prot="public">
+          <name>uart4</name>
+          <initializer>= 52</initializer>
+          <briefdescription>
+<para>UART4. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da08ce1ce97d108744af475785ba03d644" prot="public">
+          <name>uart5</name>
+          <initializer>= 53</initializer>
+          <briefdescription>
+<para>UART5. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dabf79bfa32a9eb5b507a6aa3ddbf5d191" prot="public">
+          <name>tim6_dac</name>
+          <initializer>= 54</initializer>
+          <briefdescription>
+<para>TIM6 and DAC underrun. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da45d4dc0ec468c08027bf3d53620afe75" prot="public">
+          <name>tim6</name>
+          <initializer>= 54</initializer>
+          <briefdescription>
+<para>TIM6. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da88e135ad509a29085af15ed464ab2db5" prot="public">
+          <name>tim7</name>
+          <initializer>= 55</initializer>
+          <briefdescription>
+<para>TIM7. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da3edf1be577a96e393107d94114e42c2f" prot="public">
+          <name>dma2_channel1</name>
+          <initializer>= 56</initializer>
+          <briefdescription>
+<para>DMA2 Channel 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dafca4360f0e74b6ec556469462e70c62d" prot="public">
+          <name>dma2_channel2</name>
+          <initializer>= 57</initializer>
+          <briefdescription>
+<para>DMA2 Channel 2. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dadb6d267618f8e6dc7e56f35d1846d5de" prot="public">
+          <name>dma2_channel3</name>
+          <initializer>= 58</initializer>
+          <briefdescription>
+<para>DMA2 Channel 3. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65daaf0ba3537b9e83b443819b6627bdc8de" prot="public">
+          <name>dma2_channel4_5</name>
+          <initializer>= 59</initializer>
+          <briefdescription>
+<para>DMA2 Channel 4 and Channel 5. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dacd8c22df43837d5a20d6ff6a858ed435" prot="public">
+          <name>dma2_channel4</name>
+          <initializer>= 59</initializer>
+          <briefdescription>
+<para>DMA2 Channel 4. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dabbaa45b83b99768a679586d1e510b303" prot="public">
+          <name>dma2_channel5</name>
+          <initializer>= 60</initializer>
+          <briefdescription>
+<para>DMA2 Channel 5. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da137e77028868b1b3618d08b044cb995e" prot="public">
+          <name>eth</name>
+          <initializer>= 61</initializer>
+          <briefdescription>
+<para>Ethernet. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da68eb6f5ee5aaa4b8b84ddd6d764af971" prot="public">
+          <name>eth_wkup</name>
+          <initializer>= 62</initializer>
+          <briefdescription>
+<para>Ethernet Wakeup through EXTI line. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da13934f0dfd225a4f3b63bbfb439764c4" prot="public">
+          <name>can2_tx</name>
+          <initializer>= 63</initializer>
+          <briefdescription>
+<para>CAN2 TX. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dafe767ffb5bc70dad5a8362d3e8ddddcb" prot="public">
+          <name>can2_rx0</name>
+          <initializer>= 64</initializer>
+          <briefdescription>
+<para>CAN2 RX0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da28a9eff20a68251937f6784b30f7fb91" prot="public">
+          <name>can2_rx1</name>
+          <initializer>= 65</initializer>
+          <briefdescription>
+<para>CAN2 RX1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65dae792c0d29ad2c34c32035f494594ced6" prot="public">
+          <name>can2_sce</name>
+          <initializer>= 66</initializer>
+          <briefdescription>
+<para>CAN2 SCE. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da46809c750af40e166cfed068117df762" prot="public">
+          <name>otg_fs</name>
+          <initializer>= 67</initializer>
+          <briefdescription>
+<para>USB OTG FS. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1a0f7164b37ba11937137be8fdbe92e65da2ffe4e77325d9a7152f7086ea7aa5114" prot="public">
+          <name>max</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>List of interrupt request numbers for this platform. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/constants.hpp" line="92" column="1" bodyfile="libraries/include/libhal-stm32f1/constants.hpp" bodystart="93" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="enum" id="libhal-stm32f1_2constants_8hpp_1ae41036235ee4ea56c7fffbdd96f727b4" prot="public" static="no" strong="yes">
+        <type>std::uint16_t</type>
+        <name>error_t</name>
+        <enumvalue id="libhal-stm32f1_2constants_8hpp_1ae41036235ee4ea56c7fffbdd96f727b4a2ffe4e77325d9a7152f7086ea7aa5114" prot="public">
+          <name>max</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Error types for stm32f1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/constants.hpp" line="270" column="1" bodyfile="libraries/include/libhal-stm32f1/constants.hpp" bodystart="271" bodyend="273"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="libhal-stm32f1_2clock_8hpp_1a4488de9cbe43c2de61d2a080baeec91c" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::stm32f1::internal_low_speed_oscillator</definition>
+        <argsstring></argsstring>
+        <name>internal_low_speed_oscillator</name>
+        <initializer>= 20.0_kHz</initializer>
+        <briefdescription>
+<para>Constant for the frequency of the LSE. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="27" column="16" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="libhal-stm32f1_2clock_8hpp_1aa99597abfadeee0a1f879b91468b28d8" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::stm32f1::internal_high_speed_oscillator</definition>
+        <argsstring></argsstring>
+        <name>internal_high_speed_oscillator</name>
+        <initializer>= 8.0_MHz</initializer>
+        <briefdescription>
+<para>Constant for the frequency of the HSE. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="30" column="16" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="libhal-stm32f1_2clock_8hpp_1a4d0c3fcf9c39534c2ec7460bea2af977" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::stm32f1::flash_clock</definition>
+        <argsstring></argsstring>
+        <name>flash_clock</name>
+        <initializer>= internal_high_speed_oscillator</initializer>
+        <briefdescription>
+<para>Constant for the frequency of the Flash Controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="33" column="16" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="libhal-stm32f1_2clock_8hpp_1aa51fa5b9aaa8c9a252f5c8e146c2fd6c" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::stm32f1::watchdog_clock_rate</definition>
+        <argsstring></argsstring>
+        <name>watchdog_clock_rate</name>
+        <initializer>= internal_low_speed_oscillator</initializer>
+        <briefdescription>
+<para>Constant for the frequency of the Watch Dog Peripheral. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="36" column="16" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="libhal-stm32f1_2constants_8hpp_1a3e7b24651a6d021d2ef855599dd412ce" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr std::uint32_t</type>
+        <definition>constexpr std::uint32_t hal::stm32f1::bus_id_offset</definition>
+        <argsstring></argsstring>
+        <name>bus_id_offset</name>
+        <initializer>= 32</initializer>
+        <briefdescription>
+<para>Number of bits between each enable register. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/constants.hpp" line="22" column="32" bodyfile="libraries/include/libhal-stm32f1/constants.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="libhal-stm32f1_2constants_8hpp_1a3d1199c8c46feb299074fd5f0a97f2d9" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr std::uint32_t</type>
+        <definition>constexpr std::uint32_t hal::stm32f1::ahb_bus</definition>
+        <argsstring></argsstring>
+        <name>ahb_bus</name>
+        <initializer>= bus_id_offset * 0</initializer>
+        <briefdescription>
+<para>Bit position of AHB. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/constants.hpp" line="24" column="32" bodyfile="libraries/include/libhal-stm32f1/constants.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="libhal-stm32f1_2constants_8hpp_1a9fdc2214d4821f8d39afa80b578776a5" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr std::uint32_t</type>
+        <definition>constexpr std::uint32_t hal::stm32f1::apb1_bus</definition>
+        <argsstring></argsstring>
+        <name>apb1_bus</name>
+        <initializer>= bus_id_offset * 1</initializer>
+        <briefdescription>
+<para>Bit position of APB1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/constants.hpp" line="26" column="32" bodyfile="libraries/include/libhal-stm32f1/constants.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="libhal-stm32f1_2constants_8hpp_1ad7830c662267a3e277a5ad75738e31a8" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr std::uint32_t</type>
+        <definition>constexpr std::uint32_t hal::stm32f1::apb2_bus</definition>
+        <argsstring></argsstring>
+        <name>apb2_bus</name>
+        <initializer>= bus_id_offset * 2</initializer>
+        <briefdescription>
+<para>Bit position of AHB2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/constants.hpp" line="28" column="32" bodyfile="libraries/include/libhal-stm32f1/constants.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="libhal-stm32f1_2constants_8hpp_1accd92810fa9101540a22a06e1766688e" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr std::uint32_t</type>
+        <definition>constexpr std::uint32_t hal::stm32f1::beyond_bus</definition>
+        <argsstring></argsstring>
+        <name>beyond_bus</name>
+        <initializer>= bus_id_offset * 3</initializer>
+        <briefdescription>
+<para>Bit position of systems outside of any bus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/constants.hpp" line="30" column="32" bodyfile="libraries/include/libhal-stm32f1/constants.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="libhal-stm32f1_2clock_8hpp_1ab95190223186e0c5a046f2e33fc8fdc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::stm32f1::configure_clocks</definition>
+        <argsstring>(clock_tree p_clock_tree)</argsstring>
+        <name>configure_clocks</name>
+        <param>
+          <type><ref refid="structhal_1_1stm32f1_1_1clock__tree" kindref="compound">clock_tree</ref></type>
+          <declname>p_clock_tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="attention"><para>If configuration of the system clocks is desired, one should consult the user manual of the target MCU in use to determine the valid clock configuration values that can/should be used. The Initialize() method is only responsible for configuring the clock system based on configurations in the clock_configuration. Incorrect configurations may result in a hard fault or cause the clock system(s) to supply incorrect clock rate(s).</para>
+</simplesect>
+<simplesect kind="see"><para>Figure 11. Clock Tree <ulink url="https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf#page=126">https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf#page=126</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="192" column="6" declfile="libraries/include/libhal-stm32f1/clock.hpp" declline="192" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="libhal-stm32f1_2clock_8hpp_1ae96e73566df9b448715febe5107777aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::hertz</type>
+        <definition>hal::hertz hal::stm32f1::frequency</definition>
+        <argsstring>(peripheral p_id)</argsstring>
+        <name>frequency</name>
+        <param>
+          <type>peripheral</type>
+          <declname>p_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the clock rate frequency of a peripheral </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="195" column="12" declfile="libraries/include/libhal-stm32f1/clock.hpp" declline="195" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="libhal-stm32f1_2pin_8hpp_1abff48981413a9ca84c8d18eab1b86b28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::stm32f1::release_jtag_pins</definition>
+        <argsstring>()</argsstring>
+        <name>release_jtag_pins</name>
+        <briefdescription>
+<para>Make JTAG pins not associated with SWD available as IO. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The GPIO pins PB3, PB4, and PA15 are default initalized to be used for JTAG purposes. If you are using SWD and want to use these pins as GPIO or as other alternative functions, this function MUST be called. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/pin.hpp" line="26" column="6" declfile="libraries/include/libhal-stm32f1/pin.hpp" declline="26" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-stm32f1/clock.hpp" line="22" column="1"/>
+  </compounddef>
+</doxygen>

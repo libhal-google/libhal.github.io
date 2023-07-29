@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1inert__timer" kind="class" language="C++" prot="public">
+    <compoundname>hal::inert_timer</compoundname>
+    <basecompoundref refid="classhal_1_1timer" prot="public" virt="non-virtual">hal::timer</basecompoundref>
+    <includes refid="inert__timer_8hpp" local="no">inert_timer.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1inert__timer_1a7bd42e4e0378d2d0cd85cd95343e894d" prot="private" static="no" mutable="no">
+        <type><ref refid="structhal_1_1timer_1_1is__running__t" kindref="compound">is_running_t</ref></type>
+        <definition>is_running_t hal::inert_timer::m_is_running</definition>
+        <argsstring></argsstring>
+        <name>m_is_running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" line="62" column="16" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1inert__timer_1a4e625af0dfb2423094fa04de53b5dff2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1inert__timer" kindref="compound">inert_timer</ref> &gt;</type>
+        <definition>static result&lt;inert_timer&gt; hal::inert_timer::create</definition>
+        <argsstring>(is_running_t p_is_running)</argsstring>
+        <name>create</name>
+        <param>
+          <type><ref refid="structhal_1_1timer_1_1is__running__t" kindref="compound">is_running_t</ref></type>
+          <declname>p_is_running</declname>
+        </param>
+        <briefdescription>
+<para>Factory function to create <ref refid="classhal_1_1inert__timer" kindref="compound">inert_timer</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_is_running</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- is_running_t object to return when <ref refid="classhal_1_1timer_1aa31f569c3165567f24920a06736d57ba" kindref="member">is_running()</ref> is called </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;inert_timer&gt; - Constructed <ref refid="classhal_1_1inert__timer" kindref="compound">inert_timer</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" line="34" column="17" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1inert__timer_1a33a04be00e516590a534d0e4753fc53b" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::inert_timer::inert_timer</definition>
+        <argsstring>(is_running_t p_is_running)</argsstring>
+        <name>inert_timer</name>
+        <param>
+          <type><ref refid="structhal_1_1timer_1_1is__running__t" kindref="compound">is_running_t</ref></type>
+          <declname>p_is_running</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" line="40" column="13" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__timer_1a75a01bf0d75d7ff77d022e7856a19429" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1timer_1_1is__running__t" kindref="compound">is_running_t</ref> &gt;</type>
+        <definition>result&lt;is_running_t&gt; hal::inert_timer::driver_is_running</definition>
+        <argsstring>()</argsstring>
+        <name>driver_is_running</name>
+        <reimplements refid="classhal_1_1timer_1ac28b122b4b6f929a98fbaea8c23f786a">driver_is_running</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" line="45" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__timer_1a3ad4b7f8ee56f7bdbfa1e10da412cec5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1timer_1_1cancel__t" kindref="compound">cancel_t</ref> &gt;</type>
+        <definition>result&lt;cancel_t&gt; hal::inert_timer::driver_cancel</definition>
+        <argsstring>()</argsstring>
+        <name>driver_cancel</name>
+        <reimplements refid="classhal_1_1timer_1a273b708a1f149479290444f10d82b4fa">driver_cancel</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" line="50" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1inert__timer_1aea215c74e8b5a3fb61054b298603ed1c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1timer_1_1schedule__t" kindref="compound">schedule_t</ref> &gt;</type>
+        <definition>result&lt;schedule_t&gt; hal::inert_timer::driver_schedule</definition>
+        <argsstring>([[maybe_unused]] hal::callback&lt; void(void)&gt; p_callback, [[maybe_unused]] hal::time_duration p_delay)</argsstring>
+        <name>driver_schedule</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] hal::callback&lt; void(void)&gt;</type>
+          <declname>p_callback</declname>
+        </param>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] hal::time_duration</type>
+          <declname>p_delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" line="55" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" bodystart="55" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inert implementation of timer hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::inert_timer</label>
+        <link refid="classhal_1_1inert__timer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::timer</label>
+        <link refid="classhal_1_1timer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::inert_timer</label>
+        <link refid="classhal_1_1inert__timer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::timer</label>
+        <link refid="classhal_1_1timer"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" line="24" column="1" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_timer.hpp" bodystart="25" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classhal_1_1timer_1a51c60a0ecd9c3e4b0871af671bdeac3e" prot="public" virt="non-virtual"><scope>hal::inert_timer</scope><name>cancel</name></member>
+      <member refid="classhal_1_1inert__timer_1a4e625af0dfb2423094fa04de53b5dff2" prot="public" virt="non-virtual"><scope>hal::inert_timer</scope><name>create</name></member>
+      <member refid="classhal_1_1inert__timer_1a3ad4b7f8ee56f7bdbfa1e10da412cec5" prot="private" virt="virtual"><scope>hal::inert_timer</scope><name>driver_cancel</name></member>
+      <member refid="classhal_1_1inert__timer_1a75a01bf0d75d7ff77d022e7856a19429" prot="private" virt="virtual"><scope>hal::inert_timer</scope><name>driver_is_running</name></member>
+      <member refid="classhal_1_1inert__timer_1aea215c74e8b5a3fb61054b298603ed1c" prot="private" virt="non-virtual"><scope>hal::inert_timer</scope><name>driver_schedule</name></member>
+      <member refid="classhal_1_1inert__timer_1a33a04be00e516590a534d0e4753fc53b" prot="private" virt="non-virtual"><scope>hal::inert_timer</scope><name>inert_timer</name></member>
+      <member refid="classhal_1_1timer_1aa31f569c3165567f24920a06736d57ba" prot="public" virt="non-virtual"><scope>hal::inert_timer</scope><name>is_running</name></member>
+      <member refid="classhal_1_1inert__timer_1a7bd42e4e0378d2d0cd85cd95343e894d" prot="private" virt="non-virtual"><scope>hal::inert_timer</scope><name>m_is_running</name></member>
+      <member refid="classhal_1_1timer_1a992234ed828ee9fac8b06ae4d0b8f83c" prot="public" virt="non-virtual"><scope>hal::inert_timer</scope><name>schedule</name></member>
+      <member refid="classhal_1_1timer_1aebf27697c5512202ac99f8b0f159e441" prot="public" virt="virtual"><scope>hal::inert_timer</scope><name>~timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

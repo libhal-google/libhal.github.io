@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1lpc40_1_1power" kind="class" language="C++" prot="public">
+    <compoundname>hal::lpc40::power</compoundname>
+    <includes refid="power_8hpp" local="no">power.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1power_1a84fb9f6814af6bd87d9050e172c54032" prot="private" static="no" mutable="no">
+        <type>peripheral</type>
+        <definition>peripheral hal::lpc40::power::m_peripheral</definition>
+        <argsstring></argsstring>
+        <name>m_peripheral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/power.hpp" line="55" column="14" bodyfile="libraries/include/libhal-lpc40/power.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1power_1aae29de9505191d0abb1e545f5963e0a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::power::power</definition>
+        <argsstring>(peripheral p_peripheral)</argsstring>
+        <name>power</name>
+        <param>
+          <type>peripheral</type>
+          <declname>p_peripheral</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new power control object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_peripheral</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- id of the peripheral to configure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/power.hpp" line="32" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1power_1a590fb769ca05dcadcf6a1b31d9b58943" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::lpc40::power::on</definition>
+        <argsstring>()</argsstring>
+        <name>on</name>
+        <briefdescription>
+<para>Power on the peripheral. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/power.hpp" line="38" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1power_1ade1793ebc5e65834b62e839d7c6ac1fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::lpc40::power::is_on</definition>
+        <argsstring>()</argsstring>
+        <name>is_on</name>
+        <briefdescription>
+<para>Check if the peripheral is powered on. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true - peripheral is on </para>
+</simplesect>
+<simplesect kind="return"><para>false - peripheral is off </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/power.hpp" line="46" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1power_1ae5abfdfe3bb0e9df42ce8c6ee93b411d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::lpc40::power::off</definition>
+        <argsstring>()</argsstring>
+        <name>off</name>
+        <briefdescription>
+<para>Power off peripheral. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/power.hpp" line="52" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Power control for lpc40xx peripherals. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-lpc40/power.hpp" line="24" column="1" bodyfile="libraries/include/libhal-lpc40/power.hpp" bodystart="25" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classhal_1_1lpc40_1_1power_1ade1793ebc5e65834b62e839d7c6ac1fe" prot="public" virt="non-virtual"><scope>hal::lpc40::power</scope><name>is_on</name></member>
+      <member refid="classhal_1_1lpc40_1_1power_1a84fb9f6814af6bd87d9050e172c54032" prot="private" virt="non-virtual"><scope>hal::lpc40::power</scope><name>m_peripheral</name></member>
+      <member refid="classhal_1_1lpc40_1_1power_1ae5abfdfe3bb0e9df42ce8c6ee93b411d" prot="public" virt="non-virtual"><scope>hal::lpc40::power</scope><name>off</name></member>
+      <member refid="classhal_1_1lpc40_1_1power_1a590fb769ca05dcadcf6a1b31d9b58943" prot="public" virt="non-virtual"><scope>hal::lpc40::power</scope><name>on</name></member>
+      <member refid="classhal_1_1lpc40_1_1power_1aae29de9505191d0abb1e545f5963e0a9" prot="public" virt="non-virtual"><scope>hal::lpc40::power</scope><name>power</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

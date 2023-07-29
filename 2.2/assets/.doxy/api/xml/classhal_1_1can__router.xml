@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1can__router" kind="class" language="C++" prot="public">
+    <compoundname>hal::can_router</compoundname>
+    <includes refid="libhal-util_2can_8hpp" local="no">can.hpp</includes>
+    <innerclass refid="structhal_1_1can__router_1_1route" prot="public">hal::can_router::route</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classhal_1_1can__router_1a33768a84af2a2dfe66e36d32ad3afb4a" prot="public" static="no">
+        <type>hal::callback&lt; <ref refid="classhal_1_1can_1aad5d17f59a3a8f3bddded97760737163" kindref="member">hal::can::handler</ref> &gt;</type>
+        <definition>using hal::can_router::message_handler =  hal::callback&lt;hal::can::handler&gt;</definition>
+        <argsstring></argsstring>
+        <name>message_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="133" column="3" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhal_1_1can__router_1aef494f51bd0cb32027def862a6190adf" prot="public" static="no">
+        <type><ref refid="classhal_1_1static__list" kindref="compound">static_list</ref>&lt; <ref refid="structhal_1_1can__router_1_1route" kindref="compound">route</ref> &gt;::item</type>
+        <definition>using hal::can_router::route_item =  static_list&lt;route&gt;::item</definition>
+        <argsstring></argsstring>
+        <name>route_item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="141" column="3" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classhal_1_1can__router_1a9d4d91131c51799edff974672e923fc8" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::can_router::noop</definition>
+        <argsstring></argsstring>
+        <name>noop</name>
+        <initializer>=
+    []([[maybe_unused]] const <ref refid="structhal_1_1can_1_1message__t" kindref="compound">can::message_t</ref>&amp; p_message) {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="130" column="25" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1can__router_1ab524f3242dd0ddacd690816444a8626f" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1static__list" kindref="compound">static_list</ref>&lt; <ref refid="structhal_1_1can__router_1_1route" kindref="compound">route</ref> &gt;</type>
+        <definition>static_list&lt;route&gt; hal::can_router::m_handlers</definition>
+        <argsstring></argsstring>
+        <name>m_handlers</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="265" column="15" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1can__router_1a92f7a9dc73de1535450b1562bbcb8538" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1can" kindref="compound">hal::can</ref> *</type>
+        <definition>hal::can* hal::can_router::m_can</definition>
+        <argsstring></argsstring>
+        <name>m_can</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="266" column="12" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1can__router_1aa2b9b81423f0f95a43c185aa50e0d624" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1can__router" kindref="compound">can_router</ref> &gt;</type>
+        <definition>static result&lt;can_router&gt; hal::can_router::create</definition>
+        <argsstring>(hal::can &amp;p_can)</argsstring>
+        <name>create</name>
+        <param>
+          <type><ref refid="classhal_1_1can" kindref="compound">hal::can</ref> &amp;</type>
+          <declname>p_can</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="143" column="17" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="143" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1can__router_1ad02c34a2e40661e54ef436f72c9023bd" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hal::can_router::can_router</definition>
+        <argsstring>(hal::can &amp;p_can)</argsstring>
+        <name>can_router</name>
+        <param>
+          <type><ref refid="classhal_1_1can" kindref="compound">hal::can</ref> &amp;</type>
+          <declname>p_can</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new can message router. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_can</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- can peripheral to route messages for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="154" column="12" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="154" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1can__router_1a77468dd5897cd294f3264f0bff36a872" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::can_router::can_router</definition>
+        <argsstring>()=delete</argsstring>
+        <name>can_router</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="160" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1can__router_1a254d2724b56081a2310acf0313dffd41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::can_router::can_router</definition>
+        <argsstring>(can_router &amp;p_other)=delete</argsstring>
+        <name>can_router</name>
+        <param>
+          <type><ref refid="classhal_1_1can__router" kindref="compound">can_router</ref> &amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="161" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1can__router_1aaeeb441d9f6f7df5d07f921b190e00ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1can__router" kindref="compound">can_router</ref> &amp;</type>
+        <definition>can_router&amp; hal::can_router::operator=</definition>
+        <argsstring>(can_router &amp;p_other)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1can__router" kindref="compound">can_router</ref> &amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="162" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1can__router_1a9af0341e4bc10b187b56afd3820a5ee1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhal_1_1can__router" kindref="compound">can_router</ref> &amp;</type>
+        <definition>can_router&amp; hal::can_router::operator=</definition>
+        <argsstring>(can_router &amp;&amp;p_other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1can__router" kindref="compound">can_router</ref> &amp;&amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="163" column="14" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="163" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1can__router_1af6a55902dd6fb838471158419d3f7edd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hal::can_router::can_router</definition>
+        <argsstring>(can_router &amp;&amp;p_other)</argsstring>
+        <name>can_router</name>
+        <param>
+          <type><ref refid="classhal_1_1can__router" kindref="compound">can_router</ref> &amp;&amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="173" column="3" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1can__router_1afe65cab0301d4419251836a6ee603021" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hal::can_router::~can_router</definition>
+        <argsstring>()</argsstring>
+        <name>~can_router</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="178" column="3" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="178" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1can__router_1ab6b26bb11677dd6950defb796e222e66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhal_1_1can" kindref="compound">hal::can</ref> &amp;</type>
+        <definition>hal::can&amp; hal::can_router::bus</definition>
+        <argsstring>()</argsstring>
+        <name>bus</name>
+        <briefdescription>
+<para>Get a reference to the can peripheral driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to send can messages through the same port that the <ref refid="classhal_1_1can__router" kindref="compound">can_router</ref> is using.</para>
+<para><simplesect kind="return"><para>can&amp; reference to the can peripheral driver </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="195" column="13" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="195" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1can__router_1a2123a7aff06898054f78a2f8f29c8656" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto hal::can_router::add_message_callback</definition>
+        <argsstring>(hal::can::id_t p_id)</argsstring>
+        <name>add_message_callback</name>
+        <param>
+          <type><ref refid="classhal_1_1can_1ae85571b4f7aac93fca8503aafcb32a47" kindref="member">hal::can::id_t</ref></type>
+          <declname>p_id</declname>
+        </param>
+        <briefdescription>
+<para>Add a message route without setting the callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The default callback will do nothing and will drop the message.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Associated ID of messages to be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>auto - route item from the linked list that must be stored stored in a variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="209" column="9" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="209" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1can__router_1a6f74f9dc58645b17a46194c27b3adddd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto hal::can_router::add_message_callback</definition>
+        <argsstring>(hal::can::id_t p_id, message_handler p_handler)</argsstring>
+        <name>add_message_callback</name>
+        <param>
+          <type><ref refid="classhal_1_1can_1ae85571b4f7aac93fca8503aafcb32a47" kindref="member">hal::can::id_t</ref></type>
+          <declname>p_id</declname>
+        </param>
+        <param>
+          <type>message_handler</type>
+          <declname>p_handler</declname>
+        </param>
+        <briefdescription>
+<para>Set a callback for when messages with a specific ID is received. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Associated ID of messages to be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- callback to be executed when a p_id message is received. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>auto - route item from the linked list that must be stored stored in a variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="224" column="9" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="224" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1can__router_1a6b655f6f1ecf24b91f2941c163abf9b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const auto &amp;</type>
+        <definition>const auto&amp; hal::can_router::handlers</definition>
+        <argsstring>()</argsstring>
+        <name>handlers</name>
+        <briefdescription>
+<para>Get the list of handlers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Meant for testing purposes or when direct inspection of the map is useful in userspace. Should not be used in by libraries.</para>
+<para><simplesect kind="return"><para>const auto&amp; map of all of the can message handlers. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="241" column="15" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="241" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1can__router_1a6227960a0c4bf5a59f3b430783aa35fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::can_router::operator()</definition>
+        <argsstring>(const can::message_t &amp;p_message)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structhal_1_1can_1_1message__t" kindref="compound">can::message_t</ref> &amp;</type>
+          <declname>p_message</declname>
+        </param>
+        <briefdescription>
+<para>Message routing interrupt service handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Searches the static list and finds the first ID associated with the message and run&apos;s that route&apos;s callback.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- message received from the bus </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="254" column="8" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="254" bodyend="262"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Route CAN messages received on the can bus to callbacks based on ID. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-util/can.hpp" line="127" column="1" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="128" bodyend="267"/>
+    <listofallmembers>
+      <member refid="classhal_1_1can__router_1a2123a7aff06898054f78a2f8f29c8656" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>add_message_callback</name></member>
+      <member refid="classhal_1_1can__router_1a6f74f9dc58645b17a46194c27b3adddd" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>add_message_callback</name></member>
+      <member refid="classhal_1_1can__router_1ab6b26bb11677dd6950defb796e222e66" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>bus</name></member>
+      <member refid="classhal_1_1can__router_1ad02c34a2e40661e54ef436f72c9023bd" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>can_router</name></member>
+      <member refid="classhal_1_1can__router_1a77468dd5897cd294f3264f0bff36a872" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>can_router</name></member>
+      <member refid="classhal_1_1can__router_1a254d2724b56081a2310acf0313dffd41" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>can_router</name></member>
+      <member refid="classhal_1_1can__router_1af6a55902dd6fb838471158419d3f7edd" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>can_router</name></member>
+      <member refid="classhal_1_1can__router_1aa2b9b81423f0f95a43c185aa50e0d624" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>create</name></member>
+      <member refid="classhal_1_1can__router_1a6b655f6f1ecf24b91f2941c163abf9b1" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>handlers</name></member>
+      <member refid="classhal_1_1can__router_1a92f7a9dc73de1535450b1562bbcb8538" prot="private" virt="non-virtual"><scope>hal::can_router</scope><name>m_can</name></member>
+      <member refid="classhal_1_1can__router_1ab524f3242dd0ddacd690816444a8626f" prot="private" virt="non-virtual"><scope>hal::can_router</scope><name>m_handlers</name></member>
+      <member refid="classhal_1_1can__router_1a33768a84af2a2dfe66e36d32ad3afb4a" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>message_handler</name></member>
+      <member refid="classhal_1_1can__router_1a9d4d91131c51799edff974672e923fc8" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>noop</name></member>
+      <member refid="classhal_1_1can__router_1a6227960a0c4bf5a59f3b430783aa35fb" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>operator()</name></member>
+      <member refid="classhal_1_1can__router_1aaeeb441d9f6f7df5d07f921b190e00ea" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>operator=</name></member>
+      <member refid="classhal_1_1can__router_1a9af0341e4bc10b187b56afd3820a5ee1" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>operator=</name></member>
+      <member refid="classhal_1_1can__router_1aef494f51bd0cb32027def862a6190adf" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>route_item</name></member>
+      <member refid="classhal_1_1can__router_1afe65cab0301d4419251836a6ee603021" prot="public" virt="non-virtual"><scope>hal::can_router</scope><name>~can_router</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
