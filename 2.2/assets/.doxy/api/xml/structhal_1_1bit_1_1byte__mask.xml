@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1bit_1_1byte__mask" kind="struct" language="C++" prot="public">
+    <compoundname>hal::bit::byte_mask</compoundname>
+    <includes refid="bit_8hpp" local="no">bit.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>size_t</type>
+        <declname>ByteIndex</declname>
+        <defname>ByteIndex</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structhal_1_1bit_1_1byte__mask_1a87e9369a6f5617179e0b8223e5e645fa" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr <ref refid="structhal_1_1bit_1_1mask" kindref="compound">hal::bit::mask</ref></type>
+        <definition>constexpr hal::bit::mask hal::bit::byte_mask&lt; ByteIndex &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>{ .position = ByteIndex, .width = 8 }</initializer>
+        <briefdescription>
+<para>Mask value defined at compile time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="186" column="35" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper for generating byte position masks. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>ByteIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the byte position to make a mask for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::bit::mask</label>
+        <link refid="structhal_1_1bit_1_1mask"/>
+      </node>
+      <node id="1">
+        <label>hal::bit::byte_mask&lt; ByteIndex &gt;</label>
+        <link refid="structhal_1_1bit_1_1byte__mask"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-util/bit.hpp" line="180" column="1" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="181" bodyend="187"/>
+    <listofallmembers>
+      <member refid="structhal_1_1bit_1_1byte__mask_1a87e9369a6f5617179e0b8223e5e645fa" prot="public" virt="non-virtual"><scope>hal::bit::byte_mask</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

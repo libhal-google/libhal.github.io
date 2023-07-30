@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacehal_1_1make" kind="namespace" language="C++">
+    <compoundname>hal::make</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="adc__mux_8hpp_1a3a42058bedd52d230dfbb0c397fecd9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1soft_1_1adc__mux__pin" kindref="compound">hal::soft::adc_mux_pin</ref> &gt;</type>
+        <definition>result&lt;hal::soft::adc_mux_pin&gt; hal::make::adc</definition>
+        <argsstring>(hal::soft::adc_multiplexer &amp;p_multiplexer, std::uint8_t p_channel)</argsstring>
+        <name>adc</name>
+        <param>
+          <type><ref refid="classhal_1_1soft_1_1adc__multiplexer" kindref="compound">hal::soft::adc_multiplexer</ref> &amp;</type>
+          <declname>p_multiplexer</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_channel</declname>
+        </param>
+        <briefdescription>
+<para>Returns an ADC pin from the multiplexer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_multiplexer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the adc multiplexer with the desire adc channel pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel number of the pin </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A newly constructed ADC multiplexer pin. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::errc</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/adc_mux.hpp" line="38" column="8" declfile="libraries/include/libhal-soft/adc_mux.hpp" declline="38" declcolumn="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-soft/adc_mux.hpp" line="29" column="1"/>
+  </compounddef>
+</doxygen>
