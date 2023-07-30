@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1esp8266_1_1at" kind="class" language="C++" prot="public">
+    <compoundname>hal::esp8266::at</compoundname>
+    <includes refid="at_8hpp" local="no">at.hpp</includes>
+    <innerclass refid="classhal_1_1esp8266_1_1at_1_1packet__manager" prot="private">hal::esp8266::at::packet_manager</innerclass>
+    <innerclass refid="structhal_1_1esp8266_1_1at_1_1read__t" prot="public">hal::esp8266::at::read_t</innerclass>
+    <innerclass refid="structhal_1_1esp8266_1_1at_1_1socket__config" prot="public">hal::esp8266::at::socket_config</innerclass>
+    <innerclass refid="structhal_1_1esp8266_1_1at_1_1write__t" prot="public">hal::esp8266::at::write_t</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classhal_1_1esp8266_1_1at_1a91d660abbdcb010a34cdd059572cc1e5" prot="public" static="no" strong="yes">
+        <type>std::uint8_t</type>
+        <name>socket_type</name>
+        <enumvalue id="classhal_1_1esp8266_1_1at_1a91d660abbdcb010a34cdd059572cc1e5ae20bb202b1d5537b1415e3263a37ed78" prot="public">
+          <name>tcp</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhal_1_1esp8266_1_1at_1a91d660abbdcb010a34cdd059572cc1e5a84864c1fe095359bc9c5ac068e24e781" prot="public">
+          <name>udp</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="38" column="3" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhal_1_1esp8266_1_1at_1a6ab7b22fd4a8306ba416a87000efd68c" prot="public" static="no">
+        <type><ref refid="namespacehal_1a5078c7097c3049684fa72d7a35538e52" kindref="member">hal::function_ref</ref>&lt; <ref refid="namespacehal_1a8ca200d14bc94cb64c41994e2abb2401" kindref="member">hal::timeout_function</ref> &gt;</type>
+        <definition>using hal::esp8266::at::deadline =  hal::function_ref&lt;hal::timeout_function&gt;</definition>
+        <argsstring></argsstring>
+        <name>deadline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="36" column="3" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1esp8266_1_1at_1a95b467269c873c629fb9594f6bb6f25d" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1serial" kindref="compound">hal::serial</ref> *</type>
+        <definition>hal::serial* hal::esp8266::at::m_serial</definition>
+        <argsstring></argsstring>
+        <name>m_serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="114" column="15" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1esp8266_1_1at_1a44c89f51638914a4d91f782a58baa58d" prot="private" static="no" mutable="no">
+        <type>packet_manager</type>
+        <definition>packet_manager hal::esp8266::at::m_packet_manager</definition>
+        <argsstring></argsstring>
+        <name>m_packet_manager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="115" column="18" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1a1b7ae6dc3f436a5cdc310ed444c17e4e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1esp8266_1_1at" kindref="compound">at</ref> &gt;</type>
+        <definition>static result&lt;at&gt; hal::esp8266::at::create</definition>
+        <argsstring>(hal::serial &amp;p_serial, deadline p_timeout)</argsstring>
+        <name>create</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">hal::serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>deadline</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="63" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1a0a4a3c72bdba7024c5f66d94e4086656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::status</type>
+        <definition>hal::status hal::esp8266::at::reset</definition>
+        <argsstring>(deadline p_timeout)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>deadline</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="67" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1a048ebebb600414678842f4a9ef3d0901" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::status</type>
+        <definition>hal::status hal::esp8266::at::connect_to_ap</definition>
+        <argsstring>(std::string_view p_ssid, std::string_view p_password, deadline p_timeout)</argsstring>
+        <name>connect_to_ap</name>
+        <param>
+          <type>std::string_view</type>
+          <declname>p_ssid</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>p_password</declname>
+        </param>
+        <param>
+          <type>deadline</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="70" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1af6aee076c83582819cd5d1cd1018b12e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::status</type>
+        <definition>hal::status hal::esp8266::at::set_ip_address</definition>
+        <argsstring>(std::string_view p_ip, deadline p_timeout)</argsstring>
+        <name>set_ip_address</name>
+        <param>
+          <type>std::string_view</type>
+          <declname>p_ip</declname>
+        </param>
+        <param>
+          <type>deadline</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="73" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1a703edd5c0529506058c5938df58a92d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::result&lt; bool &gt;</type>
+        <definition>hal::result&lt;bool&gt; hal::esp8266::at::is_connected_to_ap</definition>
+        <argsstring>(deadline p_timeout)</argsstring>
+        <name>is_connected_to_ap</name>
+        <param>
+          <type>deadline</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="75" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1af5b41b2fc432d1c471441ca28cc2e4bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::status</type>
+        <definition>hal::status hal::esp8266::at::disconnect_from_ap</definition>
+        <argsstring>(deadline p_timeout)</argsstring>
+        <name>disconnect_from_ap</name>
+        <param>
+          <type>deadline</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="76" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1af8f4e3b753659f9254a579a8e1cee3bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::status</type>
+        <definition>hal::status hal::esp8266::at::connect_to_server</definition>
+        <argsstring>(socket_config p_config, deadline p_timeout)</argsstring>
+        <name>connect_to_server</name>
+        <param>
+          <type><ref refid="structhal_1_1esp8266_1_1at_1_1socket__config" kindref="compound">socket_config</ref></type>
+          <declname>p_config</declname>
+        </param>
+        <param>
+          <type>deadline</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="79" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1a976bce31fa66d2913a10583e87abdbc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::result&lt; bool &gt;</type>
+        <definition>hal::result&lt;bool&gt; hal::esp8266::at::is_connected_to_server</definition>
+        <argsstring>(deadline p_timeout)</argsstring>
+        <name>is_connected_to_server</name>
+        <param>
+          <type>deadline</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="81" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1a9be87e50c42652194efcc5506004f553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1esp8266_1_1at_1_1write__t" kindref="compound">write_t</ref> &gt;</type>
+        <definition>hal::result&lt;write_t&gt; hal::esp8266::at::server_write</definition>
+        <argsstring>(std::span&lt; const hal::byte &gt; p_data, deadline p_timeout)</argsstring>
+        <name>server_write</name>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data</declname>
+        </param>
+        <param>
+          <type>deadline</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="82" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1a2b09a499651cc77defe60da614db6f8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1esp8266_1_1at_1_1read__t" kindref="compound">read_t</ref> &gt;</type>
+        <definition>hal::result&lt;read_t&gt; hal::esp8266::at::server_read</definition>
+        <argsstring>(std::span&lt; hal::byte &gt; p_data)</argsstring>
+        <name>server_read</name>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="85" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1ac141ad96d9e0a0bf6221933116a7b853" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::status</type>
+        <definition>hal::status hal::esp8266::at::disconnect_from_server</definition>
+        <argsstring>(deadline p_timeout)</argsstring>
+        <name>disconnect_from_server</name>
+        <param>
+          <type>deadline</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="86" column="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1a90cee2cde2780e723ebea9672e21d16a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::esp8266::at::at</definition>
+        <argsstring>(hal::serial &amp;p_serial)</argsstring>
+        <name>at</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">hal::serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the serial port connected to the wlan_client </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="112" column="3"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>esp8266 AT command driver for connecting to WiFi Access points and sending network traffic over wifi. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-esp8266/at.hpp" line="33" column="1" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="34" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classhal_1_1esp8266_1_1at_1a90cee2cde2780e723ebea9672e21d16a" prot="private" virt="non-virtual"><scope>hal::esp8266::at</scope><name>at</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1a048ebebb600414678842f4a9ef3d0901" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>connect_to_ap</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1af8f4e3b753659f9254a579a8e1cee3bd" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>connect_to_server</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1a1b7ae6dc3f436a5cdc310ed444c17e4e" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>create</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1a6ab7b22fd4a8306ba416a87000efd68c" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>deadline</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1af5b41b2fc432d1c471441ca28cc2e4bd" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>disconnect_from_ap</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1ac141ad96d9e0a0bf6221933116a7b853" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>disconnect_from_server</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1a703edd5c0529506058c5938df58a92d3" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>is_connected_to_ap</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1a976bce31fa66d2913a10583e87abdbc2" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>is_connected_to_server</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1a44c89f51638914a4d91f782a58baa58d" prot="private" virt="non-virtual"><scope>hal::esp8266::at</scope><name>m_packet_manager</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1a95b467269c873c629fb9594f6bb6f25d" prot="private" virt="non-virtual"><scope>hal::esp8266::at</scope><name>m_serial</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1a0a4a3c72bdba7024c5f66d94e4086656" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>reset</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1a2b09a499651cc77defe60da614db6f8d" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>server_read</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1a9be87e50c42652194efcc5506004f553" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>server_write</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1af6aee076c83582819cd5d1cd1018b12e" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>set_ip_address</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1a91d660abbdcb010a34cdd059572cc1e5" prot="public" virt="non-virtual"><scope>hal::esp8266::at</scope><name>socket_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

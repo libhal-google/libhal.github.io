@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1lpc40_1_1uart_1_1port" kind="struct" language="C++" prot="public">
+    <compoundname>hal::lpc40::uart::port</compoundname>
+    <includes refid="uart_8hpp" local="no">uart.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1uart_1_1port_1ac5b0b05a89dbb47a955fa081947b364e" prot="public" static="no" mutable="no">
+        <type>peripheral</type>
+        <definition>peripheral hal::lpc40::uart::port::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+<para>Resource ID of the UART peripheral to power on at initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/uart.hpp" line="40" column="16" bodyfile="libraries/include/libhal-lpc40/uart.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1uart_1_1port_1ab561861ee4d7de348c4b212b2a50b933" prot="public" static="no" mutable="no">
+        <type>irq</type>
+        <definition>irq hal::lpc40::uart::port::irq_number</definition>
+        <argsstring></argsstring>
+        <name>irq_number</name>
+        <briefdescription>
+<para>Interrupt request number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/uart.hpp" line="42" column="9" bodyfile="libraries/include/libhal-lpc40/uart.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1uart_1_1port_1a15cc3f0eb80136d4967f2a792527e9b1" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref></type>
+        <definition>pin hal::lpc40::uart::port::tx</definition>
+        <argsstring></argsstring>
+        <name>tx</name>
+        <briefdescription>
+<para>Reference to a uart transmitter pin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/uart.hpp" line="44" column="9" bodyfile="libraries/include/libhal-lpc40/uart.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1uart_1_1port_1a83adde358c571243ad46b46adfb82a76" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref></type>
+        <definition>pin hal::lpc40::uart::port::rx</definition>
+        <argsstring></argsstring>
+        <name>rx</name>
+        <briefdescription>
+<para>Reference to a uart receiver pin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/uart.hpp" line="46" column="9" bodyfile="libraries/include/libhal-lpc40/uart.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1uart_1_1port_1a047258e37548191e295cae2553c719a5" prot="public" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::lpc40::uart::port::tx_function</definition>
+        <argsstring></argsstring>
+        <name>tx_function</name>
+        <briefdescription>
+<para>Function code to set the transmit pin to uart transmitter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/uart.hpp" line="48" column="18" bodyfile="libraries/include/libhal-lpc40/uart.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1uart_1_1port_1ab3a565c061f68c5f0e03696d547f19ff" prot="public" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::lpc40::uart::port::rx_function</definition>
+        <argsstring></argsstring>
+        <name>rx_function</name>
+        <briefdescription>
+<para>Function code to set the receive pin to uart receiver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/uart.hpp" line="50" column="18" bodyfile="libraries/include/libhal-lpc40/uart.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Port contains all of the information that the lpc40 uart port needs to operate. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::lpc40::pin</label>
+        <link refid="classhal_1_1lpc40_1_1pin"/>
+      </node>
+      <node id="1">
+        <label>hal::lpc40::uart::port</label>
+        <link refid="structhal_1_1lpc40_1_1uart_1_1port"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>rx</edgelabel>
+          <edgelabel>tx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-lpc40/uart.hpp" line="37" column="3" bodyfile="libraries/include/libhal-lpc40/uart.hpp" bodystart="38" bodyend="51"/>
+    <listofallmembers>
+      <member refid="structhal_1_1lpc40_1_1uart_1_1port_1ac5b0b05a89dbb47a955fa081947b364e" prot="public" virt="non-virtual"><scope>hal::lpc40::uart::port</scope><name>id</name></member>
+      <member refid="structhal_1_1lpc40_1_1uart_1_1port_1ab561861ee4d7de348c4b212b2a50b933" prot="public" virt="non-virtual"><scope>hal::lpc40::uart::port</scope><name>irq_number</name></member>
+      <member refid="structhal_1_1lpc40_1_1uart_1_1port_1a83adde358c571243ad46b46adfb82a76" prot="public" virt="non-virtual"><scope>hal::lpc40::uart::port</scope><name>rx</name></member>
+      <member refid="structhal_1_1lpc40_1_1uart_1_1port_1ab3a565c061f68c5f0e03696d547f19ff" prot="public" virt="non-virtual"><scope>hal::lpc40::uart::port</scope><name>rx_function</name></member>
+      <member refid="structhal_1_1lpc40_1_1uart_1_1port_1a15cc3f0eb80136d4967f2a792527e9b1" prot="public" virt="non-virtual"><scope>hal::lpc40::uart::port</scope><name>tx</name></member>
+      <member refid="structhal_1_1lpc40_1_1uart_1_1port_1a047258e37548191e295cae2553c719a5" prot="public" virt="non-virtual"><scope>hal::lpc40::uart::port</scope><name>tx_function</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

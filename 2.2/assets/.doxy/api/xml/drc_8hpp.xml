@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="drc_8hpp" kind="file" language="C++">
+    <compoundname>drc.hpp</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes refid="libhal-util_2can_8hpp" local="no">libhal-util/can.hpp</includes>
+    <includes refid="libhal_2can_8hpp" local="no">libhal/can.hpp</includes>
+    <includes refid="libhal_2steady__clock_8hpp" local="no">libhal/steady_clock.hpp</includes>
+    <includes refid="libhal_2units_8hpp" local="no">libhal/units.hpp</includes>
+    <includedby refid="drc__motor_8hpp" local="yes">libraries/include/libhal-rmd/drc_motor.hpp</includedby>
+    <includedby refid="drc__rotation__sensor_8hpp" local="yes">libraries/include/libhal-rmd/drc_rotation_sensor.hpp</includedby>
+    <includedby refid="drc__servo_8hpp" local="yes">libraries/include/libhal-rmd/drc_servo.hpp</includedby>
+    <includedby refid="drc__temperature__sensor_8hpp" local="yes">libraries/include/libhal-rmd/drc_temperature_sensor.hpp</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>system_error</label>
+      </node>
+      <node id="5">
+        <label>functional</label>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal-rmd/drc.hpp</label>
+        <link refid="drc_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>limits</label>
+      </node>
+      <node id="17">
+        <label>comparison.hpp</label>
+        <link refid="comparison_8hpp_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>iterator</label>
+      </node>
+      <node id="24">
+        <label>static_list.hpp</label>
+        <link refid="static__list_8hpp_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="14">
+        <label>tl/function_ref.hpp</label>
+      </node>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="20">
+        <label>math.hpp</label>
+        <link refid="math_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libhal-util/can.hpp</label>
+        <link refid="libhal-util_2can_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>libhal/steady_clock.hpp</label>
+        <link refid="libhal_2steady__clock_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>third_party/inplace_function.hpp</label>
+      </node>
+      <node id="12">
+        <label>functional.hpp</label>
+        <link refid="functional_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>units.hpp</label>
+        <link refid="libhal_2units_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>optional</label>
+      </node>
+      <node id="10">
+        <label>boost/leaf.hpp</label>
+      </node>
+      <node id="27">
+        <label>utility</label>
+      </node>
+      <node id="8">
+        <label>array</label>
+      </node>
+      <node id="9">
+        <label>error.hpp</label>
+        <link refid="error_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>cstddef</label>
+      </node>
+      <node id="16">
+        <label>chrono</label>
+      </node>
+      <node id="23">
+        <label>static_callable.hpp</label>
+        <link refid="static__callable_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>concepts</label>
+      </node>
+      <node id="19">
+        <label>span</label>
+      </node>
+      <node id="18">
+        <label>algorithm</label>
+      </node>
+      <node id="7">
+        <label>libhal/can.hpp</label>
+        <link refid="libhal_2can_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>libraries/include/libhal-rmd/drc.hpp</label>
+        <link refid="drc_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libraries/include/libhal-rmd/drc_rotation_sensor.hpp</label>
+        <link refid="drc__rotation__sensor_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>libraries/include/libhal-rmd/drc_motor.hpp</label>
+        <link refid="drc__motor_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>libraries/include/libhal-rmd/drc_servo.hpp</label>
+        <link refid="drc__servo_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>libraries/include/libhal-rmd/drc_temperature_sensor.hpp</label>
+        <link refid="drc__temperature__sensor_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhal_1_1rmd_1_1drc" prot="public">hal::rmd::drc</innerclass>
+    <innerclass refid="structhal_1_1rmd_1_1drc_1_1feedback__t" prot="public">hal::rmd::drc::feedback_t</innerclass>
+    <innernamespace refid="namespacehal">hal</innernamespace>
+    <innernamespace refid="namespacehal_1_1rmd">hal::rmd</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2023<sp/>Google<sp/>LLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal-util/can.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/can.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/steady_clock.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/units.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hal::rmd<sp/>{</highlight></codeline>
+<codeline lineno="29" refid="classhal_1_1rmd_1_1drc" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="classhal_1_1rmd_1_1drc_1a61811f49fbe0fa55c4eb89d3ee72d674" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1rmd_1_1drc_1a61811f49fbe0fa55c4eb89d3ee72d674" kindref="member">read</ref><sp/>:<sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1rmd_1_1drc_1a61811f49fbe0fa55c4eb89d3ee72d674a3c857b542aed85edfa62b5993ebc4e81" kindref="member">multi_turns_angle</ref><sp/>=<sp/>0x92,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1rmd_1_1drc_1a61811f49fbe0fa55c4eb89d3ee72d674ad9981bf708d5b5a37e0c4c0154e809dd" kindref="member">status_1_and_error_flags</ref><sp/>=<sp/>0x9A,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1rmd_1_1drc_1a61811f49fbe0fa55c4eb89d3ee72d674a980f145982bb1436447679df03b0e438" kindref="member">status_2</ref><sp/>=<sp/>0x9C,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classhal_1_1rmd_1_1drc_1a7c586278d69edb96ffe61ecd82d96274" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1rmd_1_1drc_1a7c586278d69edb96ffe61ecd82d96274" kindref="member">actuate</ref><sp/>:<sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>speed<sp/>=<sp/>0xA2,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>position_2<sp/>=<sp/>0xA4,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classhal_1_1rmd_1_1drc_1a32df6e8b081d505000199e3fffb04ce6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1rmd_1_1drc_1a32df6e8b081d505000199e3fffb04ce6" kindref="member">write</ref><sp/>:<sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>pid_to_ram<sp/>=<sp/>0x31,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>pid_to_rom<sp/>=<sp/>0x32,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>acceleration_data_to_ram<sp/>=<sp/>0x34,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>encoder_offset<sp/>=<sp/>0x91,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>current_position_to_rom_as_motor_zero<sp/>=<sp/>0x19,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classhal_1_1rmd_1_1drc_1a2a11dd4ed3c8b79c137d312c65fde2f9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1rmd_1_1drc_1a2a11dd4ed3c8b79c137d312c65fde2f9" kindref="member">system</ref><sp/>:<sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>clear_error_flag<sp/>=<sp/>0x9B,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>off<sp/>=<sp/>0x80,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>stop<sp/>=<sp/>0x81,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>running<sp/>=<sp/>0x88,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="structhal_1_1rmd_1_1drc_1_1feedback__t" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t" kindref="compound">feedback_t</ref></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99" refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a072f79b28807461cd5073e41847d1477" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint32_t<sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a072f79b28807461cd5073e41847d1477" kindref="member">message_number</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="101" refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a3c4d9f50601c45dfe2d42940379b150e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::int64_t<sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a3c4d9f50601c45dfe2d42940379b150e" kindref="member">raw_multi_turn_angle</ref>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="104" refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a2930c8abf38bff5fddb0452a817436f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::int16_t<sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a2930c8abf38bff5fddb0452a817436f4" kindref="member">raw_current</ref>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="106" refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1aa540f0ac9fc2aa0805995afb8ab55517" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::int16_t<sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1aa540f0ac9fc2aa0805995afb8ab55517" kindref="member">raw_speed</ref>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="108" refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1aaac7245e1c38b8c4b5b23762a0774959" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::int16_t<sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1aaac7245e1c38b8c4b5b23762a0774959" kindref="member">raw_volts</ref>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="110" refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a366528f5b7a3d57d17d74d682222291c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::int16_t<sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a366528f5b7a3d57d17d74d682222291c" kindref="member">encoder</ref>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="112" refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a3895482f9e5fe885c0bedd6695f6ef7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::int8_t<sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a3895482f9e5fe885c0bedd6695f6ef7b" kindref="member">raw_motor_temperature</ref>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="114" refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a50bcafbdafbc1aa2b501774ce80f9d41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint8_t<sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a50bcafbdafbc1aa2b501774ce80f9d41" kindref="member">raw_error_state</ref>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal_1aa830f99bf69a06fcc452d82f0deb3fa3" kindref="member">hal::ampere</ref><sp/>current()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal" kindref="compound">hal</ref>::<ref refid="namespacehal_1a115c0adadc69503586eff94ce028cd87" kindref="member">rpm</ref><sp/>speed()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal" kindref="compound">hal</ref>::<ref refid="namespacehal_1a3c19435046e74281a514965c8ff93b0d" kindref="member">volts</ref><sp/><ref refid="namespacehal_1a3c19435046e74281a514965c8ff93b0d" kindref="member">volts</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal" kindref="compound">hal</ref>::<ref refid="namespacehal_1a8ee6f825b6e7475277274772d858c816" kindref="member">celsius</ref><sp/>temperature()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal" kindref="compound">hal</ref>::<ref refid="namespacehal_1a69b7f93f81eb80e25fbaefa924af5748" kindref="member">degrees</ref><sp/>angle()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a7ef590a091b89ffd8574d5775fdddb4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a7ef590a091b89ffd8574d5775fdddb4c" kindref="member">over_voltage_protection_tripped</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a8fdf48660331593be9aceaf173f86da0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a8fdf48660331593be9aceaf173f86da0" kindref="member">over_temperature_protection_tripped</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="classhal_1_1rmd_1_1drc_1a036f2a14259d97ec52b351f13d418191" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>static<sp/>result&lt;<ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref>&gt;<sp/><ref refid="classhal_1_1rmd_1_1drc_1a036f2a14259d97ec52b351f13d418191" kindref="member">create</ref>(</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal" kindref="compound">hal</ref>::<ref refid="classhal_1_1can__router" kindref="compound">can_router</ref>&amp;<sp/>p_router,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal" kindref="compound">hal</ref>::<ref refid="classhal_1_1steady__clock" kindref="compound">steady_clock</ref>&amp;<sp/>p_clock,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p_gear_ratio,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1can" kindref="compound">can</ref>::id_t<sp/>device_id,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal" kindref="compound">hal</ref>::<ref refid="namespacehal_1a858b08a6e4e3eb5752d8e0daaad5ed00" kindref="member">time_duration</ref><sp/>p_max_response_time<sp/>=<sp/>std::chrono::milliseconds(10));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref>(<ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref>&amp;<sp/>p_other)<sp/>=<sp/>delete;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref>&amp;<sp/>operator=(<ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref>&amp;<sp/>p_other)<sp/>=<sp/>delete;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref>(<ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref>&amp;&amp;<sp/>p_other);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref>&amp;<sp/>operator=(<ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref>&amp;&amp;<sp/>p_other);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="classhal_1_1rmd_1_1drc_1a304d3b2fa495cd738416bbc48d6f42e4" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>status<sp/><ref refid="classhal_1_1rmd_1_1drc_1a304d3b2fa495cd738416bbc48d6f42e4" kindref="member">feedback_request</ref>(<ref refid="classhal_1_1rmd_1_1drc_1a61811f49fbe0fa55c4eb89d3ee72d674" kindref="member">read</ref><sp/>p_command);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="classhal_1_1rmd_1_1drc_1ae49700150e413c8225aa5aaafcce4b8c" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>status<sp/><ref refid="classhal_1_1rmd_1_1drc_1ae49700150e413c8225aa5aaafcce4b8c" kindref="member">velocity_control</ref>(<ref refid="namespacehal_1a115c0adadc69503586eff94ce028cd87" kindref="member">rpm</ref><sp/>p_speed);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="classhal_1_1rmd_1_1drc_1a24d38f4e950c269fbf550a4d92be0533" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>status<sp/><ref refid="classhal_1_1rmd_1_1drc_1a24d38f4e950c269fbf550a4d92be0533" kindref="member">position_control</ref>(<ref refid="namespacehal_1a69b7f93f81eb80e25fbaefa924af5748" kindref="member">degrees</ref><sp/>p_angle,<sp/><ref refid="namespacehal_1a115c0adadc69503586eff94ce028cd87" kindref="member">rpm</ref><sp/>speed);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="classhal_1_1rmd_1_1drc_1a2ed8891566d0651de73f75c042ef1e73" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>status<sp/><ref refid="classhal_1_1rmd_1_1drc_1a2ed8891566d0651de73f75c042ef1e73" kindref="member">system_control</ref>(<ref refid="classhal_1_1rmd_1_1drc_1a2a11dd4ed3c8b79c137d312c65fde2f9" kindref="member">system</ref><sp/>p_system_command);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>const<sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t" kindref="compound">feedback_t</ref>&amp;<sp/>feedback()<sp/>const;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="classhal_1_1rmd_1_1drc_1a04d575fb89408fad36d334901f183342" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(const<sp/><ref refid="classhal_1_1can" kindref="compound">can</ref>::message_t&amp;<sp/>p_message);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1rmd_1_1drc" kindref="compound">drc</ref>(<ref refid="namespacehal" kindref="compound">hal</ref>::<ref refid="classhal_1_1can__router" kindref="compound">can_router</ref>&amp;<sp/>p_router,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacehal" kindref="compound">hal</ref>::<ref refid="classhal_1_1steady__clock" kindref="compound">steady_clock</ref>&amp;<sp/>p_clock,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p_gear_ratio,</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhal_1_1can" kindref="compound">can</ref>::id_t<sp/>p_device_id,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacehal" kindref="compound">hal</ref>::<ref refid="namespacehal_1a858b08a6e4e3eb5752d8e0daaad5ed00" kindref="member">time_duration</ref><sp/>p_max_response_time);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/>friend<sp/>struct<sp/>response_waiter;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><ref refid="structhal_1_1rmd_1_1drc_1_1feedback__t" kindref="compound">feedback_t</ref><sp/>m_feedback{};</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1steady__clock" kindref="compound">hal::steady_clock</ref>*<sp/>m_clock;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1can__router" kindref="compound">hal::can_router</ref>*<sp/>m_router;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>hal::can_router::route_item<sp/>m_route_item;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m_gear_ratio;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1can_1ae85571b4f7aac93fca8503aafcb32a47" kindref="member">can::id_t</ref><sp/>m_device_id;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1a858b08a6e4e3eb5752d8e0daaad5ed00" kindref="member">hal::time_duration</ref><sp/>m_max_response_time;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hal::rmd</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/include/libhal-rmd/drc.hpp"/>
+  </compounddef>
+</doxygen>

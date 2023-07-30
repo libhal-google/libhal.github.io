@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1lpc40_1_1interrupt__pin" kind="class" language="C++" prot="public">
+    <compoundname>hal::lpc40::interrupt_pin</compoundname>
+    <basecompoundref refid="classhal_1_1interrupt__pin" prot="public" virt="non-virtual">hal::interrupt_pin</basecompoundref>
+    <includes refid="libhal-lpc40_2interrupt__pin_8hpp" local="no">interrupt_pin.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1interrupt__pin_1aafbcb2e8b928e0b45a6b6c3cbb825739" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hal::lpc40::interrupt_pin::m_port</definition>
+        <argsstring></argsstring>
+        <name>m_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="55" column="11" bodyfile="libraries/include/libhal-lpc40/interrupt_pin.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1interrupt__pin_1a07e93caf26aaaf70b899c1cb713979b6" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hal::lpc40::interrupt_pin::m_pin</definition>
+        <argsstring></argsstring>
+        <name>m_pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="56" column="11" bodyfile="libraries/include/libhal-lpc40/interrupt_pin.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1interrupt__pin_1a81708f9f6f1ec9784478f555984b958e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::lpc40::interrupt_pin::m_moved</definition>
+        <argsstring></argsstring>
+        <name>m_moved</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="57" column="8" bodyfile="libraries/include/libhal-lpc40/interrupt_pin.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1interrupt__pin_1ae3a774de3f00220fbf67547ba9ce9fa9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1lpc40_1_1interrupt__pin" kindref="compound">interrupt_pin</ref> &gt;</type>
+        <definition>static result&lt;interrupt_pin&gt; hal::lpc40::interrupt_pin::get</definition>
+        <argsstring>(std::uint8_t port, std::uint8_t pin, settings p_settings={})</argsstring>
+        <name>get</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type><ref refid="structhal_1_1interrupt__pin_1_1settings" kindref="compound">settings</ref></type>
+          <declname>p_settings</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Get the interrupt pin object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- selects pin port to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- selects pin within the port to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- initial pin settings </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;interrupt_pin&gt; - interrupt pin driver object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="39" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1interrupt__pin_1a9aa50756c528a2e81f3ce6be6374d7e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::interrupt_pin::interrupt_pin</definition>
+        <argsstring>(interrupt_pin &amp;p_other)=delete</argsstring>
+        <name>interrupt_pin</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1interrupt__pin" kindref="compound">interrupt_pin</ref> &amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="43" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1interrupt__pin_1a11f3ba804abb64ac79f58dcc35bb69ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1lpc40_1_1interrupt__pin" kindref="compound">interrupt_pin</ref> &amp;</type>
+        <definition>interrupt_pin&amp; hal::lpc40::interrupt_pin::operator=</definition>
+        <argsstring>(interrupt_pin &amp;p_other)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1interrupt__pin" kindref="compound">interrupt_pin</ref> &amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="44" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1interrupt__pin_1abc6ca02fde5ceb2c858144ed43043b8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::interrupt_pin::interrupt_pin</definition>
+        <argsstring>(interrupt_pin &amp;&amp;p_other)</argsstring>
+        <name>interrupt_pin</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1interrupt__pin" kindref="compound">interrupt_pin</ref> &amp;&amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="45" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1interrupt__pin_1a33e18e2b478c6943d2f534c9a6678eae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1lpc40_1_1interrupt__pin" kindref="compound">interrupt_pin</ref> &amp;</type>
+        <definition>interrupt_pin&amp; hal::lpc40::interrupt_pin::operator=</definition>
+        <argsstring>(interrupt_pin &amp;&amp;p_other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1interrupt__pin" kindref="compound">interrupt_pin</ref> &amp;&amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="46" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1interrupt__pin_1ac1f516597c733fe492cf99e2e2c3036a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>hal::lpc40::interrupt_pin::~interrupt_pin</definition>
+        <argsstring>()</argsstring>
+        <name>~interrupt_pin</name>
+        <reimplements refid="classhal_1_1interrupt__pin_1ade8066862d68154d56b28c8fcc88073d">~interrupt_pin</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="47" column="3"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1interrupt__pin_1a5a18381c99f22e6a8041b168564f473b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::interrupt_pin::interrupt_pin</definition>
+        <argsstring>(std::uint8_t p_port, std::uint8_t p_pin)</argsstring>
+        <name>interrupt_pin</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_port</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="50" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1interrupt__pin_1a683169c4065bc343ff7c017b554cc779" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>status</type>
+        <definition>status hal::lpc40::interrupt_pin::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1interrupt__pin_1af6304cc7832f6354cf8326e6c4ef1269">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1interrupt__pin_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1interrupt__pin_1a34e99af6027eb02677f9ddbdc1cbc2c8" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hal::lpc40::interrupt_pin::driver_on_trigger</definition>
+        <argsstring>(hal::callback&lt; handler &gt; p_callback) override</argsstring>
+        <name>driver_on_trigger</name>
+        <reimplements refid="classhal_1_1interrupt__pin_1a2d36c254b38e2f9794b0253b32009b71">driver_on_trigger</reimplements>
+        <param>
+          <type><ref refid="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" kindref="member">hal::callback</ref>&lt; <ref refid="classhal_1_1interrupt__pin_1ad49df850168e2a62551d6d3d1e81d86c" kindref="member">handler</ref> &gt;</type>
+          <declname>p_callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="53" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interrupt pin implementation for the lpc40xx. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::lpc40::interrupt_pin</label>
+        <link refid="classhal_1_1lpc40_1_1interrupt__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::interrupt_pin</label>
+        <link refid="classhal_1_1interrupt__pin"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::lpc40::interrupt_pin</label>
+        <link refid="classhal_1_1lpc40_1_1interrupt__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::interrupt_pin</label>
+        <link refid="classhal_1_1interrupt__pin"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-lpc40/interrupt_pin.hpp" line="28" column="1" bodyfile="libraries/include/libhal-lpc40/interrupt_pin.hpp" bodystart="29" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classhal_1_1interrupt__pin_1ad4ecbb5149184f2d6a9002f6a51e2754" prot="public" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>configure</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1a683169c4065bc343ff7c017b554cc779" prot="private" virt="virtual"><scope>hal::lpc40::interrupt_pin</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1a34e99af6027eb02677f9ddbdc1cbc2c8" prot="private" virt="virtual"><scope>hal::lpc40::interrupt_pin</scope><name>driver_on_trigger</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1ae3a774de3f00220fbf67547ba9ce9fa9" prot="public" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>get</name></member>
+      <member refid="classhal_1_1interrupt__pin_1ad49df850168e2a62551d6d3d1e81d86c" prot="public" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>handler</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1a9aa50756c528a2e81f3ce6be6374d7e5" prot="public" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>interrupt_pin</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1abc6ca02fde5ceb2c858144ed43043b8d" prot="public" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>interrupt_pin</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1a5a18381c99f22e6a8041b168564f473b" prot="private" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>interrupt_pin</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1a81708f9f6f1ec9784478f555984b958e" prot="private" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>m_moved</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1a07e93caf26aaaf70b899c1cb713979b6" prot="private" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>m_pin</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1aafbcb2e8b928e0b45a6b6c3cbb825739" prot="private" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>m_port</name></member>
+      <member refid="classhal_1_1interrupt__pin_1aa110a57bf1d41c89a5df6b13740a6977" prot="public" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>on_trigger</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1a11f3ba804abb64ac79f58dcc35bb69ac" prot="public" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>operator=</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1a33e18e2b478c6943d2f534c9a6678eae" prot="public" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>operator=</name></member>
+      <member refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81" prot="public" virt="non-virtual"><scope>hal::lpc40::interrupt_pin</scope><name>trigger_edge</name></member>
+      <member refid="classhal_1_1lpc40_1_1interrupt__pin_1ac1f516597c733fe492cf99e2e2c3036a" prot="public" virt="virtual"><scope>hal::lpc40::interrupt_pin</scope><name>~interrupt_pin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
