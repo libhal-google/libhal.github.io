@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1interrupt__pin_1_1settings" kind="struct" language="C++" prot="public">
+    <compoundname>hal::interrupt_pin::settings</compoundname>
+    <includes refid="libhal_2interrupt__pin_8hpp" local="no">interrupt_pin.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1interrupt__pin_1_1settings_1ac36c47bf915a9e2af6bbc95c014e3984" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacehal_1af094ceea0d10800e8281b1014d7b8a1a" kindref="member">pin_resistor</ref></type>
+        <definition>pin_resistor hal::interrupt_pin::settings::resistor</definition>
+        <argsstring></argsstring>
+        <name>resistor</name>
+        <initializer>= <ref refid="namespacehal_1af094ceea0d10800e8281b1014d7b8a1aa5dd40e1f7d5c287d1df85dac013c1c38" kindref="member">pin_resistor::pull_up</ref></initializer>
+        <briefdescription>
+<para>Pull resistor for an interrupt pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In general, it is highly advised to either set the pull resistor to something other than &quot;none&quot; or to attach an external pull up resistor to the interrupt pin in order to prevent random interrupt from firing. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/interrupt_pin.hpp" line="75" column="18" bodyfile="libraries/include/libhal/interrupt_pin.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1interrupt__pin_1_1settings_1a0550a3974283296feb9c07c24f6f88ac" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81" kindref="member">trigger_edge</ref></type>
+        <definition>trigger_edge hal::interrupt_pin::settings::trigger</definition>
+        <argsstring></argsstring>
+        <name>trigger</name>
+        <initializer>= <ref refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81a637aa1a3f3fe939460e3e6126a3cb76a" kindref="member">trigger_edge::rising</ref></initializer>
+        <briefdescription>
+<para>The trigger condition that will signal the system to run the callback. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/interrupt_pin.hpp" line="82" column="18" bodyfile="libraries/include/libhal/interrupt_pin.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generic settings for interrupt pins. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/interrupt_pin.hpp" line="66" column="3" bodyfile="libraries/include/libhal/interrupt_pin.hpp" bodystart="67" bodyend="83"/>
+    <listofallmembers>
+      <member refid="structhal_1_1interrupt__pin_1_1settings_1ac36c47bf915a9e2af6bbc95c014e3984" prot="public" virt="non-virtual"><scope>hal::interrupt_pin::settings</scope><name>resistor</name></member>
+      <member refid="structhal_1_1interrupt__pin_1_1settings_1a0550a3974283296feb9c07c24f6f88ac" prot="public" virt="non-virtual"><scope>hal::interrupt_pin::settings</scope><name>trigger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

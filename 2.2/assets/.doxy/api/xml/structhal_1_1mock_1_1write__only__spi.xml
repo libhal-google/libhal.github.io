@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1mock_1_1write__only__spi" kind="struct" language="C++" prot="public">
+    <compoundname>hal::mock::write_only_spi</compoundname>
+    <basecompoundref refid="classhal_1_1spi" prot="public" virt="non-virtual">hal::spi</basecompoundref>
+    <includes refid="libhal-mock_2spi_8hpp" local="no">spi.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1mock_1_1write__only__spi_1aa63519def3ad3da7d4b2a5d28dda396e" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; <ref refid="structhal_1_1spi_1_1settings" kindref="compound">settings</ref> &gt;</type>
+        <definition>spy_handler&lt;settings&gt; hal::mock::write_only_spi::spy_configure</definition>
+        <argsstring></argsstring>
+        <name>spy_configure</name>
+        <briefdescription>
+<para>Spy handler for <ref refid="classhal_1_1spi_1aabc27516a87f51489e665bfc91e34a95" kindref="member">hal::spi::configure()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/spi.hpp" line="41" column="15" bodyfile="libraries/include/libhal-mock/spi.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1mock_1_1write__only__spi_1aeee238a30c3170666faba97c8555099c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;hal::byte&gt; &gt; hal::mock::write_only_spi::write_record</definition>
+        <argsstring></argsstring>
+        <name>write_record</name>
+        <briefdescription>
+<para>Record of the out data from <ref refid="classhal_1_1spi_1a5e2b7807bafc0c93666977021c5c280b" kindref="member">hal::spi::transfer()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/spi.hpp" line="43" column="15" bodyfile="libraries/include/libhal-mock/spi.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1write__only__spi_1a9be71a9e85a7fc15eef00839781eef73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::mock::write_only_spi::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset spy information for both <ref refid="classhal_1_1spi_1aabc27516a87f51489e665bfc91e34a95" kindref="member">configure()</ref> and <ref refid="classhal_1_1spi_1a5e2b7807bafc0c93666977021c5c280b" kindref="member">transfer()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/spi.hpp" line="34" column="8" bodyfile="libraries/include/libhal-mock/spi.hpp" bodystart="34" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1write__only__spi_1a21191c0c3b098b708f5ac69adb220777" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>status</type>
+        <definition>status hal::mock::write_only_spi::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1spi_1aadbf42ec96c43bab28ec515b6a4bcd99">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1spi_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/spi.hpp" line="46" column="10" bodyfile="libraries/include/libhal-mock/spi.hpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1mock_1_1write__only__spi_1aec1c895b19ea0f32465668054bebffc9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1spi_1_1transfer__t" kindref="compound">transfer_t</ref> &gt;</type>
+        <definition>result&lt;transfer_t&gt; hal::mock::write_only_spi::driver_transfer</definition>
+        <argsstring>(std::span&lt; const hal::byte &gt; p_data_out, [[maybe_unused]] std::span&lt; hal::byte &gt; p_data_in, [[maybe_unused]] hal::byte p_filler) override</argsstring>
+        <name>driver_transfer</name>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_filler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/spi.hpp" line="51" column="10" bodyfile="libraries/include/libhal-mock/spi.hpp" bodystart="51" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Mock spi implementation for use in unit tests and simulations with a spy functions for <ref refid="classhal_1_1spi_1aabc27516a87f51489e665bfc91e34a95" kindref="member">configure()</ref> and a record for the <ref refid="classhal_1_1spi_1a5e2b7807bafc0c93666977021c5c280b" kindref="member">transfer()</ref> out data. The record ignores the in buffer and just stores the data being sent so it can be inspected later. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::spi</label>
+        <link refid="classhal_1_1spi"/>
+      </node>
+      <node id="1">
+        <label>hal::mock::write_only_spi</label>
+        <link refid="structhal_1_1mock_1_1write__only__spi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>hal::spy_handler&lt; settings &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+      <node id="2">
+        <label>hal::spi</label>
+        <link refid="classhal_1_1spi"/>
+      </node>
+      <node id="1">
+        <label>hal::mock::write_only_spi</label>
+        <link refid="structhal_1_1mock_1_1write__only__spi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>spy_configure</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-mock/spi.hpp" line="28" column="1" bodyfile="libraries/include/libhal-mock/spi.hpp" bodystart="29" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classhal_1_1spi_1aabc27516a87f51489e665bfc91e34a95" prot="public" virt="non-virtual"><scope>hal::mock::write_only_spi</scope><name>configure</name></member>
+      <member refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" prot="public" virt="non-virtual"><scope>hal::mock::write_only_spi</scope><name>default_filler</name></member>
+      <member refid="structhal_1_1mock_1_1write__only__spi_1a21191c0c3b098b708f5ac69adb220777" prot="private" virt="virtual"><scope>hal::mock::write_only_spi</scope><name>driver_configure</name></member>
+      <member refid="structhal_1_1mock_1_1write__only__spi_1aec1c895b19ea0f32465668054bebffc9" prot="private" virt="non-virtual"><scope>hal::mock::write_only_spi</scope><name>driver_transfer</name></member>
+      <member refid="structhal_1_1mock_1_1write__only__spi_1a9be71a9e85a7fc15eef00839781eef73" prot="public" virt="non-virtual"><scope>hal::mock::write_only_spi</scope><name>reset</name></member>
+      <member refid="structhal_1_1mock_1_1write__only__spi_1aa63519def3ad3da7d4b2a5d28dda396e" prot="public" virt="non-virtual"><scope>hal::mock::write_only_spi</scope><name>spy_configure</name></member>
+      <member refid="classhal_1_1spi_1a5e2b7807bafc0c93666977021c5c280b" prot="public" virt="non-virtual"><scope>hal::mock::write_only_spi</scope><name>transfer</name></member>
+      <member refid="structhal_1_1mock_1_1write__only__spi_1aeee238a30c3170666faba97c8555099c" prot="public" virt="non-virtual"><scope>hal::mock::write_only_spi</scope><name>write_record</name></member>
+      <member refid="classhal_1_1spi_1ac14f846d303d9c5b80f60890e9db794d" prot="public" virt="virtual"><scope>hal::mock::write_only_spi</scope><name>~spi</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
