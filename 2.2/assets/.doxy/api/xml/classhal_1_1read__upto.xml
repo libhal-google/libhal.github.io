@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1read__upto" kind="class" language="C++" prot="public">
+    <compoundname>hal::read_upto</compoundname>
+    <includes refid="serial__coroutines_8hpp" local="no">serial_coroutines.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1read__upto_1a8f23cdcbdf4e4a7bd1af84969608b2fb" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> *</type>
+        <definition>serial* hal::read_upto::m_serial</definition>
+        <argsstring></argsstring>
+        <name>m_serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="256" column="10" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1read__upto_1a2414a408e91cab228aeb6dcb98b8cd28" prot="private" static="no" mutable="no">
+        <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+        <definition>std::span&lt;const hal::byte&gt; hal::read_upto::m_sequence</definition>
+        <argsstring></argsstring>
+        <name>m_sequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="257" column="13" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1read__upto_1ad4695e28c1ad06dfb7ce2659db54abfa" prot="private" static="no" mutable="no">
+        <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+        <definition>std::span&lt;hal::byte&gt; hal::read_upto::m_buffer</definition>
+        <argsstring></argsstring>
+        <name>m_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="258" column="13" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1read__upto_1a30794810926af2801e6d5bfebb1a6c1c" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hal::read_upto::m_read_limit</definition>
+        <argsstring></argsstring>
+        <name>m_read_limit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="259" column="10" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1read__upto_1ac04297c7f5d535e601b324f6ed709000" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hal::read_upto::m_search_index</definition>
+        <argsstring></argsstring>
+        <name>m_search_index</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="260" column="10" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1read__upto_1a9e95ef2ca05309b6a5dbf9d1d5ba5ee4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hal::read_upto::read_upto</definition>
+        <argsstring>(serial &amp;p_serial, std::span&lt; const hal::byte &gt; p_sequence, std::span&lt; hal::byte &gt; p_buffer, size_t p_read_limit=32)</argsstring>
+        <name>read_upto</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_sequence</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>p_read_limit</declname>
+          <defval>32</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new skip beyond object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- serial port to skip through </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_sequence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- sequence to search for. The lifetime of this data pointed to by this span must outlive this object, or not be used when the lifetime of that data is no longer available. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to fill data into </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_read_limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the maximum number of bytes to read off from the serial port before returning. A value 0 will result in no reads from the serial port. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="189" column="3" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="189" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1read__upto_1adabb4133577f7cdb1aaa06008f5e45f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref> &gt;</type>
+        <definition>result&lt;work_state&gt; hal::read_upto::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <briefdescription>
+<para>read data into the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will return if the read limit is reached or if there are no more bytes in the serial port.</para>
+<para>Call this function again to resume reading from the port.</para>
+<para><simplesect kind="return"><para>result&lt;work_state&gt; - work_state::in_progress if the sequence hasn&apos;t been met and the buffer still has space. </para>
+</simplesect>
+<simplesect kind="return"><para>result&lt;work_state&gt; - work_state::failed if the sequence wasn&apos;t found before the buffer was filled completely. </para>
+</simplesect>
+<simplesect kind="return"><para>result&lt;work_state&gt; - work_state::finished if the sequence was found before the buffer was filled completely. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="215" column="10" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="215" bodyend="253"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Discard received bytes until the sequence is found. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="174" column="1" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="175" bodyend="261"/>
+    <listofallmembers>
+      <member refid="classhal_1_1read__upto_1ad4695e28c1ad06dfb7ce2659db54abfa" prot="private" virt="non-virtual"><scope>hal::read_upto</scope><name>m_buffer</name></member>
+      <member refid="classhal_1_1read__upto_1a30794810926af2801e6d5bfebb1a6c1c" prot="private" virt="non-virtual"><scope>hal::read_upto</scope><name>m_read_limit</name></member>
+      <member refid="classhal_1_1read__upto_1ac04297c7f5d535e601b324f6ed709000" prot="private" virt="non-virtual"><scope>hal::read_upto</scope><name>m_search_index</name></member>
+      <member refid="classhal_1_1read__upto_1a2414a408e91cab228aeb6dcb98b8cd28" prot="private" virt="non-virtual"><scope>hal::read_upto</scope><name>m_sequence</name></member>
+      <member refid="classhal_1_1read__upto_1a8f23cdcbdf4e4a7bd1af84969608b2fb" prot="private" virt="non-virtual"><scope>hal::read_upto</scope><name>m_serial</name></member>
+      <member refid="classhal_1_1read__upto_1adabb4133577f7cdb1aaa06008f5e45f5" prot="public" virt="non-virtual"><scope>hal::read_upto</scope><name>operator()</name></member>
+      <member refid="classhal_1_1read__upto_1a9e95ef2ca05309b6a5dbf9d1d5ba5ee4" prot="public" virt="non-virtual"><scope>hal::read_upto</scope><name>read_upto</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

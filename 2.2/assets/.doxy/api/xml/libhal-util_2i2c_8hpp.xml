@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="libhal-util_2i2c_8hpp" kind="file" language="C++">
+    <compoundname>i2c.hpp</compoundname>
+    <includes local="no">functional</includes>
+    <includes refid="error_8hpp" local="no">libhal/error.hpp</includes>
+    <includes refid="libhal_2i2c_8hpp" local="no">libhal/i2c.hpp</includes>
+    <includes refid="libhal_2units_8hpp" local="no">libhal/units.hpp</includes>
+    <includes refid="enum_8hpp" local="yes">enum.hpp</includes>
+    <includes refid="math_8hpp" local="yes">math.hpp</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>system_error</label>
+      </node>
+      <node id="2">
+        <label>functional</label>
+      </node>
+      <node id="19">
+        <label>limits</label>
+      </node>
+      <node id="9">
+        <label>cstdint</label>
+      </node>
+      <node id="11">
+        <label>tl/function_ref.hpp</label>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal-util/i2c.hpp</label>
+        <link refid="libhal-util_2i2c_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>timeout.hpp</label>
+        <link refid="libhal_2timeout_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>enum.hpp</label>
+        <link refid="enum_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>math.hpp</label>
+        <link refid="math_8hpp"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>third_party/inplace_function.hpp</label>
+      </node>
+      <node id="8">
+        <label>functional.hpp</label>
+        <link refid="functional_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>units.hpp</label>
+        <link refid="libhal_2units_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>boost/leaf.hpp</label>
+      </node>
+      <node id="3">
+        <label>libhal/error.hpp</label>
+        <link refid="error_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>libhal/i2c.hpp</label>
+        <link refid="libhal_2i2c_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>chrono</label>
+      </node>
+      <node id="18">
+        <label>concepts</label>
+      </node>
+      <node id="16">
+        <label>type_traits</label>
+      </node>
+      <node id="7">
+        <label>span</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehal">hal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2023<sp/>Google<sp/>LLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/error.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/i2c.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/units.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;enum.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="math_8hpp" kindref="compound">math.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehal" kindref="compound">hal</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">[[nodiscard]]<sp/>constexpr<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator==(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>i2c::settings&amp;<sp/>p_lhs,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>i2c::settings&amp;<sp/>p_rhs)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacehal_1a672dc7a38be09e228336cb3e7db942d9" kindref="member">equals</ref>(p_lhs.clock_rate,<sp/>p_rhs.clock_rate);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="namespacehal_1a589504d8349443cb5a9ed2caa02dcbe1" refkind="member"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>hal::result&lt;hal::i2c::transaction_t&gt;<sp/><ref refid="namespacehal_1a589504d8349443cb5a9ed2caa02dcbe1" kindref="member">write</ref>(</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref>&amp;<sp/>p_i2c,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>std::span&lt;const<sp/>hal::byte&gt;<sp/>p_data_out,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>timeout<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p_timeout)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p_i2c.<ref refid="classhal_1_1i2c_1ab77e3c9347655368b887f3b14d4734a2" kindref="member">transaction</ref>(</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>p_address,<sp/>p_data_out,<sp/>std::span&lt;hal::byte&gt;{},<sp/>p_timeout);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>hal::result&lt;hal::i2c::transaction_t&gt;</highlight></codeline>
+<codeline lineno="66" refid="namespacehal_1ab564ab7dc8cf7d1e84824ec19de35156" refkind="member"><highlight class="normal"><ref refid="namespacehal_1a589504d8349443cb5a9ed2caa02dcbe1" kindref="member">write</ref>(<ref refid="classhal_1_1i2c" kindref="compound">i2c</ref>&amp;<sp/>p_i2c,<sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address,<sp/>std::span&lt;const<sp/>hal::byte&gt;<sp/>p_data_out)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacehal_1a589504d8349443cb5a9ed2caa02dcbe1" kindref="member">write</ref>(p_i2c,<sp/>p_address,<sp/>p_data_out,<sp/><ref refid="namespacehal_1a17e66fb842cd0ba8b46795b5e905741a" kindref="member">hal::never_timeout</ref>());</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="namespacehal_1a5164defc44fc09c44d77d1ff823998eb" refkind="member"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>hal::result&lt;hal::i2c::transaction_t&gt;<sp/><ref refid="namespacehal_1a5164defc44fc09c44d77d1ff823998eb" kindref="member">read</ref>(</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref>&amp;<sp/>p_i2c,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>std::span&lt;hal::byte&gt;<sp/>p_data_in,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>timeout<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p_timeout)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p_i2c.<ref refid="classhal_1_1i2c_1ab77e3c9347655368b887f3b14d4734a2" kindref="member">transaction</ref>(</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>p_address,<sp/>std::span&lt;hal::byte&gt;{},<sp/>p_data_in,<sp/>p_timeout);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>hal::result&lt;hal::i2c::transaction_t&gt;</highlight></codeline>
+<codeline lineno="104" refid="namespacehal_1ad5f7bceb8182234dbf4055e620a8f547" refkind="member"><highlight class="normal"><ref refid="namespacehal_1a5164defc44fc09c44d77d1ff823998eb" kindref="member">read</ref>(<ref refid="classhal_1_1i2c" kindref="compound">i2c</ref>&amp;<sp/>p_i2c,<sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address,<sp/>std::span&lt;hal::byte&gt;<sp/>p_data_in)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacehal_1a5164defc44fc09c44d77d1ff823998eb" kindref="member">read</ref>(p_i2c,<sp/>p_address,<sp/>p_data_in,<sp/><ref refid="namespacehal_1a17e66fb842cd0ba8b46795b5e905741a" kindref="member">hal::never_timeout</ref>());</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>BytesToRead&gt;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">[[nodiscard]]<sp/>result&lt;std::array&lt;hal::byte,<sp/>BytesToRead&gt;&gt;</highlight></codeline>
+<codeline lineno="123" refid="namespacehal_1af5af1e6128fca7096a803c0696819a1b" refkind="member"><highlight class="normal"><ref refid="namespacehal_1a5164defc44fc09c44d77d1ff823998eb" kindref="member">read</ref>(<ref refid="classhal_1_1i2c" kindref="compound">i2c</ref>&amp;<sp/>p_i2c,<sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address,<sp/>timeout<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p_timeout)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>std::array&lt;hal::byte,<sp/>BytesToRead&gt;<sp/>buffer;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>HAL_CHECK(<ref refid="namespacehal_1a5164defc44fc09c44d77d1ff823998eb" kindref="member">read</ref>(p_i2c,<sp/>p_address,<sp/>buffer,<sp/>p_timeout));</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>BytesToRead&gt;</highlight></codeline>
+<codeline lineno="144" refid="namespacehal_1a697316c49d4dd12eb54c4bcfe7ac2140" refkind="member"><highlight class="normal">[[nodiscard]]<sp/>result&lt;std::array&lt;hal::byte,<sp/>BytesToRead&gt;&gt;<sp/><ref refid="namespacehal_1a5164defc44fc09c44d77d1ff823998eb" kindref="member">read</ref>(</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref>&amp;<sp/>p_i2c,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>read&lt;BytesToRead&gt;(p_i2c,<sp/>p_address,<sp/><ref refid="namespacehal_1a17e66fb842cd0ba8b46795b5e905741a" kindref="member">hal::never_timeout</ref>());</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="namespacehal_1a3120e8d9eff19d2010c7ffa47b739d59" refkind="member"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>hal::result&lt;hal::i2c::transaction_t&gt;<sp/><ref refid="namespacehal_1a3120e8d9eff19d2010c7ffa47b739d59" kindref="member">write_then_read</ref>(</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref>&amp;<sp/>p_i2c,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>std::span&lt;const<sp/>hal::byte&gt;<sp/>p_data_out,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>std::span&lt;hal::byte&gt;<sp/>p_data_in,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>timeout<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p_timeout<sp/>=<sp/><ref refid="namespacehal_1a17e66fb842cd0ba8b46795b5e905741a" kindref="member">hal::never_timeout</ref>())</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p_i2c.<ref refid="classhal_1_1i2c_1ab77e3c9347655368b887f3b14d4734a2" kindref="member">transaction</ref>(p_address,<sp/>p_data_out,<sp/>p_data_in,<sp/>p_timeout);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="namespacehal_1aa9b1ae268be78ad883381b1370b6f539" refkind="member"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>hal::result&lt;hal::i2c::transaction_t&gt;<sp/><ref refid="namespacehal_1a3120e8d9eff19d2010c7ffa47b739d59" kindref="member">write_then_read</ref>(</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref>&amp;<sp/>p_i2c,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>std::span&lt;const<sp/>hal::byte&gt;<sp/>p_data_out,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>std::span&lt;hal::byte&gt;<sp/>p_data_in)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacehal_1a3120e8d9eff19d2010c7ffa47b739d59" kindref="member">write_then_read</ref>(</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>p_i2c,<sp/>p_address,<sp/>p_data_out,<sp/>p_data_in,<sp/><ref refid="namespacehal_1a17e66fb842cd0ba8b46795b5e905741a" kindref="member">hal::never_timeout</ref>());</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>BytesToRead&gt;</highlight></codeline>
+<codeline lineno="215" refid="namespacehal_1a5f19caebd902ee9bdd7595d0dbb8ecc3" refkind="member"><highlight class="normal">[[nodiscard]]<sp/>result&lt;std::array&lt;hal::byte,<sp/>BytesToRead&gt;&gt;<sp/><ref refid="namespacehal_1a3120e8d9eff19d2010c7ffa47b739d59" kindref="member">write_then_read</ref>(</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref>&amp;<sp/>p_i2c,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>std::span&lt;const<sp/>hal::byte&gt;<sp/>p_data_out,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/>timeout<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p_timeout)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/>std::array&lt;hal::byte,<sp/>BytesToRead&gt;<sp/>buffer;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/>HAL_CHECK(<ref refid="namespacehal_1a3120e8d9eff19d2010c7ffa47b739d59" kindref="member">write_then_read</ref>(p_i2c,<sp/>p_address,<sp/>p_data_out,<sp/>buffer,<sp/>p_timeout));</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buffer;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>BytesToRead&gt;</highlight></codeline>
+<codeline lineno="239" refid="namespacehal_1ab44292d5e087d50788d01c15b33a007c" refkind="member"><highlight class="normal">[[nodiscard]]<sp/>result&lt;std::array&lt;hal::byte,<sp/>BytesToRead&gt;&gt;<sp/><ref refid="namespacehal_1a3120e8d9eff19d2010c7ffa47b739d59" kindref="member">write_then_read</ref>(</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref>&amp;<sp/>p_i2c,</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address,</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>std::span&lt;const<sp/>hal::byte&gt;<sp/>p_data_out)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>write_then_read&lt;BytesToRead&gt;(</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>p_i2c,<sp/>p_address,<sp/>p_data_out,<sp/><ref refid="namespacehal_1a17e66fb842cd0ba8b46795b5e905741a" kindref="member">hal::never_timeout</ref>());</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="namespacehal_1ad889f2479fa05f2d5e6fcd69ceb05c09" refkind="member"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>hal::result&lt;hal::i2c::transaction_t&gt;<sp/><ref refid="namespacehal_1ad889f2479fa05f2d5e6fcd69ceb05c09" kindref="member">probe</ref>(</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref>&amp;<sp/>p_i2c,</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>p_data_in:<sp/>empty<sp/>placeholder<sp/>for<sp/>transcation&apos;s<sp/>data_in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>std::array&lt;hal::byte,<sp/>1&gt;<sp/>data_in;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>p_timeout:<sp/>no<sp/>timeout<sp/>placeholder<sp/>for<sp/>transaction&apos;s<sp/>p_timeout</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/>timeout<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>timeout<sp/>=<sp/><ref refid="namespacehal_1a17e66fb842cd0ba8b46795b5e905741a" kindref="member">hal::never_timeout</ref>();</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p_i2c.<ref refid="classhal_1_1i2c_1ab77e3c9347655368b887f3b14d4734a2" kindref="member">transaction</ref>(p_address,<sp/>std::span&lt;hal::byte&gt;{},<sp/>data_in,<sp/>timeout);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="namespacehal_1a4bc0e9cc2796f6676976c95bc0b5eaa4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacehal_1a4bc0e9cc2796f6676976c95bc0b5eaa4" kindref="member">i2c_operation</ref></highlight></codeline>
+<codeline lineno="273"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1a4bc0e9cc2796f6676976c95bc0b5eaa4aefb2a684e4afb7d55e6147fbe5a332ee" kindref="member">write</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1a4bc0e9cc2796f6676976c95bc0b5eaa4aecae13117d6f0584c25a9da6c8f8415e" kindref="member">read</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287" refid="namespacehal_1abd1657e2d3d9561e9f9746837a075c1a" refkind="member"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/><ref refid="namespacehal_1abd1657e2d3d9561e9f9746837a075c1a" kindref="member">to_8_bit_address</ref>(</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_address,</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1a4bc0e9cc2796f6676976c95bc0b5eaa4" kindref="member">i2c_operation</ref><sp/>p_operation)<sp/>noexcept</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>v8bit_address<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p_address<sp/>&lt;&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/>v8bit_address<sp/>|=<sp/><ref refid="namespacehal_1a611c8ae4842fd8659993a6cc1f2e0829" kindref="member">hal::value</ref>(p_operation);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v8bit_address;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hal</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/include/libhal-util/i2c.hpp"/>
+  </compounddef>
+</doxygen>

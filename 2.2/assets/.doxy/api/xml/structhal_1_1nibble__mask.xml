@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1nibble__mask" kind="struct" language="C++" prot="public">
+    <compoundname>hal::nibble_mask</compoundname>
+    <includes refid="bit_8hpp" local="no">bit.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>size_t</type>
+        <declname>NibbleIndex</declname>
+        <defname>NibbleIndex</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structhal_1_1nibble__mask_1af63f894d869b84faf1d5d9fd73924a21" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr <ref refid="structhal_1_1bitmask" kindref="compound">hal::bitmask</ref></type>
+        <definition>constexpr hal::bitmask hal::nibble_mask&lt; NibbleIndex &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>{ .position = NibbleIndex, .width = 4 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="211" column="33" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper for generating nibble position masks. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>NibbleIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the nibble position to make a mask for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::nibble_mask&lt; NibbleIndex &gt;</label>
+        <link refid="structhal_1_1nibble__mask"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::bitmask</label>
+        <link refid="structhal_1_1bitmask"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-util/bit.hpp" line="209" column="1" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="210" bodyend="212"/>
+    <listofallmembers>
+      <member refid="structhal_1_1nibble__mask_1af63f894d869b84faf1d5d9fd73924a21" prot="public" virt="non-virtual"><scope>hal::nibble_mask</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

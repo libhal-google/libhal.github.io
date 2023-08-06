@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1lpc40_1_1can" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>hal::lpc40::can</compoundname>
+    <basecompoundref refid="classhal_1_1can" prot="public" virt="non-virtual">hal::can</basecompoundref>
+    <innerclass refid="structhal_1_1lpc40_1_1can_1_1port" prot="public">hal::lpc40::can::port</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1can_1ae6d00402051522b1fbee952109d41c08" prot="private" static="no" mutable="no">
+        <type><ref refid="structhal_1_1lpc40_1_1can_1_1port" kindref="compound">port</ref></type>
+        <definition>port hal::lpc40::can::m_port</definition>
+        <argsstring></argsstring>
+        <name>m_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/can.hpp" line="73" column="8" bodyfile="libraries/include/libhal-lpc40/can.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1can_1a6617cae2f46f37877b79a13e1d87a18d" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" kindref="member">hal::callback</ref>&lt; <ref refid="classhal_1_1can_1aad5d17f59a3a8f3bddded97760737163" kindref="member">can::handler</ref> &gt;</type>
+        <definition>hal::callback&lt;can::handler&gt; hal::lpc40::can::m_receive_handler</definition>
+        <argsstring></argsstring>
+        <name>m_receive_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/can.hpp" line="74" column="17" bodyfile="libraries/include/libhal-lpc40/can.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1can_1af21a0cf1fc8f2ffdecab319eb628d686" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1lpc40_1_1can" kindref="compound">can</ref> &gt;</type>
+        <definition>static result&lt;can&gt; hal::lpc40::can::get</definition>
+        <argsstring>(std::uint8_t p_port, can::settings p_settings={})</argsstring>
+        <name>get</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_port</declname>
+        </param>
+        <param>
+          <type><ref refid="structhal_1_1can_1_1settings" kindref="compound">can::settings</ref></type>
+          <declname>p_settings</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/can.hpp" line="52" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1can_1a735f1d91403040e5fe3d46729c206c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>hal::lpc40::can::~can</definition>
+        <argsstring>()</argsstring>
+        <name>~can</name>
+        <reimplements refid="classhal_1_1can_1a88c989bfc09af537f1177089eb8adbd8">~can</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/can.hpp" line="53" column="3"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1can_1a40b3a5e73d4bd0cbdb1fda58ac0a594f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::can::can</definition>
+        <argsstring>(port p_port)</argsstring>
+        <name>can</name>
+        <param>
+          <type><ref refid="structhal_1_1lpc40_1_1can_1_1port" kindref="compound">port</ref></type>
+          <declname>p_port</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new can object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- CAN port information </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/can.hpp" line="61" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1can_1a72040b318fa4e4d4c82a4a571b55ba95" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>status</type>
+        <definition>status hal::lpc40::can::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1can_1a74f1bb2345d78a9d9e32dbb08ea9f728">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1can_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/can.hpp" line="63" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1can_1abf0e8ed97f3e9596d371682223b72ddd" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>status</type>
+        <definition>status hal::lpc40::can::driver_bus_on</definition>
+        <argsstring>() override</argsstring>
+        <name>driver_bus_on</name>
+        <reimplements refid="classhal_1_1can_1af3aacb89fa1d81eb2db4baa09936c5e1">driver_bus_on</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/can.hpp" line="64" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1can_1a8a8e7787591c07e500d0c77afe97e1d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1can_1_1send__t" kindref="compound">send_t</ref> &gt;</type>
+        <definition>result&lt;send_t&gt; hal::lpc40::can::driver_send</definition>
+        <argsstring>(const message_t &amp;p_message) override</argsstring>
+        <name>driver_send</name>
+        <reimplements refid="classhal_1_1can_1ab006bbc7a0afd7487586a22cd2edce66">driver_send</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1can_1_1message__t" kindref="compound">message_t</ref> &amp;</type>
+          <declname>p_message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/can.hpp" line="65" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1can_1adbc53751c4b412b29af1aeb5efefb9bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::lpc40::can::driver_on_receive</definition>
+        <argsstring>(hal::callback&lt; can::handler &gt; p_receive_handler) override</argsstring>
+        <name>driver_on_receive</name>
+        <param>
+          <type><ref refid="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" kindref="member">hal::callback</ref>&lt; <ref refid="classhal_1_1can_1aad5d17f59a3a8f3bddded97760737163" kindref="member">can::handler</ref> &gt;</type>
+          <declname>p_receive_handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This interrupt handler is used by both CAN1 and CAN2. This should only be called for a single CAN port to service both receive handlers. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/can.hpp" line="70" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::lpc40::can</label>
+        <link refid="classhal_1_1lpc40_1_1can"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::can</label>
+        <link refid="classhal_1_1can"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::lpc40::can</label>
+        <link refid="classhal_1_1lpc40_1_1can"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::can</label>
+        <link refid="classhal_1_1can"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-lpc40/can.hpp" line="25" column="1" bodyfile="libraries/include/libhal-lpc40/can.hpp" bodystart="26" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classhal_1_1can_1afcf2dd59770197b320a22660e0f79fab" prot="public" virt="non-virtual"><scope>hal::lpc40::can</scope><name>bus_on</name></member>
+      <member refid="classhal_1_1lpc40_1_1can_1a40b3a5e73d4bd0cbdb1fda58ac0a594f" prot="private" virt="non-virtual"><scope>hal::lpc40::can</scope><name>can</name></member>
+      <member refid="classhal_1_1can_1a3689f792846d977e93c69dd6c42b9ff9" prot="public" virt="non-virtual"><scope>hal::lpc40::can</scope><name>configure</name></member>
+      <member refid="classhal_1_1lpc40_1_1can_1abf0e8ed97f3e9596d371682223b72ddd" prot="private" virt="virtual"><scope>hal::lpc40::can</scope><name>driver_bus_on</name></member>
+      <member refid="classhal_1_1lpc40_1_1can_1a72040b318fa4e4d4c82a4a571b55ba95" prot="private" virt="virtual"><scope>hal::lpc40::can</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1lpc40_1_1can_1adbc53751c4b412b29af1aeb5efefb9bf" prot="private" virt="non-virtual"><scope>hal::lpc40::can</scope><name>driver_on_receive</name></member>
+      <member refid="classhal_1_1lpc40_1_1can_1a8a8e7787591c07e500d0c77afe97e1d5" prot="private" virt="virtual"><scope>hal::lpc40::can</scope><name>driver_send</name></member>
+      <member refid="classhal_1_1lpc40_1_1can_1af21a0cf1fc8f2ffdecab319eb628d686" prot="public" virt="non-virtual"><scope>hal::lpc40::can</scope><name>get</name></member>
+      <member refid="classhal_1_1can_1aad5d17f59a3a8f3bddded97760737163" prot="public" virt="non-virtual"><scope>hal::lpc40::can</scope><name>handler</name></member>
+      <member refid="classhal_1_1can_1ae85571b4f7aac93fca8503aafcb32a47" prot="public" virt="non-virtual"><scope>hal::lpc40::can</scope><name>id_t</name></member>
+      <member refid="classhal_1_1lpc40_1_1can_1ae6d00402051522b1fbee952109d41c08" prot="private" virt="non-virtual"><scope>hal::lpc40::can</scope><name>m_port</name></member>
+      <member refid="classhal_1_1lpc40_1_1can_1a6617cae2f46f37877b79a13e1d87a18d" prot="private" virt="non-virtual"><scope>hal::lpc40::can</scope><name>m_receive_handler</name></member>
+      <member refid="classhal_1_1can_1a8d428d2300fa5994e1acf3c3a467490c" prot="public" virt="non-virtual"><scope>hal::lpc40::can</scope><name>on_receive</name></member>
+      <member refid="classhal_1_1can_1aef573e4697999cd24dcc9074a6f85bec" prot="public" virt="non-virtual"><scope>hal::lpc40::can</scope><name>send</name></member>
+      <member refid="classhal_1_1lpc40_1_1can_1a735f1d91403040e5fe3d46729c206c8c" prot="public" virt="virtual"><scope>hal::lpc40::can</scope><name>~can</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

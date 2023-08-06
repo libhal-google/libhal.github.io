@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="libhal_2interrupt__pin_8hpp" kind="file" language="C++">
+    <compoundname>interrupt_pin.hpp</compoundname>
+    <includes refid="error_8hpp" local="yes">error.hpp</includes>
+    <includes refid="functional_8hpp" local="yes">functional.hpp</includes>
+    <includes refid="libhal_2units_8hpp" local="yes">units.hpp</includes>
+    <includedby refid="libhal-lpc40_2interrupt__pin_8hpp" local="no">libraries/include/libhal-lpc40/interrupt_pin.hpp</includedby>
+    <includedby refid="libhal-mock_2interrupt__pin_8hpp" local="no">libraries/include/libhal-mock/interrupt_pin.hpp</includedby>
+    <includedby refid="inert__interrupt__pin_8hpp" local="no">libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp</includedby>
+    <includedby refid="libhal-util_2interrupt__pin_8hpp" local="no">libraries/include/libhal-util/interrupt_pin.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>system_error</label>
+      </node>
+      <node id="6">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>tl/function_ref.hpp</label>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal/interrupt_pin.hpp</label>
+        <link refid="libhal_2interrupt__pin_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>third_party/inplace_function.hpp</label>
+      </node>
+      <node id="5">
+        <label>functional.hpp</label>
+        <link refid="functional_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>units.hpp</label>
+        <link refid="libhal_2units_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>boost/leaf.hpp</label>
+      </node>
+      <node id="2">
+        <label>error.hpp</label>
+        <link refid="error_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>chrono</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>libraries/include/libhal-util/interrupt_pin.hpp</label>
+        <link refid="libhal-util_2interrupt__pin_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp</label>
+        <link refid="inert__interrupt__pin_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>libraries/include/libhal-lpc40/interrupt_pin.hpp</label>
+        <link refid="libhal-lpc40_2interrupt__pin_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal/interrupt_pin.hpp</label>
+        <link refid="libhal_2interrupt__pin_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libraries/include/libhal-mock/interrupt_pin.hpp</label>
+        <link refid="libhal-mock_2interrupt__pin_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhal_1_1interrupt__pin" prot="public">hal::interrupt_pin</innerclass>
+    <innerclass refid="structhal_1_1interrupt__pin_1_1settings" prot="public">hal::interrupt_pin::settings</innerclass>
+    <innernamespace refid="namespacehal">hal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2023<sp/>Google<sp/>LLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;error.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;functional.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;units.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehal" kindref="compound">hal</ref><sp/>{</highlight></codeline>
+<codeline lineno="34" refid="classhal_1_1interrupt__pin" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhal_1_1interrupt__pin" kindref="compound">interrupt_pin</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41" refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81" kindref="member">trigger_edge</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81a465223d16534b847faf7b88e6cd17139" kindref="member">falling</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81a637aa1a3f3fe939460e3e6126a3cb76a" kindref="member">rising</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81af6cb3e816496528d4187db53bc66567f" kindref="member">both</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="structhal_1_1interrupt__pin_1_1settings" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1interrupt__pin_1_1settings" kindref="compound">settings</ref></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75" refid="structhal_1_1interrupt__pin_1_1settings_1ac36c47bf915a9e2af6bbc95c014e3984" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal_1af094ceea0d10800e8281b1014d7b8a1a" kindref="member">pin_resistor</ref><sp/><ref refid="structhal_1_1interrupt__pin_1_1settings_1ac36c47bf915a9e2af6bbc95c014e3984" kindref="member">resistor</ref><sp/>=<sp/><ref refid="namespacehal_1af094ceea0d10800e8281b1014d7b8a1aa5dd40e1f7d5c287d1df85dac013c1c38" kindref="member">pin_resistor::pull_up</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="structhal_1_1interrupt__pin_1_1settings_1a0550a3974283296feb9c07c24f6f88ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81" kindref="member">trigger_edge</ref><sp/><ref refid="structhal_1_1interrupt__pin_1_1settings_1a0550a3974283296feb9c07c24f6f88ac" kindref="member">trigger</ref><sp/>=<sp/><ref refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81a637aa1a3f3fe939460e3e6126a3cb76a" kindref="member">trigger_edge::rising</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classhal_1_1interrupt__pin_1ad49df850168e2a62551d6d3d1e81d86c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1interrupt__pin_1ad49df850168e2a62551d6d3d1e81d86c" kindref="member">handler</ref><sp/>=<sp/>void(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>p_state);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classhal_1_1interrupt__pin_1ad4ecbb5149184f2d6a9002f6a51e2754" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>status<sp/><ref refid="classhal_1_1interrupt__pin_1ad4ecbb5149184f2d6a9002f6a51e2754" kindref="member">configure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1interrupt__pin_1_1settings" kindref="compound">settings</ref>&amp;<sp/>p_settings)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>driver_configure(p_settings);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classhal_1_1interrupt__pin_1aa110a57bf1d41c89a5df6b13740a6977" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1interrupt__pin_1aa110a57bf1d41c89a5df6b13740a6977" kindref="member">on_trigger</ref>(<ref refid="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" kindref="member">hal::callback&lt;handler&gt;</ref><sp/>p_callback)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>driver_on_trigger(p_callback);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classhal_1_1interrupt__pin" kindref="compound">interrupt_pin</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>status<sp/>driver_configure(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>settings&amp;<sp/>p_settings)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>driver_on_trigger(<ref refid="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" kindref="member">hal::callback&lt;handler&gt;</ref><sp/>p_callback)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hal</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/include/libhal/interrupt_pin.hpp"/>
+  </compounddef>
+</doxygen>
