@@ -15,6 +15,7 @@
       <p>Latest Version</p>
     </th>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-__platform__/">libhal/libhal-__platform__</a>
@@ -29,6 +30,7 @@
       <a href="https://github.com/libhal/libhal-__platform__/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-__platform__/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-stm32f1/">libhal/libhal-stm32f1</a>
@@ -43,6 +45,7 @@
       <a href="https://github.com/libhal/libhal-stm32f1/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-stm32f1/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-esp8266/">libhal/libhal-esp8266</a>
@@ -57,6 +60,7 @@
       <a href="https://github.com/libhal/libhal-esp8266/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-esp8266/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-__device__/">libhal/libhal-__device__</a>
@@ -71,6 +75,7 @@
       <a href="https://github.com/libhal/libhal-__device__/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-__device__/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-mpu/">libhal/libhal-mpu</a>
@@ -85,6 +90,7 @@
       <a href="https://github.com/libhal/libhal-mpu/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-mpu/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-pca/">libhal/libhal-pca</a>
@@ -99,6 +105,7 @@
       <a href="https://github.com/libhal/libhal-pca/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-pca/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-rmd/">libhal/libhal-rmd</a>
@@ -113,6 +120,7 @@
       <a href="https://github.com/libhal/libhal-rmd/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-rmd/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-tmp/">libhal/libhal-tmp</a>
@@ -127,6 +135,7 @@
       <a href="https://github.com/libhal/libhal-tmp/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-tmp/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-mock/">libhal/libhal-mock</a>
@@ -141,6 +150,7 @@
       <a href="https://github.com/libhal/libhal-mock/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-mock/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-soft/">libhal/libhal-soft</a>
@@ -155,6 +165,7 @@
       <a href="https://github.com/libhal/libhal-soft/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-soft/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-lpc40/">libhal/libhal-lpc40</a>
@@ -169,6 +180,7 @@
       <a href="https://github.com/libhal/libhal-lpc40/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-lpc40/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-util/">libhal/libhal-util</a>
@@ -183,6 +195,7 @@
       <a href="https://github.com/libhal/libhal-util/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-util/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal/">libhal/libhal</a>
@@ -197,6 +210,7 @@
       <a href="https://github.com/libhal/libhal/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal/latest_version.svg" /></a>
     </td>
   </tr>
+
   <tr>
     <td>
       <a href="https://github.com/libhal/libhal-armcortex/">libhal/libhal-armcortex</a>
@@ -209,6 +223,36 @@
     </td>
     <td>
       <a href="https://github.com/libhal/libhal-armcortex/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-armcortex/latest_version.svg" /></a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="https://github.com/libhal/libhal-canrouter/">libhal/libhal-canrouter</a>
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-canrouter/actions/workflows/ci.yml"><img src="https://github.com/libhal/libhal-canrouter/actions/workflows/ci.yml/badge.svg" /></a>
+    </td>
+    <td>
+      <img src="https://libhal.github.io/libhal-canrouter/coverage/coverage.svg">
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-canrouter/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-canrouter/latest_version.svg" /></a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="https://github.com/libhal/libhal-micromod/">libhal/libhal-micromod</a>
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-micromod/actions/workflows/ci.yml"><img src="https://github.com/libhal/libhal-micromod/actions/workflows/ci.yml/badge.svg" /></a>
+    </td>
+    <td>
+      <img src="https://libhal.github.io/libhal-micromod/coverage/coverage.svg">
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-micromod/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-micromod/latest_version.svg" /></a>
     </td>
   </tr>
 

@@ -4,14 +4,24 @@ set -e
 
 LIBHAL_LIBRARIES=(
   "libhal"
+
+  # Processors
   "libhal-armcortex"
-  "libhal-esp8266"
+
+  # platforms
   "libhal-lpc40"
-  "libhal-mock"
+  "libhal-stm32f1"
+
+  # Devices
+  "libhal-esp8266"
   "libhal-rmd"
   "libhal-soft"
-  "libhal-stm32f1"
+
+  # Utility
   "libhal-util"
+  "libhal-canrouter"
+  "libhal-micromod"
+  "libhal-mock"
 )
 
 rm -rf libraries
