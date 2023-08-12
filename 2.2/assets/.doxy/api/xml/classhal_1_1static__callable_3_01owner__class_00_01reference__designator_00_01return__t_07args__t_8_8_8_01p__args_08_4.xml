@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1static__callable_3_01owner__class_00_01reference__designator_00_01return__t_07args__t_8_8_8_01p__args_08_4" kind="class" language="C++" prot="public">
+    <compoundname>hal::static_callable&lt; owner_class, reference_designator, return_t(args_t... p_args)&gt;</compoundname>
+    <includes refid="static__callable_8hpp" local="no">static_callable.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class owner_class</type>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>reference_designator</declname>
+        <defname>reference_designator</defname>
+      </param>
+      <param>
+        <type>typename return_t</type>
+      </param>
+      <param>
+        <type>typename...</type>
+        <declname>args_t</declname>
+        <defname>args_t</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classhal_1_1static__callable_3_01owner__class_00_01reference__designator_00_01return__t_07args__t_8_8_8_01p__args_08_4_1a6483344e26ee08d3724e72066e402fc8" prot="private" static="yes" mutable="no">
+        <type><ref refid="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" kindref="member">hal::callback</ref>&lt; return_t(args_t... p_args)&gt;</type>
+        <definition>hal::callback&lt;return_t(args_t... p_args)&gt; hal::static_callable&lt; owner_class, reference_designator, return_t(args_t... p_args)&gt;::callback</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <briefdescription>
+<para>the polymorphic callback to be </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_callable.hpp" line="90" column="31" bodyfile="libraries/include/libhal-util/static_callable.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1static__callable_3_01owner__class_00_01reference__designator_00_01return__t_07args__t_8_8_8_01p__args_08_4_1a57d438c2af3ec622b3aef084a684f213" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hal::static_callable&lt; owner_class, reference_designator, return_t(args_t... p_args)&gt;::static_callable</definition>
+        <argsstring>(hal::callback&lt; return_t(args_t... p_args)&gt; p_callback)</argsstring>
+        <name>static_callable</name>
+        <param>
+          <type><ref refid="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" kindref="member">hal::callback</ref>&lt; return_t(args_t... p_args)&gt;</type>
+          <declname>p_callback</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new static callable object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- when the static callback function is called, it will call this callback </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_callable.hpp" line="57" column="12" bodyfile="libraries/include/libhal-util/static_callable.hpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__callable_3_01owner__class_00_01reference__designator_00_01return__t_07args__t_8_8_8_01p__args_08_4_1aee03ebedce113e76d7944c3ab0a20b12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto *</type>
+        <definition>auto* hal::static_callable&lt; owner_class, reference_designator, return_t(args_t... p_args)&gt;::get_handler</definition>
+        <argsstring>()</argsstring>
+        <name>get_handler</name>
+        <briefdescription>
+<para>Get the static function&apos;s address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>auto* - static function&apos;s address </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_callable.hpp" line="67" column="9" bodyfile="libraries/include/libhal-util/static_callable.hpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classhal_1_1static__callable_3_01owner__class_00_01reference__designator_00_01return__t_07args__t_8_8_8_01p__args_08_4_1a31085a54f4c3e05e88bcc4b41de619a5" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>return_t</type>
+        <definition>static return_t hal::static_callable&lt; owner_class, reference_designator, return_t(args_t... p_args)&gt;::handler</definition>
+        <argsstring>(args_t... p_args)</argsstring>
+        <name>handler</name>
+        <param>
+          <type>args_t...</type>
+          <declname>p_args</declname>
+        </param>
+        <briefdescription>
+<para>private free function that calls the polymorphic callback. This is the function that can be used as entries in an interrupt vector tables or passed as a function pointer to C API. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- list of arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return_t - the return type of the callback </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_callable.hpp" line="81" column="19" bodyfile="libraries/include/libhal-util/static_callable.hpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Specialization of <ref refid="classhal_1_1static__callable" kindref="compound">static_callable</ref> with the return type and arguments split up. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>owner_class</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>see <ref refid="classhal_1_1static__callable" kindref="compound">static_callable</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reference_designator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>see <ref refid="classhal_1_1static__callable" kindref="compound">static_callable</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>return_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function&apos;s return type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function&apos;s set of arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="libraries/include/libhal-util/static_callable.hpp" line="46" column="1" bodyfile="libraries/include/libhal-util/static_callable.hpp" bodystart="49" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classhal_1_1static__callable_3_01owner__class_00_01reference__designator_00_01return__t_07args__t_8_8_8_01p__args_08_4_1a6483344e26ee08d3724e72066e402fc8" prot="private" virt="non-virtual"><scope>hal::static_callable&lt; owner_class, reference_designator, return_t(args_t... p_args)&gt;</scope><name>callback</name></member>
+      <member refid="classhal_1_1static__callable_3_01owner__class_00_01reference__designator_00_01return__t_07args__t_8_8_8_01p__args_08_4_1aee03ebedce113e76d7944c3ab0a20b12" prot="public" virt="non-virtual"><scope>hal::static_callable&lt; owner_class, reference_designator, return_t(args_t... p_args)&gt;</scope><name>get_handler</name></member>
+      <member refid="classhal_1_1static__callable_3_01owner__class_00_01reference__designator_00_01return__t_07args__t_8_8_8_01p__args_08_4_1a31085a54f4c3e05e88bcc4b41de619a5" prot="private" virt="non-virtual"><scope>hal::static_callable&lt; owner_class, reference_designator, return_t(args_t... p_args)&gt;</scope><name>handler</name></member>
+      <member refid="classhal_1_1static__callable_3_01owner__class_00_01reference__designator_00_01return__t_07args__t_8_8_8_01p__args_08_4_1a57d438c2af3ec622b3aef084a684f213" prot="public" virt="non-virtual"><scope>hal::static_callable&lt; owner_class, reference_designator, return_t(args_t... p_args)&gt;</scope><name>static_callable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

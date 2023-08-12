@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1mock_1_1dac" kind="struct" language="C++" prot="public">
+    <compoundname>hal::mock::dac</compoundname>
+    <basecompoundref refid="classhal_1_1dac" prot="public" virt="non-virtual">hal::dac</basecompoundref>
+    <includes refid="libhal-mock_2dac_8hpp" local="no">dac.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1mock_1_1dac_1a4ab494a339b403212175db14fcf4740d" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; float &gt;</type>
+        <definition>spy_handler&lt;float&gt; hal::mock::dac::spy_write</definition>
+        <argsstring></argsstring>
+        <name>spy_write</name>
+        <briefdescription>
+<para>Spy handler for <ref refid="classhal_1_1dac_1a5ec1f3dc043bb5796ea9f3c2845731c3" kindref="member">hal::dac::write()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/dac.hpp" line="38" column="15" bodyfile="libraries/include/libhal-mock/dac.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1dac_1a895ef11a9f64df6e406fc5fa88efb1e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::mock::dac::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset spy information for <ref refid="classhal_1_1dac_1a5ec1f3dc043bb5796ea9f3c2845731c3" kindref="member">write()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/dac.hpp" line="32" column="8" bodyfile="libraries/include/libhal-mock/dac.hpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1dac_1ab55148b1e9249394aa1c3ff3e9d6b83c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1dac_1_1write__t" kindref="compound">write_t</ref> &gt;</type>
+        <definition>result&lt;write_t&gt; hal::mock::dac::driver_write</definition>
+        <argsstring>(float p_value) override</argsstring>
+        <name>driver_write</name>
+        <reimplements refid="classhal_1_1dac_1aa0826bf9b3828c076c57d3b4403a6f36">driver_write</reimplements>
+        <param>
+          <type>float</type>
+          <declname>p_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/dac.hpp" line="41" column="10" bodyfile="libraries/include/libhal-mock/dac.hpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Mock dac implementation for use in unit tests and simulations with a spy function for <ref refid="classhal_1_1dac_1a5ec1f3dc043bb5796ea9f3c2845731c3" kindref="member">write()</ref> </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::mock::dac</label>
+        <link refid="structhal_1_1mock_1_1dac"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::dac</label>
+        <link refid="classhal_1_1dac"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>hal::spy_handler&lt; float &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+      <node id="1">
+        <label>hal::mock::dac</label>
+        <link refid="structhal_1_1mock_1_1dac"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>spy_write</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::dac</label>
+        <link refid="classhal_1_1dac"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-mock/dac.hpp" line="26" column="1" bodyfile="libraries/include/libhal-mock/dac.hpp" bodystart="27" bodyend="46"/>
+    <listofallmembers>
+      <member refid="structhal_1_1mock_1_1dac_1ab55148b1e9249394aa1c3ff3e9d6b83c" prot="private" virt="virtual"><scope>hal::mock::dac</scope><name>driver_write</name></member>
+      <member refid="structhal_1_1mock_1_1dac_1a895ef11a9f64df6e406fc5fa88efb1e5" prot="public" virt="non-virtual"><scope>hal::mock::dac</scope><name>reset</name></member>
+      <member refid="structhal_1_1mock_1_1dac_1a4ab494a339b403212175db14fcf4740d" prot="public" virt="non-virtual"><scope>hal::mock::dac</scope><name>spy_write</name></member>
+      <member refid="classhal_1_1dac_1a5ec1f3dc043bb5796ea9f3c2845731c3" prot="public" virt="non-virtual"><scope>hal::mock::dac</scope><name>write</name></member>
+      <member refid="classhal_1_1dac_1a3d21b3da732995516ee25806396abae3" prot="public" virt="virtual"><scope>hal::mock::dac</scope><name>~dac</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

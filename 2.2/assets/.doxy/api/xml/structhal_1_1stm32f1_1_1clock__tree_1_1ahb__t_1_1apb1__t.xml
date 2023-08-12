@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb1__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::stm32f1::clock_tree::ahb_t::apb1_t</compoundname>
+    <includes refid="libhal-stm32f1_2clock_8hpp" local="no">clock.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb1__t_1a6ffdb1b9fb6c26aa5e35c3728aa9a39a" prot="public" static="no" mutable="no">
+        <type>apb_divider</type>
+        <definition>apb_divider hal::stm32f1::clock_tree::ahb_t::apb1_t::divider</definition>
+        <argsstring></argsstring>
+        <name>divider</name>
+        <initializer>= apb_divider::divide_by_1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="166" column="19" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Maximum rate of 36 MHz. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-stm32f1/clock.hpp" line="164" column="5" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="165" bodyend="167"/>
+    <listofallmembers>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1_1ahb__t_1_1apb1__t_1a6ffdb1b9fb6c26aa5e35c3728aa9a39a" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree::ahb_t::apb1_t</scope><name>divider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

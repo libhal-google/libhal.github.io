@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1stream__fill" kind="class" language="C++" prot="public">
+    <compoundname>hal::stream_fill</compoundname>
+    <includes refid="streams_8hpp" local="no">streams.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1stream__fill_1af5f4e6216e1cb9c2ea259a90990ddbde" prot="private" static="no" mutable="no">
+        <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+        <definition>std::span&lt;hal::byte&gt; hal::stream_fill::m_buffer</definition>
+        <argsstring></argsstring>
+        <name>m_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="82" column="13" bodyfile="libraries/include/libhal-util/streams.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1stream__fill_1a215272de5c928bbf33430922dab62075" prot="private" static="no" mutable="no">
+        <type>const size_t *</type>
+        <definition>const size_t* hal::stream_fill::m_fill_amount</definition>
+        <argsstring></argsstring>
+        <name>m_fill_amount</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="83" column="16" bodyfile="libraries/include/libhal-util/streams.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1stream__fill_1aa35a373282bc160ce202928cdd08ff9e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::stream_fill::stream_fill</definition>
+        <argsstring>(std::span&lt; hal::byte &gt; p_buffer)</argsstring>
+        <name>stream_fill</name>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_buffer</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new fill object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to read data into </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="64" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1stream__fill_1a4c5c5a2a232145024f027eaa8d203a2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::stream_fill::stream_fill</definition>
+        <argsstring>(std::span&lt; hal::byte &gt; p_buffer, const size_t &amp;p_fill_amount)</argsstring>
+        <name>stream_fill</name>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_buffer</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>p_fill_amount</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new fill object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to read data into </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_fill_amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- reference to a size value to limit the fill amount by. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="73" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1stream__fill_1a37d110bdabed6a592d208aa4fa04cb6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref></type>
+        <definition>work_state hal::stream_fill::state</definition>
+        <argsstring>()</argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="79" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhal_1_1stream__fill_1a0ae9478fb20975e12c9956089feeda9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+        <definition>std::span&lt;const hal::byte&gt; operator|</definition>
+        <argsstring>(const std::span&lt; const hal::byte &gt; &amp;p_input_data, stream_fill &amp;p_self)</argsstring>
+        <name>operator|</name>
+        <param>
+          <type>const std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt; &amp;</type>
+          <declname>p_input_data</declname>
+        </param>
+        <param>
+          <type><ref refid="classhal_1_1stream__fill" kindref="compound">stream_fill</ref> &amp;</type>
+          <declname>p_self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/streams.hpp" line="75" column="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Non-blocking callable for reading serial data into a buffer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-util/streams.hpp" line="56" column="1" bodyfile="libraries/include/libhal-util/streams.hpp" bodystart="57" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classhal_1_1stream__fill_1af5f4e6216e1cb9c2ea259a90990ddbde" prot="private" virt="non-virtual"><scope>hal::stream_fill</scope><name>m_buffer</name></member>
+      <member refid="classhal_1_1stream__fill_1a215272de5c928bbf33430922dab62075" prot="private" virt="non-virtual"><scope>hal::stream_fill</scope><name>m_fill_amount</name></member>
+      <member refid="classhal_1_1stream__fill_1a0ae9478fb20975e12c9956089feeda9c" prot="public" virt="non-virtual"><scope>hal::stream_fill</scope><name>operator|</name></member>
+      <member refid="classhal_1_1stream__fill_1a37d110bdabed6a592d208aa4fa04cb6f" prot="public" virt="non-virtual"><scope>hal::stream_fill</scope><name>state</name></member>
+      <member refid="classhal_1_1stream__fill_1aa35a373282bc160ce202928cdd08ff9e" prot="public" virt="non-virtual"><scope>hal::stream_fill</scope><name>stream_fill</name></member>
+      <member refid="classhal_1_1stream__fill_1a4c5c5a2a232145024f027eaa8d203a2c" prot="public" virt="non-virtual"><scope>hal::stream_fill</scope><name>stream_fill</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

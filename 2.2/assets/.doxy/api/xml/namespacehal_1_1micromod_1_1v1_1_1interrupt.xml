@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacehal_1_1micromod_1_1v1_1_1interrupt" kind="namespace" language="C++">
+    <compoundname>hal::micromod::v1::interrupt</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="micromod_8hpp_1a1a38fb95686f8ea8dc9d5ddd5c8e0b5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1interrupt__pin" kindref="compound">hal::interrupt_pin</ref> &amp;</type>
+        <definition>hal::interrupt_pin&amp; hal::micromod::v1::interrupt::g0</definition>
+        <argsstring>()</argsstring>
+        <name>g0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-micromod/micromod.hpp" line="279" column="20" declfile="libraries/include/libhal-micromod/micromod.hpp" declline="279" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="micromod_8hpp_1a7b4dc11dee3d32c96fafc5a9fbefd2b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1interrupt__pin" kindref="compound">hal::interrupt_pin</ref> &amp;</type>
+        <definition>hal::interrupt_pin&amp; hal::micromod::v1::interrupt::g1</definition>
+        <argsstring>()</argsstring>
+        <name>g1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-micromod/micromod.hpp" line="280" column="20" declfile="libraries/include/libhal-micromod/micromod.hpp" declline="280" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="micromod_8hpp_1a7e22e1b676698b77b5751b3f14bb7ab5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1interrupt__pin" kindref="compound">hal::interrupt_pin</ref> &amp;</type>
+        <definition>hal::interrupt_pin&amp; hal::micromod::v1::interrupt::g2</definition>
+        <argsstring>()</argsstring>
+        <name>g2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-micromod/micromod.hpp" line="281" column="20" declfile="libraries/include/libhal-micromod/micromod.hpp" declline="281" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="micromod_8hpp_1a143594fb8e95ff92aae5e1a3ab6fe0af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1interrupt__pin" kindref="compound">hal::interrupt_pin</ref> &amp;</type>
+        <definition>hal::interrupt_pin&amp; hal::micromod::v1::interrupt::g3</definition>
+        <argsstring>()</argsstring>
+        <name>g3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-micromod/micromod.hpp" line="282" column="20" declfile="libraries/include/libhal-micromod/micromod.hpp" declline="282" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="micromod_8hpp_1a6685737bc3a5d5e4fcfffe5437b3c57b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1interrupt__pin" kindref="compound">hal::interrupt_pin</ref> &amp;</type>
+        <definition>hal::interrupt_pin&amp; hal::micromod::v1::interrupt::g4</definition>
+        <argsstring>()</argsstring>
+        <name>g4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-micromod/micromod.hpp" line="283" column="20" declfile="libraries/include/libhal-micromod/micromod.hpp" declline="283" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="micromod_8hpp_1a1b2e86fb409015ef52de0af5c2b0a285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1interrupt__pin" kindref="compound">hal::interrupt_pin</ref> &amp;</type>
+        <definition>hal::interrupt_pin&amp; hal::micromod::v1::interrupt::g5</definition>
+        <argsstring>()</argsstring>
+        <name>g5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-micromod/micromod.hpp" line="284" column="20" declfile="libraries/include/libhal-micromod/micromod.hpp" declline="284" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="micromod_8hpp_1ad600381e92f9b59f05d2688bc967d7aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1interrupt__pin" kindref="compound">hal::interrupt_pin</ref> &amp;</type>
+        <definition>hal::interrupt_pin&amp; hal::micromod::v1::interrupt::g6</definition>
+        <argsstring>()</argsstring>
+        <name>g6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-micromod/micromod.hpp" line="285" column="20" declfile="libraries/include/libhal-micromod/micromod.hpp" declline="285" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="micromod_8hpp_1a5b21973792014de725ace2565b44f835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1interrupt__pin" kindref="compound">hal::interrupt_pin</ref> &amp;</type>
+        <definition>hal::interrupt_pin&amp; hal::micromod::v1::interrupt::g7</definition>
+        <argsstring>()</argsstring>
+        <name>g7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-micromod/micromod.hpp" line="286" column="20" declfile="libraries/include/libhal-micromod/micromod.hpp" declline="286" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="micromod_8hpp_1a56c49bb9a6e522cc4fb601351086ecce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1interrupt__pin" kindref="compound">hal::interrupt_pin</ref> &amp;</type>
+        <definition>hal::interrupt_pin&amp; hal::micromod::v1::interrupt::g8</definition>
+        <argsstring>()</argsstring>
+        <name>g8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-micromod/micromod.hpp" line="287" column="20" declfile="libraries/include/libhal-micromod/micromod.hpp" declline="287" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="micromod_8hpp_1a11fb3dff0710ef11889bc319ef860a53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1interrupt__pin" kindref="compound">hal::interrupt_pin</ref> &amp;</type>
+        <definition>hal::interrupt_pin&amp; hal::micromod::v1::interrupt::g9</definition>
+        <argsstring>()</argsstring>
+        <name>g9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-micromod/micromod.hpp" line="288" column="20" declfile="libraries/include/libhal-micromod/micromod.hpp" declline="288" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="micromod_8hpp_1aac615a98c53fa7af46c057a36c23c316" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1interrupt__pin" kindref="compound">hal::interrupt_pin</ref> &amp;</type>
+        <definition>hal::interrupt_pin&amp; hal::micromod::v1::interrupt::g10</definition>
+        <argsstring>()</argsstring>
+        <name>g10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-micromod/micromod.hpp" line="289" column="20" declfile="libraries/include/libhal-micromod/micromod.hpp" declline="289" declcolumn="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-micromod/micromod.hpp" line="278" column="1"/>
+  </compounddef>
+</doxygen>
