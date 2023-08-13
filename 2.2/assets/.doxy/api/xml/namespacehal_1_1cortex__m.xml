@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacehal_1_1cortex__m" kind="namespace" language="C++">
+    <compoundname>hal::cortex_m</compoundname>
+    <innerclass refid="classhal_1_1cortex__m_1_1dwt__counter" prot="public">hal::cortex_m::dwt_counter</innerclass>
+    <innerclass refid="classhal_1_1cortex__m_1_1interrupt" prot="public">hal::cortex_m::interrupt</innerclass>
+    <innerclass refid="classhal_1_1cortex__m_1_1systick__timer" prot="public">hal::cortex_m::systick_timer</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9c" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>irq</name>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9ca29862d94c16059be98abe2be6865a708" prot="public">
+          <name>top_of_stack</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9ca86266ee937d97f812a8e57d22b62ee29" prot="public">
+          <name>reset</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9cabcc0f53fbd0c273d18435941509f4eda" prot="public">
+          <name>nmi</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>non-maskable interrupt </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9ca65a450d5ee9f60f7344e2019794eea6c" prot="public">
+          <name>hard_fault</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9ca1d4e596e92116ff3e324fd21cc1419dd" prot="public">
+          <name>memory_management_fault</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9cae536d7d56d9d0746a3e05259aeb0da51" prot="public">
+          <name>bus_fault</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9ca7065f85fdbdc96b5edd41c3920f9d15c" prot="public">
+          <name>usage_fault</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9ca4c0262496f49c215737e4f8b7d193365" prot="public">
+          <name>reserve7</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9caa92f4766f50d4d2a42e0813c8d05f268" prot="public">
+          <name>reserve8</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9ca8110895be60de211811fecde04f8f364" prot="public">
+          <name>reserve9</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9ca45acce797a821b5a0e2b190d3593ce9c" prot="public">
+          <name>reserve10</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9ca123c590a966149e0ec0d515a346e6ad6" prot="public">
+          <name>sv_call</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para>Software initiated interrupt. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9cad9b2cee7f42cdddb99c8c0c071c295a8" prot="public">
+          <name>reserve12</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9caaa1d65adc8163eb5209f31c4d49cc8cf" prot="public">
+          <name>reserve13</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9ca743848f06cfed8e4d7d8547c4f2c0d5a" prot="public">
+          <name>pend_sv</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1_1cortex__m_1aefded35edd3780ed20f0b25a0c3edf9ca835fd8dd4fe722f5394f39cf587e71ab" prot="public">
+          <name>systick</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>IRQ numbers for core processor interrupts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-armcortex/interrupt.hpp" line="31" column="1" bodyfile="libraries/include/libhal-armcortex/interrupt.hpp" bodystart="32" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacehal_1_1cortex__m_1a16233c06cbfec74ed1d91019cf84cabc" prot="public" static="no">
+        <type>void(*)()</type>
+        <definition>using hal::cortex_m::interrupt_pointer = typedef void (*)()</definition>
+        <argsstring></argsstring>
+        <name>interrupt_pointer</name>
+        <briefdescription>
+<para>Used specifically for defining an interrupt vector table of addresses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-armcortex/interrupt.hpp" line="25" column="1" bodyfile="libraries/include/libhal-armcortex/interrupt.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacehal_1_1cortex__m_1afac39d4a10412fa8f81c53511e4759ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::cortex_m::initialize_data_section</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_data_section</name>
+        <briefdescription>
+<para>Initialize the data section of RAM. This should be the first thing called in main() before using any global or statically allocated variables. It can also be called in the startup code before main is called. This is not done by crt0.s (C runtime startup code) because with an OS, when the executable is copied to RAM, the data section is also copied and those same locations can be reused for the application, removing the need to copy the data section. This will also happen if one loads an elf file to an MCU using a debugger. Typically the RAM section, but not BSS, is copied over. But in the case of the MCU without a debugger, the MCU will have to manage coping the contents from ROM to RAM itself. Systems should always assume they haven&apos;t been loaded by any means and should set the data section at the start of the application. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-armcortex/startup.hpp" line="69" column="13" bodyfile="libraries/include/libhal-armcortex/startup.hpp" bodystart="69" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1_1cortex__m_1ad21e9c20d772a6d4c9d36cc66cd0a831" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::cortex_m::initialize_bss_section</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_bss_section</name>
+        <briefdescription>
+<para>Initialize the BSS (uninitialized data section) to all zeros. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Not required if the C Runtime 0 (crt0.s/.a/.o) is used as a startup routine. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-armcortex/startup.hpp" line="82" column="13" bodyfile="libraries/include/libhal-armcortex/startup.hpp" bodystart="82" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1_1cortex__m_1abf175d1e11f1ee8ff36cd208891db679" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::cortex_m::initialize_floating_point_unit</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_floating_point_unit</name>
+        <briefdescription>
+<para>Enable the floating point unit coprocessor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>WARNING: If the coprocessor does not exist, as it is optional, a UsageFault will occur. Floating point units are only found within Cortex M4 and above processors. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-armcortex/system_control.hpp" line="30" column="6" declfile="libraries/include/libhal-armcortex/system_control.hpp" declline="30" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1_1cortex__m_1ac0d287870a830bdfeff2c67b25d66fb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::cortex_m::set_interrupt_vector_table_address</definition>
+        <argsstring>(void *p_table_location)</argsstring>
+        <name>set_interrupt_vector_table_address</name>
+        <param>
+          <type>void *</type>
+          <declname>p_table_location</declname>
+        </param>
+        <briefdescription>
+<para>Set the address of the systems interrupt vector table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The interrupt vector table (IVT) is held in ROM which means that, either the interrupt service routines (ISR) had to be defined at compile time making them immutable at runtime, or that each ISR calls a mutable function pointer which can be changed at runtime.</para>
+<para>The problem with the first option is that it makes writing and using libraries difficult. Usually requiring updates to the IVT manually by the application designer based on what libraries and drivers the application is using.</para>
+<para>The second solution has a problem where the additional another layer of indirection increases interrupt latency. A more critical problem of this approach is that many ISRs take advantage of the state of the system when the ISR runs. For example, context switching in an RTOS needs to be able to see the address of where code was when the interrupt occurred and having an additional point of indirection (i.e. calling a function pointer) will change that location from the task to the ISR that called the context switch function. This will usually result in a fault of some sort.</para>
+<para>Creating an interrupt vector table in RAM and relocating the ISRs there consumes RAM space, but gives great flexibility over the table at runtime.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_table_location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- address of the interrupt vector table. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-armcortex/system_control.hpp" line="59" column="6" declfile="libraries/include/libhal-armcortex/system_control.hpp" declline="59" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1_1cortex__m_1aa3a8e10e1c00dc98da998e1896df5d32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* hal::cortex_m::get_interrupt_vector_table_address</definition>
+        <argsstring>()</argsstring>
+        <name>get_interrupt_vector_table_address</name>
+        <briefdescription>
+<para>Get the address of the systems interrupt vector table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>On reset the VTOR register is set to 0x0000&apos;0000 or nullptr.</para>
+<para><simplesect kind="return"><para>void* - address within VTOR the interrupt vector table relocation register. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-armcortex/system_control.hpp" line="69" column="6" declfile="libraries/include/libhal-armcortex/system_control.hpp" declline="69" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1_1cortex__m_1a3ecce6a4dee9538d3c8b4d3d1a14fc1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::cortex_m::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Request reset from CPU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-armcortex/system_control.hpp" line="75" column="6" declfile="libraries/include/libhal-armcortex/system_control.hpp" declline="75" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>libhal drivers for the ARM Cortex-M series of processors </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-armcortex/dwt_counter.hpp" line="20" column="1"/>
+  </compounddef>
+</doxygen>

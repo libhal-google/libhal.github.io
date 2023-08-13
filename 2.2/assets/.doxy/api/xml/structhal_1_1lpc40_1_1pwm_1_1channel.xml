@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1lpc40_1_1pwm_1_1channel" kind="struct" language="C++" prot="public">
+    <compoundname>hal::lpc40::pwm::channel</compoundname>
+    <includes refid="libhal-lpc40_2pwm_8hpp" local="no">pwm.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1pwm_1_1channel_1a304cd7b651524971def5fd6a86e8cac7" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacehal_1_1lpc40_1aeb4111a0b3eb28bf70f583582a7a0b13" kindref="member">peripheral</ref></type>
+        <definition>peripheral hal::lpc40::pwm::channel::peripheral_id</definition>
+        <argsstring></argsstring>
+        <name>peripheral_id</name>
+        <briefdescription>
+<para>peripheral id used to power on the pwm peripheral at creation </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pwm.hpp" line="44" column="16" bodyfile="libraries/include/libhal-lpc40/pwm.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1pwm_1_1channel_1a560a0c553d28639534f54162086c94a0" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref></type>
+        <definition>pin hal::lpc40::pwm::channel::pwm_pin</definition>
+        <argsstring></argsstring>
+        <name>pwm_pin</name>
+        <briefdescription>
+<para>Pin to output pwm from. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pwm.hpp" line="46" column="9" bodyfile="libraries/include/libhal-lpc40/pwm.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1pwm_1_1channel_1a8afb76d9ce3f350a33e2232bd2ce79ab" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hal::lpc40::pwm::channel::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+<para>Channel index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pwm.hpp" line="48" column="13" bodyfile="libraries/include/libhal-lpc40/pwm.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1pwm_1_1channel_1aef275b96d50fa9788faf45fb78a7b2ca" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hal::lpc40::pwm::channel::pin_function</definition>
+        <argsstring></argsstring>
+        <name>pin_function</name>
+        <briefdescription>
+<para>Pin function code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pwm.hpp" line="50" column="13" bodyfile="libraries/include/libhal-lpc40/pwm.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Channel specific information. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::lpc40::pwm::channel</label>
+        <link refid="structhal_1_1lpc40_1_1pwm_1_1channel"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>pwm_pin</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::lpc40::pin</label>
+        <link refid="classhal_1_1lpc40_1_1pin"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-lpc40/pwm.hpp" line="41" column="3" bodyfile="libraries/include/libhal-lpc40/pwm.hpp" bodystart="42" bodyend="51"/>
+    <listofallmembers>
+      <member refid="structhal_1_1lpc40_1_1pwm_1_1channel_1a8afb76d9ce3f350a33e2232bd2ce79ab" prot="public" virt="non-virtual"><scope>hal::lpc40::pwm::channel</scope><name>index</name></member>
+      <member refid="structhal_1_1lpc40_1_1pwm_1_1channel_1a304cd7b651524971def5fd6a86e8cac7" prot="public" virt="non-virtual"><scope>hal::lpc40::pwm::channel</scope><name>peripheral_id</name></member>
+      <member refid="structhal_1_1lpc40_1_1pwm_1_1channel_1aef275b96d50fa9788faf45fb78a7b2ca" prot="public" virt="non-virtual"><scope>hal::lpc40::pwm::channel</scope><name>pin_function</name></member>
+      <member refid="structhal_1_1lpc40_1_1pwm_1_1channel_1a560a0c553d28639534f54162086c94a0" prot="public" virt="non-virtual"><scope>hal::lpc40::pwm::channel</scope><name>pwm_pin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

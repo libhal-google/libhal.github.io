@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1can_1_1send__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::can::send_t</compoundname>
+    <includes refid="libhal_2can_8hpp" local="no">can.hpp</includes>
+    <briefdescription>
+<para>Feedback from sending data over the CAN BUS. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure is currently empty as no feedback has been determined for now. This structure may be expanded in the future. </para>
+    </detaileddescription>
+    <location file="libraries/include/libhal/can.hpp" line="145" column="3" bodyfile="libraries/include/libhal/can.hpp" bodystart="146" bodyend="146"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
