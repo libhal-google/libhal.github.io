@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1mock_1_1motor" kind="struct" language="C++" prot="public">
+    <compoundname>hal::mock::motor</compoundname>
+    <basecompoundref refid="classhal_1_1motor" prot="public" virt="non-virtual">hal::motor</basecompoundref>
+    <includes refid="libhal-mock_2motor_8hpp" local="no">motor.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1mock_1_1motor_1ab06320ee84f7652123f6c9b18c2d50d0" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; float &gt;</type>
+        <definition>spy_handler&lt;float&gt; hal::mock::motor::spy_power</definition>
+        <argsstring></argsstring>
+        <name>spy_power</name>
+        <briefdescription>
+<para>Spy handler for hal::motor::write() </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/motor.hpp" line="38" column="15" bodyfile="libraries/include/libhal-mock/motor.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1motor_1a1374ffa020a2616544b598ef8cc1c500" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::mock::motor::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset spy information for <ref refid="classhal_1_1motor_1adfad7d59b539461eaeff537445361fbf" kindref="member">power()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/motor.hpp" line="32" column="8" bodyfile="libraries/include/libhal-mock/motor.hpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1motor_1a5d1a6eac0ebcbdf5c2f26c6409a5087f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1motor_1_1power__t" kindref="compound">power_t</ref> &gt;</type>
+        <definition>result&lt;power_t&gt; hal::mock::motor::driver_power</definition>
+        <argsstring>(float p_power) override</argsstring>
+        <name>driver_power</name>
+        <reimplements refid="classhal_1_1motor_1aa919346f04c77f16897310fb90cbb2d1">driver_power</reimplements>
+        <param>
+          <type>float</type>
+          <declname>p_power</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/motor.hpp" line="41" column="10" bodyfile="libraries/include/libhal-mock/motor.hpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Mock motor implementation for use in unit tests and simulations with a spy function for <ref refid="classhal_1_1motor_1adfad7d59b539461eaeff537445361fbf" kindref="member">power()</ref> </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::motor</label>
+        <link refid="classhal_1_1motor"/>
+      </node>
+      <node id="1">
+        <label>hal::mock::motor</label>
+        <link refid="structhal_1_1mock_1_1motor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::motor</label>
+        <link refid="classhal_1_1motor"/>
+      </node>
+      <node id="3">
+        <label>hal::spy_handler&lt; float &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+      <node id="1">
+        <label>hal::mock::motor</label>
+        <link refid="structhal_1_1mock_1_1motor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>spy_power</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-mock/motor.hpp" line="26" column="1" bodyfile="libraries/include/libhal-mock/motor.hpp" bodystart="27" bodyend="46"/>
+    <listofallmembers>
+      <member refid="structhal_1_1mock_1_1motor_1a5d1a6eac0ebcbdf5c2f26c6409a5087f" prot="private" virt="virtual"><scope>hal::mock::motor</scope><name>driver_power</name></member>
+      <member refid="classhal_1_1motor_1adfad7d59b539461eaeff537445361fbf" prot="public" virt="non-virtual"><scope>hal::mock::motor</scope><name>power</name></member>
+      <member refid="structhal_1_1mock_1_1motor_1a1374ffa020a2616544b598ef8cc1c500" prot="public" virt="non-virtual"><scope>hal::mock::motor</scope><name>reset</name></member>
+      <member refid="structhal_1_1mock_1_1motor_1ab06320ee84f7652123f6c9b18c2d50d0" prot="public" virt="non-virtual"><scope>hal::mock::motor</scope><name>spy_power</name></member>
+      <member refid="classhal_1_1motor_1a24ade44337702b296037579bb40ead3a" prot="public" virt="virtual"><scope>hal::mock::motor</scope><name>~motor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
