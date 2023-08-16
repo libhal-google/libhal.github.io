@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1bit__modify" kind="class" language="C++" prot="public">
+    <compoundname>hal::bit_modify</compoundname>
+    <basecompoundref refid="classhal_1_1bit__value" prot="public" virt="non-virtual">hal::bit_value&lt; T &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>std::unsigned_integral</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1bit__modify_1a4b203e1995f15ea9c4597306561746bb" prot="private" static="no" mutable="no">
+        <type>T *</type>
+        <definition>volatile T* hal::bit_modify&lt; T &gt;::m_pointer</definition>
+        <argsstring></argsstring>
+        <name>m_pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="390" column="14" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1bit__modify_1ac04edde4f087d154188653776a8370ae" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::bit_modify&lt; T &gt;::bit_modify</definition>
+        <argsstring>(volatile T &amp;p_register_reference)</argsstring>
+        <name>bit_modify</name>
+        <param>
+          <type>volatile T &amp;</type>
+          <declname>p_register_reference</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="378" column="13" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="378" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1bit__modify_1a2960aea26437c51ad821f51426c3a57f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hal::bit_modify&lt; T &gt;::~bit_modify</definition>
+        <argsstring>()</argsstring>
+        <name>~bit_modify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="384" column="3" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="384" bodyend="387"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::bit_value&lt; T &gt;</label>
+        <link refid="classhal_1_1bit__value"/>
+      </node>
+      <node id="1">
+        <label>hal::bit_modify&lt; T &gt;</label>
+        <link refid="classhal_1_1bit__modify"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>T</label>
+      </node>
+      <node id="2">
+        <label>hal::bit_value&lt; T &gt;</label>
+        <link refid="classhal_1_1bit__value"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_value</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hal::bit_modify&lt; T &gt;</label>
+        <link refid="classhal_1_1bit__modify"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-util/bit.hpp" line="375" column="1" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="376" bodyend="391"/>
+    <listofallmembers>
+      <member refid="classhal_1_1bit__modify_1ac04edde4f087d154188653776a8370ae" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>bit_modify</name></member>
+      <member refid="classhal_1_1bit__value_1a14342a1749a74ad1507636dcb288e0bd" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>bit_value</name></member>
+      <member refid="classhal_1_1bit__value_1a86b8c86bd2ffe71782fb5e79e578b3bd" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>clear</name></member>
+      <member refid="classhal_1_1bit__value_1ace77815499d689db034c7dc4a13465e8" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>clear</name></member>
+      <member refid="classhal_1_1bit__value_1a14945e15a6e7fdaf07e01ebfbfd3a9c1" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>get</name></member>
+      <member refid="classhal_1_1bit__value_1a8e5d328805d0258f89079adb251a69b1" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>insert</name></member>
+      <member refid="classhal_1_1bit__value_1a5e074863a0970b9234821f04f79915fa" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>insert</name></member>
+      <member refid="classhal_1_1bit__modify_1a4b203e1995f15ea9c4597306561746bb" prot="private" virt="non-virtual"><scope>hal::bit_modify</scope><name>m_pointer</name></member>
+      <member refid="classhal_1_1bit__value_1aef476850364ce3d098f9bbafdac4be18" prot="protected" virt="non-virtual"><scope>hal::bit_modify</scope><name>m_value</name></member>
+      <member refid="classhal_1_1bit__value_1a231caca78511ddd73e8da327d0632a91" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>set</name></member>
+      <member refid="classhal_1_1bit__value_1a8185fd7199c3f0a1d877fa7a9f368255" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>set</name></member>
+      <member refid="classhal_1_1bit__value_1a73ba70cd7a0784084f0329c07cdb55e2" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>to</name></member>
+      <member refid="classhal_1_1bit__value_1abe01aa3b5a194d349973243fda726bf1" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>toggle</name></member>
+      <member refid="classhal_1_1bit__value_1ae5ccad47abe2938e9f9d29644b477c9b" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>toggle</name></member>
+      <member refid="classhal_1_1bit__value_1ab85b83950d63168488a12552dd4c36e9" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>width</name></member>
+      <member refid="classhal_1_1bit__modify_1a2960aea26437c51ad821f51426c3a57f" prot="public" virt="non-virtual"><scope>hal::bit_modify</scope><name>~bit_modify</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
