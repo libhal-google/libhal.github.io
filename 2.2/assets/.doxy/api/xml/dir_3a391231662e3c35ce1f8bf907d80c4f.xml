@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_3a391231662e3c35ce1f8bf907d80c4f" kind="dir">
+    <compoundname>libraries/include/libhal-rmd</compoundname>
+    <innerfile refid="drc_8hpp">drc.hpp</innerfile>
+    <innerfile refid="mc__x_8hpp">mc_x.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-rmd/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1_1usb__divider__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::stm32f1::clock_tree::pll_t::usb_divider_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1_1usb__divider__t_1a417fea8c501449459b49d15f077b82bd" prot="public" static="no" mutable="no">
+        <type>usb_divider</type>
+        <definition>usb_divider hal::stm32f1::clock_tree::pll_t::usb_divider_t::divider</definition>
+        <argsstring></argsstring>
+        <name>divider</name>
+        <initializer>= usb_divider::divide_by_1_point_5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="140" column="19" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-stm32f1/clock.hpp" line="138" column="5" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="139" bodyend="141"/>
+    <listofallmembers>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1_1usb__divider__t_1a417fea8c501449459b49d15f077b82bd" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree::pll_t::usb_divider_t</scope><name>divider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

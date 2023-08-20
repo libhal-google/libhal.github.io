@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="libhal_2spi_8hpp" kind="file" language="C++">
+    <compoundname>spi.hpp</compoundname>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">span</includes>
+    <includes refid="error_8hpp" local="yes">error.hpp</includes>
+    <includes refid="libhal_2units_8hpp" local="yes">units.hpp</includes>
+    <includedby refid="micromod_8hpp" local="no">libraries/include/libhal-micromod/micromod.hpp</includedby>
+    <includedby refid="libhal-mock_2spi_8hpp" local="no">libraries/include/libhal-mock/spi.hpp</includedby>
+    <includedby refid="libhal-util_2spi_8hpp" local="no">libraries/include/libhal-util/spi.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>system_error</label>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>units.hpp</label>
+        <link refid="libhal_2units_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>boost/leaf.hpp</label>
+      </node>
+      <node id="5">
+        <label>error.hpp</label>
+        <link refid="error_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstddef</label>
+      </node>
+      <node id="9">
+        <label>chrono</label>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal/spi.hpp</label>
+        <link refid="libhal_2spi_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>span</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>libraries/include/libhal-mock/spi.hpp</label>
+        <link refid="libhal-mock_2spi_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>libraries/include/libhal-micromod/micromod.hpp</label>
+        <link refid="micromod_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal/spi.hpp</label>
+        <link refid="libhal_2spi_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libraries/include/libhal-util/spi.hpp</label>
+        <link refid="libhal-util_2spi_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhal_1_1spi" prot="public">hal::spi</innerclass>
+    <innerclass refid="structhal_1_1spi_1_1settings" prot="public">hal::spi::settings</innerclass>
+    <innerclass refid="structhal_1_1spi_1_1transfer__t" prot="public">hal::spi::transfer_t</innerclass>
+    <innernamespace refid="namespacehal">hal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2023<sp/>Google<sp/>LLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;span&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;error.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;units.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehal" kindref="compound">hal</ref><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="classhal_1_1spi" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhal_1_1spi" kindref="compound">spi</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="structhal_1_1spi_1_1settings" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1spi_1_1settings" kindref="compound">settings</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43" refid="structhal_1_1spi_1_1settings_1ad1c82aa22885f93e7862597669a0707c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref><sp/><ref refid="structhal_1_1spi_1_1settings_1ad1c82aa22885f93e7862597669a0707c" kindref="member">clock_rate</ref><sp/>=<sp/>100.0_kHz;</highlight></codeline>
+<codeline lineno="48" refid="structhal_1_1spi_1_1settings_1aa659b50bafd1b39eee163d1c6de58e70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1spi_1_1settings_1aa659b50bafd1b39eee163d1c6de58e70" kindref="member">clock_idles_high</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53" refid="structhal_1_1spi_1_1settings_1a6e3608114ad53b46d2ab1da82a6caf42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1spi_1_1settings_1a6e3608114ad53b46d2ab1da82a6caf42" kindref="member">data_valid_on_trailing_edge</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structhal_1_1spi_1_1transfer__t" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1spi_1_1transfer__t" kindref="compound">transfer_t</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/><ref refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" kindref="member">default_filler</ref><sp/>=<sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref>{<sp/>0xFF<sp/>};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classhal_1_1spi_1aabc27516a87f51489e665bfc91e34a95" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>status<sp/><ref refid="classhal_1_1spi_1aabc27516a87f51489e665bfc91e34a95" kindref="member">configure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1spi_1_1settings" kindref="compound">settings</ref>&amp;<sp/>p_settings)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>driver_configure(p_settings);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97" refid="classhal_1_1spi_1a5e2b7807bafc0c93666977021c5c280b" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>result&lt;transfer_t&gt;<sp/><ref refid="classhal_1_1spi_1a5e2b7807bafc0c93666977021c5c280b" kindref="member">transfer</ref>(</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>std::span&lt;const<sp/>hal::byte&gt;<sp/>p_data_out,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>std::span&lt;hal::byte&gt;<sp/>p_data_in,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_filler<sp/>=<sp/><ref refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" kindref="member">default_filler</ref>)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>driver_transfer(p_data_out,<sp/>p_data_in,<sp/>p_filler);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classhal_1_1spi" kindref="compound">spi</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>status<sp/>driver_configure(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>settings&amp;<sp/>p_settings)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>result&lt;transfer_t&gt;<sp/>driver_transfer(</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>std::span&lt;const<sp/>hal::byte&gt;<sp/>p_data_out,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>std::span&lt;hal::byte&gt;<sp/>p_data_in,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref><sp/>p_filler)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hal</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/include/libhal/spi.hpp"/>
+  </compounddef>
+</doxygen>

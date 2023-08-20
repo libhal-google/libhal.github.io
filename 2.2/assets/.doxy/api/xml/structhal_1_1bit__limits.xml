@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1bit__limits" kind="struct" language="C++" prot="public">
+    <compoundname>hal::bit_limits</compoundname>
+    <includes refid="bit__limits_8hpp" local="no">bit_limits.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>size_t</type>
+        <declname>BitWidth</declname>
+        <defname>BitWidth</defname>
+      </param>
+      <param>
+        <type>std::integral</type>
+        <declname>int_t</declname>
+        <defname>int_t</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structhal_1_1bit__limits_1aeeb119a0d72ba97a12cd2a41c835558f" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr int_t</type>
+        <definition>static constexpr int_t hal::bit_limits&lt; BitWidth, int_t &gt;::max</definition>
+        <argsstring>()</argsstring>
+        <name>max</name>
+        <briefdescription>
+<para>Get the maximum value available for an integer of <computeroutput>BitWidth</computeroutput> size and that can be stored within <computeroutput>int_t</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The final value of the function depends also on the sign of the int type.</para>
+<para><simplesect kind="return"><para>constexpr int_t maximum value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit_limits.hpp" line="65" column="27" bodyfile="libraries/include/libhal-util/bit_limits.hpp" bodystart="65" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1bit__limits_1af6957b808ca6b53f621262a183804784" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr int_t</type>
+        <definition>static constexpr int_t hal::bit_limits&lt; BitWidth, int_t &gt;::min</definition>
+        <argsstring>()</argsstring>
+        <name>min</name>
+        <briefdescription>
+<para>Get the minimum value available for an integer of <computeroutput>BitWidth</computeroutput> size and that can be stored within <computeroutput>int_t</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The final value of the function depends also on the sign of the int type. Unsigned ints simply return zero.</para>
+<para><simplesect kind="return"><para>constexpr int_t minimum value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit_limits.hpp" line="86" column="27" bodyfile="libraries/include/libhal-util/bit_limits.hpp" bodystart="86" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Similar to std::numeric_limits&lt;T&gt; except that this object can give properties of integral types of arbitrary bit widths. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BitWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- bit width of the value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the containing type. Will generate a compile error if the containing type&apos;s bit width is smaller than the BitWidth value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="libraries/include/libhal-util/bit_limits.hpp" line="48" column="1" bodyfile="libraries/include/libhal-util/bit_limits.hpp" bodystart="49" bodyend="97"/>
+    <listofallmembers>
+      <member refid="structhal_1_1bit__limits_1aeeb119a0d72ba97a12cd2a41c835558f" prot="public" virt="non-virtual"><scope>hal::bit_limits</scope><name>max</name></member>
+      <member refid="structhal_1_1bit__limits_1af6957b808ca6b53f621262a183804784" prot="public" virt="non-virtual"><scope>hal::bit_limits</scope><name>min</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

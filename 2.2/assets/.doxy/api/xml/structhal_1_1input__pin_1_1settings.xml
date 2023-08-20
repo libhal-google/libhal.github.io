@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1input__pin_1_1settings" kind="struct" language="C++" prot="public">
+    <compoundname>hal::input_pin::settings</compoundname>
+    <includes refid="libhal_2input__pin_8hpp" local="no">input_pin.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1input__pin_1_1settings_1a9cd830f01b3a98a267f766f7ff82c947" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacehal_1af094ceea0d10800e8281b1014d7b8a1a" kindref="member">pin_resistor</ref></type>
+        <definition>pin_resistor hal::input_pin::settings::resistor</definition>
+        <argsstring></argsstring>
+        <name>resistor</name>
+        <initializer>= <ref refid="namespacehal_1af094ceea0d10800e8281b1014d7b8a1aa5dd40e1f7d5c287d1df85dac013c1c38" kindref="member">pin_resistor::pull_up</ref></initializer>
+        <briefdescription>
+<para>Pull resistor for an input pin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/input_pin.hpp" line="34" column="18" bodyfile="libraries/include/libhal/input_pin.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generic settings for input pins. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/input_pin.hpp" line="31" column="3" bodyfile="libraries/include/libhal/input_pin.hpp" bodystart="32" bodyend="35"/>
+    <listofallmembers>
+      <member refid="structhal_1_1input__pin_1_1settings_1a9cd830f01b3a98a267f766f7ff82c947" prot="public" virt="non-virtual"><scope>hal::input_pin::settings</scope><name>resistor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
