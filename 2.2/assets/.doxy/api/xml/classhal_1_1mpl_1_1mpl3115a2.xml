@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1mpl_1_1mpl3115a2" kind="class" language="C++" prot="public">
+    <compoundname>hal::mpl::mpl3115a2</compoundname>
+    <innerclass refid="structhal_1_1mpl_1_1mpl3115a2_1_1altitude__read__t" prot="public">hal::mpl::mpl3115a2::altitude_read_t</innerclass>
+    <innerclass refid="structhal_1_1mpl_1_1mpl3115a2_1_1pressure__read__t" prot="public">hal::mpl::mpl3115a2::pressure_read_t</innerclass>
+    <innerclass refid="structhal_1_1mpl_1_1mpl3115a2_1_1temperature__read__t" prot="public">hal::mpl::mpl3115a2::temperature_read_t</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classhal_1_1mpl_1_1mpl3115a2_1afdda88852d2f2ddf9ef13b5104c5a7cf" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>mode</name>
+        <enumvalue id="classhal_1_1mpl_1_1mpl3115a2_1afdda88852d2f2ddf9ef13b5104c5a7cfa4bafcba79ae8f51065f055703fd99ed7" prot="public">
+          <name>barometer</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhal_1_1mpl_1_1mpl3115a2_1afdda88852d2f2ddf9ef13b5104c5a7cfa44c8d8e91267fe8a427d45769693f052" prot="public">
+          <name>altimeter</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="27" column="3" bodyfile="libraries/include/libhal-mpl/mpl3115a2.hpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classhal_1_1mpl_1_1mpl3115a2_1a400cfe872b8db7f6854b25d65dcc97b8" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint16_t</type>
+        <definition>constexpr uint16_t hal::mpl::mpl3115a2::default_max_polling_retries</definition>
+        <argsstring></argsstring>
+        <name>default_max_polling_retries</name>
+        <initializer>= 10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="93" column="29" bodyfile="libraries/include/libhal-mpl/mpl3115a2.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1mpl_1_1mpl3115a2_1ad08e1bf0f2f528d55c01b127d59a9187" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1i2c" kindref="compound">hal::i2c</ref> *</type>
+        <definition>hal::i2c* hal::mpl::mpl3115a2::m_i2c</definition>
+        <argsstring></argsstring>
+        <name>m_i2c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="103" column="12" bodyfile="libraries/include/libhal-mpl/mpl3115a2.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1mpl_1_1mpl3115a2_1a9bd5ce838bc7957862b1fcec46593fa1" prot="private" static="no" mutable="no">
+        <type>mode</type>
+        <definition>mode hal::mpl::mpl3115a2::m_sensor_mode</definition>
+        <argsstring></argsstring>
+        <name>m_sensor_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="107" column="8" bodyfile="libraries/include/libhal-mpl/mpl3115a2.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1mpl_1_1mpl3115a2_1a6219c26911d8f28ed524be0803ba86dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1mpl_1_1mpl3115a2" kindref="compound">mpl3115a2</ref> &gt;</type>
+        <definition>static result&lt;mpl3115a2&gt; hal::mpl::mpl3115a2::create</definition>
+        <argsstring>(hal::i2c &amp;p_i2c)</argsstring>
+        <name>create</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">hal::i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <briefdescription>
+<para>Initialization of MPLX device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function performs the following steps during startup configuration:<itemizedlist>
+<listitem><para>Perform WHOAMI check</para>
+</listitem><listitem><para>Trigger reset and wait for completion</para>
+</listitem><listitem><para>Set altimeter mode</para>
+</listitem><listitem><para>Set oversampling ratio to 2^128 (OS128)</para>
+</listitem><listitem><para>Enable data ready events for pressure/altitude and temperature </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="58" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1mpl_1_1mpl3115a2_1a75b593193d824b23c652213c6890d355" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1mpl_1_1mpl3115a2_1_1temperature__read__t" kindref="compound">temperature_read_t</ref> &gt;</type>
+        <definition>hal::result&lt;temperature_read_t&gt; hal::mpl::mpl3115a2::read_temperature</definition>
+        <argsstring>()</argsstring>
+        <name>read_temperature</name>
+        <briefdescription>
+<para>Read pressure data from out_t_msb_r and out_t_lsb_r and perform temperature conversion to celsius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="64" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1mpl_1_1mpl3115a2_1ab3a8ee7a9f8f15318866a12287d85873" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1mpl_1_1mpl3115a2_1_1pressure__read__t" kindref="compound">pressure_read_t</ref> &gt;</type>
+        <definition>hal::result&lt;pressure_read_t&gt; hal::mpl::mpl3115a2::read_pressure</definition>
+        <argsstring>()</argsstring>
+        <name>read_pressure</name>
+        <briefdescription>
+<para>Read pressure data from out_p_msb_r, out_p_csb_r, and out_p_lsb_r and perform pressure conversion to kilopascals. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="70" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1mpl_1_1mpl3115a2_1a671006cb22a79de040f8051e7263f0da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1mpl_1_1mpl3115a2_1_1altitude__read__t" kindref="compound">altitude_read_t</ref> &gt;</type>
+        <definition>hal::result&lt;altitude_read_t&gt; hal::mpl::mpl3115a2::read_altitude</definition>
+        <argsstring>()</argsstring>
+        <name>read_altitude</name>
+        <briefdescription>
+<para>Read altitude data from out_p_msb_r, out_p_csb_r, and out_p_lsb_r and perform altitude conversion to meters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="76" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1mpl_1_1mpl3115a2_1a73a883bc77c1a7e329199bf8db4334d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::status</type>
+        <definition>hal::status hal::mpl::mpl3115a2::set_sea_pressure</definition>
+        <argsstring>(float p_sea_level_pressure)</argsstring>
+        <name>set_sea_pressure</name>
+        <param>
+          <type>float</type>
+          <declname>p_sea_level_pressure</declname>
+        </param>
+        <briefdescription>
+<para>Set sea level pressure (Barometric input for altitude calculations) in bar_in_msb_r and bar_in_lsb_r registers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_sea_level_pressure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sea level pressure in Pascals. Default value on startup is 101,326 Pa. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="84" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1mpl_1_1mpl3115a2_1ae6ee22b2582b4e85b5563e3516c66c2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::status</type>
+        <definition>hal::status hal::mpl::mpl3115a2::set_altitude_offset</definition>
+        <argsstring>(int8_t p_offset)</argsstring>
+        <name>set_altitude_offset</name>
+        <param>
+          <type>int8_t</type>
+          <declname>p_offset</declname>
+        </param>
+        <briefdescription>
+<para>Set altitude offset in off_h_r. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset value in meters, from -127 to 128 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="90" column="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1mpl_1_1mpl3115a2_1ac31548cf5e22685e2f0537ed0c395da8" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::mpl::mpl3115a2::mpl3115a2</definition>
+        <argsstring>(hal::i2c &amp;p_i2c)</argsstring>
+        <name>mpl3115a2</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">hal::i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <briefdescription>
+<para>constructor for mpl objects </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The I2C peripheral used for communication with the device. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="100" column="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-mpl/mpl3115a2.hpp" line="23" column="1" bodyfile="libraries/include/libhal-mpl/mpl3115a2.hpp" bodystart="24" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classhal_1_1mpl_1_1mpl3115a2_1a6219c26911d8f28ed524be0803ba86dc" prot="public" virt="non-virtual"><scope>hal::mpl::mpl3115a2</scope><name>create</name></member>
+      <member refid="classhal_1_1mpl_1_1mpl3115a2_1a400cfe872b8db7f6854b25d65dcc97b8" prot="public" virt="non-virtual"><scope>hal::mpl::mpl3115a2</scope><name>default_max_polling_retries</name></member>
+      <member refid="classhal_1_1mpl_1_1mpl3115a2_1ad08e1bf0f2f528d55c01b127d59a9187" prot="private" virt="non-virtual"><scope>hal::mpl::mpl3115a2</scope><name>m_i2c</name></member>
+      <member refid="classhal_1_1mpl_1_1mpl3115a2_1a9bd5ce838bc7957862b1fcec46593fa1" prot="private" virt="non-virtual"><scope>hal::mpl::mpl3115a2</scope><name>m_sensor_mode</name></member>
+      <member refid="classhal_1_1mpl_1_1mpl3115a2_1afdda88852d2f2ddf9ef13b5104c5a7cf" prot="public" virt="non-virtual"><scope>hal::mpl::mpl3115a2</scope><name>mode</name></member>
+      <member refid="classhal_1_1mpl_1_1mpl3115a2_1ac31548cf5e22685e2f0537ed0c395da8" prot="private" virt="non-virtual"><scope>hal::mpl::mpl3115a2</scope><name>mpl3115a2</name></member>
+      <member refid="classhal_1_1mpl_1_1mpl3115a2_1a671006cb22a79de040f8051e7263f0da" prot="public" virt="non-virtual"><scope>hal::mpl::mpl3115a2</scope><name>read_altitude</name></member>
+      <member refid="classhal_1_1mpl_1_1mpl3115a2_1ab3a8ee7a9f8f15318866a12287d85873" prot="public" virt="non-virtual"><scope>hal::mpl::mpl3115a2</scope><name>read_pressure</name></member>
+      <member refid="classhal_1_1mpl_1_1mpl3115a2_1a75b593193d824b23c652213c6890d355" prot="public" virt="non-virtual"><scope>hal::mpl::mpl3115a2</scope><name>read_temperature</name></member>
+      <member refid="classhal_1_1mpl_1_1mpl3115a2_1ae6ee22b2582b4e85b5563e3516c66c2c" prot="public" virt="non-virtual"><scope>hal::mpl::mpl3115a2</scope><name>set_altitude_offset</name></member>
+      <member refid="classhal_1_1mpl_1_1mpl3115a2_1a73a883bc77c1a7e329199bf8db4334d9" prot="public" virt="non-virtual"><scope>hal::mpl::mpl3115a2</scope><name>set_sea_pressure</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
