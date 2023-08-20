@@ -256,4 +256,34 @@
     </td>
   </tr>
 
+  <tr>
+    <td>
+      <a href="https://github.com/libhal/libhal-mpl/">libhal/libhal-mpl</a>
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-mpl/actions/workflows/ci.yml"><img src="https://github.com/libhal/libhal-mpl/actions/workflows/ci.yml/badge.svg" /></a>
+    </td>
+    <td>
+      <img src="https://libhal.github.io/libhal-mpl/coverage/coverage.svg">
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-mpl/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-mpl/latest_version.svg" /></a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="https://github.com/libhal/libhal-freertos/">libhal/libhal-freertos</a>
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-freertos/actions/workflows/ci.yml"><img src="https://github.com/libhal/libhal-freertos/actions/workflows/ci.yml/badge.svg" /></a>
+    </td>
+    <td>
+      <img src="https://libhal.github.io/libhal-freertos/coverage/coverage.svg">
+    </td>
+    <td>
+      <a href="https://github.com/libhal/libhal-freertos/blob/main/conanfile.py"><img src="https://libhal.github.io/libhal-freertos/latest_version.svg" /></a>
+    </td>
+  </tr>
+
 </table>
