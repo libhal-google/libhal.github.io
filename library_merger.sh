@@ -16,6 +16,7 @@ LIBHAL_LIBRARIES=(
   "libhal-esp8266"
   "libhal-rmd"
   "libhal-soft"
+  "libhal-mpl"
 
   # Utility
   "libhal-util"
