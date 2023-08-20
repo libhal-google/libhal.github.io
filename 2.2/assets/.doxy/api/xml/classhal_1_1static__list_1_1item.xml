@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1static__list_1_1item" kind="class" language="C++" prot="public">
+    <compoundname>hal::static_list::item</compoundname>
+    <includes refid="static__list_8hpp" local="no">static_list.hpp</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhal_1_1static__list_1_1item_1abc29570c3bf3adc81cbf02f95f7ff81d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class item_iterator</definition>
+        <argsstring></argsstring>
+        <name>item_iterator</name>
+        <param>
+          <type><ref refid="classhal_1_1static__list_1_1item__iterator" kindref="compound">item_iterator</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="61" column="5" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classhal_1_1static__list_1_1item_1a8f082f51a9df4615eb7ad2954ed4b1f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class static_list</definition>
+        <argsstring></argsstring>
+        <name>static_list</name>
+        <param>
+          <type><ref refid="classhal_1_1static__list" kindref="compound">static_list</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="62" column="5" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1static__list_1_1item_1a0359e7614edb87b1bd0c5c8550ba2de6" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1static__list" kindref="compound">static_list</ref> *</type>
+        <definition>static_list* hal::static_list&lt; Object &gt;::item::m_list</definition>
+        <argsstring></argsstring>
+        <name>m_list</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="192" column="17" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1static__list_1_1item_1a3003712db8d66354f7014f44e12264f5" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1static__list_1_1item" kindref="compound">item</ref> *</type>
+        <definition>item* hal::static_list&lt; Object &gt;::item::m_previous</definition>
+        <argsstring></argsstring>
+        <name>m_previous</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="193" column="10" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1static__list_1_1item_1a058f624bc485a0714bc55fd6652dc14b" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1static__list_1_1item" kindref="compound">item</ref> *</type>
+        <definition>item* hal::static_list&lt; Object &gt;::item::m_next</definition>
+        <argsstring></argsstring>
+        <name>m_next</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="194" column="10" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1static__list_1_1item_1ae580a6b17ec64b7a1a596d0a6104a798" prot="private" static="no" mutable="no">
+        <type>Object</type>
+        <definition>Object hal::static_list&lt; Object &gt;::item::m_object</definition>
+        <argsstring></argsstring>
+        <name>m_object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="195" column="12" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1a708c6b05ffef7da7ce42b31afdbc0c95" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::static_list&lt; Object &gt;::item::item</definition>
+        <argsstring>(static_list *p_list, const Object &amp;p_object)</argsstring>
+        <name>item</name>
+        <param>
+          <type><ref refid="classhal_1_1static__list" kindref="compound">static_list</ref> *</type>
+          <declname>p_list</declname>
+        </param>
+        <param>
+          <type>const Object &amp;</type>
+          <declname>p_object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="64" column="15" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="64" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1ab3aa52105c1db3709cb56824eb643966" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::static_list&lt; Object &gt;::item::item</definition>
+        <argsstring>(static_list *p_list, Object &amp;&amp;p_object)</argsstring>
+        <name>item</name>
+        <param>
+          <type><ref refid="classhal_1_1static__list" kindref="compound">static_list</ref> *</type>
+          <declname>p_list</declname>
+        </param>
+        <param>
+          <type>Object &amp;&amp;</type>
+          <declname>p_object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="71" column="15" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="71" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1a25207fbde9fcdd0df7538fe4c6b2f874" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr <ref refid="classhal_1_1static__list_1_1item" kindref="compound">item</ref> &amp;</type>
+        <definition>constexpr item&amp; hal::static_list&lt; Object &gt;::item::operator=</definition>
+        <argsstring>(item &amp;p_other)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1static__list_1_1item" kindref="compound">item</ref> &amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="78" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1a1722a7207fb54bd6200e3e89cfb31606" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::static_list&lt; Object &gt;::item::item</definition>
+        <argsstring>(item &amp;p_other)=delete</argsstring>
+        <name>item</name>
+        <param>
+          <type><ref refid="classhal_1_1static__list_1_1item" kindref="compound">item</ref> &amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="79" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1a3282cbd24d5cff0bfaa54fa197d98b75" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr <ref refid="classhal_1_1static__list_1_1item" kindref="compound">item</ref> &amp;</type>
+        <definition>constexpr item&amp; hal::static_list&lt; Object &gt;::item::operator=</definition>
+        <argsstring>(item &amp;&amp;p_other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1static__list_1_1item" kindref="compound">item</ref> &amp;&amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="81" column="20" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="81" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1a74588c434e75f52953247b6ab38a25e3" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::static_list&lt; Object &gt;::item::item</definition>
+        <argsstring>(item &amp;&amp;p_other)</argsstring>
+        <name>item</name>
+        <param>
+          <type><ref refid="classhal_1_1static__list_1_1item" kindref="compound">item</ref> &amp;&amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="115" column="15" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1ab1cae998f545c95cabb94ec6052b783a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto &amp;</type>
+        <definition>auto&amp; hal::static_list&lt; Object &gt;::item::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="120" column="10" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1a772c8f2bee8f870ccece6a1ad005db96" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const auto &amp;</type>
+        <definition>const auto&amp; hal::static_list&lt; Object &gt;::item::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="125" column="16" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1ab739550279763bb47a5c55bd2df84f1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto &amp;</type>
+        <definition>auto&amp; hal::static_list&lt; Object &gt;::item::operator*</definition>
+        <argsstring>()</argsstring>
+        <name>operator*</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="130" column="10" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1ae5d2db0fc7e1d5547b6fb44e0987ec09" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const auto &amp;</type>
+        <definition>const auto&amp; hal::static_list&lt; Object &gt;::item::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="135" column="16" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1a9b2e9b8069b8e8c3e4c4ab49c2a1bf67" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const auto *</type>
+        <definition>const auto* hal::static_list&lt; Object &gt;::item::list</definition>
+        <argsstring>() const</argsstring>
+        <name>list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="140" column="16" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="140" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1ab720062819c7507ad94da70112a3d8f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hal::static_list&lt; Object &gt;::item::~item</definition>
+        <argsstring>()</argsstring>
+        <name>~item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="145" column="5" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="145" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1static__list_1_1item_1a0c9067026f348b1c7066bc09e3fcf6f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::static_list&lt; Object &gt;::item::setup_self</definition>
+        <argsstring>()</argsstring>
+        <name>setup_self</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/static_list.hpp" line="174" column="10" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="174" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Item/node within the static linked list. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This object does not allow copies. When moved, the object will determine its new location in memory, and will update the linked list to the new location and invalidate the old location. This ensures that this item&apos;s position in memory, if whether returned from a function or relocated in some other way, is always tracked by the list.</para>
+<para>An item can only be removed from the list if it is no longer accessible (goes out of scope) or is destructed explicitly (DO NOT DO THIS).</para>
+<para>The return value of push_back MUST be saved to a variable. Failing to do so will result in the object being destructed and removed from the list due to it being inaccessible. <verbatim>static_list&lt;int&gt; list;
+auto item = list.push_back(5);
+</verbatim> </para>
+    </detaileddescription>
+    <location file="libraries/include/libhal-util/static_list.hpp" line="58" column="3" bodyfile="libraries/include/libhal-util/static_list.hpp" bodystart="59" bodyend="196"/>
+    <listofallmembers>
+      <member refid="classhal_1_1static__list_1_1item_1ab1cae998f545c95cabb94ec6052b783a" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>get</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a772c8f2bee8f870ccece6a1ad005db96" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>get</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a708c6b05ffef7da7ce42b31afdbc0c95" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>item</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1ab3aa52105c1db3709cb56824eb643966" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>item</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a1722a7207fb54bd6200e3e89cfb31606" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>item</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a74588c434e75f52953247b6ab38a25e3" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>item</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1abc29570c3bf3adc81cbf02f95f7ff81d" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>item_iterator</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a9b2e9b8069b8e8c3e4c4ab49c2a1bf67" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>list</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a0359e7614edb87b1bd0c5c8550ba2de6" prot="private" virt="non-virtual"><scope>hal::static_list::item</scope><name>m_list</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a058f624bc485a0714bc55fd6652dc14b" prot="private" virt="non-virtual"><scope>hal::static_list::item</scope><name>m_next</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1ae580a6b17ec64b7a1a596d0a6104a798" prot="private" virt="non-virtual"><scope>hal::static_list::item</scope><name>m_object</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a3003712db8d66354f7014f44e12264f5" prot="private" virt="non-virtual"><scope>hal::static_list::item</scope><name>m_previous</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1ab739550279763bb47a5c55bd2df84f1d" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>operator*</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1ae5d2db0fc7e1d5547b6fb44e0987ec09" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>operator*</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a25207fbde9fcdd0df7538fe4c6b2f874" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>operator=</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a3282cbd24d5cff0bfaa54fa197d98b75" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>operator=</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a0c9067026f348b1c7066bc09e3fcf6f9" prot="private" virt="non-virtual"><scope>hal::static_list::item</scope><name>setup_self</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1a8f082f51a9df4615eb7ad2954ed4b1f5" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>static_list</name></member>
+      <member refid="classhal_1_1static__list_1_1item_1ab720062819c7507ad94da70112a3d8f2" prot="public" virt="non-virtual"><scope>hal::static_list::item</scope><name>~item</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

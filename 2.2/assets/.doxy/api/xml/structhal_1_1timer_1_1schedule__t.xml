@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1timer_1_1schedule__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::timer::schedule_t</compoundname>
+    <includes refid="libhal_2timer_8hpp" local="no">timer.hpp</includes>
+    <briefdescription>
+<para>Feedback from scheduling a timer. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure is currently empty as no feedback has been determined for now. This structure may be expanded in the future. </para>
+    </detaileddescription>
+    <location file="libraries/include/libhal/timer.hpp" line="87" column="3" bodyfile="libraries/include/libhal/timer.hpp" bodystart="88" bodyend="88"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::stm32f1::clock_tree::pll_t</compoundname>
+    <includes refid="libhal-stm32f1_2clock_8hpp" local="no">clock.hpp</includes>
+    <innerclass refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1_1usb__divider__t" prot="public">hal::stm32f1::clock_tree::pll_t::usb_divider_t</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1a8f7650ba6495710633b975c848431af7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::stm32f1::clock_tree::pll_t::enable</definition>
+        <argsstring></argsstring>
+        <name>enable</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="135" column="10" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1aa9de3fa524c2c3737d40ae6a57dcac80" prot="public" static="no" mutable="no">
+        <type>pll_source</type>
+        <definition>pll_source hal::stm32f1::clock_tree::pll_t::source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <initializer>= pll_source::high_speed_internal</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="136" column="16" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1ad6613d89d919614acc329cbfb96ab457" prot="public" static="no" mutable="no">
+        <type>pll_multiply</type>
+        <definition>pll_multiply hal::stm32f1::clock_tree::pll_t::multiply</definition>
+        <argsstring></argsstring>
+        <name>multiply</name>
+        <initializer>= pll_multiply::multiply_by_2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="137" column="18" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1a2176bf9ffed0274eb91cd9389967127b" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1_1usb__divider__t" kindref="compound">hal::stm32f1::clock_tree::pll_t::usb_divider_t</ref></type>
+        <definition>struct hal::stm32f1::clock_tree::pll_t::usb_divider_t hal::stm32f1::clock_tree::pll_t::usb</definition>
+        <argsstring></argsstring>
+        <name>usb</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/clock.hpp" line="141" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines the configuration of the PLL. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::stm32f1::clock_tree::pll_t</label>
+        <link refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>usb</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::stm32f1::clock_tree::pll_t::usb_divider_t</label>
+        <link refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1_1usb__divider__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-stm32f1/clock.hpp" line="133" column="3" bodyfile="libraries/include/libhal-stm32f1/clock.hpp" bodystart="134" bodyend="142"/>
+    <listofallmembers>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1a8f7650ba6495710633b975c848431af7" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree::pll_t</scope><name>enable</name></member>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1ad6613d89d919614acc329cbfb96ab457" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree::pll_t</scope><name>multiply</name></member>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1aa9de3fa524c2c3737d40ae6a57dcac80" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree::pll_t</scope><name>source</name></member>
+      <member refid="structhal_1_1stm32f1_1_1clock__tree_1_1pll__t_1a2176bf9ffed0274eb91cd9389967127b" prot="public" virt="non-virtual"><scope>hal::stm32f1::clock_tree::pll_t</scope><name>usb</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
