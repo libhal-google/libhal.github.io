@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1lpc40_1_1pin" kind="class" language="C++" prot="public">
+    <compoundname>hal::lpc40::pin</compoundname>
+    <includes refid="libhal-lpc40_2pin_8hpp" local="no">pin.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1pin_1ad7c29a78cfaaa3106e65f1c32e63529d" prot="private" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::lpc40::pin::m_port</definition>
+        <argsstring></argsstring>
+        <name>m_port</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="136" column="16" bodyfile="libraries/include/libhal-lpc40/pin.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1pin_1aa3e9c0d85f570742e50eae375f0c7070" prot="private" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::lpc40::pin::m_pin</definition>
+        <argsstring></argsstring>
+        <name>m_pin</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="137" column="16" bodyfile="libraries/include/libhal-lpc40/pin.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1adc747a55755fc906ac9659ca1b1518dc" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::lpc40::pin::pin</definition>
+        <argsstring>(std::uint8_t p_port, std::uint8_t p_pin)</argsstring>
+        <name>pin</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_port</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_pin</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new pin mux and configuration driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>See UM10562 page 99 for more details on which pins can be what function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- selects pin port to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- selects pin within the port to use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="38" column="13" bodyfile="libraries/include/libhal-lpc40/pin.hpp" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1a6bac25d30284cae1466bdc944f7f604e" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::lpc40::pin::pin</definition>
+        <argsstring>()=default</argsstring>
+        <name>pin</name>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="45" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1ab24b520761f508b2ca53f4a7c56bcda3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref> &amp;</type>
+        <definition>const pin&amp; hal::lpc40::pin::function</definition>
+        <argsstring>(uint8_t p_function_code) const</argsstring>
+        <name>function</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>p_function_code</declname>
+        </param>
+        <briefdescription>
+<para>Change the function of the pin (mux the pins function) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_function_code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the pin function code </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pin&amp; - reference to this pin for chaining </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="53" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1a04bdbfe608fd25da7a5c4bf34be4d759" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref> &amp;</type>
+        <definition>const pin&amp; hal::lpc40::pin::resistor</definition>
+        <argsstring>(hal::pin_resistor p_resistor) const</argsstring>
+        <name>resistor</name>
+        <param>
+          <type><ref refid="namespacehal_1af094ceea0d10800e8281b1014d7b8a1a" kindref="member">hal::pin_resistor</ref></type>
+          <declname>p_resistor</declname>
+        </param>
+        <briefdescription>
+<para>Set the internal resistor connection for this pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_resistor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- resistor type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pin&amp; - reference to this pin for chaining </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="61" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1a340b02502db7cb942d954fb1b7945607" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref> &amp;</type>
+        <definition>const pin&amp; hal::lpc40::pin::hysteresis</definition>
+        <argsstring>(bool p_enable) const</argsstring>
+        <name>hysteresis</name>
+        <param>
+          <type>bool</type>
+          <declname>p_enable</declname>
+        </param>
+        <briefdescription>
+<para>Disable or enable hysteresis mode for this pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- enable this mode, set to false to disable this mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pin&amp; - reference to this pin for chaining </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="69" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1abdec760d32bca17cb0a4e3ecbba1ab29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref> &amp;</type>
+        <definition>const pin&amp; hal::lpc40::pin::input_invert</definition>
+        <argsstring>(bool p_enable) const</argsstring>
+        <name>input_invert</name>
+        <param>
+          <type>bool</type>
+          <declname>p_enable</declname>
+        </param>
+        <briefdescription>
+<para>invert the logic for this pin in input mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- enable this mode, set to false to disable this mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pin&amp; - reference to this pin for chaining </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="77" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1ae7a9a6cde91c6dbdea0643cb67ebc3f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref> &amp;</type>
+        <definition>const pin&amp; hal::lpc40::pin::analog</definition>
+        <argsstring>(bool p_enable) const</argsstring>
+        <name>analog</name>
+        <param>
+          <type>bool</type>
+          <declname>p_enable</declname>
+        </param>
+        <briefdescription>
+<para>enable analog mode for this pin (required for dac and adc drivers) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- enable this mode, set to false to disable this mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pin&amp; - reference to this pin for chaining </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="85" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1a65a3bc2e6d623628a5c2ea8503445c96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref> &amp;</type>
+        <definition>const pin&amp; hal::lpc40::pin::digital_filter</definition>
+        <argsstring>(bool p_enable) const</argsstring>
+        <name>digital_filter</name>
+        <param>
+          <type>bool</type>
+          <declname>p_enable</declname>
+        </param>
+        <briefdescription>
+<para>enable digital filtering (filter out noise on input lines) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- enable this mode, set to false to disable this mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pin&amp; - reference to this pin for chaining </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="93" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1ac3d678bf852e8e51a7fd02365f8f37b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref> &amp;</type>
+        <definition>const pin&amp; hal::lpc40::pin::highspeed_i2c</definition>
+        <argsstring>(bool p_enable=true) const</argsstring>
+        <name>highspeed_i2c</name>
+        <param>
+          <type>bool</type>
+          <declname>p_enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Enable high speed mode for <ref refid="classhal_1_1lpc40_1_1i2c" kindref="compound">i2c</ref> pins. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- enable this mode, set to false to disable this mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pin&amp; - reference to this pin for chaining </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="101" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1a2505bd324e24f3b3be4f45ead02bab62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref> &amp;</type>
+        <definition>const pin&amp; hal::lpc40::pin::high_slew_rate</definition>
+        <argsstring>(bool p_enable=true) const</argsstring>
+        <name>high_slew_rate</name>
+        <param>
+          <type>bool</type>
+          <declname>p_enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>enable high slew rate for pin </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- enable this mode, set to false to disable this mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pin&amp; - reference to this pin for chaining </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="109" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1a72a0a03016b1caee2880b3e39ccb35e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref> &amp;</type>
+        <definition>const pin&amp; hal::lpc40::pin::i2c_high_current</definition>
+        <argsstring>(bool p_enable=true) const</argsstring>
+        <name>i2c_high_current</name>
+        <param>
+          <type>bool</type>
+          <declname>p_enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>enable high current drain for <ref refid="classhal_1_1lpc40_1_1i2c" kindref="compound">i2c</ref> lines </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- enable this mode, set to false to disable this mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pin&amp; - reference to this pin for chaining </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="117" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1aa323bc8162b6137340dbb4903b42bc08" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref> &amp;</type>
+        <definition>const pin&amp; hal::lpc40::pin::open_drain</definition>
+        <argsstring>(bool p_enable=true) const</argsstring>
+        <name>open_drain</name>
+        <param>
+          <type>bool</type>
+          <declname>p_enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Make the pin open drain (required for the <ref refid="classhal_1_1lpc40_1_1i2c" kindref="compound">i2c</ref> driver) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- enable this mode, set to false to disable this mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pin&amp; - reference to this pin for chaining </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="125" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pin_1a3facd97b51a17546a7762066ffa63982" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref> &amp;</type>
+        <definition>const pin&amp; hal::lpc40::pin::dac</definition>
+        <argsstring>(bool p_enable=true) const</argsstring>
+        <name>dac</name>
+        <param>
+          <type>bool</type>
+          <declname>p_enable</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Enable dac mode (required for the dac driver) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- enable this mode, set to false to disable this mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pin&amp; - reference to this pin for chaining </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pin.hpp" line="133" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>lpc40xx pin multiplexing and control driver used drivers and apps seeking to tune the pins. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-lpc40/pin.hpp" line="27" column="1" bodyfile="libraries/include/libhal-lpc40/pin.hpp" bodystart="28" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classhal_1_1lpc40_1_1pin_1ae7a9a6cde91c6dbdea0643cb67ebc3f0" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>analog</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1a3facd97b51a17546a7762066ffa63982" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>dac</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1a65a3bc2e6d623628a5c2ea8503445c96" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>digital_filter</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1ab24b520761f508b2ca53f4a7c56bcda3" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>function</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1a2505bd324e24f3b3be4f45ead02bab62" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>high_slew_rate</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1ac3d678bf852e8e51a7fd02365f8f37b2" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>highspeed_i2c</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1a340b02502db7cb942d954fb1b7945607" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>hysteresis</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1a72a0a03016b1caee2880b3e39ccb35e3" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>i2c_high_current</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1abdec760d32bca17cb0a4e3ecbba1ab29" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>input_invert</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1aa3e9c0d85f570742e50eae375f0c7070" prot="private" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>m_pin</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1ad7c29a78cfaaa3106e65f1c32e63529d" prot="private" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>m_port</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1aa323bc8162b6137340dbb4903b42bc08" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>open_drain</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1adc747a55755fc906ac9659ca1b1518dc" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>pin</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1a6bac25d30284cae1466bdc944f7f604e" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>pin</name></member>
+      <member refid="classhal_1_1lpc40_1_1pin_1a04bdbfe608fd25da7a5c4bf34be4d759" prot="public" virt="non-virtual"><scope>hal::lpc40::pin</scope><name>resistor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
