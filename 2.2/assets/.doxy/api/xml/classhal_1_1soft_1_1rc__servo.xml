@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1soft_1_1rc__servo" kind="class" language="C++" prot="public">
+    <compoundname>hal::soft::rc_servo</compoundname>
+    <basecompoundref refid="classhal_1_1servo" prot="public" virt="non-virtual">hal::servo</basecompoundref>
+    <includes refid="rc__servo_8hpp" local="no">rc_servo.hpp</includes>
+    <innerclass refid="structhal_1_1soft_1_1rc__servo_1_1settings" prot="public">hal::soft::rc_servo::settings</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1soft_1_1rc__servo_1a96f9cfe83bb3015e3dab7802e1fe0db4" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1pwm" kindref="compound">hal::pwm</ref> *</type>
+        <definition>hal::pwm* hal::soft::rc_servo::m_pwm</definition>
+        <argsstring></argsstring>
+        <name>m_pwm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/rc_servo.hpp" line="84" column="12" bodyfile="libraries/include/libhal-soft/rc_servo.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1soft_1_1rc__servo_1a82f07b67e8379de9b5ff86bb09deefd5" prot="private" static="no" mutable="no">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt;float, float&gt; hal::soft::rc_servo::m_percent_range</definition>
+        <argsstring></argsstring>
+        <name>m_percent_range</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/rc_servo.hpp" line="85" column="13" bodyfile="libraries/include/libhal-soft/rc_servo.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1soft_1_1rc__servo_1add9ceec5562dfacd2d3f1d27da1773ec" prot="private" static="no" mutable="no">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt;float, float&gt; hal::soft::rc_servo::m_angle_range</definition>
+        <argsstring></argsstring>
+        <name>m_angle_range</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/rc_servo.hpp" line="86" column="13" bodyfile="libraries/include/libhal-soft/rc_servo.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1soft_1_1rc__servo_1a1660dc04c1d51611d4d8a1455f0c2591" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1soft_1_1rc__servo" kindref="compound">rc_servo</ref> &gt;</type>
+        <definition>static result&lt;rc_servo&gt; hal::soft::rc_servo::create</definition>
+        <argsstring>(hal::pwm &amp;p_pwm, settings p_settings)</argsstring>
+        <name>create</name>
+        <param>
+          <type><ref refid="classhal_1_1pwm" kindref="compound">hal::pwm</ref> &amp;</type>
+          <declname>p_pwm</declname>
+        </param>
+        <param>
+          <type><ref refid="structhal_1_1soft_1_1rc__servo_1_1settings" kindref="compound">settings</ref></type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+<para>Factory function to create a <ref refid="classhal_1_1soft_1_1rc__servo" kindref="compound">rc_servo</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Compile time error will occur if the min microseconds is more than the max microseconds, if the max microseconds is more than the frequency wavelength, or if the min angle is more than max angle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_pwm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- pwm signal connected to the RC servo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;rc_servo&gt; - Constructed <ref refid="classhal_1_1soft_1_1rc__servo" kindref="compound">rc_servo</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/rc_servo.hpp" line="70" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1soft_1_1rc__servo_1afd125a8e20655b809b4ca4da2790ecf3" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::soft::rc_servo::rc_servo</definition>
+        <argsstring>(hal::pwm &amp;p_pwm, std::pair&lt; float, float &gt; p_percent_range, std::pair&lt; float, float &gt; p_angle_range)</argsstring>
+        <name>rc_servo</name>
+        <param>
+          <type><ref refid="classhal_1_1pwm" kindref="compound">hal::pwm</ref> &amp;</type>
+          <declname>p_pwm</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; float, float &gt;</type>
+          <declname>p_percent_range</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; float, float &gt;</type>
+          <declname>p_angle_range</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/rc_servo.hpp" line="75" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1soft_1_1rc__servo_1ab1bd0249ef3e51bac521ee4154ab8592" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1servo_1_1position__t" kindref="compound">position_t</ref> &gt;</type>
+        <definition>result&lt;position_t&gt; hal::soft::rc_servo::driver_position</definition>
+        <argsstring>(hal::degrees p_position) override</argsstring>
+        <name>driver_position</name>
+        <reimplements refid="classhal_1_1servo_1a9d581ffd1963fd9e4c7a1e7ab0391e8d">driver_position</reimplements>
+        <param>
+          <type><ref refid="namespacehal_1a69b7f93f81eb80e25fbaefa924af5748" kindref="member">hal::degrees</ref></type>
+          <declname>p_position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/rc_servo.hpp" line="79" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generic RC servo driver. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::servo</label>
+        <link refid="classhal_1_1servo"/>
+      </node>
+      <node id="1">
+        <label>hal::soft::rc_servo</label>
+        <link refid="classhal_1_1soft_1_1rc__servo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::servo</label>
+        <link refid="classhal_1_1servo"/>
+      </node>
+      <node id="1">
+        <label>hal::soft::rc_servo</label>
+        <link refid="classhal_1_1soft_1_1rc__servo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/rc_servo.hpp" line="29" column="1" bodyfile="libraries/include/libhal-soft/rc_servo.hpp" bodystart="30" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classhal_1_1soft_1_1rc__servo_1a1660dc04c1d51611d4d8a1455f0c2591" prot="public" virt="non-virtual"><scope>hal::soft::rc_servo</scope><name>create</name></member>
+      <member refid="classhal_1_1soft_1_1rc__servo_1ab1bd0249ef3e51bac521ee4154ab8592" prot="private" virt="virtual"><scope>hal::soft::rc_servo</scope><name>driver_position</name></member>
+      <member refid="classhal_1_1soft_1_1rc__servo_1add9ceec5562dfacd2d3f1d27da1773ec" prot="private" virt="non-virtual"><scope>hal::soft::rc_servo</scope><name>m_angle_range</name></member>
+      <member refid="classhal_1_1soft_1_1rc__servo_1a82f07b67e8379de9b5ff86bb09deefd5" prot="private" virt="non-virtual"><scope>hal::soft::rc_servo</scope><name>m_percent_range</name></member>
+      <member refid="classhal_1_1soft_1_1rc__servo_1a96f9cfe83bb3015e3dab7802e1fe0db4" prot="private" virt="non-virtual"><scope>hal::soft::rc_servo</scope><name>m_pwm</name></member>
+      <member refid="classhal_1_1servo_1a3d66f0fb413e530eaa08853766874090" prot="public" virt="non-virtual"><scope>hal::soft::rc_servo</scope><name>position</name></member>
+      <member refid="classhal_1_1soft_1_1rc__servo_1afd125a8e20655b809b4ca4da2790ecf3" prot="private" virt="non-virtual"><scope>hal::soft::rc_servo</scope><name>rc_servo</name></member>
+      <member refid="classhal_1_1servo_1a51214959311c016496ee0edf58bff487" prot="public" virt="virtual"><scope>hal::soft::rc_servo</scope><name>~servo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
