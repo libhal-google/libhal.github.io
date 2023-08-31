@@ -6,6 +6,7 @@
   - [🎯 Debugging Code with PyOCD](user_guide/debugging.md)
   - [🎚️ Configuration](user_guide/configuration.md)
   - [🪤 Error Handling in libhal using Boost.LEAF](user_guide/error_handling.md)
+  - [⚖️ Policies & FAQ](user_guide/policy.md)
 - 📚 Contributor Guides
   - [📜 Design Philosophy](contributor_guide/philosophy.md)
   - [🗃️ Organization](contributor_guide/organization.md)
