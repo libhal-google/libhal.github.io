@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1lpc40_1_1clock_1_1configuration" kind="struct" language="C++" prot="public">
+    <compoundname>hal::lpc40::clock::configuration</compoundname>
+    <includes refid="libhal-lpc40_2clock_8hpp" local="no">clock.hpp</includes>
+    <innerclass refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1cpu__t" prot="public">hal::lpc40::clock::configuration::cpu_t</innerclass>
+    <innerclass refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1pll__t" prot="public">hal::lpc40::clock::configuration::pll_t</innerclass>
+    <innerclass refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1spifi__t" prot="public">hal::lpc40::clock::configuration::spifi_t</innerclass>
+    <innerclass refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t" prot="public">hal::lpc40::clock::configuration::usb_t</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1clock_1_1configuration_1afdf0b3391f602aa43837deccdb412b9b" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref></type>
+        <definition>hertz hal::lpc40::clock::configuration::oscillator_frequency</definition>
+        <argsstring></argsstring>
+        <name>oscillator_frequency</name>
+        <initializer>= <ref refid="classhal_1_1lpc40_1_1clock_1a4835b2f6b5eee3a358049000b91c73a8" kindref="member">irc_frequency</ref></initializer>
+        <briefdescription>
+<para>the frequency of the input oscillator </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/clock.hpp" line="101" column="11" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1clock_1_1configuration_1a1b901a4cfe22134114e7f05aa22dca02" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::lpc40::clock::configuration::use_external_oscillator</definition>
+        <argsstring></argsstring>
+        <name>use_external_oscillator</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>set to true to use external XTC </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/clock.hpp" line="103" column="10" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1clock_1_1configuration_1acc775f50536c492b8a99c13fc2e95a09" prot="public" static="no" mutable="no">
+        <type>std::array&lt; <ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1pll__t" kindref="compound">pll_t</ref>, 2 &gt;</type>
+        <definition>std::array&lt;pll_t, 2&gt; hal::lpc40::clock::configuration::pll</definition>
+        <argsstring></argsstring>
+        <name>pll</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>phase locked loops for both pll[0] and pll[1] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/clock.hpp" line="113" column="16" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1clock_1_1configuration_1a7ec16200adf9d5afca5b7bf91633d921" prot="public" static="no" mutable="no">
+        <type><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1cpu__t" kindref="compound">cpu_t</ref></type>
+        <definition>cpu_t hal::lpc40::clock::configuration::cpu</definition>
+        <argsstring></argsstring>
+        <name>cpu</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>cpu clock control </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/clock.hpp" line="124" column="11" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1clock_1_1configuration_1a25702d095f3fcbc972327ece5e783008" prot="public" static="no" mutable="no">
+        <type><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t" kindref="compound">usb_t</ref></type>
+        <definition>usb_t hal::lpc40::clock::configuration::usb</definition>
+        <argsstring></argsstring>
+        <name>usb</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>usb clock control </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/clock.hpp" line="135" column="11" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1clock_1_1configuration_1ad18d7c0ea99421d0b5aeb82932ffb04e" prot="public" static="no" mutable="no">
+        <type><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1spifi__t" kindref="compound">spifi_t</ref></type>
+        <definition>spifi_t hal::lpc40::clock::configuration::spifi</definition>
+        <argsstring></argsstring>
+        <name>spifi</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>spifi clock control </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/clock.hpp" line="146" column="13" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1clock_1_1configuration_1a7a705d258e4adf536f10b6a150c47b52" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hal::lpc40::clock::configuration::peripheral_divider</definition>
+        <argsstring></argsstring>
+        <name>peripheral_divider</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+<para>Defines the peripheral clock divider amount. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/clock.hpp" line="149" column="13" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1clock_1_1configuration_1aae1ebe28fbe17398ab573d87f09bdeb6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::lpc40::clock::configuration::emc_half_cpu_divider</definition>
+        <argsstring></argsstring>
+        <name>emc_half_cpu_divider</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set true to make the EMC divider half as slow as the CPU divider. Set to false to set it to equal that amount. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/clock.hpp" line="153" column="10" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Clock configuration object. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::lpc40::clock::configuration::spifi_t</label>
+        <link refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1spifi__t"/>
+      </node>
+      <node id="4">
+        <label>hal::lpc40::clock::configuration::cpu_t</label>
+        <link refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1cpu__t"/>
+      </node>
+      <node id="3">
+        <label>hal::lpc40::clock::configuration::usb_t</label>
+        <link refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t"/>
+      </node>
+      <node id="1">
+        <label>hal::lpc40::clock::configuration</label>
+        <link refid="structhal_1_1lpc40_1_1clock_1_1configuration"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>spifi</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>usb</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>cpu</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-lpc40/clock.hpp" line="98" column="3" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="99" bodyend="154"/>
+    <listofallmembers>
+      <member refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a7ec16200adf9d5afca5b7bf91633d921" prot="public" virt="non-virtual"><scope>hal::lpc40::clock::configuration</scope><name>cpu</name></member>
+      <member refid="structhal_1_1lpc40_1_1clock_1_1configuration_1aae1ebe28fbe17398ab573d87f09bdeb6" prot="public" virt="non-virtual"><scope>hal::lpc40::clock::configuration</scope><name>emc_half_cpu_divider</name></member>
+      <member refid="structhal_1_1lpc40_1_1clock_1_1configuration_1afdf0b3391f602aa43837deccdb412b9b" prot="public" virt="non-virtual"><scope>hal::lpc40::clock::configuration</scope><name>oscillator_frequency</name></member>
+      <member refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a7a705d258e4adf536f10b6a150c47b52" prot="public" virt="non-virtual"><scope>hal::lpc40::clock::configuration</scope><name>peripheral_divider</name></member>
+      <member refid="structhal_1_1lpc40_1_1clock_1_1configuration_1acc775f50536c492b8a99c13fc2e95a09" prot="public" virt="non-virtual"><scope>hal::lpc40::clock::configuration</scope><name>pll</name></member>
+      <member refid="structhal_1_1lpc40_1_1clock_1_1configuration_1ad18d7c0ea99421d0b5aeb82932ffb04e" prot="public" virt="non-virtual"><scope>hal::lpc40::clock::configuration</scope><name>spifi</name></member>
+      <member refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a25702d095f3fcbc972327ece5e783008" prot="public" virt="non-virtual"><scope>hal::lpc40::clock::configuration</scope><name>usb</name></member>
+      <member refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a1b901a4cfe22134114e7f05aa22dca02" prot="public" virt="non-virtual"><scope>hal::lpc40::clock::configuration</scope><name>use_external_oscillator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
