@@ -1,85 +1,65 @@
 # ⚖️ Policies & FAQ
 
-## 1. How does libhal ensure consistency across different platforms?
+## 1. **Ensuring Consistency Across Platforms**
 
-There are only one way to ensure consistency of an interface across different
-platforms.
+To maintain a consistent interface across platforms, libhal adopts:
 
-1. Have clearly defined and unambiguous rules and documentation for interface
-   APIs describing how all possible inputs result in specific behavior.
-2. Creating a testing mechanism to ensure compliance.
+1. Clearly articulated rules and interface API documentation. This ensures every
+   potential input produces a predictable behavior.
+2. Testing mechanisms that ensure adherence to these standards.
 
-libhal resolves the first criteria, but the second is not yet setup as a part
-of the CI, simulated or real. We do plan to develop a compliance test that can
-either be run on a device or as part of CI. For now, manual testing and inspect
-is needed.
+While libhal covers the documentation aspect, our CI integration doesn't yet
+encompass all testing facets, simulated or real-world. We are in the process of
+designing a compliance test suitable both for device testing and CI inclusion.
+Presently, the onus is on manual testing and meticulous inspection.
 
-You may be thinking, what about unit tests? Host side unit tests for embedded
-systems are great for purely software libraries. Once you have to mock the i2c,
-input pin, or canbus, you've already left the realm of testing the actual
-device, but your simulation. This is only useful after you've proven that the
-code work with the device in question, then wrote unit tests to codify the
-current behavior. Higher level conceptual conceptual and application code can
-leverage this, but low level drivers tend to be poor candidates for unit
-testing.
+Regarding unit tests: Although beneficial for purely software libraries, they're
+not always feasible for embedded systems. Once you mock components like i2c or
+input pins, the actual device testing veers towards simulation. This method is
+viable post verifying the device compatibility, solidifying the code behavior
+through unit tests. High-level conceptual and application codes can harness such
+tests, but unit testing often misaligns with low-level drivers.
 
-## 2. How are drivers developed for libhal?
+## 2. **Driver Development in libhal**
 
-> Are they actively developed for a specific mcu/device or is it automated/code
-> generated? For example, if a new product is announced tomorrow, is that
-> something your project would support immediately on launch, or would you need
-> to update your codebase to support it?
+> How are these drivers created? Do new products gain immediate support?
 
-Code is hand written by developers. The issue with automated approaches to
-firmware drivers as they tend to either be inefficient, or they don't work well
-across many devices. Unless the device follows some sort of standard like NMEA
-or JEDEC, automated code generation cannot get you very far. With that being
-said, the usage of tools to take and convert SVD files into bit mask ranges
-will be entertained so long as there aren't any licensing issues.
+Our developers craft code by hand. Fully automated firmware driver solutions
+either fall short on efficiency or fail to span multiple devices. However, for
+devices adhering to standards like NMEA or JEDEC, automation holds potential.
+We're also considering tools that process SVD files into bit mask ranges,
+assuming no licensing complications arise.
 
-## 3. Can OEM's object to libhal software?
+## 3. **OEM's Stance on libhal Software**
 
-> What sort of legal protections, if any, does libhal have in place to protect
-> from a vendor objecting to their product being supported on libhal?
+> Does libhal have defenses against potential vendor objections?
 
-This is a problem if libhal used OEM developed SDKs or software libraries. SDKs
-like those from NXP or STM come with licenses that only allow the code to be
-executed on their devices or executed on other systems with the end goal of the
-code be executed on one of their products. This may seem like a fair as you
-tend to never run stm32f1 code on anything other than a stm32f1 MCU. But there
-are chips that have implemented IP blocks nearly identical to the stm32f1 MCU
-and thus can use the same exact drivers, albeit with different register map
-locations.
+Using OEM-developed SDKs can be tricky due to restrictive licensing. For
+instance, SDKs from NXP or STM mandate their code only run on their specific
+devices. Some chips might mirror the architecture of another, but licensing can
+inhibit cross-utilization.
 
-So long as the software is written by our engineers on their time, and based on
-the OEMs publicly available user manual, then the libhal project should be
-fine. It is possible that exceptions to this will arise and they will be handled
-in a per situation basis.
+Our safeguard? Any software we integrate is crafted by our engineers, strictly
+based on publicly accessible OEM manuals. We're mindful of potential exceptions
+and will handle them case-by-case.
 
-## 4. Does libhal utilize vendor SDKs?
+## 4. **Vendor SDK Utilization in libhal**
 
-> And if so how does it manage licensed APIs?
-> How will that translate to the end developer?
-> What would the end license be for the software package?
+> How does libhal tackle licensed APIs? What does it mean for the end developer?
 
-Currently no. libhal will NOT use an SDK with a restrictive license or a license
-that is not compatible with Apache 2.0 and the like. For example the NXP and
-STM licenses. Where as the ESP32 software is Apache 2.0, so technically could
-be used.
+Currently, libhal steers clear of SDKs with confining licenses or those
+misaligned with Apache 2.0 or its equivalents. This includes licenses from NXP
+and STM. However, SDKs from Espressif Systems (with Apache 2.0) are potentially
+usable.
 
-## 5. How are devices without a publicly available user manual handled?
+## 5. **Dealing with Devices Lacking Public Manuals**
 
-If a device does not have a publicly available user manual then the first
-instinct of libhal is to NOT make a library for it. For the following reasons:
+Devices without public user manuals typically don't get a libhal library. Here's
+why:
 
-1. If the user manual is not public, then exposing a driver for it would also
-   expose private information about the product or device.
-2. Not having a user manual means that user cannot inspect the code. The code
-   becomes a black box where all of the constants/addresses/commands are
-   affectively magic numbers with no reference to check against. This would make
-   the task of debugging a task in reverse engineering.
+1. It risks unintentional exposure of proprietary device information.
+2. Without a manual, the code operates like a black box, turning debugging into
+   a reverse-engineering puzzle.
 
-Now drivers can be made for devices or MCUs without publicly available user
-manuals can still be made. In these situations the source code would also be
-private as well. In general, libhal will only support open source libraries in
-its organization.
+We can craft drivers for such devices, but their source code would remain
+confidential. Libhal predominantly focuses on fostering open-source libraries.
