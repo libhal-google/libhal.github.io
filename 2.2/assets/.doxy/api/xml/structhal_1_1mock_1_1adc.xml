@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1mock_1_1adc" kind="struct" language="C++" prot="public">
+    <compoundname>hal::mock::adc</compoundname>
+    <basecompoundref refid="classhal_1_1adc" prot="public" virt="non-virtual">hal::adc</basecompoundref>
+    <includes refid="libhal-mock_2adc_8hpp" local="no">adc.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structhal_1_1mock_1_1adc_1a1e077dd11ef4f53841f8145893a6f1bd" prot="private" static="no" mutable="no">
+        <type>std::queue&lt; <ref refid="structhal_1_1adc_1_1read__t" kindref="compound">read_t</ref> &gt;</type>
+        <definition>std::queue&lt;read_t&gt; hal::mock::adc::m_adc_values</definition>
+        <argsstring></argsstring>
+        <name>m_adc_values</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/adc.hpp" line="47" column="14" bodyfile="libraries/include/libhal-mock/adc.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1adc_1a2f073d197d9cfb63387985a5b3d0698e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::mock::adc::set</definition>
+        <argsstring>(std::queue&lt; read_t &gt; &amp;p_adc_values)</argsstring>
+        <name>set</name>
+        <param>
+          <type>std::queue&lt; <ref refid="structhal_1_1adc_1_1read__t" kindref="compound">read_t</ref> &gt; &amp;</type>
+          <declname>p_adc_values</declname>
+        </param>
+        <briefdescription>
+<para>Queues the floats to be returned for <ref refid="classhal_1_1adc_1aa47439748c64c60887bdbd75f9cc3c6c" kindref="member">read()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_adc_values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- queue of floats </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/adc.hpp" line="31" column="8" bodyfile="libraries/include/libhal-mock/adc.hpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1adc_1ab415b12f1cc65be190f57e31d7b46b64" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1adc_1_1read__t" kindref="compound">read_t</ref> &gt;</type>
+        <definition>result&lt;read_t&gt; hal::mock::adc::driver_read</definition>
+        <argsstring>() override</argsstring>
+        <name>driver_read</name>
+        <reimplements refid="classhal_1_1adc_1aaf84b89a21851b22fd7001a230cbd87e">driver_read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/adc.hpp" line="37" column="10" bodyfile="libraries/include/libhal-mock/adc.hpp" bodystart="37" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Mock adc implementation for use in unit tests and simulations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::mock::adc</label>
+        <link refid="structhal_1_1mock_1_1adc"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::adc</label>
+        <link refid="classhal_1_1adc"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::mock::adc</label>
+        <link refid="structhal_1_1mock_1_1adc"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::adc</label>
+        <link refid="classhal_1_1adc"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-mock/adc.hpp" line="24" column="1" bodyfile="libraries/include/libhal-mock/adc.hpp" bodystart="25" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structhal_1_1mock_1_1adc_1ab415b12f1cc65be190f57e31d7b46b64" prot="private" virt="virtual"><scope>hal::mock::adc</scope><name>driver_read</name></member>
+      <member refid="structhal_1_1mock_1_1adc_1a1e077dd11ef4f53841f8145893a6f1bd" prot="private" virt="non-virtual"><scope>hal::mock::adc</scope><name>m_adc_values</name></member>
+      <member refid="classhal_1_1adc_1aa47439748c64c60887bdbd75f9cc3c6c" prot="public" virt="non-virtual"><scope>hal::mock::adc</scope><name>read</name></member>
+      <member refid="structhal_1_1mock_1_1adc_1a2f073d197d9cfb63387985a5b3d0698e" prot="public" virt="non-virtual"><scope>hal::mock::adc</scope><name>set</name></member>
+      <member refid="classhal_1_1adc_1a10697dfc3b5b010e40cba12213f938f8" prot="public" virt="virtual"><scope>hal::mock::adc</scope><name>~adc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1input__pin_1_1level__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::input_pin::level_t</compoundname>
+    <includes refid="libhal_2input__pin_8hpp" local="no">input_pin.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1input__pin_1_1level__t_1a97ab5ed0a26268370e88b60feddcd308" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::input_pin::level_t::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+<para>Measured state of the pin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/input_pin.hpp" line="41" column="10" bodyfile="libraries/include/libhal/input_pin.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Input pin level reading structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/input_pin.hpp" line="38" column="3" bodyfile="libraries/include/libhal/input_pin.hpp" bodystart="39" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structhal_1_1input__pin_1_1level__t_1a97ab5ed0a26268370e88b60feddcd308" prot="public" virt="non-virtual"><scope>hal::input_pin::level_t</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

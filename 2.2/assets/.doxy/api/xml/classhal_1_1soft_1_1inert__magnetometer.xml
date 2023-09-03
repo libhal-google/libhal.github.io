@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1soft_1_1inert__magnetometer" kind="class" language="C++" prot="public">
+    <compoundname>hal::soft::inert_magnetometer</compoundname>
+    <basecompoundref refid="classhal_1_1magnetometer" prot="public" virt="non-virtual">hal::magnetometer</basecompoundref>
+    <includes refid="inert__magnetometer_8hpp" local="no">inert_magnetometer.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1soft_1_1inert__magnetometer_1aecd0af40a3ff57527b49fba11cf19341" prot="private" static="no" mutable="no">
+        <type><ref refid="structhal_1_1magnetometer_1_1read__t" kindref="compound">read_t</ref></type>
+        <definition>read_t hal::soft::inert_magnetometer::m_result</definition>
+        <argsstring></argsstring>
+        <name>m_result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_magnetometer.hpp" line="49" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_magnetometer.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1soft_1_1inert__magnetometer_1ace01fdd5358ceb4db5e194f6ddf8659e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1soft_1_1inert__magnetometer" kindref="compound">inert_magnetometer</ref> &gt;</type>
+        <definition>static result&lt;inert_magnetometer&gt; hal::soft::inert_magnetometer::create</definition>
+        <argsstring>(read_t p_result)</argsstring>
+        <name>create</name>
+        <param>
+          <type><ref refid="structhal_1_1magnetometer_1_1read__t" kindref="compound">read_t</ref></type>
+          <declname>p_result</declname>
+        </param>
+        <briefdescription>
+<para>Factory function to create an <ref refid="classhal_1_1soft_1_1inert__magnetometer" kindref="compound">inert_magnetometer</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- read_t object to return when <ref refid="classhal_1_1magnetometer_1a45c4cce8442c8e622b851d0c09cc60b5" kindref="member">read()</ref> is called </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;inert_magnetometer&gt; - Constructed <ref refid="classhal_1_1soft_1_1inert__magnetometer" kindref="compound">inert_magnetometer</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_magnetometer.hpp" line="33" column="17" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_magnetometer.hpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1soft_1_1inert__magnetometer_1afef96c821120a4436fcfb053f1151c1d" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::soft::inert_magnetometer::inert_magnetometer</definition>
+        <argsstring>(read_t p_result)</argsstring>
+        <name>inert_magnetometer</name>
+        <param>
+          <type><ref refid="structhal_1_1magnetometer_1_1read__t" kindref="compound">read_t</ref></type>
+          <declname>p_result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_magnetometer.hpp" line="39" column="13" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_magnetometer.hpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1soft_1_1inert__magnetometer_1a1ca3d13ad97bb975e8589eaa07926f19" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1magnetometer_1_1read__t" kindref="compound">read_t</ref> &gt;</type>
+        <definition>result&lt;read_t&gt; hal::soft::inert_magnetometer::driver_read</definition>
+        <argsstring>()</argsstring>
+        <name>driver_read</name>
+        <reimplements refid="classhal_1_1magnetometer_1a66578a265dc7ee5382e8868da62631c2">driver_read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_magnetometer.hpp" line="44" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_magnetometer.hpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inert implementation of magnetic field strength sensing hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::soft::inert_magnetometer</label>
+        <link refid="classhal_1_1soft_1_1inert__magnetometer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::magnetometer</label>
+        <link refid="classhal_1_1magnetometer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::soft::inert_magnetometer</label>
+        <link refid="classhal_1_1soft_1_1inert__magnetometer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::magnetometer</label>
+        <link refid="classhal_1_1magnetometer"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/inert_drivers/inert_magnetometer.hpp" line="24" column="1" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_magnetometer.hpp" bodystart="25" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classhal_1_1soft_1_1inert__magnetometer_1ace01fdd5358ceb4db5e194f6ddf8659e" prot="public" virt="non-virtual"><scope>hal::soft::inert_magnetometer</scope><name>create</name></member>
+      <member refid="classhal_1_1soft_1_1inert__magnetometer_1a1ca3d13ad97bb975e8589eaa07926f19" prot="private" virt="virtual"><scope>hal::soft::inert_magnetometer</scope><name>driver_read</name></member>
+      <member refid="classhal_1_1soft_1_1inert__magnetometer_1afef96c821120a4436fcfb053f1151c1d" prot="private" virt="non-virtual"><scope>hal::soft::inert_magnetometer</scope><name>inert_magnetometer</name></member>
+      <member refid="classhal_1_1soft_1_1inert__magnetometer_1aecd0af40a3ff57527b49fba11cf19341" prot="private" virt="non-virtual"><scope>hal::soft::inert_magnetometer</scope><name>m_result</name></member>
+      <member refid="classhal_1_1magnetometer_1a45c4cce8442c8e622b851d0c09cc60b5" prot="public" virt="non-virtual"><scope>hal::soft::inert_magnetometer</scope><name>read</name></member>
+      <member refid="classhal_1_1magnetometer_1a1b6d735c37157385f1963c405a65fee6" prot="public" virt="virtual"><scope>hal::soft::inert_magnetometer</scope><name>~magnetometer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
