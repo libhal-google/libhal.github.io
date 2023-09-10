@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="libhal_2can_8hpp" kind="file" language="C++">
+    <compoundname>can.hpp</compoundname>
+    <includes local="no">array</includes>
+    <includes local="no">cstdint</includes>
+    <includes refid="error_8hpp" local="yes">error.hpp</includes>
+    <includes refid="functional_8hpp" local="yes">functional.hpp</includes>
+    <includes refid="libhal_2units_8hpp" local="yes">units.hpp</includes>
+    <includedby refid="can__router_8hpp" local="no">libraries/include/libhal-canrouter/can_router.hpp</includedby>
+    <includedby refid="libhal-lpc40_2can_8hpp" local="no">libraries/include/libhal-lpc40/can.hpp</includedby>
+    <includedby refid="micromod_8hpp" local="no">libraries/include/libhal-micromod/micromod.hpp</includedby>
+    <includedby refid="libhal-mock_2can_8hpp" local="no">libraries/include/libhal-mock/can.hpp</includedby>
+    <includedby refid="drc_8hpp" local="no">libraries/include/libhal-rmd/drc.hpp</includedby>
+    <includedby refid="mc__x_8hpp" local="no">libraries/include/libhal-rmd/mc_x.hpp</includedby>
+    <includedby refid="libhal-util_2can_8hpp" local="no">libraries/include/libhal-util/can.hpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>system_error</label>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="9">
+        <label>tl/function_ref.hpp</label>
+      </node>
+      <node id="8">
+        <label>third_party/inplace_function.hpp</label>
+      </node>
+      <node id="7">
+        <label>functional.hpp</label>
+        <link refid="functional_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>units.hpp</label>
+        <link refid="libhal_2units_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>boost/leaf.hpp</label>
+      </node>
+      <node id="2">
+        <label>array</label>
+      </node>
+      <node id="4">
+        <label>error.hpp</label>
+        <link refid="error_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>chrono</label>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal/can.hpp</label>
+        <link refid="libhal_2can_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>libraries/include/libhal-rmd/drc.hpp</label>
+        <link refid="drc_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>libraries/include/libhal-mock/can.hpp</label>
+        <link refid="libhal-mock_2can_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>libraries/include/libhal-util/can.hpp</label>
+        <link refid="libhal-util_2can_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>libraries/include/libhal-micromod/micromod.hpp</label>
+        <link refid="micromod_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>libraries/include/libhal-rmd/mc_x.hpp</label>
+        <link refid="mc__x_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>libraries/include/libhal-canrouter/can_router.hpp</label>
+        <link refid="can__router_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libraries/include/libhal-lpc40/can.hpp</label>
+        <link refid="libhal-lpc40_2can_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal/can.hpp</label>
+        <link refid="libhal_2can_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhal_1_1can" prot="public">hal::can</innerclass>
+    <innerclass refid="structhal_1_1can_1_1settings" prot="public">hal::can::settings</innerclass>
+    <innerclass refid="structhal_1_1can_1_1message__t" prot="public">hal::can::message_t</innerclass>
+    <innerclass refid="structhal_1_1can_1_1send__t" prot="public">hal::can::send_t</innerclass>
+    <innernamespace refid="namespacehal">hal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2023<sp/>Google<sp/>LLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;error.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;functional.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;units.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehal" kindref="compound">hal</ref><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="classhal_1_1can" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhal_1_1can" kindref="compound">can</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36" refid="classhal_1_1can_1ae85571b4f7aac93fca8503aafcb32a47" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1can_1ae85571b4f7aac93fca8503aafcb32a47" kindref="member">id_t</ref><sp/>=<sp/>uint32_t;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structhal_1_1can_1_1settings" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1can_1_1settings" kindref="compound">settings</ref></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55" refid="structhal_1_1can_1_1settings_1aae1f0328aa8c987b80bec57c5aa4f19d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref><sp/><ref refid="structhal_1_1can_1_1settings_1aae1f0328aa8c987b80bec57c5aa4f19d" kindref="member">baud_rate</ref><sp/>=<sp/>100.0_kHz;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structhal_1_1can_1_1settings_1a149c7723f6ca0ba7f0c6851c76d1f41f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>std::uint8_t<sp/><ref refid="structhal_1_1can_1_1settings_1a149c7723f6ca0ba7f0c6851c76d1f41f" kindref="member">sync_segment</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="structhal_1_1can_1_1settings_1aca58dadf53e8040545250ce375732f06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint8_t<sp/><ref refid="structhal_1_1can_1_1settings_1aca58dadf53e8040545250ce375732f06" kindref="member">propagation_delay</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="structhal_1_1can_1_1settings_1a914dfee9420d24dfb60647af10fae7bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint8_t<sp/><ref refid="structhal_1_1can_1_1settings_1a914dfee9420d24dfb60647af10fae7bc" kindref="member">phase_segment1</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structhal_1_1can_1_1settings_1adb91231e2f00827b09fccb7a6cdd8221" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint8_t<sp/><ref refid="structhal_1_1can_1_1settings_1adb91231e2f00827b09fccb7a6cdd8221" kindref="member">phase_segment2</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="structhal_1_1can_1_1settings_1a87ab5b9b9e6ff8686cf69d635310a78c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint8_t<sp/><ref refid="structhal_1_1can_1_1settings_1a87ab5b9b9e6ff8686cf69d635310a78c" kindref="member">synchronization_jump_width</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="structhal_1_1can_1_1message__t" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1can_1_1message__t" kindref="compound">message_t</ref></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112" refid="structhal_1_1can_1_1message__t_1a7d33139d3c5f9b10d31ee7c809b0d6cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1can_1ae85571b4f7aac93fca8503aafcb32a47" kindref="member">id_t</ref><sp/><ref refid="structhal_1_1can_1_1message__t_1a7d33139d3c5f9b10d31ee7c809b0d6cf" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="117" refid="structhal_1_1can_1_1message__t_1a69041bbe8912dcc037acac5f9402071e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;hal::byte,<sp/>8&gt;<sp/><ref refid="structhal_1_1can_1_1message__t_1a69041bbe8912dcc037acac5f9402071e" kindref="member">payload</ref>{};</highlight></codeline>
+<codeline lineno="124" refid="structhal_1_1can_1_1message__t_1a2c66f4827afe85cb1db5d9894666e70a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structhal_1_1can_1_1message__t_1a2c66f4827afe85cb1db5d9894666e70a" kindref="member">length</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="130" refid="structhal_1_1can_1_1message__t_1acb62ec09361d220eb9de285498298baf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1can_1_1message__t_1acb62ec09361d220eb9de285498298baf" kindref="member">is_remote_request</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="classhal_1_1can_1aad5d17f59a3a8f3bddded97760737163" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1can_1aad5d17f59a3a8f3bddded97760737163" kindref="member">handler</ref><sp/>=<sp/>void(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1can_1_1message__t" kindref="compound">message_t</ref>&amp;<sp/>p_message);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="structhal_1_1can_1_1send__t" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1can_1_1send__t" kindref="compound">send_t</ref></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="classhal_1_1can_1a3689f792846d977e93c69dd6c42b9ff9" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>status<sp/><ref refid="classhal_1_1can_1a3689f792846d977e93c69dd6c42b9ff9" kindref="member">configure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1can_1_1settings" kindref="compound">settings</ref>&amp;<sp/>p_settings)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>driver_configure(p_settings);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="classhal_1_1can_1afcf2dd59770197b320a22660e0f79fab" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>status<sp/><ref refid="classhal_1_1can_1afcf2dd59770197b320a22660e0f79fab" kindref="member">bus_on</ref>()</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>driver_bus_on();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="classhal_1_1can_1aef573e4697999cd24dcc9074a6f85bec" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>result&lt;send_t&gt;<sp/><ref refid="classhal_1_1can_1aef573e4697999cd24dcc9074a6f85bec" kindref="member">send</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1can_1_1message__t" kindref="compound">message_t</ref>&amp;<sp/>p_message)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>driver_send(p_message);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="classhal_1_1can_1a8d428d2300fa5994e1acf3c3a467490c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1can_1a8d428d2300fa5994e1acf3c3a467490c" kindref="member">on_receive</ref>(<ref refid="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" kindref="member">hal::callback&lt;handler&gt;</ref><sp/>p_handler)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>driver_on_receive(p_handler);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classhal_1_1can" kindref="compound">can</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>status<sp/>driver_configure(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>settings&amp;<sp/>p_settings)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>status<sp/>driver_bus_on()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>result&lt;send_t&gt;<sp/>driver_send(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>message_t&amp;<sp/>p_message)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>driver_on_receive(<ref refid="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" kindref="member">hal::callback&lt;handler&gt;</ref><sp/>p_handler)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hal</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/include/libhal/can.hpp"/>
+  </compounddef>
+</doxygen>
