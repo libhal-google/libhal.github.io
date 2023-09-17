@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacehal_1_1micromod" kind="namespace" language="C++">
+    <compoundname>hal::micromod</compoundname>
+    <innernamespace refid="namespacehal_1_1micromod_1_1v1">hal::micromod::v1</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-micromod/micromod.hpp" line="30" column="1"/>
+  </compounddef>
+</doxygen>

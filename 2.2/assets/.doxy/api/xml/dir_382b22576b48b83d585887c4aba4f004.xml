@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_382b22576b48b83d585887c4aba4f004" kind="dir">
+    <compoundname>libraries/include/libhal-stm32f1</compoundname>
+    <innerfile refid="libhal-stm32f1_2clock_8hpp">clock.hpp</innerfile>
+    <innerfile refid="libhal-stm32f1_2constants_8hpp">constants.hpp</innerfile>
+    <innerfile refid="libhal-stm32f1_2output__pin_8hpp">output_pin.hpp</innerfile>
+    <innerfile refid="libhal-stm32f1_2pin_8hpp">pin.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-stm32f1/"/>
+  </compounddef>
+</doxygen>
