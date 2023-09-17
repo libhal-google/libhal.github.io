@@ -64,13 +64,16 @@ plugins:
       projects:
         api:
           src-dirs: libraries/include/
-          full-doc: True
+          # full-doc: True
           doxy-cfg:
-            FILE_PATTERNS: "*.h*"
             RECURSIVE: True
+            EXTRACT_ALL: True
             EXTRACT_STATIC: True
+            EXTRACT_PRIVATE: True
             EXCLUDE_PATTERNS: "*/third_party/*"
             HAVE_DOT: True
+            SHOW_FILES: False
+            CREATE_SUBDIRS: True
   - literate-nav:
       nav_file: summary.md
       tab_length: 2
