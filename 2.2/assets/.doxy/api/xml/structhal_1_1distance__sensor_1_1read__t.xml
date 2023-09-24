@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1distance__sensor_1_1read__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::distance_sensor::read_t</compoundname>
+    <includes refid="distance__sensor_8hpp" local="no">distance_sensor.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1distance__sensor_1_1read__t_1a2647daaa75ba2fbffbd3232cf0a98c89" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacehal_1a309a799c0b8da9cd99fb5fad7c29208c" kindref="member">meters</ref></type>
+        <definition>meters hal::distance_sensor::read_t::distance</definition>
+        <argsstring></argsstring>
+        <name>distance</name>
+        <briefdescription>
+<para>Encoder distance measurement in meters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/distance_sensor.hpp" line="93" column="12" bodyfile="libraries/include/libhal/distance_sensor.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Result from sampling the distance sensor. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/distance_sensor.hpp" line="87" column="3" bodyfile="libraries/include/libhal/distance_sensor.hpp" bodystart="88" bodyend="94"/>
+    <listofallmembers>
+      <member refid="structhal_1_1distance__sensor_1_1read__t_1a2647daaa75ba2fbffbd3232cf0a98c89" prot="public" virt="non-virtual"><scope>hal::distance_sensor::read_t</scope><name>distance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1lpc40_1_1pwm" kind="class" language="C++" prot="public">
+    <compoundname>hal::lpc40::pwm</compoundname>
+    <basecompoundref refid="classhal_1_1pwm" prot="public" virt="non-virtual">hal::pwm</basecompoundref>
+    <includes refid="libhal-lpc40_2pwm_8hpp" local="no">pwm.hpp</includes>
+    <innerclass refid="structhal_1_1lpc40_1_1pwm_1_1channel" prot="public">hal::lpc40::pwm::channel</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1pwm_1a7504c005dfe3760f1298411ef968bdc2" prot="private" static="no" mutable="no">
+        <type><ref refid="structhal_1_1lpc40_1_1pwm_1_1channel" kindref="compound">channel</ref></type>
+        <definition>channel hal::lpc40::pwm::m_channel</definition>
+        <argsstring></argsstring>
+        <name>m_channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pwm.hpp" line="69" column="11" bodyfile="libraries/include/libhal-lpc40/pwm.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pwm_1aea24a1265f15eac23d53a4ccae48096e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1lpc40_1_1pwm" kindref="compound">pwm</ref> &gt;</type>
+        <definition>static result&lt;pwm&gt; hal::lpc40::pwm::get</definition>
+        <argsstring>(std::uint8_t p_peripheral, std::uint8_t p_channel)</argsstring>
+        <name>get</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_peripheral</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_channel</declname>
+        </param>
+        <briefdescription>
+<para>Get a pwm driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_peripheral</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Peripheral block, either 0 or 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- PWM output channel within the peripheral block, from 1 to 6. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;pwm&amp;&gt; - reference to the pwm driver </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pwm.hpp" line="61" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pwm_1a47eec631a89806b9046202a62a9daa53" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::pwm::pwm</definition>
+        <argsstring>(channel p_channel)</argsstring>
+        <name>pwm</name>
+        <param>
+          <type><ref refid="structhal_1_1lpc40_1_1pwm_1_1channel" kindref="compound">channel</ref></type>
+          <declname>p_channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pwm.hpp" line="65" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pwm_1a046a68149ebc26db4da2eb3c0228d42e" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1pwm_1_1frequency__t" kindref="compound">frequency_t</ref> &gt;</type>
+        <definition>result&lt;frequency_t&gt; hal::lpc40::pwm::driver_frequency</definition>
+        <argsstring>(hertz p_frequency) override</argsstring>
+        <name>driver_frequency</name>
+        <reimplements refid="classhal_1_1pwm_1a6fbb20322e8267585cc063f5789fc98e">driver_frequency</reimplements>
+        <param>
+          <type><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref></type>
+          <declname>p_frequency</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pwm.hpp" line="66" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1pwm_1ab03e19501e33fa5c93153de1e1b1d67c" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1pwm_1_1duty__cycle__t" kindref="compound">duty_cycle_t</ref> &gt;</type>
+        <definition>result&lt;duty_cycle_t&gt; hal::lpc40::pwm::driver_duty_cycle</definition>
+        <argsstring>(float p_duty_cycle) override</argsstring>
+        <name>driver_duty_cycle</name>
+        <reimplements refid="classhal_1_1pwm_1a455f4ab4b250f7e77ccdab2d046be4d4">driver_duty_cycle</reimplements>
+        <param>
+          <type>float</type>
+          <declname>p_duty_cycle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/pwm.hpp" line="67" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>pwm driver for the lpc40xx series of micro controllers </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This driver uses the dedicated PWM peripherals, PWM0, and PWM1 for generating pwm signals. Other methods would include using timers and the MotorPWM peripherals.</para>
+<para>NOTE: Channels within a PWM peripheral device are NOT independent. Meaning that changing the frequency of one channel changes the frequency for all channels within the peripheral block. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::pwm</label>
+        <link refid="classhal_1_1pwm"/>
+      </node>
+      <node id="1">
+        <label>hal::lpc40::pwm</label>
+        <link refid="classhal_1_1lpc40_1_1pwm"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::pwm</label>
+        <link refid="classhal_1_1pwm"/>
+      </node>
+      <node id="1">
+        <label>hal::lpc40::pwm</label>
+        <link refid="classhal_1_1lpc40_1_1pwm"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-lpc40/pwm.hpp" line="37" column="1" bodyfile="libraries/include/libhal-lpc40/pwm.hpp" bodystart="38" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classhal_1_1lpc40_1_1pwm_1ab03e19501e33fa5c93153de1e1b1d67c" prot="private" virt="virtual"><scope>hal::lpc40::pwm</scope><name>driver_duty_cycle</name></member>
+      <member refid="classhal_1_1lpc40_1_1pwm_1a046a68149ebc26db4da2eb3c0228d42e" prot="private" virt="virtual"><scope>hal::lpc40::pwm</scope><name>driver_frequency</name></member>
+      <member refid="classhal_1_1pwm_1a7a152631e72dc14a16b84d92365802b2" prot="public" virt="non-virtual"><scope>hal::lpc40::pwm</scope><name>duty_cycle</name></member>
+      <member refid="classhal_1_1pwm_1abf91bdc19f35d0a6f3448d972b5daead" prot="public" virt="non-virtual"><scope>hal::lpc40::pwm</scope><name>frequency</name></member>
+      <member refid="classhal_1_1lpc40_1_1pwm_1aea24a1265f15eac23d53a4ccae48096e" prot="public" virt="non-virtual"><scope>hal::lpc40::pwm</scope><name>get</name></member>
+      <member refid="classhal_1_1lpc40_1_1pwm_1a7504c005dfe3760f1298411ef968bdc2" prot="private" virt="non-virtual"><scope>hal::lpc40::pwm</scope><name>m_channel</name></member>
+      <member refid="classhal_1_1lpc40_1_1pwm_1a47eec631a89806b9046202a62a9daa53" prot="private" virt="non-virtual"><scope>hal::lpc40::pwm</scope><name>pwm</name></member>
+      <member refid="classhal_1_1pwm_1a1c1b39503fa5cbcc778dad9172849251" prot="public" virt="virtual"><scope>hal::lpc40::pwm</scope><name>~pwm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
