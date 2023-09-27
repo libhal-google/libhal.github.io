@@ -16,12 +16,12 @@ What you will need in order to get started with libhal.
 
     Python 3.10 is default installed, no need to install it.
 
-    Install GCC and build essentials:
+    Install GCC, clang-tidy, and build essentials:
 
     ```
     sudo apt update && sudo apt upgrade
     sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-    sudo apt install -y build-essential g++-11
+    sudo apt install -y build-essential g++-11 clang-tidy
     ```
 
     Installing conan & cmake:
@@ -38,12 +38,12 @@ What you will need in order to get started with libhal.
     sudo apt-get install python3.10
     ```
 
-    Install GCC and build essentials:
+    Install GCC, clang-tidy, and build essentials:
 
     ```
     sudo apt update && sudo apt upgrade
     sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-    sudo apt install -y build-essential g++-11
+    sudo apt install -y build-essential g++-11 clang-tidy
     ```
 
     Installing conan & cmake:
@@ -64,6 +64,18 @@ What you will need in order to get started with libhal.
 
     ```
     brew install python
+    ```
+
+    Install llvm:
+
+    ```
+    brew install llvm
+    ```
+
+    Make `clang-tidy` available on the command line:
+
+    ```
+    sudo ln -s $(brew --prefix llvm)/bin/clang-tidy /usr/local/bin/
     ```
 
     Install conan & cmake:
