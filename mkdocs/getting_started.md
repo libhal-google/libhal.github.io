@@ -16,12 +16,20 @@ What you will need in order to get started with libhal.
 
     Python 3.10 is default installed, no need to install it.
 
-    Install GCC, clang-tidy, and build essentials:
+    Install GCC, make (from build essentials):
 
     ```
     sudo apt update && sudo apt upgrade
     sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-    sudo apt install -y build-essential g++-11 clang-tidy
+    sudo apt install -y build-essential g++-11
+    ```
+
+    Install `clang-tidy-16`:
+
+    ```
+    wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+    sudo add-apt-repository "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-16 main"
+    sudo apt-get install clang-tidy-16
     ```
 
     Installing conan & cmake:
@@ -32,18 +40,20 @@ What you will need in order to get started with libhal.
 
 === "Ubuntu 20.04"
 
-    Install python3.9:
-
-    ```
-    sudo apt-get install python3.10
-    ```
-
-    Install GCC, clang-tidy, and build essentials:
+    Install python3.10, GCC, and make (from build essentials):
 
     ```
     sudo apt update && sudo apt upgrade
     sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-    sudo apt install -y build-essential g++-11 clang-tidy
+    sudo apt install -y build-essential g++-11 python3.10
+    ```
+
+    Install `clang-tidy-16`:
+
+    ```
+    wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+    sudo add-apt-repository "deb http://apt.llvm.org/focal/ llvm-toolchain-focal-16 main"
+    sudo apt-get install clang-tidy-16
     ```
 
     Installing conan & cmake:
@@ -60,16 +70,16 @@ What you will need in order to get started with libhal.
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
 
-    Install latest version of Python 3.x:
+    Install latest version of Python 3.x && llvm:
 
     ```
-    brew install python
+    brew install python llvm
     ```
 
-    Install llvm:
+    Install conan & cmake:
 
     ```
-    brew install llvm
+    python3 -m pip install "conan>=2.0.9" cmake
     ```
 
     Make `clang-tidy` available on the command line:
@@ -109,22 +119,16 @@ What you will need in order to get started with libhal.
         If the `choco` command doesn't work after running this script try
         closing and opening again PowerShell.
 
-    Now install `python`:
+    Now install `python`, `gcc` (via mingw), `make` (for cmake):
 
     ```powershell
-    choco install python
+    choco install python mingw make
     ```
 
-    Install `gcc` via the `mingw`:
+    Install clang-tidy 16 (via llvm):
 
     ```powershell
-    choco install mingw
-    ```
-
-    Install `make` for cmake:
-
-    ```powershell
-    choco install make
+    choco install llvm --version=16.0.6
     ```
 
     Installing conan & cmake:
@@ -186,7 +190,7 @@ Now install the profile for your particular OS and CPU architecture.
 
 === "M1 Mac"
 
-    If your macbook uses an M1 processor then you'll want to use this default
+    If your Mac Book uses an M1 processor then you'll want to use this default
     configuration.
 
     ```bash
@@ -195,7 +199,7 @@ Now install the profile for your particular OS and CPU architecture.
 
 === "Intel Mac"
 
-    If your macbook uses an Intel processor then you'll want to use this default
+    If your Mac Book uses an Intel processor then you'll want to use this default
     configuration.
 
     ```bash
@@ -204,7 +208,7 @@ Now install the profile for your particular OS and CPU architecture.
 
 === "Intel Windows"
 
-    If your windows machine uses an Intel processor then you'll want to use this
+    If your Windows machine uses an Intel processor then you'll want to use this
     default configuration.
 
     ```bash
@@ -214,14 +218,13 @@ Now install the profile for your particular OS and CPU architecture.
 === "ARM64 Windows"
 
     If you have a modern surface laptop with ARM64, then this may be the right
-    choice for you.
+    choice for you (this profile is untested).
 
     ```bash
     conan config install -sf profiles/armv8/windows/ -tf profiles https://github.com/libhal/conan-config.git
     ```
 
 ---
-
 
 ## 🛠️ Building Demos
 
