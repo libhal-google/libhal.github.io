@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1serial_1_1read__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::serial::read_t</compoundname>
+    <includes refid="libhal_2serial_8hpp" local="no">serial.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1serial_1_1read__t_1a130b9bc9bc353ea5a083e6e52d6bd4dd" prot="public" static="no" mutable="no">
+        <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+        <definition>std::span&lt;hal::byte&gt; hal::serial::read_t::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+<para>The filled portion of the input buffer from the serial port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The size of this buffer indicates the number of bytes read The address points to the start of the buffer passed into the <ref refid="classhal_1_1serial_1a69eaa352ef24788b38d36648a5c3f99f" kindref="member">read()</ref> function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/serial.hpp" line="135" column="15" bodyfile="libraries/include/libhal/serial.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1serial_1_1read__t_1a9a65d6dc025b66913775eb8ef4874eaf" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hal::serial::read_t::available</definition>
+        <argsstring></argsstring>
+        <name>available</name>
+        <briefdescription>
+<para>Number of enqueued and available to be read out bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This value can be equal to or exceed the value of capacity. In this situation, the number of bytes above the capacity are bytes that have been dropped. Not all drivers will indicate the number of bytes lost. It is up to the driver or application to decide what to do in this situation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/serial.hpp" line="146" column="12" bodyfile="libraries/include/libhal/serial.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1serial_1_1read__t_1a771e05da8e08a309dd66c983e93ded60" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hal::serial::read_t::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <briefdescription>
+<para>The maximum number of bytes that the serial port can queue up. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/serial.hpp" line="152" column="12" bodyfile="libraries/include/libhal/serial.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Return type for serial read operations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/serial.hpp" line="127" column="3" bodyfile="libraries/include/libhal/serial.hpp" bodystart="128" bodyend="153"/>
+    <listofallmembers>
+      <member refid="structhal_1_1serial_1_1read__t_1a9a65d6dc025b66913775eb8ef4874eaf" prot="public" virt="non-virtual"><scope>hal::serial::read_t</scope><name>available</name></member>
+      <member refid="structhal_1_1serial_1_1read__t_1a771e05da8e08a309dd66c983e93ded60" prot="public" virt="non-virtual"><scope>hal::serial::read_t</scope><name>capacity</name></member>
+      <member refid="structhal_1_1serial_1_1read__t_1a130b9bc9bc353ea5a083e6e52d6bd4dd" prot="public" virt="non-virtual"><scope>hal::serial::read_t</scope><name>data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

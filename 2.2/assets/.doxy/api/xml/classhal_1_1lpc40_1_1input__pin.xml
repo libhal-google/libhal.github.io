@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1lpc40_1_1input__pin" kind="class" language="C++" prot="public">
+    <compoundname>hal::lpc40::input_pin</compoundname>
+    <basecompoundref refid="classhal_1_1input__pin" prot="public" virt="non-virtual">hal::input_pin</basecompoundref>
+    <includes refid="libhal-lpc40_2input__pin_8hpp" local="no">input_pin.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1input__pin_1a7c55cf21a16ee3258695df770c6d75a4" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hal::lpc40::input_pin::m_port</definition>
+        <argsstring></argsstring>
+        <name>m_port</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/input_pin.hpp" line="53" column="11" bodyfile="libraries/include/libhal-lpc40/input_pin.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1input__pin_1a7154775f27b5ece4bdf6c1e7a03c61e7" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hal::lpc40::input_pin::m_pin</definition>
+        <argsstring></argsstring>
+        <name>m_pin</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/input_pin.hpp" line="54" column="11" bodyfile="libraries/include/libhal-lpc40/input_pin.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1input__pin_1a82d09386b3d6a64cf1b3b514f7d8c35f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1lpc40_1_1input__pin" kindref="compound">input_pin</ref> &gt;</type>
+        <definition>static result&lt;input_pin&gt; hal::lpc40::input_pin::get</definition>
+        <argsstring>(std::uint8_t p_port, std::uint8_t p_pin, input_pin::settings p_settings={})</argsstring>
+        <name>get</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_port</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_pin</declname>
+        </param>
+        <param>
+          <type><ref refid="structhal_1_1input__pin_1_1settings" kindref="compound">input_pin::settings</ref></type>
+          <declname>p_settings</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Get the input pin object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- selects pin port to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- selects pin within the port to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- initial pin settings </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;input_pin&gt; - reference to a statically allocated input pin </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/input_pin.hpp" line="37" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1input__pin_1a8088d65b25f12d8125f68df0acca9979" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::input_pin::input_pin</definition>
+        <argsstring>(uint8_t p_port, uint8_t p_pin)</argsstring>
+        <name>input_pin</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>p_port</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>p_pin</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new input pin object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- selects pin port to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- selects pin within the port to use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/input_pin.hpp" line="48" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1input__pin_1a969e8dbba8b575981d07ed831c5b89f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>status</type>
+        <definition>status hal::lpc40::input_pin::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1input__pin_1aec92d467a73ecdce76cd219601126d22">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1input__pin_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/input_pin.hpp" line="50" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1input__pin_1aa1c83117e41358b90e3e313100c8f010" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1input__pin_1_1level__t" kindref="compound">level_t</ref> &gt;</type>
+        <definition>result&lt;level_t&gt; hal::lpc40::input_pin::driver_level</definition>
+        <argsstring>() override</argsstring>
+        <name>driver_level</name>
+        <reimplements refid="classhal_1_1input__pin_1a8a50240d3fc6510aa541e2b4ce1148a9">driver_level</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/input_pin.hpp" line="51" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Input pin implementation for the lpc40xx. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::lpc40::input_pin</label>
+        <link refid="classhal_1_1lpc40_1_1input__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::input_pin</label>
+        <link refid="classhal_1_1input__pin"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::lpc40::input_pin</label>
+        <link refid="classhal_1_1lpc40_1_1input__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::input_pin</label>
+        <link refid="classhal_1_1input__pin"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-lpc40/input_pin.hpp" line="26" column="1" bodyfile="libraries/include/libhal-lpc40/input_pin.hpp" bodystart="27" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classhal_1_1input__pin_1ac61d7c871be05f7459ecad05c1729188" prot="public" virt="non-virtual"><scope>hal::lpc40::input_pin</scope><name>configure</name></member>
+      <member refid="classhal_1_1lpc40_1_1input__pin_1a969e8dbba8b575981d07ed831c5b89f1" prot="private" virt="virtual"><scope>hal::lpc40::input_pin</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1lpc40_1_1input__pin_1aa1c83117e41358b90e3e313100c8f010" prot="private" virt="virtual"><scope>hal::lpc40::input_pin</scope><name>driver_level</name></member>
+      <member refid="classhal_1_1lpc40_1_1input__pin_1a82d09386b3d6a64cf1b3b514f7d8c35f" prot="public" virt="non-virtual"><scope>hal::lpc40::input_pin</scope><name>get</name></member>
+      <member refid="classhal_1_1lpc40_1_1input__pin_1a8088d65b25f12d8125f68df0acca9979" prot="private" virt="non-virtual"><scope>hal::lpc40::input_pin</scope><name>input_pin</name></member>
+      <member refid="classhal_1_1input__pin_1a757d49cf83e37348236fcac52d2a39d9" prot="public" virt="non-virtual"><scope>hal::lpc40::input_pin</scope><name>level</name></member>
+      <member refid="classhal_1_1lpc40_1_1input__pin_1a7154775f27b5ece4bdf6c1e7a03c61e7" prot="private" virt="non-virtual"><scope>hal::lpc40::input_pin</scope><name>m_pin</name></member>
+      <member refid="classhal_1_1lpc40_1_1input__pin_1a7c55cf21a16ee3258695df770c6d75a4" prot="private" virt="non-virtual"><scope>hal::lpc40::input_pin</scope><name>m_port</name></member>
+      <member refid="classhal_1_1input__pin_1a3880caa73ba24653823e2d8930173103" prot="public" virt="virtual"><scope>hal::lpc40::input_pin</scope><name>~input_pin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
