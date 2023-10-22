@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1read__into" kind="class" language="C++" prot="public">
+    <compoundname>hal::read_into</compoundname>
+    <includes refid="serial__coroutines_8hpp" local="no">serial_coroutines.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1read__into_1a350ca16818bd8e4c53de39d98ead2da8" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> *</type>
+        <definition>serial* hal::read_into::m_serial</definition>
+        <argsstring></argsstring>
+        <name>m_serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="165" column="10" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1read__into_1abdf0c1fdf18c3f2f37fceaa53b6208c3" prot="private" static="no" mutable="no">
+        <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+        <definition>std::span&lt;hal::byte&gt; hal::read_into::m_buffer</definition>
+        <argsstring></argsstring>
+        <name>m_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="166" column="13" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1read__into_1a05f4638606466f321169456248c2bfc7" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hal::read_into::m_read_limit</definition>
+        <argsstring></argsstring>
+        <name>m_read_limit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="167" column="10" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1read__into_1af1438a078288c0c8fbbd90dca0c54867" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hal::read_into::read_into</definition>
+        <argsstring>(serial &amp;p_serial, std::span&lt; hal::byte &gt; p_buffer, size_t p_read_limit=32)</argsstring>
+        <name>read_into</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>p_read_limit</declname>
+          <defval>32</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classhal_1_1read__into" kindref="compound">read_into</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- serial port to skip through </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to read data into </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_read_limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the maximum number read attempts from the port before returning. A value 0 will result in no reads from the serial port. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="123" column="3" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="123" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1read__into_1ad93dcc3eba3a4304ae40a9858a5ca611" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref> &gt;</type>
+        <definition>result&lt;work_state&gt; hal::read_into::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <briefdescription>
+<para>read data into the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will return if the read limit is reached or if there are no more bytes in the serial port.</para>
+<para>Call this function again to resume reading from the port.</para>
+<para><simplesect kind="return"><para>result&lt;work_state&gt; - work_state::in_progress if the sequence hasn&apos;t been met and the buffer still has space. </para>
+</simplesect>
+<simplesect kind="return"><para>result&lt;work_state&gt; - work_state::finished if the sequence was found before the buffer was filled completely. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="145" column="10" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="145" bodyend="162"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Non-blocking callable for reading serial data into a buffer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-util/serial_coroutines.hpp" line="112" column="1" bodyfile="libraries/include/libhal-util/serial_coroutines.hpp" bodystart="113" bodyend="168"/>
+    <listofallmembers>
+      <member refid="classhal_1_1read__into_1abdf0c1fdf18c3f2f37fceaa53b6208c3" prot="private" virt="non-virtual"><scope>hal::read_into</scope><name>m_buffer</name></member>
+      <member refid="classhal_1_1read__into_1a05f4638606466f321169456248c2bfc7" prot="private" virt="non-virtual"><scope>hal::read_into</scope><name>m_read_limit</name></member>
+      <member refid="classhal_1_1read__into_1a350ca16818bd8e4c53de39d98ead2da8" prot="private" virt="non-virtual"><scope>hal::read_into</scope><name>m_serial</name></member>
+      <member refid="classhal_1_1read__into_1ad93dcc3eba3a4304ae40a9858a5ca611" prot="public" virt="non-virtual"><scope>hal::read_into</scope><name>operator()</name></member>
+      <member refid="classhal_1_1read__into_1af1438a078288c0c8fbbd90dca0c54867" prot="public" virt="non-virtual"><scope>hal::read_into</scope><name>read_into</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

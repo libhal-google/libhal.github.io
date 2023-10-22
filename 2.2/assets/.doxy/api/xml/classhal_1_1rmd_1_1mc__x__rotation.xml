@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1rmd_1_1mc__x__rotation" kind="class" language="C++" prot="public">
+    <compoundname>hal::rmd::mc_x_rotation</compoundname>
+    <basecompoundref refid="classhal_1_1rotation__sensor" prot="public" virt="non-virtual">hal::rotation_sensor</basecompoundref>
+    <includes refid="mc__x_8hpp" local="no">mc_x.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1rmd_1_1mc__x__rotation_1a5cb47c55b2bb286a3e163c0986b958a5" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1rmd_1_1mc__x" kindref="compound">mc_x</ref> *</type>
+        <definition>mc_x* hal::rmd::mc_x_rotation::m_mc_x</definition>
+        <argsstring></argsstring>
+        <name>m_mc_x</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="246" column="8" bodyfile="libraries/include/libhal-rmd/mc_x.hpp" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1rmd_1_1mc__x__rotation_1a642e2e693749e9812ba6de1edd383ec4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::rmd::mc_x_rotation::mc_x_rotation</definition>
+        <argsstring>(mc_x &amp;p_mc_x)</argsstring>
+        <name>mc_x_rotation</name>
+        <param>
+          <type><ref refid="classhal_1_1rmd_1_1mc__x" kindref="compound">mc_x</ref> &amp;</type>
+          <declname>p_mc_x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="243" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1rmd_1_1mc__x__rotation_1a3d56061e7335a17497a3cb78e09ed526" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1rotation__sensor_1_1read__t" kindref="compound">hal::rotation_sensor::read_t</ref> &gt;</type>
+        <definition>result&lt;hal::rotation_sensor::read_t&gt; hal::rmd::mc_x_rotation::driver_read</definition>
+        <argsstring>() override</argsstring>
+        <name>driver_read</name>
+        <reimplements refid="classhal_1_1rotation__sensor_1ac9be6010cd69bbebaa5cc302671a4bfb">driver_read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="244" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhal_1_1rmd_1_1mc__x__rotation_1ab6012959d53a427976f7c0669b3097f4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1rmd_1_1mc__x__rotation" kindref="compound">mc_x_rotation</ref> &gt;</type>
+        <definition>result&lt;mc_x_rotation&gt; make_rotation_sensor</definition>
+        <argsstring>(mc_x &amp;p_mc_x)</argsstring>
+        <name>make_rotation_sensor</name>
+        <param>
+          <type><ref refid="classhal_1_1rmd_1_1mc__x" kindref="compound">mc_x</ref> &amp;</type>
+          <declname>p_mc_x</declname>
+        </param>
+        <briefdescription>
+<para>Create a <ref refid="classhal_1_1rotation__sensor" kindref="compound">hal::rotation_sensor</ref> driver using the MC-X driver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_mc_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- reference to a MC-X driver. This object&apos;s lifetime must exceed the lifetime of the returned object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;mc_x_rotation&gt; - rotation sensor implementation based on the MC-X driver </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="245" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Reports the rotation of the DRC motor. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::rotation_sensor</label>
+        <link refid="classhal_1_1rotation__sensor"/>
+      </node>
+      <node id="1">
+        <label>hal::rmd::mc_x_rotation</label>
+        <link refid="classhal_1_1rmd_1_1mc__x__rotation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::rotation_sensor</label>
+        <link refid="classhal_1_1rotation__sensor"/>
+      </node>
+      <node id="1">
+        <label>hal::rmd::mc_x_rotation</label>
+        <link refid="classhal_1_1rmd_1_1mc__x__rotation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-rmd/mc_x.hpp" line="240" column="1" bodyfile="libraries/include/libhal-rmd/mc_x.hpp" bodystart="241" bodyend="247"/>
+    <listofallmembers>
+      <member refid="classhal_1_1rmd_1_1mc__x__rotation_1a3d56061e7335a17497a3cb78e09ed526" prot="private" virt="virtual"><scope>hal::rmd::mc_x_rotation</scope><name>driver_read</name></member>
+      <member refid="classhal_1_1rmd_1_1mc__x__rotation_1a5cb47c55b2bb286a3e163c0986b958a5" prot="private" virt="non-virtual"><scope>hal::rmd::mc_x_rotation</scope><name>m_mc_x</name></member>
+      <member refid="classhal_1_1rmd_1_1mc__x__rotation_1ab6012959d53a427976f7c0669b3097f4" prot="private" virt="non-virtual"><scope>hal::rmd::mc_x_rotation</scope><name>make_rotation_sensor</name></member>
+      <member refid="classhal_1_1rmd_1_1mc__x__rotation_1a642e2e693749e9812ba6de1edd383ec4" prot="private" virt="non-virtual"><scope>hal::rmd::mc_x_rotation</scope><name>mc_x_rotation</name></member>
+      <member refid="classhal_1_1rotation__sensor_1a5ae02bc5fa8e61a8b2495f6bedd538dd" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x_rotation</scope><name>read</name></member>
+      <member refid="classhal_1_1rotation__sensor_1a76d46d3bf36199a5b6e63d0e7d8d78f4" prot="public" virt="virtual"><scope>hal::rmd::mc_x_rotation</scope><name>~rotation_sensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
