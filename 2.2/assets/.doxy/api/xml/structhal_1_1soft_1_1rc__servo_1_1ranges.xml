@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1soft_1_1rc__servo_1_1ranges" kind="struct" language="C++" prot="private">
+    <compoundname>hal::soft::rc_servo::ranges</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1soft_1_1rc__servo_1_1ranges_1ac6c7609050ce3fc8b3a94512f3b60232" prot="public" static="no" mutable="no">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt;float, float&gt; hal::soft::rc_servo::ranges::percent</definition>
+        <argsstring></argsstring>
+        <name>percent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/rc_servo.hpp" line="75" column="15" bodyfile="libraries/include/libhal-soft/rc_servo.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1soft_1_1rc__servo_1_1ranges_1a7f211d50aa9633938b63c191043576c0" prot="public" static="no" mutable="no">
+        <type>std::pair&lt; float, float &gt;</type>
+        <definition>std::pair&lt;float, float&gt; hal::soft::rc_servo::ranges::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/rc_servo.hpp" line="76" column="15" bodyfile="libraries/include/libhal-soft/rc_servo.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-soft/rc_servo.hpp" line="73" column="3" bodyfile="libraries/include/libhal-soft/rc_servo.hpp" bodystart="74" bodyend="77"/>
+    <listofallmembers>
+      <member refid="structhal_1_1soft_1_1rc__servo_1_1ranges_1a7f211d50aa9633938b63c191043576c0" prot="public" virt="non-virtual"><scope>hal::soft::rc_servo::ranges</scope><name>angle</name></member>
+      <member refid="structhal_1_1soft_1_1rc__servo_1_1ranges_1ac6c7609050ce3fc8b3a94512f3b60232" prot="public" virt="non-virtual"><scope>hal::soft::rc_servo::ranges</scope><name>percent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
