@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1soft_1_1inert__interrupt__pin" kind="class" language="C++" prot="public">
+    <compoundname>hal::soft::inert_interrupt_pin</compoundname>
+    <basecompoundref refid="classhal_1_1interrupt__pin" prot="public" virt="non-virtual">hal::interrupt_pin</basecompoundref>
+    <includes refid="inert__interrupt__pin_8hpp" local="no">inert_interrupt_pin.hpp</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1soft_1_1inert__interrupt__pin_1aa0de4625851bf20ff6e87a16dc2ef21c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1soft_1_1inert__interrupt__pin" kindref="compound">inert_interrupt_pin</ref> &gt;</type>
+        <definition>static result&lt;inert_interrupt_pin&gt; hal::soft::inert_interrupt_pin::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Factory function to create <ref refid="classhal_1_1soft_1_1inert__interrupt__pin" kindref="compound">inert_interrupt_pin</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>result&lt;inert_interrupt_pin&gt; - Constructed <ref refid="classhal_1_1soft_1_1inert__interrupt__pin" kindref="compound">inert_interrupt_pin</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp" line="33" column="17" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1soft_1_1inert__interrupt__pin_1a706c1fbf95c9962b8310ece6ccd6a37c" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::soft::inert_interrupt_pin::inert_interrupt_pin</definition>
+        <argsstring>()</argsstring>
+        <name>inert_interrupt_pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp" line="39" column="13" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1soft_1_1inert__interrupt__pin_1a7fc24e6cdfebb2a4a921cdca4a49fb3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::soft::inert_interrupt_pin::driver_configure</definition>
+        <argsstring>([[maybe_unused]] const settings &amp;p_settings)</argsstring>
+        <name>driver_configure</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] const <ref refid="structhal_1_1interrupt__pin_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp" line="43" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1soft_1_1inert__interrupt__pin_1ae0458fbb0ceada5fcf4b8506fa927d47" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::soft::inert_interrupt_pin::driver_on_trigger</definition>
+        <argsstring>([[maybe_unused]] hal::callback&lt; handler &gt; p_callback)</argsstring>
+        <name>driver_on_trigger</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] <ref refid="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" kindref="member">hal::callback</ref>&lt; <ref refid="classhal_1_1interrupt__pin_1ad49df850168e2a62551d6d3d1e81d86c" kindref="member">handler</ref> &gt;</type>
+          <declname>p_callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp" line="48" column="8" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp" bodystart="48" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inert implementation of digital interrupt pin hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::soft::inert_interrupt_pin</label>
+        <link refid="classhal_1_1soft_1_1inert__interrupt__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::interrupt_pin</label>
+        <link refid="classhal_1_1interrupt__pin"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::soft::inert_interrupt_pin</label>
+        <link refid="classhal_1_1soft_1_1inert__interrupt__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::interrupt_pin</label>
+        <link refid="classhal_1_1interrupt__pin"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp" line="24" column="1" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_interrupt_pin.hpp" bodystart="25" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classhal_1_1interrupt__pin_1ad4ecbb5149184f2d6a9002f6a51e2754" prot="public" virt="non-virtual"><scope>hal::soft::inert_interrupt_pin</scope><name>configure</name></member>
+      <member refid="classhal_1_1soft_1_1inert__interrupt__pin_1aa0de4625851bf20ff6e87a16dc2ef21c" prot="public" virt="non-virtual"><scope>hal::soft::inert_interrupt_pin</scope><name>create</name></member>
+      <member refid="classhal_1_1soft_1_1inert__interrupt__pin_1a7fc24e6cdfebb2a4a921cdca4a49fb3b" prot="private" virt="non-virtual"><scope>hal::soft::inert_interrupt_pin</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1soft_1_1inert__interrupt__pin_1ae0458fbb0ceada5fcf4b8506fa927d47" prot="private" virt="non-virtual"><scope>hal::soft::inert_interrupt_pin</scope><name>driver_on_trigger</name></member>
+      <member refid="classhal_1_1interrupt__pin_1ad49df850168e2a62551d6d3d1e81d86c" prot="public" virt="non-virtual"><scope>hal::soft::inert_interrupt_pin</scope><name>handler</name></member>
+      <member refid="classhal_1_1soft_1_1inert__interrupt__pin_1a706c1fbf95c9962b8310ece6ccd6a37c" prot="private" virt="non-virtual"><scope>hal::soft::inert_interrupt_pin</scope><name>inert_interrupt_pin</name></member>
+      <member refid="classhal_1_1interrupt__pin_1aa110a57bf1d41c89a5df6b13740a6977" prot="public" virt="non-virtual"><scope>hal::soft::inert_interrupt_pin</scope><name>on_trigger</name></member>
+      <member refid="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81" prot="public" virt="non-virtual"><scope>hal::soft::inert_interrupt_pin</scope><name>trigger_edge</name></member>
+      <member refid="classhal_1_1interrupt__pin_1ade8066862d68154d56b28c8fcc88073d" prot="public" virt="virtual"><scope>hal::soft::inert_interrupt_pin</scope><name>~interrupt_pin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacehal_1_1soft" kind="namespace" language="C++">
+    <compoundname>hal::soft</compoundname>
+    <innerclass refid="classhal_1_1soft_1_1adc__multiplexer" prot="public">hal::soft::adc_multiplexer</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1adc__mux__pin" prot="public">hal::soft::adc_mux_pin</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1minimum__speed__i2c" prot="public">hal::soft::minimum_speed_i2c</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__accelerometer" prot="public">hal::soft::inert_accelerometer</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__adc" prot="public">hal::soft::inert_adc</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__dac" prot="public">hal::soft::inert_dac</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__distance__sensor" prot="public">hal::soft::inert_distance_sensor</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__gyroscope" prot="public">hal::soft::inert_gyroscope</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__input__pin" prot="public">hal::soft::inert_input_pin</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__interrupt__pin" prot="public">hal::soft::inert_interrupt_pin</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__magnetometer" prot="public">hal::soft::inert_magnetometer</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__motor" prot="public">hal::soft::inert_motor</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__output__pin" prot="public">hal::soft::inert_output_pin</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__pwm" prot="public">hal::soft::inert_pwm</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__rotation__sensor" prot="public">hal::soft::inert_rotation_sensor</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__steady__clock" prot="public">hal::soft::inert_steady_clock</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__temperature__sensor" prot="public">hal::soft::inert_temperature_sensor</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1inert__timer" prot="public">hal::soft::inert_timer</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1output__pin__inverter" prot="public">hal::soft::output_pin_inverter</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1input__pin__inverter" prot="public">hal::soft::input_pin_inverter</innerclass>
+    <innerclass refid="classhal_1_1soft_1_1rc__servo" prot="public">hal::soft::rc_servo</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="adc__mux_8hpp_1a8d7d8ce91f33bb4cb085e0d839ab7b4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1soft_1_1adc__mux__pin" kindref="compound">adc_mux_pin</ref> &gt;</type>
+        <definition>result&lt;adc_mux_pin&gt; hal::soft::make_adc</definition>
+        <argsstring>(adc_multiplexer &amp;p_multiplexer, std::uint8_t p_channel)</argsstring>
+        <name>make_adc</name>
+        <param>
+          <type><ref refid="classhal_1_1soft_1_1adc__multiplexer" kindref="compound">adc_multiplexer</ref> &amp;</type>
+          <declname>p_multiplexer</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_channel</declname>
+        </param>
+        <briefdescription>
+<para>Returns an ADC pin from the multiplexer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_multiplexer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the adc multiplexer with the desire adc channel pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel number of the pin </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A newly constructed ADC multiplexer pin. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::errc::result_out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if p_channel greater than the available number of channels in the multiplexer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/adc_mux.hpp" line="103" column="8" declfile="libraries/include/libhal-soft/adc_mux.hpp" declline="103" declcolumn="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-soft/adc_mux.hpp" line="24" column="1"/>
+  </compounddef>
+</doxygen>
