@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1spy__handler" kind="class" language="C++" prot="public">
+    <compoundname>hal::spy_handler</compoundname>
+    <includes refid="testing_8hpp" local="no">testing.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename...</type>
+        <declname>args_t</declname>
+        <defname>args_t</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1spy__handler_1a9d5e594af4bd3c909acfb361946a5b08" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::tuple&lt; args_t... &gt; &gt;</type>
+        <definition>std::vector&lt;std::tuple&lt;args_t...&gt; &gt; hal::spy_handler&lt; args_t &gt;::m_call_history</definition>
+        <argsstring></argsstring>
+        <name>m_call_history</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/testing.hpp" line="114" column="15" bodyfile="libraries/include/libhal-mock/testing.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1spy__handler_1a41eb80154d47df52c55fcceba706216a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hal::spy_handler&lt; args_t &gt;::m_error_trigger</definition>
+        <argsstring></argsstring>
+        <name>m_error_trigger</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/testing.hpp" line="115" column="7" bodyfile="libraries/include/libhal-mock/testing.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1spy__handler_1ab619347ec065bb16ba99c0b7dce48214" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::spy_handler&lt; args_t &gt;::trigger_error_on_call</definition>
+        <argsstring>(int p_call_count_before_trigger)</argsstring>
+        <name>trigger_error_on_call</name>
+        <param>
+          <type>int</type>
+          <declname>p_call_count_before_trigger</declname>
+        </param>
+        <briefdescription>
+<para>Set the record function to return an error after a specified number of recordings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_call_count_before_trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- how many calls before an error is returned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/testing.hpp" line="51" column="8" bodyfile="libraries/include/libhal-mock/testing.hpp" bodystart="51" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1spy__handler_1ab2ed5f0197c8aa76f896815225779b0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::spy_handler&lt; args_t &gt;::record</definition>
+        <argsstring>(args_t... p_args)</argsstring>
+        <name>record</name>
+        <param>
+          <type>args_t...</type>
+          <declname>p_args</declname>
+        </param>
+        <briefdescription>
+<para>Record the arguments of a function being spied on. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- arguments to record </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status - success or failure error trigger has been reached. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/testing.hpp" line="66" column="11" bodyfile="libraries/include/libhal-mock/testing.hpp" bodystart="66" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1spy__handler_1a01684d952d4b4d9100107935fd610c83" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const auto &amp;</type>
+        <definition>const auto&amp; hal::spy_handler&lt; args_t &gt;::call_history</definition>
+        <argsstring>() const</argsstring>
+        <name>call_history</name>
+        <briefdescription>
+<para>Return the call history of the save function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const auto&amp; - reference to the call history vector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/testing.hpp" line="85" column="14" bodyfile="libraries/include/libhal-mock/testing.hpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1spy__handler_1a2d1d27d1d91a61e05b788ab1d1d38015" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>ArgumentIndex</declname>
+            <defname>ArgumentIndex</defname>
+          </param>
+        </templateparamlist>
+        <type>const auto &amp;</type>
+        <definition>const auto&amp; hal::spy_handler&lt; args_t &gt;::history</definition>
+        <argsstring>(size_t p_call) const</argsstring>
+        <name>history</name>
+        <param>
+          <type>size_t</type>
+          <declname>p_call</declname>
+        </param>
+        <briefdescription>
+<para>Return argument from one of call history parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- history call from 0 to N </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const auto&amp; - reference to the call history vector </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- if p_call is beyond the size of call_history </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/testing.hpp" line="98" column="14" bodyfile="libraries/include/libhal-mock/testing.hpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1spy__handler_1ab4de6f2ee75eae23253e4fb78bb82bf1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::spy_handler&lt; args_t &gt;::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset call recordings and turns off error trigger. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/testing.hpp" line="107" column="8" bodyfile="libraries/include/libhal-mock/testing.hpp" bodystart="107" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper utility for making mocks for class functions that return status. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class stores records of a functions call history in order to be recovered later for inspection in tests and simulations.</para>
+<para>See pwm_mock.hpp and tests/pwm_mock.test.cpp as an example of how this is done in practice.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>args_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the arguments of the class function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="libraries/include/libhal-mock/testing.hpp" line="41" column="1" bodyfile="libraries/include/libhal-mock/testing.hpp" bodystart="42" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classhal_1_1spy__handler_1a01684d952d4b4d9100107935fd610c83" prot="public" virt="non-virtual"><scope>hal::spy_handler</scope><name>call_history</name></member>
+      <member refid="classhal_1_1spy__handler_1a2d1d27d1d91a61e05b788ab1d1d38015" prot="public" virt="non-virtual"><scope>hal::spy_handler</scope><name>history</name></member>
+      <member refid="classhal_1_1spy__handler_1a9d5e594af4bd3c909acfb361946a5b08" prot="private" virt="non-virtual"><scope>hal::spy_handler</scope><name>m_call_history</name></member>
+      <member refid="classhal_1_1spy__handler_1a41eb80154d47df52c55fcceba706216a" prot="private" virt="non-virtual"><scope>hal::spy_handler</scope><name>m_error_trigger</name></member>
+      <member refid="classhal_1_1spy__handler_1ab2ed5f0197c8aa76f896815225779b0a" prot="public" virt="non-virtual"><scope>hal::spy_handler</scope><name>record</name></member>
+      <member refid="classhal_1_1spy__handler_1ab4de6f2ee75eae23253e4fb78bb82bf1" prot="public" virt="non-virtual"><scope>hal::spy_handler</scope><name>reset</name></member>
+      <member refid="classhal_1_1spy__handler_1ab619347ec065bb16ba99c0b7dce48214" prot="public" virt="non-virtual"><scope>hal::spy_handler</scope><name>trigger_error_on_call</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

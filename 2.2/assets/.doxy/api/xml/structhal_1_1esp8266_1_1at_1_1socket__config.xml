@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1esp8266_1_1at_1_1socket__config" kind="struct" language="C++" prot="public">
+    <compoundname>hal::esp8266::at::socket_config</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1esp8266_1_1at_1_1socket__config_1a589d63b2c149bb4dc7b51bed41ead065" prot="public" static="no" mutable="no">
+        <type>socket_type</type>
+        <definition>socket_type hal::esp8266::at::socket_config::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= socket_type::tcp</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="50" column="17" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1esp8266_1_1at_1_1socket__config_1a310b3531c8acb81077a1665fafccca7e" prot="public" static="no" mutable="no">
+        <type>std::string_view</type>
+        <definition>std::string_view hal::esp8266::at::socket_config::domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="51" column="22" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1esp8266_1_1at_1_1socket__config_1ab9978d26b2e9e25e797c61505198683e" prot="public" static="no" mutable="no">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t hal::esp8266::at::socket_config::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <initializer>= 80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="52" column="19" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-esp8266/at.hpp" line="48" column="3" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="49" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structhal_1_1esp8266_1_1at_1_1socket__config_1a310b3531c8acb81077a1665fafccca7e" prot="public" virt="non-virtual"><scope>hal::esp8266::at::socket_config</scope><name>domain</name></member>
+      <member refid="structhal_1_1esp8266_1_1at_1_1socket__config_1ab9978d26b2e9e25e797c61505198683e" prot="public" virt="non-virtual"><scope>hal::esp8266::at::socket_config</scope><name>port</name></member>
+      <member refid="structhal_1_1esp8266_1_1at_1_1socket__config_1a589d63b2c149bb4dc7b51bed41ead065" prot="public" virt="non-virtual"><scope>hal::esp8266::at::socket_config</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

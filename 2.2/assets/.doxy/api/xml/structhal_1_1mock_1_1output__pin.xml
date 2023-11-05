@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1mock_1_1output__pin" kind="struct" language="C++" prot="public">
+    <compoundname>hal::mock::output_pin</compoundname>
+    <basecompoundref refid="classhal_1_1output__pin" prot="public" virt="non-virtual">hal::output_pin</basecompoundref>
+    <includes refid="libhal-mock_2output__pin_8hpp" local="no">output_pin.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1mock_1_1output__pin_1ab6acf65f313ca42832ecebe073c0fd2e" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; <ref refid="structhal_1_1output__pin_1_1settings" kindref="compound">settings</ref> &gt;</type>
+        <definition>spy_handler&lt;settings&gt; hal::mock::output_pin::spy_configure</definition>
+        <argsstring></argsstring>
+        <name>spy_configure</name>
+        <briefdescription>
+<para>Spy handler for <ref refid="classhal_1_1output__pin_1a0eee7c0911622a62c215f867dd117d0f" kindref="member">hal::output_pin::configure()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/output_pin.hpp" line="38" column="15" bodyfile="libraries/include/libhal-mock/output_pin.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1mock_1_1output__pin_1af6e5bf30c3e7e82792ef2eda543ed5bc" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; <ref refid="structhal_1_1output__pin_1_1level__t" kindref="compound">level_t</ref> &gt;</type>
+        <definition>spy_handler&lt;level_t&gt; hal::mock::output_pin::spy_level</definition>
+        <argsstring></argsstring>
+        <name>spy_level</name>
+        <briefdescription>
+<para>Spy handler for <ref refid="classhal_1_1output__pin_1ab14df7eb1dd1ad0393a541e002506242" kindref="member">hal::output_pin::level()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/output_pin.hpp" line="40" column="15" bodyfile="libraries/include/libhal-mock/output_pin.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structhal_1_1mock_1_1output__pin_1a322ee26ba64b4438441808a0244a5d95" prot="private" static="no" mutable="no">
+        <type><ref refid="structhal_1_1output__pin_1_1level__t" kindref="compound">level_t</ref></type>
+        <definition>level_t hal::mock::output_pin::m_current_level</definition>
+        <argsstring></argsstring>
+        <name>m_current_level</name>
+        <initializer>{ .state = false }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/output_pin.hpp" line="57" column="11" bodyfile="libraries/include/libhal-mock/output_pin.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1output__pin_1a7ca18ce52efdac4c61d8c56a38ee1a93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::mock::output_pin::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset spy information for <ref refid="classhal_1_1output__pin_1a0eee7c0911622a62c215f867dd117d0f" kindref="member">configure()</ref> and <ref refid="classhal_1_1output__pin_1ab14df7eb1dd1ad0393a541e002506242" kindref="member">level()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/output_pin.hpp" line="31" column="8" bodyfile="libraries/include/libhal-mock/output_pin.hpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1output__pin_1a000a39ce837183752221e9a2d80b5e20" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>status</type>
+        <definition>status hal::mock::output_pin::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1output__pin_1a37fb83fb5fdacf61c6b45bddcd9dd390">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1output__pin_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/output_pin.hpp" line="43" column="10" bodyfile="libraries/include/libhal-mock/output_pin.hpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1mock_1_1output__pin_1a2ef32ba190f87aa143f169df6bb8bab0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1output__pin_1_1set__level__t" kindref="compound">set_level_t</ref> &gt;</type>
+        <definition>result&lt;set_level_t&gt; hal::mock::output_pin::driver_level</definition>
+        <argsstring>(bool p_high) override</argsstring>
+        <name>driver_level</name>
+        <reimplements refid="classhal_1_1output__pin_1ac0fadebc6928349d19b38a7eaccd33f3">driver_level</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>p_high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/output_pin.hpp" line="47" column="10" bodyfile="libraries/include/libhal-mock/output_pin.hpp" bodystart="47" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1mock_1_1output__pin_1a22beb9f513ee4467c4690a0a8e5b0e7d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1output__pin_1_1level__t" kindref="compound">level_t</ref> &gt;</type>
+        <definition>result&lt;level_t&gt; hal::mock::output_pin::driver_level</definition>
+        <argsstring>() override</argsstring>
+        <name>driver_level</name>
+        <reimplements refid="classhal_1_1output__pin_1ab741d4f8ef6d9d72ce3bdfa6f3d03f69">driver_level</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/output_pin.hpp" line="53" column="10" bodyfile="libraries/include/libhal-mock/output_pin.hpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>mock output pin for use in unit tests and simulations </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::mock::output_pin</label>
+        <link refid="structhal_1_1mock_1_1output__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::output_pin</label>
+        <link refid="classhal_1_1output__pin"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>hal::spy_handler&lt; settings &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+      <node id="4">
+        <label>hal::spy_handler&lt; level_t &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+      <node id="1">
+        <label>hal::mock::output_pin</label>
+        <link refid="structhal_1_1mock_1_1output__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>spy_configure</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>spy_level</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::output_pin</label>
+        <link refid="classhal_1_1output__pin"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-mock/output_pin.hpp" line="25" column="1" bodyfile="libraries/include/libhal-mock/output_pin.hpp" bodystart="26" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classhal_1_1output__pin_1a0eee7c0911622a62c215f867dd117d0f" prot="public" virt="non-virtual"><scope>hal::mock::output_pin</scope><name>configure</name></member>
+      <member refid="structhal_1_1mock_1_1output__pin_1a000a39ce837183752221e9a2d80b5e20" prot="private" virt="virtual"><scope>hal::mock::output_pin</scope><name>driver_configure</name></member>
+      <member refid="structhal_1_1mock_1_1output__pin_1a2ef32ba190f87aa143f169df6bb8bab0" prot="private" virt="virtual"><scope>hal::mock::output_pin</scope><name>driver_level</name></member>
+      <member refid="structhal_1_1mock_1_1output__pin_1a22beb9f513ee4467c4690a0a8e5b0e7d" prot="private" virt="virtual"><scope>hal::mock::output_pin</scope><name>driver_level</name></member>
+      <member refid="classhal_1_1output__pin_1ab18862459d8f3ecadea439862932ba41" prot="public" virt="non-virtual"><scope>hal::mock::output_pin</scope><name>level</name></member>
+      <member refid="classhal_1_1output__pin_1ab14df7eb1dd1ad0393a541e002506242" prot="public" virt="non-virtual"><scope>hal::mock::output_pin</scope><name>level</name></member>
+      <member refid="structhal_1_1mock_1_1output__pin_1a322ee26ba64b4438441808a0244a5d95" prot="private" virt="non-virtual"><scope>hal::mock::output_pin</scope><name>m_current_level</name></member>
+      <member refid="structhal_1_1mock_1_1output__pin_1a7ca18ce52efdac4c61d8c56a38ee1a93" prot="public" virt="non-virtual"><scope>hal::mock::output_pin</scope><name>reset</name></member>
+      <member refid="structhal_1_1mock_1_1output__pin_1ab6acf65f313ca42832ecebe073c0fd2e" prot="public" virt="non-virtual"><scope>hal::mock::output_pin</scope><name>spy_configure</name></member>
+      <member refid="structhal_1_1mock_1_1output__pin_1af6e5bf30c3e7e82792ef2eda543ed5bc" prot="public" virt="non-virtual"><scope>hal::mock::output_pin</scope><name>spy_level</name></member>
+      <member refid="classhal_1_1output__pin_1ab45ad02491e1cef38093d5605a4a37c8" prot="public" virt="virtual"><scope>hal::mock::output_pin</scope><name>~output_pin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

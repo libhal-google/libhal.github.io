@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1esp8266_1_1at_1_1packet__manager" kind="class" language="C++" prot="private">
+    <compoundname>hal::esp8266::at::packet_manager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1esp8266_1_1at_1_1packet__manager_1ac4e0b7089ad9f33c59a12f1ef08c3c32" prot="private" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::esp8266::at::packet_manager::m_state</definition>
+        <argsstring></argsstring>
+        <name>m_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="111" column="18" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1esp8266_1_1at_1_1packet__manager_1adb87baf7ef9c48b90bfa0c0c9a8ac542" prot="private" static="no" mutable="no">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t hal::esp8266::at::packet_manager::m_length</definition>
+        <argsstring></argsstring>
+        <name>m_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="112" column="19" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1_1packet__manager_1a3e80bca8a82382161c94ef93c5ec4868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::esp8266::at::packet_manager::packet_manager</definition>
+        <argsstring>()</argsstring>
+        <name>packet_manager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="99" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1_1packet__manager_1a836927889e5864cbac494c87fca478a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::esp8266::at::packet_manager::find</definition>
+        <argsstring>(hal::serial &amp;p_serial)</argsstring>
+        <name>find</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">hal::serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="100" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1_1packet__manager_1af4ca48760132a94b92d8d577d5535ee4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::esp8266::at::packet_manager::is_complete_header</definition>
+        <argsstring>()</argsstring>
+        <name>is_complete_header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="101" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1_1packet__manager_1a5643cfb07ac6c04cf6b73ae6f9cf729d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t hal::esp8266::at::packet_manager::packet_length</definition>
+        <argsstring>()</argsstring>
+        <name>packet_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="102" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1_1packet__manager_1a854dd048cad6de7754ef1f217f753544" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hal::result&lt; std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt; &gt;</type>
+        <definition>hal::result&lt;std::span&lt;hal::byte&gt; &gt; hal::esp8266::at::packet_manager::read_packet</definition>
+        <argsstring>(hal::serial &amp;p_serial, std::span&lt; hal::byte &gt; p_buffer)</argsstring>
+        <name>read_packet</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">hal::serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="103" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1_1packet__manager_1ae9211d033e49a6275ba3df1664eed816" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::esp8266::at::packet_manager::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="106" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1_1packet__manager_1a25fce6950e9f622abde7963710723846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::esp8266::at::packet_manager::set_state</definition>
+        <argsstring>(std::uint8_t p_state)</argsstring>
+        <name>set_state</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="107" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1esp8266_1_1at_1_1packet__manager_1abc42fc582ec3fdea0acf14fbb722ab7c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::esp8266::at::packet_manager::update_state</definition>
+        <argsstring>(hal::byte p_byte)</argsstring>
+        <name>update_state</name>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-esp8266/at.hpp" line="110" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-esp8266/at.hpp" line="96" column="3" bodyfile="libraries/include/libhal-esp8266/at.hpp" bodystart="97" bodyend="113"/>
+    <listofallmembers>
+      <member refid="classhal_1_1esp8266_1_1at_1_1packet__manager_1a836927889e5864cbac494c87fca478a9" prot="public" virt="non-virtual"><scope>hal::esp8266::at::packet_manager</scope><name>find</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1_1packet__manager_1af4ca48760132a94b92d8d577d5535ee4" prot="public" virt="non-virtual"><scope>hal::esp8266::at::packet_manager</scope><name>is_complete_header</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1_1packet__manager_1adb87baf7ef9c48b90bfa0c0c9a8ac542" prot="private" virt="non-virtual"><scope>hal::esp8266::at::packet_manager</scope><name>m_length</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1_1packet__manager_1ac4e0b7089ad9f33c59a12f1ef08c3c32" prot="private" virt="non-virtual"><scope>hal::esp8266::at::packet_manager</scope><name>m_state</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1_1packet__manager_1a5643cfb07ac6c04cf6b73ae6f9cf729d" prot="public" virt="non-virtual"><scope>hal::esp8266::at::packet_manager</scope><name>packet_length</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1_1packet__manager_1a3e80bca8a82382161c94ef93c5ec4868" prot="public" virt="non-virtual"><scope>hal::esp8266::at::packet_manager</scope><name>packet_manager</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1_1packet__manager_1a854dd048cad6de7754ef1f217f753544" prot="public" virt="non-virtual"><scope>hal::esp8266::at::packet_manager</scope><name>read_packet</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1_1packet__manager_1ae9211d033e49a6275ba3df1664eed816" prot="public" virt="non-virtual"><scope>hal::esp8266::at::packet_manager</scope><name>reset</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1_1packet__manager_1a25fce6950e9f622abde7963710723846" prot="public" virt="non-virtual"><scope>hal::esp8266::at::packet_manager</scope><name>set_state</name></member>
+      <member refid="classhal_1_1esp8266_1_1at_1_1packet__manager_1abc42fc582ec3fdea0acf14fbb722ab7c" prot="private" virt="non-virtual"><scope>hal::esp8266::at::packet_manager</scope><name>update_state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
