@@ -7,7 +7,7 @@ What you will need in order to get started with libhal.
 - `make`: latest available version
 - `cmake`: 3.15 or above
 - `python`: 3.10 or above
-- `conan`: 2.0.6 or above
+- `conan`: 2.0.13 or above
 - Suitable Compiler for running host tests (can be either of these):
   - `gcc`: 11.3.0 or above
   - `clang`: 14 and above
@@ -27,7 +27,7 @@ What you will need in order to get started with libhal.
     Installing conan & cmake:
 
     ```
-    python3 -m pip install "conan>=2.0.6" cmake
+    python3 -m pip install "conan>=2.0.13" cmake
     ```
 
 === "Ubuntu 20.04"
@@ -49,7 +49,7 @@ What you will need in order to get started with libhal.
     Installing conan & cmake:
 
     ```
-    python3.10 -m pip install "conan>=2.0.6" cmake
+    python3.10 -m pip install "conan>=2.0.13" cmake
     ```
 
 === "MacOS X"
@@ -81,7 +81,7 @@ What you will need in order to get started with libhal.
     Install conan & cmake:
 
     ```
-    python3 -m pip install "conan>=2.0.6" cmake
+    python3 -m pip install "conan>=2.0.13" cmake
     ```
 
     Install Rosetta (only required for M1 macs):
@@ -130,7 +130,7 @@ What you will need in order to get started with libhal.
     Installing conan & cmake:
 
     ```powershell
-    python3 -m pip install -U "conan>=2.0.6" cmake
+    python3 -m pip install -U "conan>=2.0.13" cmake
     ```
 
 ---
