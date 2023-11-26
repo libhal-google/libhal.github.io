@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1timer_1_1is__running__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::timer::is_running_t</compoundname>
+    <includes refid="libhal_2timer_8hpp" local="no">timer.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1timer_1_1is__running__t_1a58a259f12080616918069c312d9befd1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::timer::is_running_t::is_running</definition>
+        <argsstring></argsstring>
+        <name>is_running</name>
+        <briefdescription>
+<para>Determines if the timer is currently running. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If this value is false, then the timer is not running. If this value is true, then the timer is currently running and a callback is scheduled to be executed at some point in the future. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/timer.hpp" line="69" column="10" bodyfile="libraries/include/libhal/timer.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Feedback after checking if the timer is running. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/timer.hpp" line="59" column="3" bodyfile="libraries/include/libhal/timer.hpp" bodystart="60" bodyend="70"/>
+    <listofallmembers>
+      <member refid="structhal_1_1timer_1_1is__running__t_1a58a259f12080616918069c312d9befd1" prot="public" virt="non-virtual"><scope>hal::timer::is_running_t</scope><name>is_running</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

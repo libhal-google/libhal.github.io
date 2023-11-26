@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1lpc40_1_1spi" kind="class" language="C++" prot="public">
+    <compoundname>hal::lpc40::spi</compoundname>
+    <basecompoundref refid="classhal_1_1spi" prot="public" virt="non-virtual">hal::spi</basecompoundref>
+    <innerclass refid="structhal_1_1lpc40_1_1spi_1_1bus__info" prot="public">hal::lpc40::spi::bus_info</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1spi_1a64ce21505d05b0a4a4346f54ac905a89" prot="private" static="no" mutable="no">
+        <type><ref refid="structhal_1_1lpc40_1_1spi_1_1bus__info" kindref="compound">bus_info</ref></type>
+        <definition>bus_info hal::lpc40::spi::m_info</definition>
+        <argsstring></argsstring>
+        <name>m_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="66" column="12" bodyfile="libraries/include/libhal-lpc40/spi.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1lpc40_1_1spi_1a668908242386b876c86974c3c03800ee" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hal::lpc40::spi::m_moved</definition>
+        <argsstring></argsstring>
+        <name>m_moved</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="67" column="8" bodyfile="libraries/include/libhal-lpc40/spi.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1spi_1ad99589d8e835e986c1bf8f5bf3c0399c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1lpc40_1_1spi" kindref="compound">spi</ref> &gt;</type>
+        <definition>static result&lt;spi&gt; hal::lpc40::spi::get</definition>
+        <argsstring>(std::uint8_t p_bus, const spi::settings &amp;p_settings={})</argsstring>
+        <name>get</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_bus</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structhal_1_1spi_1_1settings" kindref="compound">spi::settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="49" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1spi_1a0b9de41acafc8f6ecb0a17e647c85aee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::spi::spi</definition>
+        <argsstring>(spi &amp;p_other)=delete</argsstring>
+        <name>spi</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1spi" kindref="compound">spi</ref> &amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="52" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1spi_1aefabefcf2253df52ad4a0834b5a9f293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1lpc40_1_1spi" kindref="compound">spi</ref> &amp;</type>
+        <definition>spi&amp; hal::lpc40::spi::operator=</definition>
+        <argsstring>(spi &amp;p_other)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1spi" kindref="compound">spi</ref> &amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="53" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1spi_1a7d629da193e9fa3d3d9ffe9f8fe833c6" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::spi::spi</definition>
+        <argsstring>(spi &amp;&amp;p_other) noexcept</argsstring>
+        <name>spi</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1spi" kindref="compound">spi</ref> &amp;&amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="54" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1spi_1a9e86b44eb667df5c60c3c44cfc872178" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classhal_1_1lpc40_1_1spi" kindref="compound">spi</ref> &amp;</type>
+        <definition>spi&amp; hal::lpc40::spi::operator=</definition>
+        <argsstring>(spi &amp;&amp;p_other) noexcept</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhal_1_1lpc40_1_1spi" kindref="compound">spi</ref> &amp;&amp;</type>
+          <declname>p_other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="55" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1spi_1acf4c36c908f44cb24887c52ee0ff8834" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>hal::lpc40::spi::~spi</definition>
+        <argsstring>()</argsstring>
+        <name>~spi</name>
+        <reimplements refid="classhal_1_1spi_1ac14f846d303d9c5b80f60890e9db794d">~spi</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="56" column="3"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1spi_1a57b9bdc83ce615269609ce3fe690f50d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::lpc40::spi::spi</definition>
+        <argsstring>(bus_info p_bus)</argsstring>
+        <name>spi</name>
+        <param>
+          <type><ref refid="structhal_1_1lpc40_1_1spi_1_1bus__info" kindref="compound">bus_info</ref></type>
+          <declname>p_bus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="59" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1spi_1afef2f601c1b5c02698bd1a2f04102619" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>status</type>
+        <definition>status hal::lpc40::spi::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1spi_1aadbf42ec96c43bab28ec515b6a4bcd99">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1spi_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="61" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1lpc40_1_1spi_1a3caf282f225a7f4152f18c68174621b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1spi_1_1transfer__t" kindref="compound">transfer_t</ref> &gt;</type>
+        <definition>result&lt;transfer_t&gt; hal::lpc40::spi::driver_transfer</definition>
+        <argsstring>(std::span&lt; const hal::byte &gt; p_data_out, std::span&lt; hal::byte &gt; p_data_in, hal::byte p_filler) override</argsstring>
+        <name>driver_transfer</name>
+        <reimplements refid="classhal_1_1spi_1af081713d9bc26601982d49d15cbe7a9c">driver_transfer</reimplements>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_filler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="62" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::lpc40::spi</label>
+        <link refid="classhal_1_1lpc40_1_1spi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::spi</label>
+        <link refid="classhal_1_1spi"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::lpc40::spi</label>
+        <link refid="classhal_1_1lpc40_1_1spi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::spi</label>
+        <link refid="classhal_1_1spi"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-lpc40/spi.hpp" line="27" column="1" bodyfile="libraries/include/libhal-lpc40/spi.hpp" bodystart="28" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classhal_1_1spi_1aabc27516a87f51489e665bfc91e34a95" prot="public" virt="non-virtual"><scope>hal::lpc40::spi</scope><name>configure</name></member>
+      <member refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" prot="public" virt="non-virtual"><scope>hal::lpc40::spi</scope><name>default_filler</name></member>
+      <member refid="classhal_1_1lpc40_1_1spi_1afef2f601c1b5c02698bd1a2f04102619" prot="private" virt="virtual"><scope>hal::lpc40::spi</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1lpc40_1_1spi_1a3caf282f225a7f4152f18c68174621b7" prot="private" virt="virtual"><scope>hal::lpc40::spi</scope><name>driver_transfer</name></member>
+      <member refid="classhal_1_1lpc40_1_1spi_1ad99589d8e835e986c1bf8f5bf3c0399c" prot="public" virt="non-virtual"><scope>hal::lpc40::spi</scope><name>get</name></member>
+      <member refid="classhal_1_1lpc40_1_1spi_1a64ce21505d05b0a4a4346f54ac905a89" prot="private" virt="non-virtual"><scope>hal::lpc40::spi</scope><name>m_info</name></member>
+      <member refid="classhal_1_1lpc40_1_1spi_1a668908242386b876c86974c3c03800ee" prot="private" virt="non-virtual"><scope>hal::lpc40::spi</scope><name>m_moved</name></member>
+      <member refid="classhal_1_1lpc40_1_1spi_1aefabefcf2253df52ad4a0834b5a9f293" prot="public" virt="non-virtual"><scope>hal::lpc40::spi</scope><name>operator=</name></member>
+      <member refid="classhal_1_1lpc40_1_1spi_1a9e86b44eb667df5c60c3c44cfc872178" prot="public" virt="non-virtual"><scope>hal::lpc40::spi</scope><name>operator=</name></member>
+      <member refid="classhal_1_1lpc40_1_1spi_1a0b9de41acafc8f6ecb0a17e647c85aee" prot="public" virt="non-virtual"><scope>hal::lpc40::spi</scope><name>spi</name></member>
+      <member refid="classhal_1_1lpc40_1_1spi_1a7d629da193e9fa3d3d9ffe9f8fe833c6" prot="public" virt="non-virtual"><scope>hal::lpc40::spi</scope><name>spi</name></member>
+      <member refid="classhal_1_1lpc40_1_1spi_1a57b9bdc83ce615269609ce3fe690f50d" prot="private" virt="non-virtual"><scope>hal::lpc40::spi</scope><name>spi</name></member>
+      <member refid="classhal_1_1spi_1a5e2b7807bafc0c93666977021c5c280b" prot="public" virt="non-virtual"><scope>hal::lpc40::spi</scope><name>transfer</name></member>
+      <member refid="classhal_1_1lpc40_1_1spi_1acf4c36c908f44cb24887c52ee0ff8834" prot="public" virt="virtual"><scope>hal::lpc40::spi</scope><name>~spi</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
