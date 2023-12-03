@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::lpc40::clock::configuration::usb_t</compoundname>
+    <includes refid="libhal-lpc40_2clock_8hpp" local="no">clock.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t_1a8e292d5acd229de1cabe933092005116" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1lpc40_1_1clock_1aaa8cb771d8cb9cd77f4aefbefa5a93e4" kindref="member">usb_clock_source</ref></type>
+        <definition>usb_clock_source hal::lpc40::clock::configuration::usb_t::clock</definition>
+        <argsstring></argsstring>
+        <name>clock</name>
+        <initializer>= <ref refid="classhal_1_1lpc40_1_1clock_1aaa8cb771d8cb9cd77f4aefbefa5a93e4af55832d9c36b9732cd4a625a7146f00b" kindref="member">usb_clock_source::system_clock</ref></initializer>
+        <briefdescription>
+<para>usb clock source </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/clock.hpp" line="130" column="24" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t_1adf4471cef0fce7949ba6e0496f8e688b" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1lpc40_1_1clock_1aedf62732ac08533174a2c14cc4870214" kindref="member">usb_divider</ref></type>
+        <definition>usb_divider hal::lpc40::clock::configuration::usb_t::divider</definition>
+        <argsstring></argsstring>
+        <name>divider</name>
+        <initializer>= usb_divider::divide_by1</initializer>
+        <briefdescription>
+<para>usb clock divider </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/clock.hpp" line="132" column="19" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>usb clock control config struct </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-lpc40/clock.hpp" line="127" column="5" bodyfile="libraries/include/libhal-lpc40/clock.hpp" bodystart="128" bodyend="133"/>
+    <listofallmembers>
+      <member refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t_1a8e292d5acd229de1cabe933092005116" prot="public" virt="non-virtual"><scope>hal::lpc40::clock::configuration::usb_t</scope><name>clock</name></member>
+      <member refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t_1adf4471cef0fce7949ba6e0496f8e688b" prot="public" virt="non-virtual"><scope>hal::lpc40::clock::configuration::usb_t</scope><name>divider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1lpc40_1_1spi_1_1bus__info" kind="struct" language="C++" prot="public">
+    <compoundname>hal::lpc40::spi::bus_info</compoundname>
+    <includes refid="libhal-lpc40_2spi_8hpp" local="no">spi.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1spi_1_1bus__info_1a60209105558b7e2b9676b312270a6823" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacehal_1_1lpc40_1aeb4111a0b3eb28bf70f583582a7a0b13" kindref="member">peripheral</ref></type>
+        <definition>peripheral hal::lpc40::spi::bus_info::peripheral_id</definition>
+        <argsstring></argsstring>
+        <name>peripheral_id</name>
+        <briefdescription>
+<para>peripheral id used to power on the spi peripheral at creation </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="34" column="16" bodyfile="libraries/include/libhal-lpc40/spi.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1spi_1_1bus__info_1a3141380c85e5fba3b93117f6797a5667" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref></type>
+        <definition>pin hal::lpc40::spi::bus_info::clock</definition>
+        <argsstring></argsstring>
+        <name>clock</name>
+        <briefdescription>
+<para>spi data pin </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="36" column="9" bodyfile="libraries/include/libhal-lpc40/spi.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1spi_1_1bus__info_1a10d8ce104a0eb42dadb56547740db899" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref></type>
+        <definition>pin hal::lpc40::spi::bus_info::data_out</definition>
+        <argsstring></argsstring>
+        <name>data_out</name>
+        <briefdescription>
+<para>spi clock pin </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="38" column="9" bodyfile="libraries/include/libhal-lpc40/spi.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1spi_1_1bus__info_1ab7127fd7acb81acb426053eda832aff3" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1lpc40_1_1pin" kindref="compound">pin</ref></type>
+        <definition>pin hal::lpc40::spi::bus_info::data_in</definition>
+        <argsstring></argsstring>
+        <name>data_in</name>
+        <briefdescription>
+<para>spi clock pin </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="40" column="9" bodyfile="libraries/include/libhal-lpc40/spi.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1spi_1_1bus__info_1a9554999be5b7d16fde5cca29cc61d354" prot="public" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::lpc40::spi::bus_info::clock_function</definition>
+        <argsstring></argsstring>
+        <name>clock_function</name>
+        <briefdescription>
+<para>clock function code </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="42" column="18" bodyfile="libraries/include/libhal-lpc40/spi.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1spi_1_1bus__info_1abeb66a9c16906c53f53360e43f3196d8" prot="public" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::lpc40::spi::bus_info::data_out_function</definition>
+        <argsstring></argsstring>
+        <name>data_out_function</name>
+        <briefdescription>
+<para>scl pin function code </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="44" column="18" bodyfile="libraries/include/libhal-lpc40/spi.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1lpc40_1_1spi_1_1bus__info_1a080f86220f8a3674ab49926789ab3f63" prot="public" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::lpc40::spi::bus_info::data_in_function</definition>
+        <argsstring></argsstring>
+        <name>data_in_function</name>
+        <briefdescription>
+<para>scl pin function code </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-lpc40/spi.hpp" line="46" column="18" bodyfile="libraries/include/libhal-lpc40/spi.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Information used to configure the spi bus. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::lpc40::spi::bus_info</label>
+        <link refid="structhal_1_1lpc40_1_1spi_1_1bus__info"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>clock</edgelabel>
+          <edgelabel>data_in</edgelabel>
+          <edgelabel>data_out</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::lpc40::pin</label>
+        <link refid="classhal_1_1lpc40_1_1pin"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-lpc40/spi.hpp" line="31" column="3" bodyfile="libraries/include/libhal-lpc40/spi.hpp" bodystart="32" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structhal_1_1lpc40_1_1spi_1_1bus__info_1a3141380c85e5fba3b93117f6797a5667" prot="public" virt="non-virtual"><scope>hal::lpc40::spi::bus_info</scope><name>clock</name></member>
+      <member refid="structhal_1_1lpc40_1_1spi_1_1bus__info_1a9554999be5b7d16fde5cca29cc61d354" prot="public" virt="non-virtual"><scope>hal::lpc40::spi::bus_info</scope><name>clock_function</name></member>
+      <member refid="structhal_1_1lpc40_1_1spi_1_1bus__info_1ab7127fd7acb81acb426053eda832aff3" prot="public" virt="non-virtual"><scope>hal::lpc40::spi::bus_info</scope><name>data_in</name></member>
+      <member refid="structhal_1_1lpc40_1_1spi_1_1bus__info_1a080f86220f8a3674ab49926789ab3f63" prot="public" virt="non-virtual"><scope>hal::lpc40::spi::bus_info</scope><name>data_in_function</name></member>
+      <member refid="structhal_1_1lpc40_1_1spi_1_1bus__info_1a10d8ce104a0eb42dadb56547740db899" prot="public" virt="non-virtual"><scope>hal::lpc40::spi::bus_info</scope><name>data_out</name></member>
+      <member refid="structhal_1_1lpc40_1_1spi_1_1bus__info_1abeb66a9c16906c53f53360e43f3196d8" prot="public" virt="non-virtual"><scope>hal::lpc40::spi::bus_info</scope><name>data_out_function</name></member>
+      <member refid="structhal_1_1lpc40_1_1spi_1_1bus__info_1a60209105558b7e2b9676b312270a6823" prot="public" virt="non-virtual"><scope>hal::lpc40::spi::bus_info</scope><name>peripheral_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

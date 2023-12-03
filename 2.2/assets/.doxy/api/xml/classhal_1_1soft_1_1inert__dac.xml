@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1soft_1_1inert__dac" kind="class" language="C++" prot="public">
+    <compoundname>hal::soft::inert_dac</compoundname>
+    <basecompoundref refid="classhal_1_1dac" prot="public" virt="non-virtual">hal::dac</basecompoundref>
+    <includes refid="inert__dac_8hpp" local="no">inert_dac.hpp</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1soft_1_1inert__dac_1a149873316a14e47a1600f23d8d78f0c8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1soft_1_1inert__dac" kindref="compound">inert_dac</ref> &gt;</type>
+        <definition>static result&lt;inert_dac&gt; hal::soft::inert_dac::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Factory function to create <ref refid="classhal_1_1soft_1_1inert__dac" kindref="compound">inert_dac</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>result&lt;inert_dac&gt; - Constructed <ref refid="classhal_1_1soft_1_1inert__dac" kindref="compound">inert_dac</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_dac.hpp" line="32" column="17" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_dac.hpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1soft_1_1inert__dac_1a18f565462efb3997540927d028c75e17" prot="private" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr hal::soft::inert_dac::inert_dac</definition>
+        <argsstring>()</argsstring>
+        <name>inert_dac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_dac.hpp" line="38" column="13" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_dac.hpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1soft_1_1inert__dac_1a4647d745d7f635296b960a131734447d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1dac_1_1write__t" kindref="compound">write_t</ref> &gt;</type>
+        <definition>result&lt;write_t&gt; hal::soft::inert_dac::driver_write</definition>
+        <argsstring>([[maybe_unused]] float p_percentage)</argsstring>
+        <name>driver_write</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] float</type>
+          <declname>p_percentage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inert_drivers/inert_dac.hpp" line="42" column="10" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_dac.hpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Inert implementation of Digital to Analog Converter (DAC) hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::dac</label>
+        <link refid="classhal_1_1dac"/>
+      </node>
+      <node id="1">
+        <label>hal::soft::inert_dac</label>
+        <link refid="classhal_1_1soft_1_1inert__dac"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::dac</label>
+        <link refid="classhal_1_1dac"/>
+      </node>
+      <node id="1">
+        <label>hal::soft::inert_dac</label>
+        <link refid="classhal_1_1soft_1_1inert__dac"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/inert_drivers/inert_dac.hpp" line="24" column="1" bodyfile="libraries/include/libhal-soft/inert_drivers/inert_dac.hpp" bodystart="25" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classhal_1_1soft_1_1inert__dac_1a149873316a14e47a1600f23d8d78f0c8" prot="public" virt="non-virtual"><scope>hal::soft::inert_dac</scope><name>create</name></member>
+      <member refid="classhal_1_1soft_1_1inert__dac_1a4647d745d7f635296b960a131734447d" prot="private" virt="non-virtual"><scope>hal::soft::inert_dac</scope><name>driver_write</name></member>
+      <member refid="classhal_1_1soft_1_1inert__dac_1a18f565462efb3997540927d028c75e17" prot="private" virt="non-virtual"><scope>hal::soft::inert_dac</scope><name>inert_dac</name></member>
+      <member refid="classhal_1_1dac_1a5ec1f3dc043bb5796ea9f3c2845731c3" prot="public" virt="non-virtual"><scope>hal::soft::inert_dac</scope><name>write</name></member>
+      <member refid="classhal_1_1dac_1a3d21b3da732995516ee25806396abae3" prot="public" virt="virtual"><scope>hal::soft::inert_dac</scope><name>~dac</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
