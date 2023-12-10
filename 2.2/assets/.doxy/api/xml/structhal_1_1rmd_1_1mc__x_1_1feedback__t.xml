@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1rmd_1_1mc__x_1_1feedback__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::rmd::mc_x::feedback_t</compoundname>
+    <includes refid="mc__x_8hpp" local="no">mc_x.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1ac8de81d46c2b2a9a3caf9415a69f171b" prot="public" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t hal::rmd::mc_x::feedback_t::message_number</definition>
+        <argsstring></argsstring>
+        <name>message_number</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Every time a message from our motor is received this number increments. This can be used to indicate if the feedback has updated since the last time it was read. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="72" column="19" bodyfile="libraries/include/libhal-rmd/mc_x.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1ac65fb21204e5353ea44ccbee2a035c62" prot="public" static="no" mutable="no">
+        <type>std::int64_t</type>
+        <definition>std::int64_t hal::rmd::mc_x::feedback_t::raw_multi_turn_angle</definition>
+        <argsstring></argsstring>
+        <name>raw_multi_turn_angle</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Represents the multi-turn absolute angle of the encoder relative to its zero starting point (0.01°/LSB) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="75" column="18" bodyfile="libraries/include/libhal-rmd/mc_x.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a552f96868ecce125d1a47374ad5c5e2a" prot="public" static="no" mutable="no">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t hal::rmd::mc_x::feedback_t::raw_error_state</definition>
+        <argsstring></argsstring>
+        <name>raw_error_state</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+<para>16-bit value containing error flag information </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="77" column="19" bodyfile="libraries/include/libhal-rmd/mc_x.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a75d26785d84ba1080314c889e8573fc2" prot="public" static="no" mutable="no">
+        <type>std::int16_t</type>
+        <definition>std::int16_t hal::rmd::mc_x::feedback_t::raw_current</definition>
+        <argsstring></argsstring>
+        <name>raw_current</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current flowing through the motor windings (-2048 &lt;-&gt; 2048 ==&gt; -33A &lt;-&gt; 33A) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="80" column="18" bodyfile="libraries/include/libhal-rmd/mc_x.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a359859f143a600a93d2a6ddcc9e654a3" prot="public" static="no" mutable="no">
+        <type>std::int16_t</type>
+        <definition>std::int16_t hal::rmd::mc_x::feedback_t::raw_speed</definition>
+        <argsstring></argsstring>
+        <name>raw_speed</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+<para>Rotational velocity of the motor (1 degrees per second (dps)/LSB) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="82" column="18" bodyfile="libraries/include/libhal-rmd/mc_x.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a143bf21fb6dfa99228521124868d77f9" prot="public" static="no" mutable="no">
+        <type>std::int16_t</type>
+        <definition>std::int16_t hal::rmd::mc_x::feedback_t::raw_volts</definition>
+        <argsstring></argsstring>
+        <name>raw_volts</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+<para>Motor&apos;s supply voltage (0.1V/LSB) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="84" column="18" bodyfile="libraries/include/libhal-rmd/mc_x.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a1ce0a4df70258a0a99f6f3fa42eea081" prot="public" static="no" mutable="no">
+        <type>std::int16_t</type>
+        <definition>std::int16_t hal::rmd::mc_x::feedback_t::encoder</definition>
+        <argsstring></argsstring>
+        <name>encoder</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+<para>Signed 16-bit raw encoder count value of the motor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="86" column="18" bodyfile="libraries/include/libhal-rmd/mc_x.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a527be6b99bf70ea925f5c97840df37f1" prot="public" static="no" mutable="no">
+        <type>std::int8_t</type>
+        <definition>std::int8_t hal::rmd::mc_x::feedback_t::raw_motor_temperature</definition>
+        <argsstring></argsstring>
+        <name>raw_motor_temperature</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+<para>Core temperature of the motor (1C/LSB) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="88" column="17" bodyfile="libraries/include/libhal-rmd/mc_x.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1aac79a5bf665ecd440de3df0986c26c44" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacehal_1aa830f99bf69a06fcc452d82f0deb3fa3" kindref="member">hal::ampere</ref></type>
+        <definition>hal::ampere hal::rmd::mc_x::feedback_t::current</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="90" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a433cdb03322eb9386720a563c238f5c9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacehal_1a115c0adadc69503586eff94ce028cd87" kindref="member">hal::rpm</ref></type>
+        <definition>hal::rpm hal::rmd::mc_x::feedback_t::speed</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="91" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a5c23e8016b28501ff71fe096a52a8a10" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacehal_1a3c19435046e74281a514965c8ff93b0d" kindref="member">hal::volts</ref></type>
+        <definition>hal::volts hal::rmd::mc_x::feedback_t::volts</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>volts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="92" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1ac8523670a63d59cf1d2c603d311120cf" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacehal_1a8ee6f825b6e7475277274772d858c816" kindref="member">hal::celsius</ref></type>
+        <definition>hal::celsius hal::rmd::mc_x::feedback_t::temperature</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="93" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1afa013ee0d6ea3465fe2a29ff6453d3d9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacehal_1a69b7f93f81eb80e25fbaefa924af5748" kindref="member">hal::degrees</ref></type>
+        <definition>hal::degrees hal::rmd::mc_x::feedback_t::angle</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="94" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a602069d991847ca34692a81ef590681b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::rmd::mc_x::feedback_t::motor_stall</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>motor_stall</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="95" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1acd193a66d7729acbd4d753889c666e69" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::rmd::mc_x::feedback_t::low_pressure</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>low_pressure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="96" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1ab495ff7e43766cc149dba4176cf0f660" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::rmd::mc_x::feedback_t::over_voltage</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>over_voltage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="97" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a8d77c43a723b70f17f6bb48b388093e3" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::rmd::mc_x::feedback_t::over_current</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>over_current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="98" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1abb17c7d211efc6302ae2edd2ee5ea381" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::rmd::mc_x::feedback_t::power_overrun</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>power_overrun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="99" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a2f9288c40becf5c49cb1e2dbf34eff44" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::rmd::mc_x::feedback_t::speeding</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>speeding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="100" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a7381918c8c5af48544bd09a05de441d4" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::rmd::mc_x::feedback_t::over_temperature</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>over_temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="101" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1aefee7c9782f29a47a6ffc05670d66196" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::rmd::mc_x::feedback_t::encoder_calibration_error</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>encoder_calibration_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/mc_x.hpp" line="102" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure containing all of the forms of feedback acquired by an RMD-X motor </para>
+    </detaileddescription>
+    <location file="libraries/include/libhal-rmd/mc_x.hpp" line="67" column="3" bodyfile="libraries/include/libhal-rmd/mc_x.hpp" bodystart="68" bodyend="103"/>
+    <listofallmembers>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1afa013ee0d6ea3465fe2a29ff6453d3d9" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>angle</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1aac79a5bf665ecd440de3df0986c26c44" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>current</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a1ce0a4df70258a0a99f6f3fa42eea081" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>encoder</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1aefee7c9782f29a47a6ffc05670d66196" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>encoder_calibration_error</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1acd193a66d7729acbd4d753889c666e69" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>low_pressure</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1ac8de81d46c2b2a9a3caf9415a69f171b" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>message_number</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a602069d991847ca34692a81ef590681b" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>motor_stall</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a8d77c43a723b70f17f6bb48b388093e3" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>over_current</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a7381918c8c5af48544bd09a05de441d4" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>over_temperature</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1ab495ff7e43766cc149dba4176cf0f660" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>over_voltage</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1abb17c7d211efc6302ae2edd2ee5ea381" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>power_overrun</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a75d26785d84ba1080314c889e8573fc2" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>raw_current</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a552f96868ecce125d1a47374ad5c5e2a" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>raw_error_state</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a527be6b99bf70ea925f5c97840df37f1" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>raw_motor_temperature</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1ac65fb21204e5353ea44ccbee2a035c62" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>raw_multi_turn_angle</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a359859f143a600a93d2a6ddcc9e654a3" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>raw_speed</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a143bf21fb6dfa99228521124868d77f9" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>raw_volts</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a433cdb03322eb9386720a563c238f5c9" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>speed</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a2f9288c40becf5c49cb1e2dbf34eff44" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>speeding</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1ac8523670a63d59cf1d2c603d311120cf" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>temperature</name></member>
+      <member refid="structhal_1_1rmd_1_1mc__x_1_1feedback__t_1a5c23e8016b28501ff71fe096a52a8a10" prot="public" virt="non-virtual"><scope>hal::rmd::mc_x::feedback_t</scope><name>volts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1pwm_1_1frequency__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::pwm::frequency_t</compoundname>
+    <includes refid="libhal_2pwm_8hpp" local="no">pwm.hpp</includes>
+    <briefdescription>
+<para>Feedback setting the pwm frequency. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure is currently empty as no feedback has been determined for now. This structure may be expanded in the future. </para>
+    </detaileddescription>
+    <location file="libraries/include/libhal/pwm.hpp" line="72" column="3" bodyfile="libraries/include/libhal/pwm.hpp" bodystart="73" bodyend="73"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
