@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1dac_1_1write__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::dac::write_t</compoundname>
+    <includes refid="libhal_2dac_8hpp" local="no">dac.hpp</includes>
+    <briefdescription>
+<para>Feedback from writing a voltage to the dac. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure is currently empty as no feedback has been determined for now. This structure may be expanded in the future. </para>
+    </detaileddescription>
+    <location file="libraries/include/libhal/dac.hpp" line="39" column="3" bodyfile="libraries/include/libhal/dac.hpp" bodystart="40" bodyend="40"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

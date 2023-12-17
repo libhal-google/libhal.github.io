@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mpl3115a2_8hpp" kind="file" language="C++">
+    <compoundname>mpl3115a2.hpp</compoundname>
+    <includes refid="libhal_2i2c_8hpp" local="no">libhal/i2c.hpp</includes>
+    <includes refid="libhal_2timeout_8hpp" local="no">libhal/timeout.hpp</includes>
+    <includes refid="libhal_2units_8hpp" local="no">libhal/units.hpp</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>system_error</label>
+      </node>
+      <node id="8">
+        <label>cstdint</label>
+      </node>
+      <node id="10">
+        <label>tl/function_ref.hpp</label>
+      </node>
+      <node id="11">
+        <label>timeout.hpp</label>
+        <link refid="libhal_2timeout_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>boost/leaf/detail/all.hpp</label>
+      </node>
+      <node id="9">
+        <label>third_party/inplace_function.hpp</label>
+      </node>
+      <node id="7">
+        <label>functional.hpp</label>
+        <link refid="functional_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>units.hpp</label>
+        <link refid="libhal_2units_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>error.hpp</label>
+        <link refid="error_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libhal/i2c.hpp</label>
+        <link refid="libhal_2i2c_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>chrono</label>
+      </node>
+      <node id="3">
+        <label>span</label>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal-mpl/mpl3115a2.hpp</label>
+        <link refid="mpl3115a2_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classhal_1_1mpl_1_1mpl3115a2" prot="public">hal::mpl::mpl3115a2</innerclass>
+    <innerclass refid="structhal_1_1mpl_1_1mpl3115a2_1_1temperature__read__t" prot="public">hal::mpl::mpl3115a2::temperature_read_t</innerclass>
+    <innerclass refid="structhal_1_1mpl_1_1mpl3115a2_1_1pressure__read__t" prot="public">hal::mpl::mpl3115a2::pressure_read_t</innerclass>
+    <innerclass refid="structhal_1_1mpl_1_1mpl3115a2_1_1altitude__read__t" prot="public">hal::mpl::mpl3115a2::altitude_read_t</innerclass>
+    <innernamespace refid="namespacehal">hal</innernamespace>
+    <innernamespace refid="namespacehal_1_1mpl">hal::mpl</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2023<sp/>Google<sp/>LLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/i2c.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libhal_2timeout_8hpp" kindref="compound">libhal/timeout.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/units.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">hal::mpl<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classhal_1_1mpl_1_1mpl3115a2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhal_1_1mpl_1_1mpl3115a2" kindref="compound">mpl3115a2</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Keep<sp/>track<sp/>of<sp/>the<sp/>current<sp/>set<sp/>mode<sp/>bit<sp/>in<sp/>ctrl_reg1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>mode</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>barometer<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>altimeter<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="structhal_1_1mpl_1_1mpl3115a2_1_1temperature__read__t" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1mpl_1_1mpl3115a2_1_1temperature__read__t" kindref="compound">temperature_read_t</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal_1a8ee6f825b6e7475277274772d858c816" kindref="member">celsius</ref><sp/>temperature;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="structhal_1_1mpl_1_1mpl3115a2_1_1pressure__read__t" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1mpl_1_1mpl3115a2_1_1pressure__read__t" kindref="compound">pressure_read_t</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pressure;<sp/><sp/></highlight><highlight class="comment">//<sp/>Pascals<sp/>(Pa)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="structhal_1_1mpl_1_1mpl3115a2_1_1altitude__read__t" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1mpl_1_1mpl3115a2_1_1altitude__read__t" kindref="compound">altitude_read_t</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal_1a309a799c0b8da9cd99fb5fad7c29208c" kindref="member">meters</ref><sp/>altitude;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classhal_1_1mpl_1_1mpl3115a2_1a6219c26911d8f28ed524be0803ba86dc" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>result&lt;mpl3115a2&gt;<sp/><ref refid="classhal_1_1mpl_1_1mpl3115a2_1a6219c26911d8f28ed524be0803ba86dc" kindref="member">create</ref>(<ref refid="classhal_1_1i2c" kindref="compound">hal::i2c</ref>&amp;<sp/>p_i2c);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classhal_1_1mpl_1_1mpl3115a2_1a75b593193d824b23c652213c6890d355" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>hal::result&lt;temperature_read_t&gt;<sp/><ref refid="classhal_1_1mpl_1_1mpl3115a2_1a75b593193d824b23c652213c6890d355" kindref="member">read_temperature</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classhal_1_1mpl_1_1mpl3115a2_1ab3a8ee7a9f8f15318866a12287d85873" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>hal::result&lt;pressure_read_t&gt;<sp/><ref refid="classhal_1_1mpl_1_1mpl3115a2_1ab3a8ee7a9f8f15318866a12287d85873" kindref="member">read_pressure</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classhal_1_1mpl_1_1mpl3115a2_1a671006cb22a79de040f8051e7263f0da" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>hal::result&lt;altitude_read_t&gt;<sp/><ref refid="classhal_1_1mpl_1_1mpl3115a2_1a671006cb22a79de040f8051e7263f0da" kindref="member">read_altitude</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classhal_1_1mpl_1_1mpl3115a2_1a73a883bc77c1a7e329199bf8db4334d9" refkind="member"><highlight class="normal"><sp/><sp/>hal::status<sp/><ref refid="classhal_1_1mpl_1_1mpl3115a2_1a73a883bc77c1a7e329199bf8db4334d9" kindref="member">set_sea_pressure</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p_sea_level_pressure);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classhal_1_1mpl_1_1mpl3115a2_1ae6ee22b2582b4e85b5563e3516c66c2c" refkind="member"><highlight class="normal"><sp/><sp/>hal::status<sp/><ref refid="classhal_1_1mpl_1_1mpl3115a2_1ae6ee22b2582b4e85b5563e3516c66c2c" kindref="member">set_altitude_offset</ref>(int8_t<sp/>p_offset);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Maximum<sp/>number<sp/>of<sp/>retries<sp/>for<sp/>polling<sp/>operations.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint16_t<sp/>default_max_polling_retries<sp/>=<sp/>10000;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1mpl_1_1mpl3115a2" kindref="compound">mpl3115a2</ref>(<ref refid="classhal_1_1i2c" kindref="compound">hal::i2c</ref>&amp;<sp/>p_i2c);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>I2C<sp/>peripheral<sp/>used<sp/>for<sp/>communication<sp/>with<sp/>the<sp/>device.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><ref refid="classhal_1_1i2c" kindref="compound">hal::i2c</ref>*<sp/>m_i2c;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Variable<sp/>to<sp/>track<sp/>current<sp/>sensor<sp/>mode<sp/>to<sp/>determine<sp/>if<sp/>CTRL_REG1<sp/>ALT<sp/>flag</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/>*<sp/>needs<sp/>to<sp/>be<sp/>set.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>mode<sp/>m_sensor_mode<sp/>=<sp/>mode::barometer;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hal::mpl</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/include/libhal-mpl/mpl3115a2.hpp"/>
+  </compounddef>
+</doxygen>
