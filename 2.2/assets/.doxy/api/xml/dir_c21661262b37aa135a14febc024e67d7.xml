@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_c21661262b37aa135a14febc024e67d7" kind="dir">
+    <compoundname>libraries/include/libhal</compoundname>
+    <innerfile refid="accelerometer_8hpp">accelerometer.hpp</innerfile>
+    <innerfile refid="libhal_2adc_8hpp">adc.hpp</innerfile>
+    <innerfile refid="angular__velocity__sensor_8hpp">angular_velocity_sensor.hpp</innerfile>
+    <innerfile refid="libhal_2can_8hpp">can.hpp</innerfile>
+    <innerfile refid="libhal_2dac_8hpp">dac.hpp</innerfile>
+    <innerfile refid="distance__sensor_8hpp">distance_sensor.hpp</innerfile>
+    <innerfile refid="error_8hpp">error.hpp</innerfile>
+    <innerfile refid="functional_8hpp">functional.hpp</innerfile>
+    <innerfile refid="gyroscope_8hpp">gyroscope.hpp</innerfile>
+    <innerfile refid="libhal_2i2c_8hpp">i2c.hpp</innerfile>
+    <innerfile refid="libhal_2input__pin_8hpp">input_pin.hpp</innerfile>
+    <innerfile refid="libhal_2interrupt__pin_8hpp">interrupt_pin.hpp</innerfile>
+    <innerfile refid="magnetometer_8hpp">magnetometer.hpp</innerfile>
+    <innerfile refid="libhal_2motor_8hpp">motor.hpp</innerfile>
+    <innerfile refid="libhal_2output__pin_8hpp">output_pin.hpp</innerfile>
+    <innerfile refid="libhal_2pwm_8hpp">pwm.hpp</innerfile>
+    <innerfile refid="rotation__sensor_8hpp">rotation_sensor.hpp</innerfile>
+    <innerfile refid="libhal_2serial_8hpp">serial.hpp</innerfile>
+    <innerfile refid="servo_8hpp">servo.hpp</innerfile>
+    <innerfile refid="libhal_2spi_8hpp">spi.hpp</innerfile>
+    <innerfile refid="libhal_2steady__clock_8hpp">steady_clock.hpp</innerfile>
+    <innerfile refid="temperature__sensor_8hpp">temperature_sensor.hpp</innerfile>
+    <innerfile refid="libhal_2timeout_8hpp">timeout.hpp</innerfile>
+    <innerfile refid="libhal_2timer_8hpp">timer.hpp</innerfile>
+    <innerfile refid="libhal_2units_8hpp">units.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/"/>
+  </compounddef>
+</doxygen>

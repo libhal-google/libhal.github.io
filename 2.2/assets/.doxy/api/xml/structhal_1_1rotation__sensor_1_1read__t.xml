@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1rotation__sensor_1_1read__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::rotation_sensor::read_t</compoundname>
+    <includes refid="rotation__sensor_8hpp" local="no">rotation_sensor.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1rotation__sensor_1_1read__t_1ae21277e2e280571571ed41e482faf9c3" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacehal_1a69b7f93f81eb80e25fbaefa924af5748" kindref="member">degrees</ref></type>
+        <definition>degrees hal::rotation_sensor::read_t::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+<para>Rotation angle measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/rotation_sensor.hpp" line="91" column="13" bodyfile="libraries/include/libhal/rotation_sensor.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Result from reading the rotation sensor. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/rotation_sensor.hpp" line="85" column="3" bodyfile="libraries/include/libhal/rotation_sensor.hpp" bodystart="86" bodyend="92"/>
+    <listofallmembers>
+      <member refid="structhal_1_1rotation__sensor_1_1read__t_1ae21277e2e280571571ed41e482faf9c3" prot="public" virt="non-virtual"><scope>hal::rotation_sensor::read_t</scope><name>angle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
