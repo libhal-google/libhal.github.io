@@ -60,21 +60,10 @@ docs_dir: mkdocs
 
 plugins:
   - search
-  - mkdoxy:
-      projects:
-        api:
-          src-dirs: libraries/include/
-          full-doc: True
-          doxy-cfg:
-            FILE_PATTERNS: "*.h*"
-            RECURSIVE: True
-            EXTRACT_STATIC: True
-            EXCLUDE_PATTERNS: "*/third_party/*"
-            HAVE_DOT: True
   - literate-nav:
       nav_file: summary.md
       tab_length: 2
-
+      
 markdown_extensions:
   - admonition
   - pymdownx.mark # highlighting
