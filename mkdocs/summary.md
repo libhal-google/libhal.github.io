@@ -17,10 +17,4 @@
 - 📊 Project Information
   - [🟢 Library Status 🔴](project_information/status.md)
   - [About](project_information/about.md)
-- 🧩 APIs
-  - [📦 Libraries](api/namespaces.md)
-    - api/namespacehal*.md
-  - [🗂️ Files](api/files.md)
-  - [⛓️ Hierarchy](api/hierarchy.md)
-  - ⚪️ Misc
-    - api/*.md
+- [🧩 APIs](api/index.html)

@@ -1,0 +1,30 @@
+libhal API documentation
+=========================
+
+.. image:: _static/logo.png
+  :width: 200
+  :align: center
+  :alt: libhal logo
+
+**Welcome to libhal API documentation**
+
+Here you will find an organized list of the interfaces used in libhal. 
+This includes soft drivers which are drivers that are not tied to specific hardware. 
+This will also include utility functions 
+.. TODO: display tree as summary of docs
+
+
+
+.. toctree::
+  :caption: hal docs
+  :maxdepth: 5
+  
+  Libhal Interfaces <libhal/index>
+  Soft Drivers <soft/index>
+  Utilities <utilities/index>
+
+
+
+
+  
+  
