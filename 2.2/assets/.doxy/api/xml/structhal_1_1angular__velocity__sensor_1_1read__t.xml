@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1angular__velocity__sensor_1_1read__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::angular_velocity_sensor::read_t</compoundname>
+    <includes refid="angular__velocity__sensor_8hpp" local="no">angular_velocity_sensor.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1angular__velocity__sensor_1_1read__t_1a34631e93690cbd75dfb5138e2e8c646d" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacehal_1a115c0adadc69503586eff94ce028cd87" kindref="member">hal::rpm</ref></type>
+        <definition>hal::rpm hal::angular_velocity_sensor::read_t::angular_velocity</definition>
+        <argsstring></argsstring>
+        <name>angular_velocity</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/angular_velocity_sensor.hpp" line="34" column="14" bodyfile="libraries/include/libhal/angular_velocity_sensor.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>angular velocity reading from the sensor </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/angular_velocity_sensor.hpp" line="32" column="3" bodyfile="libraries/include/libhal/angular_velocity_sensor.hpp" bodystart="33" bodyend="35"/>
+    <listofallmembers>
+      <member refid="structhal_1_1angular__velocity__sensor_1_1read__t_1a34631e93690cbd75dfb5138e2e8c646d" prot="public" virt="non-virtual"><scope>hal::angular_velocity_sensor::read_t</scope><name>angular_velocity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

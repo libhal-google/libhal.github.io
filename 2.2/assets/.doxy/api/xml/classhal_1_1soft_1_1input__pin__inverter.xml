@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1soft_1_1input__pin__inverter" kind="class" language="C++" prot="public">
+    <compoundname>hal::soft::input_pin_inverter</compoundname>
+    <basecompoundref refid="classhal_1_1input__pin" prot="public" virt="non-virtual">hal::input_pin</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1soft_1_1input__pin__inverter_1a954adfb5eb49db1786e6b37afd5eac77" prot="private" static="no" mutable="no">
+        <type><ref refid="classhal_1_1input__pin" kindref="compound">hal::input_pin</ref> *</type>
+        <definition>hal::input_pin* hal::soft::input_pin_inverter::m_input_pin</definition>
+        <argsstring></argsstring>
+        <name>m_input_pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inverter.hpp" line="42" column="18" bodyfile="libraries/include/libhal-soft/inverter.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1soft_1_1input__pin__inverter_1abff7c3142f156f6f772ec4371c24b8a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::soft::input_pin_inverter::input_pin_inverter</definition>
+        <argsstring>(hal::input_pin &amp;p_input_pin)</argsstring>
+        <name>input_pin_inverter</name>
+        <param>
+          <type><ref refid="classhal_1_1input__pin" kindref="compound">hal::input_pin</ref> &amp;</type>
+          <declname>p_input_pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inverter.hpp" line="36" column="3"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1soft_1_1input__pin__inverter_1a60064d07db13765ae6b7b936fb9f771c" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>status</type>
+        <definition>status hal::soft::input_pin_inverter::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1input__pin_1aec92d467a73ecdce76cd219601126d22">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1input__pin_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inverter.hpp" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1soft_1_1input__pin__inverter_1a07c86c789f3c83fdc571d1b1bbc60594" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1input__pin_1_1level__t" kindref="compound">level_t</ref> &gt;</type>
+        <definition>result&lt;level_t&gt; hal::soft::input_pin_inverter::driver_level</definition>
+        <argsstring>() override</argsstring>
+        <name>driver_level</name>
+        <reimplements refid="classhal_1_1input__pin_1a8a50240d3fc6510aa541e2b4ce1148a9">driver_level</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-soft/inverter.hpp" line="40" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::input_pin</label>
+        <link refid="classhal_1_1input__pin"/>
+      </node>
+      <node id="1">
+        <label>hal::soft::input_pin_inverter</label>
+        <link refid="classhal_1_1soft_1_1input__pin__inverter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::input_pin</label>
+        <link refid="classhal_1_1input__pin"/>
+      </node>
+      <node id="1">
+        <label>hal::soft::input_pin_inverter</label>
+        <link refid="classhal_1_1soft_1_1input__pin__inverter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-soft/inverter.hpp" line="33" column="1" bodyfile="libraries/include/libhal-soft/inverter.hpp" bodystart="34" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classhal_1_1input__pin_1ac61d7c871be05f7459ecad05c1729188" prot="public" virt="non-virtual"><scope>hal::soft::input_pin_inverter</scope><name>configure</name></member>
+      <member refid="classhal_1_1soft_1_1input__pin__inverter_1a60064d07db13765ae6b7b936fb9f771c" prot="private" virt="virtual"><scope>hal::soft::input_pin_inverter</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1soft_1_1input__pin__inverter_1a07c86c789f3c83fdc571d1b1bbc60594" prot="private" virt="virtual"><scope>hal::soft::input_pin_inverter</scope><name>driver_level</name></member>
+      <member refid="classhal_1_1soft_1_1input__pin__inverter_1abff7c3142f156f6f772ec4371c24b8a8" prot="public" virt="non-virtual"><scope>hal::soft::input_pin_inverter</scope><name>input_pin_inverter</name></member>
+      <member refid="classhal_1_1input__pin_1a757d49cf83e37348236fcac52d2a39d9" prot="public" virt="non-virtual"><scope>hal::soft::input_pin_inverter</scope><name>level</name></member>
+      <member refid="classhal_1_1soft_1_1input__pin__inverter_1a954adfb5eb49db1786e6b37afd5eac77" prot="private" virt="non-virtual"><scope>hal::soft::input_pin_inverter</scope><name>m_input_pin</name></member>
+      <member refid="classhal_1_1input__pin_1a3880caa73ba24653823e2d8930173103" prot="public" virt="virtual"><scope>hal::soft::input_pin_inverter</scope><name>~input_pin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

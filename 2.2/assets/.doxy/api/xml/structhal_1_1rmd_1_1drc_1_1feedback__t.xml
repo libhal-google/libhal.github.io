@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1rmd_1_1drc_1_1feedback__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::rmd::drc::feedback_t</compoundname>
+    <includes refid="drc_8hpp" local="no">drc.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1a072f79b28807461cd5073e41847d1477" prot="public" static="no" mutable="no">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t hal::rmd::drc::feedback_t::message_number</definition>
+        <argsstring></argsstring>
+        <name>message_number</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Every time a message from our motor is received this number increments. This can be used to indicate if the feedback has updated since the last time it was read. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="104" column="19" bodyfile="libraries/include/libhal-rmd/drc.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1a3c4d9f50601c45dfe2d42940379b150e" prot="public" static="no" mutable="no">
+        <type>std::int64_t</type>
+        <definition>std::int64_t hal::rmd::drc::feedback_t::raw_multi_turn_angle</definition>
+        <argsstring></argsstring>
+        <name>raw_multi_turn_angle</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+<para>Raw multi-turn angle (0.01°/LSB) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="106" column="18" bodyfile="libraries/include/libhal-rmd/drc.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1a2930c8abf38bff5fddb0452a817436f4" prot="public" static="no" mutable="no">
+        <type>std::int16_t</type>
+        <definition>std::int16_t hal::rmd::drc::feedback_t::raw_current</definition>
+        <argsstring></argsstring>
+        <name>raw_current</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current flowing through the motor windings (-2048 &lt;-&gt; 2048 ==&gt; -33A &lt;-&gt; 33A) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="109" column="18" bodyfile="libraries/include/libhal-rmd/drc.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1aa540f0ac9fc2aa0805995afb8ab55517" prot="public" static="no" mutable="no">
+        <type>std::int16_t</type>
+        <definition>std::int16_t hal::rmd::drc::feedback_t::raw_speed</definition>
+        <argsstring></argsstring>
+        <name>raw_speed</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+<para>Rotational velocity of the motor (1 degrees per second (dps)/LSB) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="111" column="18" bodyfile="libraries/include/libhal-rmd/drc.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1aaac7245e1c38b8c4b5b23762a0774959" prot="public" static="no" mutable="no">
+        <type>std::int16_t</type>
+        <definition>std::int16_t hal::rmd::drc::feedback_t::raw_volts</definition>
+        <argsstring></argsstring>
+        <name>raw_volts</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+<para>Motor&apos;s supply voltage (0.1V/LSB) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="113" column="18" bodyfile="libraries/include/libhal-rmd/drc.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1a366528f5b7a3d57d17d74d682222291c" prot="public" static="no" mutable="no">
+        <type>std::int16_t</type>
+        <definition>std::int16_t hal::rmd::drc::feedback_t::encoder</definition>
+        <argsstring></argsstring>
+        <name>encoder</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+<para>Signed 16-bit raw encoder count value of the motor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="115" column="18" bodyfile="libraries/include/libhal-rmd/drc.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1a3895482f9e5fe885c0bedd6695f6ef7b" prot="public" static="no" mutable="no">
+        <type>std::int8_t</type>
+        <definition>std::int8_t hal::rmd::drc::feedback_t::raw_motor_temperature</definition>
+        <argsstring></argsstring>
+        <name>raw_motor_temperature</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+<para>Core temperature of the motor (1C/LSB) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="117" column="17" bodyfile="libraries/include/libhal-rmd/drc.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1a50bcafbdafbc1aa2b501774ce80f9d41" prot="public" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::rmd::drc::feedback_t::raw_error_state</definition>
+        <argsstring></argsstring>
+        <name>raw_error_state</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+<para>8-bit value containing error flag information </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="119" column="18" bodyfile="libraries/include/libhal-rmd/drc.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1a21da2d50ed67eafb641a0dbcb56c0ffc" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacehal_1aa830f99bf69a06fcc452d82f0deb3fa3" kindref="member">hal::ampere</ref></type>
+        <definition>hal::ampere hal::rmd::drc::feedback_t::current</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="121" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1af0b1dbaf1195a471916e7910bfef807c" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacehal_1a115c0adadc69503586eff94ce028cd87" kindref="member">hal::rpm</ref></type>
+        <definition>hal::rpm hal::rmd::drc::feedback_t::speed</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="122" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1aff935aa13e8431f4d9679373c1ca0f3b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacehal_1a3c19435046e74281a514965c8ff93b0d" kindref="member">hal::volts</ref></type>
+        <definition>hal::volts hal::rmd::drc::feedback_t::volts</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>volts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="123" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1a307d0d47d1d8750609d27f728e1a770c" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacehal_1a8ee6f825b6e7475277274772d858c816" kindref="member">hal::celsius</ref></type>
+        <definition>hal::celsius hal::rmd::drc::feedback_t::temperature</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="124" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1ace8edf9eb14ad205afa05a25f04d982d" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacehal_1a69b7f93f81eb80e25fbaefa924af5748" kindref="member">hal::degrees</ref></type>
+        <definition>hal::degrees hal::rmd::drc::feedback_t::angle</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="125" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1a7ef590a091b89ffd8574d5775fdddb4c" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::rmd::drc::feedback_t::over_voltage_protection_tripped</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>over_voltage_protection_tripped</name>
+        <briefdescription>
+<para>Return if the motor has detected an over voltage event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In order for this field to be updated a feedback_request with status_1_and_error_flags must be issued.</para>
+<para><simplesect kind="return"><para>true - over voltage protection tripped </para>
+</simplesect>
+<simplesect kind="return"><para>false - over voltage protection has not tripped </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="136" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structhal_1_1rmd_1_1drc_1_1feedback__t_1a8fdf48660331593be9aceaf173f86da0" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hal::rmd::drc::feedback_t::over_temperature_protection_tripped</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>over_temperature_protection_tripped</name>
+        <briefdescription>
+<para>Return if the motor has detected an over temperature event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In order for this field to be updated a feedback_request with status_1_and_error_flags must be issued.</para>
+<para><simplesect kind="return"><para>true - over temperature protection tripped </para>
+</simplesect>
+<simplesect kind="return"><para>false - over temperature protection has not tripped </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-rmd/drc.hpp" line="147" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure containing all of the forms of feedback acquired by an RMD-X motor </para>
+    </detaileddescription>
+    <location file="libraries/include/libhal-rmd/drc.hpp" line="99" column="3" bodyfile="libraries/include/libhal-rmd/drc.hpp" bodystart="100" bodyend="148"/>
+    <listofallmembers>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1ace8edf9eb14ad205afa05a25f04d982d" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>angle</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a21da2d50ed67eafb641a0dbcb56c0ffc" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>current</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a366528f5b7a3d57d17d74d682222291c" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>encoder</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a072f79b28807461cd5073e41847d1477" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>message_number</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a8fdf48660331593be9aceaf173f86da0" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>over_temperature_protection_tripped</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a7ef590a091b89ffd8574d5775fdddb4c" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>over_voltage_protection_tripped</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a2930c8abf38bff5fddb0452a817436f4" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>raw_current</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a50bcafbdafbc1aa2b501774ce80f9d41" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>raw_error_state</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a3895482f9e5fe885c0bedd6695f6ef7b" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>raw_motor_temperature</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a3c4d9f50601c45dfe2d42940379b150e" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>raw_multi_turn_angle</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1aa540f0ac9fc2aa0805995afb8ab55517" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>raw_speed</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1aaac7245e1c38b8c4b5b23762a0774959" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>raw_volts</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1af0b1dbaf1195a471916e7910bfef807c" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>speed</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1a307d0d47d1d8750609d27f728e1a770c" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>temperature</name></member>
+      <member refid="structhal_1_1rmd_1_1drc_1_1feedback__t_1aff935aa13e8431f4d9679373c1ca0f3b" prot="public" virt="non-virtual"><scope>hal::rmd::drc::feedback_t</scope><name>volts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

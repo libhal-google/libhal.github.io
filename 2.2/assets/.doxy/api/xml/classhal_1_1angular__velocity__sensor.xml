@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1angular__velocity__sensor" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>hal::angular_velocity_sensor</compoundname>
+    <derivedcompoundref refid="classhal_1_1rmd_1_1drc__angular__velocity__sensor" prot="public" virt="non-virtual">hal::rmd::drc_angular_velocity_sensor</derivedcompoundref>
+    <includes refid="angular__velocity__sensor_8hpp" local="no">angular_velocity_sensor.hpp</includes>
+    <innerclass refid="structhal_1_1angular__velocity__sensor_1_1read__t" prot="public">hal::angular_velocity_sensor::read_t</innerclass>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhal_1_1angular__velocity__sensor_1a7d1ae750d589fb043bc7d52de3d09112" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1angular__velocity__sensor_1_1read__t" kindref="compound">read_t</ref> &gt;</type>
+        <definition>result&lt;read_t&gt; hal::angular_velocity_sensor::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <briefdescription>
+<para>Reads the most up to date angular velocity from the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>result&lt;read_t&gt; - angular velocity data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/angular_velocity_sensor.hpp" line="41" column="11" bodyfile="libraries/include/libhal/angular_velocity_sensor.hpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1angular__velocity__sensor_1a05d9ac323bf760185f2b5145a72f56a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual hal::angular_velocity_sensor::~angular_velocity_sensor</definition>
+        <argsstring>()=default</argsstring>
+        <name>~angular_velocity_sensor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/angular_velocity_sensor.hpp" line="46" column="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1angular__velocity__sensor_1ac584ec64e2d28cdc519b50f42f87ff3d" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1angular__velocity__sensor_1_1read__t" kindref="compound">read_t</ref> &gt;</type>
+        <definition>virtual hal::result&lt;read_t&gt; hal::angular_velocity_sensor::driver_read</definition>
+        <argsstring>()=0</argsstring>
+        <name>driver_read</name>
+        <reimplementedby refid="classhal_1_1rmd_1_1drc__angular__velocity__sensor_1a0e7a9a3949f08c001e00e9e133154003">driver_read</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/angular_velocity_sensor.hpp" line="49" column="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>angular velocity sensor hardware abstraction interface </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::rmd::drc_angular_velocity_sensor</label>
+        <link refid="classhal_1_1rmd_1_1drc__angular__velocity__sensor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hal::angular_velocity_sensor</label>
+        <link refid="classhal_1_1angular__velocity__sensor"/>
+      </node>
+    </inheritancegraph>
+    <location file="libraries/include/libhal/angular_velocity_sensor.hpp" line="24" column="1" bodyfile="libraries/include/libhal/angular_velocity_sensor.hpp" bodystart="25" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classhal_1_1angular__velocity__sensor_1ac584ec64e2d28cdc519b50f42f87ff3d" prot="private" virt="pure-virtual"><scope>hal::angular_velocity_sensor</scope><name>driver_read</name></member>
+      <member refid="classhal_1_1angular__velocity__sensor_1a7d1ae750d589fb043bc7d52de3d09112" prot="public" virt="non-virtual"><scope>hal::angular_velocity_sensor</scope><name>read</name></member>
+      <member refid="classhal_1_1angular__velocity__sensor_1a05d9ac323bf760185f2b5145a72f56a9" prot="public" virt="virtual"><scope>hal::angular_velocity_sensor</scope><name>~angular_velocity_sensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
