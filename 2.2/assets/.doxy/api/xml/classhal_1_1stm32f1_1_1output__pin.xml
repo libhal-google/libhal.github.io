@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhal_1_1stm32f1_1_1output__pin" kind="class" language="C++" prot="public">
+    <compoundname>hal::stm32f1::output_pin</compoundname>
+    <basecompoundref refid="classhal_1_1output__pin" prot="public" virt="non-virtual">hal::output_pin</basecompoundref>
+    <includes refid="libhal-stm32f1_2output__pin_8hpp" local="no">output_pin.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhal_1_1stm32f1_1_1output__pin_1a3aa79130de09325d924fdbb323a09448" prot="private" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::stm32f1::output_pin::m_port</definition>
+        <argsstring></argsstring>
+        <name>m_port</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/output_pin.hpp" line="51" column="16" bodyfile="libraries/include/libhal-stm32f1/output_pin.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhal_1_1stm32f1_1_1output__pin_1a2b84050c8231a6e67044334645fe4c9b" prot="private" static="no" mutable="no">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hal::stm32f1::output_pin::m_pin</definition>
+        <argsstring></argsstring>
+        <name>m_pin</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/output_pin.hpp" line="52" column="16" bodyfile="libraries/include/libhal-stm32f1/output_pin.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhal_1_1stm32f1_1_1output__pin_1ab26ce7b67574f9bf09c6b8ea202784f9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>result&lt; <ref refid="classhal_1_1stm32f1_1_1output__pin" kindref="compound">output_pin</ref> &gt;</type>
+        <definition>static result&lt;output_pin&gt; hal::stm32f1::output_pin::get</definition>
+        <argsstring>(std::uint8_t p_port, std::uint8_t p_pin, output_pin::settings p_settings={})</argsstring>
+        <name>get</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_port</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_pin</declname>
+        </param>
+        <param>
+          <type><ref refid="structhal_1_1output__pin_1_1settings" kindref="compound">output_pin::settings</ref></type>
+          <declname>p_settings</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Get the output pin object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- selects pin port to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- selects which pin within the port to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- initial pin settings </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;output_pin&gt; - reference to the statically allocated output pin </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/output_pin.hpp" line="38" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhal_1_1stm32f1_1_1output__pin_1a48b25e8a2f01fecef1c894c3b6f71d0a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hal::stm32f1::output_pin::output_pin</definition>
+        <argsstring>(std::uint8_t p_port, std::uint8_t p_pin)</argsstring>
+        <name>output_pin</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_port</declname>
+        </param>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>p_pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/output_pin.hpp" line="43" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1stm32f1_1_1output__pin_1a40863551d406e034995c66befa4bf322" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>status</type>
+        <definition>status hal::stm32f1::output_pin::driver_configure</definition>
+        <argsstring>(const settings &amp;p_settings) override</argsstring>
+        <name>driver_configure</name>
+        <reimplements refid="classhal_1_1output__pin_1a37fb83fb5fdacf61c6b45bddcd9dd390">driver_configure</reimplements>
+        <param>
+          <type>const <ref refid="structhal_1_1output__pin_1_1settings" kindref="compound">settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/output_pin.hpp" line="47" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1stm32f1_1_1output__pin_1aa176c9b22b6dfefc2a8ce3ec938d9c97" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1output__pin_1_1set__level__t" kindref="compound">set_level_t</ref> &gt;</type>
+        <definition>result&lt;set_level_t&gt; hal::stm32f1::output_pin::driver_level</definition>
+        <argsstring>(bool p_high) override</argsstring>
+        <name>driver_level</name>
+        <reimplements refid="classhal_1_1output__pin_1ac0fadebc6928349d19b38a7eaccd33f3">driver_level</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>p_high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/output_pin.hpp" line="48" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhal_1_1stm32f1_1_1output__pin_1a8254618fa6b6783377b3fd78ce13b1a7" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1output__pin_1_1level__t" kindref="compound">level_t</ref> &gt;</type>
+        <definition>result&lt;level_t&gt; hal::stm32f1::output_pin::driver_level</definition>
+        <argsstring>() override</argsstring>
+        <name>driver_level</name>
+        <reimplements refid="classhal_1_1output__pin_1ab741d4f8ef6d9d72ce3bdfa6f3d03f69">driver_level</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-stm32f1/output_pin.hpp" line="49" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Output pin implementation for the stm32::f10x. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hal::stm32f1::output_pin</label>
+        <link refid="classhal_1_1stm32f1_1_1output__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::output_pin</label>
+        <link refid="classhal_1_1output__pin"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hal::stm32f1::output_pin</label>
+        <link refid="classhal_1_1stm32f1_1_1output__pin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hal::output_pin</label>
+        <link refid="classhal_1_1output__pin"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-stm32f1/output_pin.hpp" line="26" column="1" bodyfile="libraries/include/libhal-stm32f1/output_pin.hpp" bodystart="27" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classhal_1_1output__pin_1a0eee7c0911622a62c215f867dd117d0f" prot="public" virt="non-virtual"><scope>hal::stm32f1::output_pin</scope><name>configure</name></member>
+      <member refid="classhal_1_1stm32f1_1_1output__pin_1a40863551d406e034995c66befa4bf322" prot="private" virt="virtual"><scope>hal::stm32f1::output_pin</scope><name>driver_configure</name></member>
+      <member refid="classhal_1_1stm32f1_1_1output__pin_1aa176c9b22b6dfefc2a8ce3ec938d9c97" prot="private" virt="virtual"><scope>hal::stm32f1::output_pin</scope><name>driver_level</name></member>
+      <member refid="classhal_1_1stm32f1_1_1output__pin_1a8254618fa6b6783377b3fd78ce13b1a7" prot="private" virt="virtual"><scope>hal::stm32f1::output_pin</scope><name>driver_level</name></member>
+      <member refid="classhal_1_1stm32f1_1_1output__pin_1ab26ce7b67574f9bf09c6b8ea202784f9" prot="public" virt="non-virtual"><scope>hal::stm32f1::output_pin</scope><name>get</name></member>
+      <member refid="classhal_1_1output__pin_1ab18862459d8f3ecadea439862932ba41" prot="public" virt="non-virtual"><scope>hal::stm32f1::output_pin</scope><name>level</name></member>
+      <member refid="classhal_1_1output__pin_1ab14df7eb1dd1ad0393a541e002506242" prot="public" virt="non-virtual"><scope>hal::stm32f1::output_pin</scope><name>level</name></member>
+      <member refid="classhal_1_1stm32f1_1_1output__pin_1a2b84050c8231a6e67044334645fe4c9b" prot="private" virt="non-virtual"><scope>hal::stm32f1::output_pin</scope><name>m_pin</name></member>
+      <member refid="classhal_1_1stm32f1_1_1output__pin_1a3aa79130de09325d924fdbb323a09448" prot="private" virt="non-virtual"><scope>hal::stm32f1::output_pin</scope><name>m_port</name></member>
+      <member refid="classhal_1_1stm32f1_1_1output__pin_1a48b25e8a2f01fecef1c894c3b6f71d0a" prot="private" virt="non-virtual"><scope>hal::stm32f1::output_pin</scope><name>output_pin</name></member>
+      <member refid="classhal_1_1output__pin_1ab45ad02491e1cef38093d5605a4a37c8" prot="public" virt="virtual"><scope>hal::stm32f1::output_pin</scope><name>~output_pin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1mock_1_1servo" kind="struct" language="C++" prot="public">
+    <compoundname>hal::mock::servo</compoundname>
+    <basecompoundref refid="classhal_1_1servo" prot="public" virt="non-virtual">hal::servo</basecompoundref>
+    <includes refid="libhal-mock_2servo_8hpp" local="no">servo.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1mock_1_1servo_1a10fed4cc519685da950c8d439cc20178" prot="public" static="no" mutable="no">
+        <type><ref refid="classhal_1_1spy__handler" kindref="compound">spy_handler</ref>&lt; float &gt;</type>
+        <definition>spy_handler&lt;float&gt; hal::mock::servo::spy_position</definition>
+        <argsstring></argsstring>
+        <name>spy_position</name>
+        <briefdescription>
+<para>Spy handler for <ref refid="classhal_1_1servo_1a3d66f0fb413e530eaa08853766874090" kindref="member">hal::servo::position()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/servo.hpp" line="38" column="15" bodyfile="libraries/include/libhal-mock/servo.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1servo_1a70193593d8f691312fa80411980e752b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::mock::servo::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset spy information for <ref refid="classhal_1_1servo_1a3d66f0fb413e530eaa08853766874090" kindref="member">position()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/servo.hpp" line="32" column="8" bodyfile="libraries/include/libhal-mock/servo.hpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structhal_1_1mock_1_1servo_1acbf699c907edee802fa4f3a072f74952" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>result&lt; <ref refid="structhal_1_1servo_1_1position__t" kindref="compound">position_t</ref> &gt;</type>
+        <definition>result&lt;position_t&gt; hal::mock::servo::driver_position</definition>
+        <argsstring>(float p_position) override</argsstring>
+        <name>driver_position</name>
+        <reimplements refid="classhal_1_1servo_1a9d581ffd1963fd9e4c7a1e7ab0391e8d">driver_position</reimplements>
+        <param>
+          <type>float</type>
+          <declname>p_position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-mock/servo.hpp" line="41" column="10" bodyfile="libraries/include/libhal-mock/servo.hpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Mock servo implementation for use in unit tests and simulations with a spy function for <ref refid="classhal_1_1servo_1a3d66f0fb413e530eaa08853766874090" kindref="member">position()</ref> </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>hal::servo</label>
+        <link refid="classhal_1_1servo"/>
+      </node>
+      <node id="1">
+        <label>hal::mock::servo</label>
+        <link refid="structhal_1_1mock_1_1servo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>hal::servo</label>
+        <link refid="classhal_1_1servo"/>
+      </node>
+      <node id="3">
+        <label>hal::spy_handler&lt; float &gt;</label>
+        <link refid="classhal_1_1spy__handler"/>
+      </node>
+      <node id="1">
+        <label>hal::mock::servo</label>
+        <link refid="structhal_1_1mock_1_1servo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>spy_position</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/include/libhal-mock/servo.hpp" line="26" column="1" bodyfile="libraries/include/libhal-mock/servo.hpp" bodystart="27" bodyend="46"/>
+    <listofallmembers>
+      <member refid="structhal_1_1mock_1_1servo_1acbf699c907edee802fa4f3a072f74952" prot="private" virt="virtual"><scope>hal::mock::servo</scope><name>driver_position</name></member>
+      <member refid="classhal_1_1servo_1a3d66f0fb413e530eaa08853766874090" prot="public" virt="non-virtual"><scope>hal::mock::servo</scope><name>position</name></member>
+      <member refid="structhal_1_1mock_1_1servo_1a70193593d8f691312fa80411980e752b" prot="public" virt="non-virtual"><scope>hal::mock::servo</scope><name>reset</name></member>
+      <member refid="structhal_1_1mock_1_1servo_1a10fed4cc519685da950c8d439cc20178" prot="public" virt="non-virtual"><scope>hal::mock::servo</scope><name>spy_position</name></member>
+      <member refid="classhal_1_1servo_1a51214959311c016496ee0edf58bff487" prot="public" virt="virtual"><scope>hal::mock::servo</scope><name>~servo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

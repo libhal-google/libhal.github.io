@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhal_1_1current__sensor_1_1read__t" kind="struct" language="C++" prot="public">
+    <compoundname>hal::current_sensor::read_t</compoundname>
+    <includes refid="current__sensor_8hpp" local="no">current_sensor.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhal_1_1current__sensor_1_1read__t_1a206086a3c848ff2c7f9314601b8e67c9" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacehal_1aa830f99bf69a06fcc452d82f0deb3fa3" kindref="member">hal::ampere</ref></type>
+        <definition>hal::ampere hal::current_sensor::read_t::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/current_sensor.hpp" line="34" column="17" bodyfile="libraries/include/libhal/current_sensor.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>current reading from the sensor </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/current_sensor.hpp" line="32" column="3" bodyfile="libraries/include/libhal/current_sensor.hpp" bodystart="33" bodyend="35"/>
+    <listofallmembers>
+      <member refid="structhal_1_1current__sensor_1_1read__t_1a206086a3c848ff2c7f9314601b8e67c9" prot="public" virt="non-virtual"><scope>hal::current_sensor::read_t</scope><name>current</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

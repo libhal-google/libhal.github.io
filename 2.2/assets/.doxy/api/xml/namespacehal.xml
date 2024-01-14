@@ -1,0 +1,4014 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacehal" kind="namespace" language="C++">
+    <compoundname>hal</compoundname>
+    <innerclass refid="classhal_1_1accelerometer" prot="public">hal::accelerometer</innerclass>
+    <innerclass refid="classhal_1_1adc" prot="public">hal::adc</innerclass>
+    <innerclass refid="classhal_1_1angular__velocity__sensor" prot="public">hal::angular_velocity_sensor</innerclass>
+    <innerclass refid="classhal_1_1can" prot="public">hal::can</innerclass>
+    <innerclass refid="classhal_1_1current__sensor" prot="public">hal::current_sensor</innerclass>
+    <innerclass refid="classhal_1_1dac" prot="public">hal::dac</innerclass>
+    <innerclass refid="classhal_1_1distance__sensor" prot="public">hal::distance_sensor</innerclass>
+    <innerclass refid="classhal_1_1gyroscope" prot="public">hal::gyroscope</innerclass>
+    <innerclass refid="classhal_1_1i2c" prot="public">hal::i2c</innerclass>
+    <innerclass refid="classhal_1_1input__pin" prot="public">hal::input_pin</innerclass>
+    <innerclass refid="classhal_1_1interrupt__pin" prot="public">hal::interrupt_pin</innerclass>
+    <innerclass refid="classhal_1_1magnetometer" prot="public">hal::magnetometer</innerclass>
+    <innerclass refid="classhal_1_1motor" prot="public">hal::motor</innerclass>
+    <innerclass refid="classhal_1_1output__pin" prot="public">hal::output_pin</innerclass>
+    <innerclass refid="classhal_1_1pwm" prot="public">hal::pwm</innerclass>
+    <innerclass refid="classhal_1_1rotation__sensor" prot="public">hal::rotation_sensor</innerclass>
+    <innerclass refid="classhal_1_1serial" prot="public">hal::serial</innerclass>
+    <innerclass refid="classhal_1_1servo" prot="public">hal::servo</innerclass>
+    <innerclass refid="classhal_1_1spi" prot="public">hal::spi</innerclass>
+    <innerclass refid="classhal_1_1steady__clock" prot="public">hal::steady_clock</innerclass>
+    <innerclass refid="classhal_1_1temperature__sensor" prot="public">hal::temperature_sensor</innerclass>
+    <innerclass refid="classhal_1_1timer" prot="public">hal::timer</innerclass>
+    <innerclass refid="classhal_1_1can__router" prot="public">hal::can_router</innerclass>
+    <innerclass refid="classhal_1_1spy__handler" prot="public">hal::spy_handler</innerclass>
+    <innerclass refid="structhal_1_1bit__mask" prot="public">hal::bit_mask</innerclass>
+    <innerclass refid="structhal_1_1byte__mask" prot="public">hal::byte_mask</innerclass>
+    <innerclass refid="structhal_1_1nibble__mask" prot="public">hal::nibble_mask</innerclass>
+    <innerclass refid="classhal_1_1bit__value" prot="public">hal::bit_value</innerclass>
+    <innerclass refid="classhal_1_1bit__modify" prot="public">hal::bit_modify</innerclass>
+    <innerclass refid="structhal_1_1bit__limits" prot="public">hal::bit_limits</innerclass>
+    <innerclass refid="classhal_1_1move__interceptor" prot="public">hal::move_interceptor</innerclass>
+    <innerclass refid="classhal_1_1overflow__counter" prot="public">hal::overflow_counter</innerclass>
+    <innerclass refid="classhal_1_1skip__past" prot="public">hal::skip_past</innerclass>
+    <innerclass refid="classhal_1_1read__into" prot="public">hal::read_into</innerclass>
+    <innerclass refid="classhal_1_1read__upto" prot="public">hal::read_upto</innerclass>
+    <innerclass refid="classhal_1_1read__uint32" prot="public">hal::read_uint32</innerclass>
+    <innerclass refid="classhal_1_1static__callable" prot="public">hal::static_callable</innerclass>
+    <innerclass refid="classhal_1_1static__callable_3_01owner__class_00_01reference__designator_00_01return__t_07args__t_8_8_8_01p__args_08_4" prot="public">hal::static_callable&lt; owner_class, reference_designator, return_t(args_t... p_args)&gt;</innerclass>
+    <innerclass refid="classhal_1_1static__list" prot="public">hal::static_list</innerclass>
+    <innerclass refid="classhal_1_1steady__clock__timeout" prot="public">hal::steady_clock_timeout</innerclass>
+    <innerclass refid="classhal_1_1stream__find" prot="public">hal::stream_find</innerclass>
+    <innerclass refid="classhal_1_1stream__fill" prot="public">hal::stream_fill</innerclass>
+    <innerclass refid="classhal_1_1stream__fill__upto" prot="public">hal::stream_fill_upto</innerclass>
+    <innerclass refid="classhal_1_1stream__parse" prot="public">hal::stream_parse</innerclass>
+    <innerclass refid="classhal_1_1stream__skip" prot="public">hal::stream_skip</innerclass>
+    <innernamespace refid="namespacehal_1_1cortex__m">hal::cortex_m</innernamespace>
+    <innernamespace refid="namespacehal_1_1error">hal::error</innernamespace>
+    <innernamespace refid="namespacehal_1_1esp8266">hal::esp8266</innernamespace>
+    <innernamespace refid="namespacehal_1_1literals">hal::literals</innernamespace>
+    <innernamespace refid="namespacehal_1_1lpc40">hal::lpc40</innernamespace>
+    <innernamespace refid="namespacehal_1_1micromod">hal::micromod</innernamespace>
+    <innernamespace refid="namespacehal_1_1mock">hal::mock</innernamespace>
+    <innernamespace refid="namespacehal_1_1mpl">hal::mpl</innernamespace>
+    <innernamespace refid="namespacehal_1_1rmd">hal::rmd</innernamespace>
+    <innernamespace refid="namespacehal_1_1soft">hal::soft</innernamespace>
+    <innernamespace refid="namespacehal_1_1stm32f1">hal::stm32f1</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>work_state</name>
+        <enumvalue id="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60af7222d1de86ad4d56764a2be21b792e2" prot="public">
+          <name>in_progress</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60a26934eb377001f66e37289a5c93fe284" prot="public">
+          <name>failed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60aa5d7ceb2c59b8cee46c2953fec9abc19" prot="public">
+          <name>finished</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Represents the state of a coroutine or resumable callable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/timeout.hpp" line="31" column="1" bodyfile="libraries/include/libhal/timeout.hpp" bodystart="32" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacehal_1af094ceea0d10800e8281b1014d7b8a1a" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>pin_resistor</name>
+        <enumvalue id="namespacehal_1af094ceea0d10800e8281b1014d7b8a1aa334c4a4c42fdb79d7ebc3e73b517e6f8" prot="public">
+          <name>none</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No pull up. This will cause the pin to float. This may be desirable if the pin has an external resistor attached or if the signal is sensitive to external devices like resistors. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1af094ceea0d10800e8281b1014d7b8a1aa6bd95a5bd1a571a29b57aa0dfda9d77b" prot="public">
+          <name>pull_down</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Pull the pin down to devices GND. This will ensure that the voltage read by the pin when there is no signal on the pin is LOW (or false). </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1af094ceea0d10800e8281b1014d7b8a1aa5dd40e1f7d5c287d1df85dac013c1c38" prot="public">
+          <name>pull_up</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>See pull down explanation, but in this case the pin is pulled up to VCC, also called VDD on some systems. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Set of possible pin mode resistor settings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>See each enumeration to get more details about when and how these should be used. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="71" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="72" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacehal_1a4bc0e9cc2796f6676976c95bc0b5eaa4" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>i2c_operation</name>
+        <enumvalue id="namespacehal_1a4bc0e9cc2796f6676976c95bc0b5eaa4aefb2a684e4afb7d55e6147fbe5a332ee" prot="public">
+          <name>write</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Denotes an <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> write operation. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacehal_1a4bc0e9cc2796f6676976c95bc0b5eaa4aecae13117d6f0584c25a9da6c8f8415e" prot="public">
+          <name>read</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Denotes an <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> read operation. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Set of I2C transaction operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="272" column="1" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="273" bodyend="278"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacehal_1ab28c2c867253a518207537d21fdf0e5b" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>T...</type>
+            <declname>value</declname>
+            <defname>value</defname>
+          </param>
+        </templateparamlist>
+        <type>boost::leaf::match&lt; T, value... &gt;</type>
+        <definition>using hal::match = typedef boost::leaf::match&lt;T, value...&gt;</definition>
+        <argsstring></argsstring>
+        <name>match</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/error.hpp" line="26" column="1" bodyfile="libraries/include/libhal/error.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a22b1708df761b2dc40dd4afa2ac0c401" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>boost::leaf::result&lt; T &gt;</type>
+        <definition>using hal::result = typedef boost::leaf::result&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/error.hpp" line="28" column="1" bodyfile="libraries/include/libhal/error.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a1607e3547737e35235f946a9c67b61cf" prot="public" static="no">
+        <type>result&lt; void &gt;</type>
+        <definition>using hal::status = typedef result&lt;void&gt;</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/error.hpp" line="29" column="1" bodyfile="libraries/include/libhal/error.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a74923542b553a76a3346c4b570868e9a" prot="public" static="no">
+        <type>void(void)</type>
+        <definition>using hal::error_handler = typedef void(void)</definition>
+        <argsstring></argsstring>
+        <name>error_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/error.hpp" line="30" column="1" bodyfile="libraries/include/libhal/error.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a5078c7097c3049684fa72d7a35538e52" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>tl::function_ref&lt; F &gt;</type>
+        <definition>using hal::function_ref = typedef tl::function_ref&lt;F&gt;</definition>
+        <argsstring></argsstring>
+        <name>function_ref</name>
+        <briefdescription>
+<para>Definition of a non-owning callable object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this for passing a callable object to a function that the function does not need to store in anyway. Best used for timeouts where a function simply needs the callable during the runtime of the function and when the function is over, the callable is no longer needed.</para>
+<para>This function is light weight in comparison to std::function, which is allocating, or inplace_function.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>F</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- function type or call signature </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/functional.hpp" line="37" column="1" bodyfile="libraries/include/libhal/functional.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1ace9d2014f0564ffa09b9be7f7bbb5a48" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>Capacity</declname>
+            <defname>Capacity</defname>
+          </param>
+        </templateparamlist>
+        <type>stdext::inplace_function&lt; F, Capacity &gt;</type>
+        <definition>using hal::inplace_function = typedef stdext::inplace_function&lt;F, Capacity&gt;</definition>
+        <argsstring></argsstring>
+        <name>inplace_function</name>
+        <briefdescription>
+<para>Definition of a owning callable object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this instead of function_ref when a callable object needs to be stored.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>F</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- function type or call signature </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- storage capacity of the function in bytes. If a callable object has a size greater than the capacity, then attempting to create an inplace function with it will result in a compiler error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/functional.hpp" line="50" column="1" bodyfile="libraries/include/libhal/functional.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a6051b44bfb2759cbcdba16019f3f1550" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacehal_1ace9d2014f0564ffa09b9be7f7bbb5a48" kindref="member">inplace_function</ref>&lt; F, sizeof(std::intptr_t) *2 &gt;</type>
+        <definition>using hal::callback = typedef inplace_function&lt;F, sizeof(std::intptr_t) * 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <briefdescription>
+<para>Definition of a standard libhal owning callback object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an inplace_function with its capacity set to two pointers. Callable objects must fit within the size of two integers to be able to construct this polymorphic callable object.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>F</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- function type or call signature </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/functional.hpp" line="62" column="1" bodyfile="libraries/include/libhal/functional.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a8ca200d14bc94cb64c41994e2abb2401" prot="public" static="no">
+        <type>status(void)</type>
+        <definition>using hal::timeout_function = typedef status(void)</definition>
+        <argsstring></argsstring>
+        <name>timeout_function</name>
+        <briefdescription>
+<para>Timeout is a callable object or function that signals to a procedure that the procedure has exceeded its time allotment and should return control to the calling function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>hal::timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- when the timeout condition has been met. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status - sets error flag set when timeout condition has been met, otherwise returns success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/timeout.hpp" line="51" column="1" bodyfile="libraries/include/libhal/timeout.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a0c4728afc815e4ff09495eb35f708f6c" prot="public" static="no">
+        <type>result&lt; <ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref> &gt;()</type>
+        <definition>using hal::work_function = typedef result&lt;work_state&gt;()</definition>
+        <argsstring></argsstring>
+        <name>work_function</name>
+        <briefdescription>
+<para>A non-blocking callable that performs work with each call. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Each call to a work_function will perform a set of work. The worker will return a work_state to indicate its current state. Once the worker reaches a terminal state, it MUST perform no additional work and return the terminal state. For example, if a work function failed, it must always return failure and not interact with hardware or other software from that point on. Same will occur for the &quot;finished&quot; state.</para>
+<para>This function can be repeatedly tried until it has reached a terminal state with the <ref refid="namespacehal_1af9f92bcba9f4804b93e6674974c52ca5" kindref="member">try_until()</ref> function.</para>
+<para><simplesect kind="return"><para>result&lt;work_state&gt; - sets error flag set when an error occurs, otherwise returns work_state enum. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/timeout.hpp" line="72" column="1" bodyfile="libraries/include/libhal/timeout.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a858b08a6e4e3eb5752d8e0daaad5ed00" prot="public" static="no">
+        <type>std::chrono::nanoseconds</type>
+        <definition>using hal::time_duration = typedef std::chrono::nanoseconds</definition>
+        <argsstring></argsstring>
+        <name>time_duration</name>
+        <briefdescription>
+<para>The standard time durations in libhal std::chrono::nanoseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="29" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1aa21f8ca97410869aabb284a575b2021d" prot="public" static="no">
+        <type>std::uint8_t</type>
+        <definition>using hal::byte = typedef std::uint8_t</definition>
+        <argsstring></argsstring>
+        <name>byte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Standard type for bytes in libhal. <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> has a number of annoyances that results in more verbose code without much benefit and thus <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> was created. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="34" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a54dc271deb8f266e52926836c0582598" prot="public" static="no">
+        <type>float</type>
+        <definition>using hal::hertz = typedef float</definition>
+        <argsstring></argsstring>
+        <name>hertz</name>
+        <briefdescription>
+<para>Type for frequency represented in hertz. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="37" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1abc3d1451352ebbab2ab26f3dcbc51ed9" prot="public" static="no">
+        <type>float</type>
+        <definition>using hal::g_force = typedef float</definition>
+        <argsstring></argsstring>
+        <name>g_force</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type for acceleration represented in the force applied by gravity at sea level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="41" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1aa830f99bf69a06fcc452d82f0deb3fa3" prot="public" static="no">
+        <type>float</type>
+        <definition>using hal::ampere = typedef float</definition>
+        <argsstring></argsstring>
+        <name>ampere</name>
+        <briefdescription>
+<para>Type for current represented in amps. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="44" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a3c19435046e74281a514965c8ff93b0d" prot="public" static="no">
+        <type>float</type>
+        <definition>using hal::volts = typedef float</definition>
+        <argsstring></argsstring>
+        <name>volts</name>
+        <briefdescription>
+<para>Type for voltage represented in volts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="47" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a8ee6f825b6e7475277274772d858c816" prot="public" static="no">
+        <type>float</type>
+        <definition>using hal::celsius = typedef float</definition>
+        <argsstring></argsstring>
+        <name>celsius</name>
+        <briefdescription>
+<para>Type for temperature represented in celsius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="50" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a115c0adadc69503586eff94ce028cd87" prot="public" static="no">
+        <type>float</type>
+        <definition>using hal::rpm = typedef float</definition>
+        <argsstring></argsstring>
+        <name>rpm</name>
+        <briefdescription>
+<para>Type for rotational velocity represented in RPMs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="53" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a309a799c0b8da9cd99fb5fad7c29208c" prot="public" static="no">
+        <type>float</type>
+        <definition>using hal::meters = typedef float</definition>
+        <argsstring></argsstring>
+        <name>meters</name>
+        <briefdescription>
+<para>Type for length represented in meters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="56" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a69b7f93f81eb80e25fbaefa924af5748" prot="public" static="no">
+        <type>float</type>
+        <definition>using hal::degrees = typedef float</definition>
+        <argsstring></argsstring>
+        <name>degrees</name>
+        <briefdescription>
+<para>Type for angle represented in degrees. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="59" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacehal_1a3798d176bd776585ba459d9851fe3e25" prot="public" static="no">
+        <type>float</type>
+        <definition>using hal::gauss = typedef float</definition>
+        <argsstring></argsstring>
+        <name>gauss</name>
+        <briefdescription>
+<para>Type for magnetic field represented in gauss. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/units.hpp" line="62" column="1" bodyfile="libraries/include/libhal/units.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacehal_1a8ce2c1548b0603e0b113c1ae91db3119" prot="public" static="no" mutable="no">
+        <type>error_handler *</type>
+        <definition>error_handler* hal::on_error_callback</definition>
+        <argsstring></argsstring>
+        <name>on_error_callback</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/error.hpp" line="32" column="22" bodyfile="libraries/include/libhal/error.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehal_1a4cf09285a63cbcd87c2a0cae2042dd3f" prot="public" static="no" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>concept</type>
+        <definition>concept hal::timeout</definition>
+        <argsstring></argsstring>
+        <name>timeout</name>
+        <initializer>= std::convertible_to&lt;T, <ref refid="namespacehal_1a5078c7097c3049684fa72d7a35538e52" kindref="member">hal::function_ref</ref>&lt;<ref refid="namespacehal_1a8ca200d14bc94cb64c41994e2abb2401" kindref="member">timeout_function</ref>&gt;&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/timeout.hpp" line="54" column="9" bodyfile="libraries/include/libhal/timeout.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehal_1ae73fdb4d2f5b98958b2033db2ca14cca" prot="public" static="no" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>concept</type>
+        <definition>concept hal::worker</definition>
+        <argsstring></argsstring>
+        <name>worker</name>
+        <initializer>= std::convertible_to&lt;T, <ref refid="namespacehal_1a5078c7097c3049684fa72d7a35538e52" kindref="member">hal::function_ref</ref>&lt;<ref refid="namespacehal_1a0c4728afc815e4ff09495eb35f708f6c" kindref="member">work_function</ref>&gt;&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/timeout.hpp" line="75" column="9" bodyfile="libraries/include/libhal/timeout.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehal_1a4c328d772ecb9df3428c2db7d3af7d64" prot="public" static="no" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>concept</type>
+        <definition>concept hal::convertible_to_bytes</definition>
+        <argsstring></argsstring>
+        <name>convertible_to_bytes</name>
+        <initializer>= requires(T a) {
+                                 *a.data();
+                                 a.size();
+                               }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/as_bytes.hpp" line="41" column="9" bodyfile="libraries/include/libhal-util/as_bytes.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehal_1acebe6f78fdced7a5c5f23ec71169f682" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>ByteIndex</declname>
+            <defname>ByteIndex</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr <ref refid="structhal_1_1bit__mask" kindref="compound">hal::bit_mask</ref></type>
+        <definition>constexpr hal::bit_mask hal::byte_m</definition>
+        <argsstring></argsstring>
+        <name>byte_m</name>
+        <initializer>= <ref refid="structhal_1_1byte__mask" kindref="compound">byte_mask</ref>&lt;ByteIndex&gt;::<ref refid="namespacehal_1a611c8ae4842fd8659993a6cc1f2e0829" kindref="member">value</ref></initializer>
+        <briefdescription>
+<para>Shorthand for using <ref refid="structhal_1_1byte__mask_1aaa959316aac9d91674383200791e9264" kindref="member">hal::byte_mask&lt;N&gt;::value</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>ByteIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the byte position to make a mask for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="205" column="25" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehal_1a847bdf02a520d3f7f4a85a635b839d96" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>NibbleIndex</declname>
+            <defname>NibbleIndex</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr <ref refid="structhal_1_1bit__mask" kindref="compound">hal::bit_mask</ref></type>
+        <definition>constexpr hal::bit_mask hal::nibble_m</definition>
+        <argsstring></argsstring>
+        <name>nibble_m</name>
+        <initializer>= <ref refid="structhal_1_1nibble__mask" kindref="compound">nibble_mask</ref>&lt;NibbleIndex&gt;::<ref refid="namespacehal_1a611c8ae4842fd8659993a6cc1f2e0829" kindref="member">value</ref></initializer>
+        <briefdescription>
+<para>Shorthand for using hal::nibble_mask&lt;N&gt;::value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>NibbleIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the nibble position to make a mask for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="224" column="25" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehal_1a67d1e0c3180836f72ac86b9f9c81e04b" prot="public" static="no" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>concept</type>
+        <definition>concept hal::enumeration</definition>
+        <argsstring></argsstring>
+        <name>enumeration</name>
+        <initializer>= std::is_enum_v&lt;T&gt;</initializer>
+        <briefdescription>
+<para>concept for enumeration types </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- enum type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/enum.hpp" line="28" column="9" bodyfile="libraries/include/libhal-util/enum.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacehal_1a756a684aafdac0cc89fcd94367c85193" prot="public" static="no" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>concept</type>
+        <definition>concept hal::has_work_state</definition>
+        <argsstring></argsstring>
+        <name>has_work_state</name>
+        <initializer>= requires(T a) {
+                           {
+                             a.state()
+                             } -&gt; std::same_as&lt;<ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref>&gt;;
+                         }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="63" column="9" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacehal_1a557593a710d85719fff67b743268293a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::success</definition>
+        <argsstring>()</argsstring>
+        <name>success</name>
+        <briefdescription>
+<para>a readability function for returning successful results; </para>
+        </briefdescription>
+        <detaileddescription>
+<para>For functions that return <computeroutput>status</computeroutput>, rather than returning <computeroutput>{}</computeroutput> to default initialize the status object as &quot;success&quot;, use this function to make it more clear to the reader.</para>
+<para>EXAMPLE: <verbatim>hal::status some_function() {
+   return hal::success();
+}
+</verbatim> <simplesect kind="return"><para>status - that is always successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/error.hpp" line="49" column="15" bodyfile="libraries/include/libhal/error.hpp" bodystart="49" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a9a7de389180e282529be31044c0e57ae" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class TryBlock</type>
+          </param>
+          <param>
+            <type>class...</type>
+            <declname>H</declname>
+            <defname>H</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::attempt</definition>
+        <argsstring>(TryBlock &amp;&amp;p_try_block, H &amp;&amp;... p_handlers)</argsstring>
+        <name>attempt</name>
+        <param>
+          <type>TryBlock &amp;&amp;</type>
+          <declname>p_try_block</declname>
+        </param>
+        <param>
+          <type>H &amp;&amp;...</type>
+          <declname>p_handlers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/error.hpp" line="58" column="17" bodyfile="libraries/include/libhal/error.hpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a2ddc6d68616e60836f36a50b6a78e036" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class TryBlock</type>
+          </param>
+          <param>
+            <type>class...</type>
+            <declname>H</declname>
+            <defname>H</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::attempt_all</definition>
+        <argsstring>(TryBlock &amp;&amp;p_try_block, H &amp;&amp;... p_handlers)</argsstring>
+        <name>attempt_all</name>
+        <param>
+          <type>TryBlock &amp;&amp;</type>
+          <declname>p_try_block</declname>
+        </param>
+        <param>
+          <type>H &amp;&amp;...</type>
+          <declname>p_handlers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/error.hpp" line="64" column="17" bodyfile="libraries/include/libhal/error.hpp" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1aa400f17262e835e279d9da74c5503e78" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>Item</declname>
+            <defname>Item</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hal::new_error</definition>
+        <argsstring>(Item &amp;&amp;... p_item)</argsstring>
+        <name>new_error</name>
+        <param>
+          <type>Item &amp;&amp;...</type>
+          <declname>p_item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/error.hpp" line="71" column="14" bodyfile="libraries/include/libhal/error.hpp" bodystart="71" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a92f5475b2ae1adbfc5f23e97bf5dd47c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::halt</definition>
+        <argsstring>()</argsstring>
+        <name>halt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/error.hpp" line="80" column="14" bodyfile="libraries/include/libhal/error.hpp" bodystart="80" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1af5c62735e63bf161eac50062128e1550" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::delay</definition>
+        <argsstring>(timeout auto p_timeout)</argsstring>
+        <name>delay</name>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+<para>Delay the execution of the application or thread for a duration of time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- timeout type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- callable timeout object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/timeout.hpp" line="85" column="16" bodyfile="libraries/include/libhal/timeout.hpp" bodystart="85" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a17e66fb842cd0ba8b46795b5e905741a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto hal::never_timeout</definition>
+        <argsstring>()</argsstring>
+        <name>never_timeout</name>
+        <briefdescription>
+<para>Create a timeout that will never time out. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>auto - callable that will never return timeout </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal/timeout.hpp" line="120" column="14" bodyfile="libraries/include/libhal/timeout.hpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a66893267c112469888a5c2a2d39267d2" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+        <definition>constexpr std::span&lt;hal::byte&gt; hal::as_writable_bytes</definition>
+        <argsstring>(T *p_address, size_t p_number_of_elements)</argsstring>
+        <name>as_writable_bytes</name>
+        <param>
+          <type>T *</type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>p_number_of_elements</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/as_bytes.hpp" line="23" column="21" bodyfile="libraries/include/libhal-util/as_bytes.hpp" bodystart="23" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a06e787602192181b1c40a1d6cc767dec" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+        <definition>constexpr std::span&lt;const hal::byte&gt; hal::as_bytes</definition>
+        <argsstring>(const T *p_address, size_t p_number_of_elements)</argsstring>
+        <name>as_bytes</name>
+        <param>
+          <type>const T *</type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>p_number_of_elements</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/as_bytes.hpp" line="32" column="21" bodyfile="libraries/include/libhal-util/as_bytes.hpp" bodystart="32" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a0d9a6749d5c8ee278d4fd0bfe7daa353" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+        <definition>constexpr std::span&lt;hal::byte&gt; hal::as_writable_bytes</definition>
+        <argsstring>(convertible_to_bytes auto &amp;p_container)</argsstring>
+        <name>as_writable_bytes</name>
+        <param>
+          <type>convertible_to_bytes auto &amp;</type>
+          <declname>p_container</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/as_bytes.hpp" line="46" column="21" bodyfile="libraries/include/libhal-util/as_bytes.hpp" bodystart="46" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a6a0cf4f9a4baaa0a194afeaa0fea1c04" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+        <definition>constexpr std::span&lt;const hal::byte&gt; hal::as_bytes</definition>
+        <argsstring>(const convertible_to_bytes auto &amp;p_container)</argsstring>
+        <name>as_bytes</name>
+        <param>
+          <type>const convertible_to_bytes auto &amp;</type>
+          <declname>p_container</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/as_bytes.hpp" line="52" column="21" bodyfile="libraries/include/libhal-util/as_bytes.hpp" bodystart="52" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a292f8eb2d07e913ecae9d39127d154b7" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>bit_mask</type>
+            <declname>field</declname>
+            <defname>field</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::bit_extract</definition>
+        <argsstring>(std::unsigned_integral auto p_value)</argsstring>
+        <name>bit_extract</name>
+        <param>
+          <type>std::unsigned_integral auto</type>
+          <declname>p_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="227" column="16" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="227" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a4ae9d89ac830aa9a79e84d70ac113c0b" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::bit_extract</definition>
+        <argsstring>(bit_mask p_field, std::unsigned_integral auto p_value)</argsstring>
+        <name>bit_extract</name>
+        <param>
+          <type><ref refid="structhal_1_1bit__mask" kindref="compound">bit_mask</ref></type>
+          <declname>p_field</declname>
+        </param>
+        <param>
+          <type>std::unsigned_integral auto</type>
+          <declname>p_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit.hpp" line="238" column="16" bodyfile="libraries/include/libhal-util/bit.hpp" bodystart="238" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a16328979d3cb51b98f01114269dec32e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>BitWidth</declname>
+            <defname>BitWidth</defname>
+          </param>
+          <param>
+            <type>std::integral</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>consteval T</type>
+        <definition>consteval T hal::generate_field_of_ones</definition>
+        <argsstring>()</argsstring>
+        <name>generate_field_of_ones</name>
+        <briefdescription>
+<para>Generate a mask of 1s at compile time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BitWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of 1s in the mask </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>consteval uint32_t - mask with 1s at the LSB </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/bit_limits.hpp" line="30" column="14" bodyfile="libraries/include/libhal-util/bit_limits.hpp" bodystart="30" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a00ff3a7dad7046d38be371c5f7662756" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::operator==</definition>
+        <argsstring>(const can::settings &amp;p_lhs, const can::settings &amp;p_rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structhal_1_1can_1_1settings" kindref="compound">can::settings</ref> &amp;</type>
+          <declname>p_lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structhal_1_1can_1_1settings" kindref="compound">can::settings</ref> &amp;</type>
+          <declname>p_rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="25" column="17" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="25" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ad3e74ed8096df543b71cb5e24723ae1f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr std::uint16_t</type>
+        <definition>constexpr std::uint16_t hal::bit_width</definition>
+        <argsstring>(const can::settings &amp;p_settings)</argsstring>
+        <name>bit_width</name>
+        <param>
+          <type>const <ref refid="structhal_1_1can_1_1settings" kindref="compound">can::settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="35" column="26" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="35" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a9b15afcc0f9f9a3a92c03fd6dc44a332" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr std::optional&lt; std::uint32_t &gt;</type>
+        <definition>constexpr std::optional&lt;std::uint32_t&gt; hal::is_valid</definition>
+        <argsstring>(const can::settings &amp;p_settings, hertz p_operating_frequency)</argsstring>
+        <name>is_valid</name>
+        <param>
+          <type>const <ref refid="structhal_1_1can_1_1settings" kindref="compound">can::settings</ref> &amp;</type>
+          <declname>p_settings</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref></type>
+          <declname>p_operating_frequency</declname>
+        </param>
+        <briefdescription>
+<para>Validate configuration settings against an operating frequency. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The settings and frequency must follow the following rules:</para>
+<para><orderedlist>
+<listitem><para>propagation_delay, phase_segment1, phase_segment2 and synchronization_jump_width must be nonzero.</para>
+</listitem><listitem><para>synchronization_jump_width must be the lesser between phase_segment1 and phase_segment2.</para>
+</listitem><listitem><para>The total bit width must be equal to or greater than 8 Tq/bit; the sum of sync_segment, propagation_delay, phase_segment1 and phase_segment2.</para>
+</listitem><listitem><para>The CAN device&apos;s operating frequency must be at least 8 times the baud rate to give the minimum.</para>
+</listitem><listitem><para>The ratio between the CAN device&apos;s operating frequency and the bit width must be close enough to an integer to produce a usable baud rate prescaler.</para>
+</listitem></orderedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- settings object to check </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_operating_frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- CAN device operating frequency </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::optional&lt;std::uint32_t&gt; - baud rate prescaler </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="65" column="26" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="65" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a25a33f50c3b769d3a6b9bd8ad2082a6c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::operator==</definition>
+        <argsstring>(const can::message_t &amp;p_lhs, const can::message_t &amp;p_rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structhal_1_1can_1_1message__t" kindref="compound">can::message_t</ref> &amp;</type>
+          <declname>p_lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structhal_1_1can_1_1message__t" kindref="compound">can::message_t</ref> &amp;</type>
+          <declname>p_rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/can.hpp" line="110" column="17" bodyfile="libraries/include/libhal-util/can.hpp" bodystart="110" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a611c8ae4842fd8659993a6cc1f2e0829" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::value</definition>
+        <argsstring>(enumeration auto p_enum_value)</argsstring>
+        <name>value</name>
+        <param>
+          <type><ref refid="namespacehal_1a67d1e0c3180836f72ac86b9f9c81e04b" kindref="member">enumeration</ref> auto</type>
+          <declname>p_enum_value</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to convert an enum to its integral value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_enum_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the enumeration you want to convert into an integral value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr auto - return the integral value of the enum with the same type as the enumeration. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/enum.hpp" line="38" column="17" bodyfile="libraries/include/libhal-util/enum.hpp" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a6b10befbc8f24069079e1e4a0e016898" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::operator==</definition>
+        <argsstring>(const i2c::settings &amp;p_lhs, const i2c::settings &amp;p_rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structhal_1_1i2c_1_1settings" kindref="compound">i2c::settings</ref> &amp;</type>
+          <declname>p_lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structhal_1_1i2c_1_1settings" kindref="compound">i2c::settings</ref> &amp;</type>
+          <declname>p_rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="27" column="17" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a589504d8349443cb5a9ed2caa02dcbe1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1i2c_1_1transaction__t" kindref="compound">hal::i2c::transaction_t</ref> &gt;</type>
+        <definition>hal::result&lt;hal::i2c::transaction_t&gt; hal::write</definition>
+        <argsstring>(i2c &amp;p_i2c, hal::byte p_address, std::span&lt; const hal::byte &gt; p_data_out, timeout auto p_timeout)</argsstring>
+        <name>write</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+<para>write data to a target device on the <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> bus </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Shorthand for writing i2c.transfer(...) for write only operations</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer of bytes to write to the target device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- amount of time to execute the transaction </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="44" column="21" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="44" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ab564ab7dc8cf7d1e84824ec19de35156" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1i2c_1_1transaction__t" kindref="compound">hal::i2c::transaction_t</ref> &gt;</type>
+        <definition>hal::result&lt;hal::i2c::transaction_t&gt; hal::write</definition>
+        <argsstring>(i2c &amp;p_i2c, hal::byte p_address, std::span&lt; const hal::byte &gt; p_data_out)</argsstring>
+        <name>write</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <briefdescription>
+<para>write data to a target device on the <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> bus </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Shorthand for writing i2c.transfer(...) for write only operations, but never times out. Can be used for devices that never perform clock stretching.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer of bytes to write to the target device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="66" column="1" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a5164defc44fc09c44d77d1ff823998eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1i2c_1_1transaction__t" kindref="compound">hal::i2c::transaction_t</ref> &gt;</type>
+        <definition>hal::result&lt;hal::i2c::transaction_t&gt; hal::read</definition>
+        <argsstring>(i2c &amp;p_i2c, hal::byte p_address, std::span&lt; hal::byte &gt; p_data_in, timeout auto p_timeout)</argsstring>
+        <name>read</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+<para>read bytes from target device on <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> bus </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Shorthand for writing i2c.transfer(...) for read only operations</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to read bytes into from target device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- amount of time to execute the transaction </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="82" column="21" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="82" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ad5f7bceb8182234dbf4055e620a8f547" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1i2c_1_1transaction__t" kindref="compound">hal::i2c::transaction_t</ref> &gt;</type>
+        <definition>hal::result&lt;hal::i2c::transaction_t&gt; hal::read</definition>
+        <argsstring>(i2c &amp;p_i2c, hal::byte p_address, std::span&lt; hal::byte &gt; p_data_in)</argsstring>
+        <name>read</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <briefdescription>
+<para>read bytes from target device on <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> bus </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Shorthand for writing i2c.transfer(...) for read only operations, but never times out. Can be used for devices that never perform clock stretching.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to read bytes into from target device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="104" column="1" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1af5af1e6128fca7096a803c0696819a1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>BytesToRead</declname>
+            <defname>BytesToRead</defname>
+          </param>
+        </templateparamlist>
+        <type>result&lt; std::array&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref>, BytesToRead &gt; &gt;</type>
+        <definition>result&lt;std::array&lt;hal::byte, BytesToRead&gt; &gt; hal::read</definition>
+        <argsstring>(i2c &amp;p_i2c, hal::byte p_address, timeout auto p_timeout)</argsstring>
+        <name>read</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+<para>return array of read bytes from target device on <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> bus </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Eliminates the need to create a buffer and pass it into the read function.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BytesToRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- amount of time to execute the transaction </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; - array of bytes from target device or an error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="123" column="1" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="123" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a697316c49d4dd12eb54c4bcfe7ac2140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>BytesToRead</declname>
+            <defname>BytesToRead</defname>
+          </param>
+        </templateparamlist>
+        <type>result&lt; std::array&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref>, BytesToRead &gt; &gt;</type>
+        <definition>result&lt;std::array&lt;hal::byte, BytesToRead&gt; &gt; hal::read</definition>
+        <argsstring>(i2c &amp;p_i2c, hal::byte p_address)</argsstring>
+        <name>read</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <briefdescription>
+<para>return array of read bytes from target device on <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> bus </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Eliminates the need to create a buffer and pass it into the read function. This operation will never time out and should only be used with devices that never perform clock stretching.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BytesToRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; - array of bytes from target device or an error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="144" column="9" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="144" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a3120e8d9eff19d2010c7ffa47b739d59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1i2c_1_1transaction__t" kindref="compound">hal::i2c::transaction_t</ref> &gt;</type>
+        <definition>hal::result&lt;hal::i2c::transaction_t&gt; hal::write_then_read</definition>
+        <argsstring>(i2c &amp;p_i2c, hal::byte p_address, std::span&lt; const hal::byte &gt; p_data_out, std::span&lt; hal::byte &gt; p_data_in, timeout auto p_timeout=hal::never_timeout())</argsstring>
+        <name>write_then_read</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+          <defval><ref refid="namespacehal_1a17e66fb842cd0ba8b46795b5e905741a" kindref="member">hal::never_timeout</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>write and then read bytes from target device on <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> bus </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This API simply calls transaction. This API is here for consistency across the other other communication protocols such as SPI and serial.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer of bytes to write to the target device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to read bytes into from target device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- amount of time to execute the transaction</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="165" column="21" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="165" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1aa9b1ae268be78ad883381b1370b6f539" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1i2c_1_1transaction__t" kindref="compound">hal::i2c::transaction_t</ref> &gt;</type>
+        <definition>hal::result&lt;hal::i2c::transaction_t&gt; hal::write_then_read</definition>
+        <argsstring>(i2c &amp;p_i2c, hal::byte p_address, std::span&lt; const hal::byte &gt; p_data_out, std::span&lt; hal::byte &gt; p_data_in)</argsstring>
+        <name>write_then_read</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <briefdescription>
+<para>write and then read bytes from target device on <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> bus </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This API simply calls transaction. This API is here for consistency across the other other communication protocols such as SPI and serial.</para>
+<para>This operation will never time out and should only be used with devices that never perform clock stretching.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer of bytes to write to the target device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to read bytes into from target device</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="191" column="21" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="191" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a5f19caebd902ee9bdd7595d0dbb8ecc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>BytesToRead</declname>
+            <defname>BytesToRead</defname>
+          </param>
+        </templateparamlist>
+        <type>result&lt; std::array&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref>, BytesToRead &gt; &gt;</type>
+        <definition>result&lt;std::array&lt;hal::byte, BytesToRead&gt; &gt; hal::write_then_read</definition>
+        <argsstring>(i2c &amp;p_i2c, hal::byte p_address, std::span&lt; const hal::byte &gt; p_data_out, timeout auto p_timeout)</argsstring>
+        <name>write_then_read</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+<para>write and then return an array of read bytes from target device on <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> bus </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Eliminates the need to create a buffer and pass it into the read function.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BytesToRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of bytes to read after write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer of bytes to write to the target device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- amount of time to execute the transaction </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="215" column="9" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="215" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ab44292d5e087d50788d01c15b33a007c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>BytesToRead</declname>
+            <defname>BytesToRead</defname>
+          </param>
+        </templateparamlist>
+        <type>result&lt; std::array&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref>, BytesToRead &gt; &gt;</type>
+        <definition>result&lt;std::array&lt;hal::byte, BytesToRead&gt; &gt; hal::write_then_read</definition>
+        <argsstring>(i2c &amp;p_i2c, hal::byte p_address, std::span&lt; const hal::byte &gt; p_data_out)</argsstring>
+        <name>write_then_read</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <briefdescription>
+<para>write and then return an array of read bytes from target device on <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> bus </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Eliminates the need to create a buffer and pass it into the read function.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BytesToRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of bytes to read after write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer of bytes to write to the target device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="239" column="9" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="239" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ad889f2479fa05f2d5e6fcd69ceb05c09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>hal::result&lt; <ref refid="structhal_1_1i2c_1_1transaction__t" kindref="compound">hal::i2c::transaction_t</ref> &gt;</type>
+        <definition>hal::result&lt;hal::i2c::transaction_t&gt; hal::probe</definition>
+        <argsstring>(i2c &amp;p_i2c, hal::byte p_address)</argsstring>
+        <name>probe</name>
+        <param>
+          <type><ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> &amp;</type>
+          <declname>p_i2c</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <briefdescription>
+<para>probe the <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> bus to see if a device exists </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_i2c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target address to probe for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="255" column="21" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="255" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1abd1657e2d3d9561e9f9746837a075c1a" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+        <definition>hal::byte hal::to_8_bit_address</definition>
+        <argsstring>(hal::byte p_address, i2c_operation p_operation) noexcept</argsstring>
+        <name>to_8_bit_address</name>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_address</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1a4bc0e9cc2796f6676976c95bc0b5eaa4" kindref="member">i2c_operation</ref></type>
+          <declname>p_operation</declname>
+        </param>
+        <briefdescription>
+<para>Convert 7-bit <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> address to an 8-bit address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>7-bit <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>write or read operation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> - 8-bit <ref refid="classhal_1_1i2c" kindref="compound">i2c</ref> address </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/i2c.hpp" line="287" column="19" bodyfile="libraries/include/libhal-util/i2c.hpp" bodystart="287" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a0230a1d1b713966582eea00d3a83a279" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::operator==</definition>
+        <argsstring>(const input_pin::settings &amp;p_lhs, const input_pin::settings &amp;p_rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structhal_1_1input__pin_1_1settings" kindref="compound">input_pin::settings</ref> &amp;</type>
+          <declname>p_lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structhal_1_1input__pin_1_1settings" kindref="compound">input_pin::settings</ref> &amp;</type>
+          <declname>p_rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/input_pin.hpp" line="20" column="17" bodyfile="libraries/include/libhal-util/input_pin.hpp" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a1265c71d77eb6ec736eb523ad4515d07" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::operator==</definition>
+        <argsstring>(const interrupt_pin::settings &amp;p_lhs, const interrupt_pin::settings &amp;p_rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structhal_1_1interrupt__pin_1_1settings" kindref="compound">interrupt_pin::settings</ref> &amp;</type>
+          <declname>p_lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structhal_1_1interrupt__pin_1_1settings" kindref="compound">interrupt_pin::settings</ref> &amp;</type>
+          <declname>p_rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/interrupt_pin.hpp" line="20" column="17" bodyfile="libraries/include/libhal-util/interrupt_pin.hpp" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a5d5b1145c184160ac984b3594a8ff36d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr float</type>
+        <definition>constexpr float hal::map</definition>
+        <argsstring>(float p_target, std::pair&lt; float, float &gt; p_input_range, std::pair&lt; float, float &gt; p_output_range)</argsstring>
+        <name>map</name>
+        <param>
+          <type>float</type>
+          <declname>p_target</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; float, float &gt;</type>
+          <declname>p_input_range</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; float, float &gt;</type>
+          <declname>p_output_range</declname>
+        </param>
+        <briefdescription>
+<para>Map an target value [x] from an input range [a,b] to an output range [c,d]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Another term for this is an affine transformation which follows this equation: <verbatim>                  / d - c \
+   y = (x - a) * | --------| + c
+                  \ b - a /
+</verbatim> For example:</para>
+<para>let x = 5.0 let input_range = [0.0, 10.0] let output_range = [100.0, 200.0] The result will be 150.0</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- target value within p_input_range to be mapped to the output range. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_input_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the input range of p_target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_output_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the output range to map p_target to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr float - value mapped from input range to the output range. The output is clamped to the output range. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para><verbatim>           / d - c \
+</verbatim> y = (x - a) * | -----<mdash/>| + c \ b - a /</para>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/map.hpp" line="48" column="18" bodyfile="libraries/include/libhal-util/map.hpp" bodystart="48" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a2d49a3b63f73d12c16d42c6c752eeb62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>result&lt; T &gt;</type>
+        <definition>result&lt;T&gt; hal::multiply</definition>
+        <argsstring>(T p_lhs, T p_rhs)</argsstring>
+        <name>multiply</name>
+        <param>
+          <type>T</type>
+          <declname>p_lhs</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>p_rhs</declname>
+        </param>
+        <briefdescription>
+<para>Perform multiply operation and return an error code <computeroutput>std::errc::result_out_of_range</computeroutput> if the two values when multiplied would overflow the containing value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- integer arithmetic type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_lhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- left hand side integer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- right hand side integer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;T&gt; - either the resultant or an error <computeroutput>std::errc::result_out_of_range</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/math.hpp" line="40" column="9" bodyfile="libraries/include/libhal-util/math.hpp" bodystart="40" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ae3ee2fdd5019900474caa98ee00a220c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr T</type>
+        <definition>constexpr T hal::absolute_value</definition>
+        <argsstring>(T p_value)</argsstring>
+        <name>absolute_value</name>
+        <param>
+          <type>T</type>
+          <declname>p_value</declname>
+        </param>
+        <briefdescription>
+<para>Generic absolute value function that works for integer types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Preferred this over the C API for rounding numbers such as abs(), labs() and llabs(). This function relieves the need in template code to check the type of the integer and select the correct function to call.</para>
+<para>NOTE: If p_value is minimum negative number of type T then the resulting return value will be the maximum positive number represented by T. For example, INT32_MIN is 2147483648 where as INT32_MAX is 2147483647. The absolute value of INT32_MIN is 1 greater than INT32_MAX. To prevent overflow, passing INT32_MIN will simply return back INT32_MAX.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- integral type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- integer value to be made positive </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr auto - positive representation of the integer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/math.hpp" line="73" column="14" bodyfile="libraries/include/libhal-util/math.hpp" bodystart="73" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a6f8a02e9f6e95251e5e3cf4e4c4e7270" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr T</type>
+        <definition>constexpr T hal::rounding_division</definition>
+        <argsstring>(T p_numerator, T p_denominator)</argsstring>
+        <name>rounding_division</name>
+        <param>
+          <type>T</type>
+          <declname>p_numerator</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>p_denominator</declname>
+        </param>
+        <briefdescription>
+<para>Perform integer division and round the value up if the next decimal place is greater than or equal to 0.5. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- integral type of the two operands </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_numerator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the value to be divided </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_denominator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the value to divide the numerator against </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr T - rounded quotient between numerator and denominator. Returns 0 if the denominator is greater than the numerator. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/math.hpp" line="99" column="14" bodyfile="libraries/include/libhal-util/math.hpp" bodystart="99" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a5c230c053db7b32b7679049366e1017a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr T</type>
+        <definition>constexpr T hal::distance</definition>
+        <argsstring>(T p_left, T p_right)</argsstring>
+        <name>distance</name>
+        <param>
+          <type>T</type>
+          <declname>p_left</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>p_right</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the distance between two values (L1 Norm or Manhattan distance), the absolute value of their difference. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- integral type of the two values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the first point of the distance calculation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the second point of the distance calculation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr T - absolute value of the difference between the two points. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/math.hpp" line="137" column="14" bodyfile="libraries/include/libhal-util/math.hpp" bodystart="137" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a49e7e82740fe55bd0e8dbe5307ba5e7c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::integral</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr std::make_unsigned_t&lt; T &gt;</type>
+        <definition>constexpr std::make_unsigned_t&lt;T&gt; hal::distance</definition>
+        <argsstring>(T p_left, T p_right)</argsstring>
+        <name>distance</name>
+        <param>
+          <type>T</type>
+          <declname>p_left</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>p_right</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the distance between two values (L1 Norm or Manhattan distance), the absolute value of their difference. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>NOTE: Values cannot exceed int32_t.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- integral type of the two values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the first point of the distance calculation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the second point of the distance calculation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr T - absolute value of the difference between the two points. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/math.hpp" line="159" column="33" bodyfile="libraries/include/libhal-util/math.hpp" bodystart="159" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a672dc7a38be09e228336cb3e7db942d9" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr static bool</type>
+        <definition>constexpr static bool hal::equals</definition>
+        <argsstring>(std::floating_point auto p_value1, std::floating_point auto p_value2, float p_epsilon=1e-9f)</argsstring>
+        <name>equals</name>
+        <param>
+          <type>std::floating_point auto</type>
+          <declname>p_value1</declname>
+        </param>
+        <param>
+          <type>std::floating_point auto</type>
+          <declname>p_value2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>p_epsilon</declname>
+          <defval>1e-9f</defval>
+        </param>
+        <briefdescription>
+<para>Determines if two values are equal within a relative error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_value1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- First value to compare. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_value2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Second value to compare. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_epsilon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Error margin that the difference is compared to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true - difference is less than epsilon </para>
+</simplesect>
+<simplesect kind="return"><para>false - difference is more than epsilon </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/math.hpp" line="193" column="23" bodyfile="libraries/include/libhal-util/math.hpp" bodystart="193" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a0df047bbbb40ec84f8daacbdbe7ba86d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::operator==</definition>
+        <argsstring>(const output_pin::settings &amp;p_lhs, const output_pin::settings &amp;p_rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structhal_1_1output__pin_1_1settings" kindref="compound">output_pin::settings</ref> &amp;</type>
+          <declname>p_lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structhal_1_1output__pin_1_1settings" kindref="compound">output_pin::settings</ref> &amp;</type>
+          <declname>p_rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/output_pin.hpp" line="20" column="17" bodyfile="libraries/include/libhal-util/output_pin.hpp" bodystart="20" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ae6befae6d30bba3d9f8758cb069b65df" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::operator==</definition>
+        <argsstring>(const serial::settings &amp;p_lhs, const serial::settings &amp;p_rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structhal_1_1serial_1_1settings" kindref="compound">serial::settings</ref> &amp;</type>
+          <declname>p_lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structhal_1_1serial_1_1settings" kindref="compound">serial::settings</ref> &amp;</type>
+          <declname>p_rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial.hpp" line="32" column="17" bodyfile="libraries/include/libhal-util/serial.hpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ab8a558a4de3cc35cbb1ce1d36b87fb08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1serial_1_1write__t" kindref="compound">serial::write_t</ref> &gt;</type>
+        <definition>result&lt;serial::write_t&gt; hal::write_partial</definition>
+        <argsstring>(serial &amp;p_serial, std::span&lt; const hal::byte &gt; p_data_out)</argsstring>
+        <name>write_partial</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <briefdescription>
+<para>Write bytes to a serial port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the serial port that will be written to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the data to be written out the port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;serial::write_t&gt; - get the results of the uart port write operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial.hpp" line="46" column="16" bodyfile="libraries/include/libhal-util/serial.hpp" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a5adac281f53817b947fe1081f0acdba2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::write</definition>
+        <argsstring>(serial &amp;p_serial, std::span&lt; const hal::byte &gt; p_data_out)</argsstring>
+        <name>write</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <briefdescription>
+<para>Write bytes to a serial port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the serial port that will be written to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the data to be written out the port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial.hpp" line="60" column="16" bodyfile="libraries/include/libhal-util/serial.hpp" bodystart="60" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a75449d82173a1cef5d93b2dc98117c01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>status</type>
+        <definition>status hal::write</definition>
+        <argsstring>(serial &amp;p_serial, std::string_view p_data_out)</argsstring>
+        <name>write</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>p_data_out</declname>
+        </param>
+        <briefdescription>
+<para>Write std::span of const char to a serial port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the serial port that will be written to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- chars to be written out the port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial.hpp" line="80" column="16" bodyfile="libraries/include/libhal-util/serial.hpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a3c7c3cc287602089caf9b6d0a7c7fa09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt; &gt;</type>
+        <definition>result&lt;std::span&lt;hal::byte&gt; &gt; hal::read</definition>
+        <argsstring>(serial &amp;p_serial, std::span&lt; hal::byte &gt; p_data_in, timeout auto p_timeout)</argsstring>
+        <name>read</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+<para>Read bytes from a serial port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the serial port that will be read from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to have bytes from the serial port read into </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- timeout callable that indicates when to bail out of the read operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;std::span&lt;hal::byte&gt;&gt; - return an error if a call to <ref refid="classhal_1_1serial_1a69eaa352ef24788b38d36648a5c3f99f" kindref="member">serial::read</ref> or <ref refid="namespacehal_1af5c62735e63bf161eac50062128e1550" kindref="member">delay()</ref> returns an error from the serial port or a span with the number of bytes read and a pointer to where the read bytes are. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial.hpp" line="98" column="1" bodyfile="libraries/include/libhal-util/serial.hpp" bodystart="98" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1aeff335b1772500b809022e6b9d3394d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>BytesToRead</declname>
+            <defname>BytesToRead</defname>
+          </param>
+        </templateparamlist>
+        <type>result&lt; std::array&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref>, BytesToRead &gt; &gt;</type>
+        <definition>result&lt;std::array&lt;hal::byte, BytesToRead&gt; &gt; hal::read</definition>
+        <argsstring>(serial &amp;p_serial, timeout auto p_timeout)</argsstring>
+        <name>read</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+<para>Read bytes from a serial port and return an array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This call eliminates the boiler plate of creating an array and then passing that to the read function.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BytesToRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the number of bytes to be read from the serial port. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the serial port to be read from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- timeout callable that indicates when to bail out of the read operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; - return an error if a call to <ref refid="classhal_1_1serial_1a69eaa352ef24788b38d36648a5c3f99f" kindref="member">serial::read</ref> or <ref refid="namespacehal_1af5c62735e63bf161eac50062128e1550" kindref="member">delay()</ref> returns an error from the serial port or a span with the number of bytes read and a pointer to where the read bytes are. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial.hpp" line="127" column="9" bodyfile="libraries/include/libhal-util/serial.hpp" bodystart="127" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a0af54ac1728b8461ace875aac1ef022b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt; &gt;</type>
+        <definition>result&lt;std::span&lt;hal::byte&gt; &gt; hal::write_then_read</definition>
+        <argsstring>(serial &amp;p_serial, std::span&lt; const hal::byte &gt; p_data_out, std::span&lt; hal::byte &gt; p_data_in, timeout auto p_timeout)</argsstring>
+        <name>write_then_read</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+<para>Perform a write then read transaction over serial. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is especially useful for devices that use a command and response method of communication.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the serial port to have the transaction occur on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the data to be written to the port </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- a buffer to receive the bytes back from the port </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- timeout callable that indicates when to bail out of the read operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>status - success or failure or <ref refid="classhal_1_1serial_1a9a7a63f71b908b9c3cd061c52df55df8" kindref="member">serial::write()</ref> returns an error from the serial port or success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial.hpp" line="150" column="16" bodyfile="libraries/include/libhal-util/serial.hpp" bodystart="150" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a41426e8c1ab23ed544215ea068477c13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>BytesToRead</declname>
+            <defname>BytesToRead</defname>
+          </param>
+        </templateparamlist>
+        <type>result&lt; std::array&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref>, BytesToRead &gt; &gt;</type>
+        <definition>result&lt;std::array&lt;hal::byte, BytesToRead&gt; &gt; hal::write_then_read</definition>
+        <argsstring>(serial &amp;p_serial, std::span&lt; const hal::byte &gt; p_data_out, timeout auto p_timeout)</argsstring>
+        <name>write_then_read</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+<para>Perform a write then read transaction over serial. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is especially useful for devices that use a command and response method of communication.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BytesToRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the number of bytes to read back </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the serial port to have the transaction occur on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the data to be written to the port </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- timeout callable that indicates when to bail out of the read operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; - return an error if a call to <ref refid="classhal_1_1serial_1a69eaa352ef24788b38d36648a5c3f99f" kindref="member">serial::read</ref> or <ref refid="classhal_1_1serial_1a9a7a63f71b908b9c3cd061c52df55df8" kindref="member">serial::write()</ref> returns an error from the serial port or an array of read bytes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial.hpp" line="176" column="9" bodyfile="libraries/include/libhal-util/serial.hpp" bodystart="176" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a299699f3b19c4ab26cbb91c7e6273a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename DataArray</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hal::print</definition>
+        <argsstring>(serial &amp;p_serial, DataArray &amp;&amp;p_data)</argsstring>
+        <name>print</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>DataArray &amp;&amp;</type>
+          <declname>p_data</declname>
+        </param>
+        <briefdescription>
+<para>Write data to serial buffer and drop return value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Only use this with serial ports with infallible write operations, meaning they will never return an error result.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>DataArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- data array type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- serial port to write data to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- data to be sent over the serial port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial.hpp" line="197" column="6" bodyfile="libraries/include/libhal-util/serial.hpp" bodystart="197" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a39a93c6f5e9a2a3dd6f72c6fa122a7f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>BufferSize</declname>
+            <defname>BufferSize</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Parameters</declname>
+            <defname>Parameters</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hal::print</definition>
+        <argsstring>(serial &amp;p_serial, const char *p_format, Parameters... p_parameters)</argsstring>
+        <name>print</name>
+        <param>
+          <type><ref refid="classhal_1_1serial" kindref="compound">serial</ref> &amp;</type>
+          <declname>p_serial</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>p_format</declname>
+        </param>
+        <param>
+          <type>Parameters...</type>
+          <declname>p_parameters</declname>
+        </param>
+        <briefdescription>
+<para>Write formatted string data to serial buffer and drop return value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses snprintf internally and writes to a local statically allocated an array. This function will never dynamically allocate like how standard std::printf does.</para>
+<para>This function does NOT include the NULL character when transmitting the data over the serial port.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size of the buffer to allocate on the stack to store the formatted message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- printf arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- serial port to write data to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- printf style null terminated format string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- printf arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/serial.hpp" line="220" column="6" bodyfile="libraries/include/libhal-util/serial.hpp" bodystart="220" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ad47146a14ed04fbebc458d6b598abf88" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto hal::operator==</definition>
+        <argsstring>(const spi::settings &amp;p_lhs, const spi::settings &amp;p_rhs)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structhal_1_1spi_1_1settings" kindref="compound">spi::settings</ref> &amp;</type>
+          <declname>p_lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structhal_1_1spi_1_1settings" kindref="compound">spi::settings</ref> &amp;</type>
+          <declname>p_rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/spi.hpp" line="24" column="17" bodyfile="libraries/include/libhal-util/spi.hpp" bodystart="24" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1aee0b6c2757f5d1ea5f69e2bb561907a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1spi_1_1transfer__t" kindref="compound">hal::spi::transfer_t</ref> &gt;</type>
+        <definition>result&lt;hal::spi::transfer_t&gt; hal::write</definition>
+        <argsstring>(spi &amp;p_spi, std::span&lt; const hal::byte &gt; p_data_out)</argsstring>
+        <name>write</name>
+        <param>
+          <type><ref refid="classhal_1_1spi" kindref="compound">spi</ref> &amp;</type>
+          <declname>p_spi</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <briefdescription>
+<para>Write data to the SPI bus and ignore data sent from peripherals on the bus. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- spi driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- data to be written to the SPI bus </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;hal::spi::transfer_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/spi.hpp" line="40" column="16" bodyfile="libraries/include/libhal-util/spi.hpp" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a0d2bc4df819798763859d28d408249d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1spi_1_1transfer__t" kindref="compound">hal::spi::transfer_t</ref> &gt;</type>
+        <definition>result&lt;hal::spi::transfer_t&gt; hal::read</definition>
+        <argsstring>(spi &amp;p_spi, std::span&lt; hal::byte &gt; p_data_in, hal::byte p_filler=spi::default_filler)</argsstring>
+        <name>read</name>
+        <param>
+          <type><ref refid="classhal_1_1spi" kindref="compound">spi</ref> &amp;</type>
+          <declname>p_spi</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_filler</declname>
+          <defval><ref refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" kindref="member">spi::default_filler</ref></defval>
+        </param>
+        <briefdescription>
+<para>Read data from the SPI bus. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Filler bytes will be placed on the write line.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- spi driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to receive bytes back from the SPI bus </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_filler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- filler data placed on the bus in place of actual write data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;hal::spi::transfer_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/spi.hpp" line="59" column="16" bodyfile="libraries/include/libhal-util/spi.hpp" bodystart="59" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1acc8121bd60d3a7f5cb1d0e607e6c7ed3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>BytesToRead</declname>
+            <defname>BytesToRead</defname>
+          </param>
+        </templateparamlist>
+        <type>result&lt; std::array&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref>, BytesToRead &gt; &gt;</type>
+        <definition>result&lt;std::array&lt;hal::byte, BytesToRead&gt; &gt; hal::read</definition>
+        <argsstring>(spi &amp;p_spi, hal::byte p_filler=spi::default_filler)</argsstring>
+        <name>read</name>
+        <param>
+          <type><ref refid="classhal_1_1spi" kindref="compound">spi</ref> &amp;</type>
+          <declname>p_spi</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_filler</declname>
+          <defval><ref refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" kindref="member">spi::default_filler</ref></defval>
+        </param>
+        <briefdescription>
+<para>Read data from the SPI bus and return a std::array of bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Filler bytes will be placed on the write line.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BytesToRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- spi driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_filler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- filler data placed on the bus in place of actual write data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; - any errors associated with this call </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/spi.hpp" line="79" column="9" bodyfile="libraries/include/libhal-util/spi.hpp" bodystart="79" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a93bebefd7137ca9b0780b88ac742fd5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="structhal_1_1spi_1_1transfer__t" kindref="compound">hal::spi::transfer_t</ref> &gt;</type>
+        <definition>result&lt;hal::spi::transfer_t&gt; hal::write_then_read</definition>
+        <argsstring>(spi &amp;p_spi, std::span&lt; const hal::byte &gt; p_data_out, std::span&lt; hal::byte &gt; p_data_in, hal::byte p_filler=spi::default_filler)</argsstring>
+        <name>write_then_read</name>
+        <param>
+          <type><ref refid="classhal_1_1spi" kindref="compound">spi</ref> &amp;</type>
+          <declname>p_spi</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type>std::span&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_in</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_filler</declname>
+          <defval><ref refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" kindref="member">spi::default_filler</ref></defval>
+        </param>
+        <briefdescription>
+<para>Write data to the SPI bus and ignore data sent from peripherals on the bus then read data from the SPI and fill the write line with filler bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This utility function that fits the use case of many SPI devices where a transaction is not full duplex. In many spi devices, full duplex means that as data is being written to the SPI bus, the peripheral device is sending data back on the read line. In most cases, the protocol is to write data to the bus, and ignore the read line because the peripheral is not writing anything meaningful to that line, then reading from SPI bus and writing nothing meaningful to the write line as the peripheral is ignoring that line.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- spi driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- bytes to write to the bus </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- buffer to receive bytes back from the SPI bus </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_filler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- filler data placed on the bus when the read operation begins. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;hal::spi::transfer_t&gt; - success or failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/spi.hpp" line="107" column="16" bodyfile="libraries/include/libhal-util/spi.hpp" bodystart="107" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a4631b0486d61f1ba6359d75563a8a82b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>BytesToRead</declname>
+            <defname>BytesToRead</defname>
+          </param>
+        </templateparamlist>
+        <type>result&lt; std::array&lt; <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref>, BytesToRead &gt; &gt;</type>
+        <definition>result&lt;std::array&lt;hal::byte, BytesToRead&gt; &gt; hal::write_then_read</definition>
+        <argsstring>(spi &amp;p_spi, std::span&lt; const hal::byte &gt; p_data_out, hal::byte p_filler=spi::default_filler)</argsstring>
+        <name>write_then_read</name>
+        <param>
+          <type><ref refid="classhal_1_1spi" kindref="compound">spi</ref> &amp;</type>
+          <declname>p_spi</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &gt;</type>
+          <declname>p_data_out</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref></type>
+          <declname>p_filler</declname>
+          <defval><ref refid="classhal_1_1spi_1a33e2442ae4061231938416efcf54b124" kindref="member">spi::default_filler</ref></defval>
+        </param>
+        <briefdescription>
+<para>Write data to the SPI bus and ignore data sent from peripherals on the bus then read data from the SPI, fill the write line with filler bytes and return an array of bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BytesToRead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Number of bytes to read from the bus </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- spi driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- bytes to write to the bus </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_filler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- filler data placed on the bus when the read operation begins. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/spi.hpp" line="131" column="9" bodyfile="libraries/include/libhal-util/spi.hpp" bodystart="131" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a164acf2ebcb6c832a57bc77dc896836d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint64_t</type>
+        <definition>std::uint64_t hal::future_deadline</definition>
+        <argsstring>(hal::steady_clock &amp;p_steady_clock, hal::time_duration p_duration)</argsstring>
+        <name>future_deadline</name>
+        <param>
+          <type><ref refid="classhal_1_1steady__clock" kindref="compound">hal::steady_clock</ref> &amp;</type>
+          <declname>p_steady_clock</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1a858b08a6e4e3eb5752d8e0daaad5ed00" kindref="member">hal::time_duration</ref></type>
+          <declname>p_duration</declname>
+        </param>
+        <briefdescription>
+<para>Function to compute a future timestamp in ticks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates a future timestamp based on the current uptime of a steady clock and a specified duration.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_steady_clock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the <ref refid="classhal_1_1steady__clock" kindref="compound">steady_clock</ref> used to calculate the future duration. Note that this future deadline will only work with this steady clock. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The duration for which we need to compute a future timestamp.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 64-bit unsigned integer representing the future timestamp in steady clock ticks. The future timestamp is calculated as the sum of the current number of ticks of the clock and the number of ticks equivalent to the specified duration. If the duration corresponds to a ticks_required value less than or equal to 1, it will be set to 1 to ensure at least one tick is waited. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/steady_clock.hpp" line="43" column="22" declfile="libraries/include/libhal-util/steady_clock.hpp" declline="43" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a32bf786052ba45a1c02c8150827609f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhal_1_1steady__clock__timeout" kindref="compound">steady_clock_timeout</ref></type>
+        <definition>steady_clock_timeout hal::create_timeout</definition>
+        <argsstring>(hal::steady_clock &amp;p_steady_clock, hal::time_duration p_duration)</argsstring>
+        <name>create_timeout</name>
+        <param>
+          <type><ref refid="classhal_1_1steady__clock" kindref="compound">hal::steady_clock</ref> &amp;</type>
+          <declname>p_steady_clock</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1a858b08a6e4e3eb5752d8e0daaad5ed00" kindref="member">hal::time_duration</ref></type>
+          <declname>p_duration</declname>
+        </param>
+        <briefdescription>
+<para>Create a timeout object based on <ref refid="classhal_1_1steady__clock" kindref="compound">hal::steady_clock</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>NOTE: Multiple timeout objects can be made from a single <ref refid="classhal_1_1steady__clock" kindref="compound">steady_clock</ref> without influencing other timeout objects.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_steady_clock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1steady__clock" kindref="compound">hal::steady_clock</ref> implementation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- amount of time until timeout </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classhal_1_1steady__clock__timeout" kindref="compound">hal::steady_clock_timeout</ref> - timeout object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/steady_clock.hpp" line="124" column="22" declfile="libraries/include/libhal-util/steady_clock.hpp" declline="124" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a0f0dac709830486dab93783b2b4072d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hal::delay</definition>
+        <argsstring>(hal::steady_clock &amp;p_steady_clock, hal::time_duration p_duration)</argsstring>
+        <name>delay</name>
+        <param>
+          <type><ref refid="classhal_1_1steady__clock" kindref="compound">hal::steady_clock</ref> &amp;</type>
+          <declname>p_steady_clock</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1a858b08a6e4e3eb5752d8e0daaad5ed00" kindref="member">hal::time_duration</ref></type>
+          <declname>p_duration</declname>
+        </param>
+        <briefdescription>
+<para>Delay execution for a duration of time using a hardware <ref refid="classhal_1_1steady__clock" kindref="compound">steady_clock</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_steady_clock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1steady__clock" kindref="compound">steady_clock</ref> driver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the amount of time to delay for. Zero or negative time duration will delay for one tick of the p_steady_clock. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/steady_clock.hpp" line="134" column="6" declfile="libraries/include/libhal-util/steady_clock.hpp" declline="134" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ad1a8c1d4bb482a3798af832c843e95c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto hal::timeout_generator</definition>
+        <argsstring>(hal::steady_clock &amp;p_steady_clock)</argsstring>
+        <name>timeout_generator</name>
+        <param>
+          <type><ref refid="classhal_1_1steady__clock" kindref="compound">hal::steady_clock</ref> &amp;</type>
+          <declname>p_steady_clock</declname>
+        </param>
+        <briefdescription>
+<para>Generates a function that, when passed a duration, returns a timeout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_steady_clock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="classhal_1_1steady__clock" kindref="compound">steady_clock</ref> driver that must out live the lifetime of the returned lambda. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>auto - a callable that returns a new timeout object each time a time duration is passed to it. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/steady_clock.hpp" line="144" column="13" bodyfile="libraries/include/libhal-util/steady_clock.hpp" bodystart="144" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a829d948a20f6466095edce347d7feb3b" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr std::string_view</type>
+        <definition>constexpr std::string_view hal::to_string</definition>
+        <argsstring>(work_state p_state)</argsstring>
+        <name>to_string</name>
+        <param>
+          <type><ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref></type>
+          <declname>p_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="28" column="28" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="28" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a7c394730b2a8d131a48e6f033e26293c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool hal::terminated</definition>
+        <argsstring>(work_state p_state)</argsstring>
+        <name>terminated</name>
+        <param>
+          <type><ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref></type>
+          <declname>p_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="42" column="16" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a2a831897872fb36c93241ba087974faf" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool hal::finished</definition>
+        <argsstring>(work_state p_state)</argsstring>
+        <name>finished</name>
+        <param>
+          <type><ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref></type>
+          <declname>p_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="47" column="16" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a147afde59572550793dbcc26d11cc56f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool hal::in_progress</definition>
+        <argsstring>(work_state p_state)</argsstring>
+        <name>in_progress</name>
+        <param>
+          <type><ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref></type>
+          <declname>p_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="52" column="16" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a9dfeaa9460f1bf9858f1b81d2833ace3" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool hal::failed</definition>
+        <argsstring>(work_state p_state)</argsstring>
+        <name>failed</name>
+        <param>
+          <type><ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref></type>
+          <declname>p_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="57" column="16" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a80ebbe044cdfcdd19db304916f669817" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool hal::terminated</definition>
+        <argsstring>(has_work_state auto p_worker)</argsstring>
+        <name>terminated</name>
+        <param>
+          <type>has_work_state auto</type>
+          <declname>p_worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="69" column="16" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ad3e5255e87d9df5dc51818f5dbe442f2" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool hal::finished</definition>
+        <argsstring>(has_work_state auto p_worker)</argsstring>
+        <name>finished</name>
+        <param>
+          <type>has_work_state auto</type>
+          <declname>p_worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="74" column="16" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1abafca99dced9e211f8308e0b96d56359" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool hal::in_progress</definition>
+        <argsstring>(has_work_state auto p_worker)</argsstring>
+        <name>in_progress</name>
+        <param>
+          <type>has_work_state auto</type>
+          <declname>p_worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="79" column="16" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1ad62dc2cc6e9398e924bdd65f4cf82e72" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool hal::failed</definition>
+        <argsstring>(has_work_state auto p_worker)</argsstring>
+        <name>failed</name>
+        <param>
+          <type>has_work_state auto</type>
+          <declname>p_worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="84" column="16" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1af177bda7ffc49c77d7d9e777084336c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class CharT</type>
+          </param>
+          <param>
+            <type>class Traits</type>
+          </param>
+        </templateparamlist>
+        <type>std::basic_ostream&lt; CharT, Traits &gt; &amp;</type>
+        <definition>std::basic_ostream&lt;CharT, Traits&gt;&amp; hal::operator&lt;&lt;</definition>
+        <argsstring>(std::basic_ostream&lt; CharT, Traits &gt; &amp;p_ostream, const work_state &amp;p_state)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::basic_ostream&lt; CharT, Traits &gt; &amp;</type>
+          <declname>p_ostream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref> &amp;</type>
+          <declname>p_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="84" column="16" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="90" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1af9f92bcba9f4804b93e6674974c52ca5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref> &gt;</type>
+        <definition>result&lt;work_state&gt; hal::try_until</definition>
+        <argsstring>(worker auto &amp;p_worker, timeout auto p_timeout)</argsstring>
+        <name>try_until</name>
+        <param>
+          <type>worker auto &amp;</type>
+          <declname>p_worker</declname>
+        </param>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+<para>Repeatedly call a worker function until it has reached a terminal state or a timeout has been reached. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- worker function to repeatedly call </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- callable timeout object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;work_state&gt; - state of the worker function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="105" column="15" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="105" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a98b3ee6259956704b977ba63dc379352" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; <ref refid="namespacehal_1aadfba20b87ce09f21cc88f7c49e1bd60" kindref="member">work_state</ref> &gt;</type>
+        <definition>result&lt;work_state&gt; hal::try_until</definition>
+        <argsstring>(worker auto &amp;&amp;p_worker, timeout auto p_timeout)</argsstring>
+        <name>try_until</name>
+        <param>
+          <type>worker auto &amp;&amp;</type>
+          <declname>p_worker</declname>
+        </param>
+        <param>
+          <type>timeout auto</type>
+          <declname>p_timeout</declname>
+        </param>
+        <briefdescription>
+<para>Repeatedly call a worker function until it has reached a terminal state or a timeout has been reached. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- worker function to repeatedly call </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- callable timeout object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result&lt;work_state&gt; - state of the worker function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/timeout.hpp" line="126" column="15" bodyfile="libraries/include/libhal-util/timeout.hpp" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a461d141cfb1ba8f32efe1e2d704a359d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr std::array&lt; char, N+1 &gt;</type>
+        <definition>constexpr std::array&lt;char, N + 1&gt; hal::to_array</definition>
+        <argsstring>(std::string_view p_view)</argsstring>
+        <name>to_array</name>
+        <param>
+          <type>std::string_view</type>
+          <declname>p_view</declname>
+        </param>
+        <briefdescription>
+<para>Convert a string_view into a std::array of N number of characters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Will always ensure that the array is null terminated</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Size of the array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_view</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string to be placed into a char array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr std::array&lt;char, N + 1&gt; - the char array object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/to_array.hpp" line="33" column="23" bodyfile="libraries/include/libhal-util/to_array.hpp" bodystart="33" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1af2dc5e2d13c02444f48a6d3d4e664bd6" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr std::int64_t</type>
+        <definition>constexpr std::int64_t hal::cycles_per</definition>
+        <argsstring>(hertz p_source, hal::time_duration p_duration)</argsstring>
+        <name>cycles_per</name>
+        <param>
+          <type><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref></type>
+          <declname>p_source</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacehal_1a858b08a6e4e3eb5752d8e0daaad5ed00" kindref="member">hal::time_duration</ref></type>
+          <declname>p_duration</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the number of cycles of this frequency within the time duration. This function is meant for timers to determine how many count cycles are needed to reach a particular time duration at this frequency. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- source frequency </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the amount of time to convert to cycles </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::int64_t - number of cycles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/units.hpp" line="38" column="25" bodyfile="libraries/include/libhal-util/units.hpp" bodystart="38" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a7b1f0465a8a3964bcc80fbcf272ff7bb" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Period</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr std::chrono::duration&lt; int64_t, Period &gt;</type>
+        <definition>constexpr float hal::wavelength</definition>
+        <argsstring>(hertz p_source)</argsstring>
+        <name>wavelength</name>
+        <param>
+          <type><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref></type>
+          <declname>p_source</declname>
+        </param>
+        <briefdescription>
+<para>Calculates and returns the wavelength in seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates and returns the wavelength in seconds as a float.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- desired period (defaults to std::femto for femtoseconds). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- source frequency to convert to wavelength </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::chrono::duration&lt;int64_t, Period&gt; - time based wavelength of the frequency.</para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>float_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- float type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- desired period </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- source frequency to convert to wavelength </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>constexpr float - float representation of the time based wavelength of the frequency. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/units.hpp" line="65" column="33" bodyfile="libraries/include/libhal-util/units.hpp" bodystart="65" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a2bdc9e72a4640753fd9711122fe36e22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>result&lt; std::chrono::nanoseconds &gt;</type>
+        <definition>result&lt;std::chrono::nanoseconds&gt; hal::duration_from_cycles</definition>
+        <argsstring>(hertz p_source, uint32_t p_cycles)</argsstring>
+        <name>duration_from_cycles</name>
+        <param>
+          <type><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref></type>
+          <declname>p_source</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>p_cycles</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the amount of time it takes a frequency to oscillate a number of cycles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the frequency to compute the cycles from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_cycles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- number of cycles within the time duration </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::chrono::nanoseconds - time duration based on this frequency and the number of cycles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/units.hpp" line="110" column="16" bodyfile="libraries/include/libhal-util/units.hpp" bodystart="110" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehal_1a8cd5ea2d17022d851807ec714b62aed5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class CharT</type>
+          </param>
+          <param>
+            <type>class Traits</type>
+          </param>
+        </templateparamlist>
+        <type>std::basic_ostream&lt; CharT, Traits &gt; &amp;</type>
+        <definition>std::basic_ostream&lt;CharT, Traits&gt;&amp; hal::operator&lt;&lt;</definition>
+        <argsstring>(std::basic_ostream&lt; CharT, Traits &gt; &amp;p_ostream, const hal::byte &amp;p_byte)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::basic_ostream&lt; CharT, Traits &gt; &amp;</type>
+          <declname>p_ostream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacehal_1aa21f8ca97410869aabb284a575b2021d" kindref="member">hal::byte</ref> &amp;</type>
+          <declname>p_byte</declname>
+        </param>
+        <briefdescription>
+<para>print byte type using ostreams </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Meant for unit testing, testing and simulation purposes C++ streams, in general, should not be used for any embedded project that will ever have to be used on an MCU due to its memory cost.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>CharT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- character type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Traits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- ostream traits type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_ostream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the ostream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_byte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- object to convert to a string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::basic_ostream&lt;CharT, Traits&gt;&amp; - reference to the ostream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/include/libhal-util/units.hpp" line="110" column="16" bodyfile="libraries/include/libhal-util/units.hpp" bodystart="152" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The foundation of libhal containing, interfaces, utilities and soft drivers. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal/accelerometer.hpp" line="20" column="1"/>
+  </compounddef>
+</doxygen>

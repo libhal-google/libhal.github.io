@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacehal_1_1mock" kind="namespace" language="C++">
+    <compoundname>hal::mock</compoundname>
+    <innerclass refid="structhal_1_1mock_1_1adc" prot="public">hal::mock::adc</innerclass>
+    <innerclass refid="structhal_1_1mock_1_1can" prot="public">hal::mock::can</innerclass>
+    <innerclass refid="structhal_1_1mock_1_1dac" prot="public">hal::mock::dac</innerclass>
+    <innerclass refid="structhal_1_1mock_1_1input__pin" prot="public">hal::mock::input_pin</innerclass>
+    <innerclass refid="structhal_1_1mock_1_1interrupt__pin" prot="public">hal::mock::interrupt_pin</innerclass>
+    <innerclass refid="structhal_1_1mock_1_1motor" prot="public">hal::mock::motor</innerclass>
+    <innerclass refid="structhal_1_1mock_1_1output__pin" prot="public">hal::mock::output_pin</innerclass>
+    <innerclass refid="structhal_1_1mock_1_1pwm" prot="public">hal::mock::pwm</innerclass>
+    <innerclass refid="structhal_1_1mock_1_1servo" prot="public">hal::mock::servo</innerclass>
+    <innerclass refid="structhal_1_1mock_1_1write__only__spi" prot="public">hal::mock::write_only_spi</innerclass>
+    <innerclass refid="structhal_1_1mock_1_1steady__clock" prot="public">hal::mock::steady_clock</innerclass>
+    <innerclass refid="structhal_1_1mock_1_1timer" prot="public">hal::mock::timer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/include/libhal-mock/adc.hpp" line="20" column="1"/>
+  </compounddef>
+</doxygen>

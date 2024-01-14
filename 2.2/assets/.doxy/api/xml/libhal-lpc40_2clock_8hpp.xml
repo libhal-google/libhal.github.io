@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="libhal-lpc40_2clock_8hpp" kind="file" language="C++">
+    <compoundname>clock.hpp</compoundname>
+    <includes local="no">array</includes>
+    <includes local="no">cstdint</includes>
+    <includes refid="bit_8hpp" local="no">libhal-util/bit.hpp</includes>
+    <includes refid="enum_8hpp" local="no">libhal-util/enum.hpp</includes>
+    <includes refid="error_8hpp" local="no">libhal/error.hpp</includes>
+    <includes refid="libhal_2units_8hpp" local="no">libhal/units.hpp</includes>
+    <includes refid="libhal-lpc40_2constants_8hpp" local="yes">constants.hpp</includes>
+    <incdepgraph>
+      <node id="13">
+        <label>system_error</label>
+      </node>
+      <node id="7">
+        <label>limits</label>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>libhal-util/enum.hpp</label>
+        <link refid="enum_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>boost/leaf/detail/all.hpp</label>
+      </node>
+      <node id="10">
+        <label>libhal/units.hpp</label>
+        <link refid="libhal_2units_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>constants.hpp</label>
+        <link refid="libhal-lpc40_2constants_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>array</label>
+      </node>
+      <node id="12">
+        <label>error.hpp</label>
+        <link refid="error_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libraries/include/libhal-lpc40/clock.hpp</label>
+        <link refid="libhal-lpc40_2clock_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cstddef</label>
+      </node>
+      <node id="11">
+        <label>chrono</label>
+      </node>
+      <node id="5">
+        <label>concepts</label>
+      </node>
+      <node id="4">
+        <label>libhal-util/bit.hpp</label>
+        <link refid="bit_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classhal_1_1lpc40_1_1clock" prot="public">hal::lpc40::clock</innerclass>
+    <innerclass refid="structhal_1_1lpc40_1_1clock_1_1configuration" prot="public">hal::lpc40::clock::configuration</innerclass>
+    <innerclass refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1pll__t" prot="public">hal::lpc40::clock::configuration::pll_t</innerclass>
+    <innerclass refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1cpu__t" prot="public">hal::lpc40::clock::configuration::cpu_t</innerclass>
+    <innerclass refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t" prot="public">hal::lpc40::clock::configuration::usb_t</innerclass>
+    <innerclass refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1spifi__t" prot="public">hal::lpc40::clock::configuration::spifi_t</innerclass>
+    <innernamespace refid="namespacehal">hal</innernamespace>
+    <innernamespace refid="namespacehal_1_1lpc40">hal::lpc40</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2023<sp/>Google<sp/>LLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal-util/bit.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal-util/enum.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/error.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libhal/units.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constants.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehal_1_1lpc40" kindref="compound">hal::lpc40</ref><sp/>{</highlight></codeline>
+<codeline lineno="33" refid="classhal_1_1lpc40_1_1clock" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhal_1_1lpc40_1_1clock" kindref="compound">clock</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="classhal_1_1lpc40_1_1clock_1a4835b2f6b5eee3a358049000b91c73a8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref><sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4835b2f6b5eee3a358049000b91c73a8" kindref="member">irc_frequency</ref><sp/>=<sp/>12&apos;000&apos;000.0f;</highlight></codeline>
+<codeline lineno="39" refid="classhal_1_1lpc40_1_1clock_1aad3eae6e19bda4db4d9599e481ee1404" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint32_t<sp/><ref refid="classhal_1_1lpc40_1_1clock_1aad3eae6e19bda4db4d9599e481ee1404" kindref="member">default_peripheral_divider</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classhal_1_1lpc40_1_1clock_1aaa8cb771d8cb9cd77f4aefbefa5a93e4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1clock_1aaa8cb771d8cb9cd77f4aefbefa5a93e4" kindref="member">usb_clock_source</ref><sp/>:<sp/>uint8_t</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1aaa8cb771d8cb9cd77f4aefbefa5a93e4af55832d9c36b9732cd4a625a7146f00b" kindref="member">system_clock</ref><sp/>=<sp/>0b00,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1aaa8cb771d8cb9cd77f4aefbefa5a93e4acb0aec9c320ff617c231117260871eb5" kindref="member">pll0</ref><sp/>=<sp/>0b01,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1aaa8cb771d8cb9cd77f4aefbefa5a93e4aaaee8712bcb9a79dd2b35abc66d0af2d" kindref="member">pll1</ref><sp/>=<sp/>0b10,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classhal_1_1lpc40_1_1clock_1aedf62732ac08533174a2c14cc4870214" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1clock_1aedf62732ac08533174a2c14cc4870214" kindref="member">usb_divider</ref><sp/>:<sp/>uint8_t</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>divide_by1<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>divide_by2,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>divide_by3,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>divide_by4,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classhal_1_1lpc40_1_1clock_1a4328fd8500767c0aaa140a7f21dcc0a1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4328fd8500767c0aaa140a7f21dcc0a1" kindref="member">spifi_clock_source</ref><sp/>:<sp/>uint8_t</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4328fd8500767c0aaa140a7f21dcc0a1af55832d9c36b9732cd4a625a7146f00b" kindref="member">system_clock</ref><sp/>=<sp/>0b00,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4328fd8500767c0aaa140a7f21dcc0a1acb0aec9c320ff617c231117260871eb5" kindref="member">pll0</ref><sp/>=<sp/>0b01,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4328fd8500767c0aaa140a7f21dcc0a1aaaee8712bcb9a79dd2b35abc66d0af2d" kindref="member">pll1</ref><sp/>=<sp/>0b10,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classhal_1_1lpc40_1_1clock_1ad93b41676e24c9aedd802c905eecd314" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1clock_1ad93b41676e24c9aedd802c905eecd314" kindref="member">flash_configuration</ref><sp/>:<sp/>uint32_t</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1ad93b41676e24c9aedd802c905eecd314afecd6a930756d9e2293295c5830ff603" kindref="member">clock1</ref><sp/>=<sp/>0b0000<sp/>&lt;&lt;<sp/>12,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1ad93b41676e24c9aedd802c905eecd314ace593033990cb529467f17ef0b7980db" kindref="member">clock2</ref><sp/>=<sp/>0b0001<sp/>&lt;&lt;<sp/>12,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1ad93b41676e24c9aedd802c905eecd314a16731085b5ee22a3e3eb61e64183e959" kindref="member">clock3</ref><sp/>=<sp/>0b0010<sp/>&lt;&lt;<sp/>12,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1ad93b41676e24c9aedd802c905eecd314a666557ac0f3eb96a6e7facdb2390851c" kindref="member">clock4</ref><sp/>=<sp/>0b0011<sp/>&lt;&lt;<sp/>12,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1ad93b41676e24c9aedd802c905eecd314a4220bcc03b4c15977afc606a6cab3180" kindref="member">clock5</ref><sp/>=<sp/>0b0100<sp/>&lt;&lt;<sp/>12,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1ad93b41676e24c9aedd802c905eecd314ac3ea945a74a17b40a16ec2ca4362e1f2" kindref="member">clock6</ref><sp/>=<sp/>0b0101<sp/>&lt;&lt;<sp/>12,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="structhal_1_1lpc40_1_1clock_1_1configuration" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration" kindref="compound">configuration</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1afdf0b3391f602aa43837deccdb412b9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1afdf0b3391f602aa43837deccdb412b9b" kindref="member">oscillator_frequency</ref><sp/>=<sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4835b2f6b5eee3a358049000b91c73a8" kindref="member">irc_frequency</ref>;</highlight></codeline>
+<codeline lineno="103" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a1b901a4cfe22134114e7f05aa22dca02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a1b901a4cfe22134114e7f05aa22dca02" kindref="member">use_external_oscillator</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1pll__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1pll__t" kindref="compound">pll_t</ref></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1pll__t_1a072b4777385bbe312127ffb99d0f673d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1pll__t_1a072b4777385bbe312127ffb99d0f673d" kindref="member">enabled</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1pll__t_1ad0e4b7d681ee5767fa839f257d25b5ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1pll__t_1ad0e4b7d681ee5767fa839f257d25b5ff" kindref="member">multiply</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="113" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1acc775f50536c492b8a99c13fc2e95a09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;pll_t,<sp/>2&gt;<sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1acc775f50536c492b8a99c13fc2e95a09" kindref="member">pll</ref><sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="115" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1cpu__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1cpu__t" kindref="compound">cpu_t</ref></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1cpu__t_1a6ae3c9560d51cca7aa4b7efdba1cdd6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1cpu__t_1a6ae3c9560d51cca7aa4b7efdba1cdd6c" kindref="member">use_pll0</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1cpu__t_1a857da2dd78c1d8d5938ff22e8346a2b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1cpu__t_1a857da2dd78c1d8d5938ff22e8346a2b8" kindref="member">divider</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="124" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a7ec16200adf9d5afca5b7bf91633d921" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1cpu__t" kindref="compound">cpu_t</ref><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a7ec16200adf9d5afca5b7bf91633d921" kindref="member">cpu</ref><sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t" kindref="compound">usb_t</ref></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t_1a8e292d5acd229de1cabe933092005116" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1aaa8cb771d8cb9cd77f4aefbefa5a93e4" kindref="member">usb_clock_source</ref><sp/><ref refid="classhal_1_1lpc40_1_1clock" kindref="compound">clock</ref><sp/>=<sp/><ref refid="classhal_1_1lpc40_1_1clock_1aaa8cb771d8cb9cd77f4aefbefa5a93e4af55832d9c36b9732cd4a625a7146f00b" kindref="member">usb_clock_source::system_clock</ref>;</highlight></codeline>
+<codeline lineno="132" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t_1adf4471cef0fce7949ba6e0496f8e688b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1aedf62732ac08533174a2c14cc4870214" kindref="member">usb_divider</ref><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t_1adf4471cef0fce7949ba6e0496f8e688b" kindref="member">divider</ref><sp/>=<sp/>usb_divider::divide_by1;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="135" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a25702d095f3fcbc972327ece5e783008" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1usb__t" kindref="compound">usb_t</ref><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a25702d095f3fcbc972327ece5e783008" kindref="member">usb</ref><sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1spifi__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1spifi__t" kindref="compound">spifi_t</ref></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1spifi__t_1a7efb2877be09a0b8640486d07652dd15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4328fd8500767c0aaa140a7f21dcc0a1" kindref="member">spifi_clock_source</ref><sp/><ref refid="classhal_1_1lpc40_1_1clock" kindref="compound">clock</ref><sp/>=<sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4328fd8500767c0aaa140a7f21dcc0a1af55832d9c36b9732cd4a625a7146f00b" kindref="member">spifi_clock_source::system_clock</ref>;</highlight></codeline>
+<codeline lineno="143" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1spifi__t_1aa8eeedb38946bd6706910d9334653545" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1spifi__t_1aa8eeedb38946bd6706910d9334653545" kindref="member">divider</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="146" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1ad18d7c0ea99421d0b5aeb82932ffb04e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1_1spifi__t" kindref="compound">spifi_t</ref><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1ad18d7c0ea99421d0b5aeb82932ffb04e" kindref="member">spifi</ref><sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a7a705d258e4adf536f10b6a150c47b52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1a7a705d258e4adf536f10b6a150c47b52" kindref="member">peripheral_divider</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="structhal_1_1lpc40_1_1clock_1_1configuration_1aae1ebe28fbe17398ab573d87f09bdeb6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration_1aae1ebe28fbe17398ab573d87f09bdeb6" kindref="member">emc_half_cpu_divider</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="classhal_1_1lpc40_1_1clock_1aff2684a49ced76b4e90558c52963b31e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classhal_1_1lpc40_1_1clock" kindref="compound">clock</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1clock_1aff2684a49ced76b4e90558c52963b31e" kindref="member">get</ref>();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="classhal_1_1lpc40_1_1clock_1abcf009f8015ba7f486c7dd1a642a1653" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>status<sp/><ref refid="classhal_1_1lpc40_1_1clock_1abcf009f8015ba7f486c7dd1a642a1653" kindref="member">maximum</ref>(<ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref><sp/>p_external_crystal_frequency);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="classhal_1_1lpc40_1_1clock_1a6ef3c697b3161530469b5784c2e3d60b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref><sp/><ref refid="classhal_1_1lpc40_1_1clock_1a6ef3c697b3161530469b5784c2e3d60b" kindref="member">get_frequency</ref>(<ref refid="namespacehal_1_1lpc40_1aeb4111a0b3eb28bf70f583582a7a0b13" kindref="member">peripheral</ref><sp/>p_peripheral);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="classhal_1_1lpc40_1_1clock_1a854cb2c29a4134a01a33f55f86dc8c10" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structhal_1_1lpc40_1_1clock_1_1configuration" kindref="compound">configuration</ref>&amp;<sp/><ref refid="classhal_1_1lpc40_1_1clock_1a854cb2c29a4134a01a33f55f86dc8c10" kindref="member">config</ref>();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="classhal_1_1lpc40_1_1clock_1a0f01f3356cbd891640eddd2996128de4" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>status<sp/><ref refid="classhal_1_1lpc40_1_1clock_1a0f01f3356cbd891640eddd2996128de4" kindref="member">reconfigure_clocks</ref>();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>constexpr<sp/><ref refid="classhal_1_1lpc40_1_1clock" kindref="compound">clock</ref>()</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>configuration<sp/>m_config{};</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref><sp/>m_cpu_clock_rate<sp/>=<sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4835b2f6b5eee3a358049000b91c73a8" kindref="member">irc_frequency</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref><sp/>m_emc_clock_rate<sp/>=<sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4835b2f6b5eee3a358049000b91c73a8" kindref="member">irc_frequency</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref><sp/>m_usb_clock_rate<sp/>=<sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4835b2f6b5eee3a358049000b91c73a8" kindref="member">irc_frequency</ref>;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref><sp/>m_spifi_clock_source_rate<sp/>=<sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4835b2f6b5eee3a358049000b91c73a8" kindref="member">irc_frequency</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><ref refid="namespacehal_1a54dc271deb8f266e52926836c0582598" kindref="member">hertz</ref><sp/>m_peripheral_clock_rate<sp/>=<sp/><ref refid="classhal_1_1lpc40_1_1clock_1a4835b2f6b5eee3a358049000b91c73a8" kindref="member">irc_frequency</ref><sp/>/<sp/><ref refid="classhal_1_1lpc40_1_1clock_1aad3eae6e19bda4db4d9599e481ee1404" kindref="member">default_peripheral_divider</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hal::lpc40</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/include/libhal-lpc40/clock.hpp"/>
+  </compounddef>
+</doxygen>
