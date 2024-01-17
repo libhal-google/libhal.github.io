@@ -1,0 +1,1374 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Serial &#8212; libhal  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'libhal/serial';</script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Servo" href="servo.html" />
+    <link rel="prev" title="Rotational Sensor" href="rotation_sensor.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="libhal  documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="libhal  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="2" aria-label="Site Navigation">
+    </p>
+    <ul class="bd-navbar-elements navbar-nav">
+        <li class="nav-item dropdown">
+            <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                Guides
+            </button>
+            <ul id="pst-nav-more-links" class="dropdown-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href=/2.4/>
+                        🏡 Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href="/2.4/getting_started/">
+                        🚀 Getting Started
+                    </a>
+                </li>
+
+                <li class=" nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/user_guide/fundamentals">
+                        📖 User Guide
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/contributor_guide/philosophy">
+                        📚 Contributor Guides
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/project_information/status">
+                        📊 Project Information
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</nav></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../utilities/index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../utilities/index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="accelerometer.html">Accelerometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adc.html">Analog Digital Converter (ADC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angular_velocity_sensor.html">Angular Velocity Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="can.html">Controlled Area Network (CAN)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dac.html">Digital Analog Converter (DAC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distance_sensor.html">Distance Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functional.html">Functional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gyroscope.html">Gyroscope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i2c.html">Inter-integrated Circuit (I2C)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_pin.html">Input Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interrupt_pin.html">Interrupt Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetometer.html">Magnetometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motor.html">Motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output_pin.html">Output Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwm.html">Pulse Width Modulation (PWM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rotation_sensor.html">Rotational Sensor</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Serial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servo.html">Servo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spi.html">Serial Peripheral Interface (SPI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="steady_clock.html">Steady Clock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temperature_sensor.html">Temperature Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeout.html">Timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">libhal Hardware Interface API Documentation</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Serial</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="serial">
+<h1>Serial<a class="headerlink" href="#serial" title="Link to this heading">#</a></h1>
+<section id="hardware-interface">
+<h2>Hardware Interface<a class="headerlink" href="#hardware-interface" title="Link to this heading">#</a></h2>
+<p>Defined in namespace <code class="docutils literal notranslate"><span class="pre">hal</span></code></p>
+<p><em>#include &lt;libhal/serial.hpp&gt;</em></p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serialE">
+<span id="_CPPv3N3hal6serialE"></span><span id="_CPPv2N3hal6serialE"></span><span id="hal::serial"></span><span class="target" id="classhal_1_1serial"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">serial</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serialE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Hardware abstract interface for the serial communication protocol. </p>
+<p>Use this interface for hardware that implements a serial protocol like UART, RS232, RS485 and others that use a similar communication protocol but may use different voltage schemes.</p>
+<p>This interface only works 8-bit serial data frames.</p>
+<p>Due to the asynchronous and unformatted nature of serial communication protocols, all implementations of serial devices must be buffered. Buffered, in this case, is defined as automatic storage of received bytes without direct application intervention.</p>
+<p>All implementations MUST allow the user to supply their own buffer of arbitrary size up to the limits of what hardware can support. This allows a developer the ability to tailored the buffer size to the needs of the application.</p>
+<p>Examples of buffering schemes are:</p>
+<p><ul class="simple">
+<li><p>Using DMA to copy data from a serial peripheral to a region of memory</p></li>
+<li><p>Using interrupts when a serial peripheral’s queue has filled to a point </p></li>
+</ul>
+</p>
+<p>Subclassed by hal::soft::inert_serial</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial9configureERK8settings">
+<span id="_CPPv3N3hal6serial9configureERK8settings"></span><span id="_CPPv2N3hal6serial9configureERK8settings"></span><span id="hal::serial::configure__settingsCR"></span><span class="target" id="classhal_1_1serial_1a3110feb98b0a00cc0d085b0ad5cf686f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">status</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6serial8settingsE" title="hal::serial::settings"><span class="n"><span class="pre">settings</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_settings</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal6serial9configureERK8settings" title="Link to this definition">#</a><br /></dt>
+<dd><p>Configure serial to match the settings supplied. </p>
+<p>Implementing drivers must verify if the settings can be applied to hardware before modifying the hardware. This will ensure that if this operation fails, the state of the serial device has not changed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p_settings</strong> – - settings to apply to serial driver </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">errc</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – if the settings could not be achieved </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>status - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial5writeENSt4spanIKN3hal4byteEEE">
+<span id="_CPPv3N3hal6serial5writeENSt4spanIKN3hal4byteEEE"></span><span id="_CPPv2N3hal6serial5writeENSt4spanIKN3hal4byteEEE"></span><span id="hal::serial::write__std::span:hal::byteC:"></span><span class="target" id="classhal_1_1serial_1a9a7a63f71b908b9c3cd061c52df55df8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3hal6serial7write_tE" title="hal::serial::write_t"><span class="n"><span class="pre">write_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal6serial5writeENSt4spanIKN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Write data to the transmitter line of the serial port. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p_data</strong> – - data to be transmitted over the serial port </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result&lt;write_t&gt; - serial write response </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial4readENSt4spanIN3hal4byteEEE">
+<span id="_CPPv3N3hal6serial4readENSt4spanIN3hal4byteEEE"></span><span id="_CPPv2N3hal6serial4readENSt4spanIN3hal4byteEEE"></span><span id="hal::serial::read__std::span:hal::byte:"></span><span class="target" id="classhal_1_1serial_1a69eaa352ef24788b38d36648a5c3f99f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3hal6serial6read_tE" title="hal::serial::read_t"><span class="n"><span class="pre">read_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal6serial4readENSt4spanIN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Copy bytes from working buffer into passed buffer. </p>
+<p>This operation copies the bytes from the serial driver’s internal working buffer to the buffer supplied.</p>
+<p>The buffer will be filled up either to the end of the buffer or until there are no more bytes left in the working buffer. The remaining portion of the input buffer is returned in <code class="docutils literal notranslate"><span class="pre">read_t::remaining</span></code>.</p>
+<p>If a frame error has occurred at any point during serial reception, this function will throw a <code class="docutils literal notranslate"><span class="pre">std::errc::io_error</span></code> value. The contents of the internal working buffer will stay the same. No information from the internal working buffer will be copied into the supplied buffer and no data will be removed from the internal working buffer. The frame error status will be internally cleared after its occurrence. Subsequent calls of this function will read out the contents of the buffer although the data inside may be corrupt.</p>
+<p>When an error occurs the options available are to flush the buffer and attempt reception again or read out the potentially corrupted data and parse it as needed. The choice of operation is application/driver specific.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p_data</strong> – - Buffer to read bytes in to </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">errc</span><span class="p">::</span><span class="n">io_error</span></span></span> – - a frame error occurred at some point during reception. </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;read_t&gt; - serial read response data </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial5flushEv">
+<span id="_CPPv3N3hal6serial5flushEv"></span><span id="_CPPv2N3hal6serial5flushEv"></span><span id="hal::serial::flush"></span><span class="target" id="classhal_1_1serial_1a830bae7d2f8b360f8744213a5a88b166"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3hal6serial7flush_tE" title="hal::serial::flush_t"><span class="n"><span class="pre">flush_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flush</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal6serial5flushEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Flush working buffer. </p>
+<p>The behavior of flushing the internal working buffer is this:</p>
+<p><ul class="simple">
+<li><p>Sets the serial port’s internal working buffer to an “empty” state.</p></li>
+<li><p>Clear any received data stored in hardware registers.</p></li>
+<li><p>Use the fastest available option to perform these operations, meaning that the contents of the internal working buffer will not be zeroed out.</p></li>
+</ul>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;flush_t&gt; - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial7flush_tE">
+<span id="_CPPv3N3hal6serial7flush_tE"></span><span id="_CPPv2N3hal6serial7flush_tE"></span><span id="hal::serial::flush_t"></span><span class="target" id="structhal_1_1serial_1_1flush__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flush_t</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial7flush_tE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Feedback from performing a flush operation. </p>
+<p>This structure is currently empty as no feedback has been determined for now. This structure may be expanded in the future. </p>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial6read_tE">
+<span id="_CPPv3N3hal6serial6read_tE"></span><span id="_CPPv2N3hal6serial6read_tE"></span><span id="hal::serial::read_t"></span><span class="target" id="structhal_1_1serial_1_1read__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_t</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial6read_tE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Return type for serial read operations. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial6read_t4dataE">
+<span id="_CPPv3N3hal6serial6read_t4dataE"></span><span id="_CPPv2N3hal6serial6read_t4dataE"></span><span id="hal::serial::read_t::data__std::span:hal::byte:"></span><span class="target" id="structhal_1_1serial_1_1read__t_1a130b9bc9bc353ea5a083e6e52d6bd4dd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial6read_t4dataE" title="Link to this definition">#</a><br /></dt>
+<dd><p>The filled portion of the input buffer from the serial port. </p>
+<p>The size of this buffer indicates the number of bytes read The address points to the start of the buffer passed into the <a class="reference internal" href="#classhal_1_1serial_1a69eaa352ef24788b38d36648a5c3f99f"><span class="std std-ref">read()</span></a> function. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial6read_t9availableE">
+<span id="_CPPv3N3hal6serial6read_t9availableE"></span><span id="_CPPv2N3hal6serial6read_t9availableE"></span><span id="hal::serial::read_t::available__s"></span><span class="target" id="structhal_1_1serial_1_1read__t_1a9a65d6dc025b66913775eb8ef4874eaf"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">available</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial6read_t9availableE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Number of enqueued and available to be read out bytes. </p>
+<p>This value can be equal to or exceed the value of capacity. In this situation, the number of bytes above the capacity are bytes that have been dropped. Not all drivers will indicate the number of bytes lost. It is up to the driver or application to decide what to do in this situation. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial6read_t8capacityE">
+<span id="_CPPv3N3hal6serial6read_t8capacityE"></span><span id="_CPPv2N3hal6serial6read_t8capacityE"></span><span id="hal::serial::read_t::capacity__s"></span><span class="target" id="structhal_1_1serial_1_1read__t_1a771e05da8e08a309dd66c983e93ded60"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">capacity</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial6read_t8capacityE" title="Link to this definition">#</a><br /></dt>
+<dd><p>The maximum number of bytes that the serial port can queue up. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settingsE">
+<span id="_CPPv3N3hal6serial8settingsE"></span><span id="_CPPv2N3hal6serial8settingsE"></span><span id="hal::serial::settings"></span><span class="target" id="structhal_1_1serial_1_1settings"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">settings</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial8settingsE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Generic settings for a standard serial device. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settings9stop_bitsE">
+<span id="_CPPv3N3hal6serial8settings9stop_bitsE"></span><span id="_CPPv2N3hal6serial8settings9stop_bitsE"></span><span class="target" id="structhal_1_1serial_1_1settings_1a27192674670505b197411273de941c03"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop_bits</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><a class="headerlink" href="#_CPPv4N3hal6serial8settings9stop_bitsE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set of available stop bits options. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settings9stop_bits3oneE">
+<span id="_CPPv3N3hal6serial8settings9stop_bits3oneE"></span><span id="_CPPv2N3hal6serial8settings9stop_bits3oneE"></span><span class="target" id="structhal_1_1serial_1_1settings_1a27192674670505b197411273de941c03af97c5d29941bfb1b2fdab0874906ab82"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">one</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial8settings9stop_bits3oneE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settings9stop_bits3twoE">
+<span id="_CPPv3N3hal6serial8settings9stop_bits3twoE"></span><span id="_CPPv2N3hal6serial8settings9stop_bits3twoE"></span><span class="target" id="structhal_1_1serial_1_1settings_1a27192674670505b197411273de941c03ab8a9f715dbb64fd5c56e7783c6820a61"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">two</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial8settings9stop_bits3twoE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settings6parityE">
+<span id="_CPPv3N3hal6serial8settings6parityE"></span><span id="_CPPv2N3hal6serial8settings6parityE"></span><span class="target" id="structhal_1_1serial_1_1settings_1aee797087091653ae671994c28528e1b1"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parity</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><a class="headerlink" href="#_CPPv4N3hal6serial8settings6parityE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set of parity bit options. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settings6parity4noneE">
+<span id="_CPPv3N3hal6serial8settings6parity4noneE"></span><span id="_CPPv2N3hal6serial8settings6parity4noneE"></span><span class="target" id="structhal_1_1serial_1_1settings_1aee797087091653ae671994c28528e1b1a334c4a4c42fdb79d7ebc3e73b517e6f8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">none</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial8settings6parity4noneE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Disable parity bit as part of the frame. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settings6parity3oddE">
+<span id="_CPPv3N3hal6serial8settings6parity3oddE"></span><span id="_CPPv2N3hal6serial8settings6parity3oddE"></span><span class="target" id="structhal_1_1serial_1_1settings_1aee797087091653ae671994c28528e1b1aa2b6f2a6066ed8700d83335fc50a2b8e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">odd</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial8settings6parity3oddE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Enable parity and set 1 (HIGH) when the number of bits is odd. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settings6parity4evenE">
+<span id="_CPPv3N3hal6serial8settings6parity4evenE"></span><span id="_CPPv2N3hal6serial8settings6parity4evenE"></span><span class="target" id="structhal_1_1serial_1_1settings_1aee797087091653ae671994c28528e1b1acc935c5faf4c8f7a0468d7552a9b8138"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">even</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial8settings6parity4evenE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Enable parity and set 1 (HIGH) when the number of bits is even. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settings6parity7forced1E">
+<span id="_CPPv3N3hal6serial8settings6parity7forced1E"></span><span id="_CPPv2N3hal6serial8settings6parity7forced1E"></span><span class="target" id="structhal_1_1serial_1_1settings_1aee797087091653ae671994c28528e1b1ab84b8cf8e4af79a2a4bee99694be7f33"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">forced1</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial8settings6parity7forced1E" title="Link to this definition">#</a><br /></dt>
+<dd><p>Enable parity bit and always return 1 (HIGH) for ever frame. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settings6parity7forced0E">
+<span id="_CPPv3N3hal6serial8settings6parity7forced0E"></span><span id="_CPPv2N3hal6serial8settings6parity7forced0E"></span><span class="target" id="structhal_1_1serial_1_1settings_1aee797087091653ae671994c28528e1b1a60f2dab25d32fc2bce590dc511a72dae"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">forced0</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial8settings6parity7forced0E" title="Link to this definition">#</a><br /></dt>
+<dd><p>Enable parity bit and always return 0 (LOW) for ever frame. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settings9baud_rateE">
+<span id="_CPPv3N3hal6serial8settings9baud_rateE"></span><span id="_CPPv2N3hal6serial8settings9baud_rateE"></span><span id="hal::serial::settings::baud_rate__hertz"></span><span class="target" id="structhal_1_1serial_1_1settings_1a172e43575366b280b3c613623daccab7"></span><a class="reference internal" href="units.html#_CPPv4N3hal5hertzE" title="hal::hertz"><span class="n"><span class="pre">hertz</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">baud_rate</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">115200.0f</span></span><a class="headerlink" href="#_CPPv4N3hal6serial8settings9baud_rateE" title="Link to this definition">#</a><br /></dt>
+<dd><p>The operating speed of the baud rate (in units of bits per second) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial8settings4stopE">
+<span id="_CPPv3N3hal6serial8settings4stopE"></span><span id="_CPPv2N3hal6serial8settings4stopE"></span><span id="hal::serial::settings::stop__stop_bits"></span><span class="target" id="structhal_1_1serial_1_1settings_1ab1962693d243656902829372fdaddd93"></span><a class="reference internal" href="#_CPPv4N3hal6serial8settings9stop_bitsE" title="hal::serial::settings::stop_bits"><span class="n"><span class="pre">stop_bits</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6serial8settings9stop_bitsE" title="hal::serial::settings::stop_bits"><span class="n"><span class="pre">stop_bits</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal6serial8settings9stop_bits3oneE" title="hal::serial::settings::stop_bits::one"><span class="n"><span class="pre">one</span></span></a><a class="headerlink" href="#_CPPv4N3hal6serial8settings4stopE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Number of stop bits for each frame. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp">
+<span class="target" id="structhal_1_1serial_1_1settings_1a3258bc17846d6170f9f6603fe3de3006"></span><a class="reference internal" href="#_CPPv4N3hal6serial8settings6parityE" title="hal::serial::settings::parity"><span class="n"><span class="pre">parity</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6serial8settings6parityE" title="hal::serial::settings::parity"><span class="n"><span class="pre">parity</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal6serial8settings6parity4noneE" title="hal::serial::settings::parity::none"><span class="n"><span class="pre">none</span></span></a><br /></dt>
+<dd><p>Parity bit type for each frame. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial7write_tE">
+<span id="_CPPv3N3hal6serial7write_tE"></span><span id="_CPPv2N3hal6serial7write_tE"></span><span id="hal::serial::write_t"></span><span class="target" id="structhal_1_1serial_1_1write__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_t</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial7write_tE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Return type for serial write operations. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6serial7write_t4dataE">
+<span id="_CPPv3N3hal6serial7write_t4dataE"></span><span id="_CPPv2N3hal6serial7write_t4dataE"></span><span id="hal::serial::write_t::data__std::span:hal::byteC:"></span><span class="target" id="structhal_1_1serial_1_1write__t_1a41bc5b60fbbcce4d473acac9f079fbce"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><a class="headerlink" href="#_CPPv4N3hal6serial7write_t4dataE" title="Link to this definition">#</a><br /></dt>
+<dd><p>The portion of the buffer transmitted. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="utilities">
+<h2>Utilities<a class="headerlink" href="#utilities" title="Link to this heading">#</a></h2>
+<p>Defined in namespace <code class="docutils literal notranslate"><span class="pre">hal</span></code></p>
+<p><em>#include &lt;libhal-util/serial.hpp&gt;</em></p>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___serial"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">Serial</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4eqRKN6serial8settingsERKN6serial8settingsE">
+<span id="_CPPv3eqRKN6serial8settingsERKN6serial8settingsE"></span><span id="_CPPv2eqRKN6serial8settingsERKN6serial8settingsE"></span><span id="eq-operator__serial::settingsCR.serial::settingsCRCE"></span><span class="target" id="group___serial_1gae6befae6d30bba3d9f8758cb069b65df"></span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">serial</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">settings</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_lhs</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">serial</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">settings</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_rhs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4eqRKN6serial8settingsERKN6serial8settingsE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Compares two serial objects via their settings. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_lhs</strong> – A serial object </p></li>
+<li><p><strong>p_rhs</strong> – A serial object </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A boolean if they are the same or not. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413write_partialR6serialNSt4spanIKN3hal4byteEEE">
+<span id="_CPPv313write_partialR6serialNSt4spanIKN3hal4byteEEE"></span><span id="_CPPv213write_partialR6serialNSt4spanIKN3hal4byteEEE"></span><span id="write_partial__serialR.std::span:hal::byteC:"></span><span class="target" id="group___serial_1gab8a558a4de3cc35cbb1ce1d36b87fb08"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">serial</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">write_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_partial</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413write_partialR6serialNSt4spanIKN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Write bytes to a serial port. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - the serial port that will be written to </p></li>
+<li><p><strong>p_data_out</strong> – - the data to be written out the port </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result&lt;serial::write_t&gt; - get the results of the uart port write operation. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv45writeR6serialNSt4spanIKN3hal4byteEEE">
+<span id="_CPPv35writeR6serialNSt4spanIKN3hal4byteEEE"></span><span id="_CPPv25writeR6serialNSt4spanIKN3hal4byteEEE"></span><span id="write__serialR.std::span:hal::byteC:"></span><span class="target" id="group___serial_1ga5adac281f53817b947fe1081f0acdba2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">status</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv45writeR6serialNSt4spanIKN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Write bytes to a serial port. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - the serial port that will be written to </p></li>
+<li><p><strong>p_data_out</strong> – - the data to be written out the port </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>status - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv45writeR6serialNSt11string_viewE">
+<span id="_CPPv35writeR6serialNSt11string_viewE"></span><span id="_CPPv25writeR6serialNSt11string_viewE"></span><span id="write__serialR.std::string_view"></span><span class="target" id="group___serial_1ga75449d82173a1cef5d93b2dc98117c01"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">status</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv45writeR6serialNSt11string_viewE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Write std::span of const char to a serial port. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - the serial port that will be written to </p></li>
+<li><p><strong>p_data_out</strong> – - chars to be written out the port </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>status - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv44readR6serialNSt4spanIN3hal4byteEEE7timeout">
+<span id="_CPPv34readR6serialNSt4spanIN3hal4byteEEE7timeout"></span><span id="_CPPv24readR6serialNSt4spanIN3hal4byteEEE7timeout"></span><span id="read__serialR.std::span:hal::byte:.timeout"></span><span class="target" id="group___serial_1ga3c7c3cc287602089caf9b6d0a7c7fa09"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_in</span></span>, <span class="n"><span class="pre">timeout</span></span><span class="w"> </span><span class="k"><span class="pre">auto</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv44readR6serialNSt4spanIN3hal4byteEEE7timeout" title="Link to this definition">#</a><br /></dt>
+<dd><p>Read bytes from a serial port. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - the serial port that will be read from </p></li>
+<li><p><strong>p_data_in</strong> – - buffer to have bytes from the serial port read into </p></li>
+<li><p><strong>p_timeout</strong> – - timeout callable that indicates when to bail out of the read operation. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result&lt;std::span&lt;hal::byte&gt;&gt; - return an error if a call to <a class="reference internal" href="#classhal_1_1serial_1a69eaa352ef24788b38d36648a5c3f99f"><span class="std std-ref">serial::read</span></a> or <a class="reference internal" href="timeout.html#group___timeout_core_1gaf5c62735e63bf161eac50062128e1550"><span class="std std-ref">delay()</span></a> returns an error from the serial port or a span with the number of bytes read and a pointer to where the read bytes are. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER6serial7timeout">
+<span id="_CPPv3I_6size_tE4readR6serial7timeout"></span><span id="_CPPv2I_6size_tE4readR6serial7timeout"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BytesToRead</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="group___serial_1gaeff335b1772500b809022e6b9d3394d5"></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER6serial7timeout" title="read::BytesToRead"><span class="n"><span class="pre">BytesToRead</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">timeout</span></span><span class="w"> </span><span class="k"><span class="pre">auto</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER6serial7timeout" title="Link to this definition">#</a><br /></dt>
+<dd><p>Read bytes from a serial port and return an array. </p>
+<p>This call eliminates the boiler plate of creating an array and then passing that to the read function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>BytesToRead</strong> – - the number of bytes to be read from the serial port. </p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>p_serial</strong> – - the serial port to be read from </p></li>
+<li><p><strong>p_timeout</strong> – - timeout callable that indicates when to bail out of the read operation. </p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; - return an error if a call to <a class="reference internal" href="#classhal_1_1serial_1a69eaa352ef24788b38d36648a5c3f99f"><span class="std std-ref">serial::read</span></a> or <a class="reference internal" href="timeout.html#group___timeout_core_1gaf5c62735e63bf161eac50062128e1550"><span class="std std-ref">delay()</span></a> returns an error from the serial port or a span with the number of bytes read and a pointer to where the read bytes are. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415write_then_readR6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE7timeout">
+<span id="_CPPv315write_then_readR6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE7timeout"></span><span id="_CPPv215write_then_readR6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE7timeout"></span><span id="write_then_read__serialR.std::span:hal::byteC:.std::span:hal::byte:.timeout"></span><span class="target" id="group___serial_1ga0af54ac1728b8461ace875aac1ef022b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_then_read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_out</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_in</span></span>, <span class="n"><span class="pre">timeout</span></span><span class="w"> </span><span class="k"><span class="pre">auto</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415write_then_readR6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE7timeout" title="Link to this definition">#</a><br /></dt>
+<dd><p>Perform a write then read transaction over serial. </p>
+<p>This is especially useful for devices that use a command and response method of communication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - the serial port to have the transaction occur on </p></li>
+<li><p><strong>p_data_out</strong> – - the data to be written to the port </p></li>
+<li><p><strong>p_data_in</strong> – - a buffer to receive the bytes back from the port </p></li>
+<li><p><strong>p_timeout</strong> – - timeout callable that indicates when to bail out of the read operation. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>status - success or failure or <a class="reference internal" href="#classhal_1_1serial_1a9a7a63f71b908b9c3cd061c52df55df8"><span class="std std-ref">serial::write()</span></a> returns an error from the serial port or success. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER6serialNSt4spanIKN3hal4byteEEE7timeout">
+<span id="_CPPv3I_6size_tE15write_then_readR6serialNSt4spanIKN3hal4byteEEE7timeout"></span><span id="_CPPv2I_6size_tE15write_then_readR6serialNSt4spanIKN3hal4byteEEE7timeout"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BytesToRead</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="group___serial_1ga41426e8c1ab23ed544215ea068477c13"></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER6serialNSt4spanIKN3hal4byteEEE7timeout" title="write_then_read::BytesToRead"><span class="n"><span class="pre">BytesToRead</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_then_read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_out</span></span>, <span class="n"><span class="pre">timeout</span></span><span class="w"> </span><span class="k"><span class="pre">auto</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER6serialNSt4spanIKN3hal4byteEEE7timeout" title="Link to this definition">#</a><br /></dt>
+<dd><p>Perform a write then read transaction over serial. </p>
+<p>This is especially useful for devices that use a command and response method of communication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>BytesToRead</strong> – - the number of bytes to read back </p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>p_serial</strong> – - the serial port to have the transaction occur on </p></li>
+<li><p><strong>p_data_out</strong> – - the data to be written to the port </p></li>
+<li><p><strong>p_timeout</strong> – - timeout callable that indicates when to bail out of the read operation. </p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; - return an error if a call to <a class="reference internal" href="#classhal_1_1serial_1a69eaa352ef24788b38d36648a5c3f99f"><span class="std std-ref">serial::read</span></a> or <a class="reference internal" href="#classhal_1_1serial_1a9a7a63f71b908b9c3cd061c52df55df8"><span class="std std-ref">serial::write()</span></a> returns an error from the serial port or an array of read bytes. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0E5printvR6serialRR9DataArray">
+<span id="_CPPv3I0E5printR6serialRR9DataArray"></span><span id="_CPPv2I0E5printR6serialRR9DataArray"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataArray</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="group___serial_1ga299699f3b19c4ab26cbb91c7e6273a30"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <a class="reference internal" href="#_CPPv4I0E5printvR6serialRR9DataArray" title="print::DataArray"><span class="n"><span class="pre">DataArray</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0E5printvR6serialRR9DataArray" title="Link to this definition">#</a><br /></dt>
+<dd><p>Write data to serial buffer and drop return value. </p>
+<p>Only use this with serial ports with infallible write operations, meaning they will never return an error result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>DataArray</strong> – - data array type </p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>p_serial</strong> – - serial port to write data to </p></li>
+<li><p><strong>p_data</strong> – - data to be sent over the serial port </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_6size_tDpE5printvR6serialPKcDp10Parameters">
+<span id="_CPPv3I_6size_tDpE5printR6serialPKcDp10Parameters"></span><span id="_CPPv2I_6size_tDpE5printR6serialPKcDp10Parameters"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BufferSize</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Parameters</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="group___serial_1ga39a93c6f5e9a2a3dd6f72c6fa122a7f6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">p_format</span></span>, <a class="reference internal" href="#_CPPv4I_6size_tDpE5printvR6serialPKcDp10Parameters" title="print::Parameters"><span class="n"><span class="pre">Parameters</span></span></a><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_parameters</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_6size_tDpE5printvR6serialPKcDp10Parameters" title="Link to this definition">#</a><br /></dt>
+<dd><p>Write formatted string data to serial buffer and drop return value. </p>
+<p>Uses snprintf internally and writes to a local statically allocated an array. This function will never dynamically allocate like how standard std::printf does.</p>
+<p>This function does NOT include the NULL character when transmitting the data over the serial port.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>BufferSize</strong> – - Size of the buffer to allocate on the stack to store the formatted message. </p></li>
+<li><p><strong>Parameters</strong> – - printf arguments </p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>p_serial</strong> – - serial port to write data to </p></li>
+<li><p><strong>p_format</strong> – - printf style null terminated format string </p></li>
+<li><p><strong>p_parameters</strong> – - printf arguments </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="coroutines">
+<h2>Coroutines<a class="headerlink" href="#coroutines" title="Link to this heading">#</a></h2>
+<p><em>#include &lt;libhal-util/serial_coroutines.hpp&gt;</em></p>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___serial_coroutines"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">SerialCoroutines</span></span></dt>
+<dd><p>A collection of functions and other utilities used for asynchronous coroutines with serial communication. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49skip_pastR6serialNSt4spanIKN3hal4byteEEE6size_t">
+<span id="_CPPv39skip_pastR6serialNSt4spanIKN3hal4byteEEE6size_t"></span><span id="_CPPv29skip_pastR6serialNSt4spanIKN3hal4byteEEE6size_t"></span><span id="skip_past__serialR.std::span:hal::byteC:.s"></span><span class="target" id="group___serial_coroutines_1ga964736764c97423d666948bc84413ad8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">skip_past</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_sequence</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_read_limit</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">32</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49skip_pastR6serialNSt4spanIKN3hal4byteEEE6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new skip beyond object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - serial port to skip through </p></li>
+<li><p><strong>p_sequence</strong> – - sequence to search for. The lifetime of this data pointed to by this span must outlive this object, or not be used when the lifetime of that data is no longer available. </p></li>
+<li><p><strong>p_read_limit</strong> – - the maximum number read attempts from the port before returning. A value 0 will result in no reads from the serial port. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4clv">
+<span id="_CPPv3clv"></span><span id="_CPPv2clv"></span><span id="call-operator"></span><span class="target" id="group___serial_coroutines_1ga3a7b5450276eb6db97240cda47572325"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="timeout.html#_CPPv410work_state" title="work_state"><span class="n"><span class="pre">work_state</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4clv" title="Link to this definition">#</a><br /></dt>
+<dd><p>skip data from the serial port until the sequence is reached. </p>
+<p>This function will return if the sequence is found or if there are no more bytes in the serial port.</p>
+<p>Call this function again to resume reading from the port.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;work_state&gt; - work_state::in_progress if the sequence hasn’t been met and the buffer still has space. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result&lt;work_state&gt; - work_state::finished if the sequence was found before the buffer was filled completely. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49read_intoR6serialNSt4spanIN3hal4byteEEE6size_t">
+<span id="_CPPv39read_intoR6serialNSt4spanIN3hal4byteEEE6size_t"></span><span id="_CPPv29read_intoR6serialNSt4spanIN3hal4byteEEE6size_t"></span><span id="read_into__serialR.std::span:hal::byte:.s"></span><span class="target" id="group___serial_coroutines_1gaf1438a078288c0c8fbbd90dca0c54867"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_into</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_buffer</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_read_limit</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">32</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49read_intoR6serialNSt4spanIN3hal4byteEEE6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classhal_1_1read__into"><span class="std std-ref">read_into</span></a> object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - serial port to skip through </p></li>
+<li><p><strong>p_buffer</strong> – - buffer to read data into </p></li>
+<li><p><strong>p_read_limit</strong> – - the maximum number read attempts from the port before returning. A value 0 will result in no reads from the serial port. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="group___serial_coroutines_1gad93dcc3eba3a4304ae40a9858a5ca611"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="timeout.html#_CPPv410work_state" title="work_state"><span class="n"><span class="pre">work_state</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>read data into the buffer. </p>
+<p>This function will return if the read limit is reached or if there are no more bytes in the serial port.</p>
+<p>Call this function again to resume reading from the port.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;work_state&gt; - work_state::in_progress if the sequence hasn’t been met and the buffer still has space. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result&lt;work_state&gt; - work_state::finished if the sequence was found before the buffer was filled completely. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49read_uptoR6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE6size_t">
+<span id="_CPPv39read_uptoR6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE6size_t"></span><span id="_CPPv29read_uptoR6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE6size_t"></span><span id="read_upto__serialR.std::span:hal::byteC:.std::span:hal::byte:.s"></span><span class="target" id="group___serial_coroutines_1ga9e95ef2ca05309b6a5dbf9d1d5ba5ee4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_upto</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_sequence</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_buffer</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_read_limit</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">32</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49read_uptoR6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new skip beyond object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - serial port to skip through </p></li>
+<li><p><strong>p_sequence</strong> – - sequence to search for. The lifetime of this data pointed to by this span must outlive this object, or not be used when the lifetime of that data is no longer available. </p></li>
+<li><p><strong>p_buffer</strong> – - buffer to fill data into </p></li>
+<li><p><strong>p_read_limit</strong> – - the maximum number of bytes to read off from the serial port before returning. A value 0 will result in no reads from the serial port. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="group___serial_coroutines_1gadabb4133577f7cdb1aaa06008f5e45f5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="timeout.html#_CPPv410work_state" title="work_state"><span class="n"><span class="pre">work_state</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>read data into the buffer. </p>
+<p>This function will return if the read limit is reached or if there are no more bytes in the serial port.</p>
+<p>Call this function again to resume reading from the port.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;work_state&gt; - work_state::in_progress if the sequence hasn’t been met and the buffer still has space. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result&lt;work_state&gt; - work_state::failed if the sequence wasn’t found before the buffer was filled completely. </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;work_state&gt; - work_state::finished if the sequence was found before the buffer was filled completely. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411read_uint32R6serial6size_t">
+<span id="_CPPv311read_uint32R6serial6size_t"></span><span id="_CPPv211read_uint32R6serial6size_t"></span><span id="read_uint32__serialR.s"></span><span class="target" id="group___serial_coroutines_1gacc3c1598e7cd20832a76fc130fe7f32e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_uint32</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">serial</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_read_limit</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">32</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411read_uint32R6serial6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classhal_1_1read__uint32"><span class="std std-ref">read_uint32</span></a> object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - serial port to skip through </p></li>
+<li><p><strong>p_read_limit</strong> – - the maximum number read attempts from the port before returning. A value 0 will result in no reads from the serial port. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="group___serial_coroutines_1ga3f76c03812a29aba5f9e81258f6de739"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="timeout.html#_CPPv410work_state" title="work_state"><span class="n"><span class="pre">work_state</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>parse serial data and convert to an integer </p>
+<p>This function will return if an integer ws found or no more bytes in the serial port.</p>
+<p>Call this function again to resume reading from the port.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;work_state&gt; - work_state::in_progress - if an integer hasn’t been found </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result&lt;work_state&gt; - work_state::finished - integer has been found and a non-integer byte has also been found. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal9skip_pastE">
+<span id="_CPPv3N3hal9skip_pastE"></span><span id="_CPPv2N3hal9skip_pastE"></span><span id="hal::skip_past"></span><span class="target" id="classhal_1_1skip__past"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">skip_past</span></span></span><a class="headerlink" href="#_CPPv4N3hal9skip_pastE" title="Link to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;serial_coroutines.hpp&gt;</em></div>
+<p>Discard received bytes until the sequence is found. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal9skip_past9skip_pastER6serialNSt4spanIKN3hal4byteEEE6size_t">
+<span id="_CPPv3N3hal9skip_past9skip_pastER6serialNSt4spanIKN3hal4byteEEE6size_t"></span><span id="_CPPv2N3hal9skip_past9skip_pastER6serialNSt4spanIKN3hal4byteEEE6size_t"></span><span id="hal::skip_past::skip_past__serialR.std::span:hal::byteC:.s"></span><span class="target" id="group___serial_coroutines_1ga964736764c97423d666948bc84413ad8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">skip_past</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3hal6serialE" title="hal::serial"><span class="n"><span class="pre">serial</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_sequence</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_read_limit</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">32</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal9skip_past9skip_pastER6serialNSt4spanIKN3hal4byteEEE6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new skip beyond object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - serial port to skip through </p></li>
+<li><p><strong>p_sequence</strong> – - sequence to search for. The lifetime of this data pointed to by this span must outlive this object, or not be used when the lifetime of that data is no longer available. </p></li>
+<li><p><strong>p_read_limit</strong> – - the maximum number read attempts from the port before returning. A value 0 will result in no reads from the serial port. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal9skip_pastclEv">
+<span id="_CPPv3N3hal9skip_pastclEv"></span><span id="_CPPv2N3hal9skip_pastclEv"></span><span id="hal::skip_past::call-operator"></span><span class="target" id="group___serial_coroutines_1ga3a7b5450276eb6db97240cda47572325"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="timeout.html#_CPPv410work_state" title="work_state"><span class="n"><span class="pre">work_state</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal9skip_pastclEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>skip data from the serial port until the sequence is reached. </p>
+<p>This function will return if the sequence is found or if there are no more bytes in the serial port.</p>
+<p>Call this function again to resume reading from the port.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;work_state&gt; - work_state::in_progress if the sequence hasn’t been met and the buffer still has space. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result&lt;work_state&gt; - work_state::finished if the sequence was found before the buffer was filled completely. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal9read_intoE">
+<span id="_CPPv3N3hal9read_intoE"></span><span id="_CPPv2N3hal9read_intoE"></span><span id="hal::read_into"></span><span class="target" id="classhal_1_1read__into"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_into</span></span></span><a class="headerlink" href="#_CPPv4N3hal9read_intoE" title="Link to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;serial_coroutines.hpp&gt;</em></div>
+<p>Non-blocking callable for reading serial data into a buffer. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal9read_into9read_intoER6serialNSt4spanIN3hal4byteEEE6size_t">
+<span id="_CPPv3N3hal9read_into9read_intoER6serialNSt4spanIN3hal4byteEEE6size_t"></span><span id="_CPPv2N3hal9read_into9read_intoER6serialNSt4spanIN3hal4byteEEE6size_t"></span><span id="hal::read_into::read_into__serialR.std::span:hal::byte:.s"></span><span class="target" id="group___serial_coroutines_1gaf1438a078288c0c8fbbd90dca0c54867"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_into</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3hal6serialE" title="hal::serial"><span class="n"><span class="pre">serial</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_buffer</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_read_limit</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">32</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal9read_into9read_intoER6serialNSt4spanIN3hal4byteEEE6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classhal_1_1read__into"><span class="std std-ref">read_into</span></a> object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - serial port to skip through </p></li>
+<li><p><strong>p_buffer</strong> – - buffer to read data into </p></li>
+<li><p><strong>p_read_limit</strong> – - the maximum number read attempts from the port before returning. A value 0 will result in no reads from the serial port. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal9read_intoclEv">
+<span id="_CPPv3N3hal9read_intoclEv"></span><span id="_CPPv2N3hal9read_intoclEv"></span><span id="hal::read_into::call-operator"></span><span class="target" id="group___serial_coroutines_1gad93dcc3eba3a4304ae40a9858a5ca611"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="timeout.html#_CPPv410work_state" title="work_state"><span class="n"><span class="pre">work_state</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal9read_intoclEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>read data into the buffer. </p>
+<p>This function will return if the read limit is reached or if there are no more bytes in the serial port.</p>
+<p>Call this function again to resume reading from the port.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;work_state&gt; - work_state::in_progress if the sequence hasn’t been met and the buffer still has space. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result&lt;work_state&gt; - work_state::finished if the sequence was found before the buffer was filled completely. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal9read_uptoE">
+<span id="_CPPv3N3hal9read_uptoE"></span><span id="_CPPv2N3hal9read_uptoE"></span><span id="hal::read_upto"></span><span class="target" id="classhal_1_1read__upto"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_upto</span></span></span><a class="headerlink" href="#_CPPv4N3hal9read_uptoE" title="Link to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;serial_coroutines.hpp&gt;</em></div>
+<p>Discard received bytes until the sequence is found. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal9read_upto9read_uptoER6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE6size_t">
+<span id="_CPPv3N3hal9read_upto9read_uptoER6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE6size_t"></span><span id="_CPPv2N3hal9read_upto9read_uptoER6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE6size_t"></span><span id="hal::read_upto::read_upto__serialR.std::span:hal::byteC:.std::span:hal::byte:.s"></span><span class="target" id="group___serial_coroutines_1ga9e95ef2ca05309b6a5dbf9d1d5ba5ee4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_upto</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3hal6serialE" title="hal::serial"><span class="n"><span class="pre">serial</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_sequence</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_buffer</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_read_limit</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">32</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal9read_upto9read_uptoER6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new skip beyond object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - serial port to skip through </p></li>
+<li><p><strong>p_sequence</strong> – - sequence to search for. The lifetime of this data pointed to by this span must outlive this object, or not be used when the lifetime of that data is no longer available. </p></li>
+<li><p><strong>p_buffer</strong> – - buffer to fill data into </p></li>
+<li><p><strong>p_read_limit</strong> – - the maximum number of bytes to read off from the serial port before returning. A value 0 will result in no reads from the serial port. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal9read_uptoclEv">
+<span id="_CPPv3N3hal9read_uptoclEv"></span><span id="_CPPv2N3hal9read_uptoclEv"></span><span id="hal::read_upto::call-operator"></span><span class="target" id="group___serial_coroutines_1gadabb4133577f7cdb1aaa06008f5e45f5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="timeout.html#_CPPv410work_state" title="work_state"><span class="n"><span class="pre">work_state</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal9read_uptoclEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>read data into the buffer. </p>
+<p>This function will return if the read limit is reached or if there are no more bytes in the serial port.</p>
+<p>Call this function again to resume reading from the port.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;work_state&gt; - work_state::in_progress if the sequence hasn’t been met and the buffer still has space. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result&lt;work_state&gt; - work_state::failed if the sequence wasn’t found before the buffer was filled completely. </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;work_state&gt; - work_state::finished if the sequence was found before the buffer was filled completely. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal11read_uint32E">
+<span id="_CPPv3N3hal11read_uint32E"></span><span id="_CPPv2N3hal11read_uint32E"></span><span id="hal::read_uint32"></span><span class="target" id="classhal_1_1read__uint32"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_uint32</span></span></span><a class="headerlink" href="#_CPPv4N3hal11read_uint32E" title="Link to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;serial_coroutines.hpp&gt;</em></div>
+<p>Read bytes from serial port and convert to integer. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal11read_uint3211read_uint32ER6serial6size_t">
+<span id="_CPPv3N3hal11read_uint3211read_uint32ER6serial6size_t"></span><span id="_CPPv2N3hal11read_uint3211read_uint32ER6serial6size_t"></span><span id="hal::read_uint32::read_uint32__serialR.s"></span><span class="target" id="group___serial_coroutines_1gacc3c1598e7cd20832a76fc130fe7f32e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_uint32</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3hal6serialE" title="hal::serial"><span class="n"><span class="pre">serial</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_serial</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_read_limit</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">32</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal11read_uint3211read_uint32ER6serial6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classhal_1_1read__uint32"><span class="std std-ref">read_uint32</span></a> object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_serial</strong> – - serial port to skip through </p></li>
+<li><p><strong>p_read_limit</strong> – - the maximum number read attempts from the port before returning. A value 0 will result in no reads from the serial port. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal11read_uint32clEv">
+<span id="_CPPv3N3hal11read_uint32clEv"></span><span id="_CPPv2N3hal11read_uint32clEv"></span><span id="hal::read_uint32::call-operator"></span><span class="target" id="group___serial_coroutines_1ga3f76c03812a29aba5f9e81258f6de739"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="timeout.html#_CPPv410work_state" title="work_state"><span class="n"><span class="pre">work_state</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal11read_uint32clEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>parse serial data and convert to an integer </p>
+<p>This function will return if an integer ws found or no more bytes in the serial port.</p>
+<p>Call this function again to resume reading from the port.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;work_state&gt; - work_state::in_progress - if an integer hasn’t been found </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result&lt;work_state&gt; - work_state::finished - integer has been found and a non-integer byte has also been found. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal11read_uint323getEv">
+<span id="_CPPv3N3hal11read_uint323getEv"></span><span id="_CPPv2N3hal11read_uint323getEv"></span><span id="hal::read_uint32::get"></span><span class="target" id="classhal_1_1read__uint32_1a8942693327c3c259bd225b5cca156d3a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal11read_uint323getEv" title="Link to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>std::optional&lt;uint32_t&gt; - integer if the parsing is finished or std::nullopt </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rotation_sensor.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Rotational Sensor</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="servo.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Servo</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-interface">Hardware Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serialE"><code class="docutils literal notranslate"><span class="pre">serial</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial9configureERK8settings"><code class="docutils literal notranslate"><span class="pre">serial::configure()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial5writeENSt4spanIKN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">serial::write()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial4readENSt4spanIN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">serial::read()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial5flushEv"><code class="docutils literal notranslate"><span class="pre">serial::flush()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial7flush_tE"><code class="docutils literal notranslate"><span class="pre">serial::flush_t</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial6read_tE"><code class="docutils literal notranslate"><span class="pre">serial::read_t</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial6read_t4dataE"><code class="docutils literal notranslate"><span class="pre">serial::read_t::data</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial6read_t9availableE"><code class="docutils literal notranslate"><span class="pre">serial::read_t::available</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial6read_t8capacityE"><code class="docutils literal notranslate"><span class="pre">serial::read_t::capacity</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settingsE"><code class="docutils literal notranslate"><span class="pre">serial::settings</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settings9stop_bitsE"><code class="docutils literal notranslate"><span class="pre">serial::settings::stop_bits</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settings9stop_bits3oneE"><code class="docutils literal notranslate"><span class="pre">serial::settings::stop_bits::one</span></code></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settings9stop_bits3twoE"><code class="docutils literal notranslate"><span class="pre">serial::settings::stop_bits::two</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settings6parityE"><code class="docutils literal notranslate"><span class="pre">serial::settings::parity</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settings6parity4noneE"><code class="docutils literal notranslate"><span class="pre">serial::settings::parity::none</span></code></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settings6parity3oddE"><code class="docutils literal notranslate"><span class="pre">serial::settings::parity::odd</span></code></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settings6parity4evenE"><code class="docutils literal notranslate"><span class="pre">serial::settings::parity::even</span></code></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settings6parity7forced1E"><code class="docutils literal notranslate"><span class="pre">serial::settings::parity::forced1</span></code></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settings6parity7forced0E"><code class="docutils literal notranslate"><span class="pre">serial::settings::parity::forced0</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settings9baud_rateE"><code class="docutils literal notranslate"><span class="pre">serial::settings::baud_rate</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial8settings4stopE"><code class="docutils literal notranslate"><span class="pre">serial::settings::stop</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial7write_tE"><code class="docutils literal notranslate"><span class="pre">serial::write_t</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6serial7write_t4dataE"><code class="docutils literal notranslate"><span class="pre">serial::write_t::data</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utilities">Utilities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4eqRKN6serial8settingsERKN6serial8settingsE"><code class="docutils literal notranslate"><span class="pre">operator==()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv413write_partialR6serialNSt4spanIKN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">write_partial()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv45writeR6serialNSt4spanIKN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv45writeR6serialNSt11string_viewE"><code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv44readR6serialNSt4spanIN3hal4byteEEE7timeout"><code class="docutils literal notranslate"><span class="pre">read()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER6serial7timeout"><code class="docutils literal notranslate"><span class="pre">read()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv415write_then_readR6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE7timeout"><code class="docutils literal notranslate"><span class="pre">write_then_read()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER6serialNSt4spanIKN3hal4byteEEE7timeout"><code class="docutils literal notranslate"><span class="pre">write_then_read()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0E5printvR6serialRR9DataArray"><code class="docutils literal notranslate"><span class="pre">print()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I_6size_tDpE5printvR6serialPKcDp10Parameters"><code class="docutils literal notranslate"><span class="pre">print()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coroutines">Coroutines</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv49skip_pastR6serialNSt4spanIKN3hal4byteEEE6size_t"><code class="docutils literal notranslate"><span class="pre">skip_past()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4clv"><code class="docutils literal notranslate"><span class="pre">operator()()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv49read_intoR6serialNSt4spanIN3hal4byteEEE6size_t"><code class="docutils literal notranslate"><span class="pre">read_into()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv49read_uptoR6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE6size_t"><code class="docutils literal notranslate"><span class="pre">read_upto()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv411read_uint32R6serial6size_t"><code class="docutils literal notranslate"><span class="pre">read_uint32()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal9skip_pastE"><code class="docutils literal notranslate"><span class="pre">skip_past</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal9skip_past9skip_pastER6serialNSt4spanIKN3hal4byteEEE6size_t"><code class="docutils literal notranslate"><span class="pre">skip_past::skip_past()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal9skip_pastclEv"><code class="docutils literal notranslate"><span class="pre">skip_past::operator()()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal9read_intoE"><code class="docutils literal notranslate"><span class="pre">read_into</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal9read_into9read_intoER6serialNSt4spanIN3hal4byteEEE6size_t"><code class="docutils literal notranslate"><span class="pre">read_into::read_into()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal9read_intoclEv"><code class="docutils literal notranslate"><span class="pre">read_into::operator()()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal9read_uptoE"><code class="docutils literal notranslate"><span class="pre">read_upto</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal9read_upto9read_uptoER6serialNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE6size_t"><code class="docutils literal notranslate"><span class="pre">read_upto::read_upto()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal9read_uptoclEv"><code class="docutils literal notranslate"><span class="pre">read_upto::operator()()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal11read_uint32E"><code class="docutils literal notranslate"><span class="pre">read_uint32</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal11read_uint3211read_uint32ER6serial6size_t"><code class="docutils literal notranslate"><span class="pre">read_uint32::read_uint32()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal11read_uint32clEv"><code class="docutils literal notranslate"><span class="pre">read_uint32::operator()()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal11read_uint323getEv"><code class="docutils literal notranslate"><span class="pre">read_uint32::get()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/libhal/serial.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

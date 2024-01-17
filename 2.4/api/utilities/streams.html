@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Streams &#8212; libhal  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'utilities/streams';</script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="To Array" href="to_array.html" />
+    <link rel="prev" title="Static List" href="static_list.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="libhal  documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="libhal  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="2" aria-label="Site Navigation">
+    </p>
+    <ul class="bd-navbar-elements navbar-nav">
+        <li class="nav-item dropdown">
+            <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                Guides
+            </button>
+            <ul id="pst-nav-more-links" class="dropdown-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href=/2.4/>
+                        🏡 Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href="/2.4/getting_started/">
+                        🚀 Getting Started
+                    </a>
+                </li>
+
+                <li class=" nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/user_guide/fundamentals">
+                        📖 User Guide
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/contributor_guide/philosophy">
+                        📚 Contributor Guides
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/project_information/status">
+                        📊 Project Information
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</nav></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../libhal/index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../libhal/index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous Utilities</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="as_bytes.html">As Bytes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bit.html">Bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bit_limits.html">Bit Limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison.html">Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enum.html">Enum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map.html">Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math.html">Math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="move_interceptor.html">Move Interceptor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overflow_counter.html">Overflow Counter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="static_callable.html">Static Callable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="static_list.html">Static List</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="to_array.html">To Array</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">libhal Utilities API Documentation</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Streams</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="streams">
+<h1>Streams<a class="headerlink" href="#streams" title="Link to this heading">#</a></h1>
+<p>Defined in namespace <code class="docutils literal notranslate"><span class="pre">hal</span></code></p>
+<p><em>#include &lt;libhal-util/streams.hpp&gt;</em></p>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___streams"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">Streams</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411stream_findNSt4spanIKN3hal4byteEEE">
+<span id="_CPPv311stream_findNSt4spanIKN3hal4byteEEE"></span><span id="_CPPv211stream_findNSt4spanIKN3hal4byteEEE"></span><span id="stream_find__std::span:hal::byteC:"></span><span class="target" id="group___streams_1gafd1bede750087da145515d1605eeb4f9"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_find</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../libhal/units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../libhal/units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_sequence</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411stream_findNSt4spanIKN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new find object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p_sequence</strong> – - sequence to search for. The lifetime of this data pointed to by this span must outlive this object, or not be used when the lifetime of that data is no longer available. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411stream_fillNSt4spanIN3hal4byteEEE">
+<span id="_CPPv311stream_fillNSt4spanIN3hal4byteEEE"></span><span id="_CPPv211stream_fillNSt4spanIN3hal4byteEEE"></span><span id="stream_fill__std::span:hal::byte:"></span><span class="target" id="group___streams_1gaa35a373282bc160ce202928cdd08ff9e"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_fill</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../libhal/units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../libhal/units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_buffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411stream_fillNSt4spanIN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new fill object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p_buffer</strong> – - buffer to read data into </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411stream_fillNSt4spanIN3hal4byteEEERK6size_t">
+<span id="_CPPv311stream_fillNSt4spanIN3hal4byteEEERK6size_t"></span><span id="_CPPv211stream_fillNSt4spanIN3hal4byteEEERK6size_t"></span><span id="stream_fill__std::span:hal::byte:.sCR"></span><span class="target" id="group___streams_1ga4c5c5a2a232145024f027eaa8d203a2c"></span><span class="sig-name descname"><span class="n"><span class="pre">stream_fill</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../libhal/units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../libhal/units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_buffer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_fill_amount</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411stream_fillNSt4spanIN3hal4byteEEERK6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new fill object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_buffer</strong> – - buffer to read data into </p></li>
+<li><p><strong>p_fill_amount</strong> – - reference to a size value to limit the fill amount by. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416stream_fill_uptoNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE">
+<span id="_CPPv316stream_fill_uptoNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE"></span><span id="_CPPv216stream_fill_uptoNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE"></span><span id="stream_fill_upto__std::span:hal::byteC:.std::span:hal::byte:"></span><span class="target" id="group___streams_1ga5236e2cd2330847248eaa39f27c27496"></span><span class="sig-name descname"><span class="n"><span class="pre">stream_fill_upto</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../libhal/units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../libhal/units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_sequence</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../libhal/units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../libhal/units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_buffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416stream_fill_uptoNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new fill upto object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_sequence</strong> – - sequence to search for. The lifetime of this data pointed to by this span must outlive this object, or not be used when the lifetime of that data is no longer available. </p></li>
+<li><p><strong>p_buffer</strong> – - buffer to fill data into </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412stream_parsev">
+<span id="_CPPv312stream_parsev"></span><span id="_CPPv212stream_parsev"></span><span id="stream_parse"></span><span class="target" id="group___streams_1ga1e99d780c2faef6e519a20f5f2709c99"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_parse</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv412stream_parsev" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new parse object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411stream_skip6size_t">
+<span id="_CPPv311stream_skip6size_t"></span><span id="_CPPv211stream_skip6size_t"></span><span id="stream_skip__s"></span><span class="target" id="group___streams_1gae075fb4e7c9a0f0f713dffd183003df6"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_skip</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_skip</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411stream_skip6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new skip object. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal11stream_findE">
+<span id="_CPPv3N3hal11stream_findE"></span><span id="_CPPv2N3hal11stream_findE"></span><span id="hal::stream_find"></span><span class="target" id="classhal_1_1stream__find"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_find</span></span></span><a class="headerlink" href="#_CPPv4N3hal11stream_findE" title="Link to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;streams.hpp&gt;</em></div>
+<p>Discard received bytes until the sequence is found. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal11stream_find11stream_findENSt4spanIKN3hal4byteEEE">
+<span id="_CPPv3N3hal11stream_find11stream_findENSt4spanIKN3hal4byteEEE"></span><span id="_CPPv2N3hal11stream_find11stream_findENSt4spanIKN3hal4byteEEE"></span><span id="hal::stream_find::stream_find__std::span:hal::byteC:"></span><span class="target" id="group___streams_1gafd1bede750087da145515d1605eeb4f9"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_find</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../libhal/units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../libhal/units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_sequence</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal11stream_find11stream_findENSt4spanIKN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new find object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p_sequence</strong> – - sequence to search for. The lifetime of this data pointed to by this span must outlive this object, or not be used when the lifetime of that data is no longer available. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal11stream_fillE">
+<span id="_CPPv3N3hal11stream_fillE"></span><span id="_CPPv2N3hal11stream_fillE"></span><span id="hal::stream_fill"></span><span class="target" id="classhal_1_1stream__fill"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_fill</span></span></span><a class="headerlink" href="#_CPPv4N3hal11stream_fillE" title="Link to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;streams.hpp&gt;</em></div>
+<p>Non-blocking callable for reading serial data into a buffer. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal11stream_fill11stream_fillENSt4spanIN3hal4byteEEE">
+<span id="_CPPv3N3hal11stream_fill11stream_fillENSt4spanIN3hal4byteEEE"></span><span id="_CPPv2N3hal11stream_fill11stream_fillENSt4spanIN3hal4byteEEE"></span><span id="hal::stream_fill::stream_fill__std::span:hal::byte:"></span><span class="target" id="group___streams_1gaa35a373282bc160ce202928cdd08ff9e"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_fill</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../libhal/units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../libhal/units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_buffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal11stream_fill11stream_fillENSt4spanIN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new fill object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p_buffer</strong> – - buffer to read data into </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal11stream_fill11stream_fillENSt4spanIN3hal4byteEEERK6size_t">
+<span id="_CPPv3N3hal11stream_fill11stream_fillENSt4spanIN3hal4byteEEERK6size_t"></span><span id="_CPPv2N3hal11stream_fill11stream_fillENSt4spanIN3hal4byteEEERK6size_t"></span><span id="hal::stream_fill::stream_fill__std::span:hal::byte:.sCR"></span><span class="target" id="group___streams_1ga4c5c5a2a232145024f027eaa8d203a2c"></span><span class="sig-name descname"><span class="n"><span class="pre">stream_fill</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../libhal/units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../libhal/units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_buffer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_fill_amount</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal11stream_fill11stream_fillENSt4spanIN3hal4byteEEERK6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new fill object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_buffer</strong> – - buffer to read data into </p></li>
+<li><p><strong>p_fill_amount</strong> – - reference to a size value to limit the fill amount by. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal16stream_fill_uptoE">
+<span id="_CPPv3N3hal16stream_fill_uptoE"></span><span id="_CPPv2N3hal16stream_fill_uptoE"></span><span id="hal::stream_fill_upto"></span><span class="target" id="classhal_1_1stream__fill__upto"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_fill_upto</span></span></span><a class="headerlink" href="#_CPPv4N3hal16stream_fill_uptoE" title="Link to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;streams.hpp&gt;</em></div>
+<p>Discard received bytes until the sequence is found. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal16stream_fill_upto16stream_fill_uptoENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE">
+<span id="_CPPv3N3hal16stream_fill_upto16stream_fill_uptoENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE"></span><span id="_CPPv2N3hal16stream_fill_upto16stream_fill_uptoENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE"></span><span id="hal::stream_fill_upto::stream_fill_upto__std::span:hal::byteC:.std::span:hal::byte:"></span><span class="target" id="group___streams_1ga5236e2cd2330847248eaa39f27c27496"></span><span class="sig-name descname"><span class="n"><span class="pre">stream_fill_upto</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../libhal/units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../libhal/units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_sequence</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../libhal/units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../libhal/units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_buffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal16stream_fill_upto16stream_fill_uptoENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new fill upto object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_sequence</strong> – - sequence to search for. The lifetime of this data pointed to by this span must outlive this object, or not be used when the lifetime of that data is no longer available. </p></li>
+<li><p><strong>p_buffer</strong> – - buffer to fill data into </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I_NSt17unsigned_integralEEN3hal12stream_parseE">
+<span id="_CPPv3I_NSt17unsigned_integralEEN3hal12stream_parseE"></span><span id="_CPPv2I_NSt17unsigned_integralEEN3hal12stream_parseE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unsigned_integral</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classhal_1_1stream__parse"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_parse</span></span></span><a class="headerlink" href="#_CPPv4I_NSt17unsigned_integralEEN3hal12stream_parseE" title="Link to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;streams.hpp&gt;</em></div>
+<p>Read bytes from stream and convert to integer. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal12stream_parse12stream_parseEv">
+<span id="_CPPv3N3hal12stream_parse12stream_parseEv"></span><span id="_CPPv2N3hal12stream_parse12stream_parseEv"></span><span id="hal::stream_parse::stream_parse"></span><span class="target" id="group___streams_1ga1e99d780c2faef6e519a20f5f2709c99"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_parse</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N3hal12stream_parse12stream_parseEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new parse object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal12stream_parse5valueEv">
+<span id="_CPPv3N3hal12stream_parse5valueEv"></span><span id="_CPPv2N3hal12stream_parse5valueEv"></span><span id="hal::stream_parse::value"></span><span class="target" id="classhal_1_1stream__parse_1ace0eab202401eccbf3ca8a72cd27daf4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_NSt17unsigned_integralEEN3hal12stream_parseE" title="hal::stream_parse::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">value</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal12stream_parse5valueEv" title="Link to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>T&amp; - return an immutable reference to the value </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal11stream_skipE">
+<span id="_CPPv3N3hal11stream_skipE"></span><span id="_CPPv2N3hal11stream_skipE"></span><span id="hal::stream_skip"></span><span class="target" id="classhal_1_1stream__skip"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_skip</span></span></span><a class="headerlink" href="#_CPPv4N3hal11stream_skipE" title="Link to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;streams.hpp&gt;</em></div>
+<p>Skip number of bytes in a byte stream. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal11stream_skip11stream_skipE6size_t">
+<span id="_CPPv3N3hal11stream_skip11stream_skipE6size_t"></span><span id="_CPPv2N3hal11stream_skip11stream_skipE6size_t"></span><span id="hal::stream_skip::stream_skip__s"></span><span class="target" id="group___streams_1gae075fb4e7c9a0f0f713dffd183003df6"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stream_skip</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_skip</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal11stream_skip11stream_skipE6size_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Construct a new skip object. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="static_list.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Static List</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="to_array.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">To Array</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv411stream_findNSt4spanIKN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">stream_find()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv411stream_fillNSt4spanIN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">stream_fill()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv411stream_fillNSt4spanIN3hal4byteEEERK6size_t"><code class="docutils literal notranslate"><span class="pre">stream_fill()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv416stream_fill_uptoNSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">stream_fill_upto()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv412stream_parsev"><code class="docutils literal notranslate"><span class="pre">stream_parse()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv411stream_skip6size_t"><code class="docutils literal notranslate"><span class="pre">stream_skip()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal11stream_findE"><code class="docutils literal notranslate"><span class="pre">stream_find</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal11stream_find11stream_findENSt4spanIKN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">stream_find::stream_find()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal11stream_fillE"><code class="docutils literal notranslate"><span class="pre">stream_fill</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal11stream_fill11stream_fillENSt4spanIN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">stream_fill::stream_fill()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal11stream_fill11stream_fillENSt4spanIN3hal4byteEEERK6size_t"><code class="docutils literal notranslate"><span class="pre">stream_fill::stream_fill()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal16stream_fill_uptoE"><code class="docutils literal notranslate"><span class="pre">stream_fill_upto</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal16stream_fill_upto16stream_fill_uptoENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">stream_fill_upto::stream_fill_upto()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I_NSt17unsigned_integralEEN3hal12stream_parseE"><code class="docutils literal notranslate"><span class="pre">stream_parse</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal12stream_parse12stream_parseEv"><code class="docutils literal notranslate"><span class="pre">stream_parse::stream_parse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal12stream_parse5valueEv"><code class="docutils literal notranslate"><span class="pre">stream_parse::value()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal11stream_skipE"><code class="docutils literal notranslate"><span class="pre">stream_skip</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal11stream_skip11stream_skipE6size_t"><code class="docutils literal notranslate"><span class="pre">stream_skip::stream_skip()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/utilities/streams.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

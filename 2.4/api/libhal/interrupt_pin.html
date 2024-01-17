@@ -1,0 +1,701 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Interrupt Pin &#8212; libhal  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'libhal/interrupt_pin';</script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Magnetometer" href="magnetometer.html" />
+    <link rel="prev" title="Input Pin" href="input_pin.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="libhal  documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="libhal  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="2" aria-label="Site Navigation">
+    </p>
+    <ul class="bd-navbar-elements navbar-nav">
+        <li class="nav-item dropdown">
+            <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                Guides
+            </button>
+            <ul id="pst-nav-more-links" class="dropdown-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href=/2.4/>
+                        🏡 Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href="/2.4/getting_started/">
+                        🚀 Getting Started
+                    </a>
+                </li>
+
+                <li class=" nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/user_guide/fundamentals">
+                        📖 User Guide
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/contributor_guide/philosophy">
+                        📚 Contributor Guides
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/project_information/status">
+                        📊 Project Information
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</nav></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../utilities/index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../utilities/index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="accelerometer.html">Accelerometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adc.html">Analog Digital Converter (ADC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angular_velocity_sensor.html">Angular Velocity Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="can.html">Controlled Area Network (CAN)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dac.html">Digital Analog Converter (DAC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distance_sensor.html">Distance Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functional.html">Functional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gyroscope.html">Gyroscope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i2c.html">Inter-integrated Circuit (I2C)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_pin.html">Input Pin</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Interrupt Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetometer.html">Magnetometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motor.html">Motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output_pin.html">Output Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwm.html">Pulse Width Modulation (PWM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rotation_sensor.html">Rotational Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serial.html">Serial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servo.html">Servo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spi.html">Serial Peripheral Interface (SPI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="steady_clock.html">Steady Clock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temperature_sensor.html">Temperature Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeout.html">Timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">libhal Hardware Interface API Documentation</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Interrupt Pin</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="interrupt-pin">
+<h1>Interrupt Pin<a class="headerlink" href="#interrupt-pin" title="Link to this heading">#</a></h1>
+<section id="hardware-interface">
+<h2>Hardware Interface<a class="headerlink" href="#hardware-interface" title="Link to this heading">#</a></h2>
+<p>Defined in namespace <code class="docutils literal notranslate"><span class="pre">hal</span></code></p>
+<p><em>#include &lt;libhal/interrupt_pin.hpp&gt;</em></p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13interrupt_pinE">
+<span id="_CPPv3N3hal13interrupt_pinE"></span><span id="_CPPv2N3hal13interrupt_pinE"></span><span id="hal::interrupt_pin"></span><span class="target" id="classhal_1_1interrupt__pin"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">interrupt_pin</span></span></span><a class="headerlink" href="#_CPPv4N3hal13interrupt_pinE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Digital interrupt pin hardware abstraction. </p>
+<p>Use this to automatically call a function when a pin’s state has transitioned.</p>
+<p>The transition states are:</p>
+<p><ul class="simple">
+<li><p>falling edge: the pin reads a transitions from HIGH to LOW</p></li>
+<li><p>rising edge: the pin reads a transitions from LOW to HIGH</p></li>
+<li><p>both: the pin reads any state change </p></li>
+</ul>
+</p>
+<p>Subclassed by <a class="reference internal" href="../soft/inert/inert_interrupt_pin.html#classhal_1_1soft_1_1inert__interrupt__pin"><span class="std std-ref">hal::soft::inert_interrupt_pin</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13interrupt_pin12trigger_edgeE">
+<span id="_CPPv3N3hal13interrupt_pin12trigger_edgeE"></span><span id="_CPPv2N3hal13interrupt_pin12trigger_edgeE"></span><span class="target" id="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trigger_edge</span></span></span><a class="headerlink" href="#_CPPv4N3hal13interrupt_pin12trigger_edgeE" title="Link to this definition">#</a><br /></dt>
+<dd><p>The condition in which an interrupt it’s triggered. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13interrupt_pin12trigger_edge7fallingE">
+<span id="_CPPv3N3hal13interrupt_pin12trigger_edge7fallingE"></span><span id="_CPPv2N3hal13interrupt_pin12trigger_edge7fallingE"></span><span class="target" id="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81a465223d16534b847faf7b88e6cd17139"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">falling</span></span></span><a class="headerlink" href="#_CPPv4N3hal13interrupt_pin12trigger_edge7fallingE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Trigger the interrupt when a pin transitions from HIGH voltage to LOW voltage. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13interrupt_pin12trigger_edge6risingE">
+<span id="_CPPv3N3hal13interrupt_pin12trigger_edge6risingE"></span><span id="_CPPv2N3hal13interrupt_pin12trigger_edge6risingE"></span><span class="target" id="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81a637aa1a3f3fe939460e3e6126a3cb76a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rising</span></span></span><a class="headerlink" href="#_CPPv4N3hal13interrupt_pin12trigger_edge6risingE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Trigger the interrupt when a pin transitions from LOW voltage to HIGH voltage. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13interrupt_pin12trigger_edge4bothE">
+<span id="_CPPv3N3hal13interrupt_pin12trigger_edge4bothE"></span><span id="_CPPv2N3hal13interrupt_pin12trigger_edge4bothE"></span><span class="target" id="classhal_1_1interrupt__pin_1a2e2cf60fe30a8683fb30cec584c7de81af6cb3e816496528d4187db53bc66567f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">both</span></span></span><a class="headerlink" href="#_CPPv4N3hal13interrupt_pin12trigger_edge4bothE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Trigger the interrupt when a pin transitions it state. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13interrupt_pin7handlerE">
+<span id="_CPPv3N3hal13interrupt_pin7handlerE"></span><span id="_CPPv2N3hal13interrupt_pin7handlerE"></span><span class="target" id="classhal_1_1interrupt__pin_1ad49df850168e2a62551d6d3d1e81d86c"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handler</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">p_state</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N3hal13interrupt_pin7handlerE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Interrupt pin handler. </p>
+<p>param p_state - if true state of the pin when the interrupt was triggered was HIGH, otherwise LOW </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13interrupt_pin9configureERK8settings">
+<span id="_CPPv3N3hal13interrupt_pin9configureERK8settings"></span><span id="_CPPv2N3hal13interrupt_pin9configureERK8settings"></span><span id="hal::interrupt_pin::configure__settingsCR"></span><span class="target" id="classhal_1_1interrupt__pin_1ad4ecbb5149184f2d6a9002f6a51e2754"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">status</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal13interrupt_pin8settingsE" title="hal::interrupt_pin::settings"><span class="n"><span class="pre">settings</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_settings</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal13interrupt_pin9configureERK8settings" title="Link to this definition">#</a><br /></dt>
+<dd><p>Configure the interrupt pin to match the settings supplied. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p_settings</strong> – - settings to apply to interrupt pin </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">errc</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – if the settings could not be achieved. </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>status - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13interrupt_pin10on_triggerEN3hal8callbackI7handlerEE">
+<span id="_CPPv3N3hal13interrupt_pin10on_triggerEN3hal8callbackI7handlerEE"></span><span id="_CPPv2N3hal13interrupt_pin10on_triggerEN3hal8callbackI7handlerEE"></span><span id="hal::interrupt_pin::on_trigger__hal::callback:handler:"></span><span class="target" id="classhal_1_1interrupt__pin_1aa110a57bf1d41c89a5df6b13740a6977"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">on_trigger</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3hal13interrupt_pin7handlerE" title="hal::interrupt_pin::handler"><span class="n"><span class="pre">handler</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_callback</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal13interrupt_pin10on_triggerEN3hal8callbackI7handlerEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the callback for when the interrupt occurs. </p>
+<p>Any state transitions before this function is called are lost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p_callback</strong> – - function to execute when the trigger condition occurs. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13interrupt_pin8settingsE">
+<span id="_CPPv3N3hal13interrupt_pin8settingsE"></span><span id="_CPPv2N3hal13interrupt_pin8settingsE"></span><span id="hal::interrupt_pin::settings"></span><span class="target" id="structhal_1_1interrupt__pin_1_1settings"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">settings</span></span></span><a class="headerlink" href="#_CPPv4N3hal13interrupt_pin8settingsE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Generic settings for interrupt pins. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13interrupt_pin8settings8resistorE">
+<span id="_CPPv3N3hal13interrupt_pin8settings8resistorE"></span><span id="_CPPv2N3hal13interrupt_pin8settings8resistorE"></span><span id="hal::interrupt_pin::settings::resistor__pin_resistor"></span><span class="target" id="structhal_1_1interrupt__pin_1_1settings_1ac36c47bf915a9e2af6bbc95c014e3984"></span><a class="reference internal" href="units.html#_CPPv4N3hal12pin_resistorE" title="hal::pin_resistor"><span class="n"><span class="pre">pin_resistor</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resistor</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv4N3hal12pin_resistorE" title="hal::pin_resistor"><span class="n"><span class="pre">pin_resistor</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal12pin_resistor7pull_upE" title="hal::pin_resistor::pull_up"><span class="n"><span class="pre">pull_up</span></span></a><a class="headerlink" href="#_CPPv4N3hal13interrupt_pin8settings8resistorE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Pull resistor for an interrupt pin. </p>
+<p>In general, it is highly advised to either set the pull resistor to something other than “none” or to attach an external pull up resistor to the interrupt pin in order to prevent random interrupt from firing. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13interrupt_pin8settings7triggerE">
+<span id="_CPPv3N3hal13interrupt_pin8settings7triggerE"></span><span id="_CPPv2N3hal13interrupt_pin8settings7triggerE"></span><span id="hal::interrupt_pin::settings::trigger__trigger_edge"></span><span class="target" id="structhal_1_1interrupt__pin_1_1settings_1a0550a3974283296feb9c07c24f6f88ac"></span><a class="reference internal" href="#_CPPv4N3hal13interrupt_pin12trigger_edgeE" title="hal::interrupt_pin::trigger_edge"><span class="n"><span class="pre">trigger_edge</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trigger</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal13interrupt_pin12trigger_edgeE" title="hal::interrupt_pin::trigger_edge"><span class="n"><span class="pre">trigger_edge</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal13interrupt_pin12trigger_edge6risingE" title="hal::interrupt_pin::trigger_edge::rising"><span class="n"><span class="pre">rising</span></span></a><a class="headerlink" href="#_CPPv4N3hal13interrupt_pin8settings7triggerE" title="Link to this definition">#</a><br /></dt>
+<dd><p>The trigger condition that will signal the system to run the callback. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="utilities">
+<h2>Utilities<a class="headerlink" href="#utilities" title="Link to this heading">#</a></h2>
+<p>Defined in namespace <code class="docutils literal notranslate"><span class="pre">hal</span></code></p>
+<p><em>#include &lt;libhal-util/interrupt_pin.hpp&gt;</em></p>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___interrupt_pin"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">InterruptPin</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4eqRKN13interrupt_pin8settingsERKN13interrupt_pin8settingsE">
+<span id="_CPPv3eqRKN13interrupt_pin8settingsERKN13interrupt_pin8settingsE"></span><span id="_CPPv2eqRKN13interrupt_pin8settingsERKN13interrupt_pin8settingsE"></span><span id="eq-operator__interrupt_pin::settingsCR.interrupt_pin::settingsCRCE"></span><span class="target" id="group___interrupt_pin_1ga1265c71d77eb6ec736eb523ad4515d07"></span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">interrupt_pin</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">settings</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_lhs</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">interrupt_pin</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">settings</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_rhs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4eqRKN13interrupt_pin8settingsERKN13interrupt_pin8settingsE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Compares two interrupt pin states, compares both their trigger and resistor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_lhs</strong> – An interrupt pin </p></li>
+<li><p><strong>p_rhs</strong> – An interrupt pin </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A boolean if they are the same or not. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="input_pin.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Input Pin</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="magnetometer.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Magnetometer</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-interface">Hardware Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13interrupt_pinE"><code class="docutils literal notranslate"><span class="pre">interrupt_pin</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13interrupt_pin12trigger_edgeE"><code class="docutils literal notranslate"><span class="pre">interrupt_pin::trigger_edge</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13interrupt_pin12trigger_edge7fallingE"><code class="docutils literal notranslate"><span class="pre">interrupt_pin::trigger_edge::falling</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13interrupt_pin12trigger_edge6risingE"><code class="docutils literal notranslate"><span class="pre">interrupt_pin::trigger_edge::rising</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13interrupt_pin12trigger_edge4bothE"><code class="docutils literal notranslate"><span class="pre">interrupt_pin::trigger_edge::both</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13interrupt_pin7handlerE"><code class="docutils literal notranslate"><span class="pre">interrupt_pin::handler</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13interrupt_pin9configureERK8settings"><code class="docutils literal notranslate"><span class="pre">interrupt_pin::configure()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13interrupt_pin10on_triggerEN3hal8callbackI7handlerEE"><code class="docutils literal notranslate"><span class="pre">interrupt_pin::on_trigger()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13interrupt_pin8settingsE"><code class="docutils literal notranslate"><span class="pre">interrupt_pin::settings</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13interrupt_pin8settings8resistorE"><code class="docutils literal notranslate"><span class="pre">interrupt_pin::settings::resistor</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13interrupt_pin8settings7triggerE"><code class="docutils literal notranslate"><span class="pre">interrupt_pin::settings::trigger</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utilities">Utilities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4eqRKN13interrupt_pin8settingsERKN13interrupt_pin8settingsE"><code class="docutils literal notranslate"><span class="pre">operator==()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/libhal/interrupt_pin.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

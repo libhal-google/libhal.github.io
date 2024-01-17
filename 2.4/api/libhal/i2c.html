@@ -1,0 +1,934 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Inter-integrated Circuit (I2C) &#8212; libhal  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'libhal/i2c';</script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Input Pin" href="input_pin.html" />
+    <link rel="prev" title="Gyroscope" href="gyroscope.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="libhal  documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="libhal  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="2" aria-label="Site Navigation">
+    </p>
+    <ul class="bd-navbar-elements navbar-nav">
+        <li class="nav-item dropdown">
+            <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                Guides
+            </button>
+            <ul id="pst-nav-more-links" class="dropdown-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href=/2.4/>
+                        🏡 Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href="/2.4/getting_started/">
+                        🚀 Getting Started
+                    </a>
+                </li>
+
+                <li class=" nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/user_guide/fundamentals">
+                        📖 User Guide
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/contributor_guide/philosophy">
+                        📚 Contributor Guides
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/project_information/status">
+                        📊 Project Information
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</nav></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../utilities/index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../utilities/index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="accelerometer.html">Accelerometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adc.html">Analog Digital Converter (ADC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angular_velocity_sensor.html">Angular Velocity Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="can.html">Controlled Area Network (CAN)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dac.html">Digital Analog Converter (DAC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distance_sensor.html">Distance Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functional.html">Functional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gyroscope.html">Gyroscope</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Inter-integrated Circuit (I2C)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_pin.html">Input Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interrupt_pin.html">Interrupt Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetometer.html">Magnetometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motor.html">Motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output_pin.html">Output Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwm.html">Pulse Width Modulation (PWM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rotation_sensor.html">Rotational Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serial.html">Serial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servo.html">Servo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spi.html">Serial Peripheral Interface (SPI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="steady_clock.html">Steady Clock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temperature_sensor.html">Temperature Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeout.html">Timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">libhal Hardware Interface API Documentation</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Inter-integr...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="inter-integrated-circuit-i2c">
+<h1>Inter-integrated Circuit (I2C)<a class="headerlink" href="#inter-integrated-circuit-i2c" title="Link to this heading">#</a></h1>
+<section id="hardware-interface">
+<h2>Hardware Interface<a class="headerlink" href="#hardware-interface" title="Link to this heading">#</a></h2>
+<p>Defined in namespace <code class="docutils literal notranslate"><span class="pre">hal</span></code></p>
+<p><em>#include &lt;libhal/i2c.hpp&gt;</em></p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal3i2cE">
+<span id="_CPPv3N3hal3i2cE"></span><span id="_CPPv2N3hal3i2cE"></span><span id="hal::i2c"></span><span class="target" id="classhal_1_1i2c"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">i2c</span></span></span><a class="headerlink" href="#_CPPv4N3hal3i2cE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Inter-integrated Circuit (I2C) hardware abstract interface. </p>
+<p>Also known as Two Wire Interface (TWI) communication protocol. This is a very commonly used protocol for communication with sensors and peripheral devices because it only requires two connections SDA (data signal) and SCL (clock signal). This is possible because the protocol for I2C is addressable. </p>
+<p>Subclassed by hal::soft::inert_i2c, <a class="reference internal" href="../soft/i2c_minimum_speed.html#classhal_1_1soft_1_1minimum__speed__i2c"><span class="std std-ref">hal::soft::minimum_speed_i2c</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal3i2c9configureERK8settings">
+<span id="_CPPv3N3hal3i2c9configureERK8settings"></span><span id="_CPPv2N3hal3i2c9configureERK8settings"></span><span id="hal::i2c::configure__settingsCR"></span><span class="target" id="classhal_1_1i2c_1a28750634803a64517521a496222d0265"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">status</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal3i2c8settingsE" title="hal::i2c::settings"><span class="n"><span class="pre">settings</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_settings</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal3i2c9configureERK8settings" title="Link to this definition">#</a><br /></dt>
+<dd><p>Configure <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> to match the settings supplied. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p_settings</strong> – - settings to apply to <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">errc</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – if the settings could not be achieved. </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>status - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal3i2c11transactionEN3hal4byteENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEEN3hal12function_refIN3hal16timeout_functionEEE">
+<span id="_CPPv3N3hal3i2c11transactionEN3hal4byteENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEEN3hal12function_refIN3hal16timeout_functionEEE"></span><span id="_CPPv2N3hal3i2c11transactionEN3hal4byteENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEEN3hal12function_refIN3hal16timeout_functionEEE"></span><span id="hal::i2c::transaction__hal::byte.std::span:hal::byteC:.std::span:hal::byte:.hal::function_ref:hal::timeout_function:"></span><span class="target" id="classhal_1_1i2c_1ab77e3c9347655368b887f3b14d4734a2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3hal3i2c13transaction_tE" title="hal::i2c::transaction_t"><span class="n"><span class="pre">transaction_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transaction</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_out</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_in</span></span>, <a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function_ref</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">timeout_function</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3hal3i2c11transactionEN3hal4byteENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEEN3hal12function_refIN3hal16timeout_functionEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>perform an <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> transaction with another device on the bus. The type of transaction depends on values of input parameters. This function will block until the entire transfer is finished. </p>
+<p>Performing Write, Read and Write-Then-Read transactions depends on which span for data_out and data_in are set to null.</p>
+<p><ul class="simple">
+<li><p>For write transactions, pass p_data_in as an empty span <code class="docutils literal notranslate"><span class="pre">std::span&lt;</span><a class="reference internal" href="units.html#namespacehal_1aa21f8ca97410869aabb284a575b2021d"><span class="std std-ref"><span class="pre">hal::byte</span></span></a><span class="pre">&gt;{}</span></code> and pass a buffer to p_data_out.</p></li>
+<li><p>For read transactions, pass p_data_out as an empty span <code class="docutils literal notranslate"><span class="pre">std::span&lt;const</span> <a class="reference internal" href="units.html#namespacehal_1aa21f8ca97410869aabb284a575b2021d"><span class="std std-ref"><span class="pre">hal::byte</span></span></a><span class="pre">&gt;{}</span></code> and pass a buffer to p_data_in.</p></li>
+<li><p>For write-then-read transactions, pass a buffer for both p_data_in p_data_out.</p></li>
+<li><p>If both p_data_in and p_data_out are empty, simply do nothing and return success.</p></li>
+</ul>
+</p>
+<p>In the event of arbitration loss, this function will wait for the bus to become free and try again. Arbitration loss means that during the address phase of a transaction 1 or more <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus controllers attempted to perform an transaction and one of the <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus controllers, that isn’t this one won out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_address</strong> – 7-bit address of the device you want to communicate with. To perform a transaction with a 10-bit address, this parameter must be the address upper byte of the 10-bit address OR’d with 0b1111’0000 (the 10-bit address indicator). The lower byte of the address must be contained in the first byte of the p_data_out span. </p></li>
+<li><p><strong>p_data_out</strong> – data to be written to the addressed device. Set to nullptr with length zero in order to skip writing. </p></li>
+<li><p><strong>p_data_in</strong> – buffer to store read data from the addressed device. Set to nullptr with length 0 in order to skip reading. </p></li>
+<li><p><strong>p_timeout</strong> – callable which notifies the <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver that it has run out of time to perform the transaction and must stop and return control to the caller. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">errc</span><span class="p">::</span><span class="n">io_error</span></span></span> – indicates that the <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> lines were put into an invalid state during the transaction due to interference, misconfiguration of the <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> peripheral or the addressed device or something else. </p></li>
+<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">errc</span><span class="p">::</span><span class="n">no_such_device_or_address</span></span></span> – indicates that no devices on the bus acknowledge the address in this transaction, which could mean that the device is not connected to the bus, is not powered, not available to respond, broken or many other possible outcomes. </p></li>
+<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">errc</span><span class="p">::</span><span class="n">timed_out</span></span></span> – if the transaction exceeded its time allotment indicated by p_timeout. </p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;transaction_t&gt; - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal3i2c8settingsE">
+<span id="_CPPv3N3hal3i2c8settingsE"></span><span id="_CPPv2N3hal3i2c8settingsE"></span><span id="hal::i2c::settings"></span><span class="target" id="structhal_1_1i2c_1_1settings"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">settings</span></span></span><a class="headerlink" href="#_CPPv4N3hal3i2c8settingsE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Generic settings for a standard I2C device. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal3i2c8settings10clock_rateE">
+<span id="_CPPv3N3hal3i2c8settings10clock_rateE"></span><span id="_CPPv2N3hal3i2c8settings10clock_rateE"></span><span id="hal::i2c::settings::clock_rate__hertz"></span><span class="target" id="structhal_1_1i2c_1_1settings_1a92a633a400d7a56b17352427cf12514b"></span><a class="reference internal" href="units.html#_CPPv4N3hal5hertzE" title="hal::hertz"><span class="n"><span class="pre">hertz</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clock_rate</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">100.0</span></span><span class="n"><span class="pre">_kHz</span></span><a class="headerlink" href="#_CPPv4N3hal3i2c8settings10clock_rateE" title="Link to this definition">#</a><br /></dt>
+<dd><p>The serial clock rate in hertz. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal3i2c13transaction_tE">
+<span id="_CPPv3N3hal3i2c13transaction_tE"></span><span id="_CPPv2N3hal3i2c13transaction_tE"></span><span id="hal::i2c::transaction_t"></span><span class="target" id="structhal_1_1i2c_1_1transaction__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transaction_t</span></span></span><a class="headerlink" href="#_CPPv4N3hal3i2c13transaction_tE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Feedback from performing a transaction on the <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus. </p>
+<p>This structure is currently empty as no feedback has been determined for now. This structure may be expanded in the future. </p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="utilities">
+<h2>Utilities<a class="headerlink" href="#utilities" title="Link to this heading">#</a></h2>
+<p>Utilities for working with I2C, defined in namespace <code class="docutils literal notranslate"><span class="pre">hal</span></code></p>
+<p><em>#include &lt;libhal-util/i2c.hpp&gt;</em></p>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___i2_c_utils"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">I2CUtils</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv413i2c_operation">
+<span id="_CPPv313i2c_operation"></span><span id="_CPPv213i2c_operation"></span><span class="target" id="group___i2_c_utils_1ga4bc0e9cc2796f6676976c95bc0b5eaa4"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">i2c_operation</span></span></span><a class="headerlink" href="#_CPPv413i2c_operation" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set of I2C transaction operations. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13i2c_operation5writeE">
+<span id="_CPPv3N13i2c_operation5writeE"></span><span id="_CPPv2N13i2c_operation5writeE"></span><span class="target" id="group___i2_c_utils_1gga4bc0e9cc2796f6676976c95bc0b5eaa4aefb2a684e4afb7d55e6147fbe5a332ee"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><a class="headerlink" href="#_CPPv4N13i2c_operation5writeE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Denotes an <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> write operation. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13i2c_operation4readE">
+<span id="_CPPv3N13i2c_operation4readE"></span><span id="_CPPv2N13i2c_operation4readE"></span><span class="target" id="group___i2_c_utils_1gga4bc0e9cc2796f6676976c95bc0b5eaa4aecae13117d6f0584c25a9da6c8f8415e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><a class="headerlink" href="#_CPPv4N13i2c_operation4readE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Denotes an <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> read operation. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4eqRKN3i2c8settingsERKN3i2c8settingsE">
+<span id="_CPPv3eqRKN3i2c8settingsERKN3i2c8settingsE"></span><span id="_CPPv2eqRKN3i2c8settingsERKN3i2c8settingsE"></span><span id="eq-operator__i2c::settingsCR.i2c::settingsCRCE"></span><span class="target" id="group___i2_c_utils_1ga6b10befbc8f24069079e1e4a0e016898"></span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">i2c</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">settings</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_lhs</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">i2c</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">settings</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_rhs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4eqRKN3i2c8settingsERKN3i2c8settingsE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Compares two I2C bus states. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_lhs</strong> – A I2C bus. </p></li>
+<li><p><strong>p_rhs</strong> – A I2C bus. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A boolean if they are the same or not. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv45writeR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE7timeout">
+<span id="_CPPv35writeR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE7timeout"></span><span id="_CPPv25writeR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE7timeout"></span><span id="write__i2cR.hal::byte.std::span:hal::byteC:.timeout"></span><span class="target" id="group___i2_c_utils_1ga589504d8349443cb5a9ed2caa02dcbe1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2cE" title="hal::i2c"><span class="n"><span class="pre">i2c</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2c13transaction_tE" title="hal::i2c::transaction_t"><span class="n"><span class="pre">transaction_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">i2c</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_i2c</span></span>, <a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_out</span></span>, <span class="n"><span class="pre">timeout</span></span><span class="w"> </span><span class="k"><span class="pre">auto</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv45writeR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE7timeout" title="Link to this definition">#</a><br /></dt>
+<dd><p>write data to a target device on the <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus </p>
+<p>Shorthand for writing i2c.transfer(…) for write only operations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_i2c</strong> – - <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver </p></li>
+<li><p><strong>p_address</strong> – - target address </p></li>
+<li><p><strong>p_data_out</strong> – - buffer of bytes to write to the target device </p></li>
+<li><p><strong>p_timeout</strong> – - amount of time to execute the transaction </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv45writeR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE">
+<span id="_CPPv35writeR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE"></span><span id="_CPPv25writeR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE"></span><span id="write__i2cR.hal::byte.std::span:hal::byteC:"></span><span class="target" id="group___i2_c_utils_1gab564ab7dc8cf7d1e84824ec19de35156"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2cE" title="hal::i2c"><span class="n"><span class="pre">i2c</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2c13transaction_tE" title="hal::i2c::transaction_t"><span class="n"><span class="pre">transaction_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">i2c</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_i2c</span></span>, <a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv45writeR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>write data to a target device on the <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus </p>
+<p>Shorthand for writing i2c.transfer(…) for write only operations, but never times out. Can be used for devices that never perform clock stretching.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_i2c</strong> – - <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver </p></li>
+<li><p><strong>p_address</strong> – - target address </p></li>
+<li><p><strong>p_data_out</strong> – - buffer of bytes to write to the target device </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv44readR3i2cN3hal4byteENSt4spanIN3hal4byteEEE7timeout">
+<span id="_CPPv34readR3i2cN3hal4byteENSt4spanIN3hal4byteEEE7timeout"></span><span id="_CPPv24readR3i2cN3hal4byteENSt4spanIN3hal4byteEEE7timeout"></span><span id="read__i2cR.hal::byte.std::span:hal::byte:.timeout"></span><span class="target" id="group___i2_c_utils_1ga5164defc44fc09c44d77d1ff823998eb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2cE" title="hal::i2c"><span class="n"><span class="pre">i2c</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2c13transaction_tE" title="hal::i2c::transaction_t"><span class="n"><span class="pre">transaction_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">i2c</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_i2c</span></span>, <a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_in</span></span>, <span class="n"><span class="pre">timeout</span></span><span class="w"> </span><span class="k"><span class="pre">auto</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv44readR3i2cN3hal4byteENSt4spanIN3hal4byteEEE7timeout" title="Link to this definition">#</a><br /></dt>
+<dd><p>read bytes from target device on <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus </p>
+<p>Shorthand for writing i2c.transfer(…) for read only operations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_i2c</strong> – - <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver </p></li>
+<li><p><strong>p_address</strong> – - target address </p></li>
+<li><p><strong>p_data_in</strong> – - buffer to read bytes into from target device </p></li>
+<li><p><strong>p_timeout</strong> – - amount of time to execute the transaction </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv44readR3i2cN3hal4byteENSt4spanIN3hal4byteEEE">
+<span id="_CPPv34readR3i2cN3hal4byteENSt4spanIN3hal4byteEEE"></span><span id="_CPPv24readR3i2cN3hal4byteENSt4spanIN3hal4byteEEE"></span><span id="read__i2cR.hal::byte.std::span:hal::byte:"></span><span class="target" id="group___i2_c_utils_1gad5f7bceb8182234dbf4055e620a8f547"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2cE" title="hal::i2c"><span class="n"><span class="pre">i2c</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2c13transaction_tE" title="hal::i2c::transaction_t"><span class="n"><span class="pre">transaction_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">i2c</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_i2c</span></span>, <a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_in</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv44readR3i2cN3hal4byteENSt4spanIN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>read bytes from target device on <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus </p>
+<p>Shorthand for writing i2c.transfer(…) for read only operations, but never times out. Can be used for devices that never perform clock stretching.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_i2c</strong> – - <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver </p></li>
+<li><p><strong>p_address</strong> – - target address </p></li>
+<li><p><strong>p_data_in</strong> – - buffer to read bytes into from target device </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteE7timeout">
+<span id="_CPPv3I_6size_tE4readR3i2cN3hal4byteE7timeout"></span><span id="_CPPv2I_6size_tE4readR3i2cN3hal4byteE7timeout"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BytesToRead</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="group___i2_c_utils_1gaf5af1e6128fca7096a803c0696819a1b"></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteE7timeout" title="read::BytesToRead"><span class="n"><span class="pre">BytesToRead</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">i2c</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_i2c</span></span>, <a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span>, <span class="n"><span class="pre">timeout</span></span><span class="w"> </span><span class="k"><span class="pre">auto</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteE7timeout" title="Link to this definition">#</a><br /></dt>
+<dd><p>return array of read bytes from target device on <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus </p>
+<p>Eliminates the need to create a buffer and pass it into the read function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>BytesToRead</strong> – - number of bytes to read </p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>p_i2c</strong> – - <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver </p></li>
+<li><p><strong>p_address</strong> – - target address </p></li>
+<li><p><strong>p_timeout</strong> – - amount of time to execute the transaction </p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; - array of bytes from target device or an error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteE">
+<span id="_CPPv3I_6size_tE4readR3i2cN3hal4byteE"></span><span id="_CPPv2I_6size_tE4readR3i2cN3hal4byteE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BytesToRead</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="group___i2_c_utils_1ga697316c49d4dd12eb54c4bcfe7ac2140"></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteE" title="read::BytesToRead"><span class="n"><span class="pre">BytesToRead</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">i2c</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_i2c</span></span>, <a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteE" title="Link to this definition">#</a><br /></dt>
+<dd><p>return array of read bytes from target device on <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus </p>
+<p>Eliminates the need to create a buffer and pass it into the read function. This operation will never time out and should only be used with devices that never perform clock stretching.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>BytesToRead</strong> – - number of bytes to read </p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>p_i2c</strong> – - <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver </p></li>
+<li><p><strong>p_address</strong> – - target address </p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; - array of bytes from target device or an error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415write_then_readR3i2cN3hal4byteENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE7timeout">
+<span id="_CPPv315write_then_readR3i2cN3hal4byteENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE7timeout"></span><span id="_CPPv215write_then_readR3i2cN3hal4byteENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE7timeout"></span><span id="write_then_read__i2cR.hal::byte.std::span:hal::byteC:.std::span:hal::byte:.timeout"></span><span class="target" id="group___i2_c_utils_1ga3120e8d9eff19d2010c7ffa47b739d59"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2cE" title="hal::i2c"><span class="n"><span class="pre">i2c</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2c13transaction_tE" title="hal::i2c::transaction_t"><span class="n"><span class="pre">transaction_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_then_read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">i2c</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_i2c</span></span>, <a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_out</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_in</span></span>, <span class="n"><span class="pre">timeout</span></span><span class="w"> </span><span class="k"><span class="pre">auto</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_timeout</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">never_timeout</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415write_then_readR3i2cN3hal4byteENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE7timeout" title="Link to this definition">#</a><br /></dt>
+<dd><p>write and then read bytes from target device on <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus </p>
+<p>This API simply calls transaction. This API is here for consistency across the other other communication protocols such as SPI and serial.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_i2c</strong> – - <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver </p></li>
+<li><p><strong>p_address</strong> – - target address </p></li>
+<li><p><strong>p_data_out</strong> – - buffer of bytes to write to the target device </p></li>
+<li><p><strong>p_data_in</strong> – - buffer to read bytes into from target device </p></li>
+<li><p><strong>p_timeout</strong> – - amount of time to execute the transaction</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteENSt4spanIKN3hal4byteEEE7timeout">
+<span id="_CPPv3I_6size_tE15write_then_readR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE7timeout"></span><span id="_CPPv2I_6size_tE15write_then_readR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE7timeout"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BytesToRead</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="group___i2_c_utils_1ga5f19caebd902ee9bdd7595d0dbb8ecc3"></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteENSt4spanIKN3hal4byteEEE7timeout" title="write_then_read::BytesToRead"><span class="n"><span class="pre">BytesToRead</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_then_read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">i2c</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_i2c</span></span>, <a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_out</span></span>, <span class="n"><span class="pre">timeout</span></span><span class="w"> </span><span class="k"><span class="pre">auto</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteENSt4spanIKN3hal4byteEEE7timeout" title="Link to this definition">#</a><br /></dt>
+<dd><p>write and then return an array of read bytes from target device on <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus </p>
+<p>Eliminates the need to create a buffer and pass it into the read function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>BytesToRead</strong> – - number of bytes to read after write </p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>p_i2c</strong> – - <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver </p></li>
+<li><p><strong>p_address</strong> – - target address </p></li>
+<li><p><strong>p_data_out</strong> – - buffer of bytes to write to the target device </p></li>
+<li><p><strong>p_timeout</strong> – - amount of time to execute the transaction </p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteENSt4spanIKN3hal4byteEEE">
+<span id="_CPPv3I_6size_tE15write_then_readR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE"></span><span id="_CPPv2I_6size_tE15write_then_readR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BytesToRead</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="group___i2_c_utils_1gab44292d5e087d50788d01c15b33a007c"></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteENSt4spanIKN3hal4byteEEE" title="write_then_read::BytesToRead"><span class="n"><span class="pre">BytesToRead</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_then_read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">i2c</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_i2c</span></span>, <a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_data_out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteENSt4spanIKN3hal4byteEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>write and then return an array of read bytes from target device on <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus </p>
+<p>Eliminates the need to create a buffer and pass it into the read function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>BytesToRead</strong> – - number of bytes to read after write </p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>p_i2c</strong> – - <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver </p></li>
+<li><p><strong>p_address</strong> – - target address </p></li>
+<li><p><strong>p_data_out</strong> – - buffer of bytes to write to the target device </p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>result&lt;std::array&lt;hal::byte, BytesToRead&gt;&gt; </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv45probeR3i2cN3hal4byteE">
+<span id="_CPPv35probeR3i2cN3hal4byteE"></span><span id="_CPPv25probeR3i2cN3hal4byteE"></span><span id="probe__i2cR.hal::byte"></span><span class="target" id="group___i2_c_utils_1gad889f2479fa05f2d5e6fcd69ceb05c09"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2cE" title="hal::i2c"><span class="n"><span class="pre">i2c</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal3i2c13transaction_tE" title="hal::i2c::transaction_t"><span class="n"><span class="pre">transaction_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">probe</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">i2c</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_i2c</span></span>, <a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv45probeR3i2cN3hal4byteE" title="Link to this definition">#</a><br /></dt>
+<dd><p>probe the <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> bus to see if a device exists </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_i2c</strong> – - <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> driver </p></li>
+<li><p><strong>p_address</strong> – - target address to probe for </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>hal::result&lt;hal::i2c::transaction_t&gt; - success or failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416to_8_bit_addressN3hal4byteE13i2c_operation">
+<span id="_CPPv316to_8_bit_addressN3hal4byteE13i2c_operation"></span><span id="_CPPv216to_8_bit_addressN3hal4byteE13i2c_operation"></span><span id="to_8_bit_address__hal::byte.i2c_operation"></span><span class="target" id="group___i2_c_utils_1gabd1657e2d3d9561e9f9746837a075c1a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">to_8_bit_address</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="units.html#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="units.html#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_address</span></span>, <a class="reference internal" href="#_CPPv413i2c_operation" title="i2c_operation"><span class="n"><span class="pre">i2c_operation</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_operation</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv416to_8_bit_addressN3hal4byteE13i2c_operation" title="Link to this definition">#</a><br /></dt>
+<dd><p>Convert 7-bit <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> address to an 8-bit address. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_address</strong> – 7-bit <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> address </p></li>
+<li><p><strong>p_operation</strong> – write or read operation </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="units.html#namespacehal_1aa21f8ca97410869aabb284a575b2021d"><span class="std std-ref">hal::byte</span></a> - 8-bit <a class="reference internal" href="#classhal_1_1i2c"><span class="std std-ref">i2c</span></a> address </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="gyroscope.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Gyroscope</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="input_pin.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Input Pin</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-interface">Hardware Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal3i2cE"><code class="docutils literal notranslate"><span class="pre">i2c</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal3i2c9configureERK8settings"><code class="docutils literal notranslate"><span class="pre">i2c::configure()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal3i2c11transactionEN3hal4byteENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEEN3hal12function_refIN3hal16timeout_functionEEE"><code class="docutils literal notranslate"><span class="pre">i2c::transaction()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal3i2c8settingsE"><code class="docutils literal notranslate"><span class="pre">i2c::settings</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal3i2c8settings10clock_rateE"><code class="docutils literal notranslate"><span class="pre">i2c::settings::clock_rate</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal3i2c13transaction_tE"><code class="docutils literal notranslate"><span class="pre">i2c::transaction_t</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utilities">Utilities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv413i2c_operation"><code class="docutils literal notranslate"><span class="pre">i2c_operation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N13i2c_operation5writeE"><code class="docutils literal notranslate"><span class="pre">i2c_operation::write</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N13i2c_operation4readE"><code class="docutils literal notranslate"><span class="pre">i2c_operation::read</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4eqRKN3i2c8settingsERKN3i2c8settingsE"><code class="docutils literal notranslate"><span class="pre">operator==()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv45writeR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE7timeout"><code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv45writeR3i2cN3hal4byteENSt4spanIKN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv44readR3i2cN3hal4byteENSt4spanIN3hal4byteEEE7timeout"><code class="docutils literal notranslate"><span class="pre">read()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv44readR3i2cN3hal4byteENSt4spanIN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">read()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteE7timeout"><code class="docutils literal notranslate"><span class="pre">read()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I_6size_tE4read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteE"><code class="docutils literal notranslate"><span class="pre">read()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv415write_then_readR3i2cN3hal4byteENSt4spanIKN3hal4byteEEENSt4spanIN3hal4byteEEE7timeout"><code class="docutils literal notranslate"><span class="pre">write_then_read()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteENSt4spanIKN3hal4byteEEE7timeout"><code class="docutils literal notranslate"><span class="pre">write_then_read()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I_6size_tE15write_then_read6resultINSt5arrayIN3hal4byteE11BytesToReadEEER3i2cN3hal4byteENSt4spanIKN3hal4byteEEE"><code class="docutils literal notranslate"><span class="pre">write_then_read()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv45probeR3i2cN3hal4byteE"><code class="docutils literal notranslate"><span class="pre">probe()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv416to_8_bit_addressN3hal4byteE13i2c_operation"><code class="docutils literal notranslate"><span class="pre">to_8_bit_address()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/libhal/i2c.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Error &#8212; libhal  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'libhal/error';</script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Functional" href="functional.html" />
+    <link rel="prev" title="Distance Sensor" href="distance_sensor.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="libhal  documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="libhal  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="2" aria-label="Site Navigation">
+    </p>
+    <ul class="bd-navbar-elements navbar-nav">
+        <li class="nav-item dropdown">
+            <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                Guides
+            </button>
+            <ul id="pst-nav-more-links" class="dropdown-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href=/2.4/>
+                        🏡 Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href="/2.4/getting_started/">
+                        🚀 Getting Started
+                    </a>
+                </li>
+
+                <li class=" nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/user_guide/fundamentals">
+                        📖 User Guide
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/contributor_guide/philosophy">
+                        📚 Contributor Guides
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/project_information/status">
+                        📊 Project Information
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</nav></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../utilities/index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../utilities/index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="accelerometer.html">Accelerometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adc.html">Analog Digital Converter (ADC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angular_velocity_sensor.html">Angular Velocity Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="can.html">Controlled Area Network (CAN)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dac.html">Digital Analog Converter (DAC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distance_sensor.html">Distance Sensor</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functional.html">Functional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gyroscope.html">Gyroscope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i2c.html">Inter-integrated Circuit (I2C)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_pin.html">Input Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interrupt_pin.html">Interrupt Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetometer.html">Magnetometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motor.html">Motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output_pin.html">Output Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwm.html">Pulse Width Modulation (PWM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rotation_sensor.html">Rotational Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serial.html">Serial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servo.html">Servo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spi.html">Serial Peripheral Interface (SPI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="steady_clock.html">Steady Clock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temperature_sensor.html">Temperature Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeout.html">Timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Units</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">libhal Hardware Interface API Documentation</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Error</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="error">
+<h1>Error<a class="headerlink" href="#error" title="Link to this heading">#</a></h1>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
+<p>Defined in namespace <code class="docutils literal notranslate"><span class="pre">hal</span></code></p>
+<p><em>#include &lt;libhal/error.hpp&gt;</em></p>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___error"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">Error</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv47successv">
+<span id="_CPPv37successv"></span><span id="_CPPv27successv"></span><span id="success"></span><span class="target" id="group___error_1ga557593a710d85719fff67b743268293a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">status</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">success</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv47successv" title="Link to this definition">#</a><br /></dt>
+<dd><p>a readability function for returning successful results; </p>
+<p>For functions that return <code class="docutils literal notranslate"><span class="pre">status</span></code>, rather than returning <code class="docutils literal notranslate"><span class="pre">{}</span></code> to default initialize the status object as “success”, use this function to make it more clear to the reader.</p>
+<p>An Example: <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="n">hal</span><span class="o">::</span><span class="n">status</span><span class="w"> </span><span class="nf">some_function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">hal</span><span class="o">::</span><span class="n">success</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>status - that is always successful </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal5errorE">
+<span id="_CPPv3N3hal5errorE"></span><span id="_CPPv2N3hal5errorE"></span><span id="hal::error"></span><span class="target" id="namespacehal_1_1error"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error</span></span></span><a class="headerlink" href="#_CPPv4N3hal5errorE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Error objects, templates, and constants. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4I_DpDaEN3hal5error14invalid_optionE">
+<span id="_CPPv3I_DpDaEN3hal5error14invalid_optionE"></span><span id="_CPPv2I_DpDaEN3hal5error14invalid_optionE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">auto</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacehal_1_1error_1a151ae365408ad61b9f503cd1047ec39d"></span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">invalid_option</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_DpDaEN3hal5error16invalid_option_tE" title="hal::error::invalid_option_t"><span class="n"><span class="pre">invalid_option_t</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_DpDaEN3hal5error14invalid_optionE" title="hal::error::invalid_option::options"><span class="n"><span class="pre">options</span></span></a><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">value</span></span><a class="headerlink" href="#_CPPv4I_DpDaEN3hal5error14invalid_optionE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Helper definition to simplify the usage of <a class="reference internal" href="#structhal_1_1error_1_1invalid__option__t"><span class="std std-ref">invalid_option_t</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>options</strong> – ignored by the application but needed to create a non-trivial specialization of this class which allows its usage in static_assert. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4I_DpDaEN3hal5error16invalid_option_tE">
+<span id="_CPPv3I_DpDaEN3hal5error16invalid_option_tE"></span><span id="_CPPv2I_DpDaEN3hal5error16invalid_option_tE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">auto</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structhal_1_1error_1_1invalid__option__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">invalid_option_t</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">false_type</span></span><a class="headerlink" href="#_CPPv4I_DpDaEN3hal5error16invalid_option_tE" title="Link to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;error.hpp&gt;</em></div>
+<p>Used for defining static_asserts that should always fail, but only if the static_assert line is hit via <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">constexpr</span></code> control block. Prefer to NOT use this directly but to use <code class="docutils literal notranslate"><span class="pre">invalid_option</span></code> instead. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>options</strong> – ignored by the application but needed to create a non-trivial specialization of this class which allows its usage in static_assert. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="distance_sensor.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Distance Sensor</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="functional.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Functional</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv47successv"><code class="docutils literal notranslate"><span class="pre">success()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal5errorE"><code class="docutils literal notranslate"><span class="pre">error</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I_DpDaEN3hal5error14invalid_optionE"><code class="docutils literal notranslate"><span class="pre">error::invalid_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I_DpDaEN3hal5error16invalid_option_tE"><code class="docutils literal notranslate"><span class="pre">error::invalid_option_t</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/libhal/error.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

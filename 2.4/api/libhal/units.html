@@ -1,0 +1,944 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Units &#8212; libhal  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=2ded0ca0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'libhal/units';</script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Soft Driver API Documentation" href="../soft/index.html" />
+    <link rel="prev" title="Timer" href="timer.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="libhal  documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="libhal  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="2" aria-label="Site Navigation">
+    </p>
+    <ul class="bd-navbar-elements navbar-nav">
+        <li class="nav-item dropdown">
+            <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                Guides
+            </button>
+            <ul id="pst-nav-more-links" class="dropdown-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href=/2.4/>
+                        🏡 Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external" href="/2.4/getting_started/">
+                        🚀 Getting Started
+                    </a>
+                </li>
+
+                <li class=" nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/user_guide/fundamentals">
+                        📖 User Guide
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/contributor_guide/philosophy">
+                        📚 Contributor Guides
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-item nav-external"
+                        href="/2.4/project_information/status">
+                        📊 Project Information
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</nav></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../utilities/index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Libhal Interfaces
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../soft/index.html">
+                        Soft Drivers
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../utilities/index.html">
+                        Utilities
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="accelerometer.html">Accelerometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adc.html">Analog Digital Converter (ADC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angular_velocity_sensor.html">Angular Velocity Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="can.html">Controlled Area Network (CAN)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dac.html">Digital Analog Converter (DAC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distance_sensor.html">Distance Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functional.html">Functional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gyroscope.html">Gyroscope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="i2c.html">Inter-integrated Circuit (I2C)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_pin.html">Input Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interrupt_pin.html">Interrupt Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetometer.html">Magnetometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motor.html">Motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output_pin.html">Output Pin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pwm.html">Pulse Width Modulation (PWM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rotation_sensor.html">Rotational Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serial.html">Serial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servo.html">Servo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spi.html">Serial Peripheral Interface (SPI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="steady_clock.html">Steady Clock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temperature_sensor.html">Temperature Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeout.html">Timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timer.html">Timer</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Units</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">libhal Hardware Interface API Documentation</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Units</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="units">
+<h1>Units<a class="headerlink" href="#units" title="Link to this heading">#</a></h1>
+<section id="core-functionality">
+<h2>Core Functionality<a class="headerlink" href="#core-functionality" title="Link to this heading">#</a></h2>
+<p>Defined in namespace <code class="docutils literal notranslate"><span class="pre">hal</span></code></p>
+<p><em>#include &lt;libhal/units.hpp&gt;</em></p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv43hal">
+<span id="_CPPv33hal"></span><span id="_CPPv23hal"></span><span id="hal"></span><span class="target" id="namespacehal"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hal</span></span></span><a class="headerlink" href="#_CPPv43hal" title="Link to this definition">#</a><br /></dt>
+<dd><p>The foundation of libhal containing, interfaces, utilities and soft drivers. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal13time_durationE">
+<span id="_CPPv3N3hal13time_durationE"></span><span id="_CPPv2N3hal13time_durationE"></span><span class="target" id="namespacehal_1a858b08a6e4e3eb5752d8e0daaad5ed00"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time_duration</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">chrono</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nanoseconds</span></span><a class="headerlink" href="#_CPPv4N3hal13time_durationE" title="Link to this definition">#</a><br /></dt>
+<dd><p>The standard time durations in libhal std::chrono::nanoseconds. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal4byteE">
+<span id="_CPPv3N3hal4byteE"></span><span id="_CPPv2N3hal4byteE"></span><span class="target" id="namespacehal_1aa21f8ca97410869aabb284a575b2021d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">byte</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint8_t</span></span><a class="headerlink" href="#_CPPv4N3hal4byteE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Standard type for bytes in libhal. <a class="reference internal" href="#namespacehal_1aa21f8ca97410869aabb284a575b2021d"><span class="std std-ref">hal::byte</span></a> has a number of annoyances that results in more verbose code without much benefit and thus <a class="reference internal" href="#namespacehal_1aa21f8ca97410869aabb284a575b2021d"><span class="std std-ref">hal::byte</span></a> was created. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal5hertzE">
+<span id="_CPPv3N3hal5hertzE"></span><span id="_CPPv2N3hal5hertzE"></span><span class="target" id="namespacehal_1a54dc271deb8f266e52926836c0582598"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hertz</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><a class="headerlink" href="#_CPPv4N3hal5hertzE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Type for frequency represented in hertz. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal7g_forceE">
+<span id="_CPPv3N3hal7g_forceE"></span><span id="_CPPv2N3hal7g_forceE"></span><span class="target" id="namespacehal_1abc3d1451352ebbab2ab26f3dcbc51ed9"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">g_force</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><a class="headerlink" href="#_CPPv4N3hal7g_forceE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Type for acceleration represented in the force applied by gravity at sea level. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6ampereE">
+<span id="_CPPv3N3hal6ampereE"></span><span id="_CPPv2N3hal6ampereE"></span><span class="target" id="namespacehal_1aa830f99bf69a06fcc452d82f0deb3fa3"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ampere</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><a class="headerlink" href="#_CPPv4N3hal6ampereE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Type for current represented in amps. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal5voltsE">
+<span id="_CPPv3N3hal5voltsE"></span><span id="_CPPv2N3hal5voltsE"></span><span class="target" id="namespacehal_1a3c19435046e74281a514965c8ff93b0d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">volts</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><a class="headerlink" href="#_CPPv4N3hal5voltsE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Type for voltage represented in volts. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal7celsiusE">
+<span id="_CPPv3N3hal7celsiusE"></span><span id="_CPPv2N3hal7celsiusE"></span><span class="target" id="namespacehal_1a8ee6f825b6e7475277274772d858c816"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">celsius</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><a class="headerlink" href="#_CPPv4N3hal7celsiusE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Type for temperature represented in celsius. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal3rpmE">
+<span id="_CPPv3N3hal3rpmE"></span><span id="_CPPv2N3hal3rpmE"></span><span class="target" id="namespacehal_1a115c0adadc69503586eff94ce028cd87"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rpm</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><a class="headerlink" href="#_CPPv4N3hal3rpmE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Type for rotational velocity represented in RPMs. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal6metersE">
+<span id="_CPPv3N3hal6metersE"></span><span id="_CPPv2N3hal6metersE"></span><span class="target" id="namespacehal_1a309a799c0b8da9cd99fb5fad7c29208c"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">meters</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><a class="headerlink" href="#_CPPv4N3hal6metersE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Type for length represented in meters. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal7degreesE">
+<span id="_CPPv3N3hal7degreesE"></span><span id="_CPPv2N3hal7degreesE"></span><span class="target" id="namespacehal_1a69b7f93f81eb80e25fbaefa924af5748"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">degrees</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><a class="headerlink" href="#_CPPv4N3hal7degreesE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Type for angle represented in degrees. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal5gaussE">
+<span id="_CPPv3N3hal5gaussE"></span><span id="_CPPv2N3hal5gaussE"></span><span class="target" id="namespacehal_1a3798d176bd776585ba459d9851fe3e25"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gauss</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><a class="headerlink" href="#_CPPv4N3hal5gaussE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Type for magnetic field represented in gauss. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal12pin_resistorE">
+<span id="_CPPv3N3hal12pin_resistorE"></span><span id="_CPPv2N3hal12pin_resistorE"></span><span class="target" id="namespacehal_1af094ceea0d10800e8281b1014d7b8a1a"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pin_resistor</span></span></span><a class="headerlink" href="#_CPPv4N3hal12pin_resistorE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set of possible pin mode resistor settings. </p>
+<p>See each enumeration to get more details about when and how these should be used. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal12pin_resistor4noneE">
+<span id="_CPPv3N3hal12pin_resistor4noneE"></span><span id="_CPPv2N3hal12pin_resistor4noneE"></span><span class="target" id="namespacehal_1af094ceea0d10800e8281b1014d7b8a1aa334c4a4c42fdb79d7ebc3e73b517e6f8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">none</span></span></span><a class="headerlink" href="#_CPPv4N3hal12pin_resistor4noneE" title="Link to this definition">#</a><br /></dt>
+<dd><p>No pull up. This will cause the pin to float. This may be desirable if the pin has an external resistor attached or if the signal is sensitive to external devices like resistors. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal12pin_resistor9pull_downE">
+<span id="_CPPv3N3hal12pin_resistor9pull_downE"></span><span id="_CPPv2N3hal12pin_resistor9pull_downE"></span><span class="target" id="namespacehal_1af094ceea0d10800e8281b1014d7b8a1aa6bd95a5bd1a571a29b57aa0dfda9d77b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull_down</span></span></span><a class="headerlink" href="#_CPPv4N3hal12pin_resistor9pull_downE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Pull the pin down to devices GND. This will ensure that the voltage read by the pin when there is no signal on the pin is LOW (or false). </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal12pin_resistor7pull_upE">
+<span id="_CPPv3N3hal12pin_resistor7pull_upE"></span><span id="_CPPv2N3hal12pin_resistor7pull_upE"></span><span class="target" id="namespacehal_1af094ceea0d10800e8281b1014d7b8a1aa5dd40e1f7d5c287d1df85dac013c1c38"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pull_up</span></span></span><a class="headerlink" href="#_CPPv4N3hal12pin_resistor7pull_upE" title="Link to this definition">#</a><br /></dt>
+<dd><p>See pull down explanation, but in this case the pin is pulled up to VCC, also called VDD on some systems. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsE">
+<span id="_CPPv3N3hal8literalsE"></span><span id="_CPPv2N3hal8literalsE"></span><span id="hal::literals"></span><span class="target" id="namespacehal_1_1literals"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">literals</span></span></span><a class="headerlink" href="#_CPPv4N3hal8literalsE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Namespace containing user defined literals for the hal standard units. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli3_HzEe">
+<span id="_CPPv3N3hal8literalsli3_HzEe"></span><span id="_CPPv2N3hal8literalsli3_HzEe"></span><span class="target" id="namespacehal_1_1literals_1aceca4270cae1809a6b23ce76a624ade3"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal5hertzE" title="hal::hertz"><span class="n"><span class="pre">hertz</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_Hz</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli3_HzEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli4_kHzEe">
+<span id="_CPPv3N3hal8literalsli4_kHzEe"></span><span id="_CPPv2N3hal8literalsli4_kHzEe"></span><span class="target" id="namespacehal_1_1literals_1aed3144626ef6bc9e19db3ad2d0534397"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal5hertzE" title="hal::hertz"><span class="n"><span class="pre">hertz</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_kHz</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli4_kHzEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli4_MHzEe">
+<span id="_CPPv3N3hal8literalsli4_MHzEe"></span><span id="_CPPv2N3hal8literalsli4_MHzEe"></span><span class="target" id="namespacehal_1_1literals_1a7178cd75f02ab7eb03af65817c504536"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal5hertzE" title="hal::hertz"><span class="n"><span class="pre">hertz</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_MHz</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli4_MHzEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli4_GHzEe">
+<span id="_CPPv3N3hal8literalsli4_GHzEe"></span><span id="_CPPv2N3hal8literalsli4_GHzEe"></span><span class="target" id="namespacehal_1_1literals_1a7550f371c95afa4aae24c2cda9142eea"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal5hertzE" title="hal::hertz"><span class="n"><span class="pre">hertz</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_GHz</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli4_GHzEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli2_gEe">
+<span id="_CPPv3N3hal8literalsli2_gEe"></span><span id="_CPPv2N3hal8literalsli2_gEe"></span><span class="target" id="namespacehal_1_1literals_1a06582cce5597d61768bd68bcd355fe05"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal7g_forceE" title="hal::g_force"><span class="n"><span class="pre">g_force</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_g</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli2_gEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli3_kAEe">
+<span id="_CPPv3N3hal8literalsli3_kAEe"></span><span id="_CPPv2N3hal8literalsli3_kAEe"></span><span class="target" id="namespacehal_1_1literals_1a0430e58f673c8f7c13f2ab3aa6dce648"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6ampereE" title="hal::ampere"><span class="n"><span class="pre">ampere</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_kA</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli3_kAEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli2_AEe">
+<span id="_CPPv3N3hal8literalsli2_AEe"></span><span id="_CPPv2N3hal8literalsli2_AEe"></span><span class="target" id="namespacehal_1_1literals_1a58e4fbe44f8fb3f551dbc90f37706cb3"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6ampereE" title="hal::ampere"><span class="n"><span class="pre">ampere</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_A</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli2_AEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli3_mAEe">
+<span id="_CPPv3N3hal8literalsli3_mAEe"></span><span id="_CPPv2N3hal8literalsli3_mAEe"></span><span class="target" id="namespacehal_1_1literals_1a47ec6698c788f5d7f70e1ea344ba264b"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6ampereE" title="hal::ampere"><span class="n"><span class="pre">ampere</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_mA</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli3_mAEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli3_uAEe">
+<span id="_CPPv3N3hal8literalsli3_uAEe"></span><span id="_CPPv2N3hal8literalsli3_uAEe"></span><span class="target" id="namespacehal_1_1literals_1a958a273d00fb91031ecdb09759f4e665"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6ampereE" title="hal::ampere"><span class="n"><span class="pre">ampere</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_uA</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli3_uAEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli3_kVEe">
+<span id="_CPPv3N3hal8literalsli3_kVEe"></span><span id="_CPPv2N3hal8literalsli3_kVEe"></span><span class="target" id="namespacehal_1_1literals_1aaf79831586d38b1eedcd4f60cc249570"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal5voltsE" title="hal::volts"><span class="n"><span class="pre">volts</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_kV</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli3_kVEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli2_VEe">
+<span id="_CPPv3N3hal8literalsli2_VEe"></span><span id="_CPPv2N3hal8literalsli2_VEe"></span><span class="target" id="namespacehal_1_1literals_1ab36845eff5eced80d4fd26e22791d7ea"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal5voltsE" title="hal::volts"><span class="n"><span class="pre">volts</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_V</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli2_VEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli3_mVEe">
+<span id="_CPPv3N3hal8literalsli3_mVEe"></span><span id="_CPPv2N3hal8literalsli3_mVEe"></span><span class="target" id="namespacehal_1_1literals_1a7ab49f7398b7d57987d8fdd81a2bc92d"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal5voltsE" title="hal::volts"><span class="n"><span class="pre">volts</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_mV</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli3_mVEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli3_uVEe">
+<span id="_CPPv3N3hal8literalsli3_uVEe"></span><span id="_CPPv2N3hal8literalsli3_uVEe"></span><span class="target" id="namespacehal_1_1literals_1a6313369bd794e4c05f2601e6b36df62d"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal5voltsE" title="hal::volts"><span class="n"><span class="pre">volts</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_uV</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli3_uVEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli2_CEe">
+<span id="_CPPv3N3hal8literalsli2_CEe"></span><span id="_CPPv2N3hal8literalsli2_CEe"></span><span class="target" id="namespacehal_1_1literals_1ae98cca34a4330b56ac7d30c09eed893e"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal7celsiusE" title="hal::celsius"><span class="n"><span class="pre">celsius</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_C</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli2_CEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli2_FEe">
+<span id="_CPPv3N3hal8literalsli2_FEe"></span><span id="_CPPv2N3hal8literalsli2_FEe"></span><span class="target" id="namespacehal_1_1literals_1a51ec7f46e569c9d6ca53d62ded61ecd3"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal7celsiusE" title="hal::celsius"><span class="n"><span class="pre">celsius</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_F</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli2_FEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli2_KEe">
+<span id="_CPPv3N3hal8literalsli2_KEe"></span><span id="_CPPv2N3hal8literalsli2_KEe"></span><span class="target" id="namespacehal_1_1literals_1a0213b76377b290a1b93591a21a4e2e4a"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal7celsiusE" title="hal::celsius"><span class="n"><span class="pre">celsius</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_K</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli2_KEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli4_rpmEe">
+<span id="_CPPv3N3hal8literalsli4_rpmEe"></span><span id="_CPPv2N3hal8literalsli4_rpmEe"></span><span class="target" id="namespacehal_1_1literals_1a3be48c2da6052e07405b814cb9f6d8a0"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal3rpmE" title="hal::rpm"><span class="n"><span class="pre">rpm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_rpm</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli4_rpmEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli12_deg_per_secEe">
+<span id="_CPPv3N3hal8literalsli12_deg_per_secEe"></span><span id="_CPPv2N3hal8literalsli12_deg_per_secEe"></span><span class="target" id="namespacehal_1_1literals_1a5ed64af53a3d77fbf137dfaf7ad0cf3f"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal3rpmE" title="hal::rpm"><span class="n"><span class="pre">rpm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_deg_per_sec</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli12_deg_per_secEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli4_degEe">
+<span id="_CPPv3N3hal8literalsli4_degEe"></span><span id="_CPPv2N3hal8literalsli4_degEe"></span><span class="target" id="namespacehal_1_1literals_1ad423bea12012377c77cad54cba459fda"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal7degreesE" title="hal::degrees"><span class="n"><span class="pre">degrees</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_deg</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli4_degEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli3_umEe">
+<span id="_CPPv3N3hal8literalsli3_umEe"></span><span id="_CPPv2N3hal8literalsli3_umEe"></span><span class="target" id="namespacehal_1_1literals_1a8d72dadbb6af38bd4cb7cc9382861e3e"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6metersE" title="hal::meters"><span class="n"><span class="pre">meters</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_um</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli3_umEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli3_mmEe">
+<span id="_CPPv3N3hal8literalsli3_mmEe"></span><span id="_CPPv2N3hal8literalsli3_mmEe"></span><span class="target" id="namespacehal_1_1literals_1a29556271b537c8ee3844a6074c413a4d"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6metersE" title="hal::meters"><span class="n"><span class="pre">meters</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_mm</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli3_mmEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli2_mEe">
+<span id="_CPPv3N3hal8literalsli2_mEe"></span><span id="_CPPv2N3hal8literalsli2_mEe"></span><span class="target" id="namespacehal_1_1literals_1a28becec677bad0d0e5e3cde0422cf771"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6metersE" title="hal::meters"><span class="n"><span class="pre">meters</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_m</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli2_mEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli3_kmEe">
+<span id="_CPPv3N3hal8literalsli3_kmEe"></span><span id="_CPPv2N3hal8literalsli3_kmEe"></span><span class="target" id="namespacehal_1_1literals_1a1729c0a40a6fe869de29b67dbec3e2b8"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6metersE" title="hal::meters"><span class="n"><span class="pre">meters</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_km</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli3_kmEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli5_inchEe">
+<span id="_CPPv3N3hal8literalsli5_inchEe"></span><span id="_CPPv2N3hal8literalsli5_inchEe"></span><span class="target" id="namespacehal_1_1literals_1a85bf87f277b8a5d01238958503e23d34"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6metersE" title="hal::meters"><span class="n"><span class="pre">meters</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_inch</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli5_inchEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli6_yardsEe">
+<span id="_CPPv3N3hal8literalsli6_yardsEe"></span><span id="_CPPv2N3hal8literalsli6_yardsEe"></span><span class="target" id="namespacehal_1_1literals_1a84d69db4cceae5a5e57a9abb8b627f4d"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6metersE" title="hal::meters"><span class="n"><span class="pre">meters</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_yards</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli6_yardsEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3hal8literalsli6_milesEe">
+<span id="_CPPv3N3hal8literalsli6_milesEe"></span><span id="_CPPv2N3hal8literalsli6_milesEe"></span><span class="target" id="namespacehal_1_1literals_1a2bf02d8cedc87ef4273e1f8edaf58169"></span><span class="k"><span class="pre">consteval</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3hal6metersE" title="hal::meters"><span class="n"><span class="pre">meters</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="n"><span class="pre">_miles</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3hal8literalsli6_milesEe" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="utilities">
+<h2>Utilities<a class="headerlink" href="#utilities" title="Link to this heading">#</a></h2>
+<p>Defined in namespace <code class="docutils literal notranslate"><span class="pre">hal</span></code></p>
+<p><em>#include &lt;libhal-util/units.hpp&gt;</em></p>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="group___units_utils"></span><em><span class="pre">group</span></em> <span class="sig-name descname"><span class="pre">UnitsUtils</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410cycles_per5hertzN3hal13time_durationE">
+<span id="_CPPv310cycles_per5hertzN3hal13time_durationE"></span><span id="_CPPv210cycles_per5hertzN3hal13time_durationE"></span><span id="cycles_per__hertz.hal::time_durationCE"></span><span class="target" id="group___units_utils_1gaf2dc5e2d13c02444f48a6d3d4e664bd6"></span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">int64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cycles_per</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">hertz</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_source</span></span>, <a class="reference internal" href="#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal13time_durationE" title="hal::time_duration"><span class="n"><span class="pre">time_duration</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p_duration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410cycles_per5hertzN3hal13time_durationE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Calculate the number of cycles of this frequency within the time duration. This function is meant for timers to determine how many count cycles are needed to reach a particular time duration at this frequency. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_source</strong> – - source frequency </p></li>
+<li><p><strong>p_duration</strong> – - the amount of time to convert to cycles </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>std::int64_t - number of cycles </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0E10wavelengthNSt6chrono8durationI7int64_t6PeriodEE5hertz">
+<span id="_CPPv3I0E10wavelength5hertz"></span><span id="_CPPv2I0E10wavelength5hertz"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Period</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="group___units_utils_1ga7b1f0465a8a3964bcc80fbcf272ff7bb"></span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">chrono</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">int64_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0E10wavelengthNSt6chrono8durationI7int64_t6PeriodEE5hertz" title="wavelength::Period"><span class="n"><span class="pre">Period</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wavelength</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">hertz</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_source</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0E10wavelengthNSt6chrono8durationI7int64_t6PeriodEE5hertz" title="Link to this definition">#</a><br /></dt>
+<dd><p>Calculates and returns the wavelength in seconds. </p>
+<p>Calculates and returns the wavelength in seconds as a float.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Period</strong> – - desired period (defaults to std::femto for femtoseconds). </p></li>
+<li><p><strong>float_t</strong> – - float type </p></li>
+<li><p><strong>Period</strong> – - desired period </p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>p_source</strong> – - source frequency to convert to wavelength </p></li>
+<li><p><strong>p_source</strong> – - source frequency to convert to wavelength </p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>std::chrono::duration&lt;int64_t, Period&gt; - time based wavelength of the frequency.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>constexpr float - float representation of the time based wavelength of the frequency. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420duration_from_cycles5hertz8uint32_t">
+<span id="_CPPv320duration_from_cycles5hertz8uint32_t"></span><span id="_CPPv220duration_from_cycles5hertz8uint32_t"></span><span id="duration_from_cycles__hertz.uint32_t"></span><span class="target" id="group___units_utils_1ga2bdc9e72a4640753fd9711122fe36e22"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">chrono</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nanoseconds</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">duration_from_cycles</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">hertz</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_source</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_cycles</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420duration_from_cycles5hertz8uint32_t" title="Link to this definition">#</a><br /></dt>
+<dd><p>Calculate the amount of time it takes a frequency to oscillate a number of cycles. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_source</strong> – - the frequency to compute the cycles from </p></li>
+<li><p><strong>p_cycles</strong> – - number of cycles within the time duration </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>std::chrono::nanoseconds - time duration based on this frequency and the number of cycles </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I00ElsRNSt13basic_ostreamI5CharT6TraitsEERNSt13basic_ostreamI5CharT6TraitsEERKN3hal4byteE">
+<span id="_CPPv3I00ElsRNSt13basic_ostreamI5CharT6TraitsEERKN3hal4byteE"></span><span id="_CPPv2I00ElsRNSt13basic_ostreamI5CharT6TraitsEERKN3hal4byteE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CharT</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Traits</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="group___units_utils_1ga8cd5ea2d17022d851807ec714b62aed5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">basic_ostream</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00ElsRNSt13basic_ostreamI5CharT6TraitsEERNSt13basic_ostreamI5CharT6TraitsEERKN3hal4byteE" title="operator&lt;&lt;::CharT"><span class="n"><span class="pre">CharT</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00ElsRNSt13basic_ostreamI5CharT6TraitsEERNSt13basic_ostreamI5CharT6TraitsEERKN3hal4byteE" title="operator&lt;&lt;::Traits"><span class="n"><span class="pre">Traits</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">basic_ostream</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00ElsRNSt13basic_ostreamI5CharT6TraitsEERNSt13basic_ostreamI5CharT6TraitsEERKN3hal4byteE" title="operator&lt;&lt;::CharT"><span class="n"><span class="pre">CharT</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00ElsRNSt13basic_ostreamI5CharT6TraitsEERNSt13basic_ostreamI5CharT6TraitsEERKN3hal4byteE" title="operator&lt;&lt;::Traits"><span class="n"><span class="pre">Traits</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_ostream</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv43hal" title="hal"><span class="n"><span class="pre">hal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3hal4byteE" title="hal::byte"><span class="n"><span class="pre">byte</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p_byte</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00ElsRNSt13basic_ostreamI5CharT6TraitsEERNSt13basic_ostreamI5CharT6TraitsEERKN3hal4byteE" title="Link to this definition">#</a><br /></dt>
+<dd><p>print byte type using ostreams </p>
+<p>Meant for unit testing, testing and simulation purposes C++ streams, in general, should not be used for any embedded project that will ever have to be used on an MCU due to its memory cost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>CharT</strong> – - character type </p></li>
+<li><p><strong>Traits</strong> – - ostream traits type </p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>p_ostream</strong> – - the ostream </p></li>
+<li><p><strong>p_byte</strong> – - object to convert to a string </p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>std::basic_ostream&lt;CharT, Traits&gt;&amp; - reference to the ostream </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="timer.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Timer</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../soft/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Soft Driver API Documentation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-functionality">Core Functionality</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv43hal"><code class="docutils literal notranslate"><span class="pre">hal</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal13time_durationE"><code class="docutils literal notranslate"><span class="pre">hal::time_duration</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal4byteE"><code class="docutils literal notranslate"><span class="pre">hal::byte</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal5hertzE"><code class="docutils literal notranslate"><span class="pre">hal::hertz</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal7g_forceE"><code class="docutils literal notranslate"><span class="pre">hal::g_force</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6ampereE"><code class="docutils literal notranslate"><span class="pre">hal::ampere</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal5voltsE"><code class="docutils literal notranslate"><span class="pre">hal::volts</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal7celsiusE"><code class="docutils literal notranslate"><span class="pre">hal::celsius</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal3rpmE"><code class="docutils literal notranslate"><span class="pre">hal::rpm</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal6metersE"><code class="docutils literal notranslate"><span class="pre">hal::meters</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal7degreesE"><code class="docutils literal notranslate"><span class="pre">hal::degrees</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal5gaussE"><code class="docutils literal notranslate"><span class="pre">hal::gauss</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal12pin_resistorE"><code class="docutils literal notranslate"><span class="pre">hal::pin_resistor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal12pin_resistor4noneE"><code class="docutils literal notranslate"><span class="pre">hal::pin_resistor::none</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal12pin_resistor9pull_downE"><code class="docutils literal notranslate"><span class="pre">hal::pin_resistor::pull_down</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal12pin_resistor7pull_upE"><code class="docutils literal notranslate"><span class="pre">hal::pin_resistor::pull_up</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsE"><code class="docutils literal notranslate"><span class="pre">hal::literals</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli3_HzEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_Hz()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli4_kHzEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_kHz()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli4_MHzEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_MHz()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli4_GHzEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_GHz()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli2_gEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_g()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli3_kAEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_kA()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli2_AEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_A()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli3_mAEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_mA()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli3_uAEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_uA()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli3_kVEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_kV()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli2_VEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_V()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli3_mVEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_mV()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli3_uVEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_uV()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli2_CEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_C()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli2_FEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_F()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli2_KEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_K()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli4_rpmEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_rpm()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli12_deg_per_secEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_deg_per_sec()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli4_degEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_deg()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli3_umEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_um()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli3_mmEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_mm()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli2_mEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_m()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli3_kmEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_km()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli5_inchEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_inch()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli6_yardsEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_yards()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3hal8literalsli6_milesEe"><code class="docutils literal notranslate"><span class="pre">hal::literals::operator""_miles()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utilities">Utilities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv410cycles_per5hertzN3hal13time_durationE"><code class="docutils literal notranslate"><span class="pre">cycles_per()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0E10wavelengthNSt6chrono8durationI7int64_t6PeriodEE5hertz"><code class="docutils literal notranslate"><span class="pre">wavelength()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv420duration_from_cycles5hertz8uint32_t"><code class="docutils literal notranslate"><span class="pre">duration_from_cycles()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I00ElsRNSt13basic_ostreamI5CharT6TraitsEERNSt13basic_ostreamI5CharT6TraitsEERKN3hal4byteE"><code class="docutils literal notranslate"><span class="pre">operator&lt;&lt;()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/libhal/units.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
