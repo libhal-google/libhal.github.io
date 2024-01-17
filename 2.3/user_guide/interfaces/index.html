@@ -1,0 +1,1477 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../fundamentals/">
+      
+      
+        <link rel="next" href="../debugging/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
+    
+    
+      
+        <title>🔗 Interfaces in Software Development and libhal - libhal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interfaces-in-software-development-and-libhal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+You're not viewing the latest version.
+<a href="../../..">
+  <strong>Click here to go to latest.</strong>
+</a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="libhal" class="md-header__button md-logo" aria-label="libhal" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            libhal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🔗 Interfaces in Software Development and libhal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/libhal/libhal/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    libhal
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  🏡 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting_started/" class="md-tabs__link">
+        
+  
+    
+  
+  🚀 Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../fundamentals/" class="md-tabs__link">
+          
+  
+  📖 User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributor_guide/philosophy/" class="md-tabs__link">
+          
+  
+  📚 Contributor Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../project_information/status/" class="md-tabs__link">
+          
+  
+  📊 Project Information
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../api/" class="md-tabs__link">
+        
+  
+    
+  
+  🧩 APIs
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="libhal" class="md-nav__button md-logo" aria-label="libhal" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    libhal
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/libhal/libhal/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    libhal
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏡 Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🚀 Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📖 User Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📖 User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🧱 Fundamentals of libhal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    🔗 Interfaces in Software Development and libhal
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    🔗 Interfaces in Software Development and libhal
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#driver-types-in-libhal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Driver Types in libhal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Driver Types in libhal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analog
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-timers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time &amp; Timers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serial-communication-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serial Communication Protocols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actuators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actuators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-myth-about-virtual-understanding-dynamic-polymorphism-in-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Myth about Virtual: Understanding Dynamic Polymorphism in C++
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Myth about Virtual: Understanding Dynamic Polymorphism in C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-polymorphism-and-dynamic-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Polymorphism and Dynamic Memory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-of-dynamic-polymorphism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance of Dynamic Polymorphism
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-overhead-of-virtual-polymorphism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Overhead of Virtual Polymorphism
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎯 Debugging Code with PyOCD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎚️ Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../error_handling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🪤 Error Handling in libhal using Boost.LEAF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⚖️ Policies & FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📚 Contributor Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Contributor Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor_guide/philosophy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📜 Design Philosophy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor_guide/organization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🗃️ Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor_guide/style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎨 Style Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor_guide/library_guides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔹 Library Development Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor_guide/vscode_setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💻 VSCode Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor_guide/architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏗️ Architectural Design Decisions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📊 Project Information
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            📊 Project Information
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_information/status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🟢 Library Status 🔴
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_information/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🧩 APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="interfaces-in-software-development-and-libhal">🔗 Interfaces in Software Development and libhal</h1>
+<p>In software development, an interface is a shared boundary across which two
+separate components of a computer program exchange information. The exchange
+can be between software, computer hardware, peripheral devices, humans, and
+combinations of these. Technically, it refers to a software component (a class,
+a module, etc.) that encapsulates a specific functionality and that can be used
+by other components.</p>
+<p>Interfaces work by specifying the methods that a class must implement, without
+including the implementation of the methods themselves. This allows different
+classes to implement the same interface in different ways, providing a level of
+abstraction between the interface and the implementation.</p>
+<p>In the context of libhal (Hardware Abstraction Layer Library), interfaces are
+used to define a standard way of interacting with different types of hardware.
+This makes the software portable because it can interact with the hardware
+through the interface, without needing to know the specifics of how the hardware
+is implemented. This means that if the underlying hardware changes, only the
+implementation of the interface needs to change, not the software that uses it.</p>
+<h2 id="driver-types-in-libhal">Driver Types in libhal</h2>
+<h3 id="digital">Digital</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Input Pin</label><label for="__tabbed_1_2">Output Pin</label><label for="__tabbed_1_3">Interrupt Pin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1input__pin.html"><code>hal::input_pin</code></a></p>
+<p>The Input Pin interface (<code>hal::input_pin</code>) in libhal is used for reading the
+state of a digital input pin. This is useful in situations where you need to
+determine if the voltage on a pin is HIGH or LOW.</p>
+<p>In the libhal library, the Input Pin interface provides methods to configure
+the input pin according to the settings supplied and to read the state of
+the input pin.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1output__pin.html"><code>hal::output_pin</code></a></p>
+<p>The Output Pin interface in libhal is used for controlling the state of a
+digital output pin. This is useful in situations where you need to send a
+control signal or turn on or off an LED.</p>
+<p>In the libhal library, the Output Pin interface provides methods to
+configure the output pin according to the settings supplied, to set the
+state of the pin, and to read the current state of the output pin.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1interrupt__pin.html"><code>hal::interrupt_pin</code></a></p>
+<p>The Interrupt Pin interface in libhal is used for automatically calling a
+function when a pin's state has transitioned. This is useful in situations
+where you need to respond to changes in the state of a pin.</p>
+<p>In the libhal library, the Interrupt Pin interface provides methods to
+configure the interrupt pin according to the settings supplied and to set
+the callback for when the interrupt occurs.</p>
+</div>
+</div>
+</div>
+<h3 id="analog">Analog</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">ADC (Analog-to-Digital Converter)</label><label for="__tabbed_2_2">DAC (Digital-to-Analog Converter)</label><label for="__tabbed_2_3">PWM (Pulse Width Modulation)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1adc.html"><code>hal::adc</code></a></p>
+<p>The ADC interface in libhal is used to convert an analog signal into a
+digital one. This is useful in situations where the hardware device is
+producing an analog signal, such as a sensor reading, but the software works
+with digital values.</p>
+<p>In the libhal library, the ADC interface provides methods to read the
+voltage from the ADC as a percentage of the reference voltage.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1dac.html"><code>hal::dac</code></a></p>
+<p>The DAC interface in libhal is used to convert a digital signal into an
+analog one. This is useful in situations where the software is producing
+digital values, but the hardware device requires an analog signal.</p>
+<p>In the libhal library, the DAC interface provides methods to write a voltage
+to the DAC, as a percentage of the reference voltage.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1pwm.html"><code>hal::pwm</code></a></p>
+<p>The PWM interface in libhal is used to control the waveform generation of a
+square wave and its properties such as frequency and duty cycle. PWM is used
+for power control like motor control, lighting, transmitting signals to
+servos, sending telemetry and much more.</p>
+<p>In the libhal library, the PWM interface provides methods to set the PWM
+waveform frequency and duty cycle.</p>
+</div>
+</div>
+</div>
+<h3 id="time-timers">Time &amp; Timers</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Timer</label><label for="__tabbed_3_2">Steady Clock</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1timer.html"><code>hal::timer</code></a></p>
+<p>The Timer interface in libhal is used for scheduling events to occur after a
+specified amount of time. This is useful in situations where you need to
+perform an action after a certain amount of time has passed.</p>
+<p>In the libhal library, the Timer interface provides methods to check if the
+timer is running, cancel a scheduled event, and schedule a new event.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1steady__clock.html"><code>hal::steady_clock</code></a></p>
+<p>The Steady Clock interface in libhal is used for a steady clock mechanism.
+This clock is steady meaning that subsequent calls to get the uptime of this
+clock cannot decrease as physical time moves forward and the time between
+ticks of this clock are constant and defined by the clock's frequency.</p>
+<p>In the libhal library, the Steady Clock interface provides methods to get
+the operating frequency of the steady clock and to get the current value of
+the steady clock.</p>
+<p>This completes the descriptions for all the interfaces in the libhal
+library. Each of these interfaces provides a way to interact with different
+types of hardware in a consistent and portable way, making it easier to
+write embedded software that can run on different platforms.</p>
+</div>
+</div>
+</div>
+<h3 id="serial-communication-protocols">Serial Communication Protocols</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">SPI (Serial Peripheral Interface)</label><label for="__tabbed_4_2">I2C (Inter-Integrated Circuit)</label><label for="__tabbed_4_3">Serial</label><label for="__tabbed_4_4">CAN (Controller Area Network)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1spi.html"><code>hal::spi</code></a></p>
+<p>The SPI interface in libhal is used for communication over a Serial
+Peripheral Interface (SPI). This is a synchronous serial communication
+interface specification used for short-distance communication, primarily in
+embedded systems.</p>
+<p>In the libhal library, the SPI interface provides methods to configure the
+SPI bus and perform an SPI transaction.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1i2c.html"><code>hal::i2c</code></a></p>
+<p>The I2C interface in libhal is used for communication over an
+Inter-Integrated Circuit (I2C) bus. This is a multi-master, multi-slave,
+packet switched, single-ended, serial computer bus invented by Philips
+Semiconductor.</p>
+<p>In the libhal library, the I2C interface provides methods to configure the
+I2C bus and perform an I2C transaction.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1serial.html"><code>hal::serial</code></a></p>
+<p>The Serial interface in libhal is used for hardware that implements a serial
+protocol like UART, RS232, RS485, and others that use a similar
+communication protocol but may use different voltage schemes.</p>
+<p>In the libhal library, the Serial interface provides methods to configure
+the serial to match the settings supplied, to write data to the transmitter
+line of the serial port, to copy bytes from the working buffer into the
+passed buffer, and to flush the working buffer.</p>
+<p>Unfortunately, I encountered an error while trying to access the Steady
+Clock interface file in the libhal repository. I'll try again to retrieve
+its content.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1can.html"><code>hal::can</code></a></p>
+<p>The CAN interface in libhal is used for communication over a Controller Area
+Network (CAN bus). This is a robust vehicle bus standard designed to allow
+microcontrollers and devices to communicate with each other's applications
+without a host computer.</p>
+<p>In the libhal library, the CAN interface provides methods to configure the
+CAN bus, send a CAN message, and set a message reception handler.</p>
+</div>
+</div>
+</div>
+<h3 id="actuators">Actuators</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Motor</label><label for="__tabbed_5_2">Servo</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1motor.html"><code>hal::motor</code></a></p>
+<p>The Motor interface in libhal is used for controlling an open loop
+rotational actuator. This can represent a variety of things such as a driver
+for a motor controller IC like the DRV8801, a driver for a motor with an
+integrated controller &amp; serial interface, a unidirectional motor controlled
+by a single transistor, or a servo with open loop motor control.</p>
+<p>In the libhal library, the Motor driver provides methods to apply power to
+the motor. The power applied is a percentage of the total available power.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1servo.html"><code>hal::servo</code></a></p>
+<p>The Servo interface in libhal is used for controlling a closed loop position
+controlled rotational actuator. Servos are devices that can rotate to a
+specified position.</p>
+<p>In the libhal library, the Servo interface provides methods to set the
+position of the servo's output shaft.</p>
+</div>
+</div>
+</div>
+<h3 id="sensors">Sensors</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:6"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><input id="__tabbed_6_5" name="__tabbed_6" type="radio" /><input id="__tabbed_6_6" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Temperature Sensor</label><label for="__tabbed_6_2">Accelerometer</label><label for="__tabbed_6_3">Gyroscope</label><label for="__tabbed_6_4">Magnetometer</label><label for="__tabbed_6_5">Distance Sensor</label><label for="__tabbed_6_6">Rotation Sensor</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1temperature__sensor.html"><code>hal::temperature_sensor</code></a></p>
+<p>The Temperature Sensor interface in libhal is used for reading the current
+temperature measured by a device. This is useful in situations where you
+need to monitor the temperature of a device or environment.</p>
+<p>In the libhal library, the Temperature Sensor interface provides a method to
+read the current temperature.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1accelerometer.html"><code>hal::accelerometer</code></a></p>
+<p>The Accelerometer interface in libhal is used for sensing acceleration.
+Accelerometers are devices that measure the rate of change of velocity with
+respect to time (acceleration).</p>
+<p>In the libhal library, the Accelerometer interface provides methods to read
+the acceleration sensed by the device in the X, Y, and Z axes.</p>
+<p>Accelerometers are commonly used to determine orientation or tilt of an
+object.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1gyroscope.html"><code>hal::gyroscope</code></a></p>
+<p>The Gyroscope interface in libhal is used for sensing angular velocity.
+Gyroscopes are devices that measure the rotational speed around an axis.</p>
+<p>In the libhal library, the Gyroscope interface provides methods to read the
+angular velocity sensed by the device in the X, Y, and Z axes.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1magnetometer.html"><code>hal::magnetometer</code></a></p>
+<p>The Magnetometer interface in libhal is used for sensing magnetic field
+strength. Magnetometers are devices that measure the strength and direction
+of a magnetic field.</p>
+<p>In the libhal library, the Magnetometer interface provides methods to read
+the magnetic field strength sensed by the device in the X, Y, and Z axes.</p>
+<p>Such devices are commonly used as a compass in order to provide heading
+information to a device.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1distance__sensor.html"><code>hal::distance_sensor</code></a></p>
+<p>The Distance Sensor interface in libhal is used for sensing linear distance.
+Distance sensors can be used in a variety of applications, such as measuring
+the distance to an object or determining the position of an object.</p>
+<p>In</p>
+<p>the libhal library, the Distance Sensor interface provides methods to read
+the current distance measured by the device.</p>
+</div>
+<div class="tabbed-block">
+<p>See API: <a href="https://libhal.github.io/libhal/api/classhal_1_1rotation__sensor.html"><code>hal::rotation_sensor</code></a></p>
+<p>The Rotation Sensor interface in libhal is used for sensing a single axis of
+rotation. Rotation sensors can be used in a variety of applications, such as
+measuring the rotation to an object or determining the angular position of
+an object.</p>
+<p>In the libhal library, the Rotation Sensor interface provides methods to
+read the current angle, in degrees, measured by the device.</p>
+</div>
+</div>
+</div>
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">⏳ Current Sensor</label><label for="__tabbed_7_2">⏳ Voltage Sensor</label><label for="__tabbed_7_3">⏳ GPS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>API not available yet</strong></p>
+<p>A Current Sensor driver in libhal would be used for sensing electrical
+current. Current sensors are devices that detect the current of current
+flowing through a circuit.</p>
+<p>In the libhal library, the Current Sensor interface provides methods to
+read the current as a unit of <code>amperes</code>.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>API not available yet</strong></p>
+<p>A Voltage Sensor driver in libhal would be used for sensing electrical
+voltage. Voltage sensors are devices that can measure the voltage potential
+difference between two points in an electrical circuit. When available, the
+Voltage Sensor driver would provide methods to read the voltage sensed by
+the device.</p>
+<p>In the libhal library, the Voltage Sensor interface provides methods to
+read the current as a unit of <code>volts</code>.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>API not available yet</strong></p>
+<p>A GPS (Global Positioning System) driver in libhal would be used for
+receiving and interpreting GPS signals, which provide geolocation and time
+information to a GPS receiver anywhere on or near the Earth. When available,
+the GPS driver would provide methods to read the current location, speed,
+time, and other relevant data from the GPS signals.</p>
+<p>In the libhal library, the GPS interface provides methods to read location
+in longitude and latitude, get the current time, and get velocity.</p>
+<p><strong>NOTE:</strong> that more investigation is needed to determine what fields make sense
+for this sensor and if it should be broken up into multiple interfaces like
+<code>hal::geolocation</code>, <code>hal::heading</code>, <code>hal::clock</code> and <code>hal::velocity</code>.</p>
+</div>
+</div>
+</div>
+<h2 id="the-myth-about-virtual-understanding-dynamic-polymorphism-in-c">The Myth about Virtual: Understanding Dynamic Polymorphism in C++</h2>
+<p>There's a common misconception in the C++ community that dynamic polymorphism
+inherently requires dynamic memory (heap memory), and that it's slower or more
+memory-intensive than other forms of polymorphism. This is not necessarily true.
+Let's debunk these myths.</p>
+<h3 id="dynamic-polymorphism-and-dynamic-memory">Dynamic Polymorphism and Dynamic Memory</h3>
+<p>Dynamic polymorphism in C++ is achieved through virtual functions, which allow
+us to override functions in derived classes. This provides a way to use a base
+class pointer or reference to call the appropriate function based on the actual
+object type at runtime.</p>
+<p>While it's true that dynamic memory can be used in conjunction with dynamic
+polymorphism (for instance, when creating objects of derived classes and storing
+them in base class pointers), it's not a requirement. You can have dynamic
+polymorphism without dynamic memory.</p>
+<p>Consider a scenario where you have a base class <code>Base</code> and a derived class
+<code>Derived</code>. If you have a function that takes a reference to <code>Base</code>, you can pass
+an instance of <code>Derived</code> to that function without needing to allocate <code>Derived</code>
+on the heap:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">someFunction</span><span class="p">(</span><span class="n">Base</span><span class="o">&amp;</span><span class="w"> </span><span class="n">baseRef</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">baseRef</span><span class="p">.</span><span class="n">someVirtualFunction</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">Derived</span><span class="w"> </span><span class="n">derived</span><span class="p">;</span>
+<span class="n">someFunction</span><span class="p">(</span><span class="n">derived</span><span class="p">);</span><span class="w">  </span><span class="c1">// No dynamic memory involved</span>
+</code></pre></div>
+<p>In this case, <code>someFunction</code> will call the correct version of
+<code>someVirtualFunction</code> based on the actual type of the object, even though it's
+passed as a reference to <code>Base</code>. This is dynamic polymorphism in action, without
+any dynamic memory.</p>
+<h3 id="performance-of-dynamic-polymorphism">Performance of Dynamic Polymorphism</h3>
+<p>Another myth is that dynamic polymorphism is slower than other forms of
+polymorphism, such as using a struct with function pointers (akin to C-style
+interfaces). In reality, the performance difference is negligible in most cases.</p>
+<p>When a virtual function is called, the compiler needs to look up the function
+address in the virtual table (vtable) of the object. This is essentially a
+pointer dereference, which is the same operation needed to call a function
+through a function pointer in a struct. Therefore, the performance of these two
+approaches is comparable.</p>
+<h3 id="memory-overhead-of-virtual-polymorphism">Memory Overhead of Virtual Polymorphism</h3>
+<p>The memory overhead of dynamic polymorphism is also often overstated. Each class
+with virtual functions has a vtable, which is essentially a static array of
+function pointers. This vtable is shared among all instances of the class, so it
+doesn't increase the per-instance memory overhead.</p>
+<p>The vtable does increase the size of the binary, but the increase is usually
+small. Each vtable entry is just a function pointer. For a class hierarchy with
+a reasonable number of virtual functions, this overhead is typically negligible.</p>
+<p>In addition to the function pointers, the vtable contains two more pointers: one
+for the parent class's vtable (for supporting inheritance) and one for Run-Time
+Type Information (RTTI, used for <code>dynamic_cast</code> and <code>typeid</code>). These are fixed
+overheads per class, not per object.</p>
+<p>In conclusion, while dynamic polymorphism in C++ does have some overhead, it's
+often smaller than people think. It doesn't inherently require dynamic memory,
+its performance is comparable to other forms of polymorphism, and its memory
+overhead is typically small. Therefore, it's a powerful tool for creating
+flexible and reusable code in C++.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../fundamentals/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🧱 Fundamentals of libhal">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                🧱 Fundamentals of libhal
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../debugging/" class="md-footer__link md-footer__link--next" aria-label="Next: 🎯 Debugging Code with PyOCD">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                🎯 Debugging Code with PyOCD
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.tabs.link", "toc.integrate", "navigation.tracking", "navigation.footer"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+      
+    
+  </body>
+</html>
