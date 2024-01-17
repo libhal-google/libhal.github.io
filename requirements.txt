@@ -5,3 +5,4 @@ mkdocs-literate-nav
 mkdoxy
 pydata-sphinx-theme
 myst_parser
+mike
