@@ -6,3 +6,4 @@ mkdoxy
 pydata-sphinx-theme
 myst_parser
 mike
+breathe
